@@ -13,6 +13,18 @@ Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-
 	- Toote klotsvaade
 
 Ülejäänud nähtavad leheosad on kopipaste rootslaste näidisest ega toimi responsivena.
+
+### Abivahendid, suurelt jaolt eksperimentaalsed:
+- [grunt](http://gruntjs.com/)
+	- [grunt responsive-images](https://github.com/andismith/grunt-responsive-images)
+	- meediapäringute sortimiseks [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
+- meediapäringitele vastavate pildisuurste serveerimiseks [srcset-polyfill](https://github.com/borismus/srcset-polyfill)
+
+### Muudatused rootsi koodi
+- Maha võetud user scale restriction
+
+### Bugid rootsi koodis
+- Slaider vigane IE10 Win8 tahvlil.
 	
 ### Do-not-forget
 - Korrasta javascript footeris (includes), lisa require.js
