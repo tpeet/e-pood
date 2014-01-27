@@ -1,0 +1,722 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+FORMS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - BASE
+// - - - Labels
+// - - - Legend
+// - - - fieldset
+//
+// - Input
+// - - - Default
+// - - - Hover
+// - - - Valid
+// - - - Invalid
+// - - - Disabled
+//
+// - Checkboxes
+// - - - Default
+// - - - Hover
+// - - - Valid
+// - - - Invalid
+// - - - Disabled
+//
+// - - ETC.... orginize this according to need
+// 
+// - - RWD 768
+// - - RWD 480
+// - - RWD 320
+//
+//
+// - - RWD
+//
+
+
+//////// Module class name
+$module: tsr-forms;
+
+.#{$module}{
+
+
+//////// Base
+	font-size:15px;
+
+
+//////// Label
+	
+	label,
+	.label{
+		font-weight:bold;
+		display:block;
+		margin:22px 0 10px;
+		line-height:1.4;
+
+	}	
+
+//////// Input TEXT
+	input[type='text'],
+	input[type='password']{
+
+		@include border-radius(3px);
+		color:#888888;
+		line-height:1;
+		padding:14px 0;
+		text-indent:14px;
+		border:1px solid #dbdbdb;
+		display:block;
+		width:100%;
+		margin-bottom:4px;
+
+
+		&:focus,
+		&.focus,
+		&:active{
+			color:$black;
+			border:1px solid $purple-c;
+			outline:none;
+
+		}
+		
+		// Disabled
+		&[disabled]{
+			color:#bbb;
+			background:#eee;
+
+			&:focus,
+			&:active{
+				border:1px solid #dbdbdb;
+			}
+
+		}
+
+	} // [type='text'] END
+
+	// Invalid
+	.invalid input[type='text']{
+		background:#ffece3;
+		color:#333;
+		border:1px solid #da552a;
+
+		&:focus,
+		&:active{
+			border:1px solid #da552a;
+		}
+
+	}	
+
+//////// Textarea
+	textarea{
+
+		@include border-radius(3px);
+		color:#888888;
+		line-height:1;
+		padding:14px 0;
+		text-indent:14px;
+		border:1px solid #dbdbdb;
+		display:block;
+		width:100%;
+		margin-bottom:4px;
+		min-height:120px;
+
+		&:focus,
+		&.focus,
+		&:active{
+			color:$black;
+			border:1px solid $purple-c;
+			outline:none;
+
+		}
+		
+		// Disabled
+		&[disabled]{
+			color:#bbb;
+			background:#eee;
+
+			&:focus,
+			&:active{
+				border:1px solid #dbdbdb;
+			}
+
+		}
+
+	} // [type='text'] END
+
+	// Invalid
+	.invalid textarea{
+		background:#ffece3;
+		color:#333;
+		border:1px solid #da552a;
+
+
+		&:focus,
+		&:active{
+			border:1px solid #da552a;
+		}
+
+	}	
+
+
+//////// Input Checkbox
+
+	.tsr-checkbox{
+			cursor:pointer;
+
+			input[type='checkbox']{
+				display:none;
+			}
+
+			.tsr-checkboxStyled{
+				background:$white;
+				border:1px solid #dbdbdb;
+				width:20px;
+				height:20px;
+				display:block;
+				position:relative;
+				margin-right:6px;
+				float:left;
+
+
+				&:before{
+					display:none;
+				}
+
+			}	
+
+
+			&:focus .tsr-checkboxStyled,
+			&:active .tsr-checkboxStyled{
+				outline:none;
+			}
+
+			// Checked
+			&.checked{
+
+				.tsr-checkboxStyled,
+				.tsr-checkboxStyled:active{
+					&:before{
+
+						width:10px;
+						height:10px;
+						position:absolute;
+						top:50%;
+						left:50%;
+						margin:-5px 0 0 -6px;
+						color:$purple-c;
+						font-size:10px;
+						display:block;
+						
+
+					}
+				}	
+
+			}
+		
+			// Disabled
+			&.disabled{
+
+
+				.tsr-checkboxStyled{
+					background:#eee;
+					border:1px solid #dbdbdb;
+					&:focus,
+					&:active{
+						border:1px solid #dbdbdb;
+						background:#eee;
+
+						&:before{
+							display:none;
+						}
+
+					}
+
+
+				} // .tsr-checkboxStyled END
+
+				&.checked{
+					.tsr-checkboxStyled:before{
+						color:#bbb;
+					}
+				}
+
+			} // .disabled END
+
+			// Invalid
+			&.invalid{
+
+
+				.tsr-checkboxStyled{
+					background:#ffece3;
+					border:1px solid #da552a;
+					&:focus,
+					&:active{
+						border:1px solid #da552a;
+						background:#ffece3;
+
+						&:before{
+							display:none;
+						
+						}
+
+					}
+
+
+				} // .tsr-checkboxStyled END
+
+				&.checked{
+					.tsr-checkboxStyled:before{
+						color:#da552a;
+					}
+				}
+
+			} // .disabled END
+
+		}
+
+
+
+
+//////// Input Radio 
+
+	.tsr-radio{
+			cursor:pointer;
+			position:relative;
+
+			&:before{
+				font-family: 'ts-icons-all';
+				content: "\e666";
+				width:20px;
+				height:20px;
+				position:absolute;
+				top:-5px;
+				left:0;
+				margin:0;
+				font-size:20px;
+				display:block;
+				color:#dbdbdb;
+			}
+
+			&:after{
+				font-family: 'ts-icons-all';
+				content: "\e666";
+				width:18px;
+				height:18px;
+				position:absolute;
+				top:-3px;
+				left:1px;
+				margin:0;
+				font-size:18px;
+				display:block;
+				color:#fff;
+			}
+
+
+			input[type='radio']{
+				display:none;
+			}
+
+			.tsr-radioStyled{
+				//@include border-radius(20px);
+				//background:$white;
+				//border:1px solid #dbdbdb;
+				width:20px;
+				height:20px;
+				display:block;
+				position:relative;
+				margin-right:6px;
+				float:left;
+				line-height:1;
+
+
+
+			}	
+
+
+			&:focus .tsr-radioStyled,
+			&:active .tsr-radioStyled{
+				outline:none;
+			}
+
+			// Checked
+			&.checked{
+
+				.tsr-radioStyled,
+				.tsr-radioStyled:active{
+					&:before{
+						font-family: 'ts-icons-all';
+						content: "\e666";
+						width: 10px;
+						height: 10px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin: -5px 0 0 -5px;
+						font-size: 10px;
+						display: block;
+						color: $purple-c;
+						z-index:1;
+					}
+				}	
+
+			}
+		
+			// Disabled
+			&.disabled{
+
+				&:before{
+					color:#bbb;
+				}
+
+				&:after{
+					color:#eee;
+				}
+
+				&.checked{
+
+					.tsr-radioStyled,
+					.tsr-radioStyled:active{
+						&:before{
+							
+							color:#bbb;
+
+						}
+					}	
+
+				}
+				
+
+			} // .disabled END
+
+			// Invalid
+			&.invalid{
+
+				&:before{
+					color:#da552a;
+				}
+
+				&:after{
+					color:#ffece3;
+				}
+
+				&.checked{
+
+					.tsr-radioStyled,
+					.tsr-radioStyled:active{
+						&:before{
+							
+							color:#da552a;
+
+						}
+					}	
+
+				}
+
+			} // .invalid END
+
+		}
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+// - jquery.selectBoxIt.css 2.1.0 - Author: @gregfranko  */
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Div container holding the dropdown list */
+.selectboxit-container {
+  position: relative;
+  display: block;
+
+  // Prevents text selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+//////DEFAULT - Dropdown List Box 
+.selectboxit-container .selectboxit {
+
+		@include border-radius(3px);
+		color:#888888;
+		line-height:1;
+		border:1px solid #dbdbdb;
+		background:#fff;
+		cursor: pointer;
+		padding: 0;
+		display: block;
+		 width:100%!important;
+		//height:29px; // 29+2px border = 31
+		//width: 198px; // 198+2px border = 200
+
+
+		&.selectboxit-hover {
+			//border:1px solid #a1a1a1;
+		}
+
+		&:focus {  
+			outline: none;
+		}
+
+		&.selectboxit-focus{
+			 @include border-radius-bottom(0px);
+		}
+
+}
+
+.selectboxit-container .selectboxit.selectboxit-disabled {
+  cursor: default;
+}
+
+////// Dropdown list Default Icon Positioning
+.selectboxit-default-icon {
+  float: right;
+}
+
+////// Dropdown List Box Text
+.selectboxit-text {
+  font-size:15px; 
+  font-family: $font-1;
+  padding:14px 0;
+  text-indent: 14px;
+  line-height: 1;
+  overflow: hidden;
+  //float: left;
+  white-space: nowrap;
+  color:#333;
+  display:block;
+  width:100%;
+
+}
+
+
+////// Dropdown List Box Text - HOVER
+.selectboxit-hover .selectboxit-text {
+
+}
+
+
+////// Dropdown List Box Text - ACTIVE 
+.selectboxit-active .selectboxit-text,
+.active.selectboxit-hover .selectboxit-text {
+ color:#333;
+}
+
+////// Dropdown List Options List Container
+.selectboxit-container .selectboxit-options {
+
+  @include border-radius-bottom(3px);
+  min-width: 170px; // Minimum Width of the dropdown list box options 
+  font-family: $font-1;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  display: none;
+  z-index: 9999999999999;
+  outline: none;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  background:#fff;
+  border-bottom:1px solid #dcdcdc;
+  width: 100%!important;
+  padding: 0;
+}
+
+
+////// option 
+.selectboxit-option .selectboxit-option-anchor {
+
+  margin:0px;
+  line-height: 1;
+  font-family: $font-1;
+  text-decoration:none;
+  color:#333;
+  display:block;
+  padding: 14px;
+  font-size:15px;
+  font-weight:normal;
+
+  &.selectboxit-focus{
+  	color:$white;
+  	background:$purple-c;
+  }
+
+}
+
+
+///////  option - ACTIVE
+.selectboxit-options .selectboxit-option.active .selectboxit-option-anchor {
+
+}
+
+
+/////// Dropdown List Individual Options 
+.selectboxit-option, .selectboxit-optgroup-header {
+  text-indent: 0; 
+  overflow: hidden;
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  border-bottom:1px solid #dbdbdb;
+
+}
+
+
+
+/* The first drop down option */
+.selectboxit-option{
+  border-right:1px solid #dcdcdc;
+  border-left:1px solid #dcdcdc;
+}
+
+/* The last drop down option */
+.selectboxit-option-last {
+	 border-bottom:none;
+}
+
+/* Dropdown List Optgroup Headers */
+.selectboxit-optgroup-header {
+  font-weight: bold;
+}
+
+/* Dropdown List Optgroup Options */
+.selectboxit-optgroup-option {
+  text-indent: 20px;
+}
+
+/* Dropdown List Optgroup Header hover psuedo class */
+.selectboxit-optgroup-header[data-disabled='true']:hover {
+  cursor: default;
+}
+
+/* Dropdown List Down Arrow Container (if an image is not used) */
+.selectboxit-arrow-container {
+	width: 38px;
+	float: right;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -15px;
+}
+
+
+
+
+/* Dropdown List Down Arrow */
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+  /* Horizontally centers the down arrow */
+  margin-left:6px;
+  display: block;
+  height: 24px;
+  padding:6px 0 0;
+  color:#333;
+
+}
+
+/* Dropdown List Down Arrow */
+.selectboxit-open .selectboxit-arrow-container .selectboxit-arrow {
+  /* Horizontally centers the down arrow */
+
+	  &:before{
+		content: "\e66b";
+	  }
+
+}
+
+/* Dropdown List Individual Option Icon Positioning */
+.selectboxit-arrow {
+    height:14px; 
+    width:28px; 
+    overflow:hidden;
+}
+
+/* ICON - RW / ORANGE - MW / GRAY - Default */ 
+.selectboxit-arrow.icon-arrow-down {
+
+
+	
+}
+
+/* - MW - hover - */
+.selectboxit:hover .selectboxit-arrow.icon-arrow-down {
+
+}
+
+/* - MW - dropdown expanded hover - */
+.selectboxit.active:hover .selectboxit-arrow.icon-arrow-down {
+
+}
+
+/* - MW - dropdown expanded - */
+.selectboxit.active .selectboxit-arrow.icon-arrow-down {
+
+}
+
+/* - MW - dropdown expanded ul - */
+.selectboxit.active {
+
+	
+		~ ul {
+			border:1px solid #c4c4c4;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			width: 198px;
+			margin-top:-1px;
+
+			.selectboxit-option.selectboxit-hover
+			//, .selectboxit-option.selectboxit-option-first 
+			{
+
+				.selectboxit-option-anchor{
+					color:#fff;
+					text-decoration:none;
+					
+					
+		
+				}
+			}
+		}
+	
+}
+
+/* INVALID - Dropdown List Box */
+
+	/* - BOX - */
+	.invalid .selectboxit {
+		background:#ffece3;
+		border: 1px solid #da552a;
+
+		.selectboxit-text{
+			
+		}
+
+	}
+/* DISABLED - Dropdown List Box */
+
+	.selectboxit.selectboxit-disabled {
+		background:#eee;
+
+		.selectboxit-text{
+			color:#bbb;
+		}
+
+	}
+
+//////////////////////////
+
+} // Module END
+
+
+

@@ -1,0 +1,21 @@
+/*
+IE SPLASH
+*/
+html,
+body                        {width:100%; height:100%; }
+
+section						{display:none;}
+
+.msie-7-splash              {width:100%; height:100%; position:absolute; top:0; left:0; z-index:30000;  background: #f6f6f6; }
+.msie-7-splash  .content    {padding:70px; width:790px; font-family:arial, sans-serif;}
+
+.msie-7-splash  h6          {text-transform:none; font-family:arial, sans-serif; font-size:36px; color:#1a1a1a; padding-bottom:20px;}
+
+.msie-7-splash  P           {font-family:arial, sans-serif; padding-bottom:50px; font-size:17px;}
+.msie-7-splash  .browser    {float:left; color:#666; text-decoration:none; border-right:1px solid #e7e5da; width:160px; text-align:center; padding: 120px 0 10px 0;}
+.msie-7-splash  .browser:hover {text-decoration:underline; cursor: pointer;}
+.msie-7-splash  .ch         {border-left:1px solid #e7e5da; background:url("browser-ch.png") no-repeat center top;}
+.msie-7-splash  .ff         {background:url("browser-ff.png") no-repeat center top;}
+.msie-7-splash  .sa         {background:url("browser-sa.png") no-repeat center top;}
+.msie-7-splash  .ex         {background:url("browser-ie.png") no-repeat center top;}
+form						{display:none}

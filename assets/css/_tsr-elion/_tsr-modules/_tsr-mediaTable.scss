@@ -1,0 +1,519 @@
+/*
+Copyright (c) 2012 Marco Pegoraro, http://movableapp.com/
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+// WHERE TO FIND MEDIA TABLE:
+// https://github.com/thepeg/MediaTable
+// http://consulenza-web.com/jquery/MediaTable/
+// http://www.consulenza-web.com/2012/01/mediatable-jquery-plugin/
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/*
+MEDIA TABLE
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Header
+// - - Section
+// - - Table
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION HEADER
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// Module class name
+$header: tsr-module-mediaTable-header;
+
+.#{$header}{
+
+//////// Base styles
+	background:$white; 
+	line-height:1;
+	font-size:20px;
+	padding:17px 20px 18px;
+	color:#333;
+	font-weight:normal;
+	border-top:1px solid $lightgrey-t;
+	border-bottom:1px solid $lightgrey-t;
+	margin:-1px 0;
+
+	&.tsr-color-purple{
+		background:$purple-t;
+		color:#fff;
+	}
+
+////// RWD 
+
+    @include media-min(940px) {
+    	font-size:20px;
+		padding:20px 20px 18px;
+	}
+
+/////// INTERNET EXPLORER 8
+
+ 	@include old-ie {
+ 	
+		.ie-8 &{
+
+	     }// .ie8 & END
+	
+	}
+
+////// SECTION END
+
+} // section END
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// Module class name
+$section: tsr-section-mediaTable;
+
+.#{$section}{
+
+//////// Base styles
+	padding:0;
+
+/////// RWD 
+
+    @include media-min(601px) {
+
+	}
+
+/////// INTERNET EXPLORER 8
+
+ 	@include old-ie {
+ 	
+		.ie-8 &{
+
+	     }// .ie8 & END
+	
+	}
+
+////// SECTION END
+
+} // section END
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MODULE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// Module class name
+$module: tsr-module-mediaTable;
+
+.#{$module}{
+
+
+////// BASE
+
+	width:100%;
+	border-collapse:collapse;
+	font-size:13px;
+	color:$black;
+	border:1px solid $lightgrey-t;
+	border-bottom:none;
+	margin-bottom:-1px;
+
+	th{
+		background:$lightgrey-c;
+		color:$black;
+	}
+
+	td{
+		background:$white;
+	}
+
+	// Active Media Table Rules
+	// theese rules are applied to a table activated by the jQuery plugin.
+
+	&.activeMediaTable th, 
+	&.activeMediaTable td {
+		display: none;
+	}
+
+	&.activeMediaTable th.essential, 
+	&.activeMediaTable td.essential {
+		display: table-cell;
+	}
+
+////// Themeing
+
+	thead th {
+		border-bottom: 1px solid #ccc;
+		color: #333;
+
+		//+ th{
+		//	border-left:1px solid $white;	
+		//}
+		
+	}
+
+	// tr:nth-child(even) td{
+  	//	background-color: $lightgrey-c; 
+	// }
+
+	th,  
+	td {
+		padding: 0.75em 0.3em;
+		text-align: center;
+
+		+ td,
+		+ th{
+			border-left:1px solid $lightgrey-t;	
+		}
+
+	}
+
+	th:first-child,  
+	td:first-child {
+		text-align: left;
+	}
+
+	tbody th,  
+	td {
+		border-bottom: 1px solid #e6e6e6;
+	}
+
+	.free{
+		color:$orange-c;
+	}
+
+	.total{
+		color:$blue-c;
+		font-weight:blue;
+	}
+
+	.tsr-btn.tsr-btn-secondary{
+		padding:10px 12px;
+	}
+
+
+} // module END
+
+
+
+//////////////// "OUTSIDE"
+
+
+////// Wrappers
+	.mediaTableWrapper {
+		position: relative;
+	}
+
+	.mediaTableWrapperWithMenu{
+		// padding-top:3em;
+	}
+
+///// Menu default
+	.mediaTableMenuClosed ul {
+		display:none;
+	}
+
+
+
+//////// RWD
+
+@include media-min(480px) {
+	
+
+
+
+	.#{$module}{
+
+		th,  
+		td {
+			padding: 0.75em 0.9em;
+		}
+
+	}
+
+		
+}
+
+@include media-min(780px) {
+	
+
+	.activeMediaTable th.optional, .activeMediaTable td.optional {
+		display: table-cell;
+	}
+
+	.#{$module}{
+
+		font-size:14px;
+
+		th,  
+		td {
+			padding: 1em 1.256em;
+		}
+
+	}
+
+		
+}
+
+@include media-min(940px) {
+	
+	.activeMediaTable th, .activeMediaTable td {
+		display: table-cell;
+	}
+
+
+	.#{$module}{
+		font-size:15px;
+	}
+	
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// MENU
+///////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+
+
+////// Menu Style
+
+.mediaTableMenu {
+	//position:absolute;
+	//top:0;
+	//right:0;
+
+	background:$purple-t;
+	overflow:hidden;
+	padding: 0 20px 18px;
+	font-family:$font-1;
+	
+	a {
+		@include border-radius-top(4px);
+		display: block;
+		background:$purple-c;
+		padding:17px 20px;
+		color:$white;
+		cursor:pointer;
+		line-height:1;
+		font-size:15px;
+		border-bottom:1px solid $purple-t;
+		position:relative;
+
+
+		&:before{
+			content: "";
+			width:1px;
+			height:100%;
+			position:absolute;
+			top:0px;
+			right:50px;
+			background:$purple-t;
+			z-index:1;
+		}
+
+		&:after{
+			font-family: 'ts-icons-all';
+			content: "\e66b";
+			width:18px;
+			height:18px;
+			position:absolute;
+			top:50%;
+			right:16px;
+			margin:-9px 0 0;
+			font-size:18px;
+			display:block;
+			color:#fff;
+		}
+
+		&:hover{
+			color:#fff;
+			text-decoration:none;
+			background:$purple-h;
+		}
+		
+	}
+
+	ul {
+		list-style-position:outside;
+		list-style:none;
+		margin:0;
+		padding:0;
+		background:$purple-c;
+		@include border-radius-bottom(4px);
+		overflow:hidden;
+	}
+
+	ul li {
+		//line-height: 2em;
+		line-height:1;
+		padding:17px 20px;
+		border-bottom:1px solid $purple-t;
+
+		&:hover{
+			background:$purple-h;
+		};
+
+	}
+
+	ul li label {
+		cursor:pointer;
+		color:$white;
+		font-weight:normal; padding:0 0 0 14px;
+	}
+
+	&.mediaTableMenuClosed a {
+			@include border-radius(4px);
+			border-bottom:none;
+
+			&:after{
+				content: "\e669";
+			}
+
+	}
+
+
+/////// RWD 
+
+@include media-min(768px) {
+	
+	display:none;
+	
+}
+
+
+} //.mediaTableMenu END 
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION FOOTER
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// Module class name
+$footer: tsr-module-mediaTable-footer;
+
+.#{$footer}{
+
+//////// Base styles
+	background:$white; 
+	//border-top:1px solid $lightgrey-t;
+	//border-bottom:1px solid $lightgrey-t;
+	padding:14px 0 20px;
+	margin:-1px 0;
+
+	i{
+		display:block;
+		line-height:1.256;
+		font-size:12px;
+		color:#333;
+		margin:0 0 4px 25px;
+		padding:0 0 0 6px;
+		position:relative;
+
+		&:before{
+			content:'*';
+			position:absolute;
+			right:100%;
+			top:0px; 
+		}
+
+		&.tsr-star-1{
+			&:before{
+				content:'*';
+			}
+		}
+
+		&.tsr-star-2{
+			&:before{
+				content:'**';
+			}	
+		}
+
+		&.tsr-star-3{
+			&:before{
+				content:'***';
+			}	
+		}
+
+	}
+
+
+/////// RWD 
+
+    @include media-min(940px) {
+    	padding:20px 0 60px;
+
+    	.table
+
+    	i{
+			font-size:13px;
+		}
+
+	}
+
+/////// INTERNET EXPLORER 8
+
+ 	@include old-ie {
+ 	
+		.ie-8 &{
+
+	     }// .ie8 & END
+	
+	}
+
+////// SECTION END
+
+} // section END
+
+
+
+
+
+
+
+
+

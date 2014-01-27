@@ -1,0 +1,111 @@
+// Tactical elements z-adjustments for canvas element (multiply)
+
+.tsr-tactical-flash  {
+  display: table;
+  position: absolute;
+  z-index: 2;
+  &.vertical {
+    @include media-min(768px) {
+    top: 105px;
+    right: 60px;
+    }
+  }
+}
+
+.tsr-module-product .tsr-tactical-flash.tsr-second {
+  z-index: 1;
+  &.horizontal {
+    @include media-min(768px) {
+    top: 105px;
+    }
+  }
+}
+
+// Ribbon figure moved under parent a for mobile view, just under class="tsr-module-product"
+
+.tsr-module-product .tsr-tactical-ribbon { 
+  display:block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &:before, 
+  &:after {
+    background: transparent;
+  }
+
+  & > span {
+    height: 24px;
+    line-height: 24px;
+    bottom: -12px;
+
+    &.tsr-text-medium {
+      font-size: 0.8em;
+    }
+    &.tsr-text-small {
+      font-size:10px;
+    }
+  }
+
+    @include media-min(768px) {
+      left: -10px;
+      top: -10px;
+
+      & > span {
+        height: 34px;
+        line-height: 34px;
+        bottom: -8px;
+
+        &.tsr-text-medium {
+          font-size: 1em;
+        }
+        &.tsr-text-small {
+          font-size:13px;
+        }
+      }
+
+      &:before,
+      &:after{
+        content: "";
+        display:block;
+        z-index:-1;
+        position:absolute;
+        background:$turquoise-t;
+      }
+  } // min 768px
+}
+
+// Round badge, adjust left-right according to context, include with @extend .tsr-ee-badge;
+// Html-syntax: <figure class="tsr-ee-{your context}-badge tsr-ee-badge-{color} tsr-ee-icon tsr-ee-{iconname}">if text add text and skip icon classes, else empty</figure>
+
+.tsr-ee-badge {
+  position: absolute;
+  font-size: 1.1em;
+  display: inline-block;
+  min-width: 10px;
+  padding: 0.65em;
+  font-weight: 600;
+  color: white;
+  line-height: 0.5;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  background-color: $purple-c;
+  border-radius: 100%;
+  border: 0.28em solid white;
+
+  &.tsr-ee-badge-primary {
+    background-color: $purple-c;
+  }
+  &.tsr-ee-badge-red {
+    background-color: $pink-c;
+  }
+  &.tsr-ee-badge-green {
+    background-color: $turquoise-c;
+  }
+  &.tsr-ee-icon {
+    font-size: 1.3em;
+    padding: 0.4em;
+    border: 0.23em solid white;
+  }
+}

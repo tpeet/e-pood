@@ -1,0 +1,371 @@
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+BUTTONS & LINKS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Links
+// - - Buttons
+//
+//
+// - - RWD
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Links
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	a {
+		
+	color:$link;
+	text-decoration:none;
+	position:relative;
+	outline: none!important; 
+
+		&:link{
+			
+		} 
+
+		&:hover{
+			text-decoration:underline;
+			color:$link-hover;
+		} 
+
+		&:visited{
+			
+		} 
+
+		&:active{
+			color:$link-click;
+		} 
+
+		&:focus{
+			color:$link-click;	
+		} 
+
+	} // a END
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Buttons 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// Button - Base
+
+	.tsr-btn {
+		@include border-radius(4px);
+		background:$turquoise-c;
+		border:none; // Needed for input
+		border-bottom:4px solid $turquoise-t;
+		line-height:1;
+		color:#fff;
+		font-size:13px;
+		font-weight:bold;
+		padding:12px 40px;
+		display:inline-block;
+		position:relative;
+		
+		&:hover{
+			text-decoration:none;
+			background:$turquoise-h;
+			border-bottom:4px solid $turquoise-c;
+			color:#fff;
+		} 
+
+		&:visited{
+			
+		} 
+
+		&:active{
+			background:$turquoise-t;
+			border-bottom:4px solid $turquoise-t;	
+			color:#fff;
+		} 
+
+		&:focus{
+			outline:none;
+		}
+
+		// Sizes
+		&.tsr-btn-small{
+			padding:12px 30px;
+		}
+
+		&.tsr-btn-large{
+			font-size:15px;
+			padding:18px 40px;
+		}
+
+
+		// 100% width
+		&.tsr-btn-100 { 
+			display:block;
+			text-align:center;
+		}		 
+
+
+		// Purple
+		&.tsr-btn-purple { 
+			background:$purple-c;
+			border-bottom:4px solid $purple-t;
+
+			&:hover{
+				background:$purple-h;
+				border-bottom:4px solid $purple-c;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				background:$purple-t;
+				border-bottom:4px solid $purple-t;	
+			} 
+
+			&:focus{
+
+			}
+			
+		}
+
+		// Pink
+		&.tsr-btn-pink { 
+			background:$pink-c;
+			border-bottom:4px solid $pink-t;
+
+			&:hover{
+				background:$pink-h;
+				border-bottom:4px solid $pink-c;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				background:$pink-t;
+				border-bottom:4px solid $pink-t;	
+			} 
+
+			&:focus{
+
+			}
+			
+		}
+
+		// Blue
+		&.tsr-btn-blue { 
+			background:$blue-c;
+			border-bottom:4px solid $blue-t;
+
+			&:hover{
+				background:$blue-h;
+				border-bottom:4px solid $blue-c;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				background:$blue-t;
+				border-bottom:4px solid $blue-t;	
+			} 
+
+			&:focus{
+
+			}
+			
+		}
+
+		// Orange
+		&.tsr-btn-orange { 
+			background:$orange-c;
+			border-bottom:4px solid $orange-t;
+
+			&:hover{
+				background:$orange-h;
+				border-bottom:4px solid $orange-c;
+			} 
+
+			&:visited{
+				
+			} 
+
+			&:active{
+				background:$orange-t;
+				border-bottom:4px solid $orange-t;	
+			} 
+
+			&:focus{
+
+			}
+			
+		}	
+
+		// Disabled
+		&.tsr-btn-disabled, 
+		&:disabled{
+			background:#a4a5a6;
+			border-bottom:4px solid #959595;
+			color:rgba(255,255,255,.8);
+			cursor:default;
+
+			&:hover{
+				background:#a4a5a6;
+				border-bottom:4px solid #959595;
+				color:rgba(255,255,255,.8);
+				cursor:default;
+			}
+
+		}
+
+	    // Touch normalize (Hover + focus, Active, )
+		.touch & {
+			
+			text-decoration:none;
+
+				&:hover,
+				&:focus{
+					text-decoration:none;
+				} 
+
+				&:active{
+					text-decoration:none;
+				} 
+
+		} // .touch END	
+
+	} // .bth-v1 END
+
+
+
+//////// Button View all
+
+	.tsr-btn-view-all{
+		border-top:1px solid $lightgrey-t;
+		border-bottom:1px solid $lightgrey-t;
+		background:$lightgrey-c;
+		padding:0 15px;
+		font-size:15px;
+		line-height:1;
+		display:block;
+		position:relative;
+		z-index:1;
+		text-align:center;
+
+		span{
+			@include border-radius(4px);
+			display:block;
+			color:$white;
+			background:$purple-c;
+			border-bottom:4px solid $purple-t;
+			padding:11px 14px;
+			margin:10px 10px;
+			font-size:13px;
+			line-height:1;
+
+			i{
+	 			font-style:normal;
+	 			display:inline-block;
+	 			margin-left:4px;
+	    	}
+
+			&:hover{
+				background:$purple-h;
+			}
+		}
+
+		&:hover{
+			text-decoration:none;
+			background:$white;
+			cursor:pointer;
+		} 
+
+		// Color white
+		&.tsr-color-white{
+			background:$white;
+
+			&:hover{
+				background:$lightgrey-c;
+			}
+
+		} 
+
+	    // Touch normalize (Hover + focus, Active, )
+		.touch & {
+			
+			text-decoration:none;
+
+				&:hover,
+				&:focus,
+				&:active{
+					text-decoration:none;
+					background:$white;
+					cursor:pointer;
+				} 
+
+		} // .touch END	
+
+
+		// RWD 
+	    @include media-min(768px) {
+
+	    	span{
+	    		background:none;	
+	    		border:none;
+	    		color:$purple-c;
+	    		font-size:15px;
+	    		font-weight:bold;
+
+	    		i{
+	    			color:$black;
+	    			font-weight:normal;
+	    		}
+
+	    		&:hover{
+	    			background:none;
+	    		}
+	    	}
+	    	
+
+		} // min 768px
+
+		.ie8 &{
+				
+	    	span{
+	    		background:none;	
+	    		border:none;
+	    		color:$purple-c;
+	    		font-size:15px;
+	    		font-weight:bold;
+
+	    		i{
+	    			color:$black;
+	    			font-weight:normal;
+	    		}
+
+	    		&:hover{
+	    			background:none;
+	    		}
+	    	}
+
+		}// .ie8 END
+
+
+	} // .tsr-btn-view-all END
+
+
+
+
+

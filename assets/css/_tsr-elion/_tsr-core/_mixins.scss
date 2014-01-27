@@ -1,0 +1,210 @@
+
+/////////////////////////////////////////////////////////////////////////
+
+//
+// SASS -> Mixins & Placeholders
+//
+
+/////////////////////////////////////////////////////////////////////////
+// Table of contents 
+/////////////////////////////////////////////////////////////////////////
+//
+//
+// - - MOBILE-FIRST MIXIN MAGIC (use one)
+// - - INCLUDE MIXIN MAGIC (use one)
+// - - BORDER RADIUS
+// - - GRADIENT
+// - - TRANSITION
+// - - RETINA SPRITE BACKGROUND IMAGE
+// - - ROTATE
+// - - CLEARFIX
+//
+// 
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// MOBILE-FIRST MIXIN MAGIC
+// -> http://jakearchibald.github.io/sass-ie/
+/////////////////////////////////////////////////////////////////////////
+
+
+//////// BREAKPOINTS
+
+$fix-mqs: false !default;
+
+@mixin media-min($width) {
+        @if $fix-mqs {
+                @if $fix-mqs >= $width {
+                        @content;        
+                }
+        }
+        @else {
+                @media screen and (min-width: $width) {
+                        @content;
+                }
+        }
+}
+
+@mixin media-max($width) {
+        @if $fix-mqs {
+                @if $fix-mqs <= $width {
+                        @content;        
+                }
+        }
+        @else {
+                @media screen and (max-width: $width) {
+                        @content;
+                }
+        }
+}
+
+
+
+//////// OLD INTERNET EXPLORE 
+
+$old-ie: false !default;
+
+@mixin old-ie {
+        @if $old-ie {
+                @content;
+        }
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// INCLUDE MIXIN MAGIC
+// -> SASS generate to different file
+/////////////////////////////////////////////////////////////////////////
+
+$ie8: false !default;
+$ie7: false !default;
+
+@mixin ie8 { @if $ie8 { @content; } }
+@mixin ie7 { @if $ie7 { @content; } }
+
+
+/////////////////////////////////////////////////////////////////////////
+// BORDER RADIUS
+// -> @include border-radius(4px);
+// -> @include border-radius-left(4px);
+// -> @include border-radius-right(4px);
+// -> @include border-radius-bottom(4px);
+
+/////////////////////////////////////////////////////////////////////////
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin border-radius-right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-left($radius) {
+  -webkit-border-top-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-top-right($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-radius-top($radius) {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+/////////////////////////////////////////////////////////////////////////
+// GRADIENT
+// @include background-gradient(#fff,#eee);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin background-gradient($color1,$color2){
+  background: $color1; 
+  background:        -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2));
+  background: -webkit-linear-gradient(top, $color1, $color2); 
+  background:     -ms-linear-gradient(top, $color1, $color2);
+  background:         linear-gradient($color1, $color2);  
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// TRANSITION
+// @include transition(width, 0.4s, ease-out, 0s)
+/////////////////////////////////////////////////////////////////////////
+
+@mixin transition($property, $duration:0.3s, $function: ease, $delay: 0s){
+   -webkit-transition: $property $duration $function $delay;   
+   -ms-transition: $property $duration $function $delay; 
+    transition: $property $duration $function $delay; 
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// RETINA SPRITE BACKGROUND IMAGE
+// @include background-sprite-retina('#{$imagepath-shared}sprite-menu', 'png', repeat-y, 700px, 35px, left, top); 
+///////////////////////////////////////////////////////////////////////// 
+
+@mixin background-sprite-retina($file, $type, $repeat, $width, $height, $left, $top) {
+  background: url($file + '.' + $type) $repeat transparent $left $top;
+ 
+ @media only screen and  (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) {
+    & {
+      background: url($file + '@2x.' + $type) $repeat transparent $left $top;
+      background-size: $width $height;
+    }
+   }
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// ROTATE
+// @include rotate(90);
+/////////////////////////////////////////////////////////////////////////
+
+@mixin rotate($deg) {  
+  -webkit-transform: rotate(#{$deg}deg);
+  -ms-transform: rotate(#{$deg}deg);
+  transform: rotate(#{$deg}deg);
+}
+
+
+/////////////////////////////////////////////////////////////////////////
+// CLEARFIX
+// @include clearfix;
+/////////////////////////////////////////////////////////////////////////
+
+@mixin clearfix{
+   zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+

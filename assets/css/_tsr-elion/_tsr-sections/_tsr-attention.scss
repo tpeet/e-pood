@@ -1,0 +1,319 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+ALERTS
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Base
+// - - Colors
+//
+// - - Touch 
+// - - Internet explorer (fallback) 
+//
+// - - RWD
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////// Module class name
+$module: tsr-section-attention;
+
+.#{$module}{
+
+//////// Base styles 
+	color:$white;
+	background:$turquoise-c;
+	border-top:4px solid $turquoise-t;
+	border-bottom:4px solid $turquoise-t;
+	color:$white;
+	padding:10px 0px 12px;
+
+	&:hover{
+		background:lighten($turquoise-c, 2%);
+	}
+	
+
+	.tsr-container{
+		position:relative;
+	}
+
+	&.tsr-large{
+		padding: 18px 0px 20px;
+	}
+
+//////// Figure
+
+	figure{
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		margin-top: -11px;
+
+		// Icon
+		&:before{
+			font-size:24px;
+			color:$white;
+		}
+	}
+
+
+//////// Text
+
+	 a{
+		color:$white;
+		line-height:1.256;
+		font-size:15px;
+		display:inline-block;
+		display:block;
+		
+		&:hover{
+			text-decoration:none;
+		}
+
+	}	
+
+	strong{
+		&:after{
+			font-family: 'ts-icons-all';
+			content: "\e668";
+			font-size:15px;
+			speak: none;
+			display:inline-block;
+			position:relative;
+			left:6px;
+			bottom:-2px;
+
+		}
+	}
+
+	.tsr-attention-text{
+		padding:4px 55px 0;
+	}
+
+	span{
+		display:none;
+	}
+
+//////// Read more
+
+	.tsr-attention-readMore{
+		display:none;
+		position:absolute;
+		line-height:1;
+		border-right:1px solid $white;
+		padding:0 12px 3px 40px;
+		right:50px;
+		top:50%;
+		margin-top:-8px;
+		color:$white;
+		font-weight:bold;
+
+		&:before{
+			font-family: 'ts-icons-all';
+			content: "\e668";
+			position:absolute;
+			left:21px;
+			top:1px;
+		}
+
+		 &:hover{
+			text-decoration:underline;
+		}
+
+	}
+
+//////// Close
+
+	.tsr-attention-close{
+		position:absolute;
+		padding:0 6px 0 6px;
+		right:0;
+		top:50%;
+		margin-top:-13px;
+
+		&:before{
+			@include border-radius(30px);
+			font-size:22px;
+			color:$turquoise-c;
+			background:$white;
+			line-height: 28px;
+			width: 28px;
+			height: 28px;
+			text-align: center;
+		}
+
+
+
+	}
+
+	.tsr-container .tsr-attention-close{
+
+		&:hover{
+			&:before{
+				color:darken($turquoise-t, 6%);
+			}
+		}
+
+	}
+
+
+//////// Color blue
+
+		&.tsr-secondaryAlert {
+			background:$blue-c;
+			border-color:$blue-t;
+				&:hover{
+					background:lighten($blue-c, 2%);
+				}
+				.tsr-attention-readMore{
+					font-weight:bold;
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+				.tsr-attention-close{
+					color:$blue-c;
+					&:hover{
+						&:before{
+							color:darken($blue-t, 6%);
+						}
+					}
+					&:before{
+						color:$blue-c;
+					}
+				}
+		}
+
+//////// Color orange
+
+		&.tsr-primaryAlert {
+			background:$orange-c;
+			border-color:$orange-t;
+				&:hover{
+					background:lighten($orange-c, 4%);
+				}
+				.tsr-attention-readMore{
+					font-weight:bold;
+					&:hover{
+						text-decoration:underline;
+					}
+				}
+				.tsr-attention-close{
+					color:$orange-c;
+					&:hover{
+						&:before{
+							color:darken($orange-t, 6%);
+						}
+					}
+					&:before{
+						color:$orange-c;
+					}
+				}				
+		}
+
+
+//////// Touch 
+
+	.touch & {		
+		
+		&:hover,
+		&:focus{
+			
+		} 
+
+		&:active{
+			
+		} 
+
+	} // .touch END	
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// RWD 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    @include media-min(601px) {
+
+		strong{
+			&:after{
+				content:': ';
+				position:static;
+			}
+		}
+
+        span{
+			display:inline-block;
+		}
+
+		.tsr-attention-text {
+			padding: 4px 190px 0 55px;
+		}
+
+        .tsr-attention-readMore{
+			display:inline-block;
+		} 
+
+		&.tsr-secondaryAlert {
+
+	        .tsr-attention-readMore{
+				display:inline-block;
+				right:10px;
+				border-right:0;
+			} 
+
+		}
+
+
+		.tsr-container .tsr-attention-close{
+
+			&:before{
+				font-size:28px;
+				color:$white;
+				background:none;
+			}
+			
+		}
+
+	}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// INTERNET EXPLORER 8
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ @include old-ie {
+ 	
+	.ie8 &{
+
+		display:block;
+	
+        span{
+			display:inline-block;
+		}
+
+        }// .ie8 & END
+
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// MODULE END
+
+} // Module END
+
+
+
+
+
+
+
+
+
+

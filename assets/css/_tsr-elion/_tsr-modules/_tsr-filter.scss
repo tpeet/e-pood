@@ -1,0 +1,290 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+FILTER
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - SECTION
+// - - Filter list
+// - - Sort list
+// - - Touch 
+// - - RWD
+// - - Internet explorer (fallback) 
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SECTION 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////// Module class name
+$section: tsr-section-filter;
+
+
+.#{$section}{
+
+
+//////// Base styles 
+	background:$purple-c;
+	border-top:1px solid $lightgrey-t;
+	color:$white;
+
+
+	menu{
+		padding:0;
+		margin:0;
+		list-style-type:none;
+	}
+
+	a{
+		color:$white;
+
+		 &:hover{
+			text-decoration:none;
+		}
+		
+	}
+
+	.tsr-btn{
+
+		&.tsr-btn-disabled:hover{
+			cursor:pointer;
+		}
+
+		&.is-choosen{
+			background:$purple-t;
+			&:hover{
+				background:$purple-t;
+			}
+		}
+
+	}
+
+	> .tsr-container{
+		padding:0 10px;
+
+		> menu {
+			float:left;
+
+			> li{
+				margin-right:-1px;
+			}
+
+			> li > a{
+				border-left:1px solid $purple-t;
+				border-right:1px solid $purple-t;
+				position:relative;
+
+				&:hover{
+					background:$purple-h;
+				}
+
+			}
+
+		}
+	}
+
+
+
+
+
+/////// Top level
+
+	.tsr-top-level{
+		
+
+		> a{
+			font-size:15px;
+			display:inline-block;
+			padding:18px 40px 18px 20px;
+
+				&:after{
+					font-family: 'ts-icons-all';
+					content: "\e669";
+					font-size: 13px;
+					color: white;
+					position:absolute;
+					top: 20px;
+					right:13px;
+				}
+
+		}
+
+		&.is-expanded {
+			> a{
+				background:$purple-t;
+				&:hover{
+					background:$purple-t;
+				}
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+/////// Filter list
+
+	.tsr-filterList{
+
+			.tsr-filter-wrapper{
+				position:absolute;
+				padding:5px 10px 20px;
+				background:$lightgrey-c;
+				border-bottom:1px solid $lightgrey-t;
+				top:54px;
+				left:0px;
+				z-index:1;
+				width:100%;
+				visibility:hidden;
+			}
+
+			.is-expanded .tsr-filter-wrapper{
+				visibility:visible;
+
+			}
+
+			.tsr-second-level{
+				width:100%;
+				display:block;
+				
+
+				li:first-child{
+					width:100%;
+				}
+
+				li{
+					float:left;
+					margin:0 4px 4px 0;
+				}
+
+			} // .tsr-second-level END
+
+			header{
+				color:#333;
+				padding:15px 0 10px;
+			}
+
+	}
+
+
+////// Sort list
+
+	.tsr-sortList{
+			.tsr-top-level{
+				position:relative;
+			}
+
+			.tsr-second-level{
+				display:none;
+			}	
+
+			.is-expanded .tsr-second-level{
+				display:block;
+				z-index:3;
+			}
+
+			.is-expanded .tsr-second-level{
+				background:$purple-t;
+			}
+
+			.tsr-second-level{
+				position:absolute;
+				top:100%;
+				right:0;
+				z-index:-1;
+				padding:8px 0;
+
+				a{
+					font-size:13px;
+					display:block;
+					padding:8px;
+					white-space:nowrap;
+
+					&:hover{
+						background:$purple-c;
+					}
+
+				}
+
+			}	
+	}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// RWD 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////// 600 
+
+    @include media-min(600px) {
+
+		.tsr-sortList{
+				.tsr-second-level{
+					right:auto;
+					left:0;
+				}	
+		}
+
+	} // min 600 END
+
+
+//////// 941 
+
+    @include media-min(941px) {
+
+		.tsr-filterList{
+
+				.tsr-filter-wrapper{
+					padding:5px 20px 20px;
+				}
+
+				.tsr-second-level{
+					width:50%;
+					float:left;
+				}
+
+		}
+
+	} // min 941 END
+
+
+////// INTERNET EXPLORER 8
+
+ 	@include old-ie {
+ 	
+		.ie-8 &{
+
+	     }// .ie8 & END
+	
+	}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+////// SECTION END
+
+} // section END
+
+
+
+
+
+
+
+
+
+
+
+
+

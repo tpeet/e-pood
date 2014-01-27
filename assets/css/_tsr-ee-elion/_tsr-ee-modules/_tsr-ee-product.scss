@@ -1,0 +1,13 @@
+.tsr-ee-product-boxes {
+
+& .tsr-ee-product-badge {
+  @extend .tsr-ee-badge;
+  left: 20%;
+  top: 10%;
+    @include media-min(768px) {
+    left: 70%;
+    top: 10%;
+    z-index: 3;
+    } // min 768px
+  }
+}

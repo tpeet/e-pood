@@ -1,0 +1,13 @@
+{
+  "name": "elion-style",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-handlebars": "~0.6.0",
+    "grunt-responsive-images": "~0.1.1"
+  },
+  "dependencies": {
+    "grunt-autoprefixer": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

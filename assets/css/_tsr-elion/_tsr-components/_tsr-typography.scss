@@ -1,0 +1,101 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+TYPOGRAPHY
+*/ 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// - Table of contents 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// - - Base
+// - - Headings
+// - - Text formatting
+//
+//
+// - - RWD
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////// Module class name
+$module: tsr-typo;
+
+.#{$module}{
+
+
+
+//////// Base
+
+	body {
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		line-height: 1.25; /* Unitless for proper inheritance */
+		color: #333;
+		font-size:15px;
+	}
+	
+//////// Headings
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 	{
+		font-family:$font-1;
+		font-weight:bold;
+		color:#333;
+		margin:0.6em 0 0.3em; 
+	}
+
+	h1 a,
+	h2 a,
+	h3 a,
+	h4 a,
+	h5 a,
+	h6 a {
+		text-decoration: none; color:$pink-c;
+	}
+
+	h1 	{font-size:42px; line-height:50px; letter-spacing:-1px;}
+	h2 	{font-size:36px; line-height:42px; letter-spacing:-1px;}
+	h3 	{font-size:22px; line-height:28px;}
+	h4 	{font-size:22px; line-height:28px; font-weight:normal;}
+	h5 	{font-size:20px; line-height:25px; font-weight:normal}
+	h6 	{font-size:18px; line-height:22px; font-weight:normal; font-style:italic;}
+
+
+//////// Text formating
+
+	p {
+		&.preamble{
+			font-size:20px;
+			line-height:26px;
+			font-weight:bold;
+		}
+
+		margin:0 0 1em;
+		font-size:15px;
+		line-height: 1.4; /* Unitless for proper inheritance */
+		
+	}
+
+	p + p {
+		
+	}
+
+	i, em {
+		
+	}
+
+	strong {
+		
+	}
+
+
+} // Module END
+
+
+

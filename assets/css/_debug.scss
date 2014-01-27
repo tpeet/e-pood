@@ -1,0 +1,95 @@
+/*  
+
+	DEBUG TOOLS  
+	===========
+	
+	These are just some debug styles to confirm 
+	screen sizes when swooshing around with 
+	resizing the browser for quick testing.
+	
+	Delete this file (and the http call in your pages) 
+	when you're ready to deploy.
+	
+	They compliment this code http://bit.ly/xph4ns
+	
+*/
+
+/* Media Querie Min-Width */
+$mobile-portrait: 320px;
+$mobile-landscape: 479px;
+$small-tablet: 599px;
+$tablet-notebook: 768px;
+$landscape-tablet: 1024px;
+$desktop: 1280px;
+$widescreen: 1440px;
+
+body:before {
+	background: #1c2f55 ;
+	width: 96%;
+	padding: .5em 2%;
+	display: inline-block;
+	clear: both;
+	font-size: 12px;
+	font-size: .75rem;
+	font-family: Arial, sans-serif;
+	font-weight: 600;
+	color: white;
+	position: fixed;
+	z-index: 10;
+	bottom: 0;
+	content: "This is simply mediaqueries debug info";
+	}
+
+@media only screen and (min-width: $mobile-portrait) { 
+body:before { content: "Mobile portrait, min-width: 320px"; background:	#1e5950; }
+}
+
+@media only screen and (min-width: $mobile-landscape) { 
+body:before { content: "Mobile landscape, min-width: 479px"; background: #2a557e ; }
+}
+
+@media only screen and (min-width: $small-tablet) { 
+body:before { content: "Small tablet, min-width: 599px"; background:	#ba543e ; }
+}
+
+@media only screen and (min-width: $tablet-notebook) { 
+body:before { content: "$tablet-notebook, min-width: 768px"; background: #703225; }
+}
+
+@media only screen and (min-width: $landscape-tablet) { 
+body:before { content: "$landscape-tablet, min-width: 1024px"; background: #783bb1 ; }
+}
+
+@media only screen and (min-width: $desktop) { 
+body:before { content: "$desktop, min-width: 1280px"; background: #783bb1 ; }
+}
+
+@media only screen and (min-width: $widescreen) { 
+body:before { content: "$widescreen, min-width: 1440px"; background: #783bb1 ; }
+}
+
+
+/* 	
+	The following are some exact breakpoints if you want them, 
+	so you can work out screen size for tablets etc. 
+*/
+	
+// @media only screen and (width: 20em) { 
+// body:before { content: "This is exactly 320px/20em"; background: #0cc; }
+// }
+
+// @media only screen and (width: 30em) { 
+// body:before { content: "This is exactly 480px/30em"; background: #6cc; }
+// }
+
+// @media only screen and (width: 37.5em) { 
+// body:before { content: "This is exactly 600px/37.5em"; background: #bada55; }
+// }
+
+// @media only screen and (width: 48em) { 
+// body:before { content: "This is exactly 768px/48em"; background: pink; }
+// }
+
+// @media only screen and (width: 64em) { 
+// body:before { content: "This is exactly 1024px/64em"; background: orange; }
+// }

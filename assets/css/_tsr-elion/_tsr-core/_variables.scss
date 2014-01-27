@@ -1,0 +1,128 @@
+
+
+/////////////////////////////////////////////////////////////////////////
+
+//
+// Variables
+//
+
+/////////////////////////////////////////////////////////////////////////
+// Table of contents 
+/////////////////////////////////////////////////////////////////////////
+//
+//
+// - - Colors
+// - - Font familys
+// - - Media queries
+// - - Paths 
+//
+// 
+/////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////
+// Colors 
+/////////////////////////////////////////////////////////////////////////
+
+
+// Primary colors
+$purple-h:		#73369e !default;
+$purple-c:		#642887 !default;
+$purple-t:		#4e256b !default;
+
+// Gray scale
+$white:			#ffffff !default;
+$black:			#000000 !default;
+
+$lightgrey-h:	#ffffff !default;
+$lightgrey-c:	#f6f6f6 !default;
+$lightgrey-t:	#dbdbdb !default;
+
+$darkgrey-h:	#858889 !default;
+$darkgrey-c:	#6c6f70 !default;
+$darkgrey-t:	#545556 !default;
+
+$clay-h:		#e1dbd2 !default;
+$clay-c:		#c7c2ba !default;
+$clay-t:		#aea9a2 !default;
+
+
+// Dark core
+$darkpurple-c:	#1f0f20 !default;
+
+
+// Accent colors (l=light, d=dark)
+$yellow-c:		#f9dc00 !default;
+$yellow-h:		#ffe75c !default;
+$yellow-t:		#eac907 !default;
+
+$orange-c:		#ff6319 !default;
+$orange-h:		#ff9166 !default;
+$orange-t:		#da552a !default;
+
+$green-c:		#bed600 !default;
+$green-h:		#dced00 !default;
+$green-t:		#adba00 !default;
+
+$blue-c:		#0083be !default;
+$blue-h:		#009fd6 !default;
+$blue-t:		#0070a3 !default;
+
+$turquoise-c:   #00b48c !default;
+$turquoise-h:	#00cc9b !default;
+$turquoise-t:	#009974 !default;
+
+$pink-c:		#c41b79 !default;
+$pink-h:		#db2190 !default;
+$pink-t:		#a91a6f !default;
+
+// Intaraction colors
+$link:			$purple-c !default;
+$link-hover:	$purple-h !default;
+$link-click:	$purple-t !default;
+$link-disabled:	#d6d6d6 !default;
+
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Font familys
+/////////////////////////////////////////////////////////////////////////
+
+// Primary
+$font-1: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+// Secondary
+$font-2: Arial,Verdana, sans-serif;
+
+
+
+/////////////////////////////////////////////////////////////////////////
+// Media queries (Need to uppadated in all places!!)
+/////////////////////////////////////////////////////////////////////////
+
+// Tablet - Portrait
+$media-1024: 1240px; // Need to be adjusted!!!
+
+// Tablet - Portrait
+$media-768: 994px; // Need to be adjusted!!!
+
+// Mobile - Landscape
+$media-480: 767px;
+
+// Mobile - Portrait
+$media-320: 479px;
+
+
+/////////////////////////////////////////////////////////////////////////
+// Paths for catalogs
+/////////////////////////////////////////////////////////////////////////
+
+// Image paths: 
+$imagepath: "/Images/";
+
+
+// Ex.
+// background: url('#{$imagepath}image-name.jpg') no-repeat;
+
+
+
