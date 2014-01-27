@@ -1,5 +1,6 @@
 # Elion e-pood
-Kompileeritud failid asuvad Build kataloogis. Ehitamiseks kasutan [Hammerit](http://hammerformac.com), sealt ka pärit projekti ebaharilik ülesehitus. Et ma olen laisk htmli tippija, on templiitimise abivahendiks [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse .Net tagidega. 
+Kompileeritud failid asuvad Build kataloogis. Ehitamiseks kasutan [Hammerit](http://hammerformac.com), sealt ka pärit projekti ebaharilik ülesehitus. Asja voorus on, et juurkataloogis on projekti osad ilusti väikeste hallatavate (ja soovi/vajaduse korral kopeeritavate) juppidena, assetsis css sassi kujul ja juppidena.
+Et ma olen laisk htmli tippija, on templiitimise abivahendiks [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse .Net tagidega. 
 
 ## Sisu
 
