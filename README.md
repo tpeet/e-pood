@@ -4,13 +4,15 @@ Kompileeritud failid asuvad Build kataloogis. Ehitamiseks kasutan [Hammerit](htt
 ## Sisu
 
 ### Struktuur
-Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi.
+Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi. Ehitan mobile-first approachi kasutades.
 
 ### Töös on:
 
 	- Avaleht (ülemine slaider ja ülemised tooteklotsid)
 	  - Sisselogitud kasutaja
 	- Toote klotsvaade
+
+Ülejäänud nähtavad leheosad on kopipaste rootslaste näidisest ega toimi responsivena.
 	
 ### Do-not-forget
 - Korrasta javascript footeris (includes), lisa require.js
