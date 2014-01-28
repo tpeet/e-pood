@@ -16,7 +16,7 @@ Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-
 Ülejäänud nähtavad leheosad on kopipaste rootslaste näidisest ega toimi responsivena.
 
 ### Abivahendid, suurelt jaolt eksperimentaalsed:
-- uued ikoonid lisaks rootslaste omale ka [Fontasticus](http://fontastic.me/)
+- uued ikoonid, mida Ahto juurde teeb lisaks rootslaste omale ka [Fontasticus](http://fontastic.me/). Ligipääsud annab Ahto - see on siiski avalik repo.
 - [grunt](http://gruntjs.com/)
 	- [grunt responsive-images](https://github.com/andismith/grunt-responsive-images)
 	- meediapäringute sortimiseks [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
@@ -25,9 +25,12 @@ Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-
 
 ### Muudatused rootsi koodi
 - Maha võetud user scale restriction
+- Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.
+- Maha võetud tsr-grid.scss (asendatud gridiga [Bootstrap-Sassist](https://github.com/twbs/bootstrap-sass) koos juurdekäivate kohustuslike variablete ja mixingutega)
 
 ### Bugid rootsi koodis
 - Slaider vigane IE10 Win8 tahvlil.
+- See pagana grid läheb iga jumala liigutuse peale katki. Pole mõtet jännata.
 	
 ### Do-not-forget
 - Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.
