@@ -5,3 +5,4 @@ _tsr-ee-elion
 _tsr-ee-elion/*
 _tsr-elion/*
 _tsr-elion/*
+*.rb
