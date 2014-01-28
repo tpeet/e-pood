@@ -1,0 +1,53 @@
+<h1>Elion e-pood</h1>
+<p>Kompileeritud failid asuvad Build kataloogis, juurkataloogis on tööfailid. Struktuur pärineb töövahendist - <a href="http://hammerformac.com">Hammer</a>.
+Et ma olen laisk htmli tippija, on templiitimise abivahendiks <a href="http://handlebarsjs.com/">Handlebars</a>, mis arenduse käigus asendatakse. </p>
+
+<h2>Sisu</h2>
+
+<h3>Struktuur</h3>
+<p>Suurelt jaolt on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi.</p>
+
+<h3>Töös on:</h3>
+
+<pre><code>- Avaleht (ülemine slaider ja ülemised tooteklotsid)
+  - Sisselogitud kasutaja
+- Toote klotsvaade
+</code></pre>
+
+<h3>Abivahendid, suurelt jaolt eksperimentaalsed:</h3>
+<ul>
+  <li>uued ikoonid, mida Ahto juurde teeb lisaks rootslaste omale ka <a href="http://fontastic.me/">Fontasticus</a>. Ligipääsud annab Ahto - see on siiski avalik repo.</li>
+  <li><a href="http://gruntjs.com/">grunt</a>
+    <ul>
+      <li><a href="https://github.com/andismith/grunt-responsive-images">grunt responsive-images</a></li>
+      <li>meediapäringute sortimiseks <a href="https://github.com/buildingblocks/grunt-combine-media-queries">grunt-combine-media-queries</a></li>
+    </ul>
+  </li>
+  <li>meediapäringitele vastavate pildisuurste serveerimiseks <a href="https://github.com/borismus/srcset-polyfill">srcset-polyfill</a></li>
+  <li><a href="http://angular-ui.github.io/bootstrap/">angular-ui bootstrap</a></li>
+</ul>
+
+<h3>Muudatused rootsi koodi</h3>
+<ul>
+  <li>Maha võetud user scale restriction</li>
+  <li>Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.</li>
+  <li>Maha võetud tsr-grid.scss (asendatud gridiga <a href="https://github.com/twbs/bootstrap-sass">Bootstrap-Sassist</a> koos juurdekäivate kohustuslike variablete ja mixingutega)</li>
+</ul>
+
+<h3>Teada bugid</h3>
+<p>Vajab kohendamist peale rootsi gridi asendamist menüü, footer alumine riba, avaslaideri reklaamkast, tooteslaideri toote laiused, kogu lehe max laius ja breakpointid.</p>
+
+<h3>Bugid rootsi koodis</h3>
+<ul>
+  <li>Slaider vigane IE10 Win8 tahvlil.</li>
+  <li>See pagana grid läheb iga jumala liigutuse peale katki. Pole mõtet jännata.</li>
+</ul>
+
+<h3>Do-not-forget</h3>
+<ul>
+  <li>Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.</li>
+  <li>Kas image replacement või ei ja kustmaalt. Praegu küljes.</li>
+</ul>
+
+<h3>Legal ja muu</h3>
+<p>See on isiklik repo ja tööversioon. Kus viga näed laita, tule ja aita, aga puhast ja läikivat koodi siit praegu ei leia.</p>

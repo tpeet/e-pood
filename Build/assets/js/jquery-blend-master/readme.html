@@ -1,0 +1,55 @@
+<h1>jquery-blend</h1>
+
+<p>Blending modes for jquery</p>
+
+<h3>Examples</h3>
+
+<h4>Basic pattern</h4>
+
+<pre><code>// Overlay with a solid color
+$('img').blend({mode: 'overlay', adjustment: 'rgb(114, 25, 219)'});
+
+// Overlay with an image
+$('img').blend({mode: 'difference', adjustment: '/path/to/mask.jpg'});
+</code></pre>
+
+<h4>Usage idea</h4>
+
+<pre><code>$(function() {
+  $('.display img').each(function() {
+    $(this).blend({mode: $(this).attr('data-blend-mode'), adjustment: $(this).attr('data-blend-adjustment')});
+  });
+});
+
+&lt;div class="display"&gt;
+  &lt;img src="/photo1.jpg" data-blend-mode='overlay' data-blend-adjustment='rgb(18,187,93)' /&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Modes</h3>
+
+<ul>
+  <li>
+    <p>normal</p>
+  </li>
+  <li>darken</li>
+  <li>multiply</li>
+  <li>colorburn</li>
+  <li>
+    <p>linearburn</p>
+  </li>
+  <li>lighten</li>
+  <li>screen</li>
+  <li>colordodge</li>
+  <li>
+    <p>lineardodge</p>
+  </li>
+  <li>overlay</li>
+  <li>softlight</li>
+  <li>
+    <p>hardlight</p>
+  </li>
+  <li>difference</li>
+  <li>exclusion</li>
+  <li>subtract</li>
+</ul>

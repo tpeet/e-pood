@@ -1,0 +1,73 @@
+  Handlebars.registerHelper('leftTrim', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 20) return text.substring(0,20) +"...";
+    else return text;
+  });
+  var source   = $("#product-slider-template").html();
+  var template = Handlebars.compile(source);
+
+
+  var data = { products: [
+    {
+      path: "/arvutid-ja-lisad.html",
+      name: "HP Pavilion 15-n051so",
+      id: "1-Samsung Galaxy Tab 3 10.1 4g + wifi GT-P5220ZWASEB-eest-valge",
+      description: "Lorem ipsum.",
+      price: "549 €",
+      normal_price: "Normaalhind 1200 €",
+      ribbon: { size: "medium", text: "Soodne" },
+      badge: {color: "primary", iconized: "icon", icon: "icon-mobiletsicon48px" },
+      firstflash: { orientation: "horizontal", lg: "4G" },
+      secondflash: { orientation: "horizontal", lg: "5G", sm: "some text"}
+
+    },
+    {
+      name: "juhtmeta hiir Logitech M325",
+      id: "logitech1",
+      badge: {color: "green", text: "6" },
+      ribbon: { size: "medium", text: "Soodne" },
+      firstflash: { lg: "Äri" },
+      description: "Lihtne väike hiir, mida on mugav kaasas kanda. ",
+      price: "Soodushind 21 €"
+    },
+    {
+      name: "sülearvuti Asus X200CA (must)",
+      id: "Asus-X200CA-sülearvuti-eest-must 1",
+      description: "Mõnusalt väike sülearvuti internetis surfamiseks. ",
+      price: "359 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      price: "549 €"
+    },
+    {
+      name: "Norton AntiVirus 2013 3-PC",
+      id: "99691",
+      secondflash: { lg: "", sm: "Lõpumüük"},
+      description: "Kiire ja tõhus kaitse sinu arvutile kahjurprogrammide ja internetiohtude eest.",
+      price: "17 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      price: "549 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      price: "549 €"
+    },
+    {
+      name: "HP Pavilion 15-n051so",
+      id: "4",
+      description: "Suuremahulise kõvakettaga HP sülearvuti sobib koju igapäevaseks kasutamiseks ning ka vähemnõudlikemate mängude mängimiseks.",
+      price: "549 €"
+    }
+    ]};
+
+
+  $("#content-placeholder-productslider").html(template(data));

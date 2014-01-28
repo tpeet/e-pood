@@ -1,0 +1,625 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "elion-ikoonid";
+  src:url(../../fonts/elion-ikoonid.eot);
+  src:url(../../fonts/elion-ikoonid.eot?#iefix) format("embedded-opentype"),
+    url(../../fonts/elion-ikoonid.woff) format("woff"),
+    url(../../fonts/elion-ikoonid.ttf) format("truetype"),
+    url(../../fonts/elion-ikoonid.svg#elion-ikoonid) format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "elion-ikoonid" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "elion-ikoonid" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-24h-videolaenutus:before {
+  content: "\e000";
+}
+.icon-add:before {
+  content: "\e001";
+}
+.icon-address-book:before {
+  content: "\e002";
+}
+.icon-ajaviitem2ngud:before {
+  content: "\e003";
+}
+.icon-ajutine-v2ljalylitamine:before {
+  content: "\e004";
+}
+.icon-alert:before {
+  content: "\e005";
+}
+.icon-arvutikaitse:before {
+  content: "\e006";
+}
+.icon-arvutikaitse-1:before {
+  content: "\e007";
+}
+.icon-attach:before {
+  content: "\e008";
+}
+.icon-automaatvastaja:before {
+  content: "\e009";
+}
+.icon-broadband:before {
+  content: "\e00a";
+}
+.icon-calendar:before {
+  content: "\e00b";
+}
+.icon-calling:before {
+  content: "\e00c";
+}
+.icon-chat:before {
+  content: "\e00d";
+}
+.icon-collection:before {
+  content: "\e00e";
+}
+.icon-copy-folder:before {
+  content: "\e00f";
+}
+.icon-cost-control:before {
+  content: "\e010";
+}
+.icon-default-document:before {
+  content: "\e011";
+}
+.icon-default-image:before {
+  content: "\e012";
+}
+.icon-delete:before {
+  content: "\e013";
+}
+.icon-digikogu:before {
+  content: "\e014";
+}
+.icon-digital-tv:before {
+  content: "\e015";
+}
+.icon-discovery-kanalid:before {
+  content: "\e016";
+}
+.icon-doc:before {
+  content: "\e017";
+}
+.icon-download:before {
+  content: "\e018";
+}
+.icon-download-alt2:before {
+  content: "\e019";
+}
+.icon-download-vcard:before {
+  content: "\e01a";
+}
+.icon-e-support:before {
+  content: "\e01b";
+}
+.icon-edit:before {
+  content: "\e01c";
+}
+.icon-ei-myyda:before {
+  content: "\e01d";
+}
+.icon-ekodu:before {
+  content: "\e01e";
+}
+.icon-elion-videolaenutus:before {
+  content: "\e01f";
+}
+.icon-emt-k6neboonus:before {
+  content: "\e020";
+}
+.icon-emt-netipulk:before {
+  content: "\e021";
+}
+.icon-emt-netipulk2:before {
+  content: "\e022";
+}
+.icon-entertainment:before {
+  content: "\e023";
+}
+.icon-euro-kanalid:before {
+  content: "\e024";
+}
+.icon-facebook:before {
+  content: "\e025";
+}
+.icon-favourites:before {
+  content: "\e026";
+}
+.icon-folder:before {
+  content: "\e027";
+}
+.icon-folder-open:before {
+  content: "\e028";
+}
+.icon-games:before {
+  content: "\e029";
+}
+.icon-hd-kanalid:before {
+  content: "\e02a";
+}
+.icon-help:before {
+  content: "\e02b";
+}
+.icon-home:before {
+  content: "\e02c";
+}
+.icon-id-pilet:before {
+  content: "\e02d";
+}
+.icon-ilmataat:before {
+  content: "\e02e";
+}
+.icon-info:before {
+  content: "\e02f";
+}
+.icon-internet:before {
+  content: "\e030";
+}
+.icon-internet-1:before {
+  content: "\e031";
+}
+.icon-interneti-port:before {
+  content: "\e032";
+}
+.icon-invoice:before {
+  content: "\e033";
+}
+.icon-invoice-eur:before {
+  content: "\e034";
+}
+.icon-ip-aadress:before {
+  content: "\e035";
+}
+.icon-juhitav-k6nede-piirang:before {
+  content: "\e036";
+}
+.icon-k6ne-vastaja-kulul:before {
+  content: "\e037";
+}
+.icon-k6neaja-boonus:before {
+  content: "\e038";
+}
+.icon-k6nede-piirang:before {
+  content: "\e039";
+}
+.icon-k6nekaardi-laadimine:before {
+  content: "\e03a";
+}
+.icon-k6nepost-nuti-tvs:before {
+  content: "\e03b";
+}
+.icon-keele-seaded:before {
+  content: "\e03c";
+}
+.icon-kinkekaardid-videolaenutus:before {
+  content: "\e03d";
+}
+.icon-kodukino-videolaenutus:before {
+  content: "\e03e";
+}
+.icon-kordus-tv:before {
+  content: "\e03f";
+}
+.icon-l22ne-euroopa-kanalid:before {
+  content: "\e040";
+}
+.icon-laste-kanalid:before {
+  content: "\e041";
+}
+.icon-laste-m2ngud:before {
+  content: "\e042";
+}
+.icon-lemmiklistid:before {
+  content: "\e043";
+}
+.icon-link:before {
+  content: "\e044";
+}
+.icon-link2:before {
+  content: "\e045";
+}
+.icon-lisa-telefoninumber:before {
+  content: "\e046";
+}
+.icon-lisakanalite-pakett:before {
+  content: "\e047";
+}
+.icon-llisten:before {
+  content: "\e048";
+}
+.icon-log-in:before {
+  content: "\e049";
+}
+.icon-lyhivalik:before {
+  content: "\e04a";
+}
+.icon-m2ngud:before {
+  content: "\e04b";
+}
+.icon-map:before {
+  content: "\e04c";
+}
+.icon-meelespea:before {
+  content: "\e04d";
+}
+.icon-minu-kava:before {
+  content: "\e04e";
+}
+.icon-mms:before {
+  content: "\e04f";
+}
+.icon-mobile:before {
+  content: "\e050";
+}
+.icon-move-folder:before {
+  content: "\e051";
+}
+.icon-music:before {
+  content: "\e052";
+}
+.icon-muusika-kanalid:before {
+  content: "\e053";
+}
+.icon-my-account:before {
+  content: "\e054";
+}
+.icon-netiraadio:before {
+  content: "\e055";
+}
+.icon-new-address-book:before {
+  content: "\e056";
+}
+.icon-new-contact:before {
+  content: "\e057";
+}
+.icon-new-folder:before {
+  content: "\e058";
+}
+.icon-new-group:before {
+  content: "\e059";
+}
+.icon-noppekanalid:before {
+  content: "\e05a";
+}
+.icon-numbrin2idu-keeld:before {
+  content: "\e05b";
+}
+.icon-nuti-tv:before {
+  content: "\e05c";
+}
+.icon-p6hikanalid:before {
+  content: "\e05d";
+}
+.icon-parental-guide:before {
+  content: "\e05e";
+}
+.icon-pause:before {
+  content: "\e05f";
+}
+.icon-pdf:before {
+  content: "\e060";
+}
+.icon-pildialbum:before {
+  content: "\e061";
+}
+.icon-play:before {
+  content: "\e062";
+}
+.icon-ppt:before {
+  content: "\e063";
+}
+.icon-presentatsioon:before {
+  content: "\e064";
+}
+.icon-print:before {
+  content: "\e065";
+}
+.icon-pysiv-ip-aadress:before {
+  content: "\e066";
+}
+.icon-raadio:before {
+  content: "\e067";
+}
+.icon-raadio-eesti:before {
+  content: "\e068";
+}
+.icon-raadio-euroopa:before {
+  content: "\e069";
+}
+.icon-raadio-laste:before {
+  content: "\e06a";
+}
+.icon-raadio-minu-lemmikud:before {
+  content: "\e06b";
+}
+.icon-raadio-soome:before {
+  content: "\e06c";
+}
+.icon-raadio-uudised-vestlused:before {
+  content: "\e06d";
+}
+.icon-raadio-vene:before {
+  content: "\e06e";
+}
+.icon-radio:before {
+  content: "\e06f";
+}
+.icon-rahvusvaheline-k6neboonus:before {
+  content: "\e070";
+}
+.icon-rahvusvaheline-soodusaja-k6neboonus:before {
+  content: "\e071";
+}
+.icon-register:before {
+  content: "\e072";
+}
+.icon-rename-folder:before {
+  content: "\e073";
+}
+.icon-s6branumbrid:before {
+  content: "\e074";
+}
+.icon-s6brariigid:before {
+  content: "\e075";
+}
+.icon-salastatud-number:before {
+  content: "\e076";
+}
+.icon-salvestamine:before {
+  content: "\e077";
+}
+.icon-salvestamine-vene:before {
+  content: "\e078";
+}
+.icon-save:before {
+  content: "\e079";
+}
+.icon-save-draft:before {
+  content: "\e07a";
+}
+.icon-seaded:before {
+  content: "\e07b";
+}
+.icon-search:before {
+  content: "\e07c";
+}
+.icon-security:before {
+  content: "\e07d";
+}
+.icon-send-email:before {
+  content: "\e07e";
+}
+.icon-services:before {
+  content: "\e07f";
+}
+.icon-settings:before {
+  content: "\e080";
+}
+.icon-shuffle:before {
+  content: "\e081";
+}
+.icon-skip-back:before {
+  content: "\e082";
+}
+.icon-skip-forw:before {
+  content: "\e083";
+}
+.icon-slaavi-kanalid:before {
+  content: "\e084";
+}
+.icon-sms:before {
+  content: "\e085";
+}
+.icon-sms2:before {
+  content: "\e086";
+}
+.icon-soovitus:before {
+  content: "\e087";
+}
+.icon-sort:before {
+  content: "\e088";
+}
+.icon-spell-check:before {
+  content: "\e089";
+}
+.icon-spordi-kanalid:before {
+  content: "\e08a";
+}
+.icon-sport:before {
+  content: "\e08b";
+}
+.icon-statistics:before {
+  content: "\e08c";
+}
+.icon-stop:before {
+  content: "\e08d";
+}
+.icon-streaming:before {
+  content: "\e08e";
+}
+.icon-subscription:before {
+  content: "\e08f";
+}
+.icon-synchronize:before {
+  content: "\e090";
+}
+.icon-t2iendav-vaatamiskoht:before {
+  content: "\e091";
+}
+.icon-t2iskasvanute-kanalid:before {
+  content: "\e092";
+}
+.icon-teadus-ja-kultuur:before {
+  content: "\e093";
+}
+.icon-teemapaketid:before {
+  content: "\e094";
+}
+.icon-tehnilised-seaded:before {
+  content: "\e095";
+}
+.icon-telefon:before {
+  content: "\e096";
+}
+.icon-telefon-nutitvs:before {
+  content: "\e097";
+}
+.icon-telefoni-seaded:before {
+  content: "\e098";
+}
+.icon-telefoniraamat:before {
+  content: "\e099";
+}
+.icon-telephony:before {
+  content: "\e09a";
+}
+.icon-timer:before {
+  content: "\e09b";
+}
+.icon-trash-empty:before {
+  content: "\e09c";
+}
+.icon-trash-full:before {
+  content: "\e09d";
+}
+.icon-travel-abroad:before {
+  content: "\e09e";
+}
+.icon-tv:before {
+  content: "\e09f";
+}
+.icon-universal-kanalid:before {
+  content: "\e0a0";
+}
+.icon-upload:before {
+  content: "\e0a1";
+}
+.icon-uudiste-kanalid:before {
+  content: "\e0a2";
+}
+.icon-vcard:before {
+  content: "\e0a3";
+}
+.icon-viasatai-spordikanalid:before {
+  content: "\e0a4";
+}
+.icon-viasati-filmikanalid:before {
+  content: "\e0a5";
+}
+.icon-viasati-kuld-kanalid:before {
+  content: "\e0a6";
+}
+.icon-viasati-spordi-ja-filmikanalid:before {
+  content: "\e0a7";
+}
+.icon-videokonverents:before {
+  content: "\e0a8";
+}
+.icon-videolaenutus:before {
+  content: "\e0a9";
+}
+.icon-videolaenutus-filmiriiul:before {
+  content: "\e0aa";
+}
+.icon-videolaenutus-kuutasuline:before {
+  content: "\e0ab";
+}
+.icon-videolaenutus-lastele:before {
+  content: "\e0ac";
+}
+.icon-videolaenutus-muusika:before {
+  content: "\e0ad";
+}
+.icon-videolaenutus-saated-koolitused:before {
+  content: "\e0ae";
+}
+.icon-videolaenutus-soovitused:before {
+  content: "\e0af";
+}
+.icon-videolaenutus-t2iskasvanutele:before {
+  content: "\e0b0";
+}
+.icon-videolaenutus-tellitud:before {
+  content: "\e0b1";
+}
+.icon-videolaenutus-uued:before {
+  content: "\e0b2";
+}
+.icon-viimased-k6ned:before {
+  content: "\e0b3";
+}
+.icon-weather:before {
+  content: "\e0b4";
+}
+.icon-wifi:before {
+  content: "\e0b5";
+}
+.icon-wireless:before {
+  content: "\e0b6";
+}
+.icon-write-email:before {
+  content: "\e0b7";
+}
+.icon-xls:before {
+  content: "\e0b8";
+}
+.icon-yhendustasu:before {
+  content: "\e0b9";
+}
+.icon-young:before {
+  content: "\e0ba";
+}
+.icon-zoom-in:before {
+  content: "\e0bb";
+}
+.icon-zoom-out:before {
+  content: "\e0bc";
+}
+.icon-buy:before {
+  content: "\e0bd";
+}
+.icon-2rikliendi-teenused:before {
+  content: "\e0be";
+}
+.icon-transport:before {
+  content: "\e0bf";
+}
+.icon-osta:before {
+  content: "\e0c0";
+}
+.icon-osta:before {
+  content: "\e000";
+}
+.icon-transport:before {
+  content: "\e001";
+}
