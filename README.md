@@ -1,20 +1,38 @@
-# Rapid Bootstrap
-«Rapid Bootstrap» is my toolkit for kickstarting web-projects, apps, and more. It includes a basic set of CSS elements optimized for perfect typography, a super simple fluid grid system and all necessary JavaScripts to develop mobile friendly websites. «Rapid Bootstrap» is especially built for [Hammer](http://hammerformac.com). This nifty little tool by Riot can help you to build a static HTML site even faster. If you don't own a copy of hammer you will find everything processed in the «Build» folder.
+# Elion e-pood
+Kompileeritud failid asuvad Build kataloogis. Ehitamiseks kasutan [Hammerit](http://hammerformac.com), sealt ka pärit projekti ebaharilik ülesehitus. Asja voorus on, et juurkataloogis on projekti osad ilusti väikeste hallatavate (ja soovi/vajaduse korral kopeeritavate) juppidena, assetsis css sassi kujul ja juppidena.
+Et ma olen laisk htmli tippija, on templiitimise abivahendiks [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse .Net tagidega. 
 
-## Disclaimer
+## Sisu
 
-### Credits
-Please support humans.txt (http://humanstxt.org/). It's an initiative for knowing the people behind a website. It's a TXT file that contains information about the different people who have contributed to building the website.
+### Struktuur
+Hetkel on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi. Ehitan mobile-first approachi kasutades.
 
-	Bootstrap: https://github.com/niklausgerber/Rapid-Bootstrap
-	Niklaus Gerber
-	Twitter: @niklausgerber
-	URL: http://niklausgerber.com
-	Location: Bern, Switzerland
+### Töös on:
+
+	- Avaleht (ülemine slaider ja ülemised tooteklotsid)
+	  - Sisselogitud kasutaja
+	- Toote klotsvaade
+
+Ülejäänud nähtavad leheosad on kopipaste rootslaste näidisest ega toimi responsivena.
+
+### Abivahendid, suurelt jaolt eksperimentaalsed:
+- uued ikoonid lisaks rootslaste omale ka [Fontasticus](http://fontastic.me/)
+- [grunt](http://gruntjs.com/)
+	- [grunt responsive-images](https://github.com/andismith/grunt-responsive-images)
+	- meediapäringute sortimiseks [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
+- meediapäringitele vastavate pildisuurste serveerimiseks [srcset-polyfill](https://github.com/borismus/srcset-polyfill)
+- [angular-ui bootstrap](http://angular-ui.github.io/bootstrap/)
+
+### Muudatused rootsi koodi
+- Maha võetud user scale restriction
+
+### Bugid rootsi koodis
+- Slaider vigane IE10 Win8 tahvlil.
 	
-### Licences
-«Rapid Bootstrap» by Niklaus Gerber is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
-Based on a work at github.com.
+### Do-not-forget
+- Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.
+- Angular.js on eksperimentaalne, headis. Võib hakata konfliktima handlebarsiga. Miks mõlemad? Sest handlebarsi süntaks on ülilihtne lubab kiiresti templiitida. Angulari läheb pärast ilmselt ka päriselt kasutajainteraktsioonides tarvis.
+- Kas imagereplacement või ei ja kustmaalt
 
-### Download, Fork, Commit.
-If you think you can make this better, please Download, Fork, & Commit. I'd love to see your ideas.
+### Legal ja muu
+See on isiklik repo ja tööversioon. Kus viga näed laita, tule ja aita, aga puhast ja läikivat koodi siit praegu ei leia.
