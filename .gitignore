@@ -1,3 +1,4 @@
 Build
 .sass-cache
 node_modules
+.gitignore

@@ -1,6 +1,11 @@
 
 /* @include _debug.scss */
 
+/* @include _variables.scss */
+/* @include _mixins.scss */
+/* @include _grid.scss */
+
+
 /* @include _tsr-core.scss */
 
 /* @include _tsr-ee-fontastic.scss */
@@ -13,15 +18,10 @@
 
 .tsr-ee-product-list-front {
 
-  .col-3 {
-    width: 100%;
+  .col-md-3 {
+
     margin: 0 -1px -1px 0;
-    @include media-min(600px) {
-      width: 50%;
-    } // min 600px
-    @include media-min(940px) {
-      width: 25%;
-    } // min 940px
+    padding: 0;
   }
 
   & .tsr-ee-category-header h3 {
