@@ -1,0 +1,69 @@
+  var source   = $("#menu-template").html();
+  var template = Handlebars.compile(source);
+
+  var data = { sidemenu: [
+    {
+      parent: "Uued tooted", 
+    },
+    {
+      parent: "Sülearvutid", 
+      sub: 
+      ["Apple", "Asus", "Dell", "HP", "Lenovo", "Ordi", "Samsung"],
+    },
+    {
+      parent: "Tahvelarvutid", 
+      sub: 
+      ["Apple", "Archos", "Asus", "Dell", "GoClever", "Lenovo", "Samsung"],
+    },
+    {
+      parent: "Lauaarvutid", 
+      sub: 
+      ["Apple", "Dell", "HP", "ML", "Ordi", "Shuttle"],
+    },
+    {
+      parent: "Monitor-arvutid"
+    },
+    {
+      parent: "Printerid"
+    },
+    {
+      parent: "Kotid"
+    },
+    {
+      parent: "Klaviatuurid ja hiired"
+    },
+    {
+      parent: "Tindid ja toonerid"
+    },
+    {
+      parent: "Paberid"
+    },
+    {
+      parent: "Tarkvara"
+    },
+    {
+      parent: "Veebikaamerad"
+    },
+    {
+      parent: "Mälupulgad"
+    },
+    {
+      parent: "Välised kõvakettad"
+    },
+    {
+      parent: "Infokandjad"
+    },
+    {
+      parent: "Võrguseadmed"
+    },
+    {
+      parent: "Võrgusalvestusseadmed"
+    },
+    {
+      parent: "UPSid"
+    },
+    {
+      parent: "Ja nii edasi"
+    }
+    ]};
+      $("#content-placeholder-menu").html(template(data));

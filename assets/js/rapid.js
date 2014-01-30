@@ -6,6 +6,7 @@
 
 /* retina.js (provide image alternative | my_image@2x.png) */
 /* @include _retina */
+/* @include _tsr-ee-2nd-level */
 
 
 

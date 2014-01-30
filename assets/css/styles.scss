@@ -4,7 +4,7 @@
 /* @include _variables.scss */
 /* @include _mixins.scss */
 /* @include _grid.scss */
-
+/* @include _type.scss */
 
 /* @include _tsr-core.scss */
 
@@ -13,8 +13,16 @@
 /* @include _tsr-ee-tacticalElements.scss */
 /* @include _tsr-ee-communication-primary.scss */
 /* @include _tsr-ee-buttonsAndLinks.scss */
+/* @include _tsr-ee-sidemenu.scss */
 
 /* @include _tsr-ee-product.scss */
+
+.favorite {
+  &:before {
+    font-family: 'ts-icons-all';
+    content: "\e646";
+  }
+}
 
 .tsr-ee-product-list-front {
 

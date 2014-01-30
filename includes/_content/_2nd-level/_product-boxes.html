@@ -1,27 +1,28 @@
 <!-- Product boxes listing, eg Arvutid 2nd level page-->
 
-<section class="tsr-section-productAndService-listing container">
-    <div class="row" > 
-      <div class="col-md-4">
-        Foo
-      </div>
-      <div class="col-md-8 tsr-ee-product-boxes">
-        <div class="tsr-container" id="content-placeholder-productslider"></div>
+<section class="tsr-section-productAndService-listing">
+    <div class="container" > 
+      <!-- @include sidemenu.html -->
+
+      <div class="col-md-9 col-sm-6 col-xs-12 tsr-ee-product-boxes">
+        <div class="tsr-container" id="content-placeholder-products"></div>
       </div>
 
   <script id="product-slider-template" type="text/x-handlebars-template">
   
   {{#products}}
 
-  <a href="javascript:void(0);" class="tsr-module-product ">
+  <div class="tsr-module-product ">
     {{#if ribbon}}
       <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
     {{/if}}
-          <figure class="tsr-product-image">
-          <img src="assets/img/products/{{id}}-small.jpg" srcset="assets/img/products/{{id}}-small.jpg 320w, assets/img/products/{{id}}-medium.jpg 960w, assets/img/products/{{id}}-large.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
-          </figure>
+    <a href="#" class="favorite"></a>
+    <figure class="tsr-product-image">
+    <img src="assets/img/products/{{id}}-small.jpg" srcset="assets/img/products/{{id}}-small.jpg 320w, assets/img/products/{{id}}-medium.jpg 960w, assets/img/products/{{id}}-large.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+    </figure>
   
     <div class="tsr-product-content">
+
     {{#if firstflash}}
     <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
     {{/if}}
@@ -29,21 +30,22 @@
     <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
     {{/if}}
     <header class="tsr-product-header">{{name}}</header>
-    <ul class="tsr-product-colors">
-      <li style="background:#e2e2e2"></li>
-      <li style="background:#d77b72"></li>
-      <li style="background:#f8f07b"></li>
-      <li style="background:#73b5e7"></li>
-      <li style="background:#a5c76c"></li>
+
+    <ul class="tsr-ee-product-colors">
+      <li class="acc" style="background:#e2e2e2" data-color-theme="#e2e2e2"></li>
+      <li class="acc" style="background:#d77b72" data-color-theme="#d77b72"></li>
+      <li class="acc" style="background:#f8f07b" data-color-theme="#f8f07b"></li>
+      <li class="acc" style="background:#73b5e7" data-color-theme="#73b5e7"></li>
+      <li class="acc" style="background:#a5c76c" data-color-theme="#a5c76c"></li>
     </ul>
     <p class="tsr-product-desc"> Lorem ipsum dolor
       Amet sit dolor
       Dolor ipsum sit </p>
     <p class="tsr-product-price">{{price}}</p>
     <p class="tsr-product-small-print"> Total cost 299 $</p>
-    <button class="tsr-btn"> Lisa ostukorvi </button>
+    <a href="#"><i class="ts-icon-shuffle"></i> Võrdle </a>
     </div>
-  </a>
+  </div>
 
   {{/products}}
   </script>
