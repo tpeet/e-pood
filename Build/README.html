@@ -8,32 +8,39 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   - _tsr-typography.scss</p>
 
 <p>Bootstrapist on lisatud:
-  _variables.scss<br />
-  _mixins.scss<br />
-  _normalize.scss<br />
-  _scaffolding.scss 
-  _grid.scss<br />
-  _print.scss<br />
-  _type.scss<br />
-  _responsive-utilities.scss  </p>
+  - _variables.scss<br />
+  - _mixins.scss<br />
+  - _normalize.scss<br />
+  - _scaffolding.scss 
+  - _grid.scss<br />
+  - _print.scss<br />
+  - _type.scss<br />
+  - _responsive-utilities.scss  </p>
 
 <h2>Sisu</h2>
 
 <h3>Töös on:</h3>
 
-<pre><code>- Avaleht 
-- Avaslaider
-- Tooteklotsidega avamenüü
-  - Sisselogitud kasutaja
-- 2nd level
-- Tooteklotsid
-- Vertikaalne akordionmenüü
-</code></pre>
+<ul>
+  <li>Avaleht 
+    <ul>
+      <li>Avaslaider</li>
+      <li>Tooteklotsidega avamenüü</li>
+      <li>Sisselogitud kasutaja</li>
+    </ul>
+  </li>
+  <li>2nd level
+    <ul>
+      <li>Tooteklotsid</li>
+      <li>Vertikaalne akordionmenüü</li>
+    </ul>
+  </li>
+</ul>
 
 <h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>
 <ul>
-  <li>All on BS3, siis rootsi css, siis eesti kohendused.</li>
-  <li>Iga komponent on eraldi html-jupike, millele käib kaasa eraldi css ja js (nagu rootslastel)</li>
+  <li>All on BS3, siis rootsi scss, siis eesti kohendused.</li>
+  <li>Iga komponent on eraldi html-jupike, millele käib kaasa eraldi scss ja js (nagu rootslastel)</li>
   <li>Juurkataloogis on põhilehed, mis includevad jupikesi</li>
   <li>html-jupikesed asuvad <code>/_includes/..</code></li>
   <li>Vastav scss asub <code>/assets/css/_tsr-ee-elion/..</code></li>

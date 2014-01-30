@@ -8,31 +8,31 @@ Rootslastelt on välja lülitatud:
   - _tsr-typography.scss
 
 Bootstrapist on lisatud:
-  _variables.scss  
-  _mixins.scss  
-  _normalize.scss  
-  _scaffolding.scss 
-  _grid.scss  
-  _print.scss  
-  _type.scss  
-  _responsive-utilities.scss  
+  - _variables.scss  
+  - _mixins.scss  
+  - _normalize.scss  
+  - _scaffolding.scss 
+  - _grid.scss  
+  - _print.scss  
+  - _type.scss  
+  - _responsive-utilities.scss  
 
 
 ## Sisu
 
 ### Töös on:
 
-	- Avaleht 
-    - Avaslaider
-    - Tooteklotsidega avamenüü
-	  - Sisselogitud kasutaja
-	- 2nd level
-    - Tooteklotsid
-    - Vertikaalne akordionmenüü
+- Avaleht 
+  - Avaslaider
+  - Tooteklotsidega avamenüü
+  - Sisselogitud kasutaja
+- 2nd level
+  - Tooteklotsid
+  - Vertikaalne akordionmenüü
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
-  - All on BS3, siis rootsi css, siis eesti kohendused.
-  - Iga komponent on eraldi html-jupike, millele käib kaasa eraldi css ja js (nagu rootslastel)
+  - All on BS3, siis rootsi scss, siis eesti kohendused.
+  - Iga komponent on eraldi html-jupike, millele käib kaasa eraldi scss ja js (nagu rootslastel)
   - Juurkataloogis on põhilehed, mis includevad jupikesi
   - html-jupikesed asuvad `/_includes/..`
   - Vastav scss asub `/assets/css/_tsr-ee-elion/..`

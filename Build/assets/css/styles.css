@@ -5748,8 +5748,8 @@ section.tsr-section-productAndService-listing {
 
 @font-face {
   font-family: "elion";
-  src: url(../fonts/elion.eot);
-  src: url(../fonts/elion.eot?#iefix) format("embedded-opentype"), url(../fonts/elion.woff) format("woff"), url(../fonts/elion.ttf) format("truetype"), url(../fonts/elion.svg#elion) format("svg");
+  src: url("fonts/elion.eot");
+  src: url("fonts/elion.eot?#iefix") format("embedded-opentype"), url("fonts/elion.woff") format("woff"), url("fonts/elion.ttf") format("truetype"), url("fonts/elion.svg#elion") format("svg");
   font-weight: normal;
   font-style: normal; }
 
