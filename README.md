@@ -4,6 +4,7 @@ Templiitimise abivahendiks on [Handlebars](http://handlebarsjs.com/), mis arendu
 
 Rootslastelt on välja lülitatud:
   - _tsr-grid.scss
+  - _tsr-variables.scss (liidetud `_bs-ee-variables.scss` algusse)
   - _tsr-normalize.scss
   - _tsr-typography.scss
 
@@ -15,20 +16,24 @@ Bootstrapist on lisatud:
   - _grid.scss  
   - _print.scss  
   - _type.scss  
-  - _responsive-utilities.scss  
+  - _responsive-utilities.scss
 
+Bootsrapist on muudetud ja lisatud:
+  - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
+  - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
 
 ## Sisu
 
 ### Töös on:
 
 - Avaleht 
-  - Avaslaider
-  - Tooteklotsidega avamenüü
+  - Avaslaider (TSR põhjal, WIN8 IE10 bugine)
+  - Tooteklotsidega avamenüü (custom, TSR põhjal)
   - Sisselogitud kasutaja
 - 2nd level
-  - Tooteklotsid
-  - Vertikaalne akordionmenüü
+  - Tooteklotsid (custom, TSR põhjal)
+  - Vertikaalne akordionmenüü (custom)
+  - Leivapuru (BS põhjal)
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.

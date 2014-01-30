@@ -4,6 +4,7 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <p>Rootslastelt on välja lülitatud:
   - _tsr-grid.scss
+  - _tsr-variables.scss (liidetud <code>_bs-ee-variables.scss</code> algusse)
   - _tsr-normalize.scss
   - _tsr-typography.scss</p>
 
@@ -15,7 +16,11 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   - _grid.scss<br />
   - _print.scss<br />
   - _type.scss<br />
-  - _responsive-utilities.scss  </p>
+  - _responsive-utilities.scss</p>
+
+<p>Bootsrapist on muudetud ja lisatud:
+  - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
+  - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)</p>
 
 <h2>Sisu</h2>
 
@@ -24,15 +29,16 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 <ul>
   <li>Avaleht 
     <ul>
-      <li>Avaslaider</li>
-      <li>Tooteklotsidega avamenüü</li>
+      <li>Avaslaider (TSR põhjal, WIN8 IE10 bugine)</li>
+      <li>Tooteklotsidega avamenüü (custom, TSR põhjal)</li>
       <li>Sisselogitud kasutaja</li>
     </ul>
   </li>
   <li>2nd level
     <ul>
-      <li>Tooteklotsid</li>
-      <li>Vertikaalne akordionmenüü</li>
+      <li>Tooteklotsid (custom, TSR põhjal)</li>
+      <li>Vertikaalne akordionmenüü (custom)</li>
+      <li>Leivapuru (BS põhjal)</li>
     </ul>
   </li>
 </ul>

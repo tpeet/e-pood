@@ -1,4 +1,19 @@
+section.tsr-ee-breadcrumbs {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: $lightgrey-c;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section.tsr-ee-section-product-boxes {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 20px 12px;
+}
 .tsr-ee-product-boxes {
+  
 
   & .tsr-ee-product-badge {
   @extend .tsr-ee-badge;
@@ -15,6 +30,10 @@
     position: absolute;
     right: em(15);
     top: em(15);
+  }
+
+  .tsr-module-product {
+
   }
 }
 

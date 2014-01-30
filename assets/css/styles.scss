@@ -2,9 +2,12 @@
 //**********************************
 /* @include _debug.scss */
 
+// VARIABLES AND MIXINS 
+//**********************************
+/* @include _bs-ee-variables.scss */ 
+
 // BOOTSRAP
 //**********************************
-/* @include _variables.scss */
 /* @include _mixins.scss */
 /* @include _normalize.scss */
 /* @include _scaffolding.scss */ 
@@ -15,11 +18,18 @@
 
 
 
+
 // TELIA SONERA
 //**********************************
 /* @include _tsr-core.scss */
+/* @include _bs-ee-variables.scss */ 
 
-// CUSTOM OVERWRITES AND ADDITIONS
+// CUSTOM OVERWRIDES AND ADDITIONS TO BS3
+//**********************************
+
+/* @include _bs-ee-breadcrumbs.scss */
+
+// CUSTOM OVERWRIDES AND ADDITIONS TO TSR
 //**********************************
 /* @include _tsr-ee-fontastic.scss */
 /* @include _tsr-ee-typography.scss */
@@ -30,7 +40,11 @@
 /* @include _tsr-ee-product.scss */
 
 
-
+// TEMPORARY HACKS, TO BE REMOVED
+//**********************************
+.breadcrumb > .active {
+color: #222;
+}
 
 // WORK IN PROGRESS PARTS
 //**********************************
