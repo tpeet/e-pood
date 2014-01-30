@@ -1,8 +1,0 @@
- node_modules
- node_modules/*
-.gitignore
-_tsr-ee-elion
-_tsr-ee-elion/*
-_tsr-elion/*
-_tsr-elion/*
-*.rb

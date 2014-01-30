@@ -1,0 +1,43 @@
+ <!-- frontpage not logged in template -->
+<section class="tsr-section-productAndService-listing">
+    <div class="tsr-ee-product-list-front" >
+        <div class="container" id="content-placeholder-frontlist"></div>
+<!-- End html -->
+
+  <script id="front-list-template" type="text/x-handlebars-template">
+  
+  {{#frontlist}}
+  <div class="col-md-3 col-sm-6 col-xs-full">
+    <a href="{{{path}}}" class="tsr-ee-category-header"><h3>{{caption}}</h3></a>
+    <a href="javascript:void(0);" class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+            <figure class="tsr-product-image">
+            <img src="assets/img/products/{{id}}-small.jpg" srcset="assets/img/products/{{id}}-small.jpg 320w, assets/img/products/{{id}}-medium.jpg 960w, assets/img/products/{{id}}-large.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+            </figure>
+
+      <div class="tsr-product-content">
+      {{#if firstflash}}
+      <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+      {{/if}}
+      {{#if secondflash}}
+      <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+      {{/if}}
+      <header class="tsr-product-header">{{name}}</header>
+      <p class="tsr-product-price">{{price}}</p>
+      </div>
+    </a>
+    <dl>
+      {{#each link}}
+      <dt><a href="javascript:void(0);" class="tsr-btn tsr-ee-btn-link">{{this}}</a></dt>
+      {{/each}}
+    </dl>
+    </div>
+  {{/frontlist}}
+  </script>
+
+  </div>
+</section>
+
+
