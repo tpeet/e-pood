@@ -1,22 +1,39 @@
-
+//TEMPORARY HELPERS
+//**********************************
 /* @include _debug.scss */
 
+// BOOTSRAP
+//**********************************
 /* @include _variables.scss */
 /* @include _mixins.scss */
+/* @include _normalize.scss */
+/* @include _scaffolding.scss */ 
 /* @include _grid.scss */
+/* @include _print.scss */
 /* @include _type.scss */
+/* @include _responsive-utilities.scss */ //to hide-show-on mobile
 
+
+
+// TELIA SONERA
+//**********************************
 /* @include _tsr-core.scss */
 
+// CUSTOM OVERWRITES AND ADDITIONS
+//**********************************
 /* @include _tsr-ee-fontastic.scss */
 /* @include _tsr-ee-typography.scss */
 /* @include _tsr-ee-tacticalElements.scss */
 /* @include _tsr-ee-communication-primary.scss */
 /* @include _tsr-ee-buttonsAndLinks.scss */
 /* @include _tsr-ee-sidemenu.scss */
-
 /* @include _tsr-ee-product.scss */
 
+
+
+
+// WORK IN PROGRESS PARTS
+//**********************************
 .favorite {
   &:before {
     font-family: 'ts-icons-all';

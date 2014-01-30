@@ -1,18 +1,45 @@
 <h1>Elion e-pood</h1>
 <p>Kompileeritud failid asuvad Build kataloogis, juurkataloogis on tööfailid. Struktuur pärineb töövahendist - <a href="http://hammerformac.com">Hammer</a>.
-Et ma olen laisk htmli tippija, on templiitimise abivahendiks <a href="http://handlebarsjs.com/">Handlebars</a>, mis arenduse käigus asendatakse. </p>
+Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>, mis arenduse käigus asendatakse. Projekt on segu <a href="https://github.com/twbs/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap">Bootstrap-Sassist</a> ja <a href="http://responsivecode.teliasonera.com/">rootslaste komponentidest</a>. </p>
+
+<p>Rootslastelt on välja lülitatud:
+  - _tsr-grid.scss
+  - _tsr-normalize.scss
+  - _tsr-typography.scss</p>
+
+<p>Bootstrapist on lisatud:
+  _variables.scss<br />
+  _mixins.scss<br />
+  _normalize.scss<br />
+  _scaffolding.scss 
+  _grid.scss<br />
+  _print.scss<br />
+  _type.scss<br />
+  _responsive-utilities.scss  </p>
 
 <h2>Sisu</h2>
 
-<h3>Struktuur</h3>
-<p>Suurelt jaolt on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi.</p>
-
 <h3>Töös on:</h3>
 
-<pre><code>- Avaleht (ülemine slaider ja ülemised tooteklotsid)
+<pre><code>- Avaleht 
+- Avaslaider
+- Tooteklotsidega avamenüü
   - Sisselogitud kasutaja
-- Toote klotsvaade
+- 2nd level
+- Tooteklotsid
+- Vertikaalne akordionmenüü
 </code></pre>
+
+<h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>
+<ul>
+  <li>All on BS3, siis rootsi css, siis eesti kohendused.</li>
+  <li>Iga komponent on eraldi html-jupike, millele käib kaasa eraldi css ja js (nagu rootslastel)</li>
+  <li>Juurkataloogis on põhilehed, mis includevad jupikesi</li>
+  <li>html-jupikesed asuvad <code>/_includes/..</code></li>
+  <li>Vastav scss asub <code>/assets/css/_tsr-ee-elion/..</code></li>
+  <li>Vastav js asub <code>assets/js/_tsr-ee-js/..</code>
+  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab <code>/asstets/js/handlebars/*.hbs</code> failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna <code>-placeholder-</code>.</li>
+</ul>
 
 <h3>Abivahendid, suurelt jaolt eksperimentaalsed:</h3>
 <ul>
@@ -32,6 +59,7 @@ Et ma olen laisk htmli tippija, on templiitimise abivahendiks <a href="http://ha
   <li>Maha võetud user scale restriction</li>
   <li>Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.</li>
   <li>Maha võetud tsr-grid.scss (asendatud gridiga <a href="https://github.com/twbs/bootstrap-sass">Bootstrap-Sassist</a> koos juurdekäivate kohustuslike variablete ja mixingutega)</li>
+  <li>maha võetud normalize.scss (BS3 kasutab uuemat)</li>
 </ul>
 
 <h3>Teada bugid</h3>

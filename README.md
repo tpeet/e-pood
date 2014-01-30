@@ -1,17 +1,43 @@
 # Elion e-pood
 Kompileeritud failid asuvad Build kataloogis, juurkataloogis on tööfailid. Struktuur pärineb töövahendist - [Hammer](http://hammerformac.com).
-Et ma olen laisk htmli tippija, on templiitimise abivahendiks [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse. 
+Templiitimise abivahendiks on [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse. Projekt on segu [Bootstrap-Sassist](https://github.com/twbs/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap) ja [rootslaste komponentidest](http://responsivecode.teliasonera.com/). 
+
+Rootslastelt on välja lülitatud:
+  - _tsr-grid.scss
+  - _tsr-normalize.scss
+  - _tsr-typography.scss
+
+Bootstrapist on lisatud:
+  _variables.scss  
+  _mixins.scss  
+  _normalize.scss  
+  _scaffolding.scss 
+  _grid.scss  
+  _print.scss  
+  _type.scss  
+  _responsive-utilities.scss  
+
 
 ## Sisu
 
-### Struktuur
-Suurelt jaolt on leht üles ehitatud rootslaste koodile, säilitades nende algset scss-i. Minupoolsed duplitseerivad ülekirjutused järgivad rootslaste struktuuri, eristatud tsr-ee- kataloogi.
-
 ### Töös on:
 
-	- Avaleht (ülemine slaider ja ülemised tooteklotsid)
+	- Avaleht 
+    - Avaslaider
+    - Tooteklotsidega avamenüü
 	  - Sisselogitud kasutaja
-	- Toote klotsvaade
+	- 2nd level
+    - Tooteklotsid
+    - Vertikaalne akordionmenüü
+
+### Juhtnöörid koodi oma projektis kasutamiseks:
+  - All on BS3, siis rootsi css, siis eesti kohendused.
+  - Iga komponent on eraldi html-jupike, millele käib kaasa eraldi css ja js (nagu rootslastel)
+  - Juurkataloogis on põhilehed, mis includevad jupikesi
+  - html-jupikesed asuvad `/_includes/..`
+  - Vastav scss asub `/assets/css/_tsr-ee-elion/..`
+  - Vastav js asub `assets/js/_tsr-ee-js/..`
+  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `/asstets/js/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
 
 
 ### Abivahendid, suurelt jaolt eksperimentaalsed:
@@ -26,6 +52,7 @@ Suurelt jaolt on leht üles ehitatud rootslaste koodile, säilitades nende algse
 - Maha võetud user scale restriction
 - Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.
 - Maha võetud tsr-grid.scss (asendatud gridiga [Bootstrap-Sassist](https://github.com/twbs/bootstrap-sass) koos juurdekäivate kohustuslike variablete ja mixingutega)
+- maha võetud normalize.scss (BS3 kasutab uuemat)
 
 ### Teada bugid
 Vajab kohendamist peale rootsi gridi asendamist menüü, footer alumine riba, avaslaideri reklaamkast, tooteslaideri toote laiused, kogu lehe max laius ja breakpointid.
