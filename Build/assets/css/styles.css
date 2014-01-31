@@ -6052,7 +6052,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
   list-style-type: none;
   text-align: left;
   font-size: 16px;
-  margin: 10px 0 0 0; }
+  margin: 5px 0 0 0; }
   .tsr-ee-sidenav + .tsr-ee-sidenav {
     margin: 0; }
   .tsr-ee-sidenav li .tsr-ee-sidenav {
@@ -6081,7 +6081,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
     .tsr-ee-sidenav .active:after {
       font-family: 'ts-icons-all';
       content: "\e669";
-      font-size: 1.25em;
+      font-size: 1.125em;
       float: right; }
     .tsr-ee-sidenav .active li {
       border-bottom: none; }
@@ -6097,14 +6097,56 @@ section.tsr-ee-breadcrumbs {
   border-bottom: 1px solid #dbdbdb;
   background: #f6f6f6;
   width: 100%;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
+
+.tsr-ee-compare:before {
+  font-family: ts-icons-all;
+  content: "\e61c";
+  font-size: 1.5em;
+  padding-right: 10px;
+  margin-bottom: -5px;
+  display: inline-block;
+  vertical-align: text-bottom; }
 
 section.tsr-ee-section-product-boxes {
   background: transparent;
-  border: none;
-  padding: 0;
-  margin: 20px 12px; }
+  padding: 0 12px;
+  margin: 20px auto; }
 
+.tsr-ee-special-price-text {
+  color: #0083be;
+  line-height: 2; }
+
+.tsr-ee-product-price {
+  font-weight: 600;
+  color: #0083be;
+  font-size: 120%; }
+
+.must {
+  background: black; }
+
+.valge {
+  background: white; }
+
+.hall {
+  background: gray; }
+
+.punane {
+  background: #983338; }
+
+.roheline {
+  background: #489833; }
+
+.sinine {
+  background: #24426c; }
+
+.kollane {
+  background: yellow; }
+
+.tsr-ee-product-boxes section.tsr-section-productAndService-listing {
+  background: transparent;
+  padding: 0;
+  border: none; }
 .tsr-ee-product-boxes .tsr-ee-product-badge {
   left: 20%;
   top: 10%; }
@@ -6118,14 +6160,32 @@ section.tsr-ee-section-product-boxes {
   position: absolute;
   right: 0.9375em;
   top: 0.9375em; }
+.tsr-ee-product-boxes .pagination-holder {
+  padding: 23px 0; }
+  .tsr-ee-product-boxes .pagination-holder .tsr-pagination {
+    float: right; }
+    .tsr-ee-product-boxes .pagination-holder .tsr-pagination a {
+      background: transparent; }
+      .tsr-ee-product-boxes .pagination-holder .tsr-pagination a:hover {
+        background: #642887;
+        color: white;
+        text-decoration: none; }
+    .tsr-ee-product-boxes .pagination-holder .tsr-pagination a.tsr-active {
+      background: #4e256b;
+      font-size: 115%;
+      line-height: 115%; }
+.tsr-ee-product-boxes .tsr-forms .col-md-4 {
+  padding-left: 0; }
+.tsr-ee-product-boxes .tsr-forms .col-md-5 {
+  padding-right: 0; }
 
 .col-md-9.tsr-ee-product-boxes .tsr-module-product {
   width: 33.33333%; }
 
-.tsr-ee-product-colors {
+ul.tsr-ee-product-colors {
   margin: 0 auto;
   display: inline-block; }
-  .tsr-ee-product-colors li {
+  ul.tsr-ee-product-colors li {
     -webkit-border-radius: 22px;
     -ms-border-radius: 22px;
     border-radius: 22px;
@@ -6133,92 +6193,91 @@ section.tsr-ee-section-product-boxes {
     width: 1.375em;
     margin-left: 2px;
     cursor: pointer;
-    line-height: 28px;
     padding: 0; }
-    .tsr-ee-product-colors li[class*="acc"] {
+    ul.tsr-ee-product-colors li[class*="acc"] {
       border: 3px solid #f6f6f6;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       -ms-box-shadow: none;
       -o-box-shadow: none;
       box-shadow: none; }
-      .tsr-ee-product-colors li[class*="acc"]:hover, .tsr-ee-product-colors li[class*="acc"].active, .tsr-ee-product-colors li[class*="acc"].active:hover, .tsr-ee-product-colors li[class*="acc"].active:active {
+      ul.tsr-ee-product-colors li[class*="acc"]:hover, ul.tsr-ee-product-colors li[class*="acc"].active, ul.tsr-ee-product-colors li[class*="acc"].active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:active {
         border: 3px solid white;
         -webkit-box-shadow: 0px 0px 3px 0px black;
         -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
         -ms-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
         -o-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4); }
-        .tsr-ee-product-colors li[class*="acc"]:hover:hover, .tsr-ee-product-colors li[class*="acc"]:hover.active:hover, .tsr-ee-product-colors li[class*="acc"].active:hover, .tsr-ee-product-colors li[class*="acc"].active.active:hover, .tsr-ee-product-colors li[class*="acc"].active:hover:hover, .tsr-ee-product-colors li[class*="acc"].active:hover.active:hover, .tsr-ee-product-colors li[class*="acc"].active:active:hover, .tsr-ee-product-colors li[class*="acc"].active:active.active:hover {
+        ul.tsr-ee-product-colors li[class*="acc"]:hover:hover, ul.tsr-ee-product-colors li[class*="acc"]:hover.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover, ul.tsr-ee-product-colors li[class*="acc"].active.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:active.active:hover {
           opacity: 0.6; }
-    .tsr-ee-product-colors li.acc-1 {
+    ul.tsr-ee-product-colors li.acc-1 {
       background: #f9dc00; }
-    .tsr-ee-product-colors li.acc-2 {
+    ul.tsr-ee-product-colors li.acc-2 {
       background: #ff6319; }
-    .tsr-ee-product-colors li.acc-3 {
+    ul.tsr-ee-product-colors li.acc-3 {
       background: #bed600; }
-    .tsr-ee-product-colors li.acc-5 {
+    ul.tsr-ee-product-colors li.acc-5 {
       background: #00b48c; }
-      .tsr-ee-product-colors li.acc-5:hover {
+      ul.tsr-ee-product-colors li.acc-5:hover {
         background: #00f1bc; }
-      .tsr-ee-product-colors li.acc-5:active {
+      ul.tsr-ee-product-colors li.acc-5:active {
         background: #009574; }
-      .tsr-ee-product-colors li.acc-5.active {
+      ul.tsr-ee-product-colors li.acc-5.active {
         background: #3affd3; }
-        .tsr-ee-product-colors li.acc-5.active:hover {
+        ul.tsr-ee-product-colors li.acc-5.active:hover {
           background: #3affd3; }
-        .tsr-ee-product-colors li.acc-5.active:active {
+        ul.tsr-ee-product-colors li.acc-5.active:active {
           background: #3affd3; }
-    .tsr-ee-product-colors li.acc-6 {
+    ul.tsr-ee-product-colors li.acc-6 {
       background: #c41b79; }
-      .tsr-ee-product-colors li.acc-6:hover {
+      ul.tsr-ee-product-colors li.acc-6:hover {
         background: #e43998; }
-      .tsr-ee-product-colors li.acc-6:active {
+      ul.tsr-ee-product-colors li.acc-6:active {
         background: #a91768; }
-      .tsr-ee-product-colors li.acc-6.active {
+      ul.tsr-ee-product-colors li.acc-6.active {
         background: #ec77b8; }
-        .tsr-ee-product-colors li.acc-6.active:hover {
+        ul.tsr-ee-product-colors li.acc-6.active:hover {
           background: #ec77b8; }
-        .tsr-ee-product-colors li.acc-6.active:active {
+        ul.tsr-ee-product-colors li.acc-6.active:active {
           background: #ec77b8; }
-    .tsr-ee-product-colors li.acc-7 {
+    ul.tsr-ee-product-colors li.acc-7 {
       background: #c7c2ba; }
-      .tsr-ee-product-colors li.acc-7:hover {
+      ul.tsr-ee-product-colors li.acc-7:hover {
         background: #e2e0dc; }
-      .tsr-ee-product-colors li.acc-7:active {
+      ul.tsr-ee-product-colors li.acc-7:active {
         background: #b9b3a9; }
-      .tsr-ee-product-colors li.acc-7.active {
+      ul.tsr-ee-product-colors li.acc-7.active {
         background: white; }
-        .tsr-ee-product-colors li.acc-7.active:hover {
+        ul.tsr-ee-product-colors li.acc-7.active:hover {
           background: white; }
-        .tsr-ee-product-colors li.acc-7.active:active {
+        ul.tsr-ee-product-colors li.acc-7.active:active {
           background: white; }
-    .tsr-ee-product-colors li.acc-8 {
+    ul.tsr-ee-product-colors li.acc-8 {
       background: black; }
-      .tsr-ee-product-colors li.acc-8:hover {
+      ul.tsr-ee-product-colors li.acc-8:hover {
         background: #1f1f1f; }
-      .tsr-ee-product-colors li.acc-8:active {
+      ul.tsr-ee-product-colors li.acc-8:active {
         background: black; }
-      .tsr-ee-product-colors li.acc-8.active {
+      ul.tsr-ee-product-colors li.acc-8.active {
         background: #424242; }
-        .tsr-ee-product-colors li.acc-8.active:hover {
+        ul.tsr-ee-product-colors li.acc-8.active:hover {
           background: #424242; }
-        .tsr-ee-product-colors li.acc-8.active:active {
+        ul.tsr-ee-product-colors li.acc-8.active:active {
           background: #424242; }
-    .tsr-ee-product-colors li.docs {
+    ul.tsr-ee-product-colors li.docs {
       background: #642887;
       color: #fff; }
-      .tsr-ee-product-colors li.docs:hover {
+      ul.tsr-ee-product-colors li.docs:hover {
         background: #73369e; }
-      .tsr-ee-product-colors li.docs:active {
+      ul.tsr-ee-product-colors li.docs:active {
         background: #4e256b; }
-      .tsr-ee-product-colors li.docs.active {
+      ul.tsr-ee-product-colors li.docs.active {
         background: #aea9a2; }
-        .tsr-ee-product-colors li.docs.active:hover {
+        ul.tsr-ee-product-colors li.docs.active:hover {
           background: #c7c2ba; }
-        .tsr-ee-product-colors li.docs.active:active {
+        ul.tsr-ee-product-colors li.docs.active:active {
           background: #dbdbdb; }
-    .tsr-ee-product-colors li.rwd {
+    ul.tsr-ee-product-colors li.rwd {
       background: none;
       color: #000;
       font-size: 31px;
@@ -6231,37 +6290,34 @@ section.tsr-ee-section-product-boxes {
       -ms-box-shadow: none;
       -o-box-shadow: none;
       box-shadow: none; }
-      .tsr-ee-product-colors li.rwd.rotate {
+      ul.tsr-ee-product-colors li.rwd.rotate {
         transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         -webkit-transform: rotate(-90deg); }
-      .tsr-ee-product-colors li.rwd.rwd-xsmall {
+      ul.tsr-ee-product-colors li.rwd.rwd-xsmall {
         font-size: 31px;
         width: 42px; }
-      .tsr-ee-product-colors li.rwd.rwd-small {
+      ul.tsr-ee-product-colors li.rwd.rwd-small {
         font-size: 31px;
         width: 48px; }
-      .tsr-ee-product-colors li.rwd.rwd-medium {
+      ul.tsr-ee-product-colors li.rwd.rwd-medium {
         font-size: 32px;
         width: 46px; }
-      .tsr-ee-product-colors li.rwd.rwd-large {
+      ul.tsr-ee-product-colors li.rwd.rwd-large {
         font-size: 48px;
         width: 58px; }
-      .tsr-ee-product-colors li.rwd.rwd-xlarge {
+      ul.tsr-ee-product-colors li.rwd.rwd-xlarge {
         font-size: 55px; }
-      .tsr-ee-product-colors li.rwd:hover {
+      ul.tsr-ee-product-colors li.rwd:hover {
         color: #73369e; }
-      .tsr-ee-product-colors li.rwd:active {
+      ul.tsr-ee-product-colors li.rwd:active {
         color: #4e256b; }
-      .tsr-ee-product-colors li.rwd.active {
+      ul.tsr-ee-product-colors li.rwd.active {
         color: #642887; }
-        .tsr-ee-product-colors li.rwd.active:hover {
+        ul.tsr-ee-product-colors li.rwd.active:hover {
           color: #73369e; }
-        .tsr-ee-product-colors li.rwd.active:active {
+        ul.tsr-ee-product-colors li.rwd.active:active {
           color: #4e256b; }
-
-.breadcrumb > .active {
-  color: #222; }
 
 .favorite:before {
   font-family: 'ts-icons-all';

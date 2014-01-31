@@ -3,7 +3,7 @@
   list-style-type: none;
   text-align: left;
   font-size: 16px;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   & + .tsr-ee-sidenav {
     margin: 0;
   }
@@ -35,7 +35,7 @@
     &:after {
       font-family: 'ts-icons-all';
       content: "\e669";
-      font-size: em(20);
+      font-size: em(18);
       float: right;
     }
     & li {

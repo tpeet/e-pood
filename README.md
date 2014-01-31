@@ -39,10 +39,10 @@ Bootsrapist on muudetud ja lisatud:
   - All on BS3, siis rootsi scss, siis eesti kohendused.
   - Iga komponent on eraldi html-jupike, millele käib kaasa eraldi scss ja js (nagu rootslastel)
   - Juurkataloogis on põhilehed, mis includevad jupikesi
-  - html-jupikesed asuvad `/_includes/..`
-  - Vastav scss asub `/assets/css/_tsr-ee-elion/..`
+  - html-jupikesed asuvad `_includes/..`
+  - Vastav scss asub `assets/css/_tsr-ee-elion/..`
   - Vastav js asub `assets/js/_tsr-ee-js/..`
-  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `/asstets/js/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
+  htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `assets/js/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
 
 
 ### Abivahendid, suurelt jaolt eksperimentaalsed:

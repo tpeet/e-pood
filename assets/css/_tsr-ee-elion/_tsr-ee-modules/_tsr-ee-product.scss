@@ -3,17 +3,63 @@ section.tsr-ee-breadcrumbs {
   border-bottom: 1px solid $lightgrey-t;
   background: $lightgrey-c;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.tsr-ee-compare:before {
+  font-family: ts-icons-all;
+  content: "\e61c";
+  font-size: em(24);
+  padding-right: 10px;
+  margin-bottom: -5px;
+  display: inline-block;
+  vertical-align: text-bottom;
 }
 
 section.tsr-ee-section-product-boxes {
   background: transparent;
-  border: none;
-  padding: 0;
-  margin: 20px 12px;
+  padding: 0 12px;
+  margin: 20px auto;
 }
+
+.tsr-ee-special-price-text {
+  color: $blue-c;
+  line-height: 2;
+}
+.tsr-ee-product-price {
+  font-weight: 600;
+  color: $blue-c;
+  font-size: 120%;
+}
+
+.must{
+  background: black
+}
+.valge {
+  background: white;
+}
+.hall {
+  background: gray;
+}
+.punane {
+  background: #983338;
+}
+.roheline {
+  background: #489833;
+}
+.sinine {
+  background: #24426c;
+}
+.kollane {
+  background: yellow;
+}
+
 .tsr-ee-product-boxes {
-  
+  & section.tsr-section-productAndService-listing {
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
 
   & .tsr-ee-product-badge {
   @extend .tsr-ee-badge;
@@ -32,7 +78,32 @@ section.tsr-ee-section-product-boxes {
     top: em(15);
   }
 
-  .tsr-module-product {
+  .pagination-holder {
+    padding: 23px 0;
+    .tsr-pagination {
+      float: right;
+      a {
+        background: transparent;
+        &:hover {
+          background: $purple-c;
+          color: white;
+          text-decoration: none;
+        }
+      }
+      a.tsr-active {
+        background: $purple-t;
+        font-size: 115%;
+        line-height: 115%;
+      }
+    }
+  }
+  .tsr-forms {
+    & .col-md-4 {
+      padding-left: 0;
+    }
+    & .col-md-5 {
+      padding-right: 0;
+    }
 
   }
 }
@@ -55,9 +126,9 @@ section.tsr-ee-section-product-boxes {
 // - - Section navigation
 // - - - - - - - - - - - - - - - - - - - - 
 
-.tsr-ee-product-colors{
+ul.tsr-ee-product-colors {
   margin: 0 auto;
-  display:inline-block;
+  display: inline-block;
   li{
 
   @include border-radius(22px);
@@ -65,7 +136,6 @@ section.tsr-ee-section-product-boxes {
   width: em(22);
   margin-left: 2px;
   cursor: pointer;
-  line-height: 28px;
   padding: 0;
 
       // &[class*="acc-"]{
