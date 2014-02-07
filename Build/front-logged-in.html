@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="ltr" lang="en" ng-app>
+<html dir="ltr" lang="en" xmlns:ng="http://angularjs.org" data-ng-app="myApp">
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
@@ -73,8 +73,6 @@
 
 <link rel='stylesheet' href='assets/css/styles.css'>
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
-
 
         <!-- Hammer reload -->
           <script>
@@ -102,7 +100,6 @@
 </head>
 
 <body> 
-
 <section class="tsr-section-header">
 
 
@@ -125,7 +122,7 @@
     <nav class="tsr-global-right">
       <menu>
         <li class="tsr-extra"><a href="#">EST <span class="ts-icon-arrow-down"></span></a></li>
-        <li class="tsr-extra"><a href="#" class="ts-icon-buy"></a></li>
+        <li class="tsr-extra"><a href="#" class="icon-osta"></a></li>
         <li class="tsr-extra"><a href="front-logged-in.html#content-placeholder-productslider" class="tsr-btn tsr-btn-purple">Sisene</a></li>
       </menu>
     </nav>
@@ -442,7 +439,7 @@
           the lazy dog lorem ipsum
         </figure>
       </div>
-      <div class="tsr-container">
+      <div class="container">
         <div class="tsr-tactical-textPanel">
           <header>Hakkab juba looma</header>
           <span>The quick brown fox jumps over the lazy dog</span>
@@ -460,7 +457,7 @@
           the lazy dog lorem ipsum
         </figure>
       </div>
-      <div class="tsr-container">
+      <div class="container">
         <div class="tsr-tactical-textPanel">
           <header>Tegemist veel on. Palju.</header>
           <span>The quick brown fox jumps over the lazy dog</span>
@@ -520,15 +517,18 @@
 
  
 
-<section class="tsr-section-carousel-listing"> 
+<section class=""> 
   <div class="container">
-    <div class="col-sm-6 col-sm-offset-3">
-    <h2>Kõige uuemad ja vahvamad tooted</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis quod praesentium ipsa possimus dolores corrupti sint et dignissimos officia deleniti aliquid quis ab aperiam eius assumenda.</p>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h2>Kõige uuemad ja vahvamad tooted</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis quod praesentium ipsa possimus dolores corrupti sint et dignissimos officia deleniti aliquid quis ab aperiam eius assumenda.</p>
+      </div>
     </div>
- 
-    <figure class="tsr-tactical-direction"></figure>
-    <div class="tsr-container">
+  </div>
+</section>
+<section class="tsr-section-carousel-listing"> 
+    <div class="container">
       <div class=" tsr-slides" id="content-placeholder-products"></div>
 
     <script id="product-slider-template" type="text/x-handlebars-template">
@@ -553,7 +553,7 @@
     {{/products}}
     </script>
 
-    </div>
+    
    </div>
 </section> 
 
@@ -567,7 +567,7 @@
                         <header>Elioni järelmaks</header>
                     </a>  
 
-                    <a href="#" class="tsr-module-support ts-icon-broadband">
+                    <a href="#" class="tsr-module-support icon-transport">
                         <header>Transport e-poes</header>
                     </a>  
 
@@ -587,7 +587,7 @@
 <!-- - - - HTML - - - --> 
 
 
-<section class="tsr-section-footer">
+<section class="row tsr-section-footer">
   
 
 
@@ -598,12 +598,12 @@
       
       <menu class="tsr-nav-top-level tsr-extra-links">
        <li>
-        <header>Useful Services & Links</header>
+        <header>Elion soovitab</header>
         <menu class="tsr-nav-second-level">
-          <li><a href="#">Extra 1</a></li>
-          <li><a href="#">Extra 2</a></li>
-          <li><a href="#">Extra 3</a></li>
-          <li><a href="#">Extra 4</a></li>
+          <li><a href="#">EMT</a></li>
+          <li><a href="#">Digikogu</a></li>
+          <li><a href="#">Ilmataat</a></li>
+          <li><a href="#">Leiunurk</a></li>
           <li><a href="#">Extra 5</a></li>
         </menu>
       </li>          
@@ -613,32 +613,32 @@
     <menu class="tsr-nav-top-level">
 
       <li>
-        <a href="#">Mobile phones</a>
+        <a href="#">Infoportaal</a>
         <menu class="tsr-nav-second-level">
-          <li><a href="#">Mobile phones landing page</a></li>
-          <li><a href="#">Mobile phones</a></li>
-          <li><a href="#">Subscriptions</a></li>
-          <li><a href="#">Product &amp; Accessories</a></li>
-          <li><a href="#">Services</a></li> 
+          <li><a href="#">Pressinurk</a></li>
+          <li><a href="#">Uudised ja artiklid</a></li>
         </menu>
       </li>
 
       <li>
-        <a href="#">Tablets</a>
+        <a href="#">Elion</a>
         <menu class="tsr-nav-second-level">
-          <li><a href="#">Tablets phones landing page</a></li>
-          <li><a href="#">Tablets</a></li>
-          <li><a href="#">Subscriptions</a></li>
-          <li><a href="#">Product &amp; Accessories</a></li>
-          <li><a href="#">Services</a></li> 
+          <li><a href="#">Ettevõttest</a></li>
+          <li><a href="#">Tule tööle</a></li>
+          <li><a href="#">Telia Sonera</a></li>
+          <li><a href="#">Hinnakirjad</a></li>
+          <li><a href="#">Lepingud ja tingimused</a></li> 
         </menu>
       </li>
 
       <li>
-        <a href="#">Broadband</a>
+        <a href="#">Kontakt</a>
         <menu class="tsr-nav-second-level">
-          <li><a href="#">Broadband landing page</a></li>
-          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">Kontaktinfo</a></li>
+          <li><a href="#">E-poe info</a></li>
+          <li><a href="#">Liinirajatiste järelvalve</a></li>
+          <li><a href="#">Anna tagasisidet</a></li>
+          <li><a href="#">Projektide kooskõlastamine</a></li>
         </menu>
       </li>
 
@@ -650,9 +650,9 @@
 
 <!-- SM -->
 
-<div class="tsr-footer-sm">
-  <div class="tsr-container">
-
+<div class="row tsr-footer-sm">
+  <div class="container">
+  <div class="col-md-3">
     <a href="#" class="tsr-footer-sm-link">
       <figure class="tsr-footer-icon-facebook"></figure>
       
@@ -660,9 +660,11 @@
         <strong>Elion Facebookis</strong>
         <small>Short USP about why to visit this channel.</small>
       </p>
-
+    
     </a>
-
+  </div>
+  
+  <div class="col-md-3">
     <a href="#" class="tsr-footer-sm-link">
       <figure class="tsr-footer-icon-youtube"></figure>
       
@@ -670,9 +672,11 @@
         <strong>Elion YouTubes</strong>
         <small>Short USP about why to visit this channel.</small>
       </p>
-
+    
     </a>
-
+  </div>
+  
+  <div class="col-md-3">
     <a href="#" class="tsr-footer-sm-link">
       <figure class="tsr-footer-icon-twitter"></figure>
       
@@ -680,9 +684,11 @@
         <strong>TSbrand on Twitter</strong>
         <small>Short USP about why to visit this channel.</small>
       </p>
-
+    
     </a>
-
+  </div>
+  
+  <div class="col-md-3">
     <a href="#" class="tsr-footer-sm-link">
       <figure class="tsr-footer-icon-google"></figure>
       
@@ -690,9 +696,9 @@
         <strong>TSbrand on Google +</strong>
         <small>Short USP about why to visit this channel.</small>
       </p>
-
+    
     </a>
-
+  </div>
   </div>  
 </div><!-- //tsr-footer-sm -->
 
@@ -706,6 +712,7 @@
 
 <!-- HTML5 IE Enabling Script -->
 <!--[if lt IE 9]><script src='assets/js/html5.js'></script><![endif]-->
+
     <script src="assets/js/handlebars-v1.3.0.js"></script>
     <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
@@ -735,11 +742,14 @@
     <script src="assets/tsr-js/polyfills/matchMedia.js"></script>
     <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
+    <script src="assets/js/bootstrap-js/tab.js"></script>
+
     <script src="assets/tsr-js/tsr-core.js"></script>
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
     <script src="assets/tsr-js/tsr-header.js"></script>
     <script src="assets/tsr-js/tsr-footer.js"></script>
     <script src="assets/tsr-js/tsr-carousel-listing.js"></script>
+    <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
     <script src="assets/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/tsr-js/tsr-forms.js"></script>
     <script src="assets/tsr-js/tsr-filter.js"></script>

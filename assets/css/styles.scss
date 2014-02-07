@@ -1,181 +1,80 @@
+// VARIABLES AND MIXINS 
+//**********************************
+/* @include _bs-ee-variables.scss */ 
+/* @include _bs-ee-mixins.scss */
+/* @include _bs-ee-ms-grid.scss */
+
 //TEMPORARY HELPERS
 //**********************************
 /* @include _debug.scss */
 
-// VARIABLES AND MIXINS 
-//**********************************
-/* @include _bs-ee-variables.scss */ 
-
 // BOOTSRAP
 //**********************************
-/* @include _mixins.scss */
 /* @include _normalize.scss */
 /* @include _scaffolding.scss */ 
 /* @include _grid.scss */
 /* @include _print.scss */
 /* @include _type.scss */
-/* @include _responsive-utilities.scss */ //to hide-show-on mobile
-
+/* @include _responsive-utilities.scss */ 
 
 
 
 // TELIA SONERA
 //**********************************
 /* @include _tsr-core.scss */
-/* @include _bs-ee-variables.scss */ 
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO BS3
 //**********************************
-
 /* @include _bs-ee-breadcrumbs.scss */
+/* @include _bs-ee-navs.scss */
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO TSR
 //**********************************
-/* @include _tsr-ee-fontastic.scss */
+/* @include _icons-ee-styles */
 /* @include _tsr-ee-typography.scss */
 /* @include _tsr-ee-tacticalElements.scss */
 /* @include _tsr-ee-communication-primary.scss */
 /* @include _tsr-ee-buttonsAndLinks.scss */
 /* @include _tsr-ee-sidemenu.scss */
 /* @include _tsr-ee-product.scss */
+/* @include _tsr-ee-product-list-front.scss */
 
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
 
-
+.container { // in mixins and variables removed padding on mobile
+    max-width: 960px;
+}
 // WORK IN PROGRESS PARTS
 //**********************************
-.favorite {
-  &:before {
-    font-family: 'ts-icons-all';
-    content: "\e646";
-  }
-}
 
-.tsr-ee-product-list-front {
 
-  .col-md-3 {
 
-    margin: 0 -1px -1px 0;
-    padding: 0;
-  }
+// .nav-stacked {
+//   @media (max-width: $screen-xs-max) {
+//     border: 3px solid red;
+//     > li {
+     
+//     }
+//   }
+// }
 
-  & .tsr-ee-category-header h3 {
-    display: block;
-    background: $lightgrey-c;
-    border-top: 1px solid $lightgrey-t; 
-    padding: 16px 15px;
-    color: $purple-c;
+.nav-stacked.nav > li > a {
+  @media (max-width: $screen-xs-max) {
     text-align: left;
-    font-weight: normal;
-    margin: 0;
-    @include media-min(768px) {
-      margin: 0 auto;
-      text-align: center;
-      background: transparent;
-      border-top: none;
-    } // min 768px
   }
-
-  dl {
-    display: block;
-    margin: 2em 0.7em;
-  }
-
-  & .tsr-module-product { 
-    width: 100%;
-    padding: 15px 0 20px 15px;
-    background: transparent;
-    float: none;
-    @include media-min(600px) {
-    padding: 35px 20px 35px 20px;
-    } 
-
-    & .tsr-product-content {
-      width: 65%;
-      display: inline-block;
-      vertical-align: top;
-      padding-left: 4%;
-      @include media-min(768px) {
-        margin: auto;
-        width: 100%;
-        padding-left: 0;
-      } // min 768px
-
-      // &:after {
-      // color: $purple-c;
-      // font-family: 'ts-icons-all';
-      // content: "\e668";
-      // font-size: 30px;
-      // speak: none;
-      // display: inline-block;
-      // position: absolute;
-      // right: 1%;
-      // bottom: 50%;
-      // margin-bottom: -15px;
-      // @include media-min(768px) {
-      //   content: " ";
-      //   } 
-      // } 
-    } // .tsr-product-content
-
-    & .tsr-product-image {
-      height: auto;
-      width: 25%;
-      display: inline-block;
-      float: none;
-      @include media-min(768px) {
-        width: 100%;
-        height: auto;
-        } // min 768px
-      }
-
-    & .tsr-ee-product-badge {
-      @extend .tsr-ee-badge;
-      left: 20%;
-      top: 10%;
-        @include media-min(768px) {
-        left: 70%;
-        top: 10%;
-        z-index: 3;
-        } // min 768px
-      }
-
-    & .tsr-product-header {
-      font-size: 150%;
-      margin-bottom: 5px;
-      @include media-min(768px) {
-        font-size: emCalc(20);
-      } // min 768px
+  &:hover {
+      @include media-max($screen-xs-max) {
+      background-color: transparent;
+      color: $link-color; 
+      text-decoration: underline;
     }
-
-    & .tsr-product-price {
-      font-size: 130%;
-      margin: 0;
-      @include media-min(768px) {
-        margin: 12px 0 0;
-      } // min 768px
-    }
-  } // .tsr-module-product
-} // .tsr-ee-product-list-front 
-
-
-// Section slider
-section.tsr-section-carousel-listing.tsr-slider-init {
-background: $lightgrey-c;
-border-top: 1px solid $lightgrey-t;
-border-bottom: none;
-padding-bottom: 40px;
-  & .tsr-container {
-    border-bottom: 1px solid $lightgrey-t;
-    padding: 0 20px;
-  }
-  & .tsr-slides {
-    padding: 0 0 0 1px;
-    background: white;
   }
 }
+
+
+
 
 // Section footer
 .tsr-section-footer .tsr-footer-links {

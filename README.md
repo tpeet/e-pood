@@ -21,6 +21,7 @@ Bootstrapist on lisatud:
 Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
   - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
+  - _bs-ee-navs.scss (tabs ja nav pills)
 
 ## Sisu
 

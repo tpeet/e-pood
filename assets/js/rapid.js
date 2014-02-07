@@ -4,9 +4,13 @@
 /* CSS3 Media Queries */
 /* @include _respond.min */
 
-/* retina.js (provide image alternative | my_image@2x.png) */
-/* @include _retina */
+
 /* @include _tsr-ee-2nd-level */
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  e.target // activated tab
+  e.relatedTarget // previous tab
+});
 
 
 

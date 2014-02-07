@@ -37,36 +37,44 @@ body:before {
 	position: fixed;
 	z-index: 10;
 	bottom: 0;
-	content: "This is simply mediaqueries debug info";
+	content: "lte xs-min";
 	}
 
-@media only screen and (min-width: $mobile-portrait) { 
-body:before { content: "Mobile portrait, min-width: 320px"; background:	#1e5950; }
+@media only screen and (min-width: $screen-xs-min) {  
+body:before { content: "screen-xs-min"; background:	#1e5950; }
 }
 
-@media only screen and (min-width: $mobile-landscape) { 
-body:before { content: "Mobile landscape, min-width: 479px"; background: #2a557e ; }
+@media only screen and (min-width: $screen-xs) {  
+body:before { content: "xperia landscape, iphone landscape screen-xs and up"; background:	#1e5950; }
 }
 
-@media only screen and (min-width: $small-tablet) { 
-body:before { content: "Small tablet, min-width: 599px"; background:	#ba543e ; }
+@media only screen and (min-width: $screen-sm){ 
+body:before { content: "thinkpad, ipad retina vertical screen-sm and up"; background:	#ba543e ; }
 }
 
-@media only screen and (min-width: $tablet-notebook) { 
-body:before { content: "$tablet-notebook, min-width: 768px"; background: #703225; }
+@media only screen and (min-width: $screen-md) { 
+body:before { content: "ipad retina horizontal, screen-md and up"; background:	#ccc ; }
 }
 
-@media only screen and (min-width: $landscape-tablet) { 
-body:before { content: "$landscape-tablet, min-width: 1024px"; background: #783bb1 ; }
+@media only screen and (min-width: $screen-lg) { 
+body:before { content: "thinkpad horizontal, screen-lg and up"; background: #703225; }
 }
 
-@media only screen and (min-width: $desktop) { 
-body:before { content: "$desktop, min-width: 1280px"; background: #783bb1 ; }
-}
+// @media only screen and (min-width: $screen-md) and (max-width: $screen-md-max){ 
+// body:before { content: "ipad retina horizontal screen-md"; background: #703235; }
+// }
 
-@media only screen and (min-width: $widescreen) { 
-body:before { content: "$widescreen, min-width: 1440px"; background: #783bb1 ; }
-}
+// @media only screen and (min-width: $screen-md-max) and (max-width: $screen-lg-min){ 
+// body:before { content: "no-match, screen-lg"; background: #783bb1 ; }
+// }
+
+// @media only screen and (min-width: $screen-lg-min) { 
+// body:before { content: "screen-lg-min, thinkpad horizontal"; background: #783bb1 ; }
+// }
+
+// @media only screen and (min-width: $widescreen) { 
+// body:before { content: "$widescreen, min-width: 1440px"; background: #783bb1 ; }
+// }
 
 
 /* 	

@@ -1,19 +1,12 @@
 <!-- Product boxes listing, eg Arvutid 2nd level page-->
-    <section class="tsr-ee-breadcrumbs">
-      <div class="container">
-        <ol class="breadcrumb">
-          <li><a href="#">TV ja audio</a></li>
-          <li><a href="#">Telerid</a></li>
-          <li class="active">Samsung</li>
-        </ol>
-      </div>
-    </section>
+
+<!-- @include breadcrumbs.html -->
 
     <div class="container" > 
 
       <!-- @include sidemenu.html -->
 
-      <div class="col-md-9 col-sm-6 col-xs-12 tsr-ee-product-boxes">
+      <div class="col-xs-12 col-sm-12 col-md-9   tsr-ee-product-boxes">
 
       <!-- Ad area -->
         <div class="row" style="overflow: hidden;">
@@ -22,9 +15,8 @@
 
         <!-- Divider -->
         <div class="row" style="height: 65px;">
-        <span> Puuduolevad ikoonid ja tootevõrdlus</span>
+        <span> Puudu asjad siit vahelt</span>
         </div>
-
 
         <!-- Filter -->
         <div class="row" style="height: 58px; background: #642887;">
@@ -90,9 +82,9 @@
         {{#if ribbon}}
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
-        <a href="#" class="favorite"></a>
+        <a href="#" class="tsr-ee-product-box-favorite"></a>
         <figure class="tsr-product-image">
-        <img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+        <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a
         </figure>
       
         <div class="tsr-product-content">
@@ -103,7 +95,7 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <header class="tsr-product-header">{{name}}</header>
+        <a href="detail.html"><header class="tsr-product-header">{{name}}</header></a>
         
         <ul class="tsr-ee-product-colors tsr-product-colors">
         {{#if colors}}

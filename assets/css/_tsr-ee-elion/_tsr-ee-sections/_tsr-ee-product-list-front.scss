@@ -1,0 +1,107 @@
+
+.tsr-ee-product-list-front {
+
+  .col-md-3 {
+    margin: 0 -1px -1px 0;
+    padding: 0;
+  }
+
+  & .tsr-ee-category-header  {
+    display: block;
+    margin: em(15) em(15);
+    text-align: left;
+    font-weight: normal;
+    @include media-min($screen-sm) {
+      margin: em(25) auto;
+      text-align: center;
+    } // min 768px
+  }
+
+  & .tsr-module-product { 
+    width: 100%;
+    padding: em(15) 0 em(20) em(15);
+    float: none;
+    @include media-min($screen-sm-min) {
+    padding: em(35) em(20) em(35) em(20);
+    } 
+
+    & .tsr-product-content {
+      width: 70%;
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 4%;
+      @include media-min($screen-sm-min) {
+        margin: auto;
+        width: 100%;
+        padding-left: 0;
+      } // min 768px
+
+      // Arrow component in box for small
+      // &:after {
+      // color: $purple-c;
+      // font-family: 'ts-icons-all';
+      // content: "\e668";
+      // font-size: 30px;
+      // speak: none;
+      // display: inline-block;
+      // position: absolute;
+      // right: 1%;
+      // bottom: 50%;
+      // margin-bottom: -15px;
+      // @include media-min(768px) {
+      //   content: " ";
+      //   } 
+      // } 
+    } // .tsr-product-content
+
+    // & .tsr-product-image {
+    //   height: auto;
+    //   width: 25%;
+    //   display: inline-block;
+    //   float: none;
+    //   @include media-min($screen-sm-min) {
+    //     width: 100%;
+    //     height: auto;
+    //     } // min 768px
+    //   }
+
+    & .tsr-product-image {
+      height: auto;
+      width: 75px;
+      max-width: 25%;
+      display: inline-block;
+      float: none;
+      @include media-min($screen-sm-min) {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        } // min 768px
+      }
+
+    & .tsr-ee-product-badge {
+      @extend .tsr-ee-badge;
+      left: 20%;
+      top: 10%;
+        @include media-min($screen-sm-min) {
+        left: 70%;
+        top: 10%;
+        z-index: 3;
+        } // min 768px
+      }
+
+    & .tsr-product-price {
+      margin: 0;
+      @include media-min($screen-sm-min) {
+        margin: 12px 0 0;
+      } // min 768px
+    }
+  } // .tsr-module-product
+
+  .nav {
+    border-bottom: 1px solid $lightgrey-t;
+      @include media-min($screen-sm-min) {
+        border-bottom: none;
+        margin: em(15) auto;
+      } // min 768px
+  }
+} // .tsr-ee-product-list-front 

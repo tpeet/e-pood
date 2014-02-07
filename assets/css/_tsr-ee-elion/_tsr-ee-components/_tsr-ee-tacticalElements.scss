@@ -4,21 +4,10 @@
   display: table;
   position: absolute;
   z-index: 2;
-  &.vertical {
-    @include media-min(768px) {
-    top: 105px;
-    right: 60px;
-    }
-  }
 }
 
 .tsr-module-product .tsr-tactical-flash.tsr-second {
   z-index: 1;
-  &.horizontal {
-    @include media-min(768px) {
-    top: 105px;
-    }
-  }
 }
 
 // Ribbon figure moved under parent a for mobile view, just under class="tsr-module-product"
@@ -47,7 +36,7 @@
     }
   }
 
-    @include media-min(768px) {
+    @include media-min($screen-sm-min) {
       left: -10px;
       top: -10px;
 

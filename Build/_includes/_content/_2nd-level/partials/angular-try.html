@@ -1,0 +1,74 @@
+<!-- <span> <input type="text" data-ng-model="name">{{name}}</span>
+
+
+<span data-ng-init="names=['dave', 'lou', 'reed']">
+  <ul>
+    <li data-ng-repeat="foo in names">{{foo}}</li>
+  </ul>
+</span> -->
+
+
+<div data-ng-controller="myController">
+
+<input type="text" data-ng-model="name">{{name}}
+<ul>
+  <li data-ng-repeat="cust in customers | filter:name | orderBy: 'name'">
+    {{ cust.name | uppercase }} - {{ cust.city | lowercase }}
+  </li>
+</ul>
+</div>
+
+<script>
+  var myApp = angular.module('myApp',[]);
+
+    myApp.config( function ($routeProvider) {
+    $routeProvider 
+      .when( '/',
+        {
+          controller: 'myController',
+          templateUrl: 'partials/angular-try.html'
+        })
+      .when('/partial2',
+        {
+          controller: 'myController',
+          templateUrl: 'partials/angular-try2.html'
+        })
+      .otherwise({ redirectTo: '/' });
+  });
+  // VIIS 1
+  // myApp.controller('myController', myController);
+  // function myController($scope) {
+  //   $scope.customers=[ {name: 'dave foo', city: 'Rapla'}, {name: 'lou poo', city: 'Varbla'}, {name: 'read my lips', city: 'Lohja'}];
+  // }
+
+  //VIIS 2
+  // myApp.controller('myController', function($scope){
+  //   $scope.customers=[ 
+  //   {name: 'dave foo', city: 'Rapla'}, {name: 'lou poo', city: 'Varbla'}, {name: 'read my lips', city: 'Lohja'}
+  //   ];
+  // });
+
+  //VIIS 3
+  var controllers = {};
+
+  controllers.myController = function($scope){
+    $scope.customers=[ 
+      {name: 'dave foo', city: 'Rapla'}, 
+      {name: 'lou poo', city: 'Varbla'}, 
+      {name: 'read my lips', city: 'Lohja'}
+    ];
+  };
+
+
+  controllers.controller2 = function($scope){
+    $scope.customers=[ 
+      {name: 'hell no', city: 'Rapla'}, 
+      {name: 'lou poo', city: 'Varbla'}, 
+      {name: 'read my lips', city: 'Lohja'}
+    ];
+  };
+
+  myApp.controller(controllers);
+
+
+</script>

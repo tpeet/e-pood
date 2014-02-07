@@ -1,15 +1,17 @@
  <!-- frontpage not logged in template -->
 <section class="tsr-section-productAndService-listing">
-    <div class="tsr-ee-product-list-front" >
-        <div class="container" id="content-placeholder-frontlist"></div>
+  
+    <div class="tsr-ee-product-list-front container" >
+        <div  id="content-placeholder-frontlist"></div>
 <!-- End html -->
 
   <script id="front-list-template" type="text/x-handlebars-template">
   
   {{#frontlist}}
-  <div class="col-md-3 col-sm-3 col-xs-full">
-    <a href="{{{path}}}" class="tsr-ee-category-header"><h3>{{caption}}</h3></a>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+    <a href="{{{path}}}"><h2 class="tsr-ee-category-header">{{caption}}</h2></a>
     <a href="javascript:void(0);" class="tsr-module-product ">
+    
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
@@ -19,20 +21,20 @@
 
       <div class="tsr-product-content">
       {{#if firstflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+      <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
       {{/if}}
       {{#if secondflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+      <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
       {{/if}}
       <header class="tsr-product-header">{{name}}</header>
       <p class="tsr-product-price">{{price}}</p>
       </div>
     </a>
-    <dl>
+    <ul class="nav nav-pills nav-stacked">
       {{#each link}}
-      <dt><a href="arvutid-ja-lisad.html" class="tsr-btn tsr-ee-btn-link">{{this}}</a></dt>
+      <li><a href="arvutid-ja-lisad.html">{{this}}</a></li>
       {{/each}}
-    </dl>
+    </ul>
     </div>
   {{/frontlist}}
   </script>

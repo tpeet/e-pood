@@ -4,12 +4,12 @@ section.tsr-section-communictaion-primary {
     }
     & .tsr-slides a {
       min-height: 160px;
-      @include media-min(768px) {
+      @include media-min($screen-sm-min) {
       margin-bottom: auto !important;
       } // min 600px
     }
     & .tsr-control-nav {
-      @include media-min(768px) {
+      @include media-min($screen-sm-min) {
       bottom: 0;
       } // min 600px
     }
@@ -21,7 +21,7 @@ section.tsr-section-communictaion-primary {
       & span {
         font-size: 1em;
       }
-      @include media-min(768px) {
+      @include media-min($screen-sm-min) {
       top: auto;
       } // min 600px
     }
@@ -29,13 +29,13 @@ section.tsr-section-communictaion-primary {
       display: table;
       top: 40px;
       left: 20%;
-      @include media-min(768px) {
+      @include media-min($screen-sm-min) {
         font-size: 48px;
         width: 120px;
         height: 120px;
         }
       &:before {
-        @include media-min(768px) {
+        @include media-min($screen-sm-min) {
         width: 122px;
         height: 122px;
         }

@@ -1,0 +1,9 @@
+<div data-ng-controller="myController">
+
+<input type="text" data-ng-model="city">{{name}}
+<ul>
+  <li data-ng-repeat="cust in customers | filter:name | orderBy: 'name'">
+    {{ cust.name | uppercase }} - {{ cust.city | lowercase }}
+  </li>
+</ul>
+</div>

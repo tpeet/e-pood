@@ -1,19 +1,24 @@
+// resetting hardcoded values from tsr
+.tsr-module-product {
+  font-size: inherit;
+  .tsr-product-header {
+    font-size: 105%;
+    margin: em(10) 0 em(5);
+    @include media-min($screen-sm-min) {
+    font-size: 140%;;
+    } 
+  }
+}
+section.tsr-section-productAndService-listing {
+    padding: 0;
+  }
+
 section.tsr-ee-breadcrumbs {
   border-top: 1px solid $lightgrey-t;
   border-bottom: 1px solid $lightgrey-t;
   background: $lightgrey-c;
   width: 100%;
   margin-bottom: 15px;
-}
-
-.tsr-ee-compare:before {
-  font-family: ts-icons-all;
-  content: "\e61c";
-  font-size: em(24);
-  padding-right: 10px;
-  margin-bottom: -5px;
-  display: inline-block;
-  vertical-align: text-bottom;
 }
 
 section.tsr-ee-section-product-boxes {
@@ -26,6 +31,7 @@ section.tsr-ee-section-product-boxes {
   color: $blue-c;
   line-height: 2;
 }
+
 .tsr-ee-product-price {
   font-weight: 600;
   color: $blue-c;
@@ -57,7 +63,7 @@ section.tsr-ee-section-product-boxes {
 .tsr-ee-product-boxes {
   & section.tsr-section-productAndService-listing {
     background: transparent;
-    padding: 0;
+
     border: none;
   }
 
@@ -71,11 +77,13 @@ section.tsr-ee-section-product-boxes {
     z-index: 3;
     } // min 768px
   }
-  .favorite {
+  .tsr-ee-product-box-favorite {
+    @extend .favorite;
     font-size: em(25);
     position: absolute;
     right: em(15);
     top: em(15);
+    z-index: 2;
   }
 
   .pagination-holder {

@@ -1,0 +1,644 @@
+<!doctype html>
+<html dir="ltr" lang="en" xmlns:ng="http://angularjs.org" data-ng-app="myApp">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js    ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+<title>Elion E-pood</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--   , minimum-scale=1, maximum-scale=1 -->
+
+
+    <!-- Modernizer - Make a custom download "http://modernizr.com/download/" -->
+    <script src="assets/tsr-js/libs/modernizr.custom.min.js"></script>
+    <script src="assets/tsr-js/libs/enquire.min.js"></script>
+
+
+<!--[if lt IE 9]>
+
+    <link rel="stylesheet" type="text/css" href="assets/tsr-ieSplash/tsr-ieSplash.css" />
+        <script type="text/javascript">
+          document.write("<div class='msie-7-splash'><div class='content'><h6>Your browser is to old!</h6><p> We recommend you to upgrade or use the tablet/phablet or mobile phone next to you.</p><a href='https://www.google.com/intl/en/chrome/browser/' class='ch browser' target='_blank'>Chrome</a><a href='http://www.mozilla.org/sv-SE/firefox/fx/' class='ff  browser' target='_blank'>Firefox</a><a href='http://www.apple.com/safari/' class='sa browser' target='_blank'>Safari</a><a href='http://windows.microsoft.com/sv-SE/internet-explorer/download-ie' class='ex browser' target='_blank'>Explorer</a></div></div>");    
+        </script>
+
+<![endif]-->
+
+<meta property="og:title" content="Elion E-pood" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="#" />
+<meta property="og:image" content="#" />
+<meta property="og:description" content="Responsive e-shop based on TS brandzone grid" />
+<meta property="og:latitude" content="47.00000" />
+<meta property="og:longitude" content="7.00000" />
+<meta property="og:street-address" content="Address" />
+<meta property="og:phone_number" content="Phone Number" />
+<meta property="og:locality" content="Locality" />
+<meta property="og:region" content="Region" />
+<meta property="og:postal-code" content="Postal Code" />
+<meta property="og:country-name" content="Country" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@username">
+<meta name="twitter:creator" content="@username">
+<meta name="twitter:url" content="#">
+<meta name="twitter:title" content="Elion E-pood">
+<meta name="twitter:description" content="Responsive e-shop based on TS brandzone grid">
+<meta name="twitter:image" content="#">
+
+<meta name="robots" content="index,follow"/>
+
+<link rel="apple-touch-icon" sizes="57x57" href="../../../assets/img/branding/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="!-- @path apple-touch-icon-114x114.png -->">
+<link rel="apple-touch-icon" sizes="72x72" href="!-- @path apple-touch-icon-72x72.png -->">
+<link rel="apple-touch-icon" sizes="144x144" href="!-- @path apple-touch-icon-144x144.png -->">
+<link rel="apple-touch-icon" sizes="60x60" href="!-- @path apple-touch-icon-60x60.png -->">
+<link rel="apple-touch-icon" sizes="120x120" href="!-- @path apple-touch-icon-120x120.png -->">
+<link rel="apple-touch-icon" sizes="76x76" href="!-- @path apple-touch-icon-76x76.png -->">
+<link rel="apple-touch-icon" sizes="152x152" href="!-- @path apple-touch-icon-152x152.png -->">
+<link rel="icon" type="image/png" href="!-- @path favicon-196x196.png -->" sizes="196x196">
+<link rel="icon" type="image/png" href="!-- @path favicon-160x160.png -->" sizes="160x160">
+<link rel="icon" type="image/png" href="!-- @path favicon-96x96.png -->" sizes="96x96">
+<link rel="icon" type="image/png" href="!-- @path favicon-32x32.png -->" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/branding/favicons/favicon-16x16.png" sizes="16x16">
+<meta name="msapplication-TileColor" content="#ff0000">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<link rel='stylesheet' href='../../../assets/css/styles.css'>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    window.angular || document.write(unescape('%3Cscript src="/bower_components/angular/angular.min.js" type="text/javascript">%3C/script>'))
+    //]]>
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+</head>
+
+<body> 
+<section class="tsr-section-header">
+
+
+  <!-- - - GLOBAL - - -->
+
+  <div class="tsr-header-global">
+   <div class="container"> 
+
+    <nav class="tsr-global-left">
+      <menu>
+        <li><a href="#">Eraklient</a></li>
+        <li><a href="#">Äriklient</a></li>
+        <li class="is-choosen"><a href="#">E-pood</a></li>
+        <li class="tsr-btn-arrow-mobile"></li>
+      </menu>
+    </nav>
+
+    <a href="#" class="tsr-btn-close"></a>
+
+    <nav class="tsr-global-right">
+      <menu>
+        <li class="tsr-extra"><a href="#">EST <span class="ts-icon-arrow-down"></span></a></li>
+        <li class="tsr-extra"><a href="#" class="icon-osta"></a></li>
+        <li class="tsr-extra"><a href="front-logged-in.html#content-placeholder-productslider" class="tsr-btn tsr-btn-purple">Sisene</a></li>
+      </menu>
+    </nav>
+
+  </div>
+</div><!-- tsr-header-global END -->   
+
+
+
+<!-- - - MAIN - - -->  
+
+<section class="tsr-header-main">
+  <div class="container"> 
+
+    <!-- LOGO -->  
+    <figure class="tsr-header-logo">
+      <a href="../../../index.html"><img src="../../../assets/img/branding/elion-logo.svg" onerror="this.onerror=null; this.src='../../../assets/img/branding/elion-logo.png'"/></a>
+    </figure>
+
+
+    <!-- - - Top mobile + Search - - -->
+    <div class="tsr-header-mobileAndExtras">
+     <div class="tsr-container"> 
+
+      <nav>
+        <menu>
+          <li class="tsr-tab-cart" ><a href="#" data-header-tab="cart"><i class="tsr-tactical">3</i></a></li>
+          <li class="tsr-tab-login"><a href="#" data-header-tab="login"></a></li>
+          <li class="tsr-tab-search"><a href="#" data-header-tab="search"></a></li>
+          <li class="tsr-tab-menu" ><a href="#" data-header-tab="menu"></a></li>
+        </menu>
+      </nav>
+
+    </div>
+  </div><!-- tsr-header-mobileAndExtras END -->   
+
+
+  <!-- NAVIGATION -->  
+
+  <nav class="tsr-main-nav">
+    <menu class="tsr-nav-top-level">
+      <li><a href="#">Arvutid ja lisad</a>
+        <menu class="tsr-nav-second-level">
+          <li>
+            <a href="#"><span>Mobile phones landing page</span>
+              <article class="tsr-landing">
+                <figure>
+                  <img src="assets/img/header/landing-iphone.png" />
+                </figure>
+                <header>The All New iPhone 5s - Now Available</header>
+                <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
+              </article> 
+            </a>
+          </li>
+          <li><a href="#">Mobile phones</a>
+            <menu class="tsr-nav-third-level">
+              <li><a href="#">Lorum 1</a></li>
+              <li><a href="#">Lorum 2</a></li>
+              <li><a href="#">Lorum 3</a></li>
+              <li><a href="#">Lorum 4</a></li>
+              <li><a href="#">Lorum 5</a></li>
+            </menu>
+          </li>
+          <li><a href="#">Subscriptions</a>
+           <menu class="tsr-nav-third-level">
+            <li><a href="#">Lorum 1</a></li>
+            <li><a href="#">Lorum 2</a></li>
+            <li><a href="#">Lorum 3</a></li>
+          </menu>
+        </li>
+        <li><a href="#">Product &amp; Accessories</a>
+         <menu class="tsr-nav-third-level">
+          <li><a href="#">Lorum 1</a></li>
+          <li><a href="#">Lorum 2</a></li>
+          <li><a href="#">Lorum 3</a></li>
+          <li><a href="#">Lorum 4</a></li>
+
+        </menu>
+      </li>
+      <li><a href="#">Services</a>
+       <menu class="tsr-nav-third-level">
+        <li><a href="#">Lorum 1</a></li>
+        <li><a href="#">Lorum 2</a></li>
+        <li><a href="#">Lorum 3</a></li>
+        <li><a href="#">Lorum 4</a></li>
+        <li><a href="#">Lorum 5</a></li>
+      </menu>
+    </li>
+
+    <li class="tsr-btn-close">
+      <a href="#"></a>
+    </li>
+  </menu>
+</li>
+<li><a href="#">TV ja audio</a>
+  <menu class="tsr-nav-second-level">
+    <li>
+      <a href="#"><span>Tablets landing page</span>
+        <article class="tsr-landing">
+          <figure>
+            <img src="assets/img/header/landing-temp.png" />
+          </figure>
+          <header>The All New iPhone 5s - Now Available</header>
+          <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
+        </article> 
+      </a>
+    </li>
+    <li><a href="#">Tablets</a>
+      <menu class="tsr-nav-third-level">
+        <li><a href="#">Lorum 1</a></li>
+        <li><a href="#">Lorum 2</a></li>
+
+      </menu>
+    </li>
+    <li><a href="#">Subscriptions</a>
+     <menu class="tsr-nav-third-level">
+      <li><a href="#">Lorum 1</a></li>
+      <li><a href="#">Lorum 2</a></li>
+      <li><a href="#">Lorum 3</a></li>
+    </menu>
+  </li>
+  <li><a href="#">Product &amp; Accessories</a>
+   <menu class="tsr-nav-third-level">
+    <li><a href="#">Lorum 1</a></li>
+
+
+  </menu>
+</li>
+<li><a href="#">Services</a>
+ <menu class="tsr-nav-third-level">
+  <li><a href="#">Lorum 1</a></li>
+  <li><a href="#">Lorum 2</a></li>
+  <li><a href="#">Lorum 3</a></li>
+
+</menu>
+</li>
+
+<li><a href="#">Header</a>
+ <menu class="tsr-nav-third-level">
+  <li><a href="#">Lorum 1</a></li>
+  <li><a href="#">Lorum 2</a></li>
+  <li><a href="#">Lorum 3</a></li>
+
+</menu>
+</li>
+
+<li><a href="#">Header</a>
+ <menu class="tsr-nav-third-level">
+  <li><a href="#">Lorum 1</a></li>
+  <li><a href="#">Lorum 2</a></li>
+  <li><a href="#">Lorum 3</a></li>
+
+</menu>
+</li>
+<li class="tsr-btn-close">
+  <a href="#"></a>
+</li>
+</menu>
+</li>
+<li><a href="#">Foto, video, GPS</a>
+ <menu class="tsr-nav-second-level">
+  <li>
+    <a href="#"><span>Broadband landing page</span>
+      <article class="tsr-landing">
+        <figure>
+          <img src="assets/img/header/landing-temp.png" />
+        </figure>
+        <header>The All New iPhone 5s - Now Available</header>
+        <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
+      </article> 
+    </a>
+  </li>
+  <li><a href="#">Broadband</a>
+    <menu class="tsr-nav-third-level">
+      <li><a href="#">Lorum 1</a></li>
+      <li><a href="#">Lorum 2</a></li>
+      <li><a href="#">Lorum 3</a></li>
+      <li><a href="#">Lorum 4</a></li>
+      <li><a href="#">Lorum 5</a></li>
+      <li><a href="#">Lorum 6</a></li>
+      <li><a href="#">Lorum 7</a></li>
+      <li><a href="#">Lorum 8</a></li>
+
+    </menu>
+  </li>
+  <li><a href="#">Subscriptions</a>
+   <menu class="tsr-nav-third-level">
+    <li><a href="#">Lorum 1</a></li>
+    <li><a href="#">Lorum 2</a></li>
+    <li><a href="#">Lorum 3</a></li>
+    <li><a href="#">Lorum 4</a></li>
+    <li><a href="#">Lorum 5</a></li>
+    <li><a href="#">Lorum 6</a></li>
+    <li><a href="#">Lorum 7</a></li>
+  </menu>
+</li>
+
+
+<li class="tsr-btn-close">
+  <a href="#"></a>
+</li>
+</menu>
+</li>
+<li><a href="#">Telefonid</a>
+ <menu class="tsr-nav-second-level">
+  <li>
+    <a href="#"><span>TV landing page</span>
+      <article class="tsr-landing">
+        <figure>
+          <img src="assets/img/header/landing-temp.png" />
+        </figure>
+        <header>TV</header>
+        <p>Consecuteur baden scrillum </p>
+      </article> 
+    </a>
+  </li>
+  <li><a href="#">Lorum</a>
+    <menu class="tsr-nav-third-level">
+      <li><a href="#">Lorum 1</a></li>
+      <li><a href="#">Lorum 2</a></li>
+      <li><a href="#">Lorum 3</a></li>
+      <li><a href="#">Lorum 4</a></li>
+      <li><a href="#">Lorum 5</a></li>
+      <li><a href="#">Lorum 6</a></li>
+
+    </menu>
+  </li>
+  <li><a href="#">Subscriptions</a>
+   <menu class="tsr-nav-third-level">
+    <li><a href="#">Lorum 1</a></li>
+    <li><a href="#">Lorum 2</a></li>
+    <li><a href="#">Lorum 3</a></li>
+    <li><a href="#">Lorum 4</a></li>
+    <li><a href="#">Lorum 5</a></li>
+
+  </menu>
+</li>
+<li><a href="#">Subscriptions</a>
+ <menu class="tsr-nav-third-level">
+  <li><a href="#">Lorum 1</a></li>
+  <li><a href="#">Lorum 2</a></li>
+  <li><a href="#">Lorum 3</a></li>
+  <li><a href="#">Lorum 4</a></li>
+  <li><a href="#">Lorum 5</a></li>
+
+</menu>
+</li> 
+<li class="tsr-btn-close">
+  <a href="#"></a>
+</li>
+</menu>
+</li>
+
+
+</menu>
+
+</nav>
+
+<!-- Search -->  
+
+<article class="tsr-header-search tsr-forms">
+
+  <input type="text" value="Search">
+  <input type="button" name="form-button" value="Search" class="tsr-btn">
+
+  <a href="#" class="tsr-btn-close" data-parent="search"></a>
+
+</article><!-- tsr-header-search END -->    
+
+
+<!-- Login -->  
+
+<article class="tsr-header-login tsr-forms">
+
+  <input type="text" value="User">
+  <input type="password" value="Password">
+  <input type="button" name="form-button" value="Login" class="tsr-btn">
+
+  <a href="#" class="tsr-btn-close" data-parent="login"></a>
+
+</article><!-- tsr-header-login END -->   
+
+<!-- Cart-->  
+
+<article class="tsr-header-cart tsr-forms">
+
+  <p class="tsr-text">
+    Content of Shopping Cart is Displayed Here
+  </p>
+
+  <a href="#" class="tsr-btn-close" data-parent="cart"></a>
+
+</article><!-- tsr-header-cart END -->  
+
+
+</div><!-- tsr-container END -->
+</section><!-- tsr-header-main END -->   
+
+
+</section><!-- // tsr-section-header END -->  
+
+
+
+<div data-ng-controller="myController">
+
+<input type="text" data-ng-model="city">{{name}}
+<ul>
+  <li data-ng-repeat="cust in customers | filter:name | orderBy: 'name'">
+    {{ cust.name | uppercase }} - {{ cust.city | lowercase }}
+  </li>
+</ul>
+</div>
+
+
+    <div class="row">
+
+        <section class="tsr-section-support tsr-secondary">
+            <div class="container">
+
+                    <a href="#" class="tsr-module-support ts-icon-costcontrol2">
+                        <header>Elioni järelmaks</header>
+                    </a>  
+
+                    <a href="#" class="tsr-module-support icon-transport">
+                        <header>Transport e-poes</header>
+                    </a>  
+
+                    <a href="#" class="tsr-module-support ts-icon-help">
+                        <header>Abiinfo, remont ja hooldus</header>
+                    </a>  
+
+                    <a href="#" class="tsr-module-support ts-icon-support">
+                        <header>Suhtle teenindajaga</header>
+                    </a>                  
+
+               </div><!-- // tsr-container -->
+         </section><!-- tsr-section-support" END -->  
+
+    </div>
+
+<!-- - - - HTML - - - --> 
+
+
+<section class="row tsr-section-footer">
+  
+
+
+  <!-- Links -->
+
+  <div class="tsr-footer-links">
+    <div class="container">
+      
+      <menu class="tsr-nav-top-level tsr-extra-links">
+       <li>
+        <header>Elion soovitab</header>
+        <menu class="tsr-nav-second-level">
+          <li><a href="#">EMT</a></li>
+          <li><a href="#">Digikogu</a></li>
+          <li><a href="#">Ilmataat</a></li>
+          <li><a href="#">Leiunurk</a></li>
+          <li><a href="#">Extra 5</a></li>
+        </menu>
+      </li>          
+    </menu><!-- // tsr-extra-links -->
+
+
+    <menu class="tsr-nav-top-level">
+
+      <li>
+        <a href="#">Infoportaal</a>
+        <menu class="tsr-nav-second-level">
+          <li><a href="#">Pressinurk</a></li>
+          <li><a href="#">Uudised ja artiklid</a></li>
+        </menu>
+      </li>
+
+      <li>
+        <a href="#">Elion</a>
+        <menu class="tsr-nav-second-level">
+          <li><a href="#">Ettevõttest</a></li>
+          <li><a href="#">Tule tööle</a></li>
+          <li><a href="#">Telia Sonera</a></li>
+          <li><a href="#">Hinnakirjad</a></li>
+          <li><a href="#">Lepingud ja tingimused</a></li> 
+        </menu>
+      </li>
+
+      <li>
+        <a href="#">Kontakt</a>
+        <menu class="tsr-nav-second-level">
+          <li><a href="#">Kontaktinfo</a></li>
+          <li><a href="#">E-poe info</a></li>
+          <li><a href="#">Liinirajatiste järelvalve</a></li>
+          <li><a href="#">Anna tagasisidet</a></li>
+          <li><a href="#">Projektide kooskõlastamine</a></li>
+        </menu>
+      </li>
+
+    </menu><!-- // tsr-nav-top-level  -->
+
+  </div>       
+</div><!-- //tsr-footer-links -->
+
+
+<!-- SM -->
+
+<div class="row tsr-footer-sm">
+  <div class="container">
+  <div class="col-md-3">
+    <a href="#" class="tsr-footer-sm-link">
+      <figure class="tsr-footer-icon-facebook"></figure>
+      
+      <p>
+        <strong>Elion Facebookis</strong>
+        <small>Short USP about why to visit this channel.</small>
+      </p>
+    
+    </a>
+  </div>
+  
+  <div class="col-md-3">
+    <a href="#" class="tsr-footer-sm-link">
+      <figure class="tsr-footer-icon-youtube"></figure>
+      
+      <p>
+        <strong>Elion YouTubes</strong>
+        <small>Short USP about why to visit this channel.</small>
+      </p>
+    
+    </a>
+  </div>
+  
+  <div class="col-md-3">
+    <a href="#" class="tsr-footer-sm-link">
+      <figure class="tsr-footer-icon-twitter"></figure>
+      
+      <p>
+        <strong>TSbrand on Twitter</strong>
+        <small>Short USP about why to visit this channel.</small>
+      </p>
+    
+    </a>
+  </div>
+  
+  <div class="col-md-3">
+    <a href="#" class="tsr-footer-sm-link">
+      <figure class="tsr-footer-icon-google"></figure>
+      
+      <p>
+        <strong>TSbrand on Google +</strong>
+        <small>Short USP about why to visit this channel.</small>
+      </p>
+    
+    </a>
+  </div>
+  </div>  
+</div><!-- //tsr-footer-sm -->
+
+<a href="#to-top" class="tsr-btn-toTop">Back to top</a>
+
+
+
+
+</section><!-- // tsr-section END -->
+<script src='../../../assets/js/rapid.js'></script>
+
+<!-- HTML5 IE Enabling Script -->
+<!--[if lt IE 9]><script src='assets/js/html5.js'></script><![endif]-->
+
+    <script src="assets/js/handlebars-v1.3.0.js"></script>
+    <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
+    <script src="assets/js/handlebars/hbs-products.hbs"></script>
+    <script src="assets/js/handlebars/hbs-menu.hbs"></script>
+    <script src="assets/js/srcset.min.js"></script>
+<!--     // <script src="assets/js/scripts.js"></script> -->
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-ID']);
+	_gaq.push(['_setDomainName', 'domain.com']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+    <script src="assets/tsr-js/libs/enquire.min.js"></script>
+    <script src="assets/tsr-js/libs/jquery.flexslider.js"></script>
+    <script src="assets/tsr-js/libs/jquery.debouncing.js"></script>
+    <script src="assets/tsr-js/polyfills/matchMedia.js"></script>
+    <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
+
+    <script src="assets/tsr-js/tsr-core.js"></script>
+    <script src="assets/tsr-js/tsr-communication-primary.js"></script>
+    <script src="assets/tsr-js/tsr-header.js"></script>
+    <script src="assets/tsr-js/tsr-footer.js"></script>
+    <script src="assets/tsr-js/tsr-carousel-listing.js"></script>
+    <script src="assets/tsr-js/tsr-productAndService-listing.js"></script>
+    <script src="assets/tsr-js/tsr-forms.js"></script>
+    <script src="assets/tsr-js/tsr-filter.js"></script>
+    <script src="assets/tsr-js/tsr-mediaTable.js"></script>
+    <script src="assets/tsr-js/tsr-attention.js"></script>
+
+
+</body>
+</html>

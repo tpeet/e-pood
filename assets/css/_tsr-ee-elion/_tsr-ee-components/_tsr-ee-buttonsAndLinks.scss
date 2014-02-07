@@ -20,7 +20,7 @@ text-align: left;
   color: $purple-c;
  }
 
-  @include media-min(768px) {
+  @include media-min($screen-sm-min) {
   padding: 12px 10%; 
   text-align: center;
   font-size: 1em;
@@ -39,4 +39,21 @@ text-align: left;
     font-weight: 600;
     }
   } // min 768px
+}
+
+.favorite {
+  &:before {
+    font-family: 'elion-ikoonid';
+    content: "\e00e";
+  }
+}
+
+.tsr-ee-compare:before {
+  font-family: 'elion-ikoonid';
+  content: "\e00c";
+  font-size: em(24);
+  padding-right: 10px;
+  margin-bottom: -5px;
+  display: inline-block;
+  vertical-align: text-bottom;
 }

@@ -126,7 +126,7 @@ TSR - CAROUSEL LISTING
 		self.section 		= $(target);
 		self.item 			= $('.tsr-slides > a' , target);
 		self.itemHeight 	= $('.tsr-slides > a' , target).outerHeight() - 1 ;
-		self.container 		= $('.tsr-container'  , target);
+		self.container 		= $('.container'  , target);
 		self.totalWidth  	= totalWidth;
 
 		// Onload

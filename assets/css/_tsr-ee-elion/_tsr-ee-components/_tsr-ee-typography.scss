@@ -17,41 +17,16 @@ TYPOGRAPHY
 // - - RWD
 //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-$browser-context: 16; // Default
+
+
+//////// Module class name
+
+$browser-context: 15.5; // Default
 
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
-//////// Module class name
-$module: tsr-typo;
-
-.#{$module}{
-
-
-
-//////// Base
-
-  body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 1.25; /* Unitless for proper inheritance */
-    color: #333;
-    font-size: 100%;
-  }
-  
-//////// Headings
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6  {
-    font-family:$font-1;
-    font-weight:bold;
-    color:#333;
-    margin:0.6em 0 0.3em; 
-  }
 
   h1 a,
   h2 a,
@@ -59,95 +34,47 @@ $module: tsr-typo;
   h4 a,
   h5 a,
   h6 a {
-    text-decoration: none; color:$pink-c;
+    text-decoration: none; color:$purple-c;
   }
 
-  // h1  {font-size:em(42); line-height:em(50); letter-spacing:-1px;}
-  h2  {font-size:em(36); line-height:em(42); letter-spacing:-1px;}
-  h3  {font-size:em(22); line-height:em(28);}
-  h4  {font-size:em(22); line-height:em(28); font-weight:normal;}
-  h5  {font-size:em(20); line-height:em(25); font-weight:normal}
-  h6  {font-size:em(18); line-height:em(22); font-weight:normal; font-style:italic;}
+// Before Mobile portrait incl iphone
 
+    /* Mobile landscape incl iphone*/
+  @media only screen and (min-width: $screen-xs) { // 480 - 768
+    body {
+      font-size: em(17);
+    } 
 
-//////// Text formating
+  }
 
-  p {
-    &.preamble{
-      font-size:em(20);
-      line-height:em(26);
-      font-weight:bold;
+  /* Mobile Landscape, tablet vertical */
+  @media only screen and (min-width: $screen-sm) { // 768 - 996
+    body {
+      font-size: em(17);
     }
 
-    margin:0 0 1em;
-    font-size:em(15);
-    line-height: 1.4; /* Unitless for proper inheritance */
-    
   }
 
-  p + p {
-    
+  /* ipad horizontal */
+  @media only screen and (min-width: $screen-md) { // 996 - 1200
+    body {
+      font-size: em(15);
+    }
+
   }
 
-  i, em {
-    
+  /* Tablet horizontal */
+  @media only screen and (min-width: $screen-lg) {
+    body {
+      font-size:em(15);
+    }
   }
 
-  strong {
-    
-  }
-
-  /* Mobile Portrait */
-@media only screen and (min-width: $mobile-portrait) {
-  body {
-    font-size: em(15);
-  } 
-
-}
-
-/* Mobile Landscape */
-@media only screen and (min-width: $mobile-landscape) {
-  body {
-    font-size: em(15);
-  }
-
-}
-
-/* Small Tablet */
-@media only screen and (min-width: $small-tablet) {
-  body {
-    font-size: 1.25em;
-  }
-}
-
-/* Tablet/Notebook */
-@media only screen and (min-width: $tablet-notebook) {
-  body {
-    font-size: 1.375em;
-  }
-  h3 {
-    font-size: em(24);
-  }
-}
-
-/* Landscape Tablet/Notebook/Laptop */
-@media only screen and (min-width: $landscape-tablet) {   
-  body {
-    font-size: 1.375em;
-  }
-
-}
-
-/* Desktop */
-@media only screen and (min-width: $desktop) {
-  body {
-    font-size: em(15);
-  } 
-
-}
 
 
-} // Module END
+
+
+
 
 
 
