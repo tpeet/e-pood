@@ -6343,6 +6343,8 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
 .favorite:before, .tsr-ee-product-boxes .tsr-ee-product-box-favorite:before {
   font-family: 'elion-ikoonid';
   content: "\e00e"; }
+.favorite:hover:before, .tsr-ee-product-boxes .tsr-ee-product-box-favorite:hover:before {
+  content: "\e00d"; }
 
 .tsr-ee-compare:before {
   font-family: 'elion-ikoonid';
@@ -6462,8 +6464,15 @@ section.tsr-ee-section-product-boxes {
   font-size: 1.6129em;
   position: absolute;
   right: 0.96774em;
-  top: 0.96774em;
-  z-index: 2; }
+  left: auto;
+  bottom: 10%;
+  z-index: 2;
+  text-decoration: none; }
+  @media screen and (min-width: 480px) {
+    .tsr-ee-product-boxes .tsr-ee-product-box-favorite {
+      right: 0.96774em;
+      left: auto;
+      top: 0.64516em; } }
 .tsr-ee-product-boxes .pagination-holder {
   padding: 23px 0; }
   .tsr-ee-product-boxes .pagination-holder .tsr-pagination {
@@ -6483,10 +6492,10 @@ section.tsr-ee-section-product-boxes {
 .tsr-ee-product-boxes .tsr-forms .col-md-5 {
   padding-right: 0; }
 
-.container.product {
+.container.product, .container .product {
   padding-right: 0;
   padding-left: 0; }
-  .container.product [class*="col-"] {
+  .container.product [class*="col-"], .container .product [class*="col-"] {
     margin: 0 -1px -1px 0;
     padding: 0; }
 
@@ -6525,6 +6534,9 @@ section.tsr-ee-section-product-boxes {
       .tsr-module-product .tsr-product-price {
         margin: 12px 0 0; } }
 
+.pagination-holder .col-sm-4 {
+  padding: 0.3871em; }
+
 ul.tsr-ee-product-colors {
   margin: 0 auto;
   display: inline-block; }
@@ -6552,115 +6564,7 @@ ul.tsr-ee-product-colors {
         -o-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4); }
         ul.tsr-ee-product-colors li[class*="acc"]:hover:hover, ul.tsr-ee-product-colors li[class*="acc"]:hover.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover, ul.tsr-ee-product-colors li[class*="acc"].active.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover:hover, ul.tsr-ee-product-colors li[class*="acc"].active:hover.active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:active:hover, ul.tsr-ee-product-colors li[class*="acc"].active:active.active:hover {
-          opacity: 0.6; }
-    ul.tsr-ee-product-colors li.acc-1 {
-      background: #f9dc00; }
-    ul.tsr-ee-product-colors li.acc-2 {
-      background: #ff6319; }
-    ul.tsr-ee-product-colors li.acc-3 {
-      background: #bed600; }
-    ul.tsr-ee-product-colors li.acc-5 {
-      background: #00b48c; }
-      ul.tsr-ee-product-colors li.acc-5:hover {
-        background: #00f1bc; }
-      ul.tsr-ee-product-colors li.acc-5:active {
-        background: #009574; }
-      ul.tsr-ee-product-colors li.acc-5.active {
-        background: #3affd3; }
-        ul.tsr-ee-product-colors li.acc-5.active:hover {
-          background: #3affd3; }
-        ul.tsr-ee-product-colors li.acc-5.active:active {
-          background: #3affd3; }
-    ul.tsr-ee-product-colors li.acc-6 {
-      background: #c41b79; }
-      ul.tsr-ee-product-colors li.acc-6:hover {
-        background: #e43998; }
-      ul.tsr-ee-product-colors li.acc-6:active {
-        background: #a91768; }
-      ul.tsr-ee-product-colors li.acc-6.active {
-        background: #ec77b8; }
-        ul.tsr-ee-product-colors li.acc-6.active:hover {
-          background: #ec77b8; }
-        ul.tsr-ee-product-colors li.acc-6.active:active {
-          background: #ec77b8; }
-    ul.tsr-ee-product-colors li.acc-7 {
-      background: #c7c2ba; }
-      ul.tsr-ee-product-colors li.acc-7:hover {
-        background: #e2e0dc; }
-      ul.tsr-ee-product-colors li.acc-7:active {
-        background: #b9b3a9; }
-      ul.tsr-ee-product-colors li.acc-7.active {
-        background: white; }
-        ul.tsr-ee-product-colors li.acc-7.active:hover {
-          background: white; }
-        ul.tsr-ee-product-colors li.acc-7.active:active {
-          background: white; }
-    ul.tsr-ee-product-colors li.acc-8 {
-      background: black; }
-      ul.tsr-ee-product-colors li.acc-8:hover {
-        background: #1f1f1f; }
-      ul.tsr-ee-product-colors li.acc-8:active {
-        background: black; }
-      ul.tsr-ee-product-colors li.acc-8.active {
-        background: #424242; }
-        ul.tsr-ee-product-colors li.acc-8.active:hover {
-          background: #424242; }
-        ul.tsr-ee-product-colors li.acc-8.active:active {
-          background: #424242; }
-    ul.tsr-ee-product-colors li.docs {
-      background: #642887;
-      color: #fff; }
-      ul.tsr-ee-product-colors li.docs:hover {
-        background: #73369e; }
-      ul.tsr-ee-product-colors li.docs:active {
-        background: #4e256b; }
-      ul.tsr-ee-product-colors li.docs.active {
-        background: #aea9a2; }
-        ul.tsr-ee-product-colors li.docs.active:hover {
-          background: #c7c2ba; }
-        ul.tsr-ee-product-colors li.docs.active:active {
-          background: #dbdbdb; }
-    ul.tsr-ee-product-colors li.rwd {
-      background: none;
-      color: #000;
-      font-size: 31px;
-      height: 55px;
-      width: 65px;
-      line-height: 55px;
-      margin-top: -4px;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      -ms-box-shadow: none;
-      -o-box-shadow: none;
-      box-shadow: none; }
-      ul.tsr-ee-product-colors li.rwd.rotate {
-        transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg); }
-      ul.tsr-ee-product-colors li.rwd.rwd-xsmall {
-        font-size: 31px;
-        width: 42px; }
-      ul.tsr-ee-product-colors li.rwd.rwd-small {
-        font-size: 31px;
-        width: 48px; }
-      ul.tsr-ee-product-colors li.rwd.rwd-medium {
-        font-size: 32px;
-        width: 46px; }
-      ul.tsr-ee-product-colors li.rwd.rwd-large {
-        font-size: 48px;
-        width: 58px; }
-      ul.tsr-ee-product-colors li.rwd.rwd-xlarge {
-        font-size: 55px; }
-      ul.tsr-ee-product-colors li.rwd:hover {
-        color: #73369e; }
-      ul.tsr-ee-product-colors li.rwd:active {
-        color: #4e256b; }
-      ul.tsr-ee-product-colors li.rwd.active {
-        color: #642887; }
-        ul.tsr-ee-product-colors li.rwd.active:hover {
-          color: #73369e; }
-        ul.tsr-ee-product-colors li.rwd.active:active {
-          color: #4e256b; }
+          opacity: 0.8; }
 
 .tsr-ee-product-list-front .tsr-ee-category-header {
   display: block;

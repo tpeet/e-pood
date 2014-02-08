@@ -46,6 +46,9 @@ text-align: left;
     font-family: 'elion-ikoonid';
     content: "\e00e";
   }
+  &:hover:before {
+    content: "\e00d";
+  }
 }
 
 .tsr-ee-compare:before {

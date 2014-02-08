@@ -36,15 +36,21 @@ Bootsrapist on muudetud ja lisatud:
 - 2nd level
   - Vertikaalne akordionmenüü 2 tasandit, hidden on small
   - Leivapuru (BS põhjal)
+  - Tooteklotsid (puudu filter, ikoone)
 
 ### Töös on:
 - 2nd level
-  - Tooteklotsid (custom, TSR põhjal)
+  - Toote detailvaade
+  - Toote listvaade (custom, TSR põhjal)
 
 ### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
 - Leivapuru
 - Vertikaalne akordionmenüü
-
+- Ümmargune badge ikooni või tekstiga
+- Ribbon (lisatud ribbon mobiilile)
+- Tootevärvid klikatavana (vajab veel tööd)
+- Elioni logo skaleeruva svg-na, fallback png
+- klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.
@@ -80,6 +86,3 @@ Vajab kohendamist peale rootsi gridi asendamist menüü, footer alumine riba, av
 ### Do-not-forget
 - Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.
 - Kas image replacement või ei ja kustmaalt. Praegu küljes.
-
-### Legal ja muu
-See on isiklik repo ja tööversioon. Kus viga näed laita, tule ja aita, aga puhast ja läikivat koodi siit praegu ei leia.

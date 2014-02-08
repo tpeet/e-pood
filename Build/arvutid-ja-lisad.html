@@ -426,8 +426,6 @@
 
 
 
-<!-- Product boxes listing, eg Arvutid 2nd level page-->
-
 <section class="tsr-ee-breadcrumbs">
   <div class="container">
     <ol class="breadcrumb">
@@ -438,9 +436,9 @@
   </div>
 </section>
 
-    <div class="container" > 
+<div class="container" > 
 
-      <div class="col-md-3 hidden-sm hidden-xs" id="content-placeholder-menu"></div>
+  <div class="col-md-3 hidden-sm hidden-xs" id="content-placeholder-menu"></div>
   <script id="menu-template" type="text/x-handlebars-template">
 
   {{#sidemenu}}
@@ -461,115 +459,154 @@
 
   </script>
 
-      <div class="col-xs-12 col-sm-12 col-md-9    tsr-ee-product-boxes">
+  <div class="col-xs-12 col-sm-12 col-md-9 tsr-ee-product-boxes">
 
-      <!-- Ad area -->
-        <div class="row" style="overflow: hidden;">
-          <img src='http://placehold.it/1000x100' width='1000' height='100' alt='Placeholder Image' />
-        </div>
+  <!-- Ad area -->
+<div class="row" style="overflow: hidden;">
+  <img src='http://placehold.it/1000x100' width='1000' height='100' alt='Placeholder Image' />
+</div> 
 
-        <!-- Divider -->
-        <div class="row" style="height: 65px;">
-        <span> Puudu asjad siit vahelt</span>
-        </div>
+    <section class="tsr-section-divider tsr-color-white" id="logged-in">
+    <header class="row">
+      <span><i class="icon-menutsicon48px"></i></span>    
+    </header>
+  </section> 
 
-        <!-- Filter -->
-        <div class="row" style="height: 58px; background: #642887;">
-          <span>Filter</span>
-        </div>
+  <div class="row">
 
-        <!-- Sorting and pagination -->
-        <section class="row pagination-holder">
-          <div class="tsr-forms" style="text-align: left; width: 100%">
-            <div class="col-md-4">
-              <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-            </div>
-            <div class="col-md-3">
-              <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
-            </div>
+  <section class="tsr-section-filter">
+    <div class="container">           
 
-            <div class="col-md-5 text-right tsr-pagination">
-              <a href="#" >1</a>
-              <a href="#" >2</a>
-              <a href="#" >3</a>
-              <a href="#" class="tsr-active" >4</a>
-              <a href="#" >5</a>
-              <a href="#" >6</a>
-            </div>
-          </div>
-        </section>
-      </div>
-        <!-- Product boxes -->
-        <section class="tsr-section-productAndService-listing ">
-          <div class="container product" id="content-placeholder-products"></div>
-        </section>
+      <!-- FILTER LIST -->
 
-      <!-- Sorting and pagination -->
-        <section class="row pagination-holder">
-          <div class="tsr-forms" style="text-align: left; width: 100%">
-            <div class="col-md-4">
-              <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-            </div>
-            <div class="col-md-3">
-              <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
-            </div>
+      <menu class="tsr-sortList">
 
-            <div class="col-md-5 text-right tsr-pagination">
-              <a href="#" >1</a>
-              <a href="#" >2</a>
-              <a href="#" >3</a>
-              <a href="#" class="tsr-active" >4</a>
-              <a href="#" >5</a>
-              <a href="#" >6</a>
-            </div>
-          </div>
-        </section>
+        <li class="tsr-top-level">
+          <a href="#">Sort list</a>
+          <menu class="tsr-second-level">
+            <li><a href="#">Sort by: Lowest price</a></li>
+            <li><a href="#">Sort by: Highest price</a></li>
+            <li><a href="#">Sort by: Name A-z</a></li>
+            <li><a href="#">Sort by: Name Z-a</a></li>
+          </menu>
+        </li>
 
-      </div>
+      </menu> 
+
+
+    </div>
+  </section><!-- // tsr-section END -->  
+
+</div> 
+
+  <!-- Sorting with pagination -->
+<section class="row pagination-holder">
+  <div class="tsr-forms">
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+
+    <div class="col-sm-4 text-right tsr-pagination">
+      <a href="#" >1</a>
+      <a href="#" >2</a>
+      <a href="#" >3</a>
+      <a href="#" class="tsr-active" >4</a>
+      <a href="#" >5</a>
+      <a href="#" >6</a>
+    </div>
+  </div>
+</section> 
+  <div class="row">
+  <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row">
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-products"></div>
+  </section>
+</div>
+
+<script id="product-slider-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      </figure>
+    
+      <div class="tsr-product-content">
+
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <header class="tsr-product-header">{{name}}</header>
       
-      
-      <script id="product-slider-template" type="text/x-handlebars-template">
-      
-      {{#products}}
-      <div class="col-xs-12 col-sm-4 col-md-3">
-        <div class="tsr-module-product ">
-          {{#if ribbon}}
-            <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+        <ul class="tsr-ee-product-colors tsr-product-colors">
+        {{#if colors}}
+        {{#each colors}}
+          <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+        {{/each}}
+        {{/if}}
+        </ul>
+        {{#if special_price}}
+        <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-desc"></p>
           {{/if}}
-          <a href="#" class="tsr-ee-product-box-favorite"></a>
-          <figure class="tsr-product-image">
-          <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a
-          </figure>
-        
-          <div class="tsr-product-content">
-
-            {{#if firstflash}}
-            <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
-            {{/if}}
-            {{#if secondflash}}
-            <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-            {{/if}}
-            <a href="detail.html"><header class="tsr-product-header">{{name}}</header></a>
-          
-            <ul class="tsr-ee-product-colors tsr-product-colors">
-            {{#if colors}}
-            {{#each colors}}
-              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-            {{/each}}
-            {{/if}}
-            </ul>
-            {{#if special_price}}
-            <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
-            {{else}}
-            <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
-            {{/if}}
-            <a href="#" class="tsr-ee-compare"> Võrdle </a>
-          </div>
-        </div>
+        {{/if}}
+        <a href="#" class="tsr-ee-compare"> Võrdle </a>
       </div>
+    </div>
+  </div>
 
-      {{/products}}
-      </script> 
+  {{/products}}
+</script>
+
+
+
+
+
+
+
+ 
+  </div>
+  <!-- Sorting with pagination -->
+<section class="row pagination-holder">
+  <div class="tsr-forms">
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+
+    <div class="col-sm-4 text-right tsr-pagination">
+      <a href="#" >1</a>
+      <a href="#" >2</a>
+      <a href="#" >3</a>
+      <a href="#" class="tsr-active" >4</a>
+      <a href="#" >5</a>
+      <a href="#" >6</a>
+    </div>
+  </div>
+</section> 
+
+  </div>
+
+</div>
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -769,4 +806,4 @@
 
 
 </body>
-</html>
+</html> 

@@ -17,9 +17,9 @@
   }
 }
 section.tsr-section-productAndService-listing {
-    padding: 0;
-    margin-top: -1px;
-  }
+  padding: 0;
+  margin-top: -1px;
+}
 
 section.tsr-ee-section-product-boxes {
   background: transparent;
@@ -68,19 +68,23 @@ section.tsr-ee-section-product-boxes {
 .tsr-ee-product-boxes {
   & section.tsr-section-productAndService-listing {
     background: transparent;
-
     border: none;
   }
-
   .tsr-ee-product-box-favorite {
     @extend .favorite;
     font-size: em(25);
     position: absolute;
     right: em(15);
-    top: em(15);
+    left: auto;
+    bottom: 10%;
     z-index: 2;
+    text-decoration: none;
+    @include media-min($screen-xs) {
+    right: em(15);
+    left: auto;
+    top: em(10);
+    } 
   }
-
   .pagination-holder {
     padding: 23px 0;
     .tsr-pagination {
@@ -107,11 +111,11 @@ section.tsr-ee-section-product-boxes {
     & .col-md-5 {
       padding-right: 0;
     }
-
   }
 }
 
-.container.product {
+// very important rule to handle product boxes layout
+.container.product, .container .product {
   padding-right: 0;
   padding-left: 0;
     & [class*="col-"] {
@@ -120,15 +124,16 @@ section.tsr-ee-section-product-boxes {
   }
 }
 
+// product module general, removed float
 .tsr-module-product { 
-    width: 100%;
-    padding: em(15) 0 em(20) em(15);
-    float: none;
-    @include media-min($screen-sm-min) {
-    // padding: em(35) em(45) em(35) em(45);
-    padding: em(35) em(30) em(35) em(30);
-    } 
-    & .tsr-product-content {
+  width: 100%;
+  padding: em(15) 0 em(20) em(15);
+  float: none;
+  @include media-min($screen-sm-min) {
+  // padding: em(35) em(45) em(35) em(45);
+  padding: em(35) em(30) em(35) em(30);
+  } 
+  & .tsr-product-content {
     width: 70%;
     display: inline-block;
     vertical-align: top;
@@ -138,30 +143,31 @@ section.tsr-ee-section-product-boxes {
       width: 100%;
       padding-left: 0;
     }
-    }
-    & .tsr-product-image {
-      height: auto;
-      width: 75px;
-      max-width: 25%;
-      display: inline-block;
-      float: none;
-      @include media-min($screen-sm-min) {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
-        padding: 0 em(20);
-        } // min 768px
-      }
-
-    & .tsr-product-price {
-      margin: 0;
-      @include media-min($screen-sm-min) {
-        margin: 12px 0 0;
-      } 
-    }
   }
+  & .tsr-product-image {
+    height: auto;
+    width: 75px;
+    max-width: 25%;
+    display: inline-block;
+    float: none;
+    @include media-min($screen-sm-min) {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      padding: 0 em(20);
+      } // min 768px
+    }
+  & .tsr-product-price {
+    margin: 0;
+    @include media-min($screen-sm-min) {
+      margin: 12px 0 0;
+    } 
+  }
+}
 
-
+.pagination-holder .col-sm-4 {
+  padding: em(6);
+} 
 
 // - - - - - - - - - - - - - - - - - - - - 
 // - - Section navigation
@@ -170,24 +176,22 @@ section.tsr-ee-section-product-boxes {
 ul.tsr-ee-product-colors {
   margin: 0 auto;
   display: inline-block;
-  li{
+    li {
+    @include border-radius(22px);
+    height: em(22);
+    width: em(22);
+    margin-left: 2px;
+    cursor: pointer;
+    padding: 0;
 
-  @include border-radius(22px);
-  height: em(22);
-  width: em(22);
-  margin-left: 2px;
-  cursor: pointer;
-  padding: 0;
-
-      // &[class*="acc-"]{
-        &[class*="acc"]{
-
-          border:3px solid $lightgrey-c;
-          -webkit-box-shadow: none;
-          -moz-box-shadow:    none;
-          -ms-box-shadow:   none;
-          -o-box-shadow:    none;
-          box-shadow:         none;
+    // &[class*="acc-"]{
+      &[class*="acc"]{
+        border:3px solid $lightgrey-c;
+        -webkit-box-shadow: none;
+        -moz-box-shadow:    none;
+        -ms-box-shadow:   none;
+        -o-box-shadow:    none;
+        box-shadow:         none;
         &:hover,
         &.active,
         &.active:hover,
@@ -198,258 +202,11 @@ ul.tsr-ee-product-colors {
           -ms-box-shadow:   0px 0px 3px 0px rgba(0, 0, 0, .2);
           -o-box-shadow:    0px 0px 3px 0px rgba(0, 0, 0, .2);
           box-shadow:         0px 0px 0px 1px rgba(0, 0, 0, .4);
-            
-
         &:hover, 
         &.active:hover {
-          opacity: 0.6;
+          opacity: 0.8;
         }
-
-        } // &.active END   
-
-      } // acc- END
-
-      &.acc-1{        
-        
-        background:$yellow-c;  
-
-      } // &.accent END
-
-      &.acc-2{
-        
-        background:$orange-c;
-  
-
-      } // &.accent END
-
-      &.acc-3{
-        
-        background:$green-c;
- 
-
-      } // &.accent END
-
-      &.acc-4{
-        
-    
-
-      } // &.accent END
-
-      &.acc-5{
-        
-        background:$turquoise-c;
-
-        &:hover{
-          background:lighten($turquoise-c, 12%);
-        }
-
-        &:active{
-          background:darken($turquoise-c, 6%);
-        }
-
-        &.active{
-          background:lighten($turquoise-c,26%);
-
-          &:hover{
-            background:lighten($turquoise-c, 26%);
-          }
-
-          &:active{
-            background:lighten($turquoise-c, 26%);
-          }
-
-        } // &.active END       
-
-      } // &.accent END
-
-
-      &.acc-6{
-        
-        background:$pink-c;
-
-        &:hover{
-          background:lighten($pink-c, 12%);
-        }
-
-        &:active{
-          background:darken($pink-c, 6%);
-        }
-
-        &.active{
-          background:lighten($pink-c,26%);
-
-          &:hover{
-            background:lighten($pink-c, 26%);
-          }
-
-          &:active{
-            background:lighten($pink-c, 26%);
-          }
-
-        } // &.active END     
-
-      } // &.accent END
-
-      &.acc-7{
-        
-        background:$clay-c;
-
-        &:hover{
-          background:lighten($clay-c, 12%);
-        }
-
-        &:active{
-          background:darken($clay-c, 6%);
-        }
-
-        &.active{
-          background:lighten($clay-c,26%);
-
-          &:hover{
-            background:lighten($clay-c, 26%);
-          }
-
-          &:active{
-            background:lighten($clay-c, 26%);
-          }
-
-        } // &.active END     
-
-      } // &.accent END
-
-      &.acc-8{
-        
-        background:$black;
-
-        &:hover{
-          background:lighten($black, 12%);
-        }
-
-        &:active{
-          background:darken($black, 6%);
-        }
-
-        &.active{
-          background:lighten($black,26%);
-
-          &:hover{
-            background:lighten($black, 26%);
-          }
-
-          &:active{
-            background:lighten($black, 26%);
-          }
-
-        } // &.active END     
-
-      } // &.accent END
-
-
-      &.docs{
-        
-        background:$purple-c;
-        color:#fff;
-
-
-
-        &:hover{
-          background:$purple-h;
-        }
-
-        &:active{
-          background:$purple-t;
-        }
-
-        &.active{
-          
-          background:$clay-t;
-          
-
-
-          &:hover{
-            background:$clay-c;
-          }
-
-          &:active{
-            background:$lightgrey-t;
-          }
-
-        } // &.active END   
-
-      } // &.docs END
-
-      &.rwd{
-        
-        background:none;
-        color:#000;
-        font-size:31px;
-        height: 55px;
-      width: 65px;
-      line-height: 55px;
-      margin-top:-4px;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      -ms-box-shadow: none;
-      -o-box-shadow: none;
-      box-shadow: none;
-    
-
-        &.rotate {
-        transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -webkit-transform: rotate(-90deg);
-      }
-
-        &.rwd-xsmall {
-        font-size:31px;
-        width:42px;
-      }
-
-        &.rwd-small {
-        font-size:31px;
-        width:48px; 
-      }
-
-        &.rwd-medium {
-        font-size:32px;
-        width:46px;
-      }
-
-        &.rwd-large {
-        font-size:48px;
-        width:58px; 
-      }
-
-        &.rwd-xlarge {
-        font-size:55px; 
-      }
-
-        &:hover{
-          color:$purple-h;
-        }
-
-        &:active{
-          color:$purple-t;
-        }
-
-        &.active{
-          
-          color:$purple-c;
-          
-
-
-          &:hover{
-            color:$purple-h;
-          }
-
-          &:active{
-            color:$purple-t;
-          }
-
-        } // &.active END   
-
-      } // &.docs END
-
+      } // &.active END   
+    } // acc- END
   }
-
 }
