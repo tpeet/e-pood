@@ -67,34 +67,66 @@
 // Round badge, adjust left-right according to context, include with @extend .tsr-ee-badge;
 // Html-syntax: <figure class="tsr-ee-{your context}-badge tsr-ee-badge-{color} tsr-ee-icon tsr-ee-{iconname}">if text add text and skip icon classes, else empty</figure>
 
+
 .tsr-ee-badge {
-  position: absolute;
-  font-size: 1.1em;
+  font-size: em(17);
   display: inline-block;
   min-width: 10px;
-  padding: 0.65em;
+  padding: em(9) em(10);
   font-weight: 600;
   color: white;
-  line-height: 0.5;
-  vertical-align: middle;
+  line-height: 0.7;
+  vertical-align: baseline;
   white-space: nowrap;
   text-align: center;
-  background-color: $purple-c;
+  background: $turquoise-c;
   border-radius: 100%;
-  border: 0.28em solid white;
+  border: em(4) solid white;
 
-  &.tsr-ee-badge-primary {
+  &[class*="icon-"] {
+    font-size: em(17);
+    padding: em(8) em(8) em(8) em(7);
+  }
+
+  &.tsr-ee-primary {
     background-color: $purple-c;
   }
-  &.tsr-ee-badge-red {
+  &.tsr-ee-red {
     background-color: $pink-c;
   }
-  &.tsr-ee-badge-green {
-    background-color: $turquoise-c;
+  &.tsr-ee-gray {
+    background-color: $darkgrey-h;
   }
-  &.tsr-ee-icon {
-    font-size: 1.3em;
-    padding: 0.4em;
-    border: 0.23em solid white;
+  &.icon-cart {
+   &:before {
+    font-family: "elion-ikoonid";
+    content: "\e009";
+   }
   }
+  &.icon-transport { 
+   &:before {
+    font-family: "elion-ikoonid";
+    content: "\e001";
+   }
+  }
+}
+
+.gray-text {
+  color: $darkgrey-h;
+  font-weight: 500;
+}
+
+.green-text {
+  color: $turquoise-c;
+  font-weight: 500;
+}
+
+.pink-text {
+  color: $pink-c;
+  font-weight: 500;
+}
+
+.violet-text {
+  color: $purple-c;
+  font-weight: 500;
 }

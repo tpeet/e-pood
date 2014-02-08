@@ -123,7 +123,7 @@
       <menu>
         <li class="tsr-extra"><a href="#">EST <span class="ts-icon-arrow-down"></span></a></li>
         <li class="tsr-extra"><a href="#" class="icon-osta"></a></li>
-        <li class="tsr-extra"><a href="front-logged-in.html#content-placeholder-productslider" class="tsr-btn tsr-btn-purple">Sisene</a></li>
+        <li class="tsr-extra"><a href="front-logged-in.html#logged-in" class="tsr-btn tsr-btn-purple">Sisene</a></li>
       </menu>
     </nav>
 
@@ -470,119 +470,129 @@
 
 
 
-<!-- Product boxes listing, eg Arvutid 2nd level page-->
+<section class="tsr-section-divider tsr-color-white" id="logged-in">
+  <header class="container">
+    <span>Minu ostud</span>    
+  </header>
+</section>
+
+<!-- Product boxes listing, Logged-in -->
 
 <section class="tsr-section-productAndService-listing">
-    <div class="tsr-ee-product-boxes"> 
+ 
+  <div class="tsr-ee-product-boxes" > 
+      <div class="container product" id="content-placeholder-myproduct"></div>
 
-        <div class="container" id="content-placeholder-products"></div>
+        <script id="myproduct-template" type="text/x-handlebars-template">
+        {{#products}}
 
-  <script id="product-slider-template" type="text/x-handlebars-template">
-  
-  {{#products}}
-
-  <a href="/productinfo/{{id}}" class="tsr-module-product">
-    {{#if ribbon}}
-      <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-    {{/if}}
-      <figure class="tsr-product-image">
-      <img src="assets/img/products/{{id}}-small.jpg" srcset="assets/img/products/{{id}}-small.jpg 320w, assets/img/products/{{id}}-medium.jpg 960w, assets/img/products/{{id}}-large.jpg" id="img{{id}}" alt="{{name}}" title="{{name}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
-      </figure>
-    <div class="tsr-product-content">
-      {{#if badge}}
-      <figure class="tsr-ee-product-badge tsr-ee-badge-{{badge.color}} tsr-ee-{{badge.iconized}} tsr-ee-{{badge.icon}}">{{badge.text}}</figure>
-      {{/if}}
-    <header class="tsr-product-header">{{name}}</header>
-    <ul class="tsr-product-colors">
-      <li style="background:#e2e2e2"></li>
-      <li style="background:#d77b72"></li>
-      <li style="background:#f8f07b"></li>
-      <li style="background:#73b5e7"></li>
-      <li style="background:#a5c76c"></li>
-    </ul>
-    <p class="tsr-product-desc">{{{leftTrim description}}}</p>
-    <p class="tsr-product-price">{{price}}</p>
-    <p class="tsr-product-small-print"> {{normal_price}}</p>
-    </div>
-  </a>
-
-  {{/products}}
-  </script>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+        <a href="/productinfo/{{id}}" class="tsr-module-product">
+          <figure class="tsr-product-image">
+            {{#if badge.text }}
+            <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
+            {{/if}}
+            {{#if badge.icon }}
+            <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
+            {{/if}}
+            <img src="assets/img/myproducts/{{id}}.jpg" id="img{{id}}" alt="{{name}}" title="{{name}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+          </figure>
+          <div class="tsr-product-content">
+          <header class="tsr-product-header">{{name}}</header>
+          <p class="tsr-product-desc {{badge.color}}-text">{{badge.text}} {{badge.description}} </p>
+          </div>
+        </a>
+        </div>
+        {{/products}}
+        </script>
 
   </div>
 
 </section>
+
+
 
 
 
  
 
-<section class=""> 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 text-center">
-        <h2>Kõige uuemad ja vahvamad tooted</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis quod praesentium ipsa possimus dolores corrupti sint et dignissimos officia deleniti aliquid quis ab aperiam eius assumenda.</p>
-      </div>
-    </div>
-  </div>
+<section class="tsr-section-divider tsr-color-white" id="logged-in">
+  <header class="container">
+    <span>Viimati vaadatud tooted</span>    
+  </header>
 </section>
+
 <section class="tsr-section-carousel-listing"> 
-    <div class="container">
+    <div class="container product">
       <div class=" tsr-slides" id="content-placeholder-products"></div>
 
-    <script id="product-slider-template" type="text/x-handlebars-template">
-    {{#products}}
-    <a href="#" class="tsr-module-product">
-      {{#if ribbon}}
-      <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-      {{/if}}
-      <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></figure>
-      <div class="tsr-product-content">
-        {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+      <script id="product-slider-template" type="text/x-handlebars-template">
+      {{#products}}
+      <a href="#" class="tsr-module-product">
+        {{#if ribbon}}
+          <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
-        {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-        {{/if}}
-      </div>
-      <header class="tsr-product-header">{{name}}</header>
-      <p class="tsr-product-desc"> {{description}} </p>
-      <p class="tsr-product-price">{{price}}</p>
-    </a>
-    {{/products}}
-    </script>
+        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
+        <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <header class="tsr-product-header">{{name}}</header>
+            <ul class="tsr-ee-product-colors tsr-product-colors">
+            {{#if colors}}
+            {{#each colors}}
+              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+            {{/each}}
+            {{/if}}
+            </ul>
+            <p class="tsr-product-desc">
+            {{#if normal_price}}
+            Tavahind {{normal_price}} <br> Sinu võit 10 €
+            {{/if}}
+            </p>
+            <p class="tsr-product-price tsr-ee-special-price-text">
+            {{#if special_price}}
+            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
+            {{/if}}
+            </p>
+            
 
-    
-   </div>
-</section> 
-
-
-    <div class="row">
-
-        <section class="tsr-section-support tsr-secondary">
-            <div class="container">
-
-                    <a href="#" class="tsr-module-support ts-icon-costcontrol2">
-                        <header>Elioni järelmaks</header>
-                    </a>  
-
-                    <a href="#" class="tsr-module-support icon-transport">
-                        <header>Transport e-poes</header>
-                    </a>  
-
-                    <a href="#" class="tsr-module-support ts-icon-help">
-                        <header>Abiinfo, remont ja hooldus</header>
-                    </a>  
-
-                    <a href="#" class="tsr-module-support ts-icon-support">
-                        <header>Suhtle teenindajaga</header>
-                    </a>                  
-
-               </div><!-- // tsr-container -->
-         </section><!-- tsr-section-support" END -->  
+        </div>
+      </a>
+      {{/products}}
+      </script>
 
     </div>
+   <a href="" class="tsr-btn-view-all"><span>Vaata mida iganes veel</span></a>
+</section>
+
+<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
+ 
+
+<section class="tsr-section-support tsr-secondary">
+  <div class="container">
+
+    <a href="#" class="tsr-module-support ts-icon-costcontrol2">
+      <header>Elioni järelmaks</header>
+    </a>  
+
+    <a href="#" class="tsr-module-support icon-transport">
+      <header>Transport e-poes</header>
+    </a>  
+
+    <a href="#" class="tsr-module-support ts-icon-help">
+      <header>Abiinfo, remont ja hooldus</header>
+    </a>  
+
+    <a href="#" class="tsr-module-support ts-icon-support">
+      <header>Suhtle teenindajaga</header>
+    </a>                  
+
+  </div><!-- // tsr-container -->
+</section><!-- tsr-section-support" END -->
 
 <!-- - - - HTML - - - --> 
 
@@ -650,57 +660,57 @@
 
 <!-- SM -->
 
-<div class="row tsr-footer-sm">
+<section class="tsr-footer-sm">
   <div class="container">
-  <div class="col-md-3">
-    <a href="#" class="tsr-footer-sm-link">
-      <figure class="tsr-footer-icon-facebook"></figure>
+    <div class="col-sm-3">
+      <a href="#" class="tsr-footer-sm-link">
+        <figure class="tsr-footer-icon-facebook"></figure>
+        
+        <p>
+          <strong>Elion Facebookis</strong>
+          <small>Short USP about why to visit this channel.</small>
+        </p>
       
-      <p>
-        <strong>Elion Facebookis</strong>
-        <small>Short USP about why to visit this channel.</small>
-      </p>
+      </a>
+    </div>
     
-    </a>
-  </div>
-  
-  <div class="col-md-3">
-    <a href="#" class="tsr-footer-sm-link">
-      <figure class="tsr-footer-icon-youtube"></figure>
+    <div class="col-sm-3">
+      <a href="#" class="tsr-footer-sm-link">
+        <figure class="tsr-footer-icon-youtube"></figure>
+        
+        <p>
+          <strong>Elion YouTubes</strong>
+          <small>Short USP about why to visit this channel.</small>
+        </p>
       
-      <p>
-        <strong>Elion YouTubes</strong>
-        <small>Short USP about why to visit this channel.</small>
-      </p>
+      </a>
+    </div>
     
-    </a>
-  </div>
-  
-  <div class="col-md-3">
-    <a href="#" class="tsr-footer-sm-link">
-      <figure class="tsr-footer-icon-twitter"></figure>
+    <div class="col-sm-3">
+      <a href="#" class="tsr-footer-sm-link">
+        <figure class="tsr-footer-icon-twitter"></figure>
+        
+        <p>
+          <strong>TSbrand on Twitter</strong>
+          <small>Short USP about why to visit this channel.</small>
+        </p>
       
-      <p>
-        <strong>TSbrand on Twitter</strong>
-        <small>Short USP about why to visit this channel.</small>
-      </p>
+      </a>
+    </div>
     
-    </a>
-  </div>
-  
-  <div class="col-md-3">
-    <a href="#" class="tsr-footer-sm-link">
-      <figure class="tsr-footer-icon-google"></figure>
+    <div class="col-sm-3">
+      <a href="#" class="tsr-footer-sm-link">
+        <figure class="tsr-footer-icon-google"></figure>
+        
+        <p>
+          <strong>TSbrand on Google +</strong>
+          <small>Short USP about why to visit this channel.</small>
+        </p>
       
-      <p>
-        <strong>TSbrand on Google +</strong>
-        <small>Short USP about why to visit this channel.</small>
-      </p>
-    
-    </a>
-  </div>
+      </a>
+    </div>
   </div>  
-</div><!-- //tsr-footer-sm -->
+</section><!-- //tsr-footer-sm -->
 
 <a href="#to-top" class="tsr-btn-toTop">Back to top</a>
 
@@ -716,7 +726,9 @@
     <script src="assets/js/handlebars-v1.3.0.js"></script>
     <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
+    <script src="assets/js/handlebars/hbs-offers.hbs"></script>
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
+    <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 

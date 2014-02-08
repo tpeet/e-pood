@@ -25,3 +25,11 @@
     color: $breadcrumb-active-color;
   }
 }
+
+section.tsr-ee-breadcrumbs {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: $lightgrey-c;
+  width: 100%;
+  margin-bottom: 15px;
+}

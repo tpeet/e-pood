@@ -1,39 +1,35 @@
-<section class=""> 
+<section class="tsr-ee-productslider-intro"> 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 text-center">
-        <h2>Kõige uuemad ja vahvamad tooted</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis quod praesentium ipsa possimus dolores corrupti sint et dignissimos officia deleniti aliquid quis ab aperiam eius assumenda.</p>
-      </div>
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1>E-poe kampaaniad ja pakkumised</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis.</p>
     </div>
   </div>
 </section>
 <section class="tsr-section-carousel-listing"> 
-    <div class="container">
-      <div class=" tsr-slides" id="content-placeholder-products"></div>
+    <div class="container product">
+      <div class=" tsr-slides" id="content-placeholder-offers"></div>
 
-    <script id="product-slider-template" type="text/x-handlebars-template">
-    {{#products}}
-    <a href="#" class="tsr-module-product">
-      {{#if ribbon}}
-      <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-      {{/if}}
-      <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></figure>
-      <div class="tsr-product-content">
-        {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
-        {{/if}}
-        {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-        {{/if}}
-      </div>
-      <header class="tsr-product-header">{{name}}</header>
-      <p class="tsr-product-desc"> {{description}} </p>
-      <p class="tsr-product-price">{{price}}</p>
-    </a>
-    {{/products}}
-    </script>
+      <script id="offer-slider-template" type="text/x-handlebars-template">
+      {{#offers}}
+      <a href="#" class="tsr-module-product">
+        <figure class="tsr-product-image"><img src="assets/img/offers/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
+        <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <header class="tsr-product-header">{{name}}</header>
+          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+        </div>
+      </a>
+      {{/offers}}
+      </script>
 
-    
-   </div>
+    </div>
+   <a href="" class="tsr-btn-view-all"><span>Vaata kõiki kampaaniaid</span></a>
 </section>
+
+<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->

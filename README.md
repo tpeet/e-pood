@@ -4,15 +4,13 @@ Templiitimise abivahendiks on [Handlebars](http://handlebarsjs.com/), mis arendu
 
 Rootslastelt on välja lülitatud:
   - _tsr-grid.scss
-  - _tsr-variables.scss (liidetud `_bs-ee-variables.scss` algusse)
+  - _tsr-variables.scss (värvid liidetud `_bs-ee-variables.scss` algusse)
   - _tsr-normalize.scss
   - _tsr-typography.scss
 
 Bootstrapist on lisatud:
-  - _variables.scss  
-  - _mixins.scss  
   - _normalize.scss  
-  - _scaffolding.scss 
+  - _scaffolding.scss (maha võetud body font size)
   - _grid.scss  
   - _print.scss  
   - _type.scss  
@@ -20,21 +18,33 @@ Bootstrapist on lisatud:
 
 Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
+  - _bs-ee-mixins.scss (gridi korrastamiseks muudetud)
   - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
   - _bs-ee-navs.scss (tabs ja nav pills)
 
 ## Sisu
 
-### Töös on:
-
+### Valmis on:
+- Üldine 
+  - fontide suurused kohandatud telefon-tahvel-desktop (väike tahvel ja telefon suurendatud fondiga). Üle kirjutatud rootslaste hard-coded tekstisuurused, tuleb teha jätkuvalt edasi kui komponente lisandub sealt. Süntaks: em(15) annab 15px emides.
+  - BS3 gridi sisse viidud muutused, et see vastaks rootslaste layoudile (muudetud sm konteineri padding, gutter).
 - Avaleht 
-  - Avaslaider (TSR põhjal, WIN8 IE10 bugine)
-  - Tooteklotsidega avamenüü (custom, TSR põhjal)
-  - Sisselogitud kasutaja
+  - Avaslaider (muuta veel et taustapilt poleks css-s)
+  - Tooteklotsidega avamenüü
+  - Tooteslaider
+  - Sisselogitud kasutaja - vaatamiseks vajuta "sisene" nuppu (NB! tooteslaideris on kehv ribboneid kasutada)
+- 2nd level
+  - Vertikaalne akordionmenüü 2 tasandit, hidden on small
+  - Leivapuru (BS põhjal)
+
+### Töös on:
 - 2nd level
   - Tooteklotsid (custom, TSR põhjal)
-  - Vertikaalne akordionmenüü (custom)
-  - Leivapuru (BS põhjal)
+
+### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
+- Leivapuru
+- Vertikaalne akordionmenüü
+
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.

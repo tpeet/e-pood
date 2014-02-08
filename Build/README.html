@@ -4,15 +4,13 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <p>Rootslastelt on välja lülitatud:
   - _tsr-grid.scss
-  - _tsr-variables.scss (liidetud <code>_bs-ee-variables.scss</code> algusse)
+  - _tsr-variables.scss (värvid liidetud <code>_bs-ee-variables.scss</code> algusse)
   - _tsr-normalize.scss
   - _tsr-typography.scss</p>
 
 <p>Bootstrapist on lisatud:
-  - _variables.scss<br />
-  - _mixins.scss<br />
   - _normalize.scss<br />
-  - _scaffolding.scss 
+  - _scaffolding.scss (maha võetud body font size)
   - _grid.scss<br />
   - _print.scss<br />
   - _type.scss<br />
@@ -20,28 +18,49 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <p>Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
+  - _bs-ee-mixins.scss (gridi korrastamiseks muudetud)
   - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
   - _bs-ee-navs.scss (tabs ja nav pills)</p>
 
 <h2>Sisu</h2>
 
-<h3>Töös on:</h3>
-
+<h3>Valmis on:</h3>
 <ul>
+  <li>Üldine 
+    <ul>
+      <li>fontide suurused kohandatud telefon-tahvel-desktop (väike tahvel ja telefon suurendatud fondiga). Üle kirjutatud rootslaste hard-coded tekstisuurused, tuleb teha jätkuvalt edasi kui komponente lisandub sealt. Süntaks: em(15) annab 15px emides.</li>
+      <li>BS3 gridi sisse viidud muutused, et see vastaks rootslaste layoudile (muudetud sm konteineri padding, gutter).</li>
+    </ul>
+  </li>
   <li>Avaleht 
     <ul>
-      <li>Avaslaider (TSR põhjal, WIN8 IE10 bugine)</li>
-      <li>Tooteklotsidega avamenüü (custom, TSR põhjal)</li>
-      <li>Sisselogitud kasutaja</li>
+      <li>Avaslaider (muuta veel et taustapilt poleks css-s)</li>
+      <li>Tooteklotsidega avamenüü</li>
+      <li>Tooteslaider</li>
+      <li>Sisselogitud kasutaja - vaatamiseks vajuta &#8220;sisene&#8221; nuppu (NB! tooteslaideris on kehv ribboneid kasutada)</li>
     </ul>
   </li>
   <li>2nd level
     <ul>
-      <li>Tooteklotsid (custom, TSR põhjal)</li>
-      <li>Vertikaalne akordionmenüü (custom)</li>
+      <li>Vertikaalne akordionmenüü 2 tasandit, hidden on small</li>
       <li>Leivapuru (BS põhjal)</li>
     </ul>
   </li>
+</ul>
+
+<h3>Töös on:</h3>
+<ul>
+  <li>2nd level
+    <ul>
+      <li>Tooteklotsid (custom, TSR põhjal)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)</h3>
+<ul>
+  <li>Leivapuru</li>
+  <li>Vertikaalne akordionmenüü</li>
 </ul>
 
 <h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>

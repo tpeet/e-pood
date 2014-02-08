@@ -1,7 +1,7 @@
 // VARIABLES AND MIXINS 
 //**********************************
 /* @include _bs-ee-variables.scss */ 
-/* @include _bs-ee-mixins.scss */
+/* @include _mixins.scss */
 /* @include _bs-ee-ms-grid.scss */
 
 //TEMPORARY HELPERS
@@ -16,6 +16,7 @@
 /* @include _print.scss */
 /* @include _type.scss */
 /* @include _responsive-utilities.scss */ 
+/* @include _navs.scss */
 
 
 
@@ -37,8 +38,7 @@
 /* @include _tsr-ee-buttonsAndLinks.scss */
 /* @include _tsr-ee-sidemenu.scss */
 /* @include _tsr-ee-product.scss */
-/* @include _tsr-ee-product-list-front.scss */
-
+/* @include _tsr-ee-frontpage.scss */
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
@@ -49,41 +49,6 @@
 // WORK IN PROGRESS PARTS
 //**********************************
 
-
-
-// .nav-stacked {
-//   @media (max-width: $screen-xs-max) {
-//     border: 3px solid red;
-//     > li {
-     
-//     }
-//   }
-// }
-
-.nav-stacked.nav > li > a {
-  @media (max-width: $screen-xs-max) {
-    text-align: left;
-  }
-  &:hover {
-      @include media-max($screen-xs-max) {
-      background-color: transparent;
-      color: $link-color; 
-      text-decoration: underline;
-    }
-  }
-}
-
-
-
-
-// Section footer
-.tsr-section-footer .tsr-footer-links {
-padding: 50px 10px 0;
-}
-
-.tsr-section-support header {
-  font-weight: normal;
-}
 //GENERAL
 // Image multiply
 .multiply {
@@ -102,43 +67,6 @@ padding: 50px 10px 0;
     top: 0;
 }
 
-
-
-  // RWD
-
-
-    @include media-min(320px) {
-
-
-  } // min 320px
-
-
-
-
-    @include media-min(600px) {
-
-
-  } // min 600px
-
-
-
-    @include media-min(768px) {
-
-
-  } // min 768px
-
-
-
-
-    @include media-min(940px) {
-
-  } // min 940px
-
-
-    @include media-min(1441px) {
-
-
-  } // min 1441px
 
 
 ////// INTERNET EXPLORER 8
