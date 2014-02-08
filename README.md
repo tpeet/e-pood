@@ -36,7 +36,7 @@ Bootsrapist on muudetud ja lisatud:
 - 2nd level
   - Vertikaalne akordionmenüü 2 tasandit, hidden on small
   - Leivapuru (BS põhjal)
-  - Tooteklotsid (puudu filter, ikoone)
+  - Tooteklotside vaade - sinna saad kui vajutad avalehel p]hilinki, nt Arvutid ja lisad (puudu filter, ikoone)
 
 ### Töös on:
 - 2nd level
