@@ -3,36 +3,31 @@
 <section class="tsr-section-productAndService-listing">
  
   <div class="tsr-ee-product-boxes" > 
-      <div class="container product" id="content-placeholder-myproduct"></div>
+    <div class="container product" id="content-placeholder-myproduct"></div>
 
-        <script id="myproduct-template" type="text/x-handlebars-template">
-        {{#products}}
+      <script id="myproduct-template" type="text/x-handlebars-template">
+      {{#products}}
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-        <a href="/productinfo/{{id}}" class="tsr-module-product">
-          <figure class="tsr-product-image">
-            {{#if badge.text }}
-            <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
-            {{/if}}
-            {{#if badge.icon }}
-            <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
-            {{/if}}
-            <img src="assets/img/myproducts/{{id}}.jpg" id="img{{id}}" alt="{{name}}" title="{{name}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
-          </figure>
-          <div class="tsr-product-content">
-          <header class="tsr-product-header">{{name}}</header>
-          <p class="tsr-product-desc {{badge.color}}-text">{{badge.text}} {{badge.description}} </p>
-          </div>
-        </a>
+      <div class="col-xs-12 col-sm-4 col-md-3">
+      <a href="/productinfo/{{id}}" class="tsr-module-product">
+        <figure class="tsr-product-image">
+          {{#if badge.text }}
+          <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
+          {{/if}}
+          {{#if badge.icon }}
+          <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
+          {{/if}}
+          <img src="assets/img/myproducts/{{id}}.jpg" id="img{{id}}" alt="{{name}}" title="{{name}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+        </figure>
+        <div class="tsr-product-content">
+        <header class="tsr-product-header">{{name}}</header>
+        <p class="tsr-product-desc {{badge.color}}-text">{{badge.text}} {{badge.description}} </p>
         </div>
-        {{/products}}
-        </script>
+      </a>
+      </div>
+      {{/products}}
+      </script>
 
   </div>
 
 </section>
-
-
-
-
-

@@ -132,7 +132,7 @@ section.tsr-ee-section-product-boxes {
 // product module general, removed float
 .tsr-module-product { 
   width: 100%;
-  padding: em(15) 0 em(20) em(15);
+  padding: em(15) em(5) em(20) em(15);
   float: none;
   @include media-min($screen-sm-min) {
   // padding: em(35) em(45) em(35) em(45);
@@ -183,8 +183,8 @@ ul.tsr-ee-product-colors {
   display: inline-block;
     li {
     @include border-radius(22px);
-    height: em(22);
-    width: em(22);
+    height: 22px;
+    width: 22px;
     margin-left: 2px;
     cursor: pointer;
     padding: 0;

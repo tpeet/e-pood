@@ -426,7 +426,6 @@
 
 
 
-
 <section class="tsr-ee-breadcrumbs visible-md">
   <div class="container">
     <ol class="breadcrumb">
@@ -436,134 +435,204 @@
     </ol>
   </div>
 </section>
-<section class="tsr-ee-product-detail">
-  <div class="container" id="content-placeholder-products"></div>
+
+<div class="container" > 
+
+  <div class="col-md-3 hidden-sm hidden-xs" id="content-placeholder-menu"></div>
+  <script id="menu-template" type="text/x-handlebars-template">
+
+  {{#sidemenu}}
+  <ul id="sidenav" class="tsr-ee-sidenav" >
+      <li><a href="#">{{parent}}</a>
+          <ul class="tsr-ee-sidenav">
+            {{#if sub}}
+            {{#each sub}}
+            <li>
+                <a href="#">{{this}}</a>
+            </li>
+            {{/each}}
+            {{/if}}
+          </ul>
+      </li>
+  </ul>
+  {{/sidemenu}}
+
+  </script>
+
+  <div class="col-xs-12 col-sm-12 col-md-9 tsr-ee-product-boxes">
+
+  <!-- Ad area -->
+<div class="row" style="overflow: hidden;">
+  <img src='http://placehold.it/1000x100' width='1000' height='100' alt='Placeholder Image' />
+</div> 
+
+    <section class="tsr-section-divider tsr-color-white" id="logged-in">
+    <header class="row">
+      <span><a class='current' href="2nd-level-list.html"><i class="icon-menutsicon48px"></a></i></span>
+      <span><a href="arvutid-ja-lisad.html"><i class="icon-menutsicon48px"></a></i></span> 
+    </header>
+  </section> 
+
+  <div class="row">
+
+  <section class="tsr-section-filter">
+    <div class="container">           
+
+      <!-- FILTER LIST -->
+
+      <menu class="tsr-sortList">
+
+        <li class="tsr-top-level">
+          <a href="#">Sort list</a>
+          <menu class="tsr-second-level">
+            <li><a href="#">Sort by: Lowest price</a></li>
+            <li><a href="#">Sort by: Highest price</a></li>
+            <li><a href="#">Sort by: Name A-z</a></li>
+            <li><a href="#">Sort by: Name Z-a</a></li>
+          </menu>
+        </li>
+
+      </menu> 
+
+
+    </div>
+  </section><!-- // tsr-section END -->  
+
+</div> 
+
+  <!-- Sorting with pagination -->
+<section class="row pagination-holder">
+  <div class="tsr-forms">
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
+    </div>
+
+    <div class="col-sm-4 text-right tsr-pagination">
+      <a href="#" >1</a>
+      <a href="#" >2</a>
+      <a href="#" >3</a>
+      <a href="#" class="tsr-active" >4</a>
+      <a href="#" >5</a>
+      <a href="#" >6</a>
+    </div>
+  </div>
+</section> 
   
-</section>
+  <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row trim">
+  <section class="tsr-section-productlist">
+    <div class="product" id="content-placeholder-products"></div>
+  </section>
+</div>
 
 <script id="product-slider-template" type="text/x-handlebars-template">
 
-{{#with products.[0]}}
+  {{#products}}
+  <div class="row">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      <ul class="tsr-ee-product-colors tsr-product-colors">
+        {{#if colors}}
+        {{#each colors}}
+          <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+        {{/each}}
+        {{/if}}
+      </ul>
+      </figure>
 
-<div class="col-md-7">
-  <a href="#" class="favorite"></a>
-  <figure class="tsr-product-image">
-  <a class='current' href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a
-  </figure>
-  <hr>
-  <ul class="tsr-ee-product-thumb">
-  </ul>
-  {{#if firstflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
-  {{/if}}
-  {{#if secondflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-  {{/if}}
-</div>
+      <div class="tsr-product-content">
+        <header class="tsr-product-header">{{name}}</header>
 
-<div class="col-md-5">
-  <div class="tsr-product-content">
+        <div class="row tsr-ee-linkicons">
+          <div class="col-md-4" ><a href="#" class="tsr-ee-comments"> Arvamused (5)</a></div>
+          <div class="col-md-3"><a href="#" class="tsr-ee-compare"> Võrdle </a></div>
+          <div class="col-md-5"><a href="#" class="tsr-ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
 
-  <a class='current' href="detail.html"><header class="tsr-product-header">{{name}}</header></a>
-  
-  <ul class="tsr-ee-product-colors tsr-product-colors">
-  {{#if colors}}
-  {{#each colors}}
-    <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-  {{/each}}
-  {{/if}}
-  </ul>
-  
-  {{#if special_price}}
-  <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
-  {{else}}
-  <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
-  {{/if}}
-  <a href="#" class="tsr-ee-compare"> Võrdle </a>
-  <button class=tsr-btn tsr-btn-100 tsr-btn-large><i class="icon-osta"></i>Lisa ostukorvi</button>
+        <p class="tsr-product-desc"> {{{leftTrimLong description}}} </p>
+
+        <div class="row tsr-ee-actions">
+          <div class="col-sm-4 col-xs-12"> &nbsp;
+            {{#if flash}}
+            <figure class="tsr-tactical-flash"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
+            {{/if}}
+            {{#if flash}}
+            <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
+            {{/if}}
+            {{#if secondflash}}
+            <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+            {{/if}}
+          </div>
+          <div class="col-sm-4 col-xs-12 text-right tsr-ee-pricecol">
+            {{#if special_price}}
+            <p class="tsr-ee-special-price-text">Soodushind: <span class="tsr-ee-product-price">{{special_price}}</span></p>
+            {{else}} 
+            <p class="tsr-product-decs">Hind: <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+            {{/if}}
+            <p class="tsr-product-desc">Kuumakse: 47,15 €</p>
+          </div>
+          <div class="col-sm-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
+        </div>
+
+        <div class="row">
+          {{#if campaign}}
+            <hr>
+            {{#each campaign}} 
+              <a href="#">{{this}} </a>
+            {{/each}}
+          {{/if}}
+        </div>
+
+
+      </div>
+    </div>
   </div>
-</div>
 
-{{/with}}
+  {{/products}}
 </script>
 
-<section class="tsr-section-divider">
-  <header class="container">
-    <span>
-      Soovid osta järelmaksuga?
-    </span>    
-  </header>
-</section>
 
-<section class="tsr-ee-section-leasing">
-  <header class="container">
-    <div class="row tsr-forms">
-      <div class="col-md-3">
-        Periood:
-        <br>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        Sissemakse:
-        <br>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        Kuumakse:
-        <br>
-        Foo
-      </div>
-      <div class="col-md-3">
-        <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
-      </div>
+
+
+
+
+
+ 
+ 
+  <!-- Sorting with pagination -->
+<section class="row pagination-holder">
+  <div class="tsr-forms">
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
     </div>
-    <div class="row">
-      <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
+    <div class="col-sm-4">
+      <div class="select-container"><select><option selected>Kuva korraga</option><option>iPhone</option><option>Samsung</option></select></div>
     </div>
-  </header>
-</section>
 
-<section class="tsr-section-divider tsr-color-purple">
-  <header class="container">
-    <span>
-      Rohkem infot?
-    </span>    
-  </header>
-</section>
-
-<section class="tsr-ee-more-info-tabs">
-  <div class="container">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-      <li><a href="#profile" data-toggle="tab">Profile</a></li>
-      <li><a href="#messages" data-toggle="tab">Messages</a></li>
-      <li><a href="#settings" data-toggle="tab">Settings</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane fade in active" id="home">...</div>
-      <div class="tab-pane fade" id="profile">...</div>
-      <div class="tab-pane fade" id="messages">...</div>
-      <div class="tab-pane fade" id="settings">...</div>
+    <div class="col-sm-4 text-right tsr-pagination">
+      <a href="#" >1</a>
+      <a href="#" >2</a>
+      <a href="#" >3</a>
+      <a href="#" class="tsr-active" >4</a>
+      <a href="#" >5</a>
+      <a href="#" >6</a>
     </div>
   </div>
-</section>
-
-<section class="tsr-section-divider">
-  <header class="container">
-    <span>
-      Pildid ja videod
-    </span>    
-  </header>
-</section>
-
-<section class="tsr-section-divider tsr-color-purple">
-  <header class="container">
-    <span>
-      Sarnased tooted
-    </span>    
-  </header>
 </section> 
+
+  </div>
+
+</div>
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -586,6 +655,7 @@
 
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
+
 <!-- - - - HTML - - - --> 
 
 
@@ -762,4 +832,4 @@
 
 
 </body>
-</html>
+</html> 

@@ -1,0 +1,86 @@
+<!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row trim">
+  <section class="tsr-section-productlist">
+    <div class="product" id="content-placeholder-products"></div>
+  </section>
+</div>
+
+<script id="product-slider-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <div class="row">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      <ul class="tsr-ee-product-colors tsr-product-colors">
+        {{#if colors}}
+        {{#each colors}}
+          <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+        {{/each}}
+        {{/if}}
+      </ul>
+      </figure>
+
+      <div class="tsr-product-content">
+        <header class="tsr-product-header">{{name}}</header>
+
+        <div class="row tsr-ee-linkicons">
+          <div class="col-md-4" ><a href="#" class="tsr-ee-comments"> Arvamused (5)</a></div>
+          <div class="col-md-3"><a href="#" class="tsr-ee-compare"> Võrdle </a></div>
+          <div class="col-md-5"><a href="#" class="tsr-ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
+
+        <p class="tsr-product-desc"> {{{leftTrimLong description}}} </p>
+
+        <div class="row tsr-ee-actions">
+          <div class="col-sm-4 col-xs-12"> &nbsp;
+            {{#if flash}}
+            <figure class="tsr-tactical-flash"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
+            {{/if}}
+            {{#if flash}}
+            <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
+            {{/if}}
+            {{#if secondflash}}
+            <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+            {{/if}}
+          </div>
+          <div class="col-sm-4 col-xs-12 text-right tsr-ee-pricecol">
+            {{#if special_price}}
+            <p class="tsr-ee-special-price-text">Soodushind: <span class="tsr-ee-product-price">{{special_price}}</span></p>
+            {{else}} 
+            <p class="tsr-product-decs">Hind: <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+            {{/if}}
+            <p class="tsr-product-desc">Kuumakse: 47,15 €</p>
+          </div>
+          <div class="col-sm-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
+        </div>
+
+        <div class="row">
+          {{#if campaign}}
+            <hr>
+            {{#each campaign}} 
+              <a href="#">{{this}} </a>
+            {{/each}}
+          {{/if}}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  {{/products}}
+</script>
+
+
+
+
+
+
+

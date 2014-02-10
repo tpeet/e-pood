@@ -3,6 +3,11 @@
     if(text.length > 20) return text.substring(0,20) +"...";
     else return text;
   });
+  Handlebars.registerHelper('leftTrimLong', function(text) {
+    text = text.replace(/<.*?>/g," ").trim();
+    if(text.length > 260) return text.substring(0,260) +"...";
+    else return text;
+  });
   var source   = $("#product-slider-template").html();
   var template = Handlebars.compile(source);
 
@@ -12,11 +17,13 @@
       path: "/arvutid-ja-lisad.html",
       name: "23,8 LED-monitor/teler LG 23MA53D-PZ",
       id: "238-LED-monitor-teler-LG-23MA53D-PZ",
-      description: "Lorem ipsum.",
+      intro: "MHL funktsiooni abil saate ühendada oma nutitelefoni monitoriga ja sealt suurelt ekraanilt vaadata tehtud videosid või pilte. ",
+      description: 'LG teler/monitoriga saad mängida, vaata telekanaleid ning samuti on võimalus teha toiminguid monitoriga. 23,8" LED ekraan, 14 ms reageerimisaeg, 178°/178° vaatenurk ja 1920 x 1080 piksline resolutsioon toovad Sinuni kvaliteetse pildi. Tänu sisseehitatud digi-TV tuunerile kuvab televiisor laitmatult ka digi-TV pilti, nii et võite seda kasutada nii eraldiseisva televiisorina kui ka monitorina.',
       normal_price: "209 €",
       badge: {color: "primary", iconized: "icon", icon: "transport-1" },
-      firstflash: { orientation: "horizontal", lg: "4G" },
-      secondflash: { orientation: "horizontal", lg: "5G", sm: "some text"}
+      flash: {lg: '55" ', sm: "ekraan"},
+      firstflash: { lg: "4G" },
+      secondflash: { lg: "5G", sm: "some text"}
 
     },
     {
@@ -24,18 +31,21 @@
       id: "logitech1",
       badge: {color: "green", text: "6" },
       firstflash: { lg: "Äri" },
-      description: "Lihtne väike hiir, mida on mugav kaasas kanda. ",
+      intro: "Lihtne väike hiir, mida on mugav kaasas kanda. ",
+      description: 'Logitech juhtmeta optiline hiir. Optiline tehnoloogia töötamaks peaaegu igal pinnal. 2.4 GHz juhtmevaba ühendus aitab ära hoida viivitused ja vahelejätmised sujuvaks töötamiseks.',
       colors: ["punane", "roheline", "must", "sinine"],
       default_color: "punane",
-      special_price: "21 €"
+      special_price: "21 €",
+      campaign: ["Pakime tellitud kauba kingituseks ja anname kaasa head soovid."]
     },
     {
       name: "sülearvuti Asus X200CA (must)",
       id: "Asus-X200CA-sülearvuti-eest-must 1",
-      description: "Mõnusalt väike sülearvuti internetis surfamiseks. ",
+      intro: "Logitech juhtmeta optiline hiir. Optiline tehnoloogia töötamaks peaaegu igal pinnal. 2.4 GHz juhtmevaba ühendus aitab ära hoida viivitused ja vahelejätmised sujuvaks töötamiseks.",
+      description: "11,6’’ ekraaniga Asuse sülearvutil on Intel Celeron 1007U protsessor, 2 GB põhimälu, 500 GB kõvaketas. Operatsioonisüsteem Microsoft Windows 8, kiired USB 3.0 liidesed ja rootsi asetusega klaviatuur.",
       ribbon: { size: "small", text: "+Kingitus" },
       badge: {color: "primary", iconized: "icon", icon: "osta" },
-      colors: [ "must", "valge"],
+      colors: [ "must", "valge", "punane"],
       normal_price: "359 €"
     },
     {
@@ -48,7 +58,7 @@
     {
       name: "Norton AntiVirus 2013 3-PC",
       id: "99691",
-      secondflash: { lg: "", sm: "Lõpumüük"},
+      secondflash: { lg: "", sm: "Lõpu-müük"},
       description: "Kiire ja tõhus kaitse sinu arvutile kahjurprogrammide ja internetiohtude eest.",
       normal_price: "17 €"
     },

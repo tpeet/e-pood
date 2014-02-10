@@ -49,6 +49,78 @@
 // WORK IN PROGRESS PARTS
 //**********************************
 
+section.tsr-section-productlist  {
+  .tsr-module-product {
+    text-align: left;
+    padding: em(15) em(5) em(20) em(5);
+    .tsr-product-image {
+      width: 25%;
+      padding: 0 em(20) 0 em(10);
+    }
+    .tsr-product-content {
+      width: 73%;
+    }
+    .tsr-product-header {
+      font-size: 150%;
+    }
+    .row.tsr-ee-linkicons {
+      font-size: 90%;
+      margin: em(20) 0 em(25);
+    }
+    .row.tsr-ee-actions {
+      margin: em(30) 0 em(25);
+    }
+    .tsr-ee-pricecol {
+      padding-right: em(15);
+      padding-top: em(5);
+      & .tsr-product-decs, & .tsr-ee-product-price, & .tsr-ee-special-price, & .tsr-ee-special-price-text {
+        margin: 0;
+        line-height: 0.8;
+      }
+    }
+
+    .tsr-btn {
+      padding: 12px 14px;
+      font-size: em(16);
+      .icon {
+        vertical-align: middle;
+        font-size: 120%;
+        padding-right: 5px;
+      }
+    }
+    .tsr-tactical-flash {
+      display: table;
+      position: relative;
+      float: left;
+      -webkit-border-radius: 1px;
+      -ms-border-radius: 1px;
+      border-radius: 1px;
+      top: 0; 
+      left: 0;
+      right: auto;
+      font-size: 16px;
+      width: 47px;
+      height: 47px;
+      margin-left: 5px;
+      z-index: 1;
+      &:before {
+      width: 47px;
+      height: 47px;
+      }
+      & small {
+        font-size: 70%;
+        padding: 2px 3px;
+      }
+      &.tsr-first {
+      z-index: 2;
+      }
+      &.tsr-second {
+      z-index: 3;
+      }
+    }
+  }
+}
+
 //GENERAL
 // Image multiply
 .multiply {

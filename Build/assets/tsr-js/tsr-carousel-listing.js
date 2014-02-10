@@ -148,7 +148,7 @@ TSR - CAROUSEL LISTING
 		var self = this;
 		var bw = $('body').width();
 		
-		if(bw >= 768 ){
+		if(bw >= 767 ){
 
 			if(bw <= self.totalWidth + 30) {
 
