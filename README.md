@@ -15,6 +15,9 @@ Bootstrapist on lisatud:
   - _print.scss  
   - _type.scss  
   - _responsive-utilities.scss
+  - _tooltip.scss
+  - _popover.scss
+  - _tabs.scss
 
 Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
@@ -37,11 +40,12 @@ Bootsrapist on muudetud ja lisatud:
   - Vertikaalne akordionmenüü 2 tasandit, hidden on small
   - Leivapuru (BS põhjal)
   - Tooteklotside vaade - sinna saad kui vajutad avalehel p]hilinki, nt Arvutid ja lisad (puudu filter, ikoone)
-
-### Töös on:
-- 2nd level
   - Toote detailvaade
   - Toote listvaade (custom, TSR põhjal)
+
+### Töös on:
+- 3rd level, detailvaade
+
 
 ### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
 - Leivapuru
