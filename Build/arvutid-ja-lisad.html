@@ -426,7 +426,7 @@
 
 
 
-<section class="tsr-ee-breadcrumbs visible-md">
+<section class="tsr-ee-breadcrumbs hidden-sm hidden-xs">
   <div class="container">
     <ol class="breadcrumb">
       <li><a href="#">TV ja audio</a></li>
@@ -553,13 +553,16 @@
         {{/if}}
         <header class="tsr-product-header">{{name}}</header>
       
-        <ul class="tsr-ee-product-colors tsr-product-colors">
         {{#if colors}}
-        {{#each colors}}
-          <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-        {{/each}}
+          <ul class="tsr-ee-product-colors tsr-product-colors">
+          {{#each colors}}
+            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
         {{/if}}
-        </ul>
+
         {{#if special_price}}
         <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
         {{else}} {{#if normal_price}}
@@ -767,6 +770,7 @@
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
+    <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 
 
@@ -792,6 +796,8 @@
     <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
     <script src="assets/js/bootstrap-js/tab.js"></script>
+    <script src="assets/js/bootstrap-js/tooltip.js"></script>
+    <script src="assets/js/bootstrap-js/popover.js"></script>
 
     <script src="assets/tsr-js/tsr-core.js"></script>
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
@@ -804,6 +810,19 @@
     <script src="assets/tsr-js/tsr-filter.js"></script>
     <script src="assets/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/tsr-js/tsr-attention.js"></script>
+
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
+    <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
+
+<script>
+  $("[data-toggle='popover']").popover();
+  $("[data-toggle='popover']").on('click', function (e) {
+    $("[data-toggle='popover']").not(this).popover('hide');
+  });
+
+      // $('img').blend({mode: 'multiply', adjustment: 'rgb(114, 25, 219)'});
+</script>
 
 
 </body>

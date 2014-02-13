@@ -426,7 +426,7 @@
 
 
 
-<section class="tsr-ee-breadcrumbs visible-md">
+<section class="tsr-ee-breadcrumbs hidden-sm hidden-xs">
   <div class="container">
     <ol class="breadcrumb">
       <li><a href="#">TV ja audio</a></li>
@@ -562,27 +562,31 @@
         <p class="tsr-product-desc"> {{{leftTrimLong description}}} </p>
 
         <div class="row tsr-ee-actions">
-          <div class="col-sm-4 col-xs-12"> &nbsp;
-            {{#if flash}}
-            <figure class="tsr-tactical-flash"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
-            {{/if}}
-            {{#if flash}}
-            <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
-            {{/if}}
-            {{#if secondflash}}
-            <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-            {{/if}}
+          {{#if flashes}}
+            <div class="col-sm-4 col-xs-12"> &nbsp;
+              {{#if flash}}
+              <figure class="tsr-tactical-flash tsr-ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
+              {{/if}}
+              {{#if firstflash}}
+              <figure class="tsr-tactical-flash tsr-ee-flash-sm tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+              {{/if}}
+              {{#if secondflash}}
+              <figure class="tsr-tactical-flash tsr-ee-flash-sm tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+              {{/if}}
+            </div>
+            {{else}}
+              <div class="col-sm-4 hidden-xs col-xs-12"> </div>
+          {{/if}}
+            <div class="col-sm-4 col-xs-12 tsr-ee-pricecol">
+              {{#if special_price}}
+              <p class="tsr-ee-special-price-text">Soodushind: <span class="tsr-ee-product-price">{{special_price}}</span></p>
+              {{else}} 
+              <p class="tsr-product-decs">Hind: <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+              {{/if}}
+              <p class="tsr-product-desc">Kuumakse: 47,15 €</p>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100 tsr-btn-buy"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
           </div>
-          <div class="col-sm-4 col-xs-12 text-right tsr-ee-pricecol">
-            {{#if special_price}}
-            <p class="tsr-ee-special-price-text">Soodushind: <span class="tsr-ee-product-price">{{special_price}}</span></p>
-            {{else}} 
-            <p class="tsr-product-decs">Hind: <span class="tsr-ee-product-price">{{normal_price}}</span></p>
-            {{/if}}
-            <p class="tsr-product-desc">Kuumakse: 47,15 €</p>
-          </div>
-          <div class="col-sm-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
-        </div>
 
         <div class="row">
           {{#if campaign}}
@@ -792,6 +796,7 @@
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
+    <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 
 
@@ -817,6 +822,8 @@
     <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
     <script src="assets/js/bootstrap-js/tab.js"></script>
+    <script src="assets/js/bootstrap-js/tooltip.js"></script>
+    <script src="assets/js/bootstrap-js/popover.js"></script>
 
     <script src="assets/tsr-js/tsr-core.js"></script>
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
@@ -829,6 +836,19 @@
     <script src="assets/tsr-js/tsr-filter.js"></script>
     <script src="assets/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/tsr-js/tsr-attention.js"></script>
+
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
+    <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
+
+<script>
+  $("[data-toggle='popover']").popover();
+  $("[data-toggle='popover']").on('click', function (e) {
+    $("[data-toggle='popover']").not(this).popover('hide');
+  });
+
+      // $('img').blend({mode: 'multiply', adjustment: 'rgb(114, 25, 219)'});
+</script>
 
 
 </body>

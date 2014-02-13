@@ -17,6 +17,8 @@
 /* @include _type.scss */
 /* @include _responsive-utilities.scss */ 
 /* @include _navs.scss */
+/* @include _tables.scss */
+/* @include _popovers.scss */
 
 
 
@@ -39,6 +41,9 @@
 /* @include _tsr-ee-sidemenu.scss */
 /* @include _tsr-ee-product.scss */
 /* @include _tsr-ee-frontpage.scss */
+/* @include _tsr-ee-2nd-level-list.scss */
+/* @include _flexslider.css */
+
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
@@ -49,77 +54,127 @@
 // WORK IN PROGRESS PARTS
 //**********************************
 
-section.tsr-section-productlist  {
-  .tsr-module-product {
-    text-align: left;
-    padding: em(15) em(5) em(20) em(5);
-    .tsr-product-image {
-      width: 25%;
-      padding: 0 em(20) 0 em(10);
-    }
-    .tsr-product-content {
-      width: 73%;
-    }
-    .tsr-product-header {
-      font-size: 150%;
-    }
-    .row.tsr-ee-linkicons {
-      font-size: 90%;
-      margin: em(20) 0 em(25);
-    }
-    .row.tsr-ee-actions {
-      margin: em(30) 0 em(25);
-    }
-    .tsr-ee-pricecol {
-      padding-right: em(15);
-      padding-top: em(5);
-      & .tsr-product-decs, & .tsr-ee-product-price, & .tsr-ee-special-price, & .tsr-ee-special-price-text {
-        margin: 0;
-        line-height: 0.8;
-      }
-    }
+.tsr-btn-buy {
+  font-size: em(16);
+  width: 100%;
+  font-weight: 500;
+  .icon {
+    vertical-align: middle; 
+    font-size: 120%;
+    padding-right: 5px;
+  }
+}
 
-    .tsr-btn {
-      padding: 12px 14px;
-      font-size: em(16);
-      .icon {
-        vertical-align: middle;
-        font-size: 120%;
-        padding-right: 5px;
+.table-bordered > tbody > tr   {
+  > td:first-of-type {
+    border-right: none;
+  }
+  > td + td {
+    border-left: none;
+  }
+}
+
+.table > thead > tr > th {
+  padding: em(10) em(12);
+  background-color: $lightgrey-c;
+  font-weight: normal;
+  font-size: 140%;
+  border-bottom: 1px solid $lightgrey-t;
+}
+
+.table > tbody > tr > td {
+  padding: em(14);
+  font-size: 95%;
+}
+section.tsr-ee-product-detail {
+  margin-bottom: 30px;
+  .tsr-ee-detail-intro {
+    line-height: 0.7em;
+  }
+
+  .tsr-ee-detailview { 
+    text-align: center;
+    position: relative;
+    .tsr-product-image {
+
+      width: 100%;
+      height: auto;
+      img {
+      width: 100%;
+      height: auto;
       }
     }
-    .tsr-tactical-flash {
-      display: table;
-      position: relative;
-      float: left;
-      -webkit-border-radius: 1px;
-      -ms-border-radius: 1px;
-      border-radius: 1px;
-      top: 0; 
-      left: 0;
-      right: auto;
-      font-size: 16px;
-      width: 47px;
-      height: 47px;
-      margin-left: 5px;
-      z-index: 1;
-      &:before {
-      width: 47px;
-      height: 47px;
-      }
-      & small {
-        font-size: 70%;
-        padding: 2px 3px;
-      }
+    & .tsr-tactical-flash {
+      right: 10px;
+      top: 70px;
+      left: auto;
+      margin-top: 5px;
       &.tsr-first {
-      z-index: 2;
+      top: 90px;
       }
       &.tsr-second {
-      z-index: 3;
+        top: 155px;
       }
     }
   }
+  .tsr-ee-linkicons {
+    margin-top: 20px;
+  }
+
+  .flex-viewport .slides li img {
+    padding: 0 em(35);
+  }
+  .flex-control-thumbs {
+    padding: 20px 0;
+    border-top: 1px solid $lightgrey-t;
+    border-bottom: 1px solid $lightgrey-t;
+    li img{
+      padding-right: 20px; 
+    }
+  }
 }
+
+.tsr-ee-upper-distance {
+  margin-top: 10px;
+}
+
+.flexslider.tsr-ee-additional-image-lg {
+  margin: 20px auto 60px;
+  max-width: 800px;
+}
+
+.fluid-width-video-wrapper {
+  margin-top: 180px;
+}
+
+section.tsr-ee-section-leasing {
+  margin: 20px auto 10px;
+}
+
+section.tsr-ee-more-info-tabs {
+  background: $lightgrey-c;
+
+}
+section.tsr-ee-more-info-tabscontent {
+    border-top: 1px solid $lightgrey-t;
+  background: white;
+  margin-top: -1px;
+  margin-bottom: 20px;
+  .tab-content {
+    margin: 30 px auto;
+  }
+  .tab-pane {
+    margin: 30px 0 10px;
+  }
+}
+
+.tsr-ee-justified-list {
+  padding-left: 20px;
+  > li {
+  margin: 10px 0;
+  }
+}
+
 
 //GENERAL
 // Image multiply

@@ -427,7 +427,7 @@
 
 
 
-<section class="tsr-ee-breadcrumbs visible-md">
+<section class="tsr-ee-breadcrumbs hidden-sm hidden-xs">
   <div class="container">
     <ol class="breadcrumb">
       <li><a href="#">TV ja audio</a></li>
@@ -436,6 +436,7 @@
     </ol>
   </div>
 </section>
+
 <section class="tsr-ee-product-detail">
   <div class="container" id="content-placeholder-products"></div>
   
@@ -443,49 +444,87 @@
 
 <script id="product-slider-template" type="text/x-handlebars-template">
 
-{{#with products.[0]}}
+{{#with products.[1]}}
 
-<div class="col-md-7">
-  <a href="#" class="favorite"></a>
-  <figure class="tsr-product-image">
-  <a class='current' href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a
-  </figure>
-  <hr>
-  <ul class="tsr-ee-product-thumb">
-  </ul>
+<div class="col-sm-5 tsr-ee-detailview">
   {{#if firstflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+  <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
   {{/if}}
   {{#if secondflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+  <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
   {{/if}}
+
+<div id="js-imagerotator" class="js-imagerotator tsr-product-image">
+  <ul class="slides">
+    {{#each minipics_id}}
+      <li data-thumb="assets/img/products/{{this}}.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
+    {{/each}}
+  </ul>
 </div>
 
-<div class="col-md-5">
+  <div class="row tsr-ee-linkicons">
+    <div class="col-md-5" ><a href="#" class="tsr-ee-comments">Arvamused (5)</a></div>
+    <div class="col-md-3"><a href="#" class="tsr-ee-compare">Võrdle</a></div>
+    <div class="col-md-4"><a href="#" class="tsr-ee-favorite">Lemmik</a></div>
+  </div>
+</div>
+
+<div class="col-sm-7">
   <div class="tsr-product-content">
 
-  <a class='current' href="detail.html"><header class="tsr-product-header">{{name}}</header></a>
+  <h1><small>{{name}}</small></h1>
+  <h1> {{{intro}}} </h1>
+  <h1 class="tsr-ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h1>
+
+    {{#if campaign}}
+    {{#each campaign}} 
+      <a href="#">{{this}} </a>
+    {{/each}}
+    {{/if}}
+
+    <p class="tsr-ee-upper-distance">Vali värv</p>
+    <ul class="tsr-ee-product-colors">
+    {{#if colors}}
+    {{#each colors}}
+      <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+    {{/each}}
+    {{/if}}
+    </ul>
   
-  <ul class="tsr-ee-product-colors tsr-product-colors">
-  {{#if colors}}
-  {{#each colors}}
-    <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-  {{/each}}
-  {{/if}}
-  </ul>
-  
-  {{#if special_price}}
-  <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
-  {{else}}
-  <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
-  {{/if}}
-  <a href="#" class="tsr-ee-compare"> Võrdle </a>
-  <button class=tsr-btn tsr-btn-100 tsr-btn-large><i class="icon-osta"></i>Lisa ostukorvi</button>
+    {{#if normal_price}}
+    <p class="tsr-product-price">Tavahind: {{normal_price}}
+    {{/if}}
+    {{#if special_price}}
+    <br>Sinu võit: 300 €</p>
+    <p class="tsr-ee-product-price">Soodushind: {{special_price}}</p>
+    {{/if}}
+
+    <div class="row tsr-ee-actions">
+      <div class="col-md-5">
+        <button class="tsr-btn tsr-btn-100  tsr-btn-buy"><i class="icon icon-osta"></i>Lisa ostukorvi</button>
+      </div>
+      <div class="col-md-7">
+        <p>Kaup kätte Tallinnas: <a href="#">Täna, 20.12.2013</a>
+        <br>
+        Müügil e-poes ja poodides (<a href="#">Vaata saadavust</a>)
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
 {{/with}}
 </script>
+
+
+
+
+
+
+
+
+
+
 
 <section class="tsr-section-divider">
   <header class="container">
@@ -496,32 +535,30 @@
 </section>
 
 <section class="tsr-ee-section-leasing">
-  <header class="container">
+  <div class="container">
     <div class="row tsr-forms">
       <div class="col-md-3">
-        Periood:
-        <br>
+        <p>Periood:</p>
+          <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
+        
+      </div>
+      <div class="col-md-3">
+        <p>Sissemakse:</p>
         <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
       </div>
       <div class="col-md-3">
-        Sissemakse:
-        <br>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        Kuumakse:
-        <br>
-        Foo
+        <p>Kuumakse:</p>
+        <p class="tsr-ee-product-price">84,89 €</p>
       </div>
       <div class="col-md-3">
         <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
       </div>
     </div>
-    <div class="row">
+    <p class="tsr-ee-upper-distance">
       <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
-    </div>
-  </header>
-</section>
+    </p>
+  </div>
+</section> 
 
 <section class="tsr-section-divider tsr-color-purple">
   <header class="container">
@@ -535,19 +572,290 @@
   <div class="container">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-      <li><a href="#profile" data-toggle="tab">Profile</a></li>
-      <li><a href="#messages" data-toggle="tab">Messages</a></li>
-      <li><a href="#settings" data-toggle="tab">Settings</a></li>
+      <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
+      <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
+      <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
+      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted</a></li>
     </ul>
-    <div class="tab-content">
-      <div class="tab-pane fade in active" id="home">...</div>
-      <div class="tab-pane fade" id="profile">...</div>
-      <div class="tab-pane fade" id="messages">...</div>
-      <div class="tab-pane fade" id="settings">...</div>
-    </div>
   </div>
 </section>
+<section class="tsr-ee-more-info-tabscontent">
+  <div class="container">
+    <div class="tab-content">
+      <div class="tab-pane fade in active" id="general-info">
+        <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
+        <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
+        <p><strong>Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.</strong></p>
+        <ul class="tsr-ee-justified-list">
+          <li>Elegantne disain</li>
+          <li>Täiustatud omadused nagu näiteks häälkäskluste tuvastamine ja liigutustega juhtimine</li>
+          <li>Smart Hubi sotsiallehekülg tagab alati suhtlusringi keskmes olemise</li>
+          <li>Vaata Facebookis ja Twitteris enda sõprade lemmikvideosid</li>
+          <li>Micro Dimming Ultimate ja Clear Motion Rate tagavad kvaliteetse pildi</li>
+        </ul>
+        <h1><small>Kasulikud lingid</small></h1>
+        <p><a href="#">Loe lähemalt tootja kodulehelt siit</a></p>
+        <p><a href="#">Abiinfo nutiTV Samsungi telerites</a></p>
+      </div>
+      <div class="tab-pane" id="technical-info">
+        <div class="col-sm-6">
+          <table class="table table-bordered">
+            <tbody>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    Toote põhiomadused
+
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm">Diagonaal</a>
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="#" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']); "></a>
+                </td>
+                <td>
+                  55
+                  " (toll)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz.">Kaadrisagedus</a>
+                </td>
+                <td class="tsr-ee-noborder-left">
+                </td>
+                <td>
+                  1000 Hz
+                </td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="LAN tugi" data-content="Võimaldab telerit ühendada koduse arvutivõrguga, et suurel ekraanil mahamängida MP3 muusikat, DivX filme, JPG fotosid kodusest arvutist või koduselt võrgukettalt.">LAN tugi</a>
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="https://pood.elion.ee//Product/ParameterInfo/940" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']);"></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Sisseehitatud Wifi" data-content="Saab vaadata üle interneti ühenduse teleris tootja poolt paigaldatud veebilehti – Youtube, Flickr või Picasa pildialbum, ilmateated, uudisteportaalid. Sisu uuenduste eest hoolitseb tootja, vaataja ise uusi veebilehti lisada ei saa.">Sisseehitatud Wifi</a>
+                  
+                </td>
+                <td class="tsr-ee-noborder-left">
+          
+                  <a href="https://pood.elion.ee//Product/ParameterInfo/937" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']);"></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+          
+              <tr>
+                <td><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="DLNA" data-content="meedia standard, mille abil on suutelised ühilduma erinevate tootjate kodused multimeedia seadmed – arvutid, telerid, võrgukettad, mobiiltelefonid, DVD/blu-ray mängijad jne. Niimoodi on võimalik, et arvuti kõvakettal või mobiiltelefoni flash mälus olevat meediat on võimalik maha mängida elutoa teleri ekraanil. Ühenduseks on kasutusel kodune arvutivõrk. Kasutakse sõltuvalt seadmest LAN või WiFi ühendust. Alliansiga on ühinenud üle 240 tootja.">DLNA</a>
+                  
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="https://pood.elion.ee//Product/ParameterInfo/939" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']);"></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Skype" data-content="Nutitelerite omadus teha Skype internetikõnesid teleri vahendusel. Videokõnede tegemiseks on vajalik kaamera, mis osadel mudelitel on juba telerisse sisseehitatud ning teistel mudelitel eraldi juurde ostetav. Selline Skype kaamera ühendatakse teleriga USB kaabli abil. Hetkel on selline võimalus olemas Panasonic, Samsung ning Sony valitud mudelitel.">Skype</a>
+                  
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="https://pood.elion.ee//Product/ParameterInfo/945" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']);"></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Smart TV" data-content="2011 aasta telerid sisaldavad „targa teleri“ funktsiooni, kus kasutades teleris olevat internetiühendust, on võimalik vaadata erinevaid videorakendusi, mängida mänge, kuulata muusikat ning osta tootja poest uusi rakendusi.">Smart TV</a>
+                  
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="https://pood.elion.ee//Product/ParameterInfo/1289" onclick="_gaq.push(['_trackEvent', 'UX', 'Sobiva toote leidmine', 'Nupp küsimärk konkreetse toote vaates ']);"></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-6">
+          <table class="table table-bordered">
+            <tbody>
+              <thead>
+                <tr>
+                  <th colspan="3">
+                    Toote põhiomadused
+
+                  </th>
+                </tr>
+              </thead>
+              <tr>
+                <td>
+                  Diagonaal
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  55
+                  " (toll)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Kaadrisagedus
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  1000 Hz
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  LAN tugi
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Sisseehitatud Wifi
+                </td>
+                <td class="tsr-ee-noborder-left">
+          
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+          
+              <tr>
+                <td>
+                  DLNA
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Skype
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Smart TV
+                </td>
+                <td class="tsr-ee-noborder-left">
+                  <a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="Kaadrisagedus" data-content="Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz."></a>
+                </td>
+                <td>
+                  Jah
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="reviews">teine </div>
+      <div class="tab-pane fade" id="similar-products">
+        <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row trim">
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-products"></div>
+  </section>
+</div>
+
+<script id="product-slider-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <div class="col-xs-12 col-sm-4 col-md-4">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a class='current' href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      </figure>
+    
+      <div class="tsr-product-content">
+
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <header class="tsr-product-header">{{name}}</header>
+      
+        {{#if colors}}
+          <ul class="tsr-ee-product-colors tsr-product-colors">
+          {{#each colors}}
+            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
+        {{/if}}
+
+        {{#if special_price}}
+        <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-desc"></p>
+          {{/if}}
+        {{/if}}
+        <a href="#" class="tsr-ee-compare"> Võrdle </a>
+      </div>
+    </div>
+  </div>
+
+  {{/products}}
+</script>
+
+
+
+
+
+
+
+ 
+      </div>
+    </div>
+  </div>
+</section> 
 
 <section class="tsr-section-divider">
   <header class="container">
@@ -557,13 +865,75 @@
   </header>
 </section>
 
+<section class="tsr-ee-full-slider">
+  <div class="container">
+    <div class="flexslider tsr-ee-additional-image-lg">
+      <ul class="slides">
+          <li><img src="assets/img/products/samsung_f8500_front_silver.jpg" /></li>
+          <li><img src="assets/img/products/samsung_f8500_Right-Angle_silver.jpg" /></li>
+          <li><iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
+      </ul>
+  </div>
+  </div>
+</section>
+
 <section class="tsr-section-divider tsr-color-purple">
   <header class="container">
     <span>
       Sarnased tooted
     </span>    
   </header>
-</section> 
+</section>
+
+<section class="tsr-section-carousel-listing"> 
+    <div class="container product">
+      <div class=" tsr-slides" id="content-placeholder-products"></div>
+
+      <script id="product-slider-template" type="text/x-handlebars-template">
+      {{#products}}
+      <a href="#" class="tsr-module-product">
+        {{#if ribbon}}
+          <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+        {{/if}}
+        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
+        <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <header class="tsr-product-header">{{name}}</header>
+            <ul class="tsr-ee-product-colors tsr-product-colors">
+            {{#if colors}}
+            {{#each colors}}
+              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+            {{/each}}
+            {{/if}}
+            </ul>
+            <p class="tsr-product-desc">
+            {{#if normal_price}}
+            Tavahind {{normal_price}} <br> Sinu võit 10 €
+            {{/if}}
+            </p>
+            <p class="tsr-product-price tsr-ee-special-price-text">
+            {{#if special_price}}
+            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
+            {{/if}}
+            </p>
+            
+
+        </div>
+      </a>
+      {{/products}}
+      </script>
+
+    </div>
+   <a href="" class="tsr-btn-view-all"><span>Vaata mida iganes veel</span></a>
+</section>
+
+<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
+
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -722,6 +1092,7 @@
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
+    <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 
 
@@ -747,6 +1118,8 @@
     <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
     <script src="assets/js/bootstrap-js/tab.js"></script>
+    <script src="assets/js/bootstrap-js/tooltip.js"></script>
+    <script src="assets/js/bootstrap-js/popover.js"></script>
 
     <script src="assets/tsr-js/tsr-core.js"></script>
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
@@ -759,6 +1132,19 @@
     <script src="assets/tsr-js/tsr-filter.js"></script>
     <script src="assets/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/tsr-js/tsr-attention.js"></script>
+
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
+    <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
+
+<script>
+  $("[data-toggle='popover']").popover();
+  $("[data-toggle='popover']").on('click', function (e) {
+    $("[data-toggle='popover']").not(this).popover('hide');
+  });
+
+      // $('img').blend({mode: 'multiply', adjustment: 'rgb(114, 25, 219)'});
+</script>
 
 
 </body>

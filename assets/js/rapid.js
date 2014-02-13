@@ -7,10 +7,6 @@
 
 /* @include _tsr-ee-2nd-level */
 
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  e.target // activated tab
-  e.relatedTarget // previous tab
-});
 
 
 

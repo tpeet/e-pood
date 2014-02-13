@@ -30,13 +30,16 @@
         {{/if}}
         <header class="tsr-product-header">{{name}}</header>
       
-        <ul class="tsr-ee-product-colors tsr-product-colors">
         {{#if colors}}
-        {{#each colors}}
-          <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-        {{/each}}
+          <ul class="tsr-ee-product-colors tsr-product-colors">
+          {{#each colors}}
+            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
         {{/if}}
-        </ul>
+
         {{#if special_price}}
         <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
         {{else}} {{#if normal_price}}

@@ -5,124 +5,83 @@
 
 <script id="product-slider-template" type="text/x-handlebars-template">
 
-{{#with products.[0]}}
+{{#with products.[1]}}
 
-<div class="col-md-7">
-  <a href="#" class="favorite"></a>
-  <figure class="tsr-product-image">
-  <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a
-  </figure>
-  <hr>
-  <ul class="tsr-ee-product-thumb">
-  </ul>
+<div class="col-sm-5 tsr-ee-detailview">
   {{#if firstflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first {{firstflash.orientation}}"><span>{{firstflash.lg}}</span></figure>
+  <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
   {{/if}}
   {{#if secondflash}}
-  <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second {{secondflash.orientation}}"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+  <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
   {{/if}}
+
+<div id="js-imagerotator" class="js-imagerotator tsr-product-image">
+  <ul class="slides">
+    {{#each minipics_id}}
+      <li data-thumb="assets/img/products/{{this}}.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
+    {{/each}}
+  </ul>
 </div>
 
-<div class="col-md-5">
+  <div class="row tsr-ee-linkicons">
+    <div class="col-md-5" ><a href="#" class="tsr-ee-comments">Arvamused (5)</a></div>
+    <div class="col-md-3"><a href="#" class="tsr-ee-compare">Võrdle</a></div>
+    <div class="col-md-4"><a href="#" class="tsr-ee-favorite">Lemmik</a></div>
+  </div>
+</div>
+
+<div class="col-sm-7">
   <div class="tsr-product-content">
 
-  <a href="detail.html"><header class="tsr-product-header">{{name}}</header></a>
+  <h1><small>{{name}}</small></h1>
+  <h1> {{{intro}}} </h1>
+  <h1 class="tsr-ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h1>
+
+    {{#if campaign}}
+    {{#each campaign}} 
+      <a href="#">{{this}} </a>
+    {{/each}}
+    {{/if}}
+
+    <p class="tsr-ee-upper-distance">Vali värv</p>
+    <ul class="tsr-ee-product-colors">
+    {{#if colors}}
+    {{#each colors}}
+      <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+    {{/each}}
+    {{/if}}
+    </ul>
   
-  <ul class="tsr-ee-product-colors tsr-product-colors">
-  {{#if colors}}
-  {{#each colors}}
-    <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-  {{/each}}
-  {{/if}}
-  </ul>
-  
-  {{#if special_price}}
-  <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
-  {{else}}
-  <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
-  {{/if}}
-  <a href="#" class="tsr-ee-compare"> Võrdle </a>
-  <button class=tsr-btn tsr-btn-100 tsr-btn-large><i class="icon-osta"></i>Lisa ostukorvi</button>
+    {{#if normal_price}}
+    <p class="tsr-product-price">Tavahind: {{normal_price}}
+    {{/if}}
+    {{#if special_price}}
+    <br>Sinu võit: 300 €</p>
+    <p class="tsr-ee-product-price">Soodushind: {{special_price}}</p>
+    {{/if}}
+
+    <div class="row tsr-ee-actions">
+      <div class="col-md-5">
+        <button class="tsr-btn tsr-btn-100  tsr-btn-buy"><i class="icon icon-osta"></i>Lisa ostukorvi</button>
+      </div>
+      <div class="col-md-7">
+        <p>Kaup kätte Tallinnas: <a href="#">Täna, 20.12.2013</a>
+        <br>
+        Müügil e-poes ja poodides (<a href="#">Vaata saadavust</a>)
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
 {{/with}}
 </script>
 
-<section class="tsr-section-divider">
-  <header class="container">
-    <span>
-      Soovid osta järelmaksuga?
-    </span>    
-  </header>
-</section>
 
-<section class="tsr-ee-section-leasing">
-  <header class="container">
-    <div class="row tsr-forms">
-      <div class="col-md-3">
-        Periood:
-        <br>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        Sissemakse:
-        <br>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        Kuumakse:
-        <br>
-        Foo
-      </div>
-      <div class="col-md-3">
-        <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
-      </div>
-    </div>
-    <div class="row">
-      <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
-    </div>
-  </header>
-</section>
 
-<section class="tsr-section-divider tsr-color-purple">
-  <header class="container">
-    <span>
-      Rohkem infot?
-    </span>    
-  </header>
-</section>
 
-<section class="tsr-ee-more-info-tabs">
-  <div class="container">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-      <li><a href="#profile" data-toggle="tab">Profile</a></li>
-      <li><a href="#messages" data-toggle="tab">Messages</a></li>
-      <li><a href="#settings" data-toggle="tab">Settings</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane fade in active" id="home">...</div>
-      <div class="tab-pane fade" id="profile">...</div>
-      <div class="tab-pane fade" id="messages">...</div>
-      <div class="tab-pane fade" id="settings">...</div>
-    </div>
-  </div>
-</section>
 
-<section class="tsr-section-divider">
-  <header class="container">
-    <span>
-      Pildid ja videod
-    </span>    
-  </header>
-</section>
 
-<section class="tsr-section-divider tsr-color-purple">
-  <header class="container">
-    <span>
-      Sarnased tooted
-    </span>    
-  </header>
-</section>
+
+
+

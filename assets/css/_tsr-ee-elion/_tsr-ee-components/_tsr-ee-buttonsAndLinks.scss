@@ -51,32 +51,43 @@ text-align: left;
   }
 }
 
+.tsr-ee-favorite {
+  &:before {
+    font-family: 'elion-ikoonid';
+    content: "\e00e";
+    font-size: em(24);
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:hover:before {
+    content: "\e00d";
+  }
+}
+
 .tsr-ee-compare:before {
   font-family: 'elion-ikoonid';
   content: "\e00c";
   font-size: em(24);
-  padding-right: 10px;
-  margin-bottom: -5px;
-  display: inline-block;
-  vertical-align: text-bottom;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .tsr-ee-comments:before {
   font-family: 'elion-ikoonid';
   content: "\e000";
   font-size: em(24);
-  padding-right: 10px;
-  margin-bottom: -5px;
-  display: inline-block;
-  vertical-align: text-bottom;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .tsr-ee-transport:before {
   font-family: 'elion-ikoonid';
   content: "\e001";
   font-size: em(24);
-  padding-right: 10px;
-  margin-bottom: -5px;
-  display: inline-block;
-  vertical-align: text-bottom;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
 }

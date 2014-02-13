@@ -41,7 +41,14 @@
   }
 }
 
-
+.nav.nav-tabs.nav-justified > li {
+    > a {
+      border-radius: 0;
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
 
 
 
