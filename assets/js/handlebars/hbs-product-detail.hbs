@@ -14,8 +14,8 @@
     else return text;
   });
 
-  var source   = $("#product-slider-template").html();
-  var template = Handlebars.compile(source);
+  var source1   = $("#product-detail-template").html();
+  var template1 = Handlebars.compile(source1);
 
   var data = { products: [
     {
@@ -110,5 +110,4 @@
     }
     ]};
 
-
-  $("#content-placeholder-products").html(template(data));
+  $("#content-placeholder-detail").html(template1(data));

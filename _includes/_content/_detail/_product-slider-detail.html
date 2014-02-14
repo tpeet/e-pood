@@ -1,0 +1,47 @@
+<section class="tsr-section-carousel-listing"> 
+    <div class="container product">
+      <div class=" tsr-slides" id="content-placeholder-products"></div>
+
+      <script id="product-slider-template" type="text/x-handlebars-template">
+      {{#products}}
+      <a href="javascript:void(0);" class="tsr-module-product">
+        {{#if ribbon}}
+          <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+        {{/if}}
+         <button class="btn btn-link"><i class="tsr-ee-product-box-favorite"></i></button>
+        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
+        <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <header class="tsr-product-header">{{name}}</header>
+            <ul class="tsr-ee-product-colors tsr-product-colors">
+            {{#if colors}}
+            {{#each colors}}
+              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+            {{/each}}
+            {{/if}}
+            </ul>
+            <p class="tsr-product-desc">
+            {{#if normal_price}}
+            Tavahind {{normal_price}} <br> Sinu võit 10 €
+            {{/if}}
+            </p>
+            <p class="tsr-product-price tsr-ee-special-price-text">
+            {{#if special_price}}
+            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
+            {{/if}}
+            </p>
+            <button class="tsr-ee-compare btn btn-link"> Võrdle </button>
+        </div>
+      </a>
+      {{/products}}
+      </script>
+
+    </div>
+</section>
+
+<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->

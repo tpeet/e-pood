@@ -59,7 +59,6 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	
 
 		    } else {
 

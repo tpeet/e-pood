@@ -1,4 +1,4 @@
-$(window).load(function() {
+$( document ).ready(function() {
   $('.js-imagerotator').flexslider({
     animation: "slide",
     controlNav: "thumbnails",
@@ -42,9 +42,9 @@ $(window).load(function() {
       useCSS: false,
       animationLoop: true,
       slideshow: false,
-      smoothHeight: true,
-      itemWidth: 800,
-      itemMargin: 100,
+
+      itemWidth: 500,
+      itemMargin: 0,
       before: function(slider){
         $f(player).api('pause');
       }

@@ -1,9 +1,9 @@
 <section class="tsr-ee-product-detail">
-  <div class="container" id="content-placeholder-products"></div>
+  <div class="container" id="content-placeholder-detail"></div>
   
 </section>
 
-<script id="product-slider-template" type="text/x-handlebars-template">
+<script id="product-detail-template" type="text/x-handlebars-template">
 
 {{#with products.[1]}}
 
@@ -18,7 +18,7 @@
 <div id="js-imagerotator" class="js-imagerotator tsr-product-image">
   <ul class="slides">
     {{#each minipics_id}}
-      <li data-thumb="assets/img/products/{{this}}.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
+      <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
     {{/each}}
   </ul>
 </div>

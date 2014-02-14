@@ -40,11 +40,11 @@ TSR - CAROUSEL LISTING
     tsrCarouselListing.tsrEqualHeights = function () {
 
 
-	    $('.tsr-section-carousel-listing').each(function () {
+	    $('.tsr-ee-detail-carousel').each(function () {
 
 	    	var bw = $('body').width();
 	        var el = $(this);
-	        var itemHeight 	= $('.tsr-slides > a' , this).outerHeight() - 1 ;
+	        var itemHeight 	= $('.tsr-slides > div' , this).outerHeight() - 1 ;
 
 		    if(bw >= 600){
 			
@@ -59,6 +59,7 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.tsr-ee-compare' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 		    } else {
 
@@ -73,6 +74,7 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto');
 		      	$('.tsr-product-price' , this).css('height', 'auto');
 		      	$('.tsr-product-small-print' , this).css('height', 'auto');
+		      	$('.tsr-ee-compare' , this).css('height', 'auto');
 		      	
 		    }
 
@@ -95,7 +97,7 @@ TSR - CAROUSEL LISTING
 
 	    $('.tsr-section-carousel-listing').each(function () {
 
-			var item 		= $('.tsr-slides > a' , this);
+			var item 		= $('.tsr-slides > div' , this);
 			var totalWidth = 0;
 			
 			// Calc width
@@ -123,8 +125,8 @@ TSR - CAROUSEL LISTING
 		self.fireCarousel 	= true;
 		self.el 			= $(target);
 		self.section 		= $(target);
-		self.item 			= $('.tsr-slides > a' , target);
-		self.itemHeight 	= $('.tsr-slides > a' , target).outerHeight() - 1 ;
+		self.item 			= $('.tsr-slides > div' , target);
+		self.itemHeight 	= $('.tsr-slides > div' , target).outerHeight() - 1 ;
 		self.container 		= $('.container'  , target);
 		self.totalWidth  	= totalWidth;
 
@@ -161,7 +163,7 @@ TSR - CAROUSEL LISTING
 			  		self.container.flexslider({
 				        animation: "slide",
 				        namespace: "tsr-",
-				        selector: ".tsr-slides > a", 
+				        selector: ".tsr-slides > div", 
 				        animationLoop: false,
 				        slideshow: false, 
 				        itemWidth: 240,
