@@ -17,7 +17,8 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   - _responsive-utilities.scss
   - _tooltip.scss
   - _popover.scss
-  - _tabs.scss</p>
+  - _tabs.scss
+  - _buttons.scss</p>
 
 <p>Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
@@ -56,7 +57,49 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <h3>Töös on:</h3>
 <ul>
-  <li>3rd level, detailvaade</li>
+  <li>3rd level, detailvaade responsiveks</li>
+  <li>3rd level, arvamuste osa</li>
+</ul>
+
+<h3>Vaja teha veel esimese etapi raames:</h3>
+<ul>
+  <li>Päis Viljarilt järgmine nädal</li>
+  <li>Multiply efekt toodetele Aarelt</li>
+  <li>H1 kuni H6 suurused Ahtolt, välja vahetada </li>
+  <li>2nd level lehe ülemine ots korrastada, lisa võrdlus ja ikoonid </li>
+  <li>Html-css refaktoreering</li>
+  <li>Responsive images serveerimine javascript</li>
+  <li>Require js lisada javascripti optimeeritud serveerimiseks, dns</li>
+  <li>Proovida kasutada Code Blocksi et serveerida mobiilidele ainult mobiili-cssi</li>
+  <li>Avaslaider kasutab css-background image, tõsta htmli </li>
+  <li>Üle vaadata ja parandada, mis katki on läinud</li>
+  <li>Brauseritestid</li>
+  <li>Taas üle vaadata ja parandada, mis bugid on leitud</li>
+  <li>Backend kood külge panna</li>
+  <li>Üle vaadtata ja parandada, mis katki on läinud</li>
+</ul>
+
+<h3>Andmesisestuses muutub kindlasti</h3>
+<ul>
+  <li>Avaslaideri sisestus (lisandub tekstiväli või mitu)</li>
+  <li>Lindi ja rombi sisestus</li>
+  <li>Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.</li>
+  <li>Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg </li>
+</ul>
+
+<h3>Sisulised küsimused</h3>
+<ul>
+  <li>Mis on rombide loogika/mis tekst sinna võib minna?</li>
+  <li>Mis on lintide loogika, mis tekst sinna võib minna?</li>
+  <li>Misasi läheb avalehe alumisse slaiderisse täpselt?</li>
+  <li>Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?</li>
+  <li>Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.</li>
+</ul>
+
+<h3>Puudu on</h3>
+<ul>
+  <li>Filtrid</li>
+  <li>Värvide esitlus komponent, otsus, kuidas esitada kirjusid värve</li>
 </ul>
 
 <h3>Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)</h3>
@@ -97,22 +140,13 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 <h3>Muudatused rootsi koodi</h3>
 <ul>
   <li>Maha võetud user scale restriction</li>
-  <li>Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.</li>
+  <li>Maha võetud tsr-typography.scss. </li>
   <li>Maha võetud tsr-grid.scss (asendatud gridiga <a href="https://github.com/twbs/bootstrap-sass">Bootstrap-Sassist</a> koos juurdekäivate kohustuslike variablete ja mixingutega)</li>
   <li>maha võetud normalize.scss (BS3 kasutab uuemat)</li>
 </ul>
 
-<h3>Teada bugid</h3>
-<p>Vajab kohendamist peale rootsi gridi asendamist menüü, footer alumine riba, avaslaideri reklaamkast, tooteslaideri toote laiused, kogu lehe max laius ja breakpointid.</p>
-
-<h3>Bugid rootsi koodis</h3>
-<ul>
-  <li>Slaider vigane IE10 Win8 tahvlil.</li>
-  <li>See pagana grid läheb iga jumala liigutuse peale katki. Pole mõtet jännata.</li>
-</ul>
-
 <h3>Do-not-forget</h3>
 <ul>
-  <li>Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.</li>
+  <li>Korrasta javascript footeris (includes), lisa require.js. </li>
   <li>Kas image replacement või ei ja kustmaalt. Praegu küljes.</li>
 </ul>

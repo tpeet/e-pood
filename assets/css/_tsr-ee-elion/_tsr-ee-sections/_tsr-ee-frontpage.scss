@@ -62,13 +62,20 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   background: $lightgrey-c;
   border-top: 1px solid $lightgrey-t;
   margin-top: -1px;
+  margin-bottom: 0;
+  overflow: visible;
+  padding-bottom: 1px;
   .container {
-    margin-bottom: -12px;
-    margin-top: -1px;
+    margin-bottom: 0;
+    margin-top: -20px;
+    padding-top: 10px;
+    margin-bottom: 9px;
   }
   .tsr-slides {
-    margin: 0;
+    background: transparent;
+    margin: -1px 0 -63px 0;
     padding: 0;
+    border-bottom: none;
   }
 }
 
@@ -80,11 +87,25 @@ section.tsr-section-carousel-listing.tsr-slider-init {
     }
   }
   .tsr-viewport {
-    padding: 0;
+    padding-top: 10px;
     margin-top: 0;
+    border-bottom: none;
+  }
+  .tsr-module-product {
+    width: 252px !important;
+    @include media-min($screen-md) {
+      width: 240px !important;
+    } 
   }
 }
 
+
+
+
+
+.tsr-section-divider.tsr-color-purple {
+  z-index: 0;
+}
 // Section footer
 .tsr-section-footer .tsr-footer-links {
 padding: 50px 10px 0;

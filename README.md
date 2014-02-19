@@ -18,6 +18,7 @@ Bootstrapist on lisatud:
   - _tooltip.scss
   - _popover.scss
   - _tabs.scss
+  - _buttons.scss
 
 Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
@@ -44,8 +45,42 @@ Bootsrapist on muudetud ja lisatud:
   - Toote listvaade (custom, TSR põhjal)
 
 ### Töös on:
-- 3rd level, detailvaade
+- 3rd level, detailvaade responsiveks
+- 3rd level, arvamuste osa
 
+### Vaja teha veel esimese etapi raames: 
+- Päis Viljarilt järgmine nädal
+- Multiply efekt toodetele Aarelt
+- H1 kuni H6 suurused Ahtolt, välja vahetada 
+- 2nd level lehe ülemine ots korrastada, lisa võrdlus ja ikoonid 
+- Html-css refaktoreering
+- Responsive images serveerimine javascript
+- Require js lisada javascripti optimeeritud serveerimiseks, dns
+- Proovida kasutada Code Blocksi et serveerida mobiilidele ainult mobiili-cssi
+- Avaslaider kasutab css-background image, tõsta htmli 
+- Üle vaadata ja parandada, mis katki on läinud
+- Brauseritestid
+- Taas üle vaadata ja parandada, mis bugid on leitud
+- Backend kood külge panna
+- Üle vaadtata ja parandada, mis katki on läinud
+
+### Andmesisestuses muutub kindlasti
+- Avaslaideri sisestus (lisandub tekstiväli või mitu)
+- Lindi ja rombi sisestus
+- Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.
+- Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg 
+
+### Sisulised küsimused
+- Mis on rombide loogika/mis tekst sinna võib minna?
+- Mis on lintide loogika, mis tekst sinna võib minna?
+- Misasi läheb avalehe alumisse slaiderisse täpselt?
+- Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?
+- Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.
+
+
+### Puudu on
+- Filtrid
+- Värvide esitlus komponent, otsus, kuidas esitada kirjusid värve
 
 ### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
 - Leivapuru
@@ -76,17 +111,11 @@ Bootsrapist on muudetud ja lisatud:
 
 ### Muudatused rootsi koodi
 - Maha võetud user scale restriction
-- Maha võetud tsr-typography.scss. See ei tee eriti midagi, rootslased on seda nii palju üle kirjutanud. Vajab kohendamist nüüd, vist tuleb BS typo.
+- Maha võetud tsr-typography.scss. 
 - Maha võetud tsr-grid.scss (asendatud gridiga [Bootstrap-Sassist](https://github.com/twbs/bootstrap-sass) koos juurdekäivate kohustuslike variablete ja mixingutega)
 - maha võetud normalize.scss (BS3 kasutab uuemat)
 
-### Teada bugid
-Vajab kohendamist peale rootsi gridi asendamist menüü, footer alumine riba, avaslaideri reklaamkast, tooteslaideri toote laiused, kogu lehe max laius ja breakpointid.
-
-### Bugid rootsi koodis
-- Slaider vigane IE10 Win8 tahvlil.
-- See pagana grid läheb iga jumala liigutuse peale katki. Pole mõtet jännata.
 	
 ### Do-not-forget
-- Korrasta javascript footeris (includes), lisa require.js. Angular on küljes ainult dns-na, lisa fallback.
+- Korrasta javascript footeris (includes), lisa require.js. 
 - Kas image replacement või ei ja kustmaalt. Praegu küljes.

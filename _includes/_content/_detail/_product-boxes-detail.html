@@ -1,0 +1,64 @@
+<!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row trim">
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-fittingproducts-detail"></div>
+  </section>
+</div>
+
+<script id="fittingproducts-detail-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      </figure>
+    
+      <div class="tsr-product-content">
+
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <header class="tsr-product-header">{{name}}</header>
+      
+        {{#if colors}}
+          <ul class="tsr-ee-product-colors tsr-product-colors">
+          {{#each colors}}
+            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
+        {{/if}}
+
+        {{#if special_price}}
+        <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-desc"></p>
+          {{/if}}
+        {{/if}}
+        <a href="#" class="tsr-ee-compare"> Võrdle </a>
+      </div>
+    </div>
+  </div>
+
+  {{/products}}
+</script>
+
+
+
+
+
+
+

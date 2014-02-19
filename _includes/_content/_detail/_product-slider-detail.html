@@ -1,8 +1,8 @@
 <section class="tsr-section-carousel-listing"> 
     <div class="container product">
-      <div class=" tsr-slides" id="content-placeholder-products"></div>
+      <div class="tsr-slides" id="content-placeholder-slider-detail"></div>
 
-      <script id="product-slider-template" type="text/x-handlebars-template">
+      <script id="slider-detail-template" type="text/x-handlebars-template">
       {{#products}}
       <a href="javascript:void(0);" class="tsr-module-product">
         {{#if ribbon}}
@@ -27,12 +27,12 @@
             </ul>
             <p class="tsr-product-desc">
             {{#if normal_price}}
-            Tavahind {{normal_price}} <br> Sinu võit 10 €
+            Tavahind {{normal_price}} €<br> Sinu võit 10 €
             {{/if}}
             </p>
             <p class="tsr-product-price tsr-ee-special-price-text">
             {{#if special_price}}
-            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
+            Soodushind <span class="tsr-ee-product-price">{{special_price}} €</span>
             {{/if}}
             </p>
             <button class="tsr-ee-compare btn btn-link"> Võrdle </button>

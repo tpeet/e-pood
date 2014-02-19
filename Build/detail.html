@@ -437,93 +437,6 @@
   </div>
 </section>
 
-<section class="tsr-ee-product-detail">
-  <div class="container" id="content-placeholder-detail"></div>
-  
-</section>
-
-<script id="product-detail-template" type="text/x-handlebars-template">
-
-{{#with products.[1]}}
-
-<div class="col-sm-5 tsr-ee-detailview">
-  {{#if firstflash}}
-  <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
-  {{/if}}
-  {{#if secondflash}}
-  <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-  {{/if}}
-
-<div id="js-imagerotator" class="js-imagerotator tsr-product-image">
-  <ul class="slides">
-    {{#each minipics_id}}
-      <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
-    {{/each}}
-  </ul>
-</div>
-
-  <div class="row tsr-ee-linkicons">
-    <div class="col-md-5" ><a href="#" class="tsr-ee-comments">Arvamused (5)</a></div>
-    <div class="col-md-3"><a href="#" class="tsr-ee-compare">Võrdle</a></div>
-    <div class="col-md-4"><a href="#" class="tsr-ee-favorite">Lemmik</a></div>
-  </div>
-</div>
-
-<div class="col-sm-7">
-  <div class="tsr-product-content">
-
-  <h1><small>{{name}}</small></h1>
-  <h1> {{{intro}}} </h1>
-  <h1 class="tsr-ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h1>
-
-    {{#if campaign}}
-    {{#each campaign}} 
-      <a href="#">{{this}} </a>
-    {{/each}}
-    {{/if}}
-
-    <p class="tsr-ee-upper-distance">Vali värv</p>
-    <ul class="tsr-ee-product-colors">
-    {{#if colors}}
-    {{#each colors}}
-      <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-    {{/each}}
-    {{/if}}
-    </ul>
-  
-    {{#if normal_price}}
-    <p class="tsr-product-price">Tavahind: {{normal_price}}
-    {{/if}}
-    {{#if special_price}}
-    <br>Sinu võit: 300 €</p>
-    <p class="tsr-ee-product-price">Soodushind: {{special_price}}</p>
-    {{/if}}
-
-    <div class="row tsr-ee-actions">
-      <div class="col-md-5">
-        <button class="tsr-btn tsr-btn-100  tsr-btn-buy"><i class="icon icon-osta"></i>Lisa ostukorvi</button>
-      </div>
-      <div class="col-md-7">
-        <p>Kaup kätte Tallinnas: <a href="#">Täna, 20.12.2013</a>
-        <br>
-        Müügil e-poes ja poodides (<a href="#">Vaata saadavust</a>)
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-{{/with}}
-</script>
-
-
-
-
-
-
-
-
-
 
 
 <section class="tsr-section-divider">
@@ -575,14 +488,14 @@
       <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
       <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
       <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
-      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted</a></li>
+      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted (5)</a></li>
     </ul>
   </div>
 </section>
 <section class="tsr-ee-more-info-tabscontent">
   <div class="container">
     <div class="tab-content">
-      <div class="tab-pane fade in active" id="general-info">
+      <div class="tab-pane fade " id="general-info">
         <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
         <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
         <p><strong>Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.</strong></p>
@@ -601,58 +514,6 @@
         <div id="content-placeholder-technical-data"></div>
 
         <script id="technical-data-template" type="text/x-handlebars-template">
-        {{#technical}}
-          <div class="col-sm-6">
-            <table class="foo table table-bordered">
-              <tbody>
-                <thead>
-                  <tr>
-                    <th colspan="3">{{heading}}</th>
-                  </tr>
-                </thead>
-                {{#each data}}
-                  <tr>
-                    <td><a href="javascript:void(0);"  data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}}</a></td>
-                    <td></td>
-                    <td>{{value}}</td>
-                  </tr>
-                {{/each}}
-              </tbody>
-            </table>
-          </div>
-        {{/technical}}
-        </script>
-      </div>
-      <div class="tab-pane fade" id="reviews">
-        <div id="content-placeholder-technical-data1"></div>
-
-        <script id="technical-data1-template" type="text/x-handlebars-template">
-        {{#technical}}
-          <div class="col-sm-6">
-            <table class="foo table table-bordered">
-              <tbody>
-                <thead>
-                  <tr>
-                    <th colspan="3">{{heading}}</th>
-                  </tr>
-                </thead>
-                {{#each data}}
-                  <tr>
-                    <td>{{index}}</td>
-                    <td><a href="javascript:void(0);" class="icon-helptsicon48px"  data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} "></a></td>
-                    <td>{{value}}</td>
-                  </tr>
-                {{/each}}
-              </tbody>
-            </table>
-          </div>
-        {{/technical}}
-        </script>
-      </div>
-      <div class="tab-pane fade" id="similar-products">
-        <div id="content-placeholder-technical-data2"></div>
-
-        <script id="technical-data2-template" type="text/x-handlebars-template">
         {{#technical}}
           <div class="col-sm-6">
             <table class="table table-bordered table-hover">
@@ -674,6 +535,142 @@
         {{/technical}}
         </script>
       </div>
+      <div class="tab-pane fade in active" id="reviews">
+        <section class="tsr-ee-reviews">
+  <div class="container tsr-forms">
+    <h1><small>Lisa oma arvamus</small></h1>
+    <p>Mis on toote juures hea? Mis ei ole hea?</p>
+    <form action="">
+      <div class="row">
+        <div class="col-sm-4">
+           <label class="sr-only" for="Nimi">Nimi</label>
+          <input type="text" value="Nimi" id="Nimi">
+          <label class="sr-only" for="E-post">E-post</label>
+          <input type="text" value="E-post" id="E-post">
+        </div>
+        <div class="col-sm-8">
+          <textarea>Arvamus</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
+        </div>
+        <div class="col-sm-4">
+          <label for="check-2"><input type="checkbox" id="check-2" /> <span class="tsr-ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
+        </div>
+        <div class="col-sm-4  text-right">
+          <label for="check-1">Hinda toodet <input type="number" data-clearable="Tühjenda" name="rating" id="rating" class="rating" /></label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-5" class="captcha">
+          <img src="assets/img/other/captcha.png" alt="">
+          <i class="icon-synctsicon48px"></i>
+          <label class="sr-only" for="captcha">Kontrollkood</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" id="captcha" name="captcha" />
+        </div>
+        <div class="col-sm-3  text-right">
+          <button class="tsr-btn tsr-btn-purple text-right tsr-btn-100">Saada arvamus</button>
+        </div>
+        <p><small>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</small></p>
+        <p><small>Palume mitte kirjutada vulgraarsusi ega mõttetusi. Me loeme postitusi ja jätame endale õiguse redigeerida või kõrvaldada kohatuid kommentaare.</small></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+        <section class="tsr-ee-reviewed-initial">
+  <div class="container tsr-ee-arrowbox">
+    <h6>Tiiu</h6>
+    <p>16.12.2013 9:38</p>
+    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
+  </div>
+</section>
+<section class="tsr-ee-reviewed-answer answer-first">
+  <div class="container tsr-ee-arrowbox">
+    <h6>Tiiu</h6>
+    <p>16.12.2013 9:38</p>
+    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
+  </div>
+</section>
+<section class="tsr-ee-reviewed-answer answer-second">
+  <div class="container tsr-ee-arrowbox">
+    <h6>Tiiu</h6>
+    <p>16.12.2013 9:38</p>
+    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
+  </div>
+</section>
+      </div>
+      <div class="tab-pane fade" id="similar-products">
+        <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row trim">
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-fittingproducts-detail"></div>
+  </section>
+</div>
+
+<script id="fittingproducts-detail-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <div class="col-xs-12 col-sm-3 col-md-3">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+      {{/if}}
+      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <figure class="tsr-product-image">
+      <a class='current' href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas></a>
+      </figure>
+    
+      <div class="tsr-product-content">
+
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <header class="tsr-product-header">{{name}}</header>
+      
+        {{#if colors}}
+          <ul class="tsr-ee-product-colors tsr-product-colors">
+          {{#each colors}}
+            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
+        {{/if}}
+
+        {{#if special_price}}
+        <p class="tsr-product-price tsr-ee-special-price-text">Soodushind <span class="tsr-ee-product-price">{{special_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-desc"></p>
+          {{/if}}
+        {{/if}}
+        <a href="#" class="tsr-ee-compare"> Võrdle </a>
+      </div>
+    </div>
+  </div>
+
+  {{/products}}
+</script>
+
+
+
+
+
+
+
+
+      </div>
     </div>
   </div>
 </section> 
@@ -686,17 +683,6 @@
   </header>
 </section>
 
-<section class="tsr-ee-full-slider">
-  <div class="container">
-    <div class="flexslider tsr-ee-additional-image-lg">
-      <ul class="slides">
-          <li><img src="assets/img/products/samsung_f8500_front_silver.jpg" /></li>
-          <li><img src="assets/img/products/samsung_f8500_Right-Angle_silver.jpg" /></li>
-          <li><iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li>
-      </ul>
-  </div>
-  </div>
-</section>
 
 <section class="tsr-section-divider tsr-color-purple">
   <header class="container">
@@ -705,54 +691,6 @@
     </span>    
   </header>
 </section>
-
-<section class="tsr-section-carousel-listing"> 
-    <div class="container product">
-      <div class=" tsr-slides" id="content-placeholder-products"></div>
-
-      <script id="product-slider-template" type="text/x-handlebars-template">
-      {{#products}}
-      <a href="javascript:void(0);" class="tsr-module-product">
-        {{#if ribbon}}
-          <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-        {{/if}}
-         <button class="btn btn-link"><i class="tsr-ee-product-box-favorite"></i></button>
-        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
-        <div class="tsr-product-content">
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <header class="tsr-product-header">{{name}}</header>
-            <ul class="tsr-ee-product-colors tsr-product-colors">
-            {{#if colors}}
-            {{#each colors}}
-              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
-            {{/each}}
-            {{/if}}
-            </ul>
-            <p class="tsr-product-desc">
-            {{#if normal_price}}
-            Tavahind {{normal_price}} <br> Sinu võit 10 €
-            {{/if}}
-            </p>
-            <p class="tsr-product-price tsr-ee-special-price-text">
-            {{#if special_price}}
-            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
-            {{/if}}
-            </p>
-            <button class="tsr-ee-compare btn btn-link"> Võrdle </button>
-        </div>
-      </a>
-      {{/products}}
-      </script>
-
-    </div>
-</section>
-
-<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
 
 
 <section class="tsr-section-support tsr-secondary">
@@ -908,10 +846,14 @@
     <script src="assets/js/handlebars-v1.3.0.js"></script>
     <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-list.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script>
     <script src="assets/js/handlebars/hbs-offers.hbs"></script>
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-slider-visited.hbs"></script>
     <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
     <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
@@ -947,8 +889,8 @@
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
     <script src="assets/tsr-js/tsr-header.js"></script>
     <script src="assets/tsr-js/tsr-footer.js"></script>
-    <script src="assets/tsr-js/tsr-carousel-listing.js"></script>
-<!--     // <script src="assets/js/_tsr-ee-js/tsr-ee-detail-carousel-listing.js"></script> -->
+<!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
+    <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
     <script src="assets/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/tsr-js/tsr-forms.js"></script>
@@ -959,6 +901,7 @@
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
+    <script src="assets/js/_tsr-ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
 
 <script>
   $("[data-toggle='popover']").popover();

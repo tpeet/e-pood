@@ -1,11 +1,7 @@
 var source   = $("#technical-data-template").html();
 var template = Handlebars.compile(source);
 
-var source1   = $("#technical-data1-template").html();
-var template1 = Handlebars.compile(source1);
 
-var source2   = $("#technical-data2-template").html();
-var template2 = Handlebars.compile(source2);
 
 var data = { technical: [
   {
@@ -385,5 +381,3 @@ var data = { technical: [
 
 
 $("#content-placeholder-technical-data").html(template(data));
-$("#content-placeholder-technical-data1").html(template1(data));
-$("#content-placeholder-technical-data2").html(template2(data));

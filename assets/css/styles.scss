@@ -12,6 +12,7 @@
 //**********************************
 /* @include _normalize.scss */
 /* @include _scaffolding.scss */ 
+/* @include _glyphicons.scss */
 /* @include _grid.scss */
 /* @include _print.scss */
 /* @include _type.scss */
@@ -20,7 +21,8 @@
 /* @include _tables.scss */
 /* @include _popovers.scss */
 /* @include _buttons.scss */
-
+/* @include _forms.scss */
+/* @include _wells.scss */
 
 
 // TELIA SONERA
@@ -51,6 +53,22 @@
 
 .container { // in mixins and variables removed padding on mobile
     max-width: 960px;
+}
+
+%section-bordered-white {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: #fff;
+  }
+
+%section-bordered-gray {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: $lightgrey-c;
+  }
+
+%section-next {
+  margin-top: -1px;
 }
 // WORK IN PROGRESS PARTS
 //**********************************
@@ -177,6 +195,78 @@ section.tsr-ee-more-info-tabscontent {
   }
 }
 
+.tsr-forms {
+  // .tsr-checkbox .tsr-checkboxStyled {
+  //   margin-bottom: 30px;
+  // }
+
+input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+  label {
+    font-weight: normal;
+    display: block; 
+  }
+
+  .rating-input {
+    display: inline-block;
+    margin-left: 20px;
+    .icon {
+      color: $purple-c;
+      font-size: 18px;
+      margin-right: 2px;
+    }
+  }
+}
+
+.captcha * {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+// review
+section.tsr-ee-reviewed-initial {
+  @extend %section-bordered-white;
+}
+section.tsr-ee-reviewed-answer {
+  @extend %section-bordered-gray;
+  @extend %section-next;
+}
+.tsr-ee-arrowbox {
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+.tsr-ee-arrowbox:after, .tsr-ee-arrowbox:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tsr-ee-arrowbox:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: $lightgrey-c;
+  border-width: 15px;
+  margin-left: -15px;
+}
+.tsr-ee-arrowbox:before {
+  border-color: rgba(71, 82, 89, 0);
+  border-top-color: $lightgrey-t;
+  border-width: 16px;
+  margin-left: -16px;
+}
 
 //GENERAL
 // Image multiply

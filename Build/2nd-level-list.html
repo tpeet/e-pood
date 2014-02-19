@@ -526,11 +526,11 @@
 <!-- Product boxes -->
 <div class="row trim">
   <section class="tsr-section-productlist">
-    <div class="product" id="content-placeholder-products"></div>
+    <div class="product" id="content-placeholder-product-list"></div>
   </section>
 </div>
 
-<script id="product-slider-template" type="text/x-handlebars-template">
+<script id="product-list-template" type="text/x-handlebars-template">
 
   {{#products}}
   <div class="row">
@@ -792,10 +792,14 @@
     <script src="assets/js/handlebars-v1.3.0.js"></script>
     <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-list.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script>
     <script src="assets/js/handlebars/hbs-offers.hbs"></script>
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-product-slider-visited.hbs"></script>
     <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
     <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
@@ -831,8 +835,8 @@
     <script src="assets/tsr-js/tsr-communication-primary.js"></script>
     <script src="assets/tsr-js/tsr-header.js"></script>
     <script src="assets/tsr-js/tsr-footer.js"></script>
-    <script src="assets/tsr-js/tsr-carousel-listing.js"></script>
-<!--     // <script src="assets/js/_tsr-ee-js/tsr-ee-detail-carousel-listing.js"></script> -->
+<!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
+    <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
     <script src="assets/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/tsr-js/tsr-forms.js"></script>
@@ -843,6 +847,7 @@
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
+    <script src="assets/js/_tsr-ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
 
 <script>
   $("[data-toggle='popover']").popover();

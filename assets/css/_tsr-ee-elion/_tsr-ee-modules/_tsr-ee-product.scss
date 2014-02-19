@@ -1,7 +1,10 @@
 // resetting hardcoded values from tsr
 
-.tsr-btn-view-all span {
-  font-weight: normal;
+.tsr-btn-view-all {
+  margin: -1px auto;
+  span {
+    font-weight: normal;
+  }
 }
 
 .tsr-module-product {
@@ -30,7 +33,6 @@ section.tsr-ee-section-product-boxes {
 
 .tsr-section-divider {
   margin-top: -1px;
-  z-index: 1;
 }
 
 .tsr-ee-special-price-text {
