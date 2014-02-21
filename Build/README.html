@@ -18,7 +18,8 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   - _tooltip.scss
   - _popover.scss
   - _tabs.scss
-  - _buttons.scss</p>
+  - _buttons.scss
+  - _utilities.scss</p>
 
 <p>Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
@@ -26,19 +27,28 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
   - _bs-ee-navs.scss (tabs ja nav pills)</p>
 
+<p>js bootstrapist:
+  - popover
+  - tooltip (vaja popoverile)
+  - tab</p>
+
+<p>js muud pluginad ja kogumikud:
+  - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures
+  - Froogaloop ja fitvid - Vimeo api Flexsliderile
+  - Paintbrush - piltide multiply effekt. Sõltub Common js-st.
+  - srcset - image replacement mediaqueries
+  - modernizr - rootsist
+  - enquire - rootsist, js brekapointid
+  - jquery debouncing - rootsist
+  - MatchMedia - rootsist</p>
+
 <h2>Sisu</h2>
 
 <h3>Valmis on:</h3>
 <ul>
-  <li>Üldine 
-    <ul>
-      <li>fontide suurused kohandatud telefon-tahvel-desktop (väike tahvel ja telefon suurendatud fondiga). Üle kirjutatud rootslaste hard-coded tekstisuurused, tuleb teha jätkuvalt edasi kui komponente lisandub sealt. Süntaks: em(15) annab 15px emides.</li>
-      <li>BS3 gridi sisse viidud muutused, et see vastaks rootslaste layoudile (muudetud sm konteineri padding, gutter).</li>
-    </ul>
-  </li>
   <li>Avaleht 
     <ul>
-      <li>Avaslaider (muuta veel et taustapilt poleks css-s)</li>
+      <li>Avaslaider </li>
       <li>Tooteklotsidega avamenüü</li>
       <li>Tooteslaider</li>
       <li>Sisselogitud kasutaja - vaatamiseks vajuta &#8220;sisene&#8221; nuppu (NB! tooteslaideris on kehv ribboneid kasutada)</li>
@@ -49,8 +59,12 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
       <li>Vertikaalne akordionmenüü 2 tasandit, hidden on small</li>
       <li>Leivapuru (BS põhjal)</li>
       <li>Tooteklotside vaade - sinna saad kui vajutad avalehel p]hilinki, nt Arvutid ja lisad (puudu filter, ikoone)</li>
-      <li>Toote detailvaade</li>
       <li>Toote listvaade (custom, TSR põhjal)</li>
+    </ul>
+  </li>
+  <li>3rd level 
+    <ul>
+      <li>Toote detailvaade desktopile</li>
     </ul>
   </li>
 </ul>
@@ -58,30 +72,31 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 <h3>Töös on:</h3>
 <ul>
   <li>3rd level, detailvaade responsiveks</li>
-  <li>3rd level, arvamuste osa</li>
+  <li>2nd level päise muutused, bannerreklaam</li>
 </ul>
 
 <h3>Vaja teha veel esimese etapi raames:</h3>
 <ul>
   <li>Päis Viljarilt järgmine nädal</li>
-  <li>Multiply efekt toodetele Aarelt</li>
-  <li>H1 kuni H6 suurused Ahtolt, välja vahetada </li>
-  <li>2nd level lehe ülemine ots korrastada, lisa võrdlus ja ikoonid </li>
+  <li>H1 kuni H6 lisada, kogu tüpograafia on nüüd Ahtolt käes </li>
+  <li>Soodushind-tavahind esitus</li>
+  <li>2nd level html-reklaam</li>
+  <li>Avaslaider kasutab css-background image, tõsta htmli </li>
   <li>Html-css refaktoreering</li>
   <li>Responsive images serveerimine javascript</li>
   <li>Require js lisada javascripti optimeeritud serveerimiseks, dns</li>
   <li>Proovida kasutada Code Blocksi et serveerida mobiilidele ainult mobiili-cssi</li>
-  <li>Avaslaider kasutab css-background image, tõsta htmli </li>
   <li>Üle vaadata ja parandada, mis katki on läinud</li>
   <li>Brauseritestid</li>
   <li>Taas üle vaadata ja parandada, mis bugid on leitud</li>
   <li>Backend kood külge panna</li>
-  <li>Üle vaadtata ja parandada, mis katki on läinud</li>
+  <li>Üle vaadata ja parandada, mis katki on läinud</li>
 </ul>
 
 <h3>Andmesisestuses muutub kindlasti</h3>
 <ul>
   <li>Avaslaideri sisestus (lisandub tekstiväli või mitu)</li>
+  <li>2nd level reklaami sisestus (pilt ja tekst eraldi)</li>
   <li>Lindi ja rombi sisestus</li>
   <li>Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.</li>
   <li>Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg </li>
@@ -92,6 +107,7 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Mis on rombide loogika/mis tekst sinna võib minna?</li>
   <li>Mis on lintide loogika, mis tekst sinna võib minna?</li>
   <li>Misasi läheb avalehe alumisse slaiderisse täpselt?</li>
+  <li>Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?</li>
   <li>Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?</li>
   <li>Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.</li>
 </ul>
@@ -111,6 +127,11 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Tootevärvid klikatavana (vajab veel tööd)</li>
   <li>Elioni logo skaleeruva svg-na, fallback png</li>
   <li>klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi</li>
+  <li>rating</li>
+  <li>kolmnurknoolega sektsioon </li>
+  <li>tootekarusell pisipiltidega</li>
+  <li>piltide multiply (paintbrush js)</li>
+  <li>tüpograafia </li>
 </ul>
 
 <h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>
@@ -134,7 +155,6 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
     </ul>
   </li>
   <li>meediapäringitele vastavate pildisuurste serveerimiseks <a href="https://github.com/borismus/srcset-polyfill">srcset-polyfill</a></li>
-  <li><a href="http://angular-ui.github.io/bootstrap/">angular-ui bootstrap</a></li>
 </ul>
 
 <h3>Muudatused rootsi koodi</h3>
@@ -148,5 +168,7 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 <h3>Do-not-forget</h3>
 <ul>
   <li>Korrasta javascript footeris (includes), lisa require.js. </li>
-  <li>Kas image replacement või ei ja kustmaalt. Praegu küljes.</li>
+  <li>Kustmaalt image replacement.</li>
+  <li>Tabeli css on korrastamata</li>
+  <li>Kõrvalda horisontaalne scrollbar</li>
 </ul>

@@ -1,12 +1,5 @@
 // resetting hardcoded values from tsr
 
-.tsr-btn-view-all {
-  margin: -1px auto;
-  span {
-    font-weight: normal;
-  }
-}
-
 .tsr-module-product {
   font-size: inherit;
   color: $text-color;
@@ -57,8 +50,7 @@ section.tsr-ee-section-product-boxes {
     border: none;
   }
   .tsr-ee-product-box-favorite {
-    @extend .favorite;
-    font-size: em(25);
+    @extend .tsr-ee-favorite;
     position: absolute;
     right: em(10);
     left: auto;

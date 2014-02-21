@@ -22,7 +22,7 @@
 /* @include _popovers.scss */
 /* @include _buttons.scss */
 /* @include _forms.scss */
-/* @include _wells.scss */
+/* @include _utilities.scss */
 
 
 // TELIA SONERA
@@ -46,6 +46,7 @@
 /* @include _tsr-ee-frontpage.scss */
 /* @include _tsr-ee-2nd-level-list.scss */
 /* @include _flexslider.css */
+/* @include _banner-ad.scss */
 
 
 // TEMPORARY HACKS, TO BE REMOVED
@@ -176,7 +177,7 @@ section.tsr-ee-more-info-tabs {
 
 }
 section.tsr-ee-more-info-tabscontent {
-    border-top: 1px solid $lightgrey-t;
+  border-top: 1px solid $lightgrey-t;
   background: white;
   margin-top: -1px;
   margin-bottom: 20px;
@@ -214,15 +215,15 @@ input {
     font-weight: normal;
     display: block; 
   }
+}
 
-  .rating-input {
-    display: inline-block;
-    margin-left: 20px;
-    .icon {
-      color: $purple-c;
-      font-size: 18px;
-      margin-right: 2px;
-    }
+.rating-input {
+  display: inline-block;
+  margin-left: 20px;
+  .icon {
+    color: $purple-c;
+    font-size: 18px;
+    margin-right: 2px;
   }
 }
 
@@ -232,61 +233,191 @@ input {
 }
 
 // review
-section.tsr-ee-reviewed-initial {
-  @extend %section-bordered-white;
-}
-section.tsr-ee-reviewed-answer {
-  @extend %section-bordered-gray;
-  @extend %section-next;
-}
-.tsr-ee-arrowbox {
+
+%arrowbox {
   position: relative;
   border-bottom: 1px solid transparent;
+  &:after,
+  &:before {
+    top: 100%;
+
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 15px;
+    margin-left: -15px;
+  }
+  &:before {
+    border-color: rgba(71, 82, 89, 0);
+    border-width: 16px;
+    margin-left: -16px;
+  }
 }
-.tsr-ee-arrowbox:after, .tsr-ee-arrowbox:before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;
+section.tsr-ee-reviewarea {
+  margin-top: 15px;
+  margin-bottom: -21px;
+    article {
+    margin-top: -1px;
+  }
+  .rating-input {
+    margin-top: 15px;
+  }
 }
 
-.tsr-ee-arrowbox:after {
-  border-color: rgba(255, 255, 255, 0);
-  border-top-color: $lightgrey-c;
-  border-width: 15px;
-  margin-left: -15px;
+.tsr-ee-reviewed-initial {
+  @extend %section-bordered-white;
+  .container {
+  padding-top: 10px;
+  @extend %arrowbox;
+  &:after,
+  &:before {
+    left: 40px;
+  }
+  &:after {
+    border-top-color: #fff;
+    }
+  &:before {
+    border-top-color: $lightgrey-t;
+    }
+  }
+  &:last-of-type .container {
+      &:after,
+      &:before {
+        border: none;
+      }
+    }
 }
-.tsr-ee-arrowbox:before {
-  border-color: rgba(71, 82, 89, 0);
-  border-top-color: $lightgrey-t;
-  border-width: 16px;
-  margin-left: -16px;
+.tsr-ee-reviewed-answer {
+  @extend %section-bordered-gray;
+  .container {
+  padding-left: 20px;
+  padding-top: 10px;
+  @extend %arrowbox;
+  &:after,
+  &:before {
+    left: 40px;
+  }
+  &:after {
+    border-top-color: $lightgrey-c;
+    }
+  &:before {
+    border-top-color: $lightgrey-t;
+    }
+  }
+  &:last-of-type .container {
+    &:after,
+    &:before {
+      border: none;
+    }
+  }
 }
 
+  .tsr-ee-review-body {
+    display: table;
+  }
+
+  .tsr-ee-review-respond {
+    display: table-cell;
+    vertical-align: bottom;
+    float: none;
+  }
+
+.tsr-ee-review-add,
+.tsr-ee-review-answer-add {
+  margin-bottom: 15px;
+
+  .tsr-forms {
+    .tsr-ee-input-aside {
+      textarea {
+        min-height: 92px;
+      }
+      input[type='text']:last-of-type {
+        margin-top: 15px;
+      }
+    }
+    .tsr-ee-action-submit {
+      margin-top: 20px;
+    }
+    .tsr-ee-captcha {
+      .btn {
+        font-size: 20px;
+        margin: 0 15px;
+      }
+      input {
+        display: inline;
+        width: auto;
+      }
+    }
+  }
+}
+
+.tsr-ee-review-answer-add {
+  @extend %section-bordered-gray;
+  margin-bottom: -1px;
+}
+
+.tsr-forms input[type='text'], 
+.tsr-forms input[type='password'] {
+  padding: 18px 0;
+  &:first-of-type {
+    margin-top: 1px;
+  }
+
+}
 //GENERAL
 // Image multiply
-.multiply {
+.tsr-product-image {
+  position: relative;
+}
+.tsr-module-product {
+  &:hover {
+    .multiply {
+      display: none;
+    }
+  }
+}
+.original {
   position:relative;
   z-index:0;
 }
 
-.pildil6uend{
+.multiply{
     position:absolute;
-    display:inline;
-    z-index:1;
+    z-index:0;
     cursor:pointer;
-    // left: 50%;
-    // margin-left: -5em;
     left: 0;
-    top: 0;
 }
 
+.tsr-ee-comparision {
+  display: table;
+  width: 100%;
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  }
+}
 
+.tsr-ee-comparision-boxes {
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  float: right;
+  display: inline-block;
+  padding: 2px;
+  background: transparent;
+  border: 1px solid $lightgrey-t;
+  min-height: 35px;
+  min-width: 35px;
+  margin-left: 6px;
+}
 
 ////// INTERNET EXPLORER 8
 

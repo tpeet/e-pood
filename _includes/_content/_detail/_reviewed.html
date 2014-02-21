@@ -1,21 +1,170 @@
-<section class="tsr-ee-reviewed-initial">
-  <div class="container tsr-ee-arrowbox">
-    <h6>Tiiu</h6>
-    <p>16.12.2013 9:38</p>
-    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
-  </div>
-</section>
-<section class="tsr-ee-reviewed-answer answer-first">
-  <div class="container tsr-ee-arrowbox">
-    <h6>Tiiu</h6>
-    <p>16.12.2013 9:38</p>
-    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
-  </div>
-</section>
-<section class="tsr-ee-reviewed-answer answer-second">
-  <div class="container tsr-ee-arrowbox">
-    <h6>Tiiu</h6>
-    <p>16.12.2013 9:38</p>
-    <p>Tere! Kas selle telekaga saab ka USB pulgale salvestada?</p>
-  </div>
-</section>
+<section class="tsr-ee-reviewarea">
+  <div id="content-placeholder-reviews-detail"></div>
+  <script id="reviews-detail-template" type="text/x-handlebars-template">
+  {{#reviews}}
+    <section class="tsr-ee-reviews">
+      <article class="tsr-ee-reviewed-initial">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h6>{{name}}</h6>
+              <p class="text-muted">{{date}}</p>
+            </div>
+            <div class="col-sm-5 text-right">
+            {{#if starred}}
+              <input type="number" name="rating" id="rating1" class="rating" value="{{starred}}" />
+            {{/if}}
+            </div>
+          </div>
+          <div class="row tsr-ee-review-body">
+            <div class="col-sm-11">
+              <p>{{{body}}}</p>
+            </div>
+            <div class="col-sm-1 tsr-ee-review-respond text-right pull-right">
+              <p class="js-slidetoggle">
+                <a href="#">Vasta</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="tsr-ee-review-answer-add js-togglable" style="display: none;">
+          <div class="container tsr-forms">
+            <div class="row">
+              <div class="col-xs-10">
+                <h4>Vasta</h4>
+                <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
+              </div>
+              <div class="col-xs-2 text-right">
+                <img src="<!-- @path like.png -->" alt="">
+              </div>
+            </div>
+            <form action="">
+              <div class="row tsr-ee-input-aside">
+                <div class="col-xs-4">
+                  <label class="sr-only" for="Nimi">Nimi</label>
+                  <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
+                  <label class="sr-only" for="E-post">E-post</label>
+                  <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
+                </div>
+                <div class="col-xs-8">
+                  <label class="sr-only" for="E-post">Arvamus</label>
+                  <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
+                </div>
+                <div class="col-xs-4">
+                  <label for="check-2"><input type="checkbox" id="check-2" /> <span class="tsr-ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
+                </div>
+                <div class="col-xs-4  text-right">
+                  <label for="rating-1">Hinda toodet <input type="number" data-clearable="Tühjenda" name="rating" id="rating-1" class="rating" /></label>
+                </div>
+              </div>
+              <div class="row tsr-ee-action-submit">
+                <div class="col-xs-4">
+                <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
+
+                </div>
+                <div class="col-xs-5 tsr-ee-captcha">
+                  <img src="assets/img/other/captcha.png" alt="">
+                  <button class="btn btn-link"><i class="icon-synctsicon48px"></i></button>
+                  <label class="sr-only" for="captcha">Kontrollkood</label>
+                  <input type="text" id="captcha" name="captcha" />
+                </div>
+                <div class="col-xs-3  text-right">
+                  <button class="tsr-btn tsr-btn-purple text-right">Saada arvamus</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </article>
+
+
+
+      {{#each answer}}
+      <article class="tsr-ee-reviewed-answer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <h6>{{name}}</h6>
+              <p class="text-muted">{{date}}</p>
+            </div>
+            <div class="col-sm-5 text-right">
+            {{#if starred}}
+              <input type="number" name="rating" id="rating1" class="rating" value="{{starred}}" />
+            {{/if}}
+            </div>
+          </div>
+          <div class="row tsr-ee-review-body">
+            <div class="col-sm-11">
+              <p>{{{body}}}</p>
+            </div>
+            <div class="col-sm-1 tsr-ee-review-respond text-right pull-right">
+              <p class="js-slidetoggle">
+                <a href="#">Vasta</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="tsr-ee-review-answer-add js-togglable" style="display: none;">
+          <div class="container tsr-forms">
+            <div class="row">
+              <div class="col-xs-10">
+                <h4>Vasta</h4>
+                <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
+              </div>
+              <div class="col-xs-2 text-right">
+                <img src="<!-- @path like.png -->" alt="">
+              </div>
+            </div>
+            <form action="">
+              <div class="row tsr-ee-input-aside">
+                <div class="col-xs-4">
+                  <label class="sr-only" for="Nimi">Nimi</label>
+                  <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
+                  <label class="sr-only" for="E-post">E-post</label>
+                  <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
+                </div>
+                <div class="col-xs-8">
+                  <label class="sr-only" for="E-post">Arvamus</label>
+                  <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
+                </div>
+                <div class="col-xs-4">
+                  <label for="check-2"><input type="checkbox" id="check-2" /> <span class="tsr-ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
+                </div>
+                <div class="col-xs-4  text-right">
+                  <label for="rating-1">Hinda toodet <input type="number" data-clearable="Tühjenda" name="rating" id="rating-1" class="rating" /></label>
+                </div>
+              </div>
+              <div class="row tsr-ee-action-submit">
+                <div class="col-xs-4">
+                <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
+
+                </div>
+                <div class="col-xs-5 tsr-ee-captcha">
+                  <img src="assets/img/other/captcha.png" alt="">
+                  <button class="btn btn-link"><i class="icon-synctsicon48px"></i></button>
+                  <label class="sr-only" for="captcha">Kontrollkood</label>
+                  <input type="text" id="captcha" name="captcha" />
+                </div>
+                <div class="col-xs-3  text-right">
+                  <button class="tsr-btn tsr-btn-purple text-right">Saada arvamus</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </article>
+      {{/each}}
+    </section>
+  {{/reviews}}
+  </script>
+  </section>

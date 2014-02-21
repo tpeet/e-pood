@@ -1,5 +1,5 @@
 <!doctype html>
-<html dir="ltr" lang="en" xmlns:ng="http://angularjs.org" data-ng-app="myApp">
+<html dir="ltr" lang="en">
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
@@ -729,48 +729,34 @@
     <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-slider-visited.hbs"></script>
     <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
+    <script src="assets/js/handlebars/hbs-reviews.hbs"></script>
     <script src="assets/js/srcset.min.js"></script>
-    <script src="assets/js/jquery-blend-master/jquery.blend.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/paintbrush.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-ID']);
-	_gaq.push(['_setDomainName', 'domain.com']);
-	_gaq.push(['_trackPageview']);
-	
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-</script>
-    <script src="assets/tsr-js/libs/enquire.min.js"></script>
-    <script src="assets/tsr-js/libs/jquery.flexslider.js"></script>
-    <script src="assets/tsr-js/libs/jquery.debouncing.js"></script>
-    <script src="assets/tsr-js/polyfills/matchMedia.js"></script>
-    <script src="assets/tsr-js/polyfills/matchMedia.addListener.js"></script>
+    <script src="assets/js/tsr-js/libs/enquire.min.js"></script>
+    <script src="assets/js/tsr-js/libs/jquery.flexslider.js"></script>
+    <script src="assets/js/tsr-js/libs/jquery.debouncing.js"></script>
+    <script src="assets/js/tsr-js/polyfills/matchMedia.js"></script>
+    <script src="assets/js/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
     <script src="assets/js/bootstrap-js/tab.js"></script>
     <script src="assets/js/bootstrap-js/tooltip.js"></script>
     <script src="assets/js/bootstrap-js/popover.js"></script>
 
-    <script src="assets/tsr-js/tsr-core.js"></script>
-    <script src="assets/tsr-js/tsr-communication-primary.js"></script>
-    <script src="assets/tsr-js/tsr-header.js"></script>
-    <script src="assets/tsr-js/tsr-footer.js"></script>
+    <script src="assets/js/tsr-js/tsr-core.js"></script>
+    <script src="assets/js/tsr-js/tsr-communication-primary.js"></script>
+    <script src="assets/js/tsr-js/tsr-header.js"></script>
+    <script src="assets/js/tsr-js/tsr-footer.js"></script>
 <!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
     <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
-    <script src="assets/tsr-js/tsr-productAndService-listing.js"></script>
-    <script src="assets/tsr-js/tsr-forms.js"></script>
-    <script src="assets/tsr-js/tsr-filter.js"></script>
-    <script src="assets/tsr-js/tsr-mediaTable.js"></script>
-    <script src="assets/tsr-js/tsr-attention.js"></script>
+    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
+    <script src="assets/js/tsr-js/tsr-forms.js"></script>
+    <script src="assets/js/tsr-js/tsr-filter.js"></script>
+    <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
+    <script src="assets/js/tsr-js/tsr-attention.js"></script>
 
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
@@ -778,12 +764,23 @@
     <script src="assets/js/_tsr-ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
 
 <script>
-  $("[data-toggle='popover']").popover();
-  $("[data-toggle='popover']").on('click', function (e) {
-    $("[data-toggle='popover']").not(this).popover('hide');
+$('[data-toggle="popover"]').popover();
+$('body').on('click', function (e) {
+  $('[data-toggle="popover"]').each(function () {
+      //the 'is' for buttons that trigger popups
+      //the 'has' for icons within a button that triggers a popup
+      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+          $(this).popover('hide');
+      }
   });
+});
 
-      // $('img').blend({mode: 'multiply', adjustment: 'rgb(114, 25, 219)'});
+$('.js-slidetoggle').click(function(e) {
+  $(this).parents().next('.js-togglable').slideToggle('slow');
+  e.preventDefault();
+});
+
+
 </script>
 
 

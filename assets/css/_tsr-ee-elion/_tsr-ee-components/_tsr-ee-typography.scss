@@ -27,7 +27,19 @@ $browser-context: 15.5; // Default
   @return #{$pixels/$context}em;
 }
 
+h4 {
+  font-weight: normal;
+}
 
+h1 {
+  letter-spacing: 0.00021em;
+}
+h2 {
+  letter-spacing: 0.00038em;
+}
+h3 {
+  letter-spacing: 0.00011em;
+}
   h1 a,
   h2 a,
   h3 a,

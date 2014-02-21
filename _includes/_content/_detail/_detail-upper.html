@@ -18,7 +18,7 @@
 <div id="js-imagerotator" class="js-imagerotator tsr-product-image">
   <ul class="slides">
     {{#each minipics_id}}
-      <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg" /></li>
+      <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg"></li>
     {{/each}}
   </ul>
 </div>
@@ -27,15 +27,17 @@
     <div class="col-md-5" ><a href="#" class="tsr-ee-comments">Arvamused (5)</a></div>
     <div class="col-md-3"><a href="#" class="tsr-ee-compare">Võrdle</a></div>
     <div class="col-md-4"><a href="#" class="tsr-ee-favorite">Lemmik</a></div>
+    <div class="col-md-4 text-left"><img src="<!-- @path like.png -->" alt=""></div>
   </div>
+  
 </div>
 
 <div class="col-sm-7">
   <div class="tsr-product-content">
 
-  <h1><small>{{name}}</small></h1>
-  <h1> {{{intro}}} </h1>
-  <h1 class="tsr-ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h1>
+  <h2><small>{{name}}</small></h2>
+  <h2> {{{intro}}} </h2>
+  <h2 class="tsr-ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h2>
 
     {{#if campaign}}
     {{#each campaign}} 
@@ -61,13 +63,13 @@
     {{/if}}
 
     <div class="row tsr-ee-actions">
-      <div class="col-md-5">
+      <div class="col-md-5 text-center">
         <button class="tsr-btn tsr-btn-100  tsr-btn-buy"><i class="icon icon-osta"></i>Lisa ostukorvi</button>
+        <br>
+        <a href="#">Vaata saadavust esindustes</a>
       </div>
       <div class="col-md-7">
-        <p>Kaup kätte Tallinnas: <a href="#">Täna, 20.12.2013</a>
-        <br>
-        Müügil e-poes ja poodides (<a href="#">Vaata saadavust</a>)
+        <p>Kaup kätte Tallinnas: <br> <a href="#">Täna, 20.12.2013</a>
         </p>
       </div>
     </div>

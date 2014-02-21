@@ -19,6 +19,7 @@ Bootstrapist on lisatud:
   - _popover.scss
   - _tabs.scss
   - _buttons.scss
+  - _utilities.scss
 
 Bootsrapist on muudetud ja lisatud:
   - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
@@ -26,14 +27,26 @@ Bootsrapist on muudetud ja lisatud:
   - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
   - _bs-ee-navs.scss (tabs ja nav pills)
 
+js bootstrapist:
+  - popover
+  - tooltip (vaja popoverile)
+  - tab
+
+js muud pluginad ja kogumikud:
+  - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures
+  - Froogaloop ja fitvid - Vimeo api Flexsliderile
+  - Paintbrush - piltide multiply effekt. Sõltub Common js-st.
+  - srcset - image replacement mediaqueries
+  - modernizr - rootsist
+  - enquire - rootsist, js brekapointid
+  - jquery debouncing - rootsist
+  - MatchMedia - rootsist
+
 ## Sisu
 
 ### Valmis on:
-- Üldine 
-  - fontide suurused kohandatud telefon-tahvel-desktop (väike tahvel ja telefon suurendatud fondiga). Üle kirjutatud rootslaste hard-coded tekstisuurused, tuleb teha jätkuvalt edasi kui komponente lisandub sealt. Süntaks: em(15) annab 15px emides.
-  - BS3 gridi sisse viidud muutused, et see vastaks rootslaste layoudile (muudetud sm konteineri padding, gutter).
 - Avaleht 
-  - Avaslaider (muuta veel et taustapilt poleks css-s)
+  - Avaslaider 
   - Tooteklotsidega avamenüü
   - Tooteslaider
   - Sisselogitud kasutaja - vaatamiseks vajuta "sisene" nuppu (NB! tooteslaideris on kehv ribboneid kasutada)
@@ -41,31 +54,33 @@ Bootsrapist on muudetud ja lisatud:
   - Vertikaalne akordionmenüü 2 tasandit, hidden on small
   - Leivapuru (BS põhjal)
   - Tooteklotside vaade - sinna saad kui vajutad avalehel p]hilinki, nt Arvutid ja lisad (puudu filter, ikoone)
-  - Toote detailvaade
   - Toote listvaade (custom, TSR põhjal)
+- 3rd level 
+  - Toote detailvaade desktopile
 
 ### Töös on:
 - 3rd level, detailvaade responsiveks
-- 3rd level, arvamuste osa
+- 2nd level päise muutused, bannerreklaam
 
 ### Vaja teha veel esimese etapi raames: 
 - Päis Viljarilt järgmine nädal
-- Multiply efekt toodetele Aarelt
-- H1 kuni H6 suurused Ahtolt, välja vahetada 
-- 2nd level lehe ülemine ots korrastada, lisa võrdlus ja ikoonid 
+- H1 kuni H6 lisada, kogu tüpograafia on nüüd Ahtolt käes 
+- Soodushind-tavahind esitus
+- 2nd level html-reklaam
+- Avaslaider kasutab css-background image, tõsta htmli 
 - Html-css refaktoreering
 - Responsive images serveerimine javascript
 - Require js lisada javascripti optimeeritud serveerimiseks, dns
 - Proovida kasutada Code Blocksi et serveerida mobiilidele ainult mobiili-cssi
-- Avaslaider kasutab css-background image, tõsta htmli 
 - Üle vaadata ja parandada, mis katki on läinud
 - Brauseritestid
 - Taas üle vaadata ja parandada, mis bugid on leitud
 - Backend kood külge panna
-- Üle vaadtata ja parandada, mis katki on läinud
+- Üle vaadata ja parandada, mis katki on läinud
 
 ### Andmesisestuses muutub kindlasti
 - Avaslaideri sisestus (lisandub tekstiväli või mitu)
+- 2nd level reklaami sisestus (pilt ja tekst eraldi)
 - Lindi ja rombi sisestus
 - Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.
 - Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg 
@@ -74,6 +89,7 @@ Bootsrapist on muudetud ja lisatud:
 - Mis on rombide loogika/mis tekst sinna võib minna?
 - Mis on lintide loogika, mis tekst sinna võib minna?
 - Misasi läheb avalehe alumisse slaiderisse täpselt?
+- Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?
 - Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?
 - Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.
 
@@ -90,6 +106,11 @@ Bootsrapist on muudetud ja lisatud:
 - Tootevärvid klikatavana (vajab veel tööd)
 - Elioni logo skaleeruva svg-na, fallback png
 - klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi
+- rating
+- kolmnurknoolega sektsioon 
+- tootekarusell pisipiltidega
+- piltide multiply (paintbrush js)
+- tüpograafia 
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.
@@ -107,7 +128,6 @@ Bootsrapist on muudetud ja lisatud:
 	- [grunt responsive-images](https://github.com/andismith/grunt-responsive-images)
 	- meediapäringute sortimiseks [grunt-combine-media-queries](https://github.com/buildingblocks/grunt-combine-media-queries)
 - meediapäringitele vastavate pildisuurste serveerimiseks [srcset-polyfill](https://github.com/borismus/srcset-polyfill)
-- [angular-ui bootstrap](http://angular-ui.github.io/bootstrap/)
 
 ### Muudatused rootsi koodi
 - Maha võetud user scale restriction
@@ -118,4 +138,6 @@ Bootsrapist on muudetud ja lisatud:
 	
 ### Do-not-forget
 - Korrasta javascript footeris (includes), lisa require.js. 
-- Kas image replacement või ei ja kustmaalt. Praegu küljes.
+- Kustmaalt image replacement.
+- Tabeli css on korrastamata
+- Kõrvalda horisontaalne scrollbar
