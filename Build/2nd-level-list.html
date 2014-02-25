@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
-<meta property="og:description" content="Responsive e-shop based on TS brandzone grid" />
+<meta property="og:description" content="Responsive e-shop based on BS 3 grid" />
 <meta property="og:latitude" content="47.00000" />
 <meta property="og:longitude" content="7.00000" />
 <meta property="og:street-address" content="Address" />
@@ -50,7 +50,7 @@
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
 <meta name="twitter:title" content="Elion E-pood">
-<meta name="twitter:description" content="Responsive e-shop based on TS brandzone grid">
+<meta name="twitter:description" content="Responsive e-shop based on BS 3 grid">
 <meta name="twitter:image" content="#">
 
 <meta name="robots" content="index,follow"/>
@@ -437,8 +437,10 @@
 </section>
 
 <div class="container" > 
+  <div class="row">
+    <div class="col-md-3 hidden-sm hidden-xs">
 
-  <div class="col-md-3 hidden-sm hidden-xs" id="content-placeholder-menu"></div>
+    <div id="content-placeholder-menu"></div>
   <script id="menu-template" type="text/x-handlebars-template">
 
   {{#sidemenu}}
@@ -459,10 +461,12 @@
 
   </script>
 
-  <div class="col-xs-12 col-sm-12 col-md-9 tsr-ee-product-boxes">
+    </div>
 
-  <!-- Ad area -->
-<div class="row tsr-ee-innerad" >
+    <div class="col-xs-12 col-sm-12 col-md-9 tsr-ee-product-boxes">
+
+    <!-- Ad area -->
+<div class="row tsr-ee-innerad">
   <img src="http://placekitten.com/1000/125" alt="">
   <div class="tsr-tactical-textPanel">
   <!--       <header>Hakkab juba looma</header> -->
@@ -471,13 +475,15 @@
 </div>
  
 
-  <div class="row tsr-ee-comparision">
-  <div class="col-sm-4">
+    <div class="row tsr-ee-views-compare">
+  <div class="col-sm-5 col-xs-3">
     <a href="2nd-level-list.html" class="current tsr-ee-iconbutton tsr-ee-list"></a>
     <a href="arvutid-ja-lisad.html" class="tsr-ee-iconbutton tsr-ee-block"></a>
   </div>
-  <div class="col-sm-8 text-right">
+  <div class="col-sm-3 col-xs-4 tsr-ee-comparision text-right">
     <span><a href="">Tootevõrdlus</a> (kuni 5):</span>
+  </div>
+  <div class="col-sm-4 col-xs-5">
     <figure class="tsr-ee-comparision-boxes"></figure>
     <figure class="tsr-ee-comparision-boxes"></figure>
     <figure class="tsr-ee-comparision-boxes"></figure>
@@ -486,7 +492,7 @@
   </div>
 </div> 
 
-  <div class="row tsr-section-filter">
+    <div class="row tsr-section-filter">
   <menu class="tsr-sortList">
     <li class="tsr-top-level">
       <a href="#">Näita filtreid</a>
@@ -497,8 +503,8 @@
   </menu>
 </div> 
 
-  <!-- Sorting with pagination -->
-<section class="row pagination-holder">
+    <!-- Sorting with pagination -->
+<section class="row tsr-ee-pagination-holder">
   <div class="tsr-forms">
     <div class="col-sm-4">
       <div class="select-container">
@@ -521,27 +527,27 @@
     </div>
   </div>
 </section> 
-  
-  <!-- Product boxes listing, eg Arvutid 2nd level page-->
+    
+    <!-- Product boxes listing, eg Arvutid 2nd level page-->
 
 <!-- Product boxes -->
-<div class="row trim">
+<div class="row">
   <section class="tsr-section-productlist">
-    <div class="product" id="content-placeholder-product-list"></div>
+    <div id="content-placeholder-product-list"></div>
   </section>
 </div>
 
 <script id="product-list-template" type="text/x-handlebars-template">
 
   {{#products}}
-  <div class="row">
-    <div class="tsr-module-product ">
+  <div class="col-sm-12">
+    <div class="tsr-module-product">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
       <a href="#" class="tsr-ee-product-box-favorite"></a>
       <figure class="tsr-product-image">
-      <a href="detail.html"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
+      <a href="detail.html"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
       <ul class="tsr-ee-product-colors tsr-product-colors">
         {{#if colors}}
         {{#each colors}}
@@ -552,19 +558,23 @@
       </figure>
 
       <div class="tsr-product-content">
-        <header class="tsr-product-header">{{name}}</header>
+        <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
 
         <div class="row tsr-ee-linkicons">
-          <div class="col-md-4" ><a href="#" class="tsr-ee-comments"> Arvamused (5)</a></div>
-          <div class="col-md-3"><a href="#" class="tsr-ee-compare"> Võrdle </a></div>
-          <div class="col-md-5"><a href="#" class="tsr-ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
+          <div class="col-sm-4" ><a href="#" class="tsr-ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="tsr-ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a href="#" class="tsr-ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
         </div>
 
+        {{#if intro}}
+        <p class="tsr-product-desc"> {{{intro}}} </p>
+        {{else}}
         <p class="tsr-product-desc"> {{{leftTrimLong description}}} </p>
+        {{/if}}
 
         <div class="row tsr-ee-actions">
           {{#if flashes}}
-            <div class="col-sm-4 col-xs-12"> &nbsp;
+            <div class="col-sm-4"> &nbsp;
               {{#if flash}}
               <figure class="tsr-tactical-flash tsr-ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
               {{/if}}
@@ -576,17 +586,17 @@
               {{/if}}
             </div>
             {{else}}
-              <div class="col-sm-4 hidden-xs col-xs-12"> </div>
+              <div class="col-sm-4 hidden-xs"> </div>
           {{/if}}
-            <div class="col-sm-4 col-xs-12 tsr-ee-pricecol">
+            <div class="col-sm-4 tsr-ee-pricecol">
               {{#if special_price}}
-              <p class="tsr-ee-special-price-text">Soodushind: <span class="tsr-ee-product-price">{{special_price}}</span></p>
+              <p class="tsr-product-price tsr-ee-special-price">Soodushind: <span>{{special_price}}</span></p>
               {{else}} 
-              <p class="tsr-product-decs">Hind: <span class="tsr-ee-product-price">{{normal_price}}</span></p>
+              <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
               {{/if}}
-              <p class="tsr-product-desc">Kuumakse: 47,15 €</p>
+              <p class="tsr-product-price">Kuumakse: 47,15 €</p>
             </div>
-            <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100 tsr-btn-buy"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
+            <div class="col-sm-4 col-sm-offset-4 " ><a href="#" class="tsr-btn tsr-btn-100 tsr-btn-buy"><i class="icon icon-osta"></i> Lisa ostukorvi </a></div>
           </div>
 
         <div class="row">
@@ -613,9 +623,9 @@
 
 
  
- 
-  <!-- Sorting with pagination -->
-<section class="row pagination-holder">
+   
+    <!-- Sorting with pagination -->
+<section class="row tsr-ee-pagination-holder">
   <div class="tsr-forms">
     <div class="col-sm-4">
       <div class="select-container">
@@ -639,6 +649,7 @@
   </div>
 </section> 
 
+    </div>
   </div>
 
 </div>
@@ -665,19 +676,10 @@
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 
-<!-- - - - HTML - - - --> 
-
-
-<section class="row tsr-section-footer">
-  
-
-
-  <!-- Links -->
-
-  <div class="tsr-footer-links">
-    <div class="container">
-      
-      <menu class="tsr-nav-top-level tsr-extra-links">
+<section class="tsr-section-footer">
+  <div class="container tsr-footer-links">
+    <div class="row">
+      <menu class="col-sm-4 tsr-nav-top-level tsr-extra-links">
        <li>
         <header>Elion soovitab</header>
         <menu class="tsr-nav-second-level">
@@ -687,12 +689,9 @@
           <li><a href="#">Leiunurk</a></li>
           <li><a href="#">Extra 5</a></li>
         </menu>
-      </li>          
-    </menu><!-- // tsr-extra-links -->
-
-
-    <menu class="tsr-nav-top-level">
-
+      </li>
+    </menu>
+    <menu class="col-sm-4  tsr-nav-top-level">
       <li>
         <a href="#">Infoportaal</a>
         <menu class="tsr-nav-second-level">
@@ -700,7 +699,6 @@
           <li><a href="#">Uudised ja artiklid</a></li>
         </menu>
       </li>
-
       <li>
         <a href="#">Elion</a>
         <menu class="tsr-nav-second-level">
@@ -711,7 +709,6 @@
           <li><a href="#">Lepingud ja tingimused</a></li> 
         </menu>
       </li>
-
       <li>
         <a href="#">Kontakt</a>
         <menu class="tsr-nav-second-level">
@@ -722,65 +719,65 @@
           <li><a href="#">Projektide kooskõlastamine</a></li>
         </menu>
       </li>
-
-    </menu><!-- // tsr-nav-top-level  -->
-
-  </div>       
-</div><!-- //tsr-footer-links -->
+    </menu>
+  </div>
+</div>
 
 
 <!-- SM -->
 
 <section class="tsr-footer-sm">
   <div class="container">
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-facebook"></figure>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-facebook"></figure>
+          
+          <p>
+            <strong>Elion Facebookis</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>Elion Facebookis</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-youtube"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-youtube"></figure>
+          
+          <p>
+            <strong>Elion YouTubes</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>Elion YouTubes</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-twitter"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-twitter"></figure>
+          
+          <p>
+            <strong>TSbrand on Twitter</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>TSbrand on Twitter</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-google"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-google"></figure>
+          
+          <p>
+            <strong>TSbrand on Google +</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>TSbrand on Google +</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
-      
-      </a>
+        </a>
+      </div>
     </div>
-  </div>  
+  </div>
 </section><!-- //tsr-footer-sm -->
 
 <a href="#to-top" class="tsr-btn-toTop">Back to top</a>
@@ -799,6 +796,7 @@
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-list.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script>
+    <script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
     <script src="assets/js/handlebars/hbs-offers.hbs"></script>
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
@@ -829,7 +827,7 @@
 <!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
     <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
-    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
+   <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/js/tsr-js/tsr-forms.js"></script>
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>

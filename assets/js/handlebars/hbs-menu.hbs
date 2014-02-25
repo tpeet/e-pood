@@ -6,34 +6,37 @@
       parent: "Uued tooted", 
     },
     {
-      parent: "Sülearvutid", 
-      sub: 
-      ["Apple", "Asus", "Dell", "HP", "Lenovo", "Ordi", "Samsung"],
+      parent: "Sülearvutid"
     },
     {
-      parent: "Tahvelarvutid", 
-      sub: 
-      ["Apple", "Archos", "Asus", "Dell", "GoClever", "Lenovo", "Samsung"],
+      parent: "Tahvelarvutid"
     },
     {
-      parent: "Lauaarvutid", 
-      sub: 
-      ["Apple", "Dell", "HP", "ML", "Ordi", "Shuttle"],
+      parent: "Lauaarvutid"
     },
     {
       parent: "Monitor-arvutid"
     },
     {
+      parent: "Monitorid"
+    },
+    {
       parent: "Printerid"
     },
     {
-      parent: "Kotid"
+      parent: "Kotid",
+      sub: 
+      ["Sülearvuti kotid", "Tahvelarvuti kotid"]
     },
     {
-      parent: "Klaviatuurid ja hiired"
+      parent: "Klaviatuurid ja hiired",
+      sub: 
+      ["Hiired", "Klaviatuuri ja hiire komplektid", "Klaviatuurid", "Hiirematid"]
     },
     {
-      parent: "Tindid ja toonerid"
+      parent: "Tindid ja toonerid",
+      sub: 
+      ["Tindikassetid", "Toonerid"]
     },
     {
       parent: "Paberid"
@@ -51,7 +54,9 @@
       parent: "Välised kõvakettad"
     },
     {
-      parent: "Infokandjad"
+      parent: "Infokandjad",
+      sub: 
+      ["Mälukaardid", "CD-DVD toorikud"]
     },
     {
       parent: "Võrguseadmed"
@@ -63,7 +68,31 @@
       parent: "UPSid"
     },
     {
-      parent: "Ja nii edasi"
+      parent: "Arvutite lisavarustus",
+      sub: 
+      ["Akud", "Laadijad", "Adapterid", "Kaardilugejad", "Klaviatuurikleebised", "Dokid", "Mikrofonid", "Esitluspuldid", "Arvutialused"]
+    },
+    {
+      parent: "Tahvlearvutite lisavarustus",
+      sub: 
+      ["Ümbrised", "Ekraanikaitsekiled", "Kaablid", "Klaviatuurid", "Autohoidjad", "Laadijad", "Dokid", "Puutepliiatsid"]
+    },
+    {
+      parent: "Arvutite komponendid",
+      sub: 
+      ["Sisemised kõvakettad", "Lisamälu", "DVD ja Blu-Ray seadmed"]
+    },
+    {
+    parent: "Puhastuvahendid"
+    },
+    {
+    parent: "Kaablid",
+    },
+    {
+    parent: "Kõlarid",
+    },
+    {
+    parent: "Garantiilaiendused"
     }
     ]};
       $("#content-placeholder-menu").html(template(data));

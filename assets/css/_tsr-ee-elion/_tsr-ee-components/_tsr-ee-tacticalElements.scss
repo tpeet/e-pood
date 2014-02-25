@@ -13,34 +13,9 @@
 }
 
 .tsr-tactical-flash.tsr-second {
-  z-index: 3;
+  z-index: 5;
   &:before {
   background: $purple-c;
-  }
-}
-
-.tsr-ee-flash-sm {
-  position: relative;
-  float: left;
-  -webkit-border-radius: 1px;
-  -ms-border-radius: 1px;
-  border-radius: 1px;
-  top: 0; 
-  left: 0;
-  right: auto;
-  font-size: em(16);
-  width: em(47);
-  height: em(47);
-  margin-left: 5px;
-  margin-top: em(20);
-  z-index: 1;
-  &:before {
-  width: em(47);
-  height: em(47);
-  }
-  & small {
-    font-size: 70%;
-    padding: 2px 3px;
   }
 }
 

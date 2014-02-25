@@ -1,5 +1,5 @@
 <section class="tsr-section-carousel-listing"> 
-    <div class="container product">
+    <div class="container">
       <div class=" tsr-slides" id="content-placeholder-products-visited"></div>
 
       <script id="product-slider-visited-template" type="text/x-handlebars-template">
@@ -8,7 +8,9 @@
         {{#if ribbon}}
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
-        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply"></figure>
+        <figure class="tsr-product-image">
+          <img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+        </figure>
         <div class="tsr-product-content">
           {{#if firstflash}}
           <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>

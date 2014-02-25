@@ -1,44 +1,48 @@
  <!-- frontpage not logged in template -->
 <section class="tsr-section-productAndService-listing">
   
-    <div class="tsr-ee-product-list-front container product" >
-        <div  id="content-placeholder-frontlist"></div>
-<!-- End html -->
+  <div class="tsr-ee-product-list-front container product">
+    <div class="row">
+      <div  id="content-placeholder-frontlist"></div>
 
-  <script id="front-list-template" type="text/x-handlebars-template">
-  
-  {{#frontlist}}
-  <div class="col-xs-12 col-sm-6 col-md-3">
-    <a href="{{{path}}}"><h2 class="tsr-ee-category-header">{{caption}}</h2></a>
-    <a href="javascript:void(0);" class="tsr-module-product ">
-    
-      {{#if ribbon}}
-        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-      {{/if}}
+      <script id="front-list-template" type="text/x-handlebars-template">
+      
+      {{#frontlist}}
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h2 class="tsr-ee-category-header"><small>{{caption}}</small></h2>
+        <a href="detail.html" class="tsr-module-product ">
+        
+          {{#if ribbon}}
+            <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+          {{/if}}
             <figure class="tsr-product-image">
-            <img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+            <img src="assets/img/products/{{id}}.jpg" class="original"><img src="assets/img/products/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888">
             </figure>
 
-      <div class="tsr-product-content">
-      {{#if firstflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
-      {{/if}}
-      {{#if secondflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-      {{/if}}
-      <header class="tsr-product-header">{{name}}</header>
-      <p class="tsr-product-price">{{price}}</p>
-      </div>
-    </a>
-    <ul class="nav nav-pills nav-stacked">
-      {{#each link}}
-      <li><a href="arvutid-ja-lisad.html">{{this}}</a></li>
-      {{/each}}
-    </ul>
+          <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <h6 class="tsr-product-header">{{name}}</h6>
+          {{#if special_price}}
+          <p class="tsr-product-price tsr-ee-special-price">Soodushind: <span>{{special_price}}</span></p>
+          {{else}} 
+          <p class="tsr-product-price"><span>{{normal_price}}</span></p>
+          {{/if}}
+          </div>
+        </a>
+        <ul class="nav nav-pills nav-stacked">
+          {{#each link}}
+          <li><a href="{{this.path}}">{{this.name}}</a></li>  
+          {{/each}}
+        </ul>
+        </div>
+      {{/frontlist}}
+      </script>
     </div>
-  {{/frontlist}}
-  </script>
-
   </div>
 </section>
 

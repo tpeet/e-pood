@@ -1,7 +1,48 @@
 section.tsr-section-productlist  {
+  @include media-min($screen-sm) {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: $lightgrey-c;
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  }
+  @include media-min($screen-md) {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: -10px;
+  margin-right: -10px;
+  background: transparent;
+  border-top: none;
+  border-bottom: none;
+  }
   .tsr-module-product {
     text-align: left;
     padding: em(15) em(5) em(20) em(5);
+  .tsr-ee-flash-sm {
+    position: relative;
+    float: left;
+    -webkit-border-radius: 1px;
+    -ms-border-radius: 1px;
+    border-radius: 1px;
+    top: 0; 
+    left: 0;
+    right: auto;
+    font-size: em(16);
+    width: em(47);
+    height: em(47);
+    margin-left: -5px;
+    margin-top: 0;
+    z-index: 1;
+
+    &:before {
+    width: em(47);
+    height: em(47);
+    }
+    & small {
+      font-size: 70%;
+      padding: 2px 3px;
+    }
+  }
     .tsr-product-image {
       margin-left: 5px;
       @include media-min($screen-sm) {
@@ -32,24 +73,30 @@ section.tsr-section-productlist  {
       }
     }
     .row.tsr-ee-actions {
-      margin: 0 0 em(25);
+      margin: 0 0 em(10);
       & > [class*="col-"] {
       padding-top: 10px;
       }
     }
     .tsr-ee-pricecol {
-      padding-right: em(15);
-      margin-top: em(10);
+      margin-top: em(15);
       text-align: left;
-      & ~ *, .tsr-ee-special-price-text {
+      & ~ * {
         margin: 0;
-        line-height: 0.8;
+        line-height: 0.5;
       }
       @include media-min($screen-xs) {
       text-align: right;
-      padding-top: em(5);
+      padding-top: 0;
       margin-top: 0;
       } 
+      .tsr-product-price {
+        margin: 0;
+      }
+    }
+    .tsr-btn-buy {
+      padding: 12px 12px;
+      font-size: 13px;
     }
   }
 }

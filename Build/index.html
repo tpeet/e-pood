@@ -429,7 +429,8 @@
 <section class="tsr-section-communictaion-primary">
   <div class="tsr-slides">
   
-    <a href="#" class="tsr-slide-1">
+    <a href="#" class="tsr-slide-1"> 
+<!--       <img src="assets/img/primary-banner/bg-slide-1.jpg" alt=""> -->
       <div class="tsr-tactical-container">
         <figure class="tsr-tactical-speach-bubble tsr-color-pink">
           <header class="tsr-header">
@@ -447,6 +448,7 @@
       </div>
     </a>
     <a href="#" class="tsr-slide-2">
+<!--       <img src="assets/img/primary-banner/bg-slide-2.jpg" alt=""> -->
       <div class="tsr-tactical-container">
         <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
         <figure class="tsr-tactical-speach-bubble tsr-color-pink">
@@ -473,44 +475,48 @@
  <!-- frontpage not logged in template -->
 <section class="tsr-section-productAndService-listing">
   
-    <div class="tsr-ee-product-list-front container product" >
-        <div  id="content-placeholder-frontlist"></div>
-<!-- End html -->
+  <div class="tsr-ee-product-list-front container product">
+    <div class="row">
+      <div  id="content-placeholder-frontlist"></div>
 
-  <script id="front-list-template" type="text/x-handlebars-template">
-  
-  {{#frontlist}}
-  <div class="col-xs-12 col-sm-6 col-md-3">
-    <a href="{{{path}}}"><h2 class="tsr-ee-category-header">{{caption}}</h2></a>
-    <a href="javascript:void(0);" class="tsr-module-product ">
-    
-      {{#if ribbon}}
-        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-      {{/if}}
+      <script id="front-list-template" type="text/x-handlebars-template">
+      
+      {{#frontlist}}
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h2 class="tsr-ee-category-header"><small>{{caption}}</small></h2>
+        <a href="detail.html" class="tsr-module-product ">
+        
+          {{#if ribbon}}
+            <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+          {{/if}}
             <figure class="tsr-product-image">
-            <img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+            <img src="assets/img/products/{{id}}.jpg" class="original"><img src="assets/img/products/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888">
             </figure>
 
-      <div class="tsr-product-content">
-      {{#if firstflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
-      {{/if}}
-      {{#if secondflash}}
-      <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-      {{/if}}
-      <header class="tsr-product-header">{{name}}</header>
-      <p class="tsr-product-price">{{price}}</p>
-      </div>
-    </a>
-    <ul class="nav nav-pills nav-stacked">
-      {{#each link}}
-      <li><a href="arvutid-ja-lisad.html">{{this}}</a></li>
-      {{/each}}
-    </ul>
+          <div class="tsr-product-content">
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <h6 class="tsr-product-header">{{name}}</h6>
+          {{#if special_price}}
+          <p class="tsr-product-price tsr-ee-special-price">Soodushind: <span>{{special_price}}</span></p>
+          {{else}} 
+          <p class="tsr-product-price"><span>{{normal_price}}</span></p>
+          {{/if}}
+          </div>
+        </a>
+        <ul class="nav nav-pills nav-stacked">
+          {{#each link}}
+          <li><a href="{{this.path}}">{{this.name}}</a></li>  
+          {{/each}}
+        </ul>
+        </div>
+      {{/frontlist}}
+      </script>
     </div>
-  {{/frontlist}}
-  </script>
-
   </div>
 </section>
 
@@ -520,7 +526,7 @@
 <section class="tsr-ee-productslider-intro"> 
   <div class="container">
     <div class="col-sm-10 col-sm-offset-1">
-      <h1>E-poe kampaaniad ja pakkumised</h1>
+      <h2>E-poe kampaaniad ja pakkumised</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis.</p>
     </div>
   </div>
@@ -577,19 +583,10 @@
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 
-<!-- - - - HTML - - - --> 
-
-
-<section class="row tsr-section-footer">
-  
-
-
-  <!-- Links -->
-
-  <div class="tsr-footer-links">
-    <div class="container">
-      
-      <menu class="tsr-nav-top-level tsr-extra-links">
+<section class="tsr-section-footer">
+  <div class="container tsr-footer-links">
+    <div class="row">
+      <menu class="col-sm-4 tsr-nav-top-level tsr-extra-links">
        <li>
         <header>Elion soovitab</header>
         <menu class="tsr-nav-second-level">
@@ -599,12 +596,9 @@
           <li><a href="#">Leiunurk</a></li>
           <li><a href="#">Extra 5</a></li>
         </menu>
-      </li>          
-    </menu><!-- // tsr-extra-links -->
-
-
-    <menu class="tsr-nav-top-level">
-
+      </li>
+    </menu>
+    <menu class="col-sm-4  tsr-nav-top-level">
       <li>
         <a href="#">Infoportaal</a>
         <menu class="tsr-nav-second-level">
@@ -612,7 +606,6 @@
           <li><a href="#">Uudised ja artiklid</a></li>
         </menu>
       </li>
-
       <li>
         <a href="#">Elion</a>
         <menu class="tsr-nav-second-level">
@@ -623,7 +616,6 @@
           <li><a href="#">Lepingud ja tingimused</a></li> 
         </menu>
       </li>
-
       <li>
         <a href="#">Kontakt</a>
         <menu class="tsr-nav-second-level">
@@ -634,65 +626,65 @@
           <li><a href="#">Projektide kooskõlastamine</a></li>
         </menu>
       </li>
-
-    </menu><!-- // tsr-nav-top-level  -->
-
-  </div>       
-</div><!-- //tsr-footer-links -->
+    </menu>
+  </div>
+</div>
 
 
 <!-- SM -->
 
 <section class="tsr-footer-sm">
   <div class="container">
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-facebook"></figure>
+    <div class="row">
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-facebook"></figure>
+          
+          <p>
+            <strong>Elion Facebookis</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>Elion Facebookis</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-youtube"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-youtube"></figure>
+          
+          <p>
+            <strong>Elion YouTubes</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>Elion YouTubes</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-twitter"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-twitter"></figure>
+          
+          <p>
+            <strong>TSbrand on Twitter</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>TSbrand on Twitter</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
+        </a>
+      </div>
       
-      </a>
-    </div>
-    
-    <div class="col-sm-3">
-      <a href="#" class="tsr-footer-sm-link">
-        <figure class="tsr-footer-icon-google"></figure>
+      <div class="col-sm-3">
+        <a href="#" class="tsr-footer-sm-link">
+          <figure class="tsr-footer-icon-google"></figure>
+          
+          <p>
+            <strong>TSbrand on Google +</strong>
+            <small>Short USP about why to visit this channel.</small>
+          </p>
         
-        <p>
-          <strong>TSbrand on Google +</strong>
-          <small>Short USP about why to visit this channel.</small>
-        </p>
-      
-      </a>
+        </a>
+      </div>
     </div>
-  </div>  
+  </div>
 </section><!-- //tsr-footer-sm -->
 
 <a href="#to-top" class="tsr-btn-toTop">Back to top</a>
@@ -711,6 +703,7 @@
     <script src="assets/js/handlebars/hbs-products.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-list.hbs"></script>
     <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script>
+    <script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
     <script src="assets/js/handlebars/hbs-offers.hbs"></script>
     <script src="assets/js/handlebars/hbs-menu.hbs"></script>
     <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
@@ -741,7 +734,7 @@
 <!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
     <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
     <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
-    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
+   <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/js/tsr-js/tsr-forms.js"></script>
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>

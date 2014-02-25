@@ -40,6 +40,10 @@ h2 {
 h3 {
   letter-spacing: 0.00011em;
 }
+
+h5, h6 {
+ font-weight: normal;
+}
   h1 a,
   h2 a,
   h3 a,
@@ -59,7 +63,7 @@ h3 {
     /* Mobile landscape incl iphone*/
   @media only screen and (min-width: $screen-xs) { // 480 - 768
     body {
-      font-size: em(17);
+      font-size: em(16);
     } 
 
   }
@@ -67,7 +71,7 @@ h3 {
   /* Mobile Landscape, tablet vertical */
   @media only screen and (min-width: $screen-sm) { // 768 - 996
     body {
-      font-size: em(17);
+      font-size: em(15);
     }
 
   }

@@ -17,7 +17,7 @@
           {{#if badge.icon }}
           <figure class="tsr-ee-product-badge tsr-ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
           {{/if}}
-          <img src="assets/img/myproducts/{{id}}.jpg" id="img{{id}}" alt="{{name}}" title="{{name}}" class="multiply"><canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas>
+          <img src="assets/img/myproducts/{{id}}.jpg" class="original"><img src="assets/img/myproducts/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888">
         </figure>
         <div class="tsr-product-content">
         <header class="tsr-product-header">{{name}}</header>

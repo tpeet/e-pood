@@ -66,7 +66,6 @@ js muud pluginad ja kogumikud:
 - Päis Viljarilt järgmine nädal
 - H1 kuni H6 lisada, kogu tüpograafia on nüüd Ahtolt käes 
 - Soodushind-tavahind esitus
-- 2nd level html-reklaam
 - Avaslaider kasutab css-background image, tõsta htmli 
 - Html-css refaktoreering
 - Responsive images serveerimine javascript
@@ -85,18 +84,24 @@ js muud pluginad ja kogumikud:
 - Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.
 - Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg 
 
-### Sisulised küsimused
+### Sisulised küsimused, tähtsad täpsustused ja segased asjad
+- Avaleht - mis sinna sooduspakkumiste alla tuleb täpselt? Alla 4 asja ei tohi seal olla
+- Avaleht - Ainult lilla riba peal olev tekst on mobiilis nähtav. Hinnad jmt tuleb banneri peale pildina panna kui neid ka näha soovitakse.
+- Detailvaade - kui asjale on tärne antud, peaks neid näitama kohe, mitte arvamuste all. Ja siis konkureerivad Favorite tärn ja teised tärnid. Panna Favoritele süda?
 - Mis on rombide loogika/mis tekst sinna võib minna?
 - Mis on lintide loogika, mis tekst sinna võib minna?
-- Misasi läheb avalehe alumisse slaiderisse täpselt?
 - Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?
 - Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?
 - Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.
+- Tahaks et 2nd level oleks kohe algusest saati toodete arv märgitud
+- Detailvaates ei ole Linti ega Rombi e. kui on uus, siis siin seda enam ei näe? 
+- Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon. 
 
 
 ### Puudu on
 - Filtrid
 - Värvide esitlus komponent, otsus, kuidas esitada kirjusid värve
+- Detailvaatest prindi, saada sõbrale, tootekood
 
 ### Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)
 - Leivapuru

@@ -1,6 +1,6 @@
   Handlebars.registerHelper('leftTrim', function(text) {
     text = text.replace(/<.*?>/g," ").trim();
-    if(text.length > 20) return text.substring(0,20) +"...";
+    if(text.length > 20) return text.substring(0,20) +" ...";
     else return text;
   });
   Handlebars.registerHelper('leftTrimMedium', function(text) {

@@ -7,6 +7,10 @@ section.tsr-section-communictaion-primary {
       @include media-min($screen-sm) {
       margin-bottom: auto !important;
       } // min 600px
+      // img {
+      //   width: 100%;
+      //   display: block;
+      // }
     }
     & .tsr-control-nav {
       @include media-min($screen-sm) {
@@ -35,7 +39,7 @@ section.tsr-section-communictaion-primary {
         height: 120px;
         }
       &:before {
-        @include media-min($screen-sm) {
+        @include media-min($screen-sm) { 
         width: 122px;
         height: 122px;
         }
