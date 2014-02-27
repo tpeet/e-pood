@@ -9,6 +9,7 @@
 }
 .socialcount > li {
 	background-color: $purple-c;
+  margin-right: 6px;
 }
 .socialcount > li,
 .socialcount > li > a:focus,
@@ -18,7 +19,7 @@
 .socialcount > li > a:focus,
 .socialcount > li:hover,
 .socialcount > li.hover /* fix for IE and iframes */ {
-	background-color: $purple-t;
+	background-color: $purple-h;
 }
 /* Special class added to count when it's >= the minimum */
 .socialcount .count.minimum {
@@ -94,6 +95,9 @@
 	zoom: 1;
 	text-align: center;
 	margin-left: 6px;
+  padding-left: 6px;
+  font-weight: 500;
+  font-size: 85%;
 }
 .socialcount-large .count {
 	display: block;

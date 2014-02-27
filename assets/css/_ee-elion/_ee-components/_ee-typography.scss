@@ -44,18 +44,20 @@ h3 {
 h5, h6 {
  font-weight: normal;
 }
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    text-decoration: none; color:$purple-c;
-  }
 
-  body {
-    font-size: em(17);
-  }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none; 
+  color:$purple-c;
+}
+
+h1 small {
+  font-size: 22px;
+}
 
 .gray-text {
   color: $darkgrey-h;
@@ -77,39 +79,38 @@ h5, h6 {
   font-weight: 500;
 }
 
-
+body {
+  font-size: em(16);
+}
 // Before Mobile portrait incl iphone
 
-    /* Mobile landscape incl iphone*/
-  @media only screen and (min-width: $screen-xs) { // 480 - 768
-    body {
-      font-size: em(16);
-    } 
+  /* Mobile landscape incl iphone*/
+@media only screen and (min-width: $screen-xs) { // 480 - 768
+  body {
+    font-size: em(16);
+  } 
+}
 
+/* Mobile Landscape, tablet vertical */
+@media only screen and (min-width: $screen-sm) { // 768 - 996
+  body {
+    font-size: em(15);
   }
+}
 
-  /* Mobile Landscape, tablet vertical */
-  @media only screen and (min-width: $screen-sm) { // 768 - 996
-    body {
-      font-size: em(15);
-    }
-
+/* ipad horizontal */
+@media only screen and (min-width: $screen-md) { // 996 - 1200
+  body {
+    font-size: em(15);
   }
+}
 
-  /* ipad horizontal */
-  @media only screen and (min-width: $screen-md) { // 996 - 1200
-    body {
-      font-size: em(15);
-    }
-
+/* Tablet horizontal */
+@media only screen and (min-width: $screen-lg) {
+  body {
+    font-size:em(15);
   }
-
-  /* Tablet horizontal */
-  @media only screen and (min-width: $screen-lg) {
-    body {
-      font-size:em(15);
-    }
-  }
+}
 
 
 

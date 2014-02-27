@@ -10,10 +10,14 @@
 }
 
 .tsr-btn {
-  font-weight: 400;
+  font-weight: 500;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
-.tsr-btn-buy {
+.ee-btn-buy {
   font-size: em(16);
   width: 100%;
   font-weight: 500;
@@ -97,6 +101,11 @@ text-align: left;
   padding-right: 5px;
   display: inline-block;
   vertical-align: middle;
+  color: $purple-c;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .ee-list:before {
@@ -109,34 +118,59 @@ text-align: left;
   content: "\e002";
 }
 
-.ee-plus-round:before {
+.ee-plus-round {
+  &:before {
   @extend %format-icon;
   content: "\e02b";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
 }
 
-.ee-minus-round:before {
+.ee-minus-round {
+  &:before {
   @extend %format-icon;
   content: "\e02a";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
 }
 
 .ee-favorite {
   &:before {
     @extend %format-icon;
     content: "\e00d";
+    -webkit-transition: content 0.3s ease-in-out;
+  -moz-transition: content 0.3s ease-in-out;
+  -o-transition: content 0.3s ease-in-out;
+  transition: content 0.3s ease-in-out;
   }
   &:hover:before {
     content: "\e001";
+    color: $purple-h;
   }
 }
 
-.ee-compare:before {
+.ee-compare {
+  &:before {
   @extend %format-icon;
   content: "\e02e";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
 }
 
-.ee-comments:before {
+.ee-comments {
+ &:before {
   @extend %format-icon;
   content: "\e00b";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
 }
 
 .ee-transport:before {

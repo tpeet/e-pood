@@ -1,0 +1,155 @@
+// review
+%section-bordered-white {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: #fff;
+}
+
+%section-bordered-gray {
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: $lightgrey-c;
+}
+
+%section-next {
+  margin-top: -1px;
+}
+
+%arrowbox {
+  position: relative;
+  border-bottom: 1px solid transparent;
+  &:after,
+  &:before {
+    top: 100%;
+
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+  &:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 15px;
+    margin-left: -15px;
+  }
+  &:before {
+    border-color: rgba(71, 82, 89, 0);
+    border-width: 16px;
+    margin-left: -16px;
+  }
+}
+
+section.ee-reviewarea {
+  margin-top: 15px;
+  margin-bottom: -21px;
+    article {
+    margin-top: -1px;
+  }
+  .rating-input {
+    margin-top: 15px;
+  }
+}
+
+.ee-reviewed-initial {
+  @extend %section-bordered-white;
+  .container {
+  padding-top: 10px;
+  @extend %arrowbox;
+  &:after,
+  &:before {
+    left: 40px;
+  }
+  &:after {
+    border-top-color: #fff;
+    }
+  &:before {
+    border-top-color: $lightgrey-t;
+    }
+  }
+  &:last-of-type .container {
+    &:after,
+    &:before {
+      border: none;
+    }
+  }
+}
+
+.ee-reviewed-answer {
+  @extend %section-bordered-gray;
+  .container {
+  padding-left: 20px;
+  padding-top: 10px;
+  @extend %arrowbox;
+  &:after,
+  &:before {
+    left: 40px;
+  }
+  &:after {
+    border-top-color: $lightgrey-c;
+    }
+  &:before {
+    border-top-color: $lightgrey-t;
+    }
+  }
+  &:last-of-type .container {
+    &:after,
+    &:before {
+      border: none;
+    }
+  }
+}
+
+.ee-review-body {
+  display: table;
+}
+
+.ee-review-respond {
+  display: table-cell;
+  vertical-align: bottom;
+  float: none;
+}
+
+.ee-review-add,
+.ee-review-answer-add {
+  margin-bottom: 15px;
+
+  .tsr-forms {
+    .ee-input-aside {
+      textarea {
+        min-height: 92px;
+      }
+      input[type='text']:last-of-type {
+        margin-top: 15px;
+      }
+    }
+    .ee-action-submit {
+      margin-top: 20px;
+    }
+    .ee-captcha {
+      .btn {
+        font-size: 20px;
+        margin: 0 15px;
+      }
+      input {
+        display: inline;
+        width: auto;
+      }
+    }
+  }
+}
+
+.ee-review-answer-add {
+  @extend %section-bordered-gray;
+  margin-bottom: -1px;
+}
+
+.tsr-forms input[type='text'], 
+.tsr-forms input[type='password'] {
+  padding: 18px 0;
+  &:first-of-type {
+    margin-top: 1px;
+  }
+}

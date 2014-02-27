@@ -1,0 +1,25 @@
+.ee-views-compare {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ee-comparision {
+  span {
+    line-height: 1.8;
+    text-align: right;
+  }
+}
+
+.ee-comparision-boxes {
+  -webkit-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  float: right;
+  display: inline-block;
+  padding: 2px;
+  background: transparent;
+  border: 1px solid $lightgrey-t;
+  min-height: 35px;
+  min-width: 35px;
+  margin-left: 6px;
+}

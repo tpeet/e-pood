@@ -33,6 +33,11 @@
 /* @include _bs-ee-breadcrumbs.scss */
 /* @include _bs-ee-navs.scss */
 
+// PLUGINS
+//**********************************
+/* @include _flexslider.css */
+/* @include _socialcount-with-icons.scss */
+
 // CUSTOM OVERWRIDES AND ADDITIONS TO TSR
 //**********************************
 /* @include _ee-icons-styles.css */
@@ -46,11 +51,8 @@
 /* @include _ee-2nd-level-list.scss */
 /* @include _ee-banner-ad.scss */
 /* @include _ee-detail-page.scss */
-
-// PLUGINS
-//**********************************
-/* @include _flexslider.css */
-/* @include _socialcount-with-icons.scss */
+/* @include _ee-reviews.scss */
+/* @include _ee-2nd-level-general-parts.scss */
 
 
 // TEMPORARY HACKS, TO BE REMOVED
@@ -64,32 +66,58 @@
   max-width: 960px;
 }
 
-.ee-views-compare {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.ee-comparision {
-  span {
-    line-height: 1.8;
-    text-align: right;
+.tsr-forms {
+  input {
+      width: 13px;
+      height: 13px;
+      padding: 0;
+      margin:0;
+      vertical-align: bottom;
+      position: relative;
+      top: -1px;
+      *overflow: hidden;
+  }
+  label {
+    font-weight: normal;
+    display: block; 
   }
 }
 
-.ee-comparision-boxes {
-  -webkit-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  float: right;
+.rating-input {
   display: inline-block;
-  padding: 2px;
-  background: transparent;
-  border: 1px solid $lightgrey-t;
-  min-height: 35px;
-  min-width: 35px;
-  margin-left: 6px;
+  margin-left: 20px;
+  .icon {
+    color: $purple-c;
+    font-size: 18px;
+    margin-right: 2px;
+  }
 }
 
+.table > thead > tr > th {
+  padding: em(10) em(12);
+  background-color: $lightgrey-c;
+  font-weight: normal;
+  font-size: 140%;
+  border-bottom: 1px solid $lightgrey-t;
+}
+
+.table > tbody > tr > td {
+  padding: em(14);
+  font-size: 95%;
+  a {
+    width: 100%; 
+    display: block;
+  }
+  i {
+    float:right; 
+    font-size: 12px; 
+    line-height: 2;
+  }
+}
+
+.ee-upper-distance {
+  margin-top: 10px;
+}
 ////// INTERNET EXPLORER 8
 
 

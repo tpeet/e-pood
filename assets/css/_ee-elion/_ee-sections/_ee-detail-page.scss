@@ -1,75 +1,67 @@
-%section-bordered-white {
-  border-top: 1px solid $lightgrey-t;
-  border-bottom: 1px solid $lightgrey-t;
-  background: #fff;
+.container.ee-text {
+  padding: 0 15px;
 }
-
-%section-bordered-gray {
-  border-top: 1px solid $lightgrey-t;
-  border-bottom: 1px solid $lightgrey-t;
-  background: $lightgrey-c;
-}
-
-%section-next {
-  margin-top: -1px;
-}
-
-.table > thead > tr > th {
-  padding: em(10) em(12);
-  background-color: $lightgrey-c;
-  font-weight: normal;
-  font-size: 140%;
-  border-bottom: 1px solid $lightgrey-t;
-}
-
-.table > tbody > tr > td {
-  padding: em(14);
-  font-size: 95%;
-  a {
-    width: 100%; 
-    display: block;
-  }
-  i {
-    float:right; 
-    font-size: 12px; 
-    line-height: 2;
-  }
-}
-
 section.ee-product-detail {
   margin-bottom: 30px;
+
   .ee-detail-intro {
     line-height: 0.7em;
   }
 
+  .ee-special-price {
+    margin-top: 10px;
+  }
+
+  .ee-actions {
+    margin-top: 15px;
+    .ee-btn-buy {
+    margin-bottom: 15px;
+    }
+    p {
+      margin-top: 7px;
+    }
+    a {
+      text-align: left;
+      @include media-min($screen-sm) {
+      text-align: center;
+      }
+    }
+  }
+
   .ee-detailview { 
-    text-align: center;
+    text-align: left;
     position: relative;
+    @include media-min($screen-md) {
+      text-align: center;
+    }
     .tsr-product-image {
       width: 100%;
       height: auto;
+      text-align: center;
       img {
       width: 100%;
+      max-width: 500px;
       height: auto;
       }
     }
 
     .tsr-tactical-flash {
-      right: 10px;
-      top: 70px;
+      right: 4%;
+      top: 5%;
       left: auto;
       margin-top: 5px;
       &:first-of-type {
-      top: 90px;
+      top: 19%;
       }
       &:nth-of-type(2) {
-        top: 155px;
+        top: 34%;
       }
     }
   }
 
   .ee-linkicons {
-    margin-top: 20px;
+    margin-top: 10px;
+    line-height: 2.2;
   }
 
   .flex-viewport .slides li img {
@@ -80,14 +72,17 @@ section.ee-product-detail {
     padding: 20px 0;
     border-top: 1px solid $lightgrey-t;
     border-bottom: 1px solid $lightgrey-t;
-    li img{
+    li {
       padding-right: 20px; 
+      max-width: 160px;
     }
   }
-}
-
-.ee-upper-distance {
-  margin-top: 10px;
+  .ee-product-content {
+    // padding-right: 15px;
+    //   @include media-min($screen-md) {
+    //   padding-right: 0;
+    // }
+  }
 }
 
 .flexslider.ee-additional-image-lg {
@@ -101,11 +96,58 @@ section.ee-product-detail {
 }
 
 section.ee-section-leasing {
-  margin: 20px auto 10px;
+  margin-bottom: 10px;
+  & [class*="col-"]  {
+    margin-top: 20px;
+  }
+  a {
+    margin-top: 20px;
+    display: block;
+  }
+  .ee-product-price-lg {
+    line-height: 2;
+  }
 }
 
 section.ee-more-info-tabs {
   background: $lightgrey-c;
+  .nav-justified li {
+    border-bottom: 1px solid $lightgrey-t;
+    @include media-min($screen-sm) {
+      border-bottom: none;
+    }
+    a {
+      text-align: left;
+      margin-bottom: -1px;
+      padding: 15px;
+      @include media-min($screen-sm) {
+        text-align: center;
+        margin-bottom: 5px;
+        padding: 10px 15px;
+      }
+      &:after {
+        @extend %format-icon;
+        content: "\e02b";
+        float: right;
+        line-height: 0.85;
+        @include media-min($screen-sm) {
+          content: " ";
+        }
+      }
+      &:hover:after {
+        color: $purple-h;
+      }
+    }
+    &.active a:after {
+      @extend %format-icon;
+      content: "\e02a";
+      float: right;
+      line-height: 0.85;
+        @include media-min($screen-sm) {
+          content: " ";
+        }
+    }
+  }
 }
 
 section.ee-more-info-tabscontent {
@@ -128,175 +170,14 @@ section.ee-more-info-tabscontent {
   }
 }
 
-.tsr-forms {
-  input {
-      width: 13px;
-      height: 13px;
-      padding: 0;
-      margin:0;
-      vertical-align: bottom;
-      position: relative;
-      top: -1px;
-      *overflow: hidden;
-  }
-  label {
-    font-weight: normal;
-    display: block; 
-  }
-}
-
-.rating-input {
-  display: inline-block;
-  margin-left: 20px;
-  .icon {
-    color: $purple-c;
-    font-size: 18px;
-    margin-right: 2px;
-  }
-}
-
 .captcha * {
   display: inline-block;
   margin-right: 20px;
 }
 
-// review
-
-%arrowbox {
-  position: relative;
-  border-bottom: 1px solid transparent;
-  &:after,
-  &:before {
-    top: 100%;
-
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    z-index: 2;
-  }
-  &:after {
-    border-color: rgba(255, 255, 255, 0);
-    border-width: 15px;
-    margin-left: -15px;
-  }
-  &:before {
-    border-color: rgba(71, 82, 89, 0);
-    border-width: 16px;
-    margin-left: -16px;
-  }
-}
-
-section.ee-reviewarea {
-  margin-top: 15px;
-  margin-bottom: -21px;
-    article {
-    margin-top: -1px;
-  }
-  .rating-input {
-    margin-top: 15px;
-  }
-}
-
-.ee-reviewed-initial {
-  @extend %section-bordered-white;
-  .container {
-  padding-top: 10px;
-  @extend %arrowbox;
-  &:after,
-  &:before {
-    left: 40px;
-  }
-  &:after {
-    border-top-color: #fff;
+.socialcount .count {
+      display: none;
+      @include media-min($screen-md) {
+      display: inline-block;
     }
-  &:before {
-    border-top-color: $lightgrey-t;
-    }
-  }
-  &:last-of-type .container {
-    &:after,
-    &:before {
-      border: none;
-    }
-  }
-}
-
-.ee-reviewed-answer {
-  @extend %section-bordered-gray;
-  .container {
-  padding-left: 20px;
-  padding-top: 10px;
-  @extend %arrowbox;
-  &:after,
-  &:before {
-    left: 40px;
-  }
-  &:after {
-    border-top-color: $lightgrey-c;
-    }
-  &:before {
-    border-top-color: $lightgrey-t;
-    }
-  }
-  &:last-of-type .container {
-    &:after,
-    &:before {
-      border: none;
-    }
-  }
-}
-
-.ee-review-body {
-  display: table;
-}
-
-.ee-review-respond {
-  display: table-cell;
-  vertical-align: bottom;
-  float: none;
-}
-
-.ee-review-add,
-.ee-review-answer-add {
-  margin-bottom: 15px;
-
-  .tsr-forms {
-    .ee-input-aside {
-      textarea {
-        min-height: 92px;
-      }
-      input[type='text']:last-of-type {
-        margin-top: 15px;
-      }
-    }
-    .ee-action-submit {
-      margin-top: 20px;
-    }
-    .ee-captcha {
-      .btn {
-        font-size: 20px;
-        margin: 0 15px;
-      }
-      input {
-        display: inline;
-        width: auto;
-      }
-    }
-  }
-}
-
-.ee-review-answer-add {
-  @extend %section-bordered-gray;
-  margin-bottom: -1px;
-}
-
-.tsr-forms input[type='text'], 
-.tsr-forms input[type='password'] {
-  padding: 18px 0;
-  &:first-of-type {
-    margin-top: 1px;
-  }
 }
