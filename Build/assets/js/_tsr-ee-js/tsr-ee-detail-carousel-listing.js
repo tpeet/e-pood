@@ -40,7 +40,7 @@ TSR - CAROUSEL LISTING
     tsrCarouselListing.tsrEqualHeights = function () {
 
 
-	    $('.tsr-ee-detail-carousel').each(function () {
+	    $('.ee-detail-carousel').each(function () {
 
 	    	var bw = $('body').width();
 	        var el = $(this);
@@ -59,7 +59,7 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-ee-compare' , this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.ee-compare' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 		    } else {
 
@@ -74,7 +74,7 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto');
 		      	$('.tsr-product-price' , this).css('height', 'auto');
 		      	$('.tsr-product-small-print' , this).css('height', 'auto');
-		      	$('.tsr-ee-compare' , this).css('height', 'auto');
+		      	$('.ee-compare' , this).css('height', 'auto');
 		      	
 		    }
 

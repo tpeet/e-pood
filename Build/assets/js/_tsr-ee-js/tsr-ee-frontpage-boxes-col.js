@@ -49,7 +49,7 @@ tsrProductAndServiceListing.tsrEqualHeights = $(window).load(function () {
 
         // Product 
         $('.tsr-product-image', this).css('height', 'auto').setAllToMaxHeight()﻿;
-        $('.tsr-ee-category-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
+        $('.ee-category-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
        $('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
        $('.tsr-product-colors', this).css('height', 'auto').setAllToMaxHeight()﻿;
        $('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
@@ -66,7 +66,7 @@ tsrProductAndServiceListing.tsrEqualHeights = $(window).load(function () {
          
         // Product 
         $('.tsr-product-image', this).css('height', 'auto');
-        $('.tsr-ee-category-header', this).css('height', 'auto');
+        $('.ee-category-header', this).css('height', 'auto');
         $('.tsr-product-header', this).css('height', 'auto');
         $('.tsr-product-colors', this).css('height', 'auto');
         $('.tsr-product-desc' , this).css('height', 'auto');

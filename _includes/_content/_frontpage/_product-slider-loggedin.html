@@ -4,7 +4,7 @@
 
       <script id="product-slider-visited-template" type="text/x-handlebars-template">
       {{#products}}
-      <a href="#" class="tsr-module-product">
+      <a href="javascript:void(0);" class="tsr-module-product">
         {{#if ribbon}}
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
@@ -13,27 +13,27 @@
         </figure>
         <div class="tsr-product-content">
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
           {{/if}}
           {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <header class="tsr-product-header">{{name}}</header>
-            <ul class="tsr-ee-product-colors tsr-product-colors">
+          <h6 class="tsr-product-header">{{name}}</h6>
+            <ul class="tsr-product-colors">
             {{#if colors}}
             {{#each colors}}
-              <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+              <li class="accent {{this}}"></li>
             {{/each}}
             {{/if}}
             </ul>
-            <p class="tsr-product-desc">
+            <p class="tsr-product-price">
             {{#if normal_price}}
             Tavahind {{normal_price}} <br> Sinu võit 10 €
             {{/if}}
             </p>
-            <p class="tsr-product-price tsr-ee-special-price-text">
+            <p class="tsr-product-price ee-special-price">
             {{#if special_price}}
-            Soodushind <span class="tsr-ee-product-price">{{special_price}}</span>
+            Soodushind <span>{{special_price}}</span>
             {{/if}}
             </p>
             

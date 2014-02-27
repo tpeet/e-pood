@@ -13,7 +13,7 @@ window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=
 
 // Color select. Messy until desicions are made how to present colors
 $(function() {
-  var accEl = $('.tsr-ee-product-colors li.acc');
+  var accEl = $('.ee-product-colors li.acc');
 
   accEl.on('click', function(){
 
@@ -23,11 +23,11 @@ $(function() {
 
       if (section.hasClass(color)) {
          section.removeClass(color);
-          $('.tsr-ee-product-colors li.acc').removeClass('active');
+          $('.ee-product-colors li.acc').removeClass('active');
       }
       else {
           section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
-          $('.tsr-ee-product-colors li.acc').removeClass('active');
+          $('.ee-product-colors li.acc').removeClass('active');
           section.addClass(color);
           el.addClass('active');
       }

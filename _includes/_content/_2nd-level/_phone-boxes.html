@@ -15,7 +15,7 @@
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
-      <a href="#" class="tsr-ee-product-box-favorite"></a>
+      <a href="#" class="ee-product-box-favorite"></a>
       <figure class="tsr-product-image">
         <a href="detail.html">
           <img src="assets/img/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
@@ -23,32 +23,32 @@
       </figure>
       <div class="tsr-product-content">
         {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+        <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
         {{/if}}
         {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <header class="tsr-product-header">{{name}}</header>
+        <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
       
         {{#if colors}}
-          <ul class="tsr-ee-product-colors tsr-product-colors">
+          <ul class="tsr-product-colors">
           {{#each colors}}
-            <li class="acc {{this}}" data-color-theme="#e2e2e2"></li>
+            <li class="accent {{this}}"></li>
           {{/each}}
           </ul>
           {{else}}
-          <ul class="tsr-ee-product-colors tsr-product-colors hidden-xs"></ul>
+          <ul class="ee-product-colors tsr-product-colors hidden-xs"></ul>
         {{/if}}
 
         {{#if client_price}}
-        <p class="tsr-product-price tsr-ee-special-price">Kliendihind <span>{{client_price}}</span></p>
+        <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
         {{else}} {{#if normal_price}}
         <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
         {{else}}
         <p class="tsr-product-price"></p>
           {{/if}}
         {{/if}}
-        <a href="#" class="tsr-ee-compare"> Võrdle </a>
+        <a href="#" class="ee-compare"> Võrdle </a>
       </div>
     </div>
   </div>

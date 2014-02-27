@@ -475,7 +475,7 @@
  <!-- frontpage not logged in template -->
 <section class="tsr-section-productAndService-listing">
   
-  <div class="tsr-ee-product-list-front container product">
+  <div class="ee-product-list-front container product">
     <div class="row">
       <div  id="content-placeholder-frontlist"></div>
 
@@ -483,7 +483,7 @@
       
       {{#frontlist}}
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <h2 class="tsr-ee-category-header"><small>{{caption}}</small></h2>
+        <h2 class="ee-category-header"><small>{{caption}}</small></h2>
         <a href="detail.html" class="tsr-module-product ">
         
           {{#if ribbon}}
@@ -495,14 +495,14 @@
 
           <div class="tsr-product-content">
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
           {{/if}}
           {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
           <h6 class="tsr-product-header">{{name}}</h6>
           {{#if special_price}}
-          <p class="tsr-product-price tsr-ee-special-price">Soodushind: <span>{{special_price}}</span></p>
+          <p class="tsr-product-price ee-special-price">Soodushind: <span>{{special_price}}</span></p>
           {{else}} 
           <p class="tsr-product-price"><span>{{normal_price}}</span></p>
           {{/if}}
@@ -523,7 +523,7 @@
 
  
 
-<section class="tsr-ee-productslider-intro"> 
+<section class="ee-productslider-intro"> 
   <div class="container">
     <div class="col-sm-10 col-sm-offset-1">
       <h2>E-poe kampaaniad ja pakkumised</h2>
@@ -543,12 +543,12 @@
         </figure>
         <div class="tsr-product-content">
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
           {{/if}}
           {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <header class="tsr-product-header">{{name}}</header>
+          <h6 class="tsr-product-header">{{name}}</h6>
           <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
         </div>
       </a>
@@ -732,8 +732,8 @@
     <script src="assets/js/tsr-js/tsr-header.js"></script>
     <script src="assets/js/tsr-js/tsr-footer.js"></script>
 <!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
-    <script src="assets/js/_tsr-ee-js/tsr-ee-carousel-listing.js"></script>
-    <script src="assets/js/_tsr-ee-js/tsr-ee-frontpage-boxes-col.js"></script>
+    <script src="assets/js/_ee-js/ee-carousel-listing.js"></script>
+    <script src="assets/js/_ee-js/ee-frontpage-boxes-col.js"></script>
    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
     <script src="assets/js/tsr-js/tsr-forms.js"></script>
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
@@ -741,9 +741,11 @@
     <script src="assets/js/tsr-js/tsr-attention.js"></script>
 
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
-    <script src="assets/js/_tsr-ee-js/jquery.fitvid.js"></script>
-    <script src="assets/js/_tsr-ee-js/tsr-ee-image-rotator.js"></script>
-    <script src="assets/js/_tsr-ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
+    <script src="assets/js/ee-js/jquery.fitvid.js"></script>
+    <script src="assets/js/ee-js/ee-image-rotator.js"></script>
+    <script src="assets/js/ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
+    <script src="assets/js/ee-js/socialcount.min.js"></script>
+    
 
 <script>
 $('[data-toggle="popover"]').popover();

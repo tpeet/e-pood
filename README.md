@@ -60,7 +60,6 @@ js muud pluginad ja kogumikud:
 
 ### Töös on:
 - 3rd level, detailvaade responsiveks
-- 2nd level päise muutused, bannerreklaam
 
 ### Vaja teha veel esimese etapi raames: 
 - Päis Viljarilt järgmine nädal
@@ -83,6 +82,8 @@ js muud pluginad ja kogumikud:
 - Lindi ja rombi sisestus
 - Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.
 - Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg 
+- Star rating tuleb juurde
+- Värvide sisestus: standardvärvid pluss kirjud värvid käsitsi lõigatuna pildist
 
 ### Sisulised küsimused, tähtsad täpsustused ja segased asjad
 - Avaleht - mis sinna sooduspakkumiste alla tuleb täpselt? Alla 4 asja ei tohi seal olla
@@ -92,10 +93,16 @@ js muud pluginad ja kogumikud:
 - Mis on lintide loogika, mis tekst sinna võib minna?
 - Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?
 - Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?
-- Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.
-- Tahaks et 2nd level oleks kohe algusest saati toodete arv märgitud
 - Detailvaates ei ole Linti ega Rombi e. kui on uus, siis siin seda enam ei näe? 
-- Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon. 
+- Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon.
+- Detailvaate suure pildi juurde jõudmine, Jaanuse mure, et suur pilt pole piisavalt suur.
+- Sotsiaalmeedia
+- Kui lai täpselt? Praegu on 960px.
+
+### Kas esimeses etapis jäävad välja
+- Värvid
+- Star rating
+
 
 
 ### Puudu on
@@ -108,22 +115,24 @@ js muud pluginad ja kogumikud:
 - Vertikaalne akordionmenüü
 - Ümmargune badge ikooni või tekstiga
 - Ribbon (lisatud ribbon mobiilile)
-- Tootevärvid klikatavana (vajab veel tööd)
+- Tootevärvid selektitavad
 - Elioni logo skaleeruva svg-na, fallback png
 - klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi
 - rating
 - kolmnurknoolega sektsioon 
 - tootekarusell pisipiltidega
 - piltide multiply (paintbrush js)
-- tüpograafia 
+- h1-h6
+- rombide paigutus järjekorral alusel, mitte fix ja minirombid
+- ikooninupud
 
 ### Juhtnöörid koodi oma projektis kasutamiseks:
   - All on BS3, siis rootsi scss, siis eesti kohendused.
   - Iga komponent on eraldi html-jupike, millele käib kaasa eraldi scss ja js (nagu rootslastel)
   - Juurkataloogis on põhilehed, mis includevad jupikesi
   - html-jupikesed asuvad `_includes/..`
-  - Vastav scss asub `assets/css/_tsr-ee-elion/..`
-  - Vastav js asub `assets/js/_tsr-ee-js/..`
+  - Vastav scss asub `assets/css/_ee-elion/..`
+  - Vastav js asub `assets/js/_ee-js/..`
   htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab `assets/js/handlebars/*.hbs` failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna `-placeholder-`.
 
 

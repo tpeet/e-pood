@@ -48,7 +48,6 @@
       if (clearable) {
         stars += [
           ' <a class="rating-clear" style="display:none;" href="javascript:void">',
-          '<span class="icon glyphicon-remove"></span> ',
           clearable,
           '</a>'].join('');
       }

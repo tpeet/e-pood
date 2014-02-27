@@ -72,7 +72,6 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 <h3>Töös on:</h3>
 <ul>
   <li>3rd level, detailvaade responsiveks</li>
-  <li>2nd level päise muutused, bannerreklaam</li>
 </ul>
 
 <h3>Vaja teha veel esimese etapi raames:</h3>
@@ -99,6 +98,8 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Lindi ja rombi sisestus</li>
   <li>Uus layout ei tolereeri valesti lõigatud pilte. Pildi suurus peab olema ruut.</li>
   <li>Pildi nimedes ei tohi olla tühikuid, süntaks product-name-number-direction-color.jpg </li>
+  <li>Star rating tuleb juurde</li>
+  <li>Värvide sisestus: standardvärvid pluss kirjud värvid käsitsi lõigatuna pildist</li>
 </ul>
 
 <h3>Sisulised küsimused, tähtsad täpsustused ja segased asjad</h3>
@@ -110,10 +111,17 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Mis on lintide loogika, mis tekst sinna võib minna?</li>
   <li>Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?</li>
   <li>Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?</li>
-  <li>Kas jäävad leheküljenumbrid või lae lisa allääres? Ühele meeldib üks, teisele teine.</li>
-  <li>Tahaks et 2nd level oleks kohe algusest saati toodete arv märgitud</li>
   <li>Detailvaates ei ole Linti ega Rombi e. kui on uus, siis siin seda enam ei näe? </li>
-  <li>Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon. </li>
+  <li>Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon.</li>
+  <li>Detailvaate suure pildi juurde jõudmine, Jaanuse mure, et suur pilt pole piisavalt suur.</li>
+  <li>Sotsiaalmeedia</li>
+  <li>Kui lai täpselt? Praegu on 960px.</li>
+</ul>
+
+<h3>Kas esimeses etapis jäävad välja</h3>
+<ul>
+  <li>Värvid</li>
+  <li>Star rating</li>
 </ul>
 
 <h3>Puudu on</h3>
@@ -129,14 +137,16 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Vertikaalne akordionmenüü</li>
   <li>Ümmargune badge ikooni või tekstiga</li>
   <li>Ribbon (lisatud ribbon mobiilile)</li>
-  <li>Tootevärvid klikatavana (vajab veel tööd)</li>
+  <li>Tootevärvid selektitavad</li>
   <li>Elioni logo skaleeruva svg-na, fallback png</li>
   <li>klass product mis teeb columnidega containerist TSR stiilile vastava paddinguteta layoudi</li>
   <li>rating</li>
   <li>kolmnurknoolega sektsioon </li>
   <li>tootekarusell pisipiltidega</li>
   <li>piltide multiply (paintbrush js)</li>
-  <li>tüpograafia </li>
+  <li>h1-h6</li>
+  <li>rombide paigutus järjekorral alusel, mitte fix ja minirombid</li>
+  <li>ikooninupud</li>
 </ul>
 
 <h3>Juhtnöörid koodi oma projektis kasutamiseks:</h3>
@@ -145,8 +155,8 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>Iga komponent on eraldi html-jupike, millele käib kaasa eraldi scss ja js (nagu rootslastel)</li>
   <li>Juurkataloogis on põhilehed, mis includevad jupikesi</li>
   <li>html-jupikesed asuvad <code>_includes/..</code></li>
-  <li>Vastav scss asub <code>assets/css/_tsr-ee-elion/..</code></li>
-  <li>Vastav js asub <code>assets/js/_tsr-ee-js/..</code>
+  <li>Vastav scss asub <code>assets/css/_ee-elion/..</code></li>
+  <li>Vastav js asub <code>assets/js/_ee-js/..</code>
   htmlis on sees Handlebarsi templated. Pure htmli saamiseks tuleb loogeliste sulgude sees asuv kola asendada teksti või labeliga. Inspiratsiooni saab <code>assets/js/handlebars/*.hbs</code> failidest (json). Lisaks tuleb script-tagi sees olev jupp tõsta eelneva tühja divi sisse, mille id-s sisaldub sõna <code>-placeholder-</code>.</li>
 </ul>
 

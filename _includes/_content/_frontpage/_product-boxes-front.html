@@ -1,7 +1,7 @@
  <!-- frontpage not logged in template -->
 <section class="tsr-section-productAndService-listing">
   
-  <div class="tsr-ee-product-list-front container product">
+  <div class="ee-product-list-front container product">
     <div class="row">
       <div  id="content-placeholder-frontlist"></div>
 
@@ -9,7 +9,7 @@
       
       {{#frontlist}}
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <h2 class="tsr-ee-category-header"><small>{{caption}}</small></h2>
+        <h2 class="ee-category-header"><small>{{caption}}</small></h2>
         <a href="detail.html" class="tsr-module-product ">
         
           {{#if ribbon}}
@@ -21,14 +21,14 @@
 
           <div class="tsr-product-content">
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-1 tsr-first"><span>{{firstflash.lg}}</span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
           {{/if}}
           {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-flash-usp-2 tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
           <h6 class="tsr-product-header">{{name}}</h6>
           {{#if special_price}}
-          <p class="tsr-product-price tsr-ee-special-price">Soodushind: <span>{{special_price}}</span></p>
+          <p class="tsr-product-price ee-special-price">Soodushind: <span>{{special_price}}</span></p>
           {{else}} 
           <p class="tsr-product-price"><span>{{normal_price}}</span></p>
           {{/if}}
