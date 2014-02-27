@@ -1,0 +1,128 @@
+// Tactical elements z-adjustments for canvas element (multiply)
+
+.tsr-tactical-flash  {
+  z-index: 1;
+  position: absolute;
+}
+
+  .tsr-tactical-flash:first-of-type {
+    top: 50px;
+  }
+  .tsr-tactical-flash:nth-of-type(2) {
+    top: 115px;
+  }
+
+.tsr-tactical-flash.tsr-first {
+  z-index: 2;
+  &:before {
+  background: $blue-c;
+}
+}
+
+.tsr-tactical-flash.tsr-second {
+  z-index: 5;
+  &:before {
+  background: $purple-c;
+  }
+}
+
+// Ribbon figure moved under parent a for mobile view, just under class="tsr-module-product"
+
+.tsr-module-product .tsr-tactical-ribbon { 
+  display:block;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &:before, 
+  &:after {
+    background: transparent;
+  }
+
+  & > span {
+    height: 24px;
+    line-height: 24px;
+    bottom: -12px;
+
+    &.tsr-text-medium {
+      font-size: 0.8em;
+    }
+    &.tsr-text-small {
+      font-size:10px;
+    }
+  }
+
+    @include media-min($screen-sm-min) {
+      left: -10px;
+      top: -10px;
+
+      & > span {
+        height: 34px;
+        line-height: 34px;
+        bottom: -8px;
+
+        &.tsr-text-medium {
+          font-size: 0.8em;
+        }
+        &.tsr-text-small {
+          font-size:13px;
+        }
+      }
+
+      &:before,
+      &:after{
+        content: "";
+        display:block;
+        z-index:-1;
+        position:absolute;
+        background:$turquoise-t;
+      }
+  } // min 768px
+}
+
+// Round badge, adjust left-right according to context, include with @extend .ee-badge;
+// Html-syntax: <figure class="ee-{your context}-badge ee-badge-{color} ee-icon ee-{iconname}">if text add text and skip icon classes, else empty</figure>
+
+
+.ee-badge {
+  font-size: em(17);
+  display: inline-block;
+  min-width: 10px;
+  padding: em(9) em(10);
+  font-weight: 600;
+  color: white;
+  line-height: 0.7;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background: $turquoise-c;
+  border-radius: 100%;
+  border: em(4) solid white;
+
+  &[class*="icon-"] {
+    font-size: em(17);
+    padding: em(8) em(8) em(8) em(7);
+  }
+
+  &.ee-primary {
+    background-color: $purple-c;
+  }
+  &.ee-red {
+    background-color: $pink-c;
+  }
+  &.ee-gray {
+    background-color: $darkgrey-h;
+  }
+  &.icon-cart {
+   &:before {
+    font-family: "elion-ikoonid";
+    content: "\e009";
+   }
+  }
+  &.icon-transport { 
+   &:before {
+    font-family: "elion-ikoonid";
+    content: "\e001";
+   }
+  }
+}

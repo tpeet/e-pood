@@ -1,0 +1,50 @@
+.ee-sidenav {
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+  font-size: 16px;
+  margin: 5px 0 0 0;
+  & + .ee-sidenav {
+    margin: 0;
+  }
+  & li .ee-sidenav {
+    display: none;
+  }
+  & > li > a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-bottom: 1px solid $lightgrey-t;
+    &:hover {
+      color: white;
+      background: $purple-c;
+      @include border-radius(4px);
+    }
+  }
+  ul { 
+    padding-left: 0; 
+    list-style-type: none; 
+  }
+  &  > li > ul  li a {  
+    padding-left: 40px; border-bottom: none; 
+  }
+  & .active {
+  border: 0;
+  text-decoration: underline;
+  font-weight: 600;
+    &:after {
+      font-family: 'ts-icons-all';
+      content: "\e669";
+      font-size: em(18);
+      float: right;
+    }
+    & li {
+      border-bottom: none;
+    }
+  }
+  .selected {
+    color: white;
+    background: $purple-t;
+    @include border-radius(4px);
+  }
+}
