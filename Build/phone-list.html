@@ -127,6 +127,26 @@
   </div>
 </nav>
 
+<nav class="navbar" role="navigation">
+  <div class="container hidden-xs">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="icon ts-icon-arrow-right"></span>Logi sisse administraatorina </a></li>
+    </ul> 
+  </div>
+</nav>
+<nav class="navbar" role="navigation">
+  <div class="container hidden-xs">
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Minu pakkumised </a></li>
+      <li><a href="#">Admin </a></li>
+      <li><a href="#">Välju keskkonnast </a></li>
+    </ul> 
+  </div>
+</nav>
 
 <nav class="navbar navbar-default">
   <div class="container">
@@ -138,10 +158,11 @@
 
       <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon ts-icon-menu"></span>
+        <span class="icon icon-menutsicon48px"></span>
       </a>
-      <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-osta"><span class="ee-product-badge badge-green">52</span></span></a>
-      <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon ts-icon-search"></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-osta"><span class="badge">52</span></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-searchtsicon48px"></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Help" data-toggle="collapse"><span class="icon icon-helptsicon48px"></span></a>
     </div>
     <!-- / menu for small screen -->
 
@@ -160,7 +181,7 @@
                     <li class="col-sm-3">
                       <ul>
                         <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon ts-icon-arrow-right"></span></a></li>
-                        <li><figure class="ee-promoimage"><a href="detail.html" class="hidden-xs"><img src="assets/img/products/{{id}}.jpg" class="original"></a></figure></li>
+                        <li><a href="detail.html" class="hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
                         <li>
                           <a href="#" class="hidden-xs">
                             <h3>{{name}}</h3>
@@ -245,7 +266,28 @@
       <!-- right side additional menu -->
       <ul class="nav navbar-nav navbar-right hidden-xs">
         <li class="dropdown menu-large">
-          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-osta"><span class="badge">62</span></span></a>
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-helptsicon48px"></span></a>
+          <ul class="dropdown-menu megamenu row" role="menu">
+            <li>
+
+              <div class="container collapsibleMainMenu-Help">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="#">volaa, empty help (0)</a> <a href="#" class="btn btn-default">Button default</a>
+                  </div>
+                </div>
+              </div> 
+              <div class="container reset-padding">
+                <ul class="row hidden-xs list-unstyled">
+                  <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-osta"><span class="badge">22</span></span></a>
           <ul class="dropdown-menu megamenu row" role="menu">
             <li>
 
@@ -266,7 +308,7 @@
           </ul>
         </li>
         <li class="dropdown menu-large">
-          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon ts-icon-search"></span></a>
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-searchtsicon48px"></span></a>
           <ul class="dropdown-menu megamenu" role="menu">
             <li>
               <div class="container collapsibleMainMenu-Search">
@@ -295,6 +337,7 @@
 
   </div>
   <!-- generating content by script -->
+  <div id="collapsibleMainMenu-Help" class="collapse megamenu collapsibleMainMenu">.</div>
   <div id="collapsibleMainMenu-Search" class="collapse megamenu collapsibleMainMenu">.</div>
   <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">.</div>
   <!-- end / generating content by script -->
@@ -838,6 +881,7 @@
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/js/tsr-js/tsr-attention.js"></script>
+    <script src="assets/js/tsr-js/tsr-promotion.js"></script>
     <script src="assets/js/ee-js/responsive-tabs.js"></script>
 
     <script src="assets/js/ee-js/froogaloop.js"></script>
@@ -861,10 +905,6 @@ $('.js-slidetoggle').click(function(e) {
   e.preventDefault();
 });
 
-$('#myTab').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
 
 $('.tabcordion').tabcordion();
 

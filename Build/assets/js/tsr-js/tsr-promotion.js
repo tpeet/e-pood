@@ -46,13 +46,13 @@ TSR - PROMOTION
             if(bw >= 480){
 
                 $('p', this).css('height', 'auto').setAllToMaxHeight()﻿;
-                $('header', this).css('height', 'auto').setAllToMaxHeight()﻿;
+                $('h6', this).css('height', 'auto').setAllToMaxHeight()﻿;
 
             } else {
 
                 $('p', this).css('height', 'auto');
-                $('header', this).css('height', 'auto')﻿;
-
+                $('h6', this).css('height', 'auto')﻿;
+ 
             } 
 
 	      	

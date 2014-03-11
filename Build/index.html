@@ -127,6 +127,26 @@
   </div>
 </nav>
 
+<nav class="navbar" role="navigation">
+  <div class="container hidden-xs">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="icon ts-icon-arrow-right"></span>Logi sisse administraatorina </a></li>
+    </ul> 
+  </div>
+</nav>
+<nav class="navbar" role="navigation">
+  <div class="container hidden-xs">
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+      <p class="navbar-text">Elioni töötaja <strong>Ahto Pärn</strong></p>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Minu pakkumised </a></li>
+      <li><a href="#">Admin </a></li>
+      <li><a href="#">Välju keskkonnast </a></li>
+    </ul> 
+  </div>
+</nav>
 
 <nav class="navbar navbar-default">
   <div class="container">
@@ -138,10 +158,11 @@
 
       <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon ts-icon-menu"></span>
+        <span class="icon icon-menutsicon48px"></span>
       </a>
-      <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-osta"><span class="ee-product-badge badge-green">52</span></span></a>
-      <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon ts-icon-search"></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-osta"><span class="badge">52</span></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-searchtsicon48px"></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Help" data-toggle="collapse"><span class="icon icon-helptsicon48px"></span></a>
     </div>
     <!-- / menu for small screen -->
 
@@ -160,7 +181,7 @@
                     <li class="col-sm-3">
                       <ul>
                         <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon ts-icon-arrow-right"></span></a></li>
-                        <li><figure class="ee-promoimage"><a href="detail.html" class="hidden-xs"><img src="assets/img/products/{{id}}.jpg" class="original"></a></figure></li>
+                        <li><a href="detail.html" class="hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
                         <li>
                           <a href="#" class="hidden-xs">
                             <h3>{{name}}</h3>
@@ -245,7 +266,28 @@
       <!-- right side additional menu -->
       <ul class="nav navbar-nav navbar-right hidden-xs">
         <li class="dropdown menu-large">
-          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-osta"><span class="badge">62</span></span></a>
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-helptsicon48px"></span></a>
+          <ul class="dropdown-menu megamenu row" role="menu">
+            <li>
+
+              <div class="container collapsibleMainMenu-Help">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="#">volaa, empty help (0)</a> <a href="#" class="btn btn-default">Button default</a>
+                  </div>
+                </div>
+              </div> 
+              <div class="container reset-padding">
+                <ul class="row hidden-xs list-unstyled">
+                  <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-osta"><span class="badge">22</span></span></a>
           <ul class="dropdown-menu megamenu row" role="menu">
             <li>
 
@@ -266,7 +308,7 @@
           </ul>
         </li>
         <li class="dropdown menu-large">
-          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon ts-icon-search"></span></a>
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-searchtsicon48px"></span></a>
           <ul class="dropdown-menu megamenu" role="menu">
             <li>
               <div class="container collapsibleMainMenu-Search">
@@ -295,6 +337,7 @@
 
   </div>
   <!-- generating content by script -->
+  <div id="collapsibleMainMenu-Help" class="collapse megamenu collapsibleMainMenu">.</div>
   <div id="collapsibleMainMenu-Search" class="collapse megamenu collapsibleMainMenu">.</div>
   <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">.</div>
   <!-- end / generating content by script -->
@@ -381,32 +424,27 @@
 
 
 
-<!-- <section class="ee-productslider-intro"> 
-  <div class="container">
-    <div class="col-sm-10 col-sm-offset-1">
-      <h2>E-poe kampaaniad ja pakkumised</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, voluptatibus, cum amet perspiciatis.</p>
-    </div>
-  </div>
-</section> -->
-<section class="tsr-section-carousel-listing"> 
+<section class="tsr-section-promotion tsr-count-4"> 
     <div class="container product">
-      <div class=" tsr-slides" id="content-placeholder-offers"></div>
+      <div id="content-placeholder-offers"></div>
 
       <script id="offer-slider-template" type="text/x-handlebars-template">
       {{#offers}}
-      <a href="#" class="tsr-module-product tsr-module-promotion">
+
+      <a href="#" class="tsr-module-promotion">
         <figure class="tsr-product-image">
-          <img src="assets/img/offers/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/offers/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
-        </figure>
-        <div class="tsr-product-content">
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
           {{/if}}
           {{#if secondflash}}
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <h6 class="tsr-product-header">{{name}}</h6>
+          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w"/>
+          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w"/>
+        </figure>
+        <div class="tsr-product-content">
+
+          <h6 class="tsr-product-header violet-text">{{name}}</h6>
           <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
         </div>
       </a>
@@ -414,25 +452,27 @@
       </script>
 
     </div>
-   <a href="" class="tsr-btn-view-all visible-xs"><span>Vaata kõiki kampaaniaid</span></a>
+   <a href="" class="tsr-btn-view-all js-slidetoggle"><span>Näita rohkem</span></a>
 </section>
 
 <!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> --> 
 
  <!-- frontpage not logged in template -->
-<section class="tsr-section-divider" style="background-color: #fff; z-index: 2; text-align: center; border-top: 1px solid #dbdbdb; margin-top: -12px;"> 
-  <div class="container">
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Arvutid ja lisad</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>TV ja audio</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Foto, video, GPS</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Telefonid</h6>
+<section class="tsr-section-divider tsr-color-white text-center" > 
+  <div class="container hidden-xs">
+    <div class="row ">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Arvutid ja lisad</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>TV ja audio</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Foto, video, GPS</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Telefonid</h6>
+      </div>
     </div>
   </div>
 </section>
@@ -447,6 +487,7 @@
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
+
         <ul class="nav nav-pills nav-stacked js-listedmenu">
           {{#each link}}
           <li><a href="{{this.path}}">{{this.name}}</a></li>  
@@ -458,7 +499,7 @@
     </div>
   </div>
 </section>
-<!-- <a href="" class="tsr-btn-view-all js-show_button"><span>Vaata veel</span></a> -->
+<a href="" class="tsr-btn-view-all js-slidetoggle"><span>Näita rohkem</span></a>
 
 
  
@@ -794,6 +835,7 @@
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/js/tsr-js/tsr-attention.js"></script>
+    <script src="assets/js/tsr-js/tsr-promotion.js"></script>
     <script src="assets/js/ee-js/responsive-tabs.js"></script>
 
     <script src="assets/js/ee-js/froogaloop.js"></script>
@@ -817,10 +859,6 @@ $('.js-slidetoggle').click(function(e) {
   e.preventDefault();
 });
 
-$('#myTab').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-});
 
 $('.tabcordion').tabcordion();
 
@@ -845,7 +883,7 @@ $( document ).ready(function() {
 </html>
 
 <script src="assets/js/handlebars/hbs-frontmenu.hbs"></script>
-<script src="assets/js/handlebars/hbs-offers.hbs"></script>
+<script src="assets/js/handlebars/hbs-offers-mixed.hbs"></script>
 
 <script type="text/javascript">
 // require(['/assets/js/setup.js'], function (setup) {

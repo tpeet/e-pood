@@ -79,14 +79,6 @@ section.tsr-section-productAndService-listing {
     border: none;
   }
 }
-
-.tsr-module-promotion {
-    &:hover {
-    .multiply {
-      opacity: 0;
-    }
-  }
-
   // Multiply with overlapping images
   .original {
     position:relative;
@@ -101,10 +93,33 @@ section.tsr-section-productAndService-listing {
     cursor:pointer;
     left: 0;
     margin-top: -100%;
+    outline: 2px solid $lightgrey-c;
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
+  }
+
+.tsr-module-promotion {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  padding: 40px;
+    &:hover {
+    .multiply {
+      opacity: 0;
+    }
+  }
+  p {
+    padding-bottom: 20px;
+  }
+
+  .tsr-product-image {
+    position: relative;
+  }
+  .tsr-tactical-flash {
+    right: -20px;
   }
 }
 
@@ -193,25 +208,7 @@ section.tsr-section-productAndService-listing {
     } 
   }
 
-// Multiply with overlapping images
-  .original {
-    position:relative;
-    z-index:0;
-    display: block;
-  }
 
-  .multiply{
-    display: block;
-    position:relative;
-    z-index:0;
-    cursor:pointer;
-    left: 0;
-    margin-top: -100%;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
-  }
   // Wrapped to overwrite tsr, needs to be repeated for general use
   .tsr-product-price {
     color: $text-color;

@@ -9529,20 +9529,16 @@ h1 small {
   font-size: 22px; }
 
 .gray-text {
-  color: #858889;
-  font-weight: 500; }
+  color: #858889; }
 
 .green-text {
-  color: #00b48c;
-  font-weight: 500; }
+  color: #00b48c; }
 
 .pink-text {
-  color: #c41b79;
-  font-weight: 500; }
+  color: #c41b79; }
 
 .violet-text {
-  color: #642887;
-  font-weight: 500; }
+  color: #642887; }
 
 body {
   font-size: 0.96774em;
@@ -9907,23 +9903,38 @@ section.tsr-section-productAndService-listing {
   background: transparent;
   border: none; }
 
-.tsr-module-promotion:hover .multiply {
-  opacity: 0; }
-.tsr-module-promotion .original {
+.original {
   position: relative;
   z-index: 0;
   display: block; }
-.tsr-module-promotion .multiply {
+
+.multiply {
   display: block;
   position: relative;
   z-index: 0;
   cursor: pointer;
   left: 0;
   margin-top: -100%;
+  outline: 2px solid #f6f6f6;
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
+
+.tsr-module-promotion {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  padding: 40px; }
+  .tsr-module-promotion:hover .multiply {
+    opacity: 0; }
+  .tsr-module-promotion p {
+    padding-bottom: 20px; }
+  .tsr-module-promotion .tsr-product-image {
+    position: relative; }
+  .tsr-module-promotion .tsr-tactical-flash {
+    right: -20px; }
 
 .tsr-module-product {
   font-size: inherit;
@@ -9994,21 +10005,6 @@ section.tsr-section-productAndService-listing {
         max-width: 220px;
         height: auto;
         padding: 0 1.29032em; } }
-  .tsr-module-product .original {
-    position: relative;
-    z-index: 0;
-    display: block; }
-  .tsr-module-product .multiply {
-    display: block;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-    left: 0;
-    margin-top: -100%;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out; }
   .tsr-module-product .tsr-product-price {
     color: #333333;
     font-weight: normal;
@@ -10560,6 +10556,10 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .navbar-collapse [class*=" ts-icon-arrow-right"] {
   font-size: 80%;
   padding-left: 5px; }
+
+.tsr .navbar-default .navbar-toggle {
+  font-size: 27px;
+  margin-right: 0; }
 
 .tsr .navbar {
   margin-bottom: -1px; }

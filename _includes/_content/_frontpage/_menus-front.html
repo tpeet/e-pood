@@ -1,17 +1,19 @@
  <!-- frontpage not logged in template -->
-<section class="tsr-section-divider" style="background-color: #fff; z-index: 2; text-align: center; border-top: 1px solid #dbdbdb; margin-top: -12px;"> 
-  <div class="container">
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Arvutid ja lisad</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>TV ja audio</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Foto, video, GPS</h6>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h6>Telefonid</h6>
+<section class="tsr-section-divider tsr-color-white text-center" > 
+  <div class="container hidden-xs">
+    <div class="row ">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Arvutid ja lisad</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>TV ja audio</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Foto, video, GPS</h6>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <h6>Telefonid</h6>
+      </div>
     </div>
   </div>
 </section>
@@ -26,6 +28,7 @@
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
+
         <ul class="nav nav-pills nav-stacked js-listedmenu">
           {{#each link}}
           <li><a href="{{this.path}}">{{this.name}}</a></li>  
@@ -37,6 +40,6 @@
     </div>
   </div>
 </section>
-<!-- <a href="" class="tsr-btn-view-all js-show_button"><span>Vaata veel</span></a> -->
+<a href="" class="tsr-btn-view-all js-slidetoggle"><span>Näita rohkem</span></a>
 
 

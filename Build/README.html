@@ -1,38 +1,10 @@
-<h1>Elion e-pood</h1>
-<p>Kompileeritud failid asuvad Build kataloogis, juurkataloogis on tööfailid. Struktuur pärineb töövahendist - <a href="http://hammerformac.com">Hammer</a>.
-Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>, mis arenduse käigus asendatakse. Projekt on segu <a href="https://github.com/twbs/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap">Bootstrap-Sassist</a> ja <a href="http://responsivecode.teliasonera.com/">rootslaste komponentidest</a>. </p>
+<h1>Elion e-pood, Hammr v.51</h1>
+<p>Kompileeritud failid asuvad Build kataloogis, tööfailid on juurkataloogis. Struktuur pärineb töövahendist - <a href="http://hammerformac.com">Hammer</a>.
+Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>, mis arenduse käigus asendatakse. Projekti aluseks on <a href="https://github.com/twbs/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap">Bootstrap 3 - Sass</a>, <a href="http://responsivecode.teliasonera.com/">rootslaste komponentidest</a> on kasutusel moodulid. </p>
 
-<p>Rootslastelt on välja lülitatud:
-  - _tsr-grid.scss
-  - _tsr-variables.scss (värvid liidetud <code>_bs-ee-variables.scss</code> algusse)
-  - _tsr-normalize.scss
-  - _tsr-typography.scss</p>
+<p>Stiilide failistruktuuri ülevaate annab styles.scss</p>
 
-<p>Bootstrapist on lisatud:
-  - _normalize.scss<br />
-  - _scaffolding.scss (maha võetud body font size)
-  - _grid.scss<br />
-  - _print.scss<br />
-  - _type.scss<br />
-  - _responsive-utilities.scss
-  - _tooltip.scss
-  - _popover.scss
-  - _tabs.scss
-  - _buttons.scss
-  - _utilities.scss</p>
-
-<p>Bootsrapist on muudetud ja lisatud:
-  - _bs-ee-variables.scss (alustatud elioni stiili lisamisega)
-  - _bs-ee-mixins.scss (gridi korrastamiseks muudetud)
-  - _bs-ee-breadcrumbs.scss (puuduv komponent TSR-l)
-  - _bs-ee-navs.scss (tabs ja nav pills)</p>
-
-<p>js bootstrapist:
-  - popover
-  - tooltip (vaja popoverile)
-  - tab</p>
-
-<p>js muud pluginad ja kogumikud:
+<p>Välised pluginad ja kogumikud lisaks bootstrapile (javascript)
   - Flexslider - rootslaste slider, kohandustega kasutusel kõigi roteeruvate komponentide juures
   - Froogaloop ja fitvid - Vimeo api Flexsliderile
   - Paintbrush - piltide multiply effekt. Sõltub Common js-st.
@@ -44,7 +16,6 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <h2>Sisu</h2>
 
-<h3>Valmis on:</h3>
 <ul>
   <li>Avaleht 
     <ul>
@@ -58,7 +29,7 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
     <ul>
       <li>Vertikaalne akordionmenüü 2 tasandit, hidden on small</li>
       <li>Leivapuru (BS põhjal)</li>
-      <li>Tooteklotside vaade - sinna saad kui vajutad avalehel p]hilinki, nt Arvutid ja lisad (puudu filter, ikoone)</li>
+      <li>Tooteklotside vaade</li>
       <li>Toote listvaade (custom, TSR põhjal)</li>
     </ul>
   </li>
@@ -69,26 +40,13 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   </li>
 </ul>
 
-<h3>Töös on:</h3>
-<ul>
-  <li>3rd level, detailvaade responsiveks</li>
-</ul>
-
 <h3>Vaja teha veel esimese etapi raames:</h3>
 <ul>
-  <li>Päis Viljarilt järgmine nädal</li>
-  <li>H1 kuni H6 lisada, kogu tüpograafia on nüüd Ahtolt käes </li>
-  <li>Soodushind-tavahind esitus</li>
-  <li>Avaslaider kasutab css-background image, tõsta htmli </li>
+  <li>Päis responsive loogika (Viljar seletagu)</li>
+  <li>H1 kuni H6 jälgida</li>
   <li>Html-css refaktoreering</li>
-  <li>Responsive images serveerimine javascript</li>
-  <li>Require js lisada javascripti optimeeritud serveerimiseks, dns</li>
-  <li>Proovida kasutada Code Blocksi et serveerida mobiilidele ainult mobiili-cssi</li>
-  <li>Üle vaadata ja parandada, mis katki on läinud</li>
-  <li>Brauseritestid</li>
-  <li>Taas üle vaadata ja parandada, mis bugid on leitud</li>
-  <li>Backend kood külge panna</li>
-  <li>Üle vaadata ja parandada, mis katki on läinud</li>
+  <li>Require js?</li>
+  <li>Code Blocks?</li>
 </ul>
 
 <h3>Andmesisestuses muutub kindlasti</h3>
@@ -104,31 +62,21 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
 
 <h3>Sisulised küsimused, tähtsad täpsustused ja segased asjad</h3>
 <ul>
-  <li>Avaleht - mis sinna sooduspakkumiste alla tuleb täpselt? Alla 4 asja ei tohi seal olla</li>
-  <li>Avaleht - Ainult lilla riba peal olev tekst on mobiilis nähtav. Hinnad jmt tuleb banneri peale pildina panna kui neid ka näha soovitakse.</li>
-  <li>Detailvaade - kui asjale on tärne antud, peaks neid näitama kohe, mitte arvamuste all. Ja siis konkureerivad Favorite tärn ja teised tärnid. Panna Favoritele süda?</li>
-  <li>Mis on rombide loogika/mis tekst sinna võib minna?</li>
-  <li>Mis on lintide loogika, mis tekst sinna võib minna?</li>
-  <li>Kas värvivahetus boxvaatesse või alles detaili? Kas ja kui palju tõstab lehe kaalu kui tooted on lazy-loaded?</li>
-  <li>Kuidas asendatakse mitte-desktop vaates 2nd level külgmenüü?</li>
-  <li>Detailvaates ei ole Linti ega Rombi e. kui on uus, siis siin seda enam ei näe? </li>
-  <li>Nimetamine võiks olla lihtsam ja paindlikum: kui on mobiilide osakond, pole iga kord vaja ette kirjutada mobiiltelefon.</li>
+  <li>Detailvaade - Ahto teeb edasi</li>
+  <li>Rombide võimalikud variandid - keegi esitab</li>
+  <li>Lintide võimalikud variandid - keegi esitab</li>
+  <li>Värvivahetus listvaatesse ja detaili.</li>
+  <li>Lehenumbreid ei tule, infinite scroll</li>
+  <li>Praegu pole mobiiliversioonis on nähtav 3 tasand, probleem kui 2nd level vasak menüü pole nähtav mobiilis</li>
+  <li>Detailvaates läheb lint roheliseks rombiks - teha. </li>
   <li>Detailvaate suure pildi juurde jõudmine, Jaanuse mure, et suur pilt pole piisavalt suur.</li>
-  <li>Sotsiaalmeedia</li>
-  <li>Kui lai täpselt? Praegu on 960px.</li>
-</ul>
-
-<h3>Kas esimeses etapis jäävad välja</h3>
-<ul>
-  <li>Värvid</li>
-  <li>Star rating</li>
+  <li>Sotsiaalmeedia ja ratingu paigutus</li>
 </ul>
 
 <h3>Puudu on</h3>
 <ul>
   <li>Filtrid</li>
-  <li>Värvide esitlus komponent, otsus, kuidas esitada kirjusid värve</li>
-  <li>Detailvaatest prindi, saada sõbrale, tootekood</li>
+  <li>Värvide esitluse komponent, otsus, kuidas esitada kirjusid värve</li>
 </ul>
 
 <h3>Uued üldkasutatavad komponendid lisaks rootslastele (kohandatud BS või custom)</h3>
@@ -172,18 +120,8 @@ Templiitimise abivahendiks on <a href="http://handlebarsjs.com/">Handlebars</a>,
   <li>meediapäringitele vastavate pildisuurste serveerimiseks <a href="https://github.com/borismus/srcset-polyfill">srcset-polyfill</a></li>
 </ul>
 
-<h3>Muudatused rootsi koodi</h3>
-<ul>
-  <li>Maha võetud user scale restriction</li>
-  <li>Maha võetud tsr-typography.scss. </li>
-  <li>Maha võetud tsr-grid.scss (asendatud gridiga <a href="https://github.com/twbs/bootstrap-sass">Bootstrap-Sassist</a> koos juurdekäivate kohustuslike variablete ja mixingutega)</li>
-  <li>maha võetud normalize.scss (BS3 kasutab uuemat)</li>
-</ul>
-
 <h3>Do-not-forget</h3>
 <ul>
-  <li>Korrasta javascript footeris (includes), lisa require.js. </li>
   <li>Kustmaalt image replacement.</li>
-  <li>Tabeli css on korrastamata</li>
   <li>Kõrvalda horisontaalne scrollbar</li>
 </ul>
