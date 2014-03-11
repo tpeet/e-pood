@@ -21,10 +21,11 @@
   font-size: em(16);
   width: 100%;
   font-weight: 500;
+  padding: 12px inherit;
   .icon {
     vertical-align: middle; 
     font-size: 120%;
-    padding-right: 5px;
+    padding-right: 5px; 
   }
 }
 
@@ -108,14 +109,20 @@ text-align: left;
   transition: color 0.3s ease-in-out;
 }
 
-.ee-list:before {
+.ee-list {
+  &:before {
   @extend %format-icon;
+  color: inherit;
   content: "\e028";
+  }
 }
 
-.ee-block:before {
+.ee-block {
+  &:before {
   @extend %format-icon;
+  color: inherit;
   content: "\e002";
+  }
 }
 
 .ee-plus-round {
@@ -173,7 +180,22 @@ text-align: left;
   }
 }
 
-.ee-transport:before {
+.ee-transport {
+  &:before {
   @extend %format-icon;
   content: "\e00a";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
+
+.icon-search {
+  &:before {
+  @extend %format-icon;
+  content: "\e009";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
+}
 }

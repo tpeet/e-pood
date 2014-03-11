@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Elion E-pood</title>
+<title>Elion mobiilid</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10">
@@ -18,8 +18,8 @@
 
 
     <!-- Modernizer - Make a custom download "http://modernizr.com/download/" -->
-    <script src="assets/tsr-js/libs/modernizr.custom.min.js"></script>
-    <script src="assets/tsr-js/libs/enquire.min.js"></script>
+    <script src="assets/js/tsr-js/libs/modernizr.custom.min.js"></script>
+    <script src="assets/js/vendor/enquire.min.js"></script>
 
 
 <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
 
 <![endif]-->
 
-<meta property="og:title" content="Elion E-pood" />
+<meta property="og:title" content="Elion mobiilid" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
@@ -49,7 +49,7 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Elion E-pood">
+<meta name="twitter:title" content="Elion mobiilid">
 <meta name="twitter:description" content="Responsive e-shop based on BS 3 grid">
 <meta name="twitter:image" content="#">
 
@@ -100,345 +100,220 @@
 </head>
 
 <body> 
-<section class="tsr-section-header">
+<header class="tsr">
+<!-- TOP NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container hidden-xs">
 
-
-  <!-- - - GLOBAL - - -->
-
-  <div class="tsr-header-global">
-   <div class="container"> 
-
-    <nav class="tsr-global-left">
-      <menu>
-        <li><a href="#">Eraklient</a></li>
-        <li><a href="#">Äriklient</a></li>
-        <li class="is-choosen"><a href="#">E-pood</a></li>
-        <li class="tsr-btn-arrow-mobile"></li>
-      </menu>
-    </nav>
-
-    <a href="#" class="tsr-btn-close"></a>
-
-    <nav class="tsr-global-right">
-      <menu>
-        <li class="tsr-extra"><a href="#">EST <span class="ts-icon-arrow-down"></span></a></li>
-        <li class="tsr-extra"><a href="#" class="icon-osta"></a></li>
-        <li class="tsr-extra"><a href="front-logged-in.html#logged-in" class="tsr-btn tsr-btn-purple">Sisene</a></li>
-      </menu>
-    </nav>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Eraklient</a></li>
+      <li><a href="#">Ariklient</a></li>
+      <li class="active"><a href="#">E-pood</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">Eesti keeles</a></li>
+      <li><a href="#">По-русски</a></li>
+      <li><a href="#">In English</a></li>
+      <li class="dropdown hide">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">EST <span class="icon ts-icon-arrow-down"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">RUS</a></li>
+          <li><a href="#">ENG</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="icon icon-kodujuhtimise-ikoon-22"> Sisene</a></li>
+    </ul> 
 
   </div>
-</div><!-- tsr-header-global END -->   
-
-
-
-<!-- - - MAIN - - -->  
-
-<section class="tsr-header-main">
-  <div class="container"> 
-
-    <!-- LOGO -->  
-    <figure class="tsr-header-logo">
-      <a href="index.html"><img src="assets/img/branding/elion-logo.svg" onerror="this.onerror=null; this.src='assets/img/branding/elion-logo.png'"/></a>
-    </figure>
-
-
-    <!-- - - Top mobile + Search - - -->
-    <div class="tsr-header-mobileAndExtras">
-     <div class="tsr-container"> 
-
-      <nav>
-        <menu>
-          <li class="tsr-tab-cart" ><a href="#" data-header-tab="cart"><i class="tsr-tactical">3</i></a></li>
-          <li class="tsr-tab-login"><a href="#" data-header-tab="login"></a></li>
-          <li class="tsr-tab-search"><a href="#" data-header-tab="search"></a></li>
-          <li class="tsr-tab-menu" ><a href="#" data-header-tab="menu"></a></li>
-        </menu>
-      </nav>
-
-    </div>
-  </div><!-- tsr-header-mobileAndExtras END -->   
-
-
-  <!-- NAVIGATION -->  
-
-  <nav class="tsr-main-nav">
-    <menu class="tsr-nav-top-level">
-      <li><a href="#">Arvutid ja lisad</a>
-        <menu class="tsr-nav-second-level">
-          <li>
-            <a href="#"><span>Mobile phones landing page</span>
-              <article class="tsr-landing">
-                <figure>
-                  <img src="assets/img/header/landing-iphone.png" />
-                </figure>
-                <header>The All New iPhone 5s - Now Available</header>
-                <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
-              </article> 
-            </a>
-          </li>
-          <li><a href="#">Mobile phones</a>
-            <menu class="tsr-nav-third-level">
-              <li><a href="#">Lorum 1</a></li>
-              <li><a href="#">Lorum 2</a></li>
-              <li><a href="#">Lorum 3</a></li>
-              <li><a href="#">Lorum 4</a></li>
-              <li><a href="#">Lorum 5</a></li>
-            </menu>
-          </li>
-          <li><a href="#">Subscriptions</a>
-           <menu class="tsr-nav-third-level">
-            <li><a href="#">Lorum 1</a></li>
-            <li><a href="#">Lorum 2</a></li>
-            <li><a href="#">Lorum 3</a></li>
-          </menu>
-        </li>
-        <li><a href="#">Product &amp; Accessories</a>
-         <menu class="tsr-nav-third-level">
-          <li><a href="#">Lorum 1</a></li>
-          <li><a href="#">Lorum 2</a></li>
-          <li><a href="#">Lorum 3</a></li>
-          <li><a href="#">Lorum 4</a></li>
-
-        </menu>
-      </li>
-      <li><a href="#">Services</a>
-       <menu class="tsr-nav-third-level">
-        <li><a href="#">Lorum 1</a></li>
-        <li><a href="#">Lorum 2</a></li>
-        <li><a href="#">Lorum 3</a></li>
-        <li><a href="#">Lorum 4</a></li>
-        <li><a href="#">Lorum 5</a></li>
-      </menu>
-    </li>
-
-    <li class="tsr-btn-close">
-      <a href="#"></a>
-    </li>
-  </menu>
-</li>
-<li><a href="#">TV ja audio</a>
-  <menu class="tsr-nav-second-level">
-    <li>
-      <a href="#"><span>Tablets landing page</span>
-        <article class="tsr-landing">
-          <figure>
-            <img src="assets/img/header/landing-temp.png" />
-          </figure>
-          <header>The All New iPhone 5s - Now Available</header>
-          <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
-        </article> 
-      </a>
-    </li>
-    <li><a href="#">Tablets</a>
-      <menu class="tsr-nav-third-level">
-        <li><a href="#">Lorum 1</a></li>
-        <li><a href="#">Lorum 2</a></li>
-
-      </menu>
-    </li>
-    <li><a href="#">Subscriptions</a>
-     <menu class="tsr-nav-third-level">
-      <li><a href="#">Lorum 1</a></li>
-      <li><a href="#">Lorum 2</a></li>
-      <li><a href="#">Lorum 3</a></li>
-    </menu>
-  </li>
-  <li><a href="#">Product &amp; Accessories</a>
-   <menu class="tsr-nav-third-level">
-    <li><a href="#">Lorum 1</a></li>
-
-
-  </menu>
-</li>
-<li><a href="#">Services</a>
- <menu class="tsr-nav-third-level">
-  <li><a href="#">Lorum 1</a></li>
-  <li><a href="#">Lorum 2</a></li>
-  <li><a href="#">Lorum 3</a></li>
-
-</menu>
-</li>
-
-<li><a href="#">Header</a>
- <menu class="tsr-nav-third-level">
-  <li><a href="#">Lorum 1</a></li>
-  <li><a href="#">Lorum 2</a></li>
-  <li><a href="#">Lorum 3</a></li>
-
-</menu>
-</li>
-
-<li><a href="#">Header</a>
- <menu class="tsr-nav-third-level">
-  <li><a href="#">Lorum 1</a></li>
-  <li><a href="#">Lorum 2</a></li>
-  <li><a href="#">Lorum 3</a></li>
-
-</menu>
-</li>
-<li class="tsr-btn-close">
-  <a href="#"></a>
-</li>
-</menu>
-</li>
-<li><a href="#">Foto, video, GPS</a>
- <menu class="tsr-nav-second-level">
-  <li>
-    <a href="#"><span>Broadband landing page</span>
-      <article class="tsr-landing">
-        <figure>
-          <img src="assets/img/header/landing-temp.png" />
-        </figure>
-        <header>The All New iPhone 5s - Now Available</header>
-        <p>Consecuteur baden scrillum imnes magna carta il set of the dover calais</p>
-      </article> 
-    </a>
-  </li>
-  <li><a href="#">Broadband</a>
-    <menu class="tsr-nav-third-level">
-      <li><a href="#">Lorum 1</a></li>
-      <li><a href="#">Lorum 2</a></li>
-      <li><a href="#">Lorum 3</a></li>
-      <li><a href="#">Lorum 4</a></li>
-      <li><a href="#">Lorum 5</a></li>
-      <li><a href="#">Lorum 6</a></li>
-      <li><a href="#">Lorum 7</a></li>
-      <li><a href="#">Lorum 8</a></li>
-
-    </menu>
-  </li>
-  <li><a href="#">Subscriptions</a>
-   <menu class="tsr-nav-third-level">
-    <li><a href="#">Lorum 1</a></li>
-    <li><a href="#">Lorum 2</a></li>
-    <li><a href="#">Lorum 3</a></li>
-    <li><a href="#">Lorum 4</a></li>
-    <li><a href="#">Lorum 5</a></li>
-    <li><a href="#">Lorum 6</a></li>
-    <li><a href="#">Lorum 7</a></li>
-  </menu>
-</li>
-
-
-<li class="tsr-btn-close">
-  <a href="#"></a>
-</li>
-</menu>
-</li>
-<li><a href="#">Telefonid</a>
- <menu class="tsr-nav-second-level">
-  <li>
-    <a href="#"><span>TV landing page</span>
-      <article class="tsr-landing">
-        <figure>
-          <img src="assets/img/header/landing-temp.png" />
-        </figure>
-        <header>TV</header>
-        <p>Consecuteur baden scrillum </p>
-      </article> 
-    </a>
-  </li>
-  <li><a href="#">Lorum</a>
-    <menu class="tsr-nav-third-level">
-      <li><a href="#">Lorum 1</a></li>
-      <li><a href="#">Lorum 2</a></li>
-      <li><a href="#">Lorum 3</a></li>
-      <li><a href="#">Lorum 4</a></li>
-      <li><a href="#">Lorum 5</a></li>
-      <li><a href="#">Lorum 6</a></li>
-
-    </menu>
-  </li>
-  <li><a href="#">Subscriptions</a>
-   <menu class="tsr-nav-third-level">
-    <li><a href="#">Lorum 1</a></li>
-    <li><a href="#">Lorum 2</a></li>
-    <li><a href="#">Lorum 3</a></li>
-    <li><a href="#">Lorum 4</a></li>
-    <li><a href="#">Lorum 5</a></li>
-
-  </menu>
-</li>
-<li><a href="#">Subscriptions</a>
- <menu class="tsr-nav-third-level">
-  <li><a href="#">Lorum 1</a></li>
-  <li><a href="#">Lorum 2</a></li>
-  <li><a href="#">Lorum 3</a></li>
-  <li><a href="#">Lorum 4</a></li>
-  <li><a href="#">Lorum 5</a></li>
-
-</menu>
-</li> 
-<li class="tsr-btn-close">
-  <a href="#"></a>
-</li>
-</menu>
-</li>
-
-
-</menu>
-
 </nav>
 
-<!-- Search -->  
 
-<article class="tsr-header-search tsr-forms">
+<nav class="navbar navbar-default">
+  <div class="container">
 
-  <input type="text" value="Search">
-  <input type="button" name="form-button" value="Search" class="tsr-btn">
+    <!-- menu for small screen -->
+    <div class="navbar-header">
 
-  <a href="#" class="tsr-btn-close" data-parent="search"></a>
+      <a class="navbar-brand"  href="index.html"><img src="assets/img/branding/elion-logo.svg" onerror="this.onerror=null; this.src='assets/img/branding/elion-logo.png'"/></a>
 
-</article><!-- tsr-header-search END -->    
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon ts-icon-menu"></span>
+      </a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-osta"><span class="ee-product-badge badge-green">52</span></span></a>
+      <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon ts-icon-search"></span></a>
+    </div>
+    <!-- / menu for small screen -->
 
+    <!-- main menu -->
+    <div class="navbar-collapse collapse" id="collapsibleMainMenu-Pages">
+      <ul class="nav navbar-nav" id="content-placeholder-mainnav"> </ul>
+          
+          <script id="mainnav-template" type="text/x-handlebars-template">
+          
+          {{#nav}}
+            <li class="tsr dropdown menu-large">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{caption}} <span class="icon ts-icon-arrow-down visible-xs"></span></a>
+              <div class="dropdown-menu ">
+                <div class="container">
+                  <ul class="row list-unstyled megamenu">
+                    <li class="col-sm-3">
+                      <ul>
+                        <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon ts-icon-arrow-right"></span></a></li>
+                        <li><figure class="ee-promoimage"><a href="detail.html" class="hidden-xs"><img src="assets/img/products/{{id}}.jpg" class="original"></a></figure></li>
+                        <li>
+                          <a href="#" class="hidden-xs">
+                            <h3>{{name}}</h3>
+                            <p>Lorem lorem lorem lorem ipsum</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link1}}
+                    
+                      <ul>
+                        <li class="dropdown-header"><a href="{{path}}">{{this.name}}<span class="icon ts-icon-arrow-right"></span></a></li>
+                        {{#each this.sub}}
+                        <li><a href="#" class="hidden-xs">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link2}}
+                    
+                      <ul>
+                        <li class="dropdown-header"><a href="{{path}}">{{this.name}}<span class="icon ts-icon-arrow-right"></span></a></li>
+                        {{#each this.sub}}
+                        <li><a href="#" class="hidden-xs">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link3}}
+                    
+                      <ul>
+                        <li class="dropdown-header"><a href="{{path}}">{{this.name}}<span class="icon ts-icon-arrow-right"></span></a></li>
+                        {{#each this.sub}}
+                        <li><a href="#" class="hidden-xs">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
 
-<!-- Login -->  
+                    
+                  </ul>
+                </div>
+                <div class="container reset-padding">
+                  <ul class="row hidden-xs list-unstyled">
+                    <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon ts-icon-arrow-up"></span></div></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
 
-<article class="tsr-header-login tsr-forms">
+            <li class="options visible-xs">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient <span class="icon ts-icon-arrow-down pull-right"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ariklient</a></li>
+                    <li><a href="#">E-pood</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="options visible-xs">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eesti keeles <span class="icon ts-icon-arrow-down pull-right"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">По-русски</a></li>
+                    <li><a href="#">In English</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          {{/nav}}
+          </script>
 
-  <input type="text" value="User">
-  <input type="password" value="Password">
-  <input type="button" name="form-button" value="Login" class="tsr-btn">
+      <!-- right side additional menu -->
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-osta"><span class="badge">62</span></span></a>
+          <ul class="dropdown-menu megamenu row" role="menu">
+            <li>
 
-  <a href="#" class="tsr-btn-close" data-parent="login"></a>
+              <div class="container collapsibleMainMenu-Basket">
+                <div class="row">
+                  <div class="col-md-12">
+                    <a href="#">volaa, empty basket (0)</a> <a href="#" class="btn btn-default">Button default</a>
+                  </div>
+                </div>
+              </div> 
+              <div class="container reset-padding">
+                <ul class="row hidden-xs list-unstyled">
+                  <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                </ul>
+              </div>
 
-</article><!-- tsr-header-login END -->   
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon ts-icon-search"></span></a>
+          <ul class="dropdown-menu megamenu" role="menu">
+            <li>
+              <div class="container collapsibleMainMenu-Search">
 
-<!-- Cart-->  
+                <form class="tsr form-horizontal" role="form">
+                  <div class="form-group row">
+                    <div class="col-md-9 col-sm-9 col-xs-12">Searching 1548 files for "header"
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <input class="col-md-3 col-sm-3 col-xs-12 btn btn-default " type="button" value="Search" />
+                  </div>
+                </form>    
+              </div>
+              <div class="container reset-padding">
+                <ul class="row hidden-xs list-unstyled">
+                  <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- end / right side additional menu -->
 
-<article class="tsr-header-cart tsr-forms">
+    </div><!-- end /  main menu -->
 
-  <p class="tsr-text">
-    Content of Shopping Cart is Displayed Here
-  </p>
+  </div>
+  <!-- generating content by script -->
+  <div id="collapsibleMainMenu-Search" class="collapse megamenu collapsibleMainMenu">.</div>
+  <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">.</div>
+  <!-- end / generating content by script -->
 
-  <a href="#" class="tsr-btn-close" data-parent="cart"></a>
-
-</article><!-- tsr-header-cart END -->  
-
-
-</div><!-- tsr-container END -->
-</section><!-- tsr-header-main END -->   
-
-
-</section><!-- // tsr-section-header END -->  
-
-
+</nav>
+</header>
 
 <section class="ee-breadcrumbs hidden-xs">
   <div class="container">
     <ol class="breadcrumb">
-      <li><a href="#">TV ja audio</a></li>
-      <li><a href="#">Telerid</a></li>
-      <li class="active">Samsung</li>
+      <li><a href="#">Arvutid ja lisad</a></li>
+      <li class="active">Sülearvutid</li>
     </ol>
   </div>
 </section>
 
 <div class="container" > 
   <div class="row">
-    <div class="col-md-3 hidden-sm hidden-xs">
+    <div class="col-md-3 col-lg-2 hidden-sm hidden-xs">
 
     <div id="content-placeholder-menu"></div>
   <script id="menu-template" type="text/x-handlebars-template">
@@ -463,7 +338,7 @@
 
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-9 ee-product-boxes">
+    <div class="col-xs-12 col-md-9 col-lg-10 ee-product-boxes">
 
 
     <!-- Ad area -->
@@ -546,7 +421,7 @@
 <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
   {{#phones}}
-  <div class="col-xs-12 col-sm-4 col-md-4">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
     <div class="tsr-module-product ">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
@@ -627,7 +502,153 @@
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 
-<section class="tsr-section-footer">
+<footer class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" data-target="#col1">
+                    <h3 class="panel-title"><a href="#col1" data-toggle="collapse">Useful Services & Links</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
+                  </div>
+                  <div id="col1" class="panel-body collapse in">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Useful Services 1</a></li>
+                        <li><a href="#">Useful Services 2</a></li>
+                        <li><a href="#">Useful Services 3</a></li>
+                        <li><a href="#">Useful Services 4</a></li>
+                        <li><a href="#">Useful Services 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-3">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" data-target="#col2">
+                    <h3 class="panel-title"><a href="#col2" data-toggle="collapse">Mobile phones</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
+                  </div>
+                  <div class="panel-body collapse in" id="col2">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Mobile phones 1</a></li>
+                        <li><a href="#">Mobile phones 2</a></li>
+                        <li><a href="#">Mobile phones 3</a></li>
+                        <li><a href="#">Mobile phones 4</a></li>
+                        <li><a href="#">Mobile phones 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-3">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading dropdown" data-toggle="collapse" data-target="#col3">
+                    <h3 class="panel-title"><a href="#col3" data-toggle="collapse">Tablets</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
+                  </div>
+                  <div class="panel-body hidden-xs" id="col3">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Aaare 1</a></li>
+                        <li><a href="#">Tablets 2</a></li>
+                        <li><a href="#">Tablets 3</a></li>
+                        <li><a href="#">Tablets 4</a></li>
+                        <li><a href="#">Tablets 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-3">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading" data-toggle="collapse" data-target="#col4">
+                    <h3 class="panel-title"><a href="#col4" data-toggle="collapse">Broadbrand</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
+                  </div>
+                  <div class="panel-body hidden-xs" id="col4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Broadbrand 2</a></li>
+                        <li><a href="#">Broadbrand 2</a></li>
+                        <li><a href="#">Broadbrand 3</a></li>
+                        <li><a href="#">Broadbrand 4</a></li>
+                        <li><a href="#">Broadbrand 5</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- SOCIAL BLOCK -->
+    <div class="social-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <div class="media">
+                      <a class="pull-left" href="#">
+                        <span class="icon icon-facebook"></span>
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">TSBrand on Facebook</h4>
+                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#">
+                        <span class="icon icon-youtube"></span>
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">TSBrand on Youtube</h4>
+                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#">
+                        <span class="icon icon-twitter"></span>
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">TSbrand on Twitter</h4>
+                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#">
+                        <span class="icon icon-google-plus"></span>
+                      </a>
+                      <div class="media-body">
+                        <h4 class="media-heading">TSbrand on Google +</h4>
+                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; Elion
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="back-to-top visible-xs">
+        <div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span><p>back to top</p></div>
+    </aside>
+</footer>
+<!-- <section class="tsr-section-footer">
   <div class="container tsr-footer-links">
     <div class="row">
       <menu class="col-sm-4 tsr-nav-top-level tsr-extra-links">
@@ -672,12 +693,9 @@
       </li>
     </menu>
   </div>
-</div>
+</div> -->
 
-
-<!-- SM -->
-
-<section class="tsr-footer-sm">
+<!-- <section class="tsr-footer-sm">
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
@@ -729,62 +747,73 @@
       </div>
     </div>
   </div>
-</section><!-- //tsr-footer-sm -->
+</section>
 
 <a href="#to-top" class="tsr-btn-toTop">Back to top</a>
 
 
+</section> -->
 
-
-</section><!-- // tsr-section END -->
 <script src='assets/js/rapid.js'></script>
+<!-- <script src="assets/js/vendor/require.js"></script> -->
+
 
 <!-- HTML5 IE Enabling Script -->
 <!--[if lt IE 9]><script src='assets/js/html5.js'></script><![endif]-->
 
-    <script src="assets/js/handlebars-v1.3.0.js"></script>
-    <script src="assets/js/handlebars/hbs-frontlist.hbs"></script>
-    <script src="assets/js/handlebars/hbs-products.hbs"></script>
-    <script src="assets/js/handlebars/hbs-product-list.hbs"></script>
-    <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script>
-    <script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
-    <script src="assets/js/handlebars/hbs-offers.hbs"></script>
-    <script src="assets/js/handlebars/hbs-menu.hbs"></script>
-    <script src="assets/js/handlebars/hbs-myproducts.hbs"></script>
-    <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-product-slider-visited.hbs"></script>
-    <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
-    <script src="assets/js/handlebars/hbs-reviews.hbs"></script>
-    <script src="assets/js/srcset.min.js"></script>
-    <script src="assets/js/common.js"></script>
-    <script src="assets/js/paintbrush.js"></script>
+
+   
+    <!-- <script src="assets/js/handlebars/hbs-frontlist.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-products.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-product-list.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-product-boxes.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-offers.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-menu.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-myproducts.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-product-detail.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-product-slider-visited.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-technical-table.hbs"></script> -->
+<!--     // <script src="assets/js/handlebars/hbs-reviews.hbs"></script> -->
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
+    <script src="assets/js/vendor/srcset.min.js"></script>
+    <script src="assets/js/vendor/common.js"></script>
+    <script src="assets/js/vendor/paintbrush.js"></script>
+    <script src="assets/js/vendor/tabcordion.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
 
-    <script src="assets/js/tsr-js/libs/enquire.min.js"></script>
     <script src="assets/js/tsr-js/libs/jquery.flexslider.js"></script>
     <script src="assets/js/tsr-js/libs/jquery.debouncing.js"></script>
     <script src="assets/js/tsr-js/polyfills/matchMedia.js"></script>
     <script src="assets/js/tsr-js/polyfills/matchMedia.addListener.js"></script>
 
     <script src="assets/js/bootstrap-js/tab.js"></script>
+    <script src="assets/js/bootstrap-js/transition.js"></script>
+    <script src="assets/js/bootstrap-js/collapse.js"></script>
     <script src="assets/js/bootstrap-js/tooltip.js"></script>
     <script src="assets/js/bootstrap-js/popover.js"></script>
 
     <script src="assets/js/tsr-js/tsr-core.js"></script>
     <script src="assets/js/tsr-js/tsr-communication-primary.js"></script>
-    <script src="assets/js/tsr-js/tsr-header.js"></script>
-    <script src="assets/js/tsr-js/tsr-footer.js"></script>
-<!--     // <script src="assets/tsr-js/tsr-carousel-listing.js"></script> -->
-    <script src="assets/js/_ee-js/ee-carousel-listing.js"></script>
-    <script src="assets/js/_ee-js/ee-frontpage-boxes-col.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/main.js"></script>
+<!--     // <script src="assets/js/tsr-js/tsr-header.js"></script>
+    // <script src="assets/js/tsr-js/tsr-footer.js"></script> -->
+    <script src="assets/js/tsr-js/tsr-carousel-listing.js"></script>
+    <script src="assets/js/ee-js/ee-carousel-listing.js"></script>
+<!--     // <script src="assets/js/ee-js/ee-frontpage-boxes-col.js"></script> -->
    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script>
+
     <script src="assets/js/tsr-js/tsr-forms.js"></script>
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/js/tsr-js/tsr-attention.js"></script>
+    <script src="assets/js/ee-js/responsive-tabs.js"></script>
 
-    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="assets/js/ee-js/froogaloop.js"></script>
     <script src="assets/js/ee-js/jquery.fitvid.js"></script>
     <script src="assets/js/ee-js/ee-image-rotator.js"></script>
     <script src="assets/js/ee-js/bootstrap-rating-input.js" type="text/javascript"></script>
@@ -794,8 +823,6 @@
 $('[data-toggle="popover"]').popover();
 $('body').on('click', function (e) {
   $('[data-toggle="popover"]').each(function () {
-      //the 'is' for buttons that trigger popups
-      //the 'has' for icons within a button that triggers a popup
       if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
           $(this).popover('hide');
       }
@@ -807,8 +834,31 @@ $('.js-slidetoggle').click(function(e) {
   e.preventDefault();
 });
 
-</script>
+$('#myTab').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+
+$('.tabcordion').tabcordion();
 
 
+</script> 
+
+<script>
+$( document ).ready(function() {
+  $('.js-listedmenu').each(function() {
+    var $list = $(this);
+   $list.find('li:gt(6)').hide();
+  });
+  $('.js-show_button').click(function(e) {
+      e.preventDefault();
+      var $btn = $(this).find('span');
+      $('.js-listedmenu > li:gt(6)').slideToggle();
+      $btn.text($btn.text() == 'Rohkem' ? 'Vähem' : 'Rohkem');
+  });
+});
+</script> 
 </body>
 </html> 
+<script src="assets/js/handlebars/hbs-menu.hbs"></script>
+<script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>

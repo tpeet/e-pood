@@ -1,8 +1,12 @@
 .container.ee-text {
   padding: 0 15px;
-}
+  }
 section.ee-product-detail {
   margin-bottom: 30px;
+
+  h1:first-of-type {
+  margin-bottom: 0;
+  }
 
   .ee-detail-intro {
     line-height: 0.7em;
@@ -77,12 +81,6 @@ section.ee-product-detail {
       max-width: 160px;
     }
   }
-  .ee-product-content {
-    // padding-right: 15px;
-    //   @include media-min($screen-md) {
-    //   padding-right: 0;
-    // }
-  }
 }
 
 .flexslider.ee-additional-image-lg {
@@ -122,8 +120,11 @@ section.ee-more-info-tabs {
       padding: 15px;
       @include media-min($screen-sm) {
         text-align: center;
-        margin-bottom: 5px;
         padding: 10px 15px;
+        border-bottom: none;
+        &:hover {
+          border-bottom: 1px solid $lightgrey-t;
+        }
       }
       &:after {
         @extend %format-icon;
@@ -151,15 +152,28 @@ section.ee-more-info-tabs {
 }
 
 section.ee-more-info-tabscontent {
-  border-top: 1px solid $lightgrey-t;
+  border-top: none;
   background: white;
   margin-top: -1px;
   margin-bottom: 20px;
+  @include media-min($screen-sm) {
+    border-top: 1px solid $lightgrey-t;
+  }
+  .tsr-section-productAndService-listing {
+    border-top: none;
+  }
   .tab-content {
     margin: 30 px auto;
   }
   .tab-pane {
     margin: 30px 0 10px;
+    &.ee-similar-products {
+      margin: 0;
+      border-top: none;
+      @include media-min($screen-sm) {
+        margin: 30px 0 10px;
+      }
+    }
   }
 }
 

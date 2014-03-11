@@ -1,0 +1,250 @@
+.tsr {
+  .navbar{ 
+    margin-bottom: 1px;
+    min-height: 40px; 
+  }
+  .navbar-default {
+    background-color: $navbar-default-bg;
+    border-radius: $navbar-default-border;
+    .navbar-brand{
+      padding: 20px 15px;
+      color:$navbar-default-brand-color;
+      &:hover{
+        color:$navbar-default-brand-hover-color;
+      }
+      @media (max-width: $screen-xs-max) { 
+        padding: 11px 15px 0 20px;
+      }
+    }
+    .navbar-nav {
+      margin-top: 0;
+      margin-bottom: 0;
+      .dropdown-menu {
+        padding:0;
+        border-radius: 0;
+        border:0;
+        box-shadow: none;
+        width: 100%;
+        a {
+          color:$body-bg;
+          > span[class*="icon-arrow-right"]{
+            float: none;
+            @media (max-width: $screen-xs-max) { 
+              float:right;
+            }
+          }
+        }
+        @media (max-width: $screen-xs-max) { 
+          background-color:darken($navbar-inverse-bg,5%);
+          padding:0;
+          a {           
+            > span[class*="-chevron-right"]{
+              float: right;
+            }
+          }
+        }
+      }
+      > {
+        li {
+          > a {
+            color: $navbar-default-link-color;
+            font-size: 22px;
+            padding: 33px 20px 28px 19px;
+            font-weight: normal;
+            letter-spacing: -1px;
+            line-height: 27px;
+            &:hover, &:focus, &:active {
+              color:$navbar-default-link-hover-color;
+            }
+            &:hover:before {
+              background: none repeat scroll 0 0 darken($navbar-inverse-bg,7.6%);
+              bottom: 0;
+              content: "";
+              display: block;
+              height: 4px;
+              left: 0;
+              position: absolute;
+              top: auto;
+              width: 100%;
+            }
+            &:after {
+                background: none repeat scroll 0 0 lighten($gray,50%);
+                content: "";
+                display: block;
+                height: 28px;
+                margin-top: -9px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                width: 1px;
+                z-index: 1; 
+            }
+          }
+
+          &.open > a {
+            color: $body-bg;
+            background-color: $navbar-inverse-bg;
+            &:hover:before {
+              background: none;
+            }
+            &:after {
+              background: none;
+            }
+          }
+
+          &:last-child{
+            > a {
+              &:after {
+                background-color: transparent;
+              }
+            }
+          }
+
+        }
+      }
+      @media (max-width: $screen-xs-max) { 
+        background-color:$navbar-inverse-bg;
+      }
+    }
+
+    .navbar-toggle {
+      font-size: 32px;
+      border:0;
+      margin-top: 10px;
+      margin-right: 10px;
+      margin-bottom: 0px;
+      &:hover{
+        background-color:transparent;
+      }
+      &:focus, &:active {
+        background-color:$navbar-inverse-bg;
+        border: 0 none;
+        border-radius: 0;
+        color: $link-color;
+      }
+      @media (max-width: $screen-xs-max) { 
+        &:focus, &:active {
+          background-color: transparent;
+        }
+        .active{
+          background-color:$navbar-inverse-bg;
+        }
+      }
+    }
+
+    .navbar-collapse{
+      @media (max-width: $screen-xs-max){ 
+        background-color:$navbar-inverse-bg;
+        .dropdown-toggle{
+          padding: 0;
+          color: $body-bg;
+          font-size: 17px;
+          padding: 10px 15px;
+          border-bottom: 1px solid darken($navbar-inverse-bg,7.6%);
+          &:hover:before, &:after {
+            background-color:transparent;
+          }
+          &:hover{
+            color: $body-bg;
+            background-color: lighten($navbar-inverse-bg,7.6%);
+          }
+          > span[class*="icon-arrow-"]{
+            float: right;
+          }
+        }
+        &.in{
+          background-color: green;
+          overflow-y:visible; 
+        }
+      }
+    }
+  }
+
+  // inverser navbar / violet background
+  .navbar-inverse {
+    border-radius: 0;
+    background-color: $navbar-inverse-bg;
+
+    .navbar-nav {
+      > li {
+        > a {
+          color: $body-bg;
+          font-weight: bold;
+          &:focus, &:active{
+            background-color: darken($navbar-inverse-bg, 7.6%);
+          }
+          &:after {
+              background: none repeat scroll 0 0 darken($navbar-inverse-bg, 7.6%);
+              content: "";
+              display: block;
+              height: 28px;
+              margin-top: -15px;
+              position: absolute;
+              right: -1px;
+              top: 50%;
+              width: 1px;
+              z-index: 1;
+          }
+          &:focus:after{
+            background:transparent; 
+          }
+        }
+        
+        &.active {
+          > a {
+            background-color: darken($navbar-inverse-bg, 7.6%);
+            &:after {
+              background-color:transparent;
+            }
+          }
+        }
+
+        &:last-child{
+          > a {
+            &:after {
+              background: transparent;
+            }
+          }
+        }
+      }
+      
+      .open > a {
+        background-color: $navbar-inverse-bg;
+
+        &:hover{
+          background-color: darken($navbar-inverse-bg,7.6%);
+        }
+      }
+
+      .active > a {
+        &:after {
+          background-color:none;
+        }
+      }
+
+      .dropdown-menu {
+        background-color: darken($navbar-inverse-bg,7.6%);
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+        border:0;
+
+        > li {
+          > a {
+            color: $body-bg;
+          }
+          > a:hover, > a:focus {
+            background-color: darken($navbar-inverse-bg,7.6%);
+            color: $body-bg;
+          }
+
+        }
+
+      }
+
+    }
+  }
+  @media (max-width: $screen-md-min) {
+    .navbar-inverse{ min-height: 4px; } 
+  }
+}

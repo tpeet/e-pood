@@ -1,19 +1,32 @@
+
 // VARIABLES AND MIXINS 
 //**********************************
+/* @include tsr-bootstrap/_variables.scss */
 /* @include _bs-ee-variables.scss */ 
 /* @include _mixins.scss */
+
 
 //TEMPORARY HELPERS
 //**********************************
 /* @include _debug.scss */
 
-// BOOTSRAP
+// TELIA SONERA
+//**********************************
+/* @include _tsr-core.scss */
+
+// BOOTSTRAP
 //**********************************
 /* @include _normalize.scss */
 /* @include _scaffolding.scss */ 
 /* @include _glyphicons.scss */
 /* @include _grid.scss */
 /* @include _print.scss */
+/* @include _component-animations.scss */
+/* @include _dropdowns.scss */
+/* @include _button-groups.scss */
+/* @include _input-groups.scss */
+/* @include _navs.scss */
+/* @include _navbar.scss */
 /* @include _type.scss */
 /* @include _responsive-utilities.scss */ 
 /* @include _navs.scss */
@@ -23,10 +36,20 @@
 /* @include _forms.scss */
 /* @include _utilities.scss */
 
+// VILJAR SALU
+//******************
+/* @include tsr-bootstrap/_buttons.scss */
+/* @include tsr-bootstrap/_type.scss */
+/* @include tsr-bootstrap/_icons.scss */
+/* @include tsr-bootstrap/_badges.scss */
+/* @include tsr-bootstrap/_navbar.scss */
+/* @include tsr-bootstrap/_tsr-megamenu.scss */
+/* @include tsr-bootstrap/_responsive-utilities.scss */
+/* @include tsr-bootstrap/_elion.scss */
+/* @include tsr-bootstrap/_header.scss */
+/* @include tsr-bootstrap/_footer.scss */
 
-// TELIA SONERA
-//**********************************
-/* @include _tsr-core.scss */
+
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO BS3
 //**********************************
@@ -53,6 +76,7 @@
 /* @include _ee-detail-page.scss */
 /* @include _ee-reviews.scss */
 /* @include _ee-2nd-level-general-parts.scss */
+/* @include _ee-productslider.scss */
 
 
 // TEMPORARY HACKS, TO BE REMOVED
@@ -63,7 +87,33 @@
 // WORK IN PROGRESS PARTS
 //**********************************
 .container {
-  max-width: 960px;
+  max-width: 1440px;
+}
+
+.dropdown-header {
+  padding: 20px 3px 3px;
+}
+.navbar-collapse {
+ [class*=" ts-icon-arrow-"] {
+  color: #fff;
+ }
+  [class*=" ts-icon-arrow-right"] {
+  font-size: 80%;
+  padding-left: 5px;
+ }
+}
+
+.tsr .navbar {
+  margin-bottom: -1px;
+}
+.ee-promoimage {
+  background: #fff;
+  padding: 20px 40px;
+}
+
+header.tsr .dropdown-menu .dropdown-header, 
+header.tsr .collapsibleMainMenu .dropdown-header {
+  font-size: 19px;
 }
 
 .tsr-forms {

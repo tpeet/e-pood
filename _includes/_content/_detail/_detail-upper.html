@@ -8,22 +8,17 @@
 
 {{#with products.[1]}}
 
-
-
 <div class="col-sm-7 col-sm-push-5">
-  <div class="ee-product-content">
-
   <h1><small>{{name}}</small></h1>
-  <small>Tootekood: NP915S3G-K01EE</small>
+  <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
   <h2> {{{intro}}} </h2>
   <h2 class="ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h2>
-
+  
     {{#if campaign}}
     {{#each campaign}} 
       <a href="#">{{this}} </a>
     {{/each}}
     {{/if}}
-  </div>
   <div class="hidden-xs">
     <p class="ee-upper-distance">Kali värv</p>
     <ul class="tsr-product-colors">

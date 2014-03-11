@@ -21,6 +21,8 @@ TYPOGRAPHY
 
 //////// Module class name
 
+
+
 $browser-context: 15.5; // Default
 
 @function em($pixels, $context: $browser-context) {
@@ -80,37 +82,12 @@ h1 small {
 }
 
 body {
-  font-size: em(16);
-}
-// Before Mobile portrait incl iphone
-
-  /* Mobile landscape incl iphone*/
-@media only screen and (min-width: $screen-xs) { // 480 - 768
-  body {
-    font-size: em(16);
-  } 
+  font-size: em(15);
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Mobile Landscape, tablet vertical */
-@media only screen and (min-width: $screen-sm) { // 768 - 996
-  body {
-    font-size: em(15);
-  }
-}
 
-/* ipad horizontal */
-@media only screen and (min-width: $screen-md) { // 996 - 1200
-  body {
-    font-size: em(15);
-  }
-}
-
-/* Tablet horizontal */
-@media only screen and (min-width: $screen-lg) {
-  body {
-    font-size:em(15);
-  }
-}
 
 
 

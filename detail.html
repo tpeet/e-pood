@@ -1,7 +1,7 @@
 <!-- $title Elion E-pood -->
 <!-- $description Responsive e-shop based on TS brandzone grid -->
 <!-- @include _header.html -->
-<!-- @include _heading.html -->
+<!-- @include _mainnav.html -->
 
 
 <!-- @include _breadcrumbs.html -->
@@ -18,7 +18,7 @@
 
 <!-- @include _leasing-info.html --> 
 
-<section class="tsr-section-divider tsr-color-purple">
+<section class="tsr-section-divider">
   <header class="container">
     <span>
       Rohkem infot?
@@ -36,6 +36,7 @@
   </header>
 </section>
 
+<!-- @include _additional-images.html --> 
 
 <section class="tsr-section-divider tsr-color-purple">
   <header class="container">
@@ -45,7 +46,18 @@
   </header>
 </section>
 
-
+<!-- @include _product-slider-detail.html --> 
 
 <!-- @include _support.html -->
 <!-- @include _footer.html -->
+    <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
+    <script src="assets/js/handlebars/hbs-reviews.hbs"></script>
+    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
+    <script src="assets/js/handlebars/hbs-products.hbs"></script>
+
+    <script type="text/javascript">
+    // require(['/assets/js/setup.js'], function (setup) {
+    //   require(['detail']);
+    // });
+    </script>

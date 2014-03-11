@@ -1,6 +1,10 @@
 section.tsr-section-productAndService-listing {
   padding: 0;
   margin-top: -1px;
+    .ee-compare {
+    margin: 15px auto;
+    display: block;
+  }
 }
 
 .tsr-section-divider {
@@ -31,7 +35,6 @@ section.tsr-section-productAndService-listing {
   font-size: 150%;
   font-weight: 600;
 }
-
 /// !!!! Remove when sure we will not have paging
 // PAGINATION
 //*********
@@ -74,6 +77,34 @@ section.tsr-section-productAndService-listing {
   & section.tsr-section-productAndService-listing {
     background: transparent;
     border: none;
+  }
+}
+
+.tsr-module-promotion {
+    &:hover {
+    .multiply {
+      opacity: 0;
+    }
+  }
+
+  // Multiply with overlapping images
+  .original {
+    position:relative;
+    z-index:0;
+    display: block;
+  }
+
+  .multiply{
+    display: block;
+    position:relative;
+    z-index:0;
+    cursor:pointer;
+    left: 0;
+    margin-top: -100%;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 
@@ -180,7 +211,7 @@ section.tsr-section-productAndService-listing {
     -moz-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-}
+  }
   // Wrapped to overwrite tsr, needs to be repeated for general use
   .tsr-product-price {
     color: $text-color;

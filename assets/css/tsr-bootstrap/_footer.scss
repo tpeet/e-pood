@@ -1,0 +1,185 @@
+footer {
+  
+  background-color: darken($tsr-violet,7.6%);
+  color: #fff;
+  min-width: 320px;
+  padding: 50px 0px 0px 0px;
+
+  // panel into footer
+  .panel {
+    background-color:transparent;
+    border: 0;
+  }
+
+  // Panel contents
+  .panel-body {
+    padding: 0;
+
+    > ul > li {
+      padding:10px 0;
+      cursor: pointer;
+      > a {
+        color: #fff;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      &:first-child {
+        padding-top: 10px;
+      }
+    }
+
+    @include clearfix();
+    
+  }
+
+  // Optional heading
+  .panel-default .panel-heading {
+    cursor: pointer;
+    border-bottom: 1px solid red;
+    background-color: transparent;
+    padding: 10px 0px 20px 0px;
+    margin-bottom: 14px;
+  }
+
+  // Within heading, strip any `h*` tag of it's default margins for spacing.
+  .panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: ceil(($font-size-base * 1.125));
+    font-weight: 500;
+    > a {
+      color: inherit;
+    }
+    [class*="icon-arrow"]{
+      padding-top: 5px;
+    }
+  }
+
+  // Contextual variations
+  .panel-default {
+    @include panel-variant(darken($tsr-violet,7.5%), #fff, transparent, darken($tsr-violet, 15%));
+
+    // Optional dropdown
+    @media (max-width: $screen-xs-max) {
+      .panel-heading{
+        &:hover{
+          background-color: lighten($tsr-violet, 7.6%);
+        }
+        a:hover{
+          text-decoration: none;
+        }
+      }
+      .panel-heading{ 
+        margin-bottom: 0;
+        padding-left: 10px; 
+        padding-right: 10px;
+        padding-bottom: 10px;
+      }
+      .panel-body {
+        > ul > li {
+          padding-left:15px;
+          padding-right:15px;
+          > a {
+            &:hover{
+              text-decoration:none;
+            }
+          }
+          &:hover{
+            background-color: lighten($tsr-violet, 7.6%);
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: $screen-xs-max) {
+    .container{ padding: 0; }
+    padding: 0px 0px;
+    .panel{
+      margin-bottom: 0;
+    }
+    .panel-heading{
+      padding:10px;
+      margin: 0; 
+    }
+    .panel-default > [data-target*="#col"] {
+      background-color: lighten($tsr-violet, 7.6%);
+    }
+  }
+  .social-block{
+    background-color: lighten($tsr-violet, 7.6%);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .copyright{
+    background-color: $body-bg;
+    color: #333333;
+    padding: 15px;
+  }
+  .list-unstyled{
+    margin: 0;
+  }
+
+  // media object
+  .social-block {
+    padding:20px 0 10px 0;
+
+    .media {
+
+      margin:0 0 10px 0;
+
+      [class*="facebook"]{
+        background-color: $facebook-blue;
+        color: $brand-white;
+        display: block;
+        height: 30px;
+        line-height: 2px;
+        padding: 13px;
+        width: 30px;
+        border-radius: $border-radius-base;
+      }
+      [class*="youtube"]{
+        background-color: $youtube-red;
+        color: $brand-white;
+        display: block;
+        height: 30px;
+        line-height: 2px;
+        padding: 13px 0 0 0;
+        width: 30px;
+        border-radius: $border-radius-base;
+      }
+      [class*="twitter"]{
+        background-color: $twitter-blue;
+        color: $brand-white;
+        display: block;
+        height: 30px;
+        line-height: 2px;
+        padding: 13px 0 0 0;
+        width: 30px;
+        border-radius: $border-radius-base;
+      }
+      [class*="google-plus"]{
+        background-color: $google-plus-red;
+        color: $brand-white;
+        display: block;
+        height: 30px;
+        line-height: 2px;
+        padding: 13px 0 0 0;
+        width: 30px;
+        border-radius: $border-radius-base;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-top:10px;
+
+      .media{
+        padding:10px;
+        margin: 0px;
+      }
+      
+    }
+
+  }
+}

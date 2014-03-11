@@ -47,17 +47,6 @@ $section: 'tsr-section-communictaion-primary';
 	max-width:100%;
 	width:100%;
 
-// Container
-
-	.tsr-container{
-
-		display:block;
-		margin:0 auto;
-		padding:0;
-		position:static;
-
-	}
-
 	.tsr-slides{
 		@include clearfix;
 		padding:0 0;
@@ -66,8 +55,7 @@ $section: 'tsr-section-communictaion-primary';
 			display:block;
 			width:100%;
 			min-height:195px;
-			position:relative;	
-			font-family:$font-1;
+			position:relative;
 			background-size:cover;
 			background-position: center center;
 
@@ -84,27 +72,6 @@ $section: 'tsr-section-communictaion-primary';
 		margin:0 auto;
 		width:940px;
 	}
-
-////// Slides
-
-
-	.tsr-slide-1,{
-		background:url('../tsr-SECTIONS/tsr-communication-primary/bg-slide-1.jpg') no-repeat;
-	}
-
-	.tsr-slide-2{
-		background:url('../tsr-SECTIONS/tsr-communication-primary/bg-slide-2.jpg') no-repeat;
-	}
-		
-	// .tsr-slide-3{
-	// 	background:url('../tsr-SECTIONS/tsr-communication-primary/bg-slide-3.jpg') no-repeat;
-	// }
-
-	// .tsr-slide-4{
-	// 	background:url('../tsr-SECTIONS/tsr-communication-primary/bg-slide-4.jpg') no-repeat;
-	// }
-
-
 
 /////// Tactical-textPanel
 	
@@ -462,22 +429,6 @@ a:hover{
  	@include old-ie {
  	
 		.ie8 &{
-
-			.tsr-slide-1,{
-				background:url('bg-slide-1.jpg') no-repeat center center;
-			}
-
-			.tsr-slide-2{
-				background:url('bg-slide-2.jpg') no-repeat  center center;
-			}
-				
-			.tsr-slide-3{
-				background:url('bg-slide-3.jpg') no-repeat  center center;
-			}
-
-			.tsr-slide-4{
-				background:url('bg-slide-4.jpg') no-repeat  center center;
-			}
 
 			.tsr-tactical-textPanel{
 				background:url('ie8-tactical-textPanel.png') no-repeat right top;

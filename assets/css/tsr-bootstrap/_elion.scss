@@ -1,0 +1,78 @@
+//
+// elion custom styles
+// --------------------------------------------------
+body{
+  min-width: 320px;
+  letter-spacing: $letter-spacing-base;
+  line-height: $line-height-base;
+}
+// header{display: block; margin-bottom: 15px;}
+// content{display: block;}
+
+//
+// close button bar styles
+// --------------------------------------------------
+.btn-close{
+  background-color: $mainnavigation-submenu-bg-color;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid $mainnavigation-bg-color;
+}
+
+//
+// back to top button visible in mobile devices
+// --------------------------------------------------
+.close-up-btn-bar {
+  display: block;
+  background-color:$tsr-violet;
+  text-align: center;
+  color: #fff;
+  font-size: ceil($font-size-base * 1.35);
+  padding:13px;
+  border-top: 1px solid darken($tsr-violet,7%);
+  margin: 0;
+  &:hover{
+    background-color: darken($tsr-violet, 7%);
+  }
+}
+
+//
+// justified element
+// --------------------------------------------------
+.justified{
+  width: 100%;
+  display: table;
+  border-collapse: separate;
+  table-layout: fixed;
+  margin:0; 
+  padding:0;
+
+  > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+    @media (max-width: $screen-xxs-max) {
+      width:100%;
+      display: table-row;
+    }
+  }
+}
+
+//
+// Reset class's
+// --------------------------------------------------
+.reset-margin{
+  margin: 0!important;
+}
+.reset-padding{
+  padding: 0!important;
+}
+
+//
+// elion new alert
+// --------------------------------------------------
+
+// primary
+.alert-primary {
+  @include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
+}

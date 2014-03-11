@@ -1,0 +1,156 @@
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="icon icon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'ts-icons-all';
+  src: url('#{$icon-font-path}#{$icon-font-name}.eot');
+  src: url('#{$icon-font-path}#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('#{$icon-font-path}#{$icon-font-name}.woff') format('woff'),
+       url('#{$icon-font-path}#{$icon-font-name}.ttf') format('truetype'),
+       url('#{$icon-font-path}#{$icon-font-name}.svg#glyphicons_halflingsregular') format('svg');
+}
+
+// Catchall baseclass
+.icon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'ts-icons-all';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:empty {
+    width: 1em;
+  }
+}
+
+// Individual icons
+.icon-zoomout               { &:before { content: "\2a"; } }
+.icon-circle                { &:before { content: "\e666"; } }
+.icon-zoomout               { &:before { content: "\e600"; } }
+.icon-zoom                  { &:before { content: "\e601"; } }
+.icon-square-tilted         { &:before { content: "\e667"; } }
+.icon-xls                   { &:before { content: "\e602"; } }
+.icon-arrow-right           { &:before { content: "\e668"; } }
+.icon-writeemail            { &:before { content: "\e603"; } }
+.icon-arrow-down            { &:before { content: "\e669"; } }
+.icon-arrow-left            { &:before { content: "\e66a"; } }
+.icon-wireless              { &:before { content: "\e604"; } }
+.icon-arrow-up              { &:before { content: "\e66b"; } }
+.icon-weather               { &:before { content: "\e605"; } }
+.icon-voiceswitch           { &:before { content: "\e606"; } }
+.icon-videocontent          { &:before { content: "\e607"; } }
+.icon-vcard2                { &:before { content: "\e608"; } }
+.icon-vcard                 { &:before { content: "\e609"; } }
+.icon-upload                { &:before { content: "\e60a"; } }
+.icon-travelabroad          { &:before { content: "\e60b"; } }
+.icon-trashfull             { &:before { content: "\e60c"; } }
+.icon-trashempty            { &:before { content: "\e60d"; } }
+.icon-time                  { &:before { content: "\e60e"; } }
+.icon-tags                  { &:before { content: "\e60f"; } }
+.icon-sync                  { &:before { content: "\e610"; } }
+.icon-switch                { &:before { content: "\e611"; } }
+.icon-support               { &:before { content: "\e612"; } }
+.icon-subscription          { &:before { content: "\e613"; } }
+.icon-stream                { &:before { content: "\e614"; } }
+.icon-stop                  { &:before { content: "\e615"; } }
+.icon-statistics            { &:before { content: "\e614"; } }
+.icon-spellcheck            { &:before { content: "\e617"; } }
+.icon-sort                  { &:before { content: "\e618"; } }
+.icon-sms                   { &:before { content: "\e619"; } }
+.icon-skipforward           { &:before { content: "\e61a"; } }
+.icon-skipbackward          { &:before { content: "\e61b"; } }
+.icon-shuffle               { &:before { content: "\e61c"; } }
+.icon-settings              { &:before { content: "\e61d"; } }
+.icon-security              { &:before { content: "\e61e"; } }
+.icon-search                { &:before { content: "\e61f"; } }
+.icon-save                  { &:before { content: "\e620"; } }
+.icon-rss                   { &:before { content: "\e621"; } }
+.icon-renamefolder          { &:before { content: "\e622"; } }
+.icon-register              { &:before { content: "\e623"; } }
+.icon-radio                 { &:before { content: "\e624"; } }
+.icon-rack                  { &:before { content: "\e625"; } }
+.icon-print                 { &:before { content: "\e626"; } }
+.icon-premisessmall         { &:before { content: "\e627"; } }
+.icon-premiseslarge         { &:before { content: "\e628"; } }
+.icon-premisesdatacenter    { &:before { content: "\e629"; } }
+.icon-ppt                   { &:before { content: "\e62a"; } }
+.icon-play                  { &:before { content: "\e62b"; } }
+.icon-phone                 { &:before { content: "\e62c"; } }
+.icon-pdf                   { &:before { content: "\e62d"; } }
+.icon-pause                 { &:before { content: "\e62e"; } }
+.icon-parentalguide         { &:before { content: "\e62f"; } }
+.icon-newgroup              { &:before { content: "\e630"; } }
+.icon-newfolder             { &:before { content: "\e631"; } }
+.icon-newcontact            { &:before { content: "\e632"; } }
+.icon-newadressbook         { &:before { content: "\e633"; } }
+.icon-myaccount             { &:before { content: "\e634"; } }
+.icon-music                 { &:before { content: "\e635"; } }
+.icon-movefolder            { &:before { content: "\e636"; } }
+.icon-more                  { &:before { content: "\e637"; } }
+.icon-mobile                { &:before { content: "\e638"; } }
+.icon-menu                  { &:before { content: "\e639"; } }
+.icon-map                   { &:before { content: "\e63a"; } }
+.icon-login                 { &:before { content: "\e63b"; } }
+.icon-listen                { &:before { content: "\e63c"; } }
+.icon-link                  { &:before { content: "\e63d"; } }
+.icon-like                  { &:before { content: "\e63e"; } }
+.icon-internet              { &:before { content: "\e63f"; } }
+.icon-home                  { &:before { content: "\e641"; } }
+.icon-help                  { &:before { content: "\e642"; } }
+.icon-games                 { &:before { content: "\e643"; } }
+.icon-folderopen            { &:before { content: "\e644"; } }
+.icon-folder                { &:before { content: "\e645"; } }
+.icon-favourits             { &:before { content: "\e646"; } }
+.icon-entertainment         { &:before { content: "\e647"; } }
+.icon-enduserdevice         { &:before { content: "\e648"; } }
+.icon-enduser               { &:before { content: "\e649"; } }
+.icon-breadcrumb-arrow      { &:before { content: "\e66e"; } }
+.icon-youtube               { &:before { content: "\e66c"; } }
+.icon-google-plus           { &:before { content: "\e66d"; } }
+.icon-email                 { &:before { content: "\e64a"; } }
+.icon-edit                  { &:before { content: "\e64b"; } } 
+.icon-edgerouter            { &:before { content: "\e64c"; } } 
+.icon-download              { &:before { content: "\e64d"; } }
+.icon-docs                  { &:before { content: "\e64e"; } }
+.icon-dislike               { &:before { content: "\e64f"; } }
+.icon-digitaltv             { &:before { content: "\e650"; } }
+.icon-delete                { &:before { content: "\e651"; } }
+.icon-defaultimage          { &:before { content: "\e652"; } }
+.icon-default               { &:before { content: "\e653"; } }
+.icon-cpe                   { &:before { content: "\e654"; } }
+.icon-costcontrol2          { &:before { content: "\e655"; } }
+.icon-costcontrol           { &:before { content: "\e656"; } }
+.icon-corerouter            { &:before { content: "\e657"; } }
+.icon-copyfolder            { &:before { content: "\e658"; } }
+.icon-content               { &:before { content: "\e659"; } }
+.icon-contact               { &:before { content: "\e65a"; } }
+.icon-cloud                 { &:before { content: "\e65b"; } }
+.icon-chat                  { &:before { content: "\e65c"; } }
+.icon-camera                { &:before { content: "\e65d"; } }
+.icon-calendar              { &:before { content: "\e65e"; } }
+.icon-buy                   { &:before { content: "\e65f"; } }
+.icon-broadband             { &:before { content: "\e660"; } }
+.icon-ball                  { &:before { content: "\e661"; } }
+.icon-attach                { &:before { content: "\e662"; } }
+.icon-alert                 { &:before { content: "\e663"; } }
+.icon-adressbook            { &:before { content: "\e664"; } }
+.icon-add                   { &:before { content: "\e665"; } }
+.icon-info                  { &:before { content: "\e640"; } }
+.icon-twitter               { &:before { content: "\e001"; } }
+.icon-facebook              { &:before { content: "\e002"; } }
+.icon-thick                 { &:before { content: "\e005"; } }
+.icon-comment               { &:before { content: "\e016"; } }
+.icon-teliasonera           { &:before { content: "\e02c"; } }
+.icon-question-mark         { &:before { content: "?"; } }
