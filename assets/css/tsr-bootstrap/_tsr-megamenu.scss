@@ -28,7 +28,7 @@
         &:hover,&:focus{
           text-decoration: none;
           color: #fff;
-          background-color: darken($tsr-violet, 7.6%);
+          background-color: darken($brand-primary, 7.6%);
         }
       }
     }
@@ -85,10 +85,11 @@
   @media (max-width: $screen-xs-max) {
     padding:0;
     > a {
-      background-color: darken($tsr-violet, 7.6%);
+      background-color: darken($brand-primary, 7.6%);
+      border-bottom: 1px solid darken($brand-primary,15%);
       padding-left: 25px;
       &:hover{
-        background-color:lighten($tsr-violet,7.6%);
+        background-color:lighten($brand-primary,7.6%);
       }
     }
   }

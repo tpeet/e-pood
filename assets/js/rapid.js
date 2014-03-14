@@ -1,11 +1,17 @@
-/* jQuery Plugin */
-/* @include _jquery-1.8.2.min */
 
-/* CSS3 Media Queries */
-/* @include _respond.min */
+/* @include _jquery-1.9.0.min */
 
 /* @include handlebars-v1.3.0 */
 
+
+  // Sliding commenting
+  //*********************
+  // $('.js-togglable').hide();
+  // $('.js-slidetoggle').click(function(e) {
+  //   $(this).parents().next('.js-togglable').slideDown('slow');
+  //   $('.js-slideclose').slideUp();
+  //   e.preventDefault();
+  // });
 
 
 

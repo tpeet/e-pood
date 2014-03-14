@@ -6,8 +6,8 @@ body{
   letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
 }
-// header{display: block; margin-bottom: 15px;}
-// content{display: block;}
+header{display: block; margin-bottom: 15px;}
+content{display: block;}
 
 //
 // close button bar styles
@@ -24,15 +24,15 @@ body{
 // --------------------------------------------------
 .close-up-btn-bar {
   display: block;
-  background-color:$tsr-violet;
+  background-color:$brand-primary;
   text-align: center;
   color: #fff;
   font-size: ceil($font-size-base * 1.35);
   padding:13px;
-  border-top: 1px solid darken($tsr-violet,7%);
+  border-top: 1px solid darken($brand-primary,7%);
   margin: 0;
   &:hover{
-    background-color: darken($tsr-violet, 7%);
+    background-color: darken($brand-primary, 7%);
   }
 }
 

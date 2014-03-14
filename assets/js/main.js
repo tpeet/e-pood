@@ -7,7 +7,7 @@ console.log('\'Hello\' Elion webpage!');
     function main() {
         console.log('main js');
         resizeElement();
-        createCustomElement(['content']);
+        createCustomElement(['content','footer']);
     }
     // create custom element
     function createCustomElement(array){
@@ -26,11 +26,11 @@ console.log('\'Hello\' Elion webpage!');
         return h;
     }
     // make a element full screen width
-    // function resizeElement(){
-    //     var _el = $('[data-toggle="resize"]'), _pos = _el.offset(), _margin = 9, _leftpx = (_pos.left + _margin)*(-1);
-    //     _el.css({ width : getScreenWidth()+'px', left:_leftpx, position:'relative' });
-    //     console.log('test',_pos);
-    // }
+    function resizeElement(){
+        var _el = $('[data-toggle="resize"]'), _pos = _el.offset(), _leftpx = _pos.left*(-1);
+        _el.css({ width : document.body.clientWidth+'px', left:_leftpx, position:'relative' });
+    }
+
 
     /*window.addEventListener('resize', screenHasChanged, false);
     var resizeTimeoutId;

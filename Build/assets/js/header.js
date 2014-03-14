@@ -2,6 +2,7 @@
 
     'use strict';
 
+
     function header() {
         
         console.log('header js');
@@ -17,6 +18,7 @@
 
         cloneRightSideMainMenu();
         collapseOtherContent();
+        
     }
     function getH(el){
         var height = $(el).find('.dropdown-menu').height();
@@ -45,10 +47,9 @@
         });
         _elDrop.on('hidden.bs.collapse', function (e) {
             $('header .navbar-header').find('[href*="'+this.id+'"]').removeClass('active');
-            console.log('hello elion');
         });
     }
-    
 
     header();
+
 }());

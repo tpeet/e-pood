@@ -35,9 +35,11 @@
 /* @include _buttons.scss */
 /* @include _forms.scss */
 /* @include _utilities.scss */
+/* @include _panels.scss */
 
 // VILJAR SALU
 //******************
+/* @include tsr-bootstrap/_mixins.scss */
 /* @include tsr-bootstrap/_buttons.scss */
 /* @include tsr-bootstrap/_type.scss */
 /* @include tsr-bootstrap/_icons.scss */
@@ -92,8 +94,20 @@
 
 .dropdown-header {
   padding: 20px 3px 3px;
+  // white-space: normal;
+  // a {
+  //   white-space: nowrap !important;
+  // }
 }
-.navbar-collapse {
+
+.megamenu, 
+.topnav  {
+  .icon {
+    color: #fff;
+  }
+}
+.navbar-collapse
+ {
  [class*=" ts-icon-arrow-"] {
   color: #fff;
  }
@@ -103,22 +117,61 @@
  }
 }
 
-.tsr .navbar-default .navbar-toggle {
+.navbar-default .navbar-toggle {
   font-size: 27px;
   margin-right: 0;
 }
 
-.tsr .navbar {
+.navbar {
   margin-bottom: -1px;
 }
-.ee-promoimage {
-  background: #fff;
-  padding: 20px 40px;
+
+// Admin menu
+.ee-adminnav {
+  .navbar-nav > li > a:after,
+  .navbar-text:after,
+   {
+  background: none repeat scroll 0 0 #D5D5D5;
+  content: "";
+  display: block;
+  height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  z-index: 1;
+  }
+
+  .navbar-nav > li:last-of-type > a:after {
+  background: none;
+  }
+
+  .navbar-text {
+    line-height: 0.42857;
+  }
+
+  .form-horizontal {
+    padding: 25px 12px 50px 12px;
+  }
+
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: $purple-c;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: -1px;
+  }
+
 }
 
-header.tsr .dropdown-menu .dropdown-header, 
-header.tsr .collapsibleMainMenu .dropdown-header {
+header .dropdown-menu .dropdown-header, 
+header  .collapsibleMainMenu .dropdown-header {
   font-size: 19px;
+}
+
+footer .social-block .media .icon {
+  line-height: 26px;
+  text-align: center;
 }
 
 .tsr-forms {

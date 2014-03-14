@@ -30,7 +30,6 @@
 @include make-grid($grid-columns, xs, push);
 @include make-grid($grid-columns, xs, offset);
 
-
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
@@ -63,6 +62,7 @@
   .container {
     width: $container-md;
   }
+
 
   @include make-grid-columns-float(md);
   @include make-grid($grid-columns, md, width);

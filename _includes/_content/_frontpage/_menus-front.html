@@ -24,22 +24,25 @@
       <div  id="content-placeholder-frontmenu"></div>
 
       <script id="front-menu-template" type="text/x-handlebars-template">
-      
+
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
-
+      <h2 class="ee-category-header visible-xs"><small>{{caption}}</small></h2>
         <ul class="nav nav-pills nav-stacked js-listedmenu">
-          {{#each link}}
+          {{#each link }}
+
           <li><a href="{{this.path}}">{{this.name}}</a></li>  
           {{/each}}
         </ul>
         </div>
+ 
       {{/menu}}
+
       </script>
     </div>
   </div>
 </section>
-<a href="" class="tsr-btn-view-all js-slidetoggle"><span>Näita rohkem</span></a>
+<a href="" class="tsr-btn-view-all js-show-button"><span>Näita rohkem</span></a>
 
 

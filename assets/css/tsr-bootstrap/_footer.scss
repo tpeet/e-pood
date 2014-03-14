@@ -1,14 +1,35 @@
 footer {
   
-  background-color: darken($tsr-violet,7.6%);
+  background-color: darken($brand-primary,7.6%);
   color: #fff;
   min-width: 320px;
-  padding: 50px 0px 0px 0px;
+  width: 100%;
+
+  .footer-links{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
   // panel into footer
-  .panel {
-    background-color:transparent;
-    border: 0;
+  div {
+
+    > .panel {
+      background-color:transparent;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      padding-right: 30px;
+      @media (max-width: $screen-xs-max) {
+        padding-right:0;
+      }
+
+    }
+
+    &:last-child{
+      > .panel{
+        padding-right: 0;
+      }
+    }
   }
 
   // Panel contents
@@ -36,10 +57,10 @@ footer {
   // Optional heading
   .panel-default .panel-heading {
     cursor: pointer;
-    border-bottom: 1px solid red;
     background-color: transparent;
     padding: 10px 0px 20px 0px;
     margin-bottom: 14px;
+    border-radius: 0;
   }
 
   // Within heading, strip any `h*` tag of it's default margins for spacing.
@@ -58,13 +79,13 @@ footer {
 
   // Contextual variations
   .panel-default {
-    @include panel-variant(darken($tsr-violet,7.5%), #fff, transparent, darken($tsr-violet, 15%));
+    @include panel-variant(darken($brand-primary,7.5%), #fff, transparent, darken($brand-primary, 15%));
 
     // Optional dropdown
     @media (max-width: $screen-xs-max) {
       .panel-heading{
         &:hover{
-          background-color: lighten($tsr-violet, 7.6%);
+          background-color: lighten($brand-primary, 7.6%);
         }
         a:hover{
           text-decoration: none;
@@ -72,59 +93,50 @@ footer {
       }
       .panel-heading{ 
         margin-bottom: 0;
-        padding-left: 10px; 
-        padding-right: 10px;
+        padding-left: 15px; 
+        padding-right: 15px;
         padding-bottom: 10px;
       }
       .panel-body {
         > ul > li {
           padding-left:15px;
           padding-right:15px;
+          border-bottom: 1px solid darken($brand-primary,15%);
           > a {
             &:hover{
               text-decoration:none;
             }
           }
           &:hover{
-            background-color: lighten($tsr-violet, 7.6%);
+            background-color: lighten($brand-primary, 5%);
           }
         }
       }
     }
   }
-  
+
+
+
   @media (max-width: $screen-xs-max) {
-    .container{ padding: 0; }
-    padding: 0px 0px;
-    .panel{
-      margin-bottom: 0;
-    }
-    .panel-heading{
-      padding:10px;
-      margin: 0; 
-    }
     .panel-default > [data-target*="#col"] {
-      background-color: lighten($tsr-violet, 7.6%);
+      background-color: $brand-primary;
+    }
+    .footer-links{
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
   }
-  .social-block{
-    background-color: lighten($tsr-violet, 7.6%);
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .copyright{
-    background-color: $body-bg;
-    color: #333333;
-    padding: 15px;
-  }
-  .list-unstyled{
-    margin: 0;
-  }
+  
+
+
+
+
+
 
   // media object
   .social-block {
     padding:20px 0 10px 0;
-
+    background-color: lighten($brand-primary, 7.6%);
     .media {
 
       margin:0 0 10px 0;
@@ -175,11 +187,120 @@ footer {
       padding-top:10px;
 
       .media{
-        padding:10px;
+        padding:10px 0 10px 0;
         margin: 0px;
       }
       
     }
 
   }
+
+  .copyright{
+    background-color: $body-bg;
+    color: #333333;
+    padding: 15px;
+  }
+
+  /* test */
+  
+
 }
+
+.container-no-gutter {
+  @include container-fixed();
+  
+  padding:0;
+
+  // mobile first defaults
+  .row {
+    @include make-row-reset-gutter();
+  }
+
+  @include make-grid-columns();
+
+  @include make-grid-columns-float(xs);
+  @include make-grid($grid-columns, xs, width);
+  @include make-grid($grid-columns, xs, pull);
+  @include make-grid($grid-columns, xs, push);
+  @include make-grid($grid-columns, xs, offset);
+  @include reset-gutter($grid-columns, xs);
+
+
+  @media (min-width: $screen-sm-min) {
+
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    width: $full-width; //$container-sm;
+    
+    @include make-grid-columns-float(sm);
+    @include make-grid($grid-columns, sm, width);
+    @include make-grid($grid-columns, sm, pull);
+    @include make-grid($grid-columns, sm, push);
+    @include make-grid($grid-columns, sm, offset);
+    @include reset-gutter($grid-columns, sm);
+  }
+
+  @media (min-width: $screen-md-min) {
+
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    width: $container-md;
+
+    @include make-grid-columns-float(md);
+    @include make-grid($grid-columns, md, width);
+    @include make-grid($grid-columns, md, pull);
+    @include make-grid($grid-columns, md, push);
+    @include make-grid($grid-columns, md, offset);
+    @include reset-gutter($grid-columns, md);
+  }
+
+  @media (min-width: $screen-lg-min) {
+    
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    width: $container-lg;
+
+    @include make-grid-columns-float(lg);
+    @include make-grid($grid-columns, lg, width);
+    @include make-grid($grid-columns, lg, pull);
+    @include make-grid($grid-columns, lg, push);
+    @include make-grid($grid-columns, lg, offset);
+    @include reset-gutter($grid-columns, lg);
+  }
+
+  @media (min-width: $screen-extra-lg) {
+    
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    width: $container-extra-large-desktop;
+
+    @include make-grid-columns-float(lg);
+    @include make-grid($grid-columns, lg, width);
+    @include make-grid($grid-columns, lg, pull);
+    @include make-grid($grid-columns, lg, push);
+    @include make-grid($grid-columns, lg, offset);
+    @include reset-gutter(12, lg);
+  }
+
+}
+
+
+
+/*.container-no-gutter{
+
+  @include container-fixed();
+  .row{
+    @include make-row();
+  }
+  .left-and-right {
+    .left {
+      @include make-xs-column(6);
+    }
+    .right {
+      @include make-xs-column(6);
+    }
+
+  }
+
+}*/
+

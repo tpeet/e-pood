@@ -43,7 +43,7 @@
   fieldset[disabled] & {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-    @include opacity(.65);
+    @include opacity(.8);
     @include box-shadow(none);
   }
 
@@ -55,6 +55,7 @@
 .btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
+// Info appears as purple
 .btn-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
@@ -62,7 +63,7 @@
 .btn-warning {
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
-// Danger and error appear as red
+// Danger and error appear as orange
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
@@ -73,6 +74,14 @@
 // Info appears as blue-green
 .btn-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// purple button
+.btn-pink{
+  @include button-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
+}
+// purple button
+.disabled{
+  @include button-variant($btn-disabled-color, $btn-disabled-bg, $btn-disabled-border);
 }
 
 // Link buttons

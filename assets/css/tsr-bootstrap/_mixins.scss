@@ -425,12 +425,25 @@
     border-top: 4px solid $border;
     border-bottom: 4px solid $border;
   }
-  /*hr {
+  hr {
     border-top-color: darken($border, 5%);
   }
   .alert-link {
     color: darken($text-color, 10%);
-  }*/
+  }
+  .close-btn {
+    &:hover{
+      color:darken($border, 7%);
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    .close-btn {
+      border-radius: 30px;
+      background-color: #fff;
+      color: $background;
+      font-size: 22px;
+    }
+  }
 }
 
 // Tables
@@ -785,6 +798,45 @@
     @include calc-grid($i, $class, $type);
   }
 }
+
+
+
+// ELION MIXINS
+//------------------------------------------------------------
+
+// Creates a wrapper for a series of columns
+@mixin make-row-reset-gutter($gutter: $grid-gutter-width) {
+  
+  @media (max-width: $screen-sm-min) {
+    margin-left:  ($gutter / -2);
+    margin-right: ($gutter / -2);
+  }
+  margin-left:  0;
+  margin-right: 0;
+
+  @include clearfix();
+}
+
+// reset gutter
+@mixin reset-gutter($columns, $class){
+  
+  @for $i from 0 through $columns {
+    .col-#{$class}-#{$i} {
+      padding-left: 0;
+      padding-right: 0;
+      width: percentage(($i / $grid-columns));
+    }
+
+    .col-#{$class}-#{$i}:first-child {
+      //
+    }
+
+    .col-#{$class}-#{$i}:last-child {
+      //
+    }
+  }
+}
+//------------------------------------------------------------
 
 
 
