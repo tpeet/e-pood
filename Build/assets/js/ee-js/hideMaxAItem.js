@@ -4,7 +4,7 @@
 // Usage: Free and Open Source. WTFPL: http://sam.zoy.org/wtfpl/
 (function($){
 $.fn.extend({ 
-hideMaxListItems: function(options) 
+hideMaxAItems: function(options) 
 {
 	// DEFAULT VALUES
 	var defaults = {
@@ -12,7 +12,7 @@ hideMaxListItems: function(options)
 		speed: 1000,
 		moreText:'Näita rohkem',
 		lessText:'Näita vähem',
-		moreHTML:'<p class="tsr-btn-view-all maxlist-more visible-xs visible-sm"><span></span></p>', // requires class and child <a>
+		moreHTML:'<p class="tsr-btn-view-all maxlist-more"><span></span></p>', // requires class and child <a>
 	};
 	var options =  $.extend(defaults, options);
 
@@ -20,30 +20,30 @@ hideMaxListItems: function(options)
 	// FOR EACH MATCHED ELEMENT
 	return this.each(function() {
 		var op = options;
-		var totalListItems = $(this).children("li").length;
-		var speedPerLI;
+		var totalAItems = $(this).children("a").length;
+		var speedPerA;
 		
 		// Get animation speed per LI; Divide the total speed by num of LIs. 
 		// Avoid dividing by 0 and make it at least 1 for small numbers.
-		if ( totalListItems > 0 && op.speed > 0  ) { 
-			speedPerLI = Math.round( op.speed / totalListItems );
-			if ( speedPerLI < 1 ) { speedPerLI = 1; }
+		if ( totalAItems > 0 && op.speed > 0  ) { 
+			speedPerA = Math.round( op.speed / totalAItems );
+			if ( speedPerA < 1 ) { speedPerA = 1; }
 		} else { 
-			speedPerLI = 0; 
+			speedPerA = 0; 
 		}
 		
 		// If list has more than the "max" option
-		if ( (totalListItems > 0) && (totalListItems > op.max) )
+		if ( (totalAItems > 0) && (totalAItems > op.max) )
 		{
 			// Initial Page Load: Hide each LI element over the max
-			$(this).children("li").each(function(index) {
+			$(this).children("a").each(function(index) {
 				if ( (index+1) > op.max ) {
 					$(this).hide(0);
 					$(this).addClass('maxlist-hidden ');
 				}
 			});
 			// Replace [COUNT] in "moreText" or "lessText" with number of items beyond max
-			var howManyMore = totalListItems - op.max;
+			var howManyMore = totalAItems - op.max;
 			var newMoreText = op.moreText;
 			var newLessText = op.lessText;
 			
@@ -52,15 +52,15 @@ hideMaxListItems: function(options)
 				newLessText = newLessText.replace("[COUNT]", howManyMore);
 			}
 			// Add "Read More" button
-			$(this).after(op.moreHTML);
+			// $(this).after(op.moreHTML);
 			// Add "Read More" text
-			$(this).next(".maxlist-more").children("span").text(newMoreText);
+			$(this).parent().next(".tsr-btn-view-all").children("span").text(newMoreText);
 			
 			// Click events on "Read More" button: Slide up and down
-			$(this).next(".maxlist-more").children("span").click(function(e)
+			$(this).parent().next(".tsr-btn-view-all").children("span").click(function(e)
 			{
 				// Get array of children past the maximum option 
-				var listElements = $(this).parent().prev("ul, ol").children("li"); 
+				var listElements = $(".js-placeholder-offers").children("a"); 
 				listElements = listElements.slice(op.max);
 				
 				// Sequentially slideToggle the list items
@@ -68,42 +68,12 @@ hideMaxListItems: function(options)
 				if ( $(this).text() == newMoreText ){
 					$(this).text(newLessText);
 					var i = 0; 
-					(function() { $(listElements[i++] || []).slideToggle(speedPerLI,arguments.callee); })();
+					(function() { $(listElements[i++] || []).slideToggle(speedPerA,arguments.callee); })();
 				} 
 				else {			
 					$(this).text(newMoreText);
 					var i = listElements.length - 1; 
-					(function() { $(listElements[i--] || []).slideToggle(speedPerLI,arguments.callee); })();
-				}
-				
-				// Prevent Default Click Behavior (Scrolling)
-				e.preventDefault();
-			});
-//NEW PART
-var listElements = $("js-listedmenu > li ");
-						// Add "Read More" button
-			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").text(newMoreText);
-					
-			// Click events on "Read More" button: Slide up and down
-			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").click(function(e)
-			{
-				// Get array of children past the maximum option 
-				// var listElements = $(this).parent().parent().children().children().children().children("ul, ol").children("li");
-				var listElements = $("js-listedmenu > li ");
-				listElements = listElements.slice(op.max);
-
-				
-				// Sequentially slideToggle the list items
-				// For more info on this awesome function: http://goo.gl/dW0nM
-				if ( $(this).text() == newMoreText ){
-					$(this).text(newLessText);
-					var i = 0; 
-					(function() { $(listElements[i++] || []).slideToggle(speedPerLI,arguments.callee); })();
-				} 
-				else {			
-					$(this).text(newMoreText);
-					var i = listElements.length - 1; 
-					(function() { $(listElements[i--] || []).slideToggle(speedPerLI,arguments.callee); })();
+					(function() { $(listElements[i--] || []).slideToggle(speedPerA,arguments.callee); })();
 				}
 				
 				// Prevent Default Click Behavior (Scrolling)

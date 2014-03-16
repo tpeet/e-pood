@@ -12,8 +12,7 @@ hideMaxListItems: function(options)
 		speed: 1000,
 		moreText:'Näita rohkem',
 		lessText:'Näita vähem',
-		moreHTML:'<p class="tsr-btn-view-all maxlist-more visible-xs"><span></span></p>', // requires class and child <a>
-		moreLgHTML:'<p class="tsr-btn-view-all maxlist-more hidden-xs"><span></span></p>',
+		moreHTML:'<p class="tsr-btn-view-all maxlist-more visible-xs visible-sm"><span></span></p>', // requires class and child <a>
 	};
 	var options =  $.extend(defaults, options);
 
@@ -63,6 +62,36 @@ hideMaxListItems: function(options)
 				// Get array of children past the maximum option 
 				var listElements = $(this).parent().prev("ul, ol").children("li"); 
 				listElements = listElements.slice(op.max);
+				
+				// Sequentially slideToggle the list items
+				// For more info on this awesome function: http://goo.gl/dW0nM
+				if ( $(this).text() == newMoreText ){
+					$(this).text(newLessText);
+					var i = 0; 
+					(function() { $(listElements[i++] || []).slideToggle(speedPerLI,arguments.callee); })();
+				} 
+				else {			
+					$(this).text(newMoreText);
+					var i = listElements.length - 1; 
+					(function() { $(listElements[i--] || []).slideToggle(speedPerLI,arguments.callee); })();
+				}
+				
+				// Prevent Default Click Behavior (Scrolling)
+				e.preventDefault();
+			});
+//NEW PART
+var listElements = $("js-listedmenu > li ");
+						// Add "Read More" button
+			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").text(newMoreText);
+					
+			// Click events on "Read More" button: Slide up and down
+			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").click(function(e)
+			{
+				// Get array of children past the maximum option 
+				// var listElements = $(this).parent().parent().children().children().children().children("ul, ol").children("li");
+				var listElements = $("js-listedmenu > li ");
+				listElements = listElements.slice(op.max);
+
 				
 				// Sequentially slideToggle the list items
 				// For more info on this awesome function: http://goo.gl/dW0nM

@@ -1,16 +1,20 @@
 // product-list-front
-.ee-product-list-front {
 
-  & .ee-category-header  {
+.ee-category-header  {
     display: block;
     margin: em(15) em(15);
     text-align: left;
     font-size: 32px;
+    background: #fff;
+    border-top: 1px solid $lightgrey-t;
+    border-bottom: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
       margin: em(15) auto;
       text-align: center;
     } 
   }
+
+.ee-product-list-front {
 
   .nav {
     border-bottom: 1px solid $lightgrey-t;

@@ -826,6 +826,7 @@
     <script src="assets/js/tsr-js/tsr-communication-primary.js"></script>  <!-- Deps on flexslider -->
     <script src="assets/js/tsr-js/tsr-promotion.js"></script>
     <script src="assets/js/ee-js/hideMaxListItem.js"></script>
+    <script src="assets/js/ee-js/hideMaxAItem.js"></script>
 
 <!-- Frontpage-logged-in -->
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
@@ -847,7 +848,7 @@ $('.js-slidetoggle').click(function(e) {
   e.preventDefault();
 });
 
-        $('.foo').bigtext({
+        $('.hoo').bigtext({
             //minfontsize: 30
         });
 
@@ -870,7 +871,8 @@ $('.js-slidetoggle').click(function(e) {
 
     $(document).ready(function() {  
 
-      $('.js-listedmenu').hideMaxListItems({ 'max':7, 'speed':500, 'moreText':'Näita rohkem ([COUNT])' });
+      $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem' });
+      $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem' });
 
     });  
 

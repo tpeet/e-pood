@@ -1,6 +1,6 @@
  <!-- frontpage not logged in template -->
-<section class="tsr-section-divider tsr-color-white text-center" > 
-  <div class="container hidden-xs">
+<section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
+  <div class="container">
     <div class="row ">
       <div class="col-xs-12 col-sm-6 col-md-3">
         <h6>Arvutid ja lisad</h6>
@@ -28,7 +28,7 @@
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="ee-category-header visible-xs"><small>{{caption}}</small></h2>
+        <h2 class="tsr-color-white ee-category-header visible-xs visible-sm"><small>{{caption}}</small></h2>
         <ul class="nav nav-pills nav-stacked js-listedmenu">
           {{#each link }}
 
@@ -43,6 +43,6 @@
     </div>
   </div>
 </section>
-<a href="" class="tsr-btn-view-all js-show-button"><span>Näita rohkem</span></a>
+<a href="" class="tsr-btn-view-all hidden-sm hidden-xs"><span>Näita rohkem</span></a> <!-- js-show-button -->
 
 

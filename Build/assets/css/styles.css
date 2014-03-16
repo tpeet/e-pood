@@ -11186,15 +11186,19 @@ ul.tsr-product-colors {
   ul.tsr-product-colors .kollane {
     background: yellow; }
 
-.ee-product-list-front .ee-category-header {
+.ee-category-header {
   display: block;
   margin: 0.96774em 0.96774em;
   text-align: left;
-  font-size: 32px; }
+  font-size: 32px;
+  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb; }
   @media screen and (min-width: 768px) {
-    .ee-product-list-front .ee-category-header {
+    .ee-category-header {
       margin: 0.96774em auto;
       text-align: center; } }
+
 .ee-product-list-front .nav {
   border-bottom: 1px solid #dbdbdb;
   padding: 0.64516em 0; }

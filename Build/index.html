@@ -520,7 +520,7 @@
 
 <section class="tsr-section-promotion tsr-count-4"> 
     <div class="container product">
-      <div id="content-placeholder-offers"></div>
+      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
       <script id="offer-slider-template" type="text/x-handlebars-template">
       {{#offers}}
 
@@ -544,16 +544,15 @@
       </a>
       {{/offers}}
       </script>
-
     </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all js-slidetoggle"><span>Näita rohkem</span></a>
+   <a href="javascript:void(0);" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
 </section>
 
 <!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> --> 
 
  <!-- frontpage not logged in template -->
-<section class="tsr-section-divider tsr-color-white text-center" > 
-  <div class="container hidden-xs">
+<section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
+  <div class="container">
     <div class="row ">
       <div class="col-xs-12 col-sm-6 col-md-3">
         <h6>Arvutid ja lisad</h6>
@@ -581,7 +580,7 @@
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="ee-category-header visible-xs"><small>{{caption}}</small></h2>
+        <h2 class="tsr-color-white ee-category-header visible-xs visible-sm"><small>{{caption}}</small></h2>
         <ul class="nav nav-pills nav-stacked js-listedmenu">
           {{#each link }}
 
@@ -596,7 +595,7 @@
     </div>
   </div>
 </section>
-<a href="" class="tsr-btn-view-all js-show-button"><span>Näita rohkem</span></a>
+<a href="" class="tsr-btn-view-all hidden-sm hidden-xs"><span>Näita rohkem</span></a> <!-- js-show-button -->
 
 
  
@@ -812,6 +811,7 @@
     <script src="assets/js/tsr-js/tsr-communication-primary.js"></script>  <!-- Deps on flexslider -->
     <script src="assets/js/tsr-js/tsr-promotion.js"></script>
     <script src="assets/js/ee-js/hideMaxListItem.js"></script>
+    <script src="assets/js/ee-js/hideMaxAItem.js"></script>
 
 <!-- Frontpage-logged-in -->
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
@@ -833,7 +833,7 @@ $('.js-slidetoggle').click(function(e) {
   e.preventDefault();
 });
 
-        $('.foo').bigtext({
+        $('.hoo').bigtext({
             //minfontsize: 30
         });
 
@@ -856,7 +856,8 @@ $('.js-slidetoggle').click(function(e) {
 
     $(document).ready(function() {  
 
-      $('.js-listedmenu').hideMaxListItems({ 'max':7, 'speed':500, 'moreText':'Näita rohkem ([COUNT])' });
+      $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem' });
+      $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem' });
 
     });  
 
