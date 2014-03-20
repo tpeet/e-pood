@@ -92,14 +92,64 @@
   max-width: 1440px;
 }
 
-.dropdown-header {
-  padding: 20px 3px 3px;
+.megamenu > li > ul > li.dropdown-header > a {
+  font-size: 19px;
+  // padding: 20px 3px 3px;
   // white-space: normal;
   // a {
   //   white-space: nowrap !important;
   // }
 }
 
+// For right-side additional Help menu
+.megamenu > li > ul > li > a {
+color: #FFF;
+font-size: 15px;
+padding: 10px 15px;
+border-bottom: 1px solid $purple-t;
+  &:hover {
+    background: $purple-h;
+    padding: 11px 15px;
+  }
+  @include media-min($screen-sm) {
+  border-bottom: none;
+  } 
+}
+
+.dropdown-header .icon {
+  float: right;
+}
+
+.navbar-default {
+  border-color: $lightgrey-t;
+  border-bottom: none;
+}
+
+header {
+  margin-bottom: -1px;
+}
+
+// For 3d level menu to have some styling
+.megamenu > li > ul > li:not(.dropdown-header) > a {
+  padding-left: 40px;
+  border-bottom: 1px solid $purple-t;
+
+    @include media-min($screen-sm) {
+    padding-left: 13px;
+    border-bottom: none;
+  } 
+}
+
+.navbar-default .navbar-collapse .dropdown-toggle {
+font-size: 19px;
+}
+
+// Jaanus wants additional space in front of ad
+.megamenu img {
+  margin-top: 10px;
+}
+
+// Could not link Viljars icons. Repeating icon style for own icons
 .megamenu, 
 .topnav  {
   .icon {
@@ -122,9 +172,10 @@
   margin-right: 0;
 }
 
-.navbar {
+.navbar .nav {
   margin-bottom: -1px;
 }
+
 
 // Admin menu
 .ee-adminnav {

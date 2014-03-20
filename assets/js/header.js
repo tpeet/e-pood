@@ -28,6 +28,7 @@
     function cloneRightSideMainMenu(){
         $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
         $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
+        $('#collapsibleMainMenu-Help').html( $('.collapsibleMainMenu-Help').clone() );
     }
 
     

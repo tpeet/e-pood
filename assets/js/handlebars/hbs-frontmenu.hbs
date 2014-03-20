@@ -1,13 +1,6 @@
-Handlebars.registerHelper('each_upto', function(ary, max, options) {
-    if(!ary || ary.length == 0)
-        return options.inverse(this);
 
-    var result = [ ];
-    for(var i = 0; i < max && i < ary.length; ++i)
-        result.push(options.fn(ary[i]));
-    return result.join('');
-});
-
+  var source1   = $("#front-menu-template1").html();
+  var template1 = Handlebars.compile(source1);
   var source   = $("#front-menu-template").html();
   var template = Handlebars.compile(source);
 
@@ -177,7 +170,7 @@ Handlebars.registerHelper('each_upto', function(ary, max, options) {
     }
     ]};
       $("#content-placeholder-frontmenu").html(template(data));
-
+      $("#content-placeholder-frontmenu1").html(template1(data));
   
 
 

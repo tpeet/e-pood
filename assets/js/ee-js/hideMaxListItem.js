@@ -80,56 +80,40 @@ hideMaxListItems: function(options)
 				e.preventDefault();
 			});
 //NEW PART
-var listElements = $("js-listedmenu > li ");
 						// Add "Read More" button
 			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").text(newMoreText);
 					
+			// Set up large menu to be hidden at start
+			var listElementsLg = $(".js-listedmenu-lg").find("li:gt(6)"); 
+			$(listElementsLg).css( "display", "none" );
 			// Click events on "Read More" button: Slide up and down
-			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").children("span").click(function(e)
+			$(this).parent().parent().parent().parent().parent().next(".tsr-btn-view-all").click(function(e)
 			{
-				// Get array of children past the maximum option 
-				// var listElements = $(this).parent().parent().children().children().children().children("ul, ol").children("li");
-				var listElements = $("js-listedmenu > li ");
-				listElements = listElements.slice(op.max);
 
-				
-				// Sequentially slideToggle the list items
-				// For more info on this awesome function: http://goo.gl/dW0nM
-				if ( $(this).text() == newMoreText ){
-					$(this).text(newLessText);
-					var i = 0; 
-					(function() { $(listElements[i++] || []).slideToggle(speedPerLI,arguments.callee); })();
+
+      // e.preventDefault();
+      // var $btn = $(this).children('span');
+      // $(listElementsLg).slideToggle();
+     	// $btn.text($btn.text() == 'Rohkem' ? 'Vähem' : 'Rohkem');
+
+
+				if ( $(this).children("span").text() == newMoreText ){
+
+					$(this).children("span").text(newLessText);
+					$(listElementsLg).slideDown();
+
 				} 
-				else {			
-					$(this).text(newMoreText);
-					var i = listElements.length - 1; 
-					(function() { $(listElements[i--] || []).slideToggle(speedPerLI,arguments.callee); })();
-				}
-				
+				// else if ($(this).text() == newLessText ) 
+				//  {
+
+				// 	$(this).text(newMoreText);
+				// 	$(listElementsLg).slideUp();
+				// }
+									e.preventDefault();
+
 				// Prevent Default Click Behavior (Scrolling)
-				e.preventDefault();
+				
 			});
-
-
-						// Click events on "Read More" button: Slide up and down
-			// $(".js-show-button").click(function(e)
-			// {
-			// 	if ( $(this).text() == newLessText ){
-			// 		$(this).children("span").text(newMoreText);
-			// 		var i = 0; 
-			// 		$("#content-placeholder-frontmenu").find(".js-listedmenu >li").each(function(i) {
-			// 		$(this).slideDown().css('display', 'block');
-			// 	}); 
-			// 	}
-			// 	else {			
-			// 		$(this).children("span").text(newLessText);
-			// 		var i = listElements.length - 1;  
-			// 		$("#content-placeholder-frontmenu").find(".js-listedmenu >li").each(function(i) {
-			// 		$(this).slideUp().css('display', 'none');
-			// 		}); 
-			// 	}
-			// 	e.preventDefault();
-			// });
 		}
 	});
 }

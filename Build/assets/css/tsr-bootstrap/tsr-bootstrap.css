@@ -696,7 +696,7 @@ header .dropdown-menu, header .collapsibleMainMenu {
           padding: 20px 12px 20px 12px;
         }*/ } }
   header .dropdown-menu .dropdown-header, header .collapsibleMainMenu .dropdown-header {
-    font-size: 17px;
+    font-size: 19px;
     padding-left: 0;
     padding-right: 0; }
   @media (max-width: 767px) {

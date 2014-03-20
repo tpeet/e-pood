@@ -32,6 +32,9 @@
   border: 0;
   text-decoration: underline;
   font-weight: 600;
+      color: white;
+    background: $purple-t;
+    @include border-radius(4px);
     &:after {
       font-family: 'ts-icons-all';
       content: "\e669";

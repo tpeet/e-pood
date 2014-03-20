@@ -11,12 +11,10 @@ hideMaxAItems: function(options)
 		max: 3,
 		speed: 1000,
 		moreText:'Näita rohkem',
-		lessText:'Näita vähem',
-		moreHTML:'<p class="tsr-btn-view-all maxlist-more"><span></span></p>', // requires class and child <a>
+		lessText:'Näita vähem'
 	};
 	var options =  $.extend(defaults, options);
 
-	
 	// FOR EACH MATCHED ELEMENT
 	return this.each(function() {
 		var op = options;
@@ -31,7 +29,7 @@ hideMaxAItems: function(options)
 		} else { 
 			speedPerA = 0; 
 		}
-		
+		      
 		// If list has more than the "max" option
 		if ( (totalAItems > 0) && (totalAItems > op.max) )
 		{
@@ -51,8 +49,6 @@ hideMaxAItems: function(options)
 				newMoreText = newMoreText.replace("[COUNT]", howManyMore);
 				newLessText = newLessText.replace("[COUNT]", howManyMore);
 			}
-			// Add "Read More" button
-			// $(this).after(op.moreHTML);
 			// Add "Read More" text
 			$(this).parent().next(".tsr-btn-view-all").children("span").text(newMoreText);
 			
@@ -79,27 +75,6 @@ hideMaxAItems: function(options)
 				// Prevent Default Click Behavior (Scrolling)
 				e.preventDefault();
 			});
-
-
-						// Click events on "Read More" button: Slide up and down
-			// $(".js-show-button").click(function(e)
-			// {
-			// 	if ( $(this).text() == newLessText ){
-			// 		$(this).children("span").text(newMoreText);
-			// 		var i = 0; 
-			// 		$("#content-placeholder-frontmenu").find(".js-listedmenu >li").each(function(i) {
-			// 		$(this).slideDown().css('display', 'block');
-			// 	}); 
-			// 	}
-			// 	else {			
-			// 		$(this).children("span").text(newLessText);
-			// 		var i = listElements.length - 1;  
-			// 		$("#content-placeholder-frontmenu").find(".js-listedmenu >li").each(function(i) {
-			// 		$(this).slideUp().css('display', 'none');
-			// 		}); 
-			// 	}
-			// 	e.preventDefault();
-			// });
 		}
 	});
 }

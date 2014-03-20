@@ -8948,7 +8948,7 @@ header .dropdown-menu, header .collapsibleMainMenu {
           padding: 20px 12px 20px 12px;
         }*/ } }
   header .dropdown-menu .dropdown-header, header .collapsibleMainMenu .dropdown-header {
-    font-size: 17px;
+    font-size: 19px;
     padding-left: 0;
     padding-right: 0; }
   @media (max-width: 767px) {
@@ -10936,7 +10936,12 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
   .ee-sidenav .active {
     border: 0;
     text-decoration: underline;
-    font-weight: 600; }
+    font-weight: 600;
+    color: white;
+    background: #4e256b;
+    -webkit-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
     .ee-sidenav .active:after {
       font-family: 'ts-icons-all';
       content: "\e669";
@@ -11657,8 +11662,44 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .container {
   max-width: 1440px; }
 
-.dropdown-header {
-  padding: 20px 3px 3px; }
+.megamenu > li > ul > li.dropdown-header > a {
+  font-size: 19px; }
+
+.megamenu > li > ul > li > a {
+  color: #FFF;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-bottom: 1px solid #4e256b; }
+  .megamenu > li > ul > li > a:hover {
+    background: #73369e;
+    padding: 11px 15px; }
+  @media screen and (min-width: 768px) {
+    .megamenu > li > ul > li > a {
+      border-bottom: none; } }
+
+.dropdown-header .icon {
+  float: right; }
+
+.navbar-default {
+  border-color: #dbdbdb;
+  border-bottom: none; }
+
+header {
+  margin-bottom: -1px; }
+
+.megamenu > li > ul > li:not(.dropdown-header) > a {
+  padding-left: 40px;
+  border-bottom: 1px solid #4e256b; }
+  @media screen and (min-width: 768px) {
+    .megamenu > li > ul > li:not(.dropdown-header) > a {
+      padding-left: 13px;
+      border-bottom: none; } }
+
+.navbar-default .navbar-collapse .dropdown-toggle {
+  font-size: 19px; }
+
+.megamenu img {
+  margin-top: 10px; }
 
 .megamenu .icon,
 .topnav .icon {
@@ -11674,7 +11715,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   font-size: 27px;
   margin-right: 0; }
 
-.navbar {
+.navbar .nav {
   margin-bottom: -1px; }
 
 .ee-adminnav .navbar-nav > li > a:after,

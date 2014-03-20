@@ -18,8 +18,30 @@
   </div>
 </section>
 <section class="tsr-section-productAndService-listing">
-  
-  <div class="ee-product-list-front container product">
+  <div class="ee-product-list-front container product hidden-xs hidden-sm">
+    <div class="row">
+      <div  id="content-placeholder-frontmenu1"></div>
+
+        <script id="front-menu-template1" type="text/x-handlebars-template">
+
+        {{#menu}}
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <ul class="nav nav-pills nav-stacked js-listedmenu-lg">
+            {{#each link }}
+
+            <li><a href="{{this.path}}">{{this.name}}</a></li>  
+            {{/each}}
+          </ul>
+          </div>
+
+        {{/menu}}
+
+        </script>
+    </div>
+  </div>
+
+  <div class="ee-product-list-front container product visible-xs visible-sm">
     <div class="row">
       <div  id="content-placeholder-frontmenu"></div>
 
@@ -28,7 +50,7 @@
       {{#menu}}
 
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <h2 class="tsr-color-white ee-category-header visible-xs visible-sm"><small>{{caption}}</small></h2>
+        <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
         <ul class="nav nav-pills nav-stacked js-listedmenu">
           {{#each link }}
 

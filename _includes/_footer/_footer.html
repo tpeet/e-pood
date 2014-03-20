@@ -133,9 +133,13 @@
 </footer>
 
 
+<!-- HTML5 IE Enabling Script -->
+<!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
+
 <!-- @javascript rapid -->
-<!-- <script src="assets/js/vendor/require.js"></script> -->
-<!-- @include _js.html --> 
+<!-- Footerheader handlebars -->
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
+
 
 <script>
 // $( document ).ready(function() {
@@ -151,12 +155,16 @@
 //   });
 // });
 
-    $(document).ready(function() {  
+    // $(document).ready(function() {  
 
-      $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem' });
-      $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem' });
 
-    });  
+
+    //   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+
+    //   $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+    // });  
 
 </script> 
 </body>
