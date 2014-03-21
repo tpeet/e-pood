@@ -11662,6 +11662,10 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .container {
   max-width: 1440px; }
 
+.texthold {
+  width: 40px;
+  height: 40px; }
+
 .megamenu > li > ul > li.dropdown-header > a {
   font-size: 19px; }
 

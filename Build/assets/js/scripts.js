@@ -1,3 +1,4 @@
+console.log('scripts');
 // Sliding commenting
 //*********************
 // $('.js-togglable').hide();
@@ -78,7 +79,25 @@ $(document).ready(function() {
 
 });
 
-// POPOVER DETAIL
+
+// FRONTPAGE ADJUSTED SIZE FLASH TEXT
+// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
+$( '.js-filltext' ).each(function ( i, box ) {
+
+    var width = $( box ).width(),
+        html = '<span style="white-space:nowrap">',
+        line = $( box ).wrapInner( html ).children()[ 0 ],
+        n = 100;
+    
+    $( box ).css( 'font-size', '100px' );
+
+    $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
+    $( box ).text( $( line ).text() );
+
+});
+
+
+// DETAIL POPOVER
 $('[data-toggle="popover"]').popover();
 $('body').on('click', function (e) {
   $('[data-toggle="popover"]').each(function () {
@@ -92,8 +111,3 @@ $('.js-slidetoggle').click(function(e) {
   $(this).parents().next('.js-togglable').slideToggle('slow');
   e.preventDefault();
 });
-
-// FILL TEXT
-$('.hoo').bigtext({
-    //minfontsize: 30
-}); 

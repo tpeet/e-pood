@@ -497,15 +497,29 @@
 
 <section class="tsr-section-promotion tsr-count-4"> 
     <div class="container product">
+      <figure class="tsr-tactical-flash ">
+      <div class="js-filltext" style="width: 60px; margin-top: 18px;">
+      <span >5677678 $</span> </div>
+      <div class="js-filltext" style="width: 50px; text-align: center;">
+      papagoid
+      </div>
+    </figure>
+
       <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
       <script id="offer-slider-template" type="text/x-handlebars-template">
       {{#offers}}
 
       <a href="#" class="tsr-module-promotion">
         <figure class="tsr-product-image">
-          <figure class="tsr-tactical-flash"><span class="foo">48 $ <small>papagoid</small></span></figure>
+            <figure class="tsr-tactical-flash ">
+    <div class="box" style="width: 60px; margin-top: 18px;">
+    <span >868547544657 $</span> </div>
+    <div class="box" style="width: 50px; text-align: center;">
+    papagoid
+    </div>
+  </figure>
           {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-first"><span class="foo">{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
           {{/if}}
           {{#if secondflash}}
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
@@ -760,9 +774,65 @@
 <!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
 
 <script src='assets/js/rapid.js'></script>
-<!-- Footerheader handlebars -->
+<!-- General handlebars -->
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
+<!-- HTML5 IE Enabling Script -->
+<!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
+
+<!-- General handlebars -->
     <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
 
+<!-- Global scripts -->
+    <script src="assets/js/tsr-js/libs/jquery.debouncing.js"></script>
+    <script src="assets/js/tsr-js/polyfills/matchMedia.js"></script>
+    <script src="assets/js/tsr-js/polyfills/matchMedia.addListener.js"></script>
+    <script src="assets/js/vendor/srcset.min.js"></script>
+    <script src="assets/js/vendor/common.js"></script>
+    <script src="assets/js/vendor/paintbrush.js"></script>
+    <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script> <!-- Equal Height-->
+    <script src="assets/js/tsr-js/tsr-forms.js"></script>
+<!--     // <script src="assets/js/scripts.js"></script> -->
+
+<!-- Sliders scripts -->
+    <script src="assets/js/tsr-js/libs/jquery.flexslider.js"></script>
+    <script src="assets/js/ee-js/ee-carousel-listing.js"></script>
+
+
+<!-- Header-footer-visamain -->
+    <script src="assets/js/bootstrap-js/alert.js"></script>
+    <script src="assets/js/bootstrap-js/button.js"></script>
+    <script src="assets/js/bootstrap-js/dropdown.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+<!--     // <script src="assets/js/main.js"></script> -->
+
+<!-- 2nd-level -->
+    <script src="assets/js/ee-js/ee-2nd-level.js"></script>
+
+<!-- Detail view -->
+    <script src="assets/js/bootstrap-js/collapse.js"></script>
+    <script src="assets/js/bootstrap-js/transition.js"></script>
+    <script src="assets/js/bootstrap-js/tab.js"></script>
+    <script src="assets/js/bootstrap-js/tooltip.js"></script>
+    <script src="assets/js/bootstrap-js/popover.js"></script>
+    <script src="assets/js/vendor/froogaloop.js"></script>
+    <script src="assets/js/vendor/jquery.fitvid.js"></script>
+    <script src="assets/js/ee-js/ee-image-rotator.js"></script>
+    <script src="assets/js/vendor/bootstrap-rating-input.js"></script>
+    <script src="assets/js/vendor/socialcount.min.js"></script>
+<!-- 
+    // <script src="assets/js/tsr-js/tsr-core.js"></script> -->
+
+<!-- Frontpage -->
+    <script src="assets/js/tsr-js/tsr-communication-primary.js"></script>  <!-- Deps on flexslider -->
+    <script src="assets/js/tsr-js/tsr-promotion.js"></script>
+    <script src="assets/js/ee-js/hideMaxListItem.js"></script>
+    <script src="assets/js/ee-js/hideMaxAItem.js"></script>
+
+<!-- Frontpage-logged-in -->
+    <script src="assets/js/tsr-js/tsr-filter.js"></script>
+    <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
+    <script src="assets/js/tsr-js/tsr-attention.js"></script> 
 
 <script>
 // $( document ).ready(function() {

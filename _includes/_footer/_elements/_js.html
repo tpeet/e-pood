@@ -11,7 +11,6 @@
     <script src="assets/js/vendor/srcset.min.js"></script>
     <script src="assets/js/vendor/common.js"></script>
     <script src="assets/js/vendor/paintbrush.js"></script>
-    <script src="assets/js/vendor/bigtext.js"></script>
     <script src="assets/js/tsr-js/tsr-productAndService-listing.js"></script> <!-- Equal Height-->
     <script src="assets/js/tsr-js/tsr-forms.js"></script>
 <!--     // <script src="assets/js/scripts.js"></script> -->
@@ -56,25 +55,3 @@
     <script src="assets/js/tsr-js/tsr-filter.js"></script>
     <script src="assets/js/tsr-js/tsr-mediaTable.js"></script>
     <script src="assets/js/tsr-js/tsr-attention.js"></script>
-
-<script>
-$('[data-toggle="popover"]').popover();
-$('body').on('click', function (e) {
-  $('[data-toggle="popover"]').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
-      }
-  });
-});
-
-$('.js-slidetoggle').click(function(e) {
-  $(this).parents().next('.js-togglable').slideToggle('slow');
-  e.preventDefault();
-});
-
-        $('.hoo').bigtext({
-            //minfontsize: 30
-        }); 
-
-
-</script>
