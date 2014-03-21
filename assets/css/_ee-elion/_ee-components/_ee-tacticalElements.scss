@@ -3,6 +3,9 @@
 .tsr-tactical-flash  {
   z-index: 1;
   position: absolute;
+  span {
+    font-size: 18px;
+  }
 }
 
   .tsr-tactical-flash:first-of-type {

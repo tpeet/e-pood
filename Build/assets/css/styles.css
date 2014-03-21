@@ -10653,6 +10653,8 @@ body {
 .tsr-tactical-flash {
   z-index: 1;
   position: absolute; }
+  .tsr-tactical-flash span {
+    font-size: 18px; }
 
 .tsr-tactical-flash:first-of-type {
   top: 50px; }
@@ -11193,11 +11195,11 @@ ul.tsr-product-colors {
 
 .ee-category-header {
   display: block;
-  margin: 0.96774em 0.96774em;
+  margin: 0;
+  padding: 10px;
   text-align: left;
   font-size: 32px;
   background: #fff;
-  border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb; }
   @media screen and (min-width: 768px) {
     .ee-category-header {
@@ -11205,11 +11207,9 @@ ul.tsr-product-colors {
       text-align: center; } }
 
 .ee-product-list-front .nav {
-  border-bottom: 1px solid #dbdbdb;
   padding: 0.64516em 0; }
   @media screen and (min-width: 768px) {
     .ee-product-list-front .nav {
-      border-bottom: none;
       padding: 0.96774em 0; } }
 .ee-product-list-front .nav-stacked.nav > li > a {
   text-align: left; }
@@ -11225,6 +11225,10 @@ ul.tsr-product-colors {
         background-color: #642887;
         color: white;
         text-decoration: none; } }
+.ee-product-list-front .tsr-btn-view-all {
+  border-top: none; }
+  .ee-product-list-front .tsr-btn-view-all:hover {
+    background: transparent; }
 
 .ee-product-badge {
   position: absolute;
@@ -11662,10 +11666,6 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .container {
   max-width: 1440px; }
 
-.texthold {
-  width: 40px;
-  height: 40px; }
-
 .megamenu > li > ul > li.dropdown-header > a {
   font-size: 19px; }
 
@@ -11686,7 +11686,8 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 
 .navbar-default {
   border-color: #dbdbdb;
-  border-bottom: none; }
+  border-bottom: none;
+  border-right: none; }
 
 header {
   margin-bottom: -1px; }

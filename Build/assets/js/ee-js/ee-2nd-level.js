@@ -39,25 +39,25 @@ $(function() {
 
 // Menu handling
 $(document).ready(function () {
-  $('#sidenav > li > a').click(function(e){
+  $('.js-sidenav > li > a').click(function(e){
     if ($(this).attr('class') != 'active'){
-      $('#sidenav li ul').slideUp('fast');
+      $('.js-sidenav li ul').slideUp('fast');
       $(this).next().slideToggle();
-      $('#sidenav li a').removeClass('active');
-      $('#sidenav > li > ul > li > a').removeClass('selected');
+      $('.js-sidenav li a').removeClass('active');
+      $('.js-sidenav > li > ul > li > a').removeClass('selected');
       $(this).addClass('active');
     }
     else {
-      $('#sidenav li ul').slideUp('fast');
+      $('.js-sidenav li ul').slideUp('fast');
       $(this).removeClass('active');
-      $('#sidenav > li > ul > li > a').removeClass('selected'); 
+      $('.js-sidenav > li > ul > li > a').removeClass('selected'); 
 
     }
     e.preventDefault();
   });
 
   // Temporary for static presentation only
-  $('#sidenav > li > ul > li > a').click(function(e){
+  $('.js-sidenav > li > ul > li > a').click(function(e){
     if ($(this).attr('class') != 'selected'){
       $(this).addClass('selected');
       $('a').not(this).removeClass('selected');

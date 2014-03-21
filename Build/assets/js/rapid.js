@@ -2812,19 +2812,6 @@ console.log('scripts');
 //    window.klikk=true;
 // });
 
-// $( document ).ready(function() {
-//   $('.js-listedmenu').each(function() {
-//     var $list = $(this);
-//    $list.find('li:gt(6)').hide();
-//     });
-//   $('.js-show-button').click(function(e) {
-//       e.preventDefault();
-//       var $btn = $(this).find('span');
-//       $('.js-listedmenu > li:gt(6)').slideToggle();
-//       $btn.text($btn.text() == 'Rohkem' ? 'Vähem' : 'Rohkem');
-//   });
-// });
-
 // FRONTPAGE MORE
 $(document).ready(function() {
 
