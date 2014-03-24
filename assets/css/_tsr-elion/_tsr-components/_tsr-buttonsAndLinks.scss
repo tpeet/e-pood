@@ -265,11 +265,11 @@ BUTTONS & LINKS
 		text-align:center;
 
 		span{
-			@include border-radius(4px);
-			display:block;
-			color:$white;
-			background:$purple-c;
-			border-bottom:4px solid $purple-t;
+			// @include border-radius(4px);
+			// display:block;
+			// color:$white;
+			// background:$purple-c;
+			// border-bottom:4px solid $purple-t;
 			padding:11px 14px;
 			margin:10px 10px;
 			font-size:13px;
@@ -281,26 +281,26 @@ BUTTONS & LINKS
 	 			margin-left:4px;
 	    	}
 
-			&:hover{
-				background:$purple-h;
-			}
+			// &:hover{
+			// 	background:$purple-h;
+			// }
 		}
 
-		&:hover{
-			text-decoration:none;
-			background:$white;
-			cursor:pointer;
-		} 
+		// &:hover{
+		// 	text-decoration:none;
+		// 	background:$white;
+		// 	cursor:pointer;
+		// } 
 
 		// Color white
-		&.tsr-color-white{
-			background:$white;
+		// &.tsr-color-white{
+		// 	background:$white;
 
-			&:hover{
-				background:$lightgrey-c;
-			}
+		// 	&:hover{
+		// 		background:$lightgrey-c;
+		// 	}
 
-		} 
+		// } 
 
 	    // Touch normalize (Hover + focus, Active, )
 		.touch & {

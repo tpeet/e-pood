@@ -9,8 +9,11 @@
     background: #fff;
     border-bottom: 1px solid $lightgrey-t;
     @include media-min($screen-sm) {
-      margin: em(15) auto;
       text-align: center;
+    } 
+    @include media-min($screen-md) {
+      margin: em(15) auto;
+
     } 
     small {
       margin-left: 10px;
@@ -41,14 +44,28 @@
       }
     }
   }
-  .tsr-btn-view-all {
-    border-top: none;
-    &:hover {
-      background: transparent;
+
+} 
+.tsr-btn-view-all {
+  text-align: left;
+  @include media-min($screen-sm) {
+  text-align: center;
+  }
+  span{
+    background:none;  
+    display: block;
+    border:none;
+    color:$purple-c;
+    font-size:15px;
+    margin: 0;
+    padding: 20px 0;
+
+    &:hover{
+      background:none;
+      text-decoration: underline;
     }
   }
-} 
-
+}
 .ee-product-badge {
   @extend .ee-badge;
   position: absolute;

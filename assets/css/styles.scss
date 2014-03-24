@@ -79,146 +79,21 @@
 /* @include _ee-reviews.scss */
 /* @include _ee-2nd-level-general-parts.scss */
 /* @include _ee-productslider.scss */
-
+/* @include _ee-mainnav.scss */
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
 
-
+// HELPER CLASSES
+//**********************************
+.ee-thinline-bottom {
+  margin-bottom: -1px;
+}
 
 // WORK IN PROGRESS PARTS
 //**********************************
 .container {
   max-width: 1440px;
-}
-
-.megamenu > li > ul > li.dropdown-header > a {
-  font-size: 19px;
-  // padding: 20px 3px 3px;
-  // white-space: normal;
-  // a {
-  //   white-space: nowrap !important;
-  // }
-}
-
-// For right-side additional Help menu
-.megamenu > li > ul > li > a {
-color: #FFF;
-font-size: 15px;
-padding: 10px 15px;
-border-bottom: 1px solid $purple-t;
-  &:hover {
-    background: $purple-h;
-    padding: 11px 15px;
-  }
-  @include media-min($screen-sm) {
-  border-bottom: none;
-  } 
-}
-
-.dropdown-header .icon {
-  float: right;
-}
-
-.navbar-default {
-  border-color: $lightgrey-t;
-  border-bottom: none;
-  border-right: none;
-}
-
-header {
-  margin-bottom: -1px;
-}
-
-// For 3d level menu to have some styling
-.megamenu > li > ul > li:not(.dropdown-header) > a {
-  padding-left: 40px;
-  border-bottom: 1px solid $purple-t;
-
-    @include media-min($screen-sm) {
-    padding-left: 13px;
-    border-bottom: none;
-  } 
-}
-
-.navbar-default .navbar-collapse .dropdown-toggle {
-font-size: 19px;
-}
-
-// Jaanus wants additional space in front of ad
-.megamenu img {
-  margin-top: 10px;
-}
-
-// Could not link Viljars icons. Repeating icon style for own icons
-.megamenu, 
-.topnav  {
-  .icon {
-    color: #fff;
-  }
-}
-.navbar-collapse
- {
- [class*=" ts-icon-arrow-"] {
-  color: #fff;
- }
-  [class*=" ts-icon-arrow-right"] {
-  font-size: 80%;
-  padding-left: 5px;
- }
-}
-
-.navbar-default .navbar-toggle {
-  font-size: 27px;
-  margin-right: 0;
-}
-
-.navbar .nav {
-  margin-bottom: -1px;
-}
-
-
-// Admin menu
-.ee-adminnav {
-  .navbar-nav > li > a:after,
-  .navbar-text:after,
-   {
-  background: none repeat scroll 0 0 #D5D5D5;
-  content: "";
-  display: block;
-  height: 20px;
-  margin-top: -10px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 1px;
-  z-index: 1;
-  }
-
-  .navbar-nav > li:last-of-type > a:after {
-  background: none;
-  }
-
-  .navbar-text {
-    line-height: 0.42857;
-  }
-
-  .form-horizontal {
-    padding: 25px 12px 50px 12px;
-  }
-
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: $purple-c;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: -1px;
-  }
-
-}
-
-header .dropdown-menu .dropdown-header, 
-header  .collapsibleMainMenu .dropdown-header {
-  font-size: 19px;
 }
 
 footer .social-block .media .icon {
