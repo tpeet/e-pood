@@ -426,7 +426,7 @@
 
 <div class="container"> 
   <div class="row">
-    <div class="col-md-3 col-lg-2 hidden-sm hidden-xs">
+    <div class="col-md-3 hidden-sm hidden-xs">
 
       <div id="content-placeholder-menu"></div>
   <script id="menu-template" type="text/x-handlebars-template">
@@ -434,15 +434,17 @@
   {{#sidemenu}}
   <ul class="ee-sidenav js-sidenav" >
       <li><a href="#">{{parent}}</a>
+      {{#if sub}}
           <ul class="ee-sidenav">
-            {{#if sub}}
+            
             {{#each sub}}
             <li>
                 <a href="#">{{this}}</a>
             </li>
             {{/each}}
-            {{/if}}
+            
           </ul>
+          {{/if}}
       </li>
   </ul>
   {{/sidemenu}}

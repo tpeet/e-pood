@@ -434,15 +434,17 @@
   {{#sidemenu}}
   <ul class="ee-sidenav js-sidenav" >
       <li><a href="#">{{parent}}</a>
+      {{#if sub}}
           <ul class="ee-sidenav">
-            {{#if sub}}
+            
             {{#each sub}}
             <li>
                 <a href="#">{{this}}</a>
             </li>
             {{/each}}
-            {{/if}}
+            
           </ul>
+          {{/if}}
       </li>
   </ul>
   {{/sidemenu}}

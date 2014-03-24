@@ -11205,6 +11205,8 @@ ul.tsr-product-colors {
     .ee-category-header {
       margin: 0.96774em auto;
       text-align: center; } }
+  .ee-category-header small {
+    margin-left: 10px; }
 
 .ee-product-list-front .nav {
   padding: 0.64516em 0; }
