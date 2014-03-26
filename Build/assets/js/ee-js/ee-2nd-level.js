@@ -16,7 +16,7 @@ $(function() {
           section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
           $('.ee-product-colors li.acc').removeClass('active');
           section.addClass(color);
-          el.addClass('active');
+          el.addClass('active'); 
       }
       return false;
       

@@ -11,7 +11,7 @@
       {{#offers}}
 
       <a href="detail.html" class="tsr-module-promotion">
-        <figure class="tsr-product-image">
+        <figure>
             
           {{#if firstflash}}
           <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
@@ -19,8 +19,8 @@
           {{#if secondflash}}
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original hidden-xs" srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w"/>
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w"/>
+          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original hidden-xs" />
+          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
         </figure>
         <div class="tsr-product-content">
 
@@ -35,3 +35,4 @@
 </section>
 
 <!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
+<!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" -->

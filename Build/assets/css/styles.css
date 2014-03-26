@@ -10755,8 +10755,23 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
 .tsr-btn.tsr-btn-100 {
   width: 100%; }
 
-.tsr-btn-view-all span {
-  font-weight: normal; }
+.tsr-btn-view-all {
+  text-align: left; }
+  @media screen and (min-width: 768px) {
+    .tsr-btn-view-all {
+      text-align: center; } }
+  .tsr-btn-view-all span {
+    background: none;
+    display: block;
+    border: none;
+    color: #642887;
+    font-size: 15px;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: normal; }
+    .tsr-btn-view-all span:hover {
+      background: none;
+      text-decoration: underline; }
 
 .tsr-btn {
   font-weight: 500;
@@ -11007,27 +11022,15 @@ section.tsr-section-productAndService-listing {
   z-index: 0;
   cursor: pointer;
   left: 0;
-  margin-top: -100%;
+  margin-top: 0;
   outline: 2px solid #f6f6f6;
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out; }
-
-.tsr-module-promotion {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-  padding: 40px; }
-  .tsr-module-promotion:hover .multiply {
-    opacity: 0; }
-  .tsr-module-promotion p {
-    padding-bottom: 20px; }
-  .tsr-module-promotion .tsr-product-image {
-    position: relative; }
-  .tsr-module-promotion .tsr-tactical-flash {
-    right: -20px; }
+  @media screen and (min-width: 992px) {
+    .multiply {
+      margin-top: -100%; } }
 
 .tsr-module-product {
   font-size: inherit;
@@ -11071,7 +11074,10 @@ section.tsr-section-productAndService-listing {
         width: 100%;
         padding-left: 0; } }
   .tsr-module-product:hover .multiply {
-    opacity: 0; }
+    opacity: 1; }
+    @media screen and (min-width: 768px) {
+      .tsr-module-product:hover .multiply {
+        opacity: 0; } }
   .tsr-module-product:after {
     content: '';
     display: block;
@@ -11187,8 +11193,7 @@ ul.tsr-product-colors {
       text-align: center; } }
   @media screen and (min-width: 992px) {
     .ee-category-header {
-      margin: 0.96774em auto;
-      text-align: center; } }
+      margin: 0.96774em auto; } }
   .ee-category-header small {
     margin-left: 10px; }
 
@@ -11212,23 +11217,6 @@ ul.tsr-product-colors {
         color: white;
         text-decoration: none; } }
 
-.tsr-btn-view-all {
-  text-align: left; }
-  @media screen and (min-width: 768px) {
-    .tsr-btn-view-all {
-      text-align: center; } }
-  .tsr-btn-view-all span {
-    background: none;
-    display: block;
-    border: none;
-    color: #642887;
-    font-size: 15px;
-    margin: 0;
-    padding: 20px 0; }
-    .tsr-btn-view-all span:hover {
-      background: none;
-      text-decoration: underline; }
-
 .ee-product-badge {
   position: absolute;
   left: 3.22581em;
@@ -11237,6 +11225,27 @@ ul.tsr-product-colors {
   @media screen and (min-width: 768px) {
     .ee-product-badge {
       left: 70%; } }
+
+.tsr-module-promotion {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  padding: 40px; }
+  .tsr-module-promotion:hover, .tsr-module-promotion:focus {
+    background: #f6f6f6; }
+    @media screen and (min-width: 992px) {
+      .tsr-module-promotion:hover, .tsr-module-promotion:focus {
+        background: #fff; } }
+    .tsr-module-promotion:hover .multiply, .tsr-module-promotion:focus .multiply {
+      opacity: 1; }
+      @media screen and (min-width: 992px) {
+        .tsr-module-promotion:hover .multiply, .tsr-module-promotion:focus .multiply {
+          opacity: 0; } }
+  .tsr-module-promotion p {
+    padding: 0; }
+  .tsr-module-promotion .tsr-tactical-flash {
+    right: 15px; }
 
 @media screen and (min-width: 768px) {
   section.tsr-section-productlist {
@@ -11743,6 +11752,9 @@ header .collapsibleMainMenu .dropdown-header,
 .ee-thinline-bottom {
   margin-bottom: -1px; }
 
+.ee-upper-distance {
+  margin-top: 10px; }
+
 .container {
   max-width: 1440px; }
 
@@ -11788,6 +11800,3 @@ footer .social-block .media .icon {
     float: right;
     font-size: 12px;
     line-height: 2; }
-
-.ee-upper-distance {
-  margin-top: 10px; }

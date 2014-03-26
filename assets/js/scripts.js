@@ -57,15 +57,33 @@ console.log('scripts');
 //    window.klikk=true;
 // });
 
-// FRONTPAGE MORE
+
 $(document).ready(function() {
 
-  $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+// FRONTPAGE MORE
+$('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+$('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
 });
 
+
+function set_src() {
+  var window_width = $(window).width();
+  if (window_width < 1147) {
+      $(".original").remove();
+  } else {
+      $(".original").show(); 
+  }
+}
+
+$(document).ready(function(){
+   set_src();
+
+   $(window).resize(function() {
+     set_src();
+   });
+});
 
 // FRONTPAGE ADJUSTED SIZE FLASH TEXT
 // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div

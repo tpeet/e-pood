@@ -589,7 +589,6 @@ function stashInDom(img, originalSuffix) {
 		original.id = orig;
 		original.style.display = "none";
 		document.body.appendChild(original);
-		
 		return true;
 	} else {
 		return false;

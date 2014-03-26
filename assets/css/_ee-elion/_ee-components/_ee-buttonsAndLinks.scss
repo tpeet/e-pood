@@ -3,8 +3,23 @@
 }
 
 .tsr-btn-view-all {
-  span {
+  text-align: left;
+  @include media-min($screen-sm) {
+  text-align: center;
+  }
+  span{
+    background:none;  
+    display: block;
+    border:none;
+    color:$purple-c;
+    font-size:15px;
+    margin: 0;
+    padding: 20px 0;
     font-weight: normal;
+    &:hover{
+      background:none;
+      text-decoration: underline;
+    }
   }
 }
 

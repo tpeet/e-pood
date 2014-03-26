@@ -44,28 +44,8 @@
       }
     }
   }
-
 } 
-.tsr-btn-view-all {
-  text-align: left;
-  @include media-min($screen-sm) {
-  text-align: center;
-  }
-  span{
-    background:none;  
-    display: block;
-    border:none;
-    color:$purple-c;
-    font-size:15px;
-    margin: 0;
-    padding: 20px 0;
 
-    &:hover{
-      background:none;
-      text-decoration: underline;
-    }
-  }
-}
 .ee-product-badge {
   @extend .ee-badge;
   position: absolute;
@@ -77,3 +57,34 @@
     } // min 768px
   }
 
+.tsr-module-promotion {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+  padding: 40px;
+    &:hover,
+    &:focus {
+      background: $lightgrey-c;
+      @include media-min($screen-md) {
+      background: #fff;
+      }
+      
+    .multiply {
+      opacity: 1;
+      @include media-min($screen-md) {
+        opacity: 0;
+      }
+    }
+  }
+  p {
+    padding: 0;
+  }
+
+  // .tsr-product-image {
+  //   position: relative;
+  // }
+  .tsr-tactical-flash {
+    right: 15px;
+  }
+}
