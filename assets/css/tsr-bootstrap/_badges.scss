@@ -51,16 +51,40 @@ a.list-group-item.active > .badge,
 }
 
 // badge together with icon
-.icon {
-
-  .badge{
-    background-color: #00B48C;
-    border: 3px solid #FFFFFF;
+.icon-with-badge {
+  .badge {
+    border: 3px solid $navbar-inverse-bg;
     border-radius: 20px;
-    padding: 4px;
     position: relative;
-    right: 5px;
-    top: -8px;
+    right: -4px;
+    top: -5px;
+    display: inline;
+  }
+
+  // icon
+  .glyphicon-user:before {
+    background-color: #fff;
+    color: $link-color;
+    padding: 3px 5px;
+    border-radius: $border-radius-base;
+    font-size: $font-size-base - 1;
+  }
+  .glyphicon-shopping-cart:before {
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: $border-radius-base;
+    font-size: $font-size-base - 1;
+  }
+
+}
+
+.navbar-toggle{
+  .badge {
+    border: 3px solid #fff;
+    border-radius: 20px;
+    position: absolute;
+    right: -7px;
+    top: 18px;
     display: inline;
   }
 }

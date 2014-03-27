@@ -13,7 +13,7 @@ header {
 
     background-color: darken($brand-primary,7%);
 
-    .container{
+    .container {
       background-color: $brand-primary;
 
       &.collapsibleMainMenu-Search {
@@ -40,9 +40,11 @@ header {
     }
 
     .dropdown-header{
-      font-size: 19px;
+      font-size: $font-size-base + 2;
       padding-left: 0;
       padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
     }
 
     @media (max-width: $screen-xs-max){ 

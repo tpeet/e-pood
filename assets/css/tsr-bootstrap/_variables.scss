@@ -271,7 +271,7 @@ $screen-lg-desktop:          $screen-lg-min;
 
 // Extra Large screen / Extra wide desktop
 // Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-extra-lg:                  1360px;
+$screen-extra-lg:                  1420px;
 $screen-extra-lg-min:              $screen-extra-lg;
 $screen-extra-lg-desktop:          $screen-extra-lg-min;
 
@@ -592,7 +592,7 @@ $well-bg:                     #f5f5f5;
 // -------------------------
 $badge-color:                 #fff;
 $badge-link-hover-color:      #fff;
-$badge-bg:                    $gray-light;
+$badge-bg:                    $brand-success;
 
 $badge-active-color:          $link-color;
 $badge-active-bg:             #fff;
@@ -678,5 +678,5 @@ $container-large-desktop:      ((1140px + $grid-gutter-width));
 $container-lg:                 $container-large-desktop;
 
 // Extra Large screen / wide desktop
-$container-extra-large-desktop:((1364px + $grid-gutter-width));
+$container-extra-large-desktop:((1363px + $grid-gutter-width));
 $container-extra-lg:           $container-extra-large-desktop;

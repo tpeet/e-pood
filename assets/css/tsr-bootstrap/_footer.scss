@@ -209,8 +209,9 @@ footer {
 .container-no-gutter {
   @include container-fixed();
   
-  padding:0;
-
+  padding-left:0; 
+  padding-right:0;
+  overflow: hidden;
   // mobile first defaults
   .row {
     @include make-row-reset-gutter();
@@ -225,13 +226,11 @@ footer {
   @include make-grid($grid-columns, xs, offset);
   @include reset-gutter($grid-columns, xs);
 
-
   @media (min-width: $screen-sm-min) {
 
     padding-left:  ($grid-gutter-width / 2);
     padding-right: ($grid-gutter-width / 2);
     width: $full-width; //$container-sm;
-    
     @include make-grid-columns-float(sm);
     @include make-grid($grid-columns, sm, width);
     @include make-grid($grid-columns, sm, pull);

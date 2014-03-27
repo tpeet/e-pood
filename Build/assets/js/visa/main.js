@@ -31,7 +31,7 @@ console.log('\'Hello\' Elion webpage!');
         _el.css({ width : document.body.clientWidth+'px', left:_leftpx, position:'relative' });
     }
 
-
+    
     /*window.addEventListener('resize', screenHasChanged, false);
     var resizeTimeoutId;
 	function screenHasChanged(){
