@@ -7,6 +7,9 @@ header {
         color:#fff;
         border-radius: 0;
       }
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
     }
   }
   .dropdown-menu, .collapsibleMainMenu {

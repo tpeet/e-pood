@@ -271,27 +271,6 @@
           background:transparent; 
         }
 
-        // user icon for navbar
-        .icon-kodujuhtimise-ikoon-22 {
-          margin-right: 18px;
-        }
-
-        .icon-kodujuhtimise-ikoon-22:before {
-          background-color: #fff;
-          color: $link-color;
-          padding: 5px;
-          border-radius: $border-radius-base;
-          font-size: $font-size-base - 1;
-          margin-right: 10px;
-        }
-        // shopping cart icon for navbar
-        .glyphicon-shopping-cart:before {
-          color: #fff;
-          padding: 3px 5px;
-          border-radius: $border-radius-base;
-          font-size: $font-size-base - 1;
-        }
-
       }
       
       &.active {
@@ -309,7 +288,7 @@
         }
       }
 
-      &:last-child{
+      &:last-child {
         > a {
           &:after {
             background: transparent;
@@ -358,6 +337,34 @@
       > li {
         > a {
           font-weight: normal;
+
+          .icon-buy {
+            font-size: $font-size-base + 2;
+            vertical-align: middle;
+          }
+
+        }
+
+        &:last-child {
+          > a {
+
+              padding-top:3px; 
+              padding-bottom:0;
+              
+              > span:last-child{
+                vertical-align:middle;
+              }
+
+              // user icon for navbar
+              .icon-myaccount {
+                font-size: $font-size-base + 17;
+                vertical-align: middle;
+              }
+
+            &:after {
+              background: transparent;
+            }
+          }
         }
       }
     }

@@ -189,20 +189,6 @@
       z-index: 1; }
     .navbar-inverse .navbar-nav > li > a:focus:after {
       background: transparent; }
-    .navbar-inverse .navbar-nav > li > a .icon-kodujuhtimise-ikoon-22 {
-      margin-right: 18px; }
-    .navbar-inverse .navbar-nav > li > a .icon-kodujuhtimise-ikoon-22:before {
-      background-color: #fff;
-      color: #652d86;
-      padding: 5px;
-      border-radius: 4px;
-      font-size: 14px;
-      margin-right: 10px; }
-    .navbar-inverse .navbar-nav > li > a .glyphicon-shopping-cart:before {
-      color: #fff;
-      padding: 3px 5px;
-      border-radius: 4px;
-      font-size: 14px; }
   .navbar-inverse .navbar-nav > li.active > a {
     background-color: #4f2369; }
     .navbar-inverse .navbar-nav > li.active > a:after {
@@ -232,6 +218,19 @@
       color: white; }
   .navbar-inverse .navbar-nav.navbar-right > li > a {
     font-weight: normal; }
+    .navbar-inverse .navbar-nav.navbar-right > li > a .icon-buy {
+      font-size: 17px;
+      vertical-align: middle; }
+  .navbar-inverse .navbar-nav.navbar-right > li:last-child > a {
+    padding-top: 3px;
+    padding-bottom: 0; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a > span:last-child {
+      vertical-align: middle; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a .icon-myaccount {
+      font-size: 32px;
+      vertical-align: middle; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a:after {
+      background: transparent; }
 
 @media (max-width: 992px) {
   .navbar-inverse {
@@ -727,6 +726,8 @@ header .navbar-default .navbar-toggle.active {
   background-color: #652d86;
   color: #fff;
   border-radius: 0; }
+header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus, header .navbar-default .navbar-toggle:active {
+  text-decoration: none; }
 header .dropdown-menu, header .collapsibleMainMenu {
   background-color: #51246b; }
   header .dropdown-menu .container, header .collapsibleMainMenu .container {

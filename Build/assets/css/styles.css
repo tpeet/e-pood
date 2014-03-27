@@ -7823,8 +7823,8 @@ address {
 
 @font-face {
   font-family: 'ts-icons-all';
-  src: url(../fonts/ts-icons-all.eot);
-  src: url(../fonts/ts-icons-all.eot?#iefix) format("embedded-opentype"), url(../fonts/ts-icons-all.woff) format("woff"), url(../fonts/ts-icons-all.ttf) format("truetype"), url(../fonts/ts-icons-all.svg#glyphicons_halflingsregular) format("svg"); }
+  src: url(../fonts/bootstrap/ts-icons-all.eot);
+  src: url(../fonts/bootstrap/ts-icons-all.eot?#iefix) format("embedded-opentype"), url(../fonts/bootstrap/ts-icons-all.woff?) format("woff"), url(../fonts/bootstrap/ts-icons-all.ttf?) format("truetype"), url(../fonts/bootstrap/ts-icons-all.svg?#ts-icons-all) format("svg"); }
 
 .icon {
   position: relative;
@@ -7834,17 +7834,25 @@ address {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
   .icon:empty {
     width: 1em; }
 
-.icon-zoomout:before {
-  content: "\2a"; }
+.icon-twitter:before {
+  content: "\e001"; }
 
-.icon-circle:before {
-  content: "\e666"; }
+.icon-facebook:before {
+  content: "\e002"; }
+
+.icon-thick:before {
+  content: "\e005"; }
+
+.icon-comment:before {
+  content: "\e016"; }
+
+.icon-teliasonera:before {
+  content: "\e02c"; }
 
 .icon-zoomout:before {
   content: "\e600"; }
@@ -7852,29 +7860,14 @@ address {
 .icon-zoom:before {
   content: "\e601"; }
 
-.icon-square-tilted:before {
-  content: "\e667"; }
-
 .icon-xls:before {
   content: "\e602"; }
-
-.icon-arrow-right:before {
-  content: "\e668"; }
 
 .icon-writeemail:before {
   content: "\e603"; }
 
-.icon-arrow-down:before {
-  content: "\e669"; }
-
-.icon-arrow-left:before {
-  content: "\e66a"; }
-
 .icon-wireless:before {
   content: "\e604"; }
-
-.icon-arrow-up:before {
-  content: "\e66b"; }
 
 .icon-weather:before {
   content: "\e605"; }
@@ -7927,8 +7920,8 @@ address {
 .icon-stop:before {
   content: "\e615"; }
 
-.icon-statistics:before {
-  content: "\e614"; }
+.icon-chart:before {
+  content: "\e616"; }
 
 .icon-spellcheck:before {
   content: "\e617"; }
@@ -8053,6 +8046,9 @@ address {
 .icon-internet:before {
   content: "\e63f"; }
 
+.icon-info:before {
+  content: "\e640"; }
+
 .icon-home:before {
   content: "\e641"; }
 
@@ -8071,7 +8067,7 @@ address {
 .icon-favourits:before {
   content: "\e646"; }
 
-.icon-entertainment:before {
+.icon-uniE647:before {
   content: "\e647"; }
 
 .icon-enduserdevice:before {
@@ -8079,15 +8075,6 @@ address {
 
 .icon-enduser:before {
   content: "\e649"; }
-
-.icon-breadcrumb-arrow:before {
-  content: "\e66e"; }
-
-.icon-youtube:before {
-  content: "\e66c"; }
-
-.icon-google-plus:before {
-  content: "\e66d"; }
 
 .icon-email:before {
   content: "\e64a"; }
@@ -8173,26 +8160,32 @@ address {
 .icon-add:before {
   content: "\e665"; }
 
-.icon-info:before {
-  content: "\e640"; }
+.icon-circle:before {
+  content: "\e666"; }
 
-.icon-twitter:before {
-  content: "\e001"; }
+.icon-square-tilted:before {
+  content: "\e667"; }
 
-.icon-facebook:before {
-  content: "\e002"; }
+.icon-arrow-right:before {
+  content: "\e668"; }
 
-.icon-thick:before {
-  content: "\e005"; }
+.icon-arrow-down:before {
+  content: "\e669"; }
 
-.icon-comment:before {
-  content: "\e016"; }
+.icon-arrow-left:before {
+  content: "\e66a"; }
 
-.icon-teliasonera:before {
-  content: "\e02c"; }
+.icon-arrow-up:before {
+  content: "\e66b"; }
 
-.icon-question-mark:before {
-  content: "?"; }
+.icon-youtube:before {
+  content: "\e66c"; }
+
+.icon-google-plus:before {
+  content: "\e66d"; }
+
+.icon-breadcrumb-arrow:before {
+  content: "\e66e"; }
 
 .badge {
   display: inline-block;
@@ -8227,24 +8220,25 @@ a.list-group-item.active > .badge,
 .nav-pills > li > a > .badge {
   margin-left: 3px; }
 
-.icon-with-badge .badge {
-  border: 3px solid #652d86;
-  border-radius: 20px;
-  position: relative;
-  right: -4px;
-  top: -5px;
-  display: inline; }
-.icon-with-badge .glyphicon-user:before {
-  background-color: #fff;
-  color: #652d86;
-  padding: 3px 5px;
-  border-radius: 4px;
-  font-size: 14px; }
-.icon-with-badge .glyphicon-shopping-cart:before {
-  color: #fff;
-  padding: 3px 5px;
-  border-radius: 4px;
-  font-size: 14px; }
+.icon-with-badge {
+  position: relative; }
+  .icon-with-badge .badge {
+    border: 3px solid #652d86;
+    border-radius: 20px;
+    position: absolute;
+    display: inline;
+    top: 3px; }
+  .icon-with-badge.myaccount .badge {
+    left: 35px; }
+  .icon-with-badge.myaccount > span:last-child {
+    padding-left: 15px; }
+  .icon-with-badge.basket {
+    padding-right: 30px;
+    /*> span:last-child {
+      padding-left: 15px;
+    }*/ }
+    .icon-with-badge.basket .badge {
+      left: 28px; }
 
 .navbar-toggle .badge {
   border: 3px solid #fff;
@@ -8443,20 +8437,6 @@ a.list-group-item.active > .badge,
       z-index: 1; }
     .navbar-inverse .navbar-nav > li > a:focus:after {
       background: transparent; }
-    .navbar-inverse .navbar-nav > li > a .icon-kodujuhtimise-ikoon-22 {
-      margin-right: 18px; }
-    .navbar-inverse .navbar-nav > li > a .icon-kodujuhtimise-ikoon-22:before {
-      background-color: #fff;
-      color: #652d86;
-      padding: 5px;
-      border-radius: 4px;
-      font-size: 14px;
-      margin-right: 10px; }
-    .navbar-inverse .navbar-nav > li > a .glyphicon-shopping-cart:before {
-      color: #fff;
-      padding: 3px 5px;
-      border-radius: 4px;
-      font-size: 14px; }
   .navbar-inverse .navbar-nav > li.active > a {
     background-color: #4f2369; }
     .navbar-inverse .navbar-nav > li.active > a:after {
@@ -8486,6 +8466,19 @@ a.list-group-item.active > .badge,
       color: white; }
   .navbar-inverse .navbar-nav.navbar-right > li > a {
     font-weight: normal; }
+    .navbar-inverse .navbar-nav.navbar-right > li > a .icon-buy {
+      font-size: 17px;
+      vertical-align: middle; }
+  .navbar-inverse .navbar-nav.navbar-right > li:last-child > a {
+    padding-top: 3px;
+    padding-bottom: 0; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a > span:last-child {
+      vertical-align: middle; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a .icon-myaccount {
+      font-size: 32px;
+      vertical-align: middle; }
+    .navbar-inverse .navbar-nav.navbar-right > li:last-child > a:after {
+      background: transparent; }
 
 @media (max-width: 992px) {
   .navbar-inverse {
@@ -8981,6 +8974,8 @@ header .navbar-default .navbar-toggle.active {
   background-color: #652d86;
   color: #fff;
   border-radius: 0; }
+header .navbar-default .navbar-toggle:hover, header .navbar-default .navbar-toggle:focus, header .navbar-default .navbar-toggle:active {
+  text-decoration: none; }
 header .dropdown-menu, header .collapsibleMainMenu {
   background-color: #51246b; }
   header .dropdown-menu .container, header .collapsibleMainMenu .container {
@@ -10463,200 +10458,6 @@ html[xmlns] .slides {display: block;}
 .socialcount {
   margin-top: 10px; }
 
-@charset "UTF-8";
-
-@font-face {
-  font-family: "elion-ikoonid";
-  src:url(../fonts/elion-ikoonid.eot);
-  src:url(../fonts/elion-ikoonid.eot?#iefix) format("embedded-opentype"),
-    url(../fonts/elion-ikoonid.woff) format("woff"),
-    url(../fonts/elion-ikoonid.ttf) format("truetype"),
-    url(../fonts/elion-ikoonid.svg#elion-ikoonid) format("svg");
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-[data-icon]:before {
-  font-family: "elion-ikoonid" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "elion-ikoonid" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-domeen:before {
-  content: "\e000";
-}
-.icon-favourites-active:before {
-  content: "\e001";
-}
-.icon-klotsi-vaade:before {
-  content: "\e002";
-}
-.icon-kodujuhtimise-ikoon-06:before {
-  content: "\e003";
-}
-.icon-kodujuhtimise-ikoon-12:before {
-  content: "\e004";
-}
-.icon-kodujuhtimise-ikoon-20:before {
-  content: "\e005";
-}
-.icon-kodulehemajutus:before {
-  content: "\e006";
-}
-.icon-myaccounttsicon48px:before {
-  content: "\e007";
-}
-.icon-osta:before {
-  content: "\e008";
-}
-.icon-searchtsicon48px:before {
-  content: "\e009";
-}
-.icon-transport:before {
-  content: "\e00a";
-}
-.icon-arvamused:before {
-  content: "\e00b";
-}
-.icon-elion-logo-element:before {
-  content: "\e00c";
-}
-.icon-favourites-normal:before {
-  content: "\e00d";
-}
-.icon-haamer:before {
-  content: "\e00e";
-}
-.icon-helptsicon48px:before {
-  content: "\e00f";
-}
-.icon-internet:before {
-  content: "\e010";
-}
-.icon-kodujuhtimise-ikoon-01:before {
-  content: "\e011";
-}
-.icon-kodujuhtimise-ikoon-02:before {
-  content: "\e012";
-}
-.icon-kodujuhtimise-ikoon-03:before {
-  content: "\e013";
-}
-.icon-kodujuhtimise-ikoon-04:before {
-  content: "\e014";
-}
-.icon-kodujuhtimise-ikoon-05:before {
-  content: "\e015";
-}
-.icon-kodujuhtimise-ikoon-07:before {
-  content: "\e016";
-}
-.icon-kodujuhtimise-ikoon-08:before {
-  content: "\e017";
-}
-.icon-kodujuhtimise-ikoon-09:before {
-  content: "\e018";
-}
-.icon-kodujuhtimise-ikoon-10:before {
-  content: "\e019";
-}
-.icon-kodujuhtimise-ikoon-11:before {
-  content: "\e01a";
-}
-.icon-kodujuhtimise-ikoon-13:before {
-  content: "\e01b";
-}
-.icon-kodujuhtimise-ikoon-14:before {
-  content: "\e01c";
-}
-.icon-kodujuhtimise-ikoon-15:before {
-  content: "\e01d";
-}
-.icon-kodujuhtimise-ikoon-16:before {
-  content: "\e01e";
-}
-.icon-kodujuhtimise-ikoon-17:before {
-  content: "\e01f";
-}
-.icon-kodujuhtimise-ikoon-19:before {
-  content: "\e020";
-}
-.icon-kodujuhtimise-ikoon-21:before {
-  content: "\e021";
-}
-.icon-kodujuhtimise-ikoon-22:before {
-  content: "\e022";
-}
-.icon-kodujuhtimise-ikoon-23:before {
-  content: "\e023";
-}
-.icon-kodujuhtimise-ikoon-24:before {
-  content: "\e024";
-}
-.icon-kodujuhtimise-ikoon-25:before {
-  content: "\e025";
-}
-.icon-kodujuhtimise-ikoon-26:before {
-  content: "\e026";
-}
-.icon-kodujuhtimise-ikoon-27:before {
-  content: "\e027";
-}
-.icon-list-vaade:before {
-  content: "\e028";
-}
-.icon-menutsicon48px:before {
-  content: "\e029";
-}
-.icon-miinus:before {
-  content: "\e02a";
-}
-.icon-pluss:before {
-  content: "\e02b";
-}
-.icon-telefon-1:before {
-  content: "\e02c";
-}
-.icon-telefon-2:before {
-  content: "\e02d";
-}
-.icon-vordle:before {
-  content: "\e02e";
-}
-.icon-kodujuhtimise-ikoon-18:before {
-  content: "\e02f";
-}
-.icon-deletetsicon48px:before {
-  content: "\e030";
-}
-.icon-sulge-1:before {
-  content: "\e031";
-}
-.icon-synctsicon48px:before {
-  content: "\e032";
-}
-
 /*
 TYPOGRAPHY
 */
@@ -11741,84 +11542,6 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 
 .tsr-section-divider.tsr-color-purple {
   z-index: 0; }
-
-header .dropdown-menu .dropdown-header,
-header .collapsibleMainMenu .dropdown-header,
-.megamenu > li > ul > li.dropdown-header > a,
-.navbar-default .navbar-collapse .dropdown-toggle {
-  font-size: 19px; }
-
-.megamenu > li > ul > li > a {
-  color: #FFF;
-  font-size: 15px;
-  padding: 10px 15px;
-  border-bottom: 1px solid #4e256b; }
-  .megamenu > li > ul > li > a:hover {
-    background: #73369e;
-    padding: 11px 15px; }
-  @media screen and (min-width: 768px) {
-    .megamenu > li > ul > li > a {
-      border-bottom: none; } }
-
-.dropdown-header .icon {
-  float: right; }
-
-.navbar-default {
-  border-color: #dbdbdb;
-  border-bottom: none;
-  border-right: none; }
-
-.megamenu > li > ul > li:not(.dropdown-header) > a {
-  padding-left: 40px;
-  border-bottom: 1px solid #4e256b; }
-  @media screen and (min-width: 768px) {
-    .megamenu > li > ul > li:not(.dropdown-header) > a {
-      padding-left: 13px;
-      border-bottom: none; } }
-
-.megamenu img {
-  margin-top: 10px; }
-
-.megamenu .icon,
-.topnav .icon {
-  color: #fff; }
-
-.navbar-collapse [class*=" ts-icon-arrow-"] {
-  color: #fff; }
-.navbar-collapse [class*=" ts-icon-arrow-right"] {
-  font-size: 80%;
-  padding-left: 5px; }
-
-.navbar-default .navbar-toggle {
-  font-size: 27px;
-  margin-right: 0; }
-
-.navbar .nav {
-  margin-bottom: -1px; }
-
-.ee-adminnav .navbar-nav > li > a:after,
-.ee-adminnav .navbar-text:after {
-  background: none;
-  content: "";
-  display: block;
-  height: 20px;
-  margin-top: -10px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 1px;
-  z-index: 1; }
-.ee-adminnav .navbar-nav > li:last-of-type > a:after {
-  background: none; }
-.ee-adminnav .navbar-text {
-  line-height: 0.42857; }
-.ee-adminnav .form-horizontal {
-  padding: 25px 12px 50px 12px; }
-.ee-adminnav .nav .open > a, .ee-adminnav .nav .open > a:hover, .ee-adminnav .nav .open > a:focus {
-  background-color: #642887;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: -1px; }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }
