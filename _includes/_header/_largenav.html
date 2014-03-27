@@ -1,0 +1,228 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+
+    <!-- menu for small screen -->
+    <div class="navbar-header">
+
+      <a class="navbar-brand"  href="<!-- @path index.html -->"><img src="<!-- @path elion-logo.svg -->" onerror="this.onerror=null; this.src='<!-- @path elion-logo.png -->'"/></a>
+
+      <div class="pull-right">
+          <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon icon-menu"></span>
+          </a>
+          <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy"></span><span class="badge">8</span></a>
+          <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
+          <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
+      </div>
+    </div>
+    <!-- / menu for small screen -->
+
+    <!-- main menu -->
+    <div class="navbar-collapse collapse" id="collapsibleMainMenu-Pages">
+      <ul class="nav navbar-nav" id="content-placeholder-mainnav"> </ul>
+          
+          <script id="mainnav-template" type="text/x-handlebars-template">
+          
+          {{#nav}}
+            <li class="dropdown menu-large">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{caption}} <span class="icon icon-arrow-down visible-xs"></span></a>
+              <div class="dropdown-menu ">
+                <div class="container">
+                  <ul class="row list-unstyled megamenu">
+                    <li class="col-sm-3">
+                      <ul class="list-group">
+                        <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon icon-arrow"></span></a></li>
+                        <li><a href="detail.html" class="hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
+                        <li>
+                          <a href="#" class="hidden-xs">
+                            <h3>{{name}}</h3>
+                            <p>Lorem lorem lorem lorem ipsum</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link1}}
+                    
+                      <ul class="list-group">
+                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        {{#each this.sub}}
+                        <li><a href="javascript:void(0);">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link2}}
+                    
+                      <ul class="list-group">
+                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        {{#each this.sub}}
+                        <li><a href="javascript:void(0);">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
+                    <li class="col-sm-3">
+                    {{#each link3}}
+                    
+                      <ul class="list-group">
+                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        {{#each this.sub}}
+                        <li><a href="javascript:void(0);">{{this}}</a></li>
+                        {{/each}}
+                      </ul>
+                    
+                    {{/each}}
+                    </li>
+
+                    
+                  </ul>
+                </div>
+                <div class="container reset-padding">
+                  <ul class="row hidden-xs list-unstyled">
+                    <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          {{/nav}}
+          </script>
+
+      <!--should actually be in nav ul -->
+          <li class="options visible-xs">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient <span class="icon icon-arrow-down pull-right"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Ariklient</a></li>
+                            <li><a href="#">E-pood</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </li>
+            <li class="options visible-xs">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eesti keeles <span class="icon icon-arrow-down pull-right"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">По-русски</a></li>
+                          <li><a href="#">In English</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+
+
+
+<!-- right side additional menu -->
+<ul class="nav navbar-nav navbar-right hidden-xs">
+    <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
+        <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Guide">
+                <ul class="row list-unstyled megamenu">
+                    <li class="col-sm-3">
+                    <ul>
+                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow-right"></span></a></li>
+                      <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" /></a></li>
+                      <li>
+                        <a href="#" class="hidden-xs">
+                          <h3>The All New Things - Now Available</h3>
+                          <p>Lorem lorem lorem lorem ipsum</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-sm-3">
+                    <ul class="list-group">
+                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow-right"></span></a></li>
+                    </ul>
+                  </li>
+                  <li class="col-sm-3">
+                    <ul class="list-group">
+                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow-right"></span></a></li>
+                    </ul>
+                  </li>
+                  <li class="col-sm-3">
+                    <ul class="list-group">
+                      <li class="dropdown-header"><a href="#">Kinkekaardi tingimused <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow-right"></span></a></li>
+
+                    </ul>
+                  </li>
+                </ul>
+              </div> 
+                <div class="container reset-padding">
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
+          <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Search">
+              
+              <form class="tsr form-horizontal" role="form">
+                <div class="form-group row">
+                  <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <input class="col-md-3 col-sm-3 col-xs-12 btn btn-default " type="button" value="Search" />
+                </div>
+              </form> 
+
+            </div>
+            <div class="container reset-padding">
+              <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown menu-large hide">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
+          <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Basket">
+
+              <div class="row megamenu">
+                <div class="col-md-12">
+                  basket is empty
+                </div>
+              </div>
+
+            </div>
+            <div class="container reset-padding">
+              <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- end / right side additional menu -->
+
+    </div><!-- end /  main menu -->
+
+  </div>
+
+  <!-- generating content by script -->
+  <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <div id="collapsibleMainMenu-Search" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <div id="collapsibleMainMenu-Guide" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <!-- end / generating content by script -->
+
+</nav>

@@ -11543,6 +11543,30 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .tsr-section-divider.tsr-color-purple {
   z-index: 0; }
 
+.ee-adminnav .navbar-nav > li > a:after,
+.ee-adminnav .navbar-text:after {
+  background: none;
+  content: "";
+  display: block;
+  height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1px;
+  z-index: 1; }
+.ee-adminnav .navbar-nav > li:last-of-type > a:after {
+  background: none; }
+.ee-adminnav .navbar-text {
+  line-height: 0.42857; }
+.ee-adminnav .form-horizontal {
+  padding: 25px 12px 50px 12px; }
+.ee-adminnav .nav .open > a, .ee-adminnav .nav .open > a:hover, .ee-adminnav .nav .open > a:focus {
+  background-color: #642887;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: -1px; }
+
 .ee-thinline-bottom {
   margin-bottom: -1px; }
 
