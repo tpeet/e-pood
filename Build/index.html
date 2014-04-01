@@ -351,6 +351,35 @@
                 <div class="form-group row">
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
+                    <div class="headerSearchResultWrapper">
+  <ul class="list-group" id="content-placeholder-product-list"></ul>
+
+  <li class="search-advanced">
+    Top 7 kuvatud
+    <a href="/search?what=noki">Vaata kõiki... </a>
+  </li>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <li class="list-group-item {{selected}}">
+    <a class="search-item-image" href="detail.html">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </a>
+    <div class="search-item-title">
+    <a class="list-group-item {{selected}}" href="detail.html">{{name}}</a>
+    </div>
+  </li>
+
+  {{/products}}
+</script>
+
+
+  
+
+
+
                   </div>
                   <input class="col-md-3 col-sm-3 col-xs-12 btn btn-default " type="button" value="Search" />
                 </div>
@@ -400,217 +429,7 @@
 
 </header>
 
-<section class="tsr-section-communictaion-primary">
-  <div class="tsr-slides">
-  
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-1.jpg); "> 
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Vaata, uus e-pood!
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Hakkab juba looma <br> Aga Kui mul on pikem tekst?<br> Aga Kui mul on pikem tekst?</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-2.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-3.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-4.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-  </div>
 
-</section>
-
-
-
-<section class="tsr-section-promotion tsr-count-4"> 
-    <div class="container product">
-<!--       <figure class="tsr-tactical-flash ">
-      <div class="js-filltext" style="width: 60px; line-height: 3;">
-      <span >678 $</span> </div>
-
-    </figure> -->
-
-      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
-      <script id="offer-slider-template" type="text/x-handlebars-template">
-      {{#offers}}
-
-      <a href="detail.html" class="tsr-module-promotion">
-        <figure>
-            
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original hidden-xs" />
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
-        </figure>
-        <div class="tsr-product-content">
-
-          <h6 class="tsr-product-header violet-text">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
-        </div>
-      </a>
-      {{/offers}}
-      </script>
-    </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
-</section>
-
-<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
-<!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" --> 
-
- <!-- for large screen, hidden on small -->
-<section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
-  <div class="container">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Arvutid ja lisad</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>TV ja audio</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Foto, video, GPS</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Telefonid</h6>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="tsr-section-productAndService-listing ee-thinline-bottom">
-  <div class="ee-product-list-front container product hidden-xs hidden-sm">
-    <div class="row">
-      <div  id="content-placeholder-frontmenu1"></div>
-
-        <script id="front-menu-template1" type="text/x-handlebars-template">
-
-        {{#menu}}
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <ul class="nav nav-pills nav-stacked js-listedmenu-lg">
-            {{#each link }}
-
-            <li><a href="{{this.path}}">{{this.name}}</a></li>  
-            {{/each}}
-          </ul>
-          </div>
-
-        {{/menu}}
-
-        </script>
-    </div>
-  </div>
- <!-- for small screen, hidden on large -->
-  <div class="ee-product-list-front container product visible-xs visible-sm">
-    <div  id="content-placeholder-frontmenu"></div>
-    
-    <script id="front-menu-template" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked js-listedmenu">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
-  </div>
-</section>
-<a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button -->
-
-
-
-
- 
-
-<section class="tsr-section-support tsr-secondary">
-  <div class="container">
-
-    <a href="#" class="tsr-module-support ts-icon-costcontrol2">
-      <header>Elioni järelmaks</header>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon-transport">
-      <header>Transport e-poes</header>
-    </a>  
-
-    <a href="#" class="tsr-module-support ts-icon-help">
-      <header>Abiinfo</header>
-    </a>  
-
-    <a href="#" class="tsr-module-support icon-kodujuhtimise-ikoon-23">
-      <header>Remont ja hooldus</header>
-    </a>                  
-
-  </div><!-- // tsr-container -->
-</section><!-- tsr-section-support" END -->
 
 <footer>
     <div class="container">
@@ -752,7 +571,8 @@
 
 <script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->
-    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
+    <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
 <!-- HTML5 IE Enabling Script -->
 <!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
 

@@ -351,6 +351,35 @@
                 <div class="form-group row">
                   <div class="col-md-9 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
+                    <div class="headerSearchResultWrapper">
+  <ul class="list-group" id="content-placeholder-product-list"></ul>
+
+  <li class="search-advanced">
+    Top 7 kuvatud
+    <a href="/search?what=noki">Vaata kõiki... </a>
+  </li>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <li class="list-group-item {{selected}}">
+    <a class="search-item-image" href="detail.html">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </a>
+    <div class="search-item-title">
+    <a class="list-group-item {{selected}}" href="detail.html">{{name}}</a>
+    </div>
+  </li>
+
+  {{/products}}
+</script>
+
+
+  
+
+
+
                   </div>
                   <input class="col-md-3 col-sm-3 col-xs-12 btn btn-default " type="button" value="Search" />
                 </div>
@@ -766,7 +795,8 @@
 
 <script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->
-    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script>
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
+    <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
 <!-- HTML5 IE Enabling Script -->
 <!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
 

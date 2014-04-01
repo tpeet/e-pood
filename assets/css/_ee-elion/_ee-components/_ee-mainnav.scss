@@ -44,21 +44,21 @@ border-bottom: 1px solid $purple-t;
 }
 
 // Could not link Viljars icons. Repeating icon style for own icons
-.megamenu, 
-.topnav  {
-  .icon {
-    color: #fff;
-  }
-}
-.navbar-collapse {
-  [class*=" ts-icon-arrow-"] {
-  color: #fff;
-  }
-  [class*=" ts-icon-arrow-right"] {
-  font-size: 80%;
-  padding-left: 5px;
-  }
-}
+// .megamenu, 
+// .topnav  {
+//   .icon {
+//     color: #fff;
+//   }
+// }
+// .navbar-collapse {
+//   [class*=" ts-icon-arrow-"] {
+//   color: #fff;
+//   }
+//   [class*=" ts-icon-arrow-right"] {
+//   font-size: 80%;
+//   padding-left: 5px;
+//   }
+// }
 
 .navbar-default .navbar-toggle {
   font-size: 27px;
@@ -69,7 +69,15 @@ border-bottom: 1px solid $purple-t;
   margin-bottom: -1px;
 }
 
-
+.topnav .dropdown-menu li {
+  a {
+  padding: 6px 20px;
+  font-size: 13px;
+  }
+  &:last-of-type a {
+    border-top: 1px solid $purple-c;
+  }
+}
 // Admin menu
 .ee-adminnav {
   .navbar-nav > li > a:after,

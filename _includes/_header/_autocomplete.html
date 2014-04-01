@@ -1,0 +1,28 @@
+<div class="headerSearchResultWrapper">
+  <ul class="list-group" id="content-placeholder-product-list"></ul>
+
+  <li class="search-advanced">
+    Top 7 kuvatud
+    <a href="/search?what=noki">Vaata kõiki... </a>
+  </li>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <li class="list-group-item {{selected}}">
+    <a class="search-item-image" href="detail.html">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </a>
+    <div class="search-item-title">
+    <a class="list-group-item {{selected}}" href="detail.html">{{name}}</a>
+    </div>
+  </li>
+
+  {{/products}}
+</script>
+
+
+  
+
+
