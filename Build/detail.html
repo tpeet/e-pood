@@ -342,35 +342,34 @@
                 </div>
             </div>
         </li>
-        <li class="dropdown menu-large">
+        <li class="current dropdown menu-large">
           <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
           <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Search">
               
               <form class="tsr form-horizontal" role="form">
                 <div class="form-group row">
-                  <div class="col-md-9 col-sm-9 col-xs-12">
+                  <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
-                    <div class="headerSearchResultWrapper">
-  <ul class="list-group" id="content-placeholder-product-list"></ul>
+                    <div class="headerSearchResultWrapper list-group">
+  <div id="content-placeholder-product-list"></div>
 
-  <li class="search-advanced">
-    Top 7 kuvatud
-    <a href="/search?what=noki">Vaata kõiki... </a>
-  </li>
+  <a class="search-advanced" href="/search?what=noki">
+    Vaata kõiki
+  </a>
 </div>
 
 <script id="product-list-template" type="text/x-handlebars-template">
 
   {{#products}}
-  <li class="current current list-group-item {{selected}}">
-    <a class="current search-item-image" href="detail.html">
+  <a class="current list-group-item {{selected}}" href="detail.html">
+    <figure class="search-item-image">
       <img src="assets/img/{{id}}.jpg" id="img{{id}}">
-    </a>
-    <div class="search-item-title">
-    <a class="current list-group-item {{selected}}" href="detail.html">{{name}}</a>
-    </div>
-  </li>
+    </figure>
+    <span class="search-item-title">
+    {{name}}
+    </span>
+  </a>
 
   {{/products}}
 </script>
@@ -381,7 +380,7 @@
 
 
                   </div>
-                  <input class="col-md-3 col-sm-3 col-xs-12 btn btn-default " type="button" value="Search" />
+                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default " type="button" value="Otsi" />
                 </div>
               </form> 
 
