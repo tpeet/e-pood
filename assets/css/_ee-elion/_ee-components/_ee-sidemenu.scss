@@ -3,51 +3,78 @@
   list-style-type: none;
   text-align: left;
   font-size: 16px;
-  margin: 5px 0 0 0;
-  & + .ee-sidenav {
-    margin: 0;
+  margin: 0;
+    h6 {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 400;
+    }
+  .collapse.in {
+    & > li:hover h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e668";
+    font-size: em(18);
+    float: right;
+    color: #fff;
+   }
+    a {
+      margin-left: 30px;
+    }
   }
-  & li .ee-sidenav {
-    display: none;
+  & > li:hover h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e668";
+    font-size: em(18);
+    float: right;
+   }
+
+  &>li:hover .collapsible h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e66b";
+    font-size: em(18);
+    float: right;
+   }
+
+  & > li:hover .collapsible.collapsed h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e669";
+    font-size: em(18);
+    float: right;
+   }
+
+  & > li:hover .ee-sidenav-sub li h6:after {
+    content: " ";
   }
-  & > li > a {
+
+    li  a {
     display: block;
     text-decoration: none;
-    padding: 10px 14px;
-    border-bottom: 1px solid $lightgrey-t;
+    padding: 5px 14px;
+    border-bottom: 1px solid $gray;
+
     &:hover {
       color: white;
-      background: $purple-c;
-      @include border-radius(4px);
+      background: $brand-primary;
+      border-radius: $border-radius-base;
     }
   }
   ul { 
     padding-left: 0; 
     list-style-type: none; 
   }
-  &  > li > ul  li a {  
-    padding-left: 40px; border-bottom: none; 
-  }
-  & .active {
-  border: 0;
-  text-decoration: underline;
-  font-weight: 600;
-      color: white;
-    background: $purple-t;
-    @include border-radius(4px);
-    &:after {
-      font-family: 'ts-icons-all';
-      content: "\e669";
-      font-size: em(18);
-      float: right;
-    }
-    & li {
-      border-bottom: none;
-    }
-  }
+
+// change to whatever is your active state menu element name
   .selected {
     color: white;
-    background: $purple-t;
-    @include border-radius(4px);
+    background: $link-hover-color;
+    border-radius: $border-radius-base;
+    h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e668";
+    font-size: em(18);
+    float: right;
+    color: #fff;
+   }
   }
 }
+

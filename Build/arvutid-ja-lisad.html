@@ -366,16 +366,11 @@
     <figure class="search-item-image">
       <img src="assets/img/{{id}}.jpg" id="img{{id}}">
     </figure>
-    <span class="search-item-title">
-    {{name}}
-    </span>
+    <span class="search-item-title">{{name}}</span>
   </a>
 
   {{/products}}
 </script>
-
-
-  
 
 
 
@@ -440,11 +435,11 @@
   <div class="row">
     <div class="col-md-3 hidden-sm hidden-xs">
 
-        <div id="content-placeholder-menu"></div>
+          <div id="content-placeholder-menu"></div> 
   <script id="menu-template" type="text/x-handlebars-template">
 
   {{#sidemenu}}
-  <ul class="ee-sidenav js-sidenav" >
+  <ul class="ee-sidenav js-sidenav" > 
       <li><a href="#">{{parent}}</a>
       {{#if sub}}
           <ul class="ee-sidenav">
@@ -610,96 +605,64 @@
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
 
-    <a href="#" class="tsr-module-support ts-icon-costcontrol2">
+    <a href="#" class="tsr-module-support icon icon-costcontrol2">
       <header>Elioni järelmaks</header>
     </a>  
 
-    <a href="#" class="tsr-module-support icon-transport">
+    <a href="#" class="tsr-module-support icon icon-transport">
       <header>Transport e-poes</header>
     </a>  
 
-    <a href="#" class="tsr-module-support ts-icon-help">
+    <a href="#" class="tsr-module-support icon icon-help">
       <header>Abiinfo</header>
     </a>  
 
-    <a href="#" class="tsr-module-support icon-kodujuhtimise-ikoon-23">
+    <a href="#" class="tsr-module-support icon icon-settings">
       <header>Remont ja hooldus</header>
     </a>                  
 
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 <footer>
-    <div class="container">
+    <div class="container-no-gutter">
         <div class="row">
-            <div class="col-md-3 col-sm-3">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading" data-toggle="collapse" data-target="#col1">
-                    <h3 class="panel-title"><a href="#col1" data-toggle="collapse">Elion</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
-                  </div>
-                  <div id="col1" class="panel-body collapse in">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Ettevõttest</a></li>
-                        <li><a href="#">TeliaSonera</a></li>
-                        <li><a href="#">Tule tööle</a></li>
-                        <li><a href="#">Lepingud ja tingimused</a></li>
-                        <li><a href="#">Hinnakirjad</a></li>
-                    </ul>
-                  </div>
-                </div>
-
+            <div class="col-sm-3 col-md-3">
+               <ul class="list-group">
+                    <li class="dropdown-header"><a href="#"><h6>Elion <span class="icon icon-arrow"></span></h6></a></li>
+                    <li><a href="#"><span>Ettevõttest</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>TeliaSonera</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Tule tööle</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Lepingud ja tingimused</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Hinnakirjad</span><span class="icon icon-arrow"></span></a></li>
+                </ul>
             </div>
-            <div class="col-md-3 col-sm-3">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading" data-toggle="collapse" data-target="#col2">
-                    <h3 class="panel-title"><a href="#col2" data-toggle="collapse">Infoportaal</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
-                  </div>
-                  <div class="panel-body collapse in" id="col2">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Uudised ja artiklid</a></li>
-                        <li><a href="#">Pressinurk</a></li>
-                        <li><a href="#">Foorum</a></li>
-                        <li><a href="#">Digitark</a></li>
-                    </ul>
-                  </div>
-                </div>
-
+            <div class="col-sm-3 col-md-3">
+                <ul class="list-group">
+                    <li class="dropdown-header"><a href="#"><h6>Infoportaal <span class="icon icon-arrow"></span></h6></a></li>
+                    <li><a href="#"><span>Uudised ja artiklid</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Pressinurk</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Foorum</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Digitark</span><span class="icon icon-arrow"></span></a></li>
+                </ul>
             </div>
-            <div class="col-md-3 col-sm-3">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading dropdown" data-toggle="collapse" data-target="#col3">
-                    <h3 class="panel-title"><a href="#col3" data-toggle="collapse">Kontakt</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
-                  </div>
-                  <div class="panel-body hidden-xs" id="col3">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Kontaktinfo</a></li>
-                        <li><a href="#">E-poe info</a></li>
-                        <li><a href="#">Projektide kooskõlastamine</a></li>
-                        <li><a href="#">Liinirajatiste järelvalve</a></li>
-                    </ul>
-                  </div>
-                </div>
-
+            <div class="col-sm-3 col-md-3">
+               <ul class="list-group">
+                    <li class="dropdown-header"><a href="#"><h6>Kontakt <span class="icon icon-arrow"></span></h6></a></li>
+                    <li><a href="#"><span>Kontaktinfo</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>E-poe info</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Projektide kooskõlastamine</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Liinirajatiste järelvalve</span><span class="icon icon-arrow"></span></a></li>
+               </ul>
             </div>
-            <div class="col-md-3 col-sm-3">
-
-                <div class="panel panel-default">
-                  <div class="panel-heading" data-toggle="collapse" data-target="#col4">
-                    <h3 class="panel-title"><a href="#col4" data-toggle="collapse">Elion soovitab</a> <span class="icon icon-arrow-down pull-right visible-xs"></span></h3>
-                  </div>
-                  <div class="panel-body hidden-xs" id="col4">
-                    <ul class="list-unstyled">
-                        <li><a href="#">Leiunurk</a></li>
-                        <li><a href="#">MinuTV</a></li>
-                        <li><a href="#">Ilmataat</a></li>
-                        <li><a href="#">NETI</a></li>
-                        <li><a href="#">Hot</a></li>
-                    </ul>
-                  </div>
-                </div>
-
+            <div class="col-sm-3 col-md-3">
+                <ul class="list-group">
+                    <li class="dropdown-header"><a href="#"><h6>Elion soovitab <span class="icon icon-arrow"></span></h6></a></li>
+                    <li><a href="#"><span>Leiunurk</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>MinuTV</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Ilmataat</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>NETI</span><span class="icon icon-arrow"></span></a></li>
+                    <li><a href="#"><span>Hot</span><span class="icon icon-arrow"></span></a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -711,7 +674,7 @@
 
                     <div class="media">
                       <a class="pull-left" href="#">
-                        <span class="icon ts-icon-facebook"></span>
+                        <span class="icon icon-facebook"></span>
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">TSBrand on Facebook</h4>
@@ -723,7 +686,7 @@
                 <div class="col-md-3">
                     <div class="media">
                       <a class="pull-left" href="#">
-                        <span class="icon ts-icon-youtube"></span>
+                        <span class="icon icon-youtube"></span>
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">TSBrand on Youtube</h4>
@@ -734,7 +697,7 @@
                 <div class="col-md-3">
                     <div class="media">
                       <a class="pull-left" href="#">
-                        <span class="icon ts-icon-twitter"></span>
+                        <span class="icon icon-twitter"></span>
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">TSbrand on Twitter</h4>
@@ -745,7 +708,7 @@
                 <div class="col-md-3">
                     <div class="media">
                       <a class="pull-left" href="#">
-                        <span class="icon ts-icon-google-plus"></span>
+                        <span class="icon icon-google-plus"></span>
                       </a>
                       <div class="media-body">
                         <h4 class="media-heading">TSbrand on Google +</h4>
@@ -757,8 +720,19 @@
         </div>
     </div>
 
+    <!-- COPYRIGHT -->
+    <!-- <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    &copy; Elion
+                </div>
+            </div>
+        </div>
+    </div> -->
+
     <aside class="back-to-top visible-xs">
-        <div class="close-up-btn-bar"><span class="icon ts-icon-arrow-up"></span><p>back to top</p></div>
+        <div class="close-up-btn-bar" data-toggle="scroll-up"><span class="icon icon-arrow-up"></span><p>back to top</p></div>
     </aside>
 </footer>
 
@@ -793,19 +767,21 @@
 
 
 <!-- Header-footer-visamain -->
+    <script src="assets/js/bootstrap-js/transition.js"></script>
     <script src="assets/js/bootstrap-js/alert.js"></script>
     <script src="assets/js/bootstrap-js/button.js"></script>
     <script src="assets/js/bootstrap-js/dropdown.js"></script>
     <script src="assets/js/visa/header.js"></script>
     <script src="assets/js/visa/footer.js"></script>
-    // <script src="assets/js/visa/main.js"></script>
+    <script src="assets/js/visa/main.js"></script>
 
 <!-- 2nd-level -->
     <script src="assets/js/ee-js/ee-2nd-level.js"></script>
 
 <!-- Detail view -->
+
+
     <script src="assets/js/bootstrap-js/collapse.js"></script>
-    <script src="assets/js/bootstrap-js/transition.js"></script>
     <script src="assets/js/bootstrap-js/tab.js"></script>
     <script src="assets/js/bootstrap-js/tooltip.js"></script>
     <script src="assets/js/bootstrap-js/popover.js"></script>
@@ -829,18 +805,21 @@
     <script src="assets/js/tsr-js/tsr-attention.js"></script> 
 
 <script>
-// $( document ).ready(function() {
-//   $('.js-listedmenu').each(function() {
-//     var $list = $(this);
-//    $list.find('li:gt(6)').hide();
-//     });
-//   $('.js-show-button').click(function(e) {
-//       e.preventDefault();
-//       var $btn = $(this).find('span');
-//       $('.js-listedmenu > li:gt(6)').slideToggle();
-//       $btn.text($btn.text() == 'Rohkem' ? 'Vähem' : 'Rohkem');
-//   });
-// });
+
+
+$( document ).ready(function() {
+  // Temporary for static presentation only
+  $('#sidemenu > li > ul > li > a').click(function(e){
+    if ($(this).attr('class') != 'selected'){
+      $(this).addClass('selected');
+      $('a').not(this).removeClass('selected');
+    }
+    else {
+      $(this).removeClass('selected');
+    }
+    e.preventDefault();
+  });
+});
 
     // $(document).ready(function() {  
 

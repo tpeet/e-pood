@@ -67,23 +67,23 @@ $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'N
 
 });
 
+// remove original on larger screens script
+// function set_src() {
+//   var window_width = $(window).width();
+//   if (window_width < 1147) {
+//       $(".original").remove();
+//   } else {
+//       $(".original").show(); 
+//   }
+// }
 
-function set_src() {
-  var window_width = $(window).width();
-  if (window_width < 1147) {
-      $(".original").remove();
-  } else {
-      $(".original").show(); 
-  }
-}
+// $(document).ready(function(){
+//    set_src();
 
-$(document).ready(function(){
-   set_src();
-
-   $(window).resize(function() {
-     set_src();
-   });
-});
+//    $(window).resize(function() {
+//      set_src();
+//    });
+// });
 
 // FRONTPAGE ADJUSTED SIZE FLASH TEXT
 // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div

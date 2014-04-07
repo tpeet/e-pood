@@ -24,32 +24,6 @@
   }
 }
 
-// Hover state, but only for links
-a.badge {
-  &:hover,
-  &:focus {
-    color: $badge-link-hover-color;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
-// Quick fix for labels/badges in buttons
-.btn .badge {
-  position: relative;
-  top: -1px;
-}
-
-// Account for counters in navs
-a.list-group-item.active > .badge,
-.nav-pills > .active > a > .badge {
-  color: $badge-active-color;
-  background-color: $badge-active-bg;
-}
-.nav-pills > li > a > .badge {
-  margin-left: 3px;
-}
-
 // badge together with icon
 .icon-with-badge {
 
@@ -88,7 +62,7 @@ a.list-group-item.active > .badge,
   }
 }
 
-.navbar-toggle{
+.navbar-toggle {
   .badge {
     border: 3px solid #fff;
     border-radius: 20px;
@@ -98,3 +72,20 @@ a.list-group-item.active > .badge,
     display: inline;
   }
 }
+
+.navbar-header {
+  
+    a[href*="#collapsibleMainMenu-Basket"] {
+      
+      width: 68px;
+
+      span[class*="badge"] {
+        right: 10px;
+        top: 18px;
+      }
+    }
+  
+}
+
+
+

@@ -52,7 +52,7 @@ TSR - FORMS
 	   	if (!$("html").hasClass("touch")) {
 	         $(".tsr-forms select").selectBoxIt({ downArrowIcon: "ts-icon-arrow-down" });
 	    } else if ($("html").hasClass("touch")) {
-	        $(".tsr-forms select").selectBoxIt({ downArrowIcon: "ts-icon-arrow-down", native: true });
+	        $(".tsr-forms select").selectBoxIt({ downArrowIcon: "ts-icon-arrow-down", "native": true });
 	    }
 
     };

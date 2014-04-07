@@ -1,4 +1,4 @@
-# Elion e-pood, Hammr v.51
+# Elion e-pood, Hammr 
 Kompileeritud failid asuvad Build kataloogis, tööfailid on juurkataloogis. Struktuur pärineb töövahendist - [Hammer](http://hammerformac.com).
 Templiitimise abivahendiks on [Handlebars](http://handlebarsjs.com/), mis arenduse käigus asendatakse. Projekti aluseks on [Bootstrap 3 - Sass](https://github.com/twbs/bootstrap-sass/tree/master/vendor/assets/stylesheets/bootstrap), [rootslaste komponentidest](http://responsivecode.teliasonera.com/) on kasutusel moodulid. 
 

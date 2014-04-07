@@ -1,6 +1,26 @@
-.navbar{ 
+.navbar { 
   margin-bottom: 1px;
-  min-height: 40px; 
+  min-height: 40px;
+  &:first-child {
+    .dropdown-menu {
+      margin-top:1px;
+
+      a {
+        color: #fff;
+      }
+    }
+  } 
+}
+.navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  .menu-large {
+    .dropdown-menu {
+      width: 100%;
+      color: #fff;
+    }
+  }
 }
 .navbar-default {
   background-color: $navbar-default-bg;
@@ -19,67 +39,68 @@
     margin-top: 0;
     margin-bottom: 0;
 
-    .dropdown-menu {
+    .menu-large {
+      .dropdown-menu {
 
-      padding:0;
-      border-radius: 0;
-      border:0;
-      box-shadow: none;
-      width: 100%;
+        padding:0;
+        border-radius: 0;
+        border:0;
+        box-shadow: none;
 
-      .megamenu {
+        .megamenu {
 
-        > li {
+          > li {
 
-          a {
-            color:$body-bg;
-            @media (max-width: $screen-xs-max) { 
-              border-bottom: 1px solid darken($brand-primary,10%);
+            a {
+              color:$body-bg;
+              @media (max-width: $screen-xs-max) { 
+                border-bottom: 1px solid darken($brand-primary,10%);
+              }
             }
-          }
-
-          span[class*="icon-arrow"] {
-
-            float: none;
-            font-size: $font-size-base - 2;
-
-            &:before { content: "\e668"; } // arrow right
-
-            // change arrow on mobile screen
-            @media (max-width: $screen-xs-max) { 
-              float:right;
-            }
-
-          }
-          
-          &:not(:first-child) {
 
             span[class*="icon-arrow"] {
+
+              float: none;
+              font-size: $font-size-base - 2;
+
+              &:before { content: "\e668"; } // arrow right
+
               // change arrow on mobile screen
               @media (max-width: $screen-xs-max) { 
-                &:before { content: "\e669"; } // arrow down
+                float:right;
               }
-            }
 
-            @media (max-width: $screen-xs-max) { 
-              > ul > li:not(.dropdown-header) > a {
-                padding-left: 35px;
-                padding-top: 10px;
-                padding-bottom: 10px;
+            }
+            
+            &:not(:first-child) {
+
+              span[class*="icon-arrow"] {
+                // change arrow on mobile screen
+                @media (max-width: $screen-xs-max) { 
+                  &:before { content: "\e669"; } // arrow down
+                }
               }
-            }
 
+              @media (max-width: $screen-xs-max) { 
+                > ul > li:not(.dropdown-header) > a {
+                  padding-left: 35px;
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                }
+              }
+
+            }
           }
+        
         }
-      
-      }
 
-      @media (max-width: $screen-xs-max) { 
-        background-color:darken($navbar-inverse-bg,5%);
-        padding:0;
-        a {           
-          > span[class*="-chevron-right"]{
-            float: right;
+        @media (max-width: $screen-xs-max) { 
+          background-color:darken($navbar-inverse-bg,5%);
+          padding:0;
+          a {           
+            > span[class*="-chevron-right"]{
+              float: right;
+            }
           }
         }
       }
@@ -143,7 +164,8 @@
           color: white;
           &,
           &:hover,
-          &:focus {
+          &:focus,
+          &:active {
             background-color: $navbar-default-link-active-bg;
             color: $navbar-default-link-active-color;
             .caret {
@@ -240,6 +262,7 @@
 .navbar-inverse {
   border-radius: 0;
   background-color: $navbar-inverse-bg;
+  border:0;
 
   .navbar-nav {
     > li {
@@ -300,7 +323,10 @@
     .open > a {
       background-color: $navbar-inverse-bg;
 
-      &:hover{
+      &,
+      &:hover,
+      &:active,
+      &:focus {
         background-color: darken($navbar-inverse-bg,7.6%);
       }
     }
@@ -338,7 +364,7 @@
         > a {
           font-weight: normal;
 
-          .icon-buy {
+          .icon-buy_2 {
             font-size: $font-size-base + 2;
             vertical-align: middle;
           }
@@ -349,7 +375,7 @@
           > a {
 
               padding-top:3px; 
-              padding-bottom:0;
+              padding-bottom:5px;
               
               > span:last-child{
                 vertical-align:middle;

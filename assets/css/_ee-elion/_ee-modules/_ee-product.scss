@@ -92,15 +92,15 @@ section.tsr-section-productAndService-listing {
     z-index:0;
     cursor:pointer;
     left: 0;
-    margin-top: 0;
+    margin-top: -100%;
     outline: 2px solid $lightgrey-c;
     -webkit-transition: opacity 0.3s ease-in-out;
     -moz-transition: opacity 0.3s ease-in-out;
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
-    @include media-min($screen-md) {
-      margin-top: -100%;
-    } 
+    // @include media-min($screen-md) {
+    //   margin-top: -100%;
+    // } 
   }
 
 // product module general, removed float

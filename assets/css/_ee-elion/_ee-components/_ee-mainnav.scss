@@ -1,42 +1,42 @@
 // For right-side additional Help menu
-.megamenu > li > ul > li > a {
-color: #FFF;
-font-size: 15px;
-padding: 10px 15px;
-border-bottom: 1px solid $purple-t;
-  &:hover {
-    background: $purple-h;
-    padding: 11px 15px;
-  }
-  @include media-min($screen-sm) {
-  border-bottom: none;
-  } 
-}
+// .megamenu > li > ul > li > a {
+// color: #FFF;
+// font-size: 15px;
+// padding: 10px 15px;
+// border-bottom: 1px solid $purple-t;
+//   &:hover {
+//     background: $purple-h;
+//     padding: 11px 15px;
+//   }
+//   @include media-min($screen-sm) {
+//   border-bottom: none;
+//   } 
+// }
 
-.dropdown-header .icon {
-  float: right;
-}
+// .dropdown-header .icon {
+//   float: right;
+// }
 
-.navbar-default {
-  border-color: $lightgrey-t;
-  border-bottom: none;
-  border-right: none;
-}
+// .navbar-default {
+//   border-color: $lightgrey-t;
+//   border-bottom: none;
+//   border-right: none;
+// }
 
 // header {
 //   margin-bottom: -1px;
 // }
 
 // For 3d level menu to have some styling
-.megamenu > li > ul > li:not(.dropdown-header) > a {
-  padding-left: 40px;
-  border-bottom: 1px solid $purple-t;
+// .megamenu > li > ul > li:not(.dropdown-header) > a {
+//   padding-left: 40px;
+//   border-bottom: 1px solid $purple-t;
 
-    @include media-min($screen-sm) {
-    padding-left: 13px;
-    border-bottom: none;
-  } 
-}
+//     @include media-min($screen-sm) {
+//     padding-left: 13px;
+//     border-bottom: none;
+//   } 
+// }
 
 // Jaanus wants additional space in front of ad
 .megamenu img {
@@ -60,14 +60,14 @@ border-bottom: 1px solid $purple-t;
 //   }
 // }
 
-.navbar-default .navbar-toggle {
-  font-size: 27px;
-  margin-right: 0;
-}
+// .navbar-default .navbar-toggle {
+//   font-size: 27px;
+//   margin-right: 0;
+// }
 
-.navbar .nav {
-  margin-bottom: -1px;
-}
+// .navbar .nav {
+//   margin-bottom: -1px;
+// }
 
 .topnav .dropdown-menu li {
   a {
@@ -137,12 +137,20 @@ border-bottom: 1px solid $purple-t;
       border-bottom-left-radius: 0;
     }
     .search-item-title {
+      overflow: hidden;
+      zoom: 1;
+      position: absolute;
+      top: 30px;
+      line-height: 1;
       color: $purple-c;
       font-size: $font-size-h6;
       -webkit-transition: color 0.3s ease-in-out;
       -moz-transition: color 0.3s ease-in-out;
       -o-transition: color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out;
+    }
+    &.active, &:hover {
+      border-color: $lightgrey-t;
     }
     &.active .search-item-title, &:hover .search-item-title {
     color: #fff;
@@ -165,11 +173,11 @@ header .megamenu .search-item-image,
   content: "";
   position: absolute;
   top: 50%; 
-  margin-top: -2.75em;   
-  border-top: 2.75em solid transparent;
-  border-bottom: 2.75em solid transparent;
+  margin-top: -2.8em;   
+  border-top: 2.8em solid transparent;
+  border-bottom: 2.8em solid transparent;
   border-left: 1em solid #fff;
-  right: -1em;
+  right: -0.9em;
   }
 }
 

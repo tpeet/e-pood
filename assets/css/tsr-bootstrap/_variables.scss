@@ -95,7 +95,7 @@ $headings-color:          inherit;
 // Iconography
 // -------------------------
 $icon-font-path:          "../fonts/";
-$icon-font-name:          "ts-icons-all" ;
+$icon-font-name:          "tsr-icons-all" ;
 
 
 // Components
@@ -186,9 +186,9 @@ $input-bg:                       #fff;
 $input-bg-disabled:              $gray-lighter;
 
 $input-color:                    $gray;
-$input-border:                   #ccc;
+$input-border:                   #DBDBDB;
 $input-border-radius:            $border-radius-base;
-$input-border-focus:             #66afe9;
+$input-border-focus:             $brand-primary;
 
 $input-color-placeholder:        $gray-light;
 
@@ -197,7 +197,7 @@ $input-height-large:             (floor($font-size-large * $line-height-large) +
 $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2);
 
 $legend-color:                   $gray-dark;
-$legend-border-color:            #e5e5e5;
+$legend-border-color:            #DBDBDB;
 
 $input-group-addon-bg:           $gray-lighter;
 $input-group-addon-border-color: $input-border;
@@ -413,24 +413,24 @@ $jumbotron-heading-color:        inherit;
 $jumbotron-font-size:            ceil($font-size-base * 1.5);
 
 
-// Form states and alerts
+// Form states
 // -------------------------
 
-$state-success-text:             #fff;
-$state-success-bg:               #00B48C;
-$state-success-border:           darken($state-success-bg, 0%);//darken(adjust-hue($state-success-bg, 5), 1%)
+$state-success-text:             #222;
+$state-success-bg:               #00B48C;//#fff;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 10%);
 
-$state-info-text:                #fff;
-$state-info-bg:                  #0083BE;
-$state-info-border:              darken($state-info-bg, 0);//darken(adjust-hue($state-info-bg, -10), 7%);
+$state-info-text:                #222;
+$state-info-bg:                  #fff;
+$state-info-border:              #0083BE;//darken(adjust-hue($state-info-bg, -10), 7%);
 
-$state-warning-text:             #fff;
+$state-warning-text:             #222;
 $state-warning-bg:               #FF6319;
-$state-warning-border:           darken($state-warning-bg, 0%);//darken(adjust-hue($state-warning-bg, -10), 5%);
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
 
-$state-danger-text:              #fff;
-$state-danger-bg:                #FF6319;
-$state-danger-border:            darken($state-danger-bg, 0%);//darken(adjust-hue($state-danger-bg, -10), 5%);
+$state-danger-text:              #222;
+$state-danger-bg:                #DA552A;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
 
 
 // Tooltips
@@ -496,21 +496,21 @@ $alert-padding:               15px;
 $alert-border-radius:         $border-radius-base;
 $alert-link-font-weight:      bold;
 
-$alert-success-bg:            $state-success-bg;
-$alert-success-text:          $state-success-text;
-$alert-success-border:        $state-success-border;
+$alert-success-bg:            #00B48C;
+$alert-success-text:          #fff;
+$alert-success-border:        darken($alert-success-bg, 0%);
 
-$alert-info-bg:               $state-info-bg;
-$alert-info-text:             $state-info-text;
-$alert-info-border:           $state-info-border;
+$alert-info-bg:               #0083BE;
+$alert-info-text:             #fff;
+$alert-info-border:           darken($alert-info-bg, 0);
 
-$alert-warning-bg:            $state-warning-bg;
-$alert-warning-text:          $state-warning-text;
-$alert-warning-border:        $state-warning-border;
+$alert-warning-bg:            #FF6319;
+$alert-warning-text:          #fff;
+$alert-warning-border:        darken($alert-warning-bg, 0%);
 
-$alert-danger-bg:             $state-danger-bg;
-$alert-danger-text:           $state-danger-text;
-$alert-danger-border:         $state-danger-border;
+$alert-danger-bg:             #FF6319;
+$alert-danger-text:           #fff;
+$alert-danger-border:         darken($alert-danger-bg, 0%);
 
 
 // Progress bars
@@ -616,9 +616,11 @@ $breadcrumb-separator:        "/";
 $carousel-text-shadow:                        0 1px 2px rgba(0,0,0,.6);
 
 $carousel-control-color:                      #fff;
-$carousel-control-width:                      15%;
+$carousel-control-width:                      5%;
+$carousel-control-height:                     100px;
 $carousel-control-opacity:                    .5;
-$carousel-control-font-size:                  20px;
+$carousel-control-font-size:                  $font-size-h2;
+$carousel-control-radius:                  	  200px;
 
 $carousel-indicator-active-bg:                #fff;
 $carousel-indicator-border-color:             #fff;

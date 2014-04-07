@@ -6,8 +6,20 @@ console.log('\'Hello\' Elion webpage!');
 
     function main() {
         console.log('main js');
-        resizeElement();
+
+        scrollPageTop();
+        fullSizeElement();
         createCustomElement(['content','footer']);
+        stopPropagation();
+
+    }
+    //scroll page to top
+    function scrollPageTop(){
+        $('[data-toggle="scroll-up"]').click(function(){
+            $('html,body').animate({
+                 scrollTop: 0
+            }, 1000);
+        });
     }
     // create custom element
     function createCustomElement(array){
@@ -26,21 +38,60 @@ console.log('\'Hello\' Elion webpage!');
         return h;
     }
     // make a element full screen width
-    function resizeElement(){
-        var _el = $('[data-toggle="resize"]'), _pos = _el.offset(), _leftpx = _pos.left*(-1);
+    function fullSizeElement(){
+        var _el = $('[data-toggle="full-size"]');
+        if(_el.length < 1) return;
+        var _pos = _el.offset(), _leftpx = _pos.left*(-1);
         _el.css({ width : document.body.clientWidth+'px', left:_leftpx, position:'relative' });
     }
+    // stop propagation utility for dropdown menu
+    function stopPropagation(){
+        $(".dropdown-menu").on("click", "[data-stopPropagation]", function(e) {
+            e.stopPropagation();
+        });
+    }
 
-    
-    /*window.addEventListener('resize', screenHasChanged, false);
+    /* do something after screen has changed */
+    window.addEventListener('resize', screenHasChanged, false);
     var resizeTimeoutId;
 	function screenHasChanged(){
 		window.clearTimeout(resizeTimeoutId);
-		resizeTimeoutId = window.setTimeout(doResizeCode, 1000);
+		resizeTimeoutId = window.setTimeout(renderLayout, 100);
 	}
-	function doResizeCode(){
-		resizeElement();
-	}*/
+	function renderLayout(){
+        // resize full screen elements
+		//fullSizeElement();
+
+        // handle dropdown menu
+        if(Modernizr.mq('only screen and (min-width: 768px)')) {
+            
+            var _el = $('[id^="collapsibleMainMenu-"]');
+            if( _el.hasClass('in') ) {
+                _el.removeClass('in').addClass('collapse');
+                $('content').css({marginTop:0+'px'});
+            }
+
+            // remove active class
+            $('[href^="#collapsibleMainMenu"]').removeClass('active');
+            console.log('w:',getScreenWidth(), ' h:',getScreenHeight());
+            // handle content margin top
+            var __el = $('#collapsibleMainMenu-Pages .dropdown.open').find('.dropdown-menu');
+            var _h = __el.height() + 20;
+            _h += 'px';
+            
+            if(__el.length > 0) {
+                $('content').animate({marginTop: ( _h ) });
+                console.log('do something:', _h);
+            }
+
+        } else {
+
+            $('content').css({marginTop:0+'px'});
+
+        }
+
+
+	}
 
     main();
 
