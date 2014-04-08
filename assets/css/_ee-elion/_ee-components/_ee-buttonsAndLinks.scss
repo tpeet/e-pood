@@ -111,7 +111,8 @@ text-align: left;
 }
 
 %format-icon {
-  font-family: 'elion-ikoonid';
+  // font-family: 'elion-ikoonid';
+  font-family: 'tsr-icons-all';
   font-size: em(24);
   padding-right: 5px;
   display: inline-block;
@@ -123,11 +124,21 @@ text-align: left;
   transition: color 0.3s ease-in-out;
 }
 
+%format-icon-negative {
+  // font-family: 'elion-ikoonid';
+  font-family: 'tsr-icons-all';
+  font-size: em(16);
+  padding-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+
 .ee-list {
   &:before {
   @extend %format-icon;
   color: inherit;
-  content: "\e028";
+  content: "\e6e5";
   }
 }
 
@@ -135,14 +146,14 @@ text-align: left;
   &:before {
   @extend %format-icon;
   color: inherit;
-  content: "\e002";
+  content: "\e6e7";
   }
 }
 
 .ee-plus-round {
   &:before {
   @extend %format-icon;
-  content: "\e02b";
+  content: "\e6de";
   }
   &:hover:before {
     color: $purple-h;
@@ -152,7 +163,7 @@ text-align: left;
 .ee-minus-round {
   &:before {
   @extend %format-icon;
-  content: "\e02a";
+  content: "\e6e3";
   }
   &:hover:before {
     color: $purple-h;
@@ -162,14 +173,14 @@ text-align: left;
 .ee-favorite {
   &:before {
     @extend %format-icon;
-    content: "\e00d";
+    content: "\e6ec";
     -webkit-transition: content 0.3s ease-in-out;
   -moz-transition: content 0.3s ease-in-out;
   -o-transition: content 0.3s ease-in-out;
   transition: content 0.3s ease-in-out;
   }
   &:hover:before {
-    content: "\e001";
+    content: "\e6ed";
     color: $purple-h;
   }
 }
@@ -177,7 +188,7 @@ text-align: left;
 .ee-compare {
   &:before {
   @extend %format-icon;
-  content: "\e02e";
+  content: "\e6d1";
   }
   &:hover:before {
     color: $purple-h;
@@ -187,7 +198,7 @@ text-align: left;
 .ee-comments {
  &:before {
   @extend %format-icon;
-  content: "\e00b";
+  content: "\e6f3";
   }
   &:hover:before {
     color: $purple-h;
@@ -197,19 +208,43 @@ text-align: left;
 .ee-transport {
   &:before {
   @extend %format-icon;
-  content: "\e00a";
-  }
-  &:hover:before {
-    color: $purple-h;
-  }
-
-.icon-search {
-  &:before {
-  @extend %format-icon;
-  content: "\e009";
+  content: "\e6d4";
   }
   &:hover:before {
     color: $purple-h;
   }
 }
+
+.icon-search {
+  &:before {
+  @extend %format-icon;
+  content: "\e61f";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
+}
+
+.icon-facebook-inverse {
+  &:before {
+  @extend %format-icon-negative;
+  content: "\e002";
+  color: #fff;
+  }
+}
+
+.icon-twitter-inverse {
+  &:before {
+  @extend %format-icon-negative;
+  content: "\e001";
+  color: #fff;
+  }
+}
+
+.icon-googleplus-inverse {
+  &:before {
+  @extend %format-icon-negative;
+  content: "\e66d";
+  color: #fff;
+  }
 }
