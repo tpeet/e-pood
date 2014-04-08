@@ -215,15 +215,15 @@ text-align: left;
   }
 }
 
-.icon-search {
-  &:before {
-  @extend %format-icon;
-  content: "\e61f";
-  }
-  &:hover:before {
-    color: $purple-h;
-  }
-}
+// .icon-search {
+//   &:before {
+//   @extend %format-icon;
+//   content: "\e61f";
+//   }
+//   &:hover:before {
+//     color: $purple-h;
+//   }
+// }
 
 .icon-facebook-inverse {
   &:before {

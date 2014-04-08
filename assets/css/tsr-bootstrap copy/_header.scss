@@ -1,0 +1,149 @@
+header {
+  
+  .navbar-default {
+    .navbar-toggle {
+      &.active{
+        background-color: $brand-primary;
+        color:#fff;
+        border-radius: 0;
+      }
+      &:hover, &:focus, &:active {
+        text-decoration: none;
+      }
+    }
+  }
+  .dropdown-menu, .collapsibleMainMenu {
+
+    background-color: darken($brand-primary,7%);
+
+    .container {
+      background-color: $brand-primary;
+
+      &.collapsibleMainMenu-Search {
+        > .form-horizontal {
+          padding: 25px 12px 50px 12px;
+        }
+      }
+
+      @media (max-width: $screen-md-min) {
+        &.collapsibleMainMenu-Search {
+          > .form-horizontal {
+            padding: 20px 12px 20px 12px;
+          }
+        }
+      }
+      @media (max-width: $screen-xs-max) { 
+        padding-left:0;
+        padding-right:0;
+        /*&.collapsibleMainMenu-Search{
+          padding: 20px 12px 20px 12px;
+        }*/
+      }
+
+    }
+
+    .dropdown-header{
+      font-size: $font-size-base + 2;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: $screen-xs-max){ 
+      .btn {
+        margin-top: 10px;
+      }
+    }
+
+  }
+
+  .megamenu {
+
+    img { 
+      width: 100%;
+    }
+
+    input {
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    > li:first-child{
+      border-right: 1px solid darken($brand-primary,7%);
+    }
+
+    .form-group {
+      margin:0;
+    }
+
+    .form-control {
+      height: auto;
+      border-radius: 0;
+    }
+
+  }
+
+  .options{
+
+    .navbar-nav {
+      margin: 10px 70px 10px 10px;
+
+      .dropdown{
+
+        .dropdown-toggle{
+
+          color: #fff;
+          background-color: lighten($brand-primary,7%);
+          &, &:hover, &:active, &:focus{
+            background-color:lighten($brand-primary,5%);
+            border-bottom: 1px solid darken($brand-primary,7%);
+          }
+          > [class*="icon"]{
+            &:after {
+                background: none repeat scroll 0 0 darken($brand-primary,7%);
+                content: "";
+                display: block;
+                height: 47px;
+                margin-top: -19px;
+                position: absolute;
+                left: -13px;
+                top: 50%;
+                width: 1px;
+                z-index: 1; 
+            }
+          }
+        }
+
+        &.open{
+          .dropdown-menu{
+            > li > a {
+              padding-left: 15px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            }
+          }
+        }
+        .dropdown-menu{
+          background-color: lighten($brand-primary,7%);
+          > li {
+            &:last-child{
+              border-bottom:0;
+            }
+            border-bottom: 1px solid darken($brand-primary,7%);
+            > a {
+              color: #fff;
+              &:hover{
+                color: #fff;
+                background-color:darken($brand-primary,7%);
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

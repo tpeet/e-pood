@@ -11311,7 +11311,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
     background: #4e256b;
     color: #fff; }
 
-.ee-list:before, .ee-block:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .tsr-module-product .ee-product-box-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .icon-search:before, section.ee-more-info-tabs .nav-justified li a:after, section.ee-more-info-tabs .nav-justified li.active a:after {
+.ee-list:before, .ee-block:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .tsr-module-product .ee-product-box-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, section.ee-more-info-tabs .nav-justified li a:after, section.ee-more-info-tabs .nav-justified li.active a:after {
   font-family: 'tsr-icons-all';
   font-size: 1.54839em;
   padding-right: 5px;
@@ -11372,11 +11372,6 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
 .ee-transport:before {
   content: "\e6d4"; }
 .ee-transport:hover:before {
-  color: #73369e; }
-
-.icon-search:before {
-  content: "\e61f"; }
-.icon-search:hover:before {
   color: #73369e; }
 
 .icon-facebook-inverse:before {

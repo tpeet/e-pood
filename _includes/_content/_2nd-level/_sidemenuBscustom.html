@@ -1,0 +1,26 @@
+<div id="content-placeholder-menu" id="sidemenu"></div> 
+  <script id="menu-template" type="text/x-handlebars-template">
+  <ul class="ee-sidenav" id="sidemenu">
+    {{#sidemenu}}
+
+      {{#if sub}} 
+        <li>
+          <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
+          <ul class="ee-sidenav-sub collapse" id="{{href}}">
+
+            {{#each sub}}
+            <li ><a href="#"><h6>{{this}}</h6></a></li>
+            {{/each}}
+          </ul>
+        </li>
+        {{else}}
+        <li>
+          <a href="javascript:void(0);"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
+
+    {{/sidemenu}}
+  </ul>
+  </script>
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
