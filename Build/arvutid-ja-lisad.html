@@ -435,28 +435,33 @@
   <div class="row">
     <div class="col-md-3 hidden-sm hidden-xs">
 
-          <div id="content-placeholder-menu"></div> 
+        <div id="content-placeholder-menu" id="sidemenu"></div> 
   <script id="menu-template" type="text/x-handlebars-template">
+  <ul class="ee-sidenav" id="sidemenu">
+    {{#sidemenu}}
 
-  {{#sidemenu}}
-  <ul class="ee-sidenav js-sidenav" > 
-      <li><a href="#">{{parent}}</a>
-      {{#if sub}}
-          <ul class="ee-sidenav">
-            
+      {{#if sub}} 
+        <li>
+          <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
+          <ul class="ee-sidenav-sub collapse" id="{{href}}">
+
             {{#each sub}}
-            <li>
-                <a href="#">{{this}}</a>
-            </li>
+            <li ><a href="#"><h6>{{this}}</h6></a></li>
             {{/each}}
-            
           </ul>
-          {{/if}}
-      </li>
-  </ul>
-  {{/sidemenu}}
+        </li>
+        {{else}}
+        <li>
+          <a href="javascript:void(0);"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
 
+    {{/sidemenu}}
+  </ul>
   </script>
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+
 
     </div>
 
@@ -624,7 +629,7 @@
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 <footer>
-    <div class="container-no-gutter">
+    <div class="container">
         <div class="row">
             <div class="col-sm-3 col-md-3">
                <ul class="list-group">
