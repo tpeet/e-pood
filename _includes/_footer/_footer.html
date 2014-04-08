@@ -95,60 +95,18 @@
         </div>
     </div>
 
-    <!-- COPYRIGHT -->
-    <!-- <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    &copy; Elion
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <aside class="back-to-top visible-xs">
         <div class="close-up-btn-bar" data-toggle="scroll-up"><span class="icon icon-arrow-up"></span><p>back to top</p></div>
     </aside>
 </footer>
 
-
 <!-- HTML5 IE Enabling Script -->
 <!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
-
+ 
 <!-- @javascript rapid -->
 <!-- General handlebars -->
     <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
     <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
-<!-- @include _js.html --> 
 
-<script>
-
-
-$( document ).ready(function() {
-  // Temporary for static presentation only
-  $('#sidemenu > li > ul > li > a').click(function(e){
-    if ($(this).attr('class') != 'selected'){
-      $(this).addClass('selected');
-      $('a').not(this).removeClass('selected');
-    }
-    else {
-      $(this).removeClass('selected');
-    }
-    e.preventDefault();
-  });
-});
-
-    // $(document).ready(function() {  
-
-
-
-    //   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
-
-
-    //   $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
-
-    // });  
-
-</script> 
 </body>
 </html>

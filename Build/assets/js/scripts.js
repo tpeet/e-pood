@@ -1,118 +1,92 @@
-console.log('scripts');
-// Sliding commenting
-//*********************
-// $('.js-togglable').hide();
-// $('.js-slidetoggle').click(function(e) {
-//   $(this).parents().next('.js-togglable').slideDown('slow');
-//   $('.js-slideclose').slideUp();
-//   e.preventDefault();
-// }); 
-
-// MULTIPLY BY JULIUS
-// var klikk=false;
-// function getopacity(elem) {
-//   var ori = $(elem).css('opacity');
-//   var ori2 = $(elem).css('filter');
-//   if (ori2) {
-//     ori2 = parseInt( ori2.replace(')','').replace('alpha(opacity=','') ) / 100;
-//     if (!isNaN(ori2) && ori2 != '') {
-//       ori = ori2;
-//     }
-//   }
-//   return ori;
-// }
-// $( ".pildil6uend" ).mouseover(function() {
-//     var img1 = document.getElementById($(this).attr('rel'));
-//     var canvas = document.getElementById(this.id);
-//     var context = canvas.getContext("2d");
-//     var width = img1.width;
-//     var height = img1.height;
-//     canvas.width =  width;
-//     canvas.height = height;
-//     var pixels = 4 * width * height;
-//     context.drawImage(img1, 0, 0);
-//     var image1 = context.getImageData(0, 0, width, height);
-//     var imageData1 = image1.data;
-//     while (pixels--) {
-//         imageData1[pixels] = imageData1[pixels] * 247 /255;
-//             }
-//     image1.data = imageData1;
-//     context.putImageData(image1, 0, 0);
-//     $(this.parentNode.parentNode).css("background-color","#F7F7F7");
-// });
-
-
-// $( ".pildil6uend" ).mouseout(function() {
-//   var canvas = document.getElementById(this.id);
-//   var context = canvas.getContext("2d");
-//   context.clearRect(0, 0, canvas.width, canvas.height);
-//   if(window.klikk==true){$( ".multiply" ).fadeTo( 500 , 1, function() {
-//     });window.klikk=false;}
-//    $(this.parentNode.parentNode).css("background-color","white");
-// });
-
-// $( ".pildil6uend" ).click(function() {
-//   $( ".multiply" ).not(document.getElementById($(this).attr('rel'))).fadeTo( 250 , 0.5, function() {
-//      });
-//    window.klikk=true;
-// });
-
+console.log('scripts js loaded');
 
 $(document).ready(function() {
 
-// FRONTPAGE MORE
-$('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+  // CALL FRONTPAGE MORE
+  $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-$('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-});
+  // FRONTPAGE ADJUSTED SIZE FLASH TEXT
+  // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
+  $( '.js-filltext' ).each(function ( i, box ) {
 
-// remove original on larger screens script
-// function set_src() {
-//   var window_width = $(window).width();
-//   if (window_width < 1147) {
-//       $(".original").remove();
-//   } else {
-//       $(".original").show(); 
-//   }
-// }
+      var width = $( box ).width(),
+          html = '<span style="white-space:nowrap">',
+          line = $( box ).wrapInner( html ).children()[ 0 ],
+          n = 100;
+      
+      $( box ).css( 'font-size', '100px' );
 
-// $(document).ready(function(){
-//    set_src();
-
-//    $(window).resize(function() {
-//      set_src();
-//    });
-// });
-
-// FRONTPAGE ADJUSTED SIZE FLASH TEXT
-// http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
-$( '.js-filltext' ).each(function ( i, box ) {
-
-    var width = $( box ).width(),
-        html = '<span style="white-space:nowrap">',
-        line = $( box ).wrapInner( html ).children()[ 0 ],
-        n = 100;
-    
-    $( box ).css( 'font-size', '100px' );
-
-    $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
-    $( box ).text( $( line ).text() );
-
-});
-
-
-// DETAIL POPOVER
-$('[data-toggle="popover"]').popover();
-$('body').on('click', function (e) {
-  $('[data-toggle="popover"]').each(function () {
-      if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-          $(this).popover('hide');
-      }
+      $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
+      $( box ).text( $( line ).text() );
   });
+
+  // 2nd level 
+  // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+  $('#sidemenu > li > ul > li > a').click(function(e){
+    if ($(this).attr('class') != 'selected'){
+      $(this).addClass('selected');
+      $('a').not(this).removeClass('selected');
+    }
+    else {
+      $(this).removeClass('selected');
+    }
+    e.preventDefault();
+  });
+
+  // Color select. Messy until desicions are made how to present colors
+  $(function() {
+    var accEl = $('.ee-product-colors li.acc');
+
+    accEl.on('click', function(){
+
+        var el = $(this);
+        var color = el.attr('data-color-theme');
+        var section = $(this).closest(".tsr-product-image");
+
+        if (section.hasClass(color)) {
+           section.removeClass(color);
+            $('.ee-product-colors li.acc').removeClass('active');
+        }
+        else {
+            section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
+            $('.ee-product-colors li.acc').removeClass('active');
+            section.addClass(color);
+            el.addClass('active');
+        }
+        return false;
+        
+    });
+  });
+
+  // DETAIL POPOVER
+  $('[data-toggle="popover"]').popover();
+  $('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+  });
+
 });
+
+
+
+
+
 
 $('.js-slidetoggle').click(function(e) {
   $(this).parents().next('.js-togglable').slideToggle('slow');
+  e.preventDefault();
+});
+
+// Sliding commenting
+//*********************
+$('.js-togglable').hide();
+$('.js-slidetoggle').click(function(e) {
+  $(this).parents().next('.js-togglable').slideDown('slow');
+  $('.js-slideclose').slideUp();
   e.preventDefault();
 });
