@@ -60,6 +60,8 @@ $(document).ready(function() {
     });
   });
 
+  $('.flashText').bigText();
+
   // DETAIL POPOVER
   $('[data-toggle="popover"]').popover();
   $('body').on('click', function (e) {
