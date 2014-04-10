@@ -23,3 +23,19 @@
   min-width: 35px;
   margin-left: 6px;
 }
+
+.ee-filterbar {
+  line-height: 3;
+  .navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: normal;
+    .icon {
+      margin-left: 10px;
+    }
+  }
+  .navbar-text {
+    &.navbar-right:last-child {
+    margin-right: 20px;
+    }
+  }
+}

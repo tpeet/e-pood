@@ -60,7 +60,6 @@ $(document).ready(function() {
     });
   });
 
-  $('.flashText').bigText();
 
   // DETAIL POPOVER
   $('[data-toggle="popover"]').popover();
@@ -74,7 +73,7 @@ $(document).ready(function() {
 
 });
 
-
+  $('.flashText').bigtext();
 
 
 

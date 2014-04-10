@@ -46,14 +46,10 @@ TSR - PRODUCT AND SERVICE LISTING
 
 		    if(bw >= 600){
 			
-				// Service 
-		      	$('.tsr-service-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-service-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-service-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 				// Product 
 		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-product-colors', this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.tsr-product-colors' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
@@ -61,10 +57,6 @@ TSR - PRODUCT AND SERVICE LISTING
 
 		    } else {
 
-		    	// Service 
-	      		$('.tsr-service-desc' , this).css('height', 'auto');
-		      	$('.tsr-service-price' , this).css('height', 'auto');
-		      	$('.tsr-service-header', this).css('height', 'auto');
  
 				// Product 
 		      	$('.tsr-product-header', this).css('height', 'auto');
