@@ -98,6 +98,24 @@
 .ee-upper-distance {
   margin-top: 10px;
 }
+.ee-hidden-xs {
+  display: none !important;
+    @include media-min($screen-sm) {
+    display: inline-block  !important;
+  } 
+}
+
+.dropdown-menu.inverse-dropdown{
+  background-color: $brand-primary;
+  border-color: none;
+  & > li > a{
+    color: #fff;
+    &:hover{
+      color: #fff;
+      background-color: $link-hover-color;
+    }
+  }
+}
 
 // WORK IN PROGRESS PARTS
 //**********************************
@@ -117,7 +135,7 @@
 
 .js-empty {
   display: block;
-  
+
 }
 .container {
   max-width: 1440px;
