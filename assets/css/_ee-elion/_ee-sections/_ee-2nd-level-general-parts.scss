@@ -4,12 +4,33 @@
   margin-bottom: 5px;
   margin-top: 10px;
   }
+  .navbar-right {
+    float: right;
+    text-align: right;
+    margin-right: 10px;
+    width: 65%;
+    min-width: 375px;
+    @include media-min($screen-sm) {
+    margin-right: 0;
+    width: auto;
+    }
+  }
+  .navbar-left {
+    width: 30%;
+    @include media-min($screen-sm) {
+    width: auto;
+      }
+  }
   ul {
     margin-bottom: 0;
+    display: inline-block;
   }
-  .list-inline > li {
-    padding-right: 0;
-    vertical-align: middle;
+  .list-inline {
+    > li {
+      padding-right: 0;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
   }
   span {
     display: inline-block;
@@ -50,7 +71,8 @@
 
 .ee-comparebar,
 .ee-filterbar {
-  ul, .navbar-text {
+  ul, 
+  .navbar-text {
     padding-left: 10px;
     @include media-min($screen-sm) {
      padding-left: 0;

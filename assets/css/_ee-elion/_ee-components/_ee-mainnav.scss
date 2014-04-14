@@ -68,7 +68,9 @@
 // .navbar .nav {
 //   margin-bottom: -1px;
 // }
-
+.topnav.navbar {
+  margin-bottom: 0;
+}
 .topnav .dropdown-menu li {
   a {
   padding: 6px 20px;
@@ -82,7 +84,7 @@
 .ee-adminnav {
   .navbar-nav > li > a:after,
   .navbar-text:after {
-  background: none;
+  background: $gray;
   content: "";
   display: block;
   height: 20px;

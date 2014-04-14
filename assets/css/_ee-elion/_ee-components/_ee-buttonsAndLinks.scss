@@ -36,6 +36,7 @@
   width: 100%;
   font-weight: 500;
   padding: 12px inherit;
+  vertical-align: bottom;
   .icon {
     vertical-align: middle; 
     font-size: 120%;
@@ -54,6 +55,7 @@ margin: 0 10px;
 width: 90%;
 padding: 8px 0;
 text-align: left;
+
 &:hover {
   background: $lightgrey-c;
   border-bottom: 4px solid $lightgrey-c;

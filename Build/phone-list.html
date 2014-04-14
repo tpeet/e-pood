@@ -117,53 +117,6 @@
 
 
 
-<nav class="ee-adminnav navbar hidden hidden-xs" role="navigation">
-  <div class="container">
-    <ul class="nav navbar-nav navbar-right">
-      
-      <li class="dropdown menu-large">
-          <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"><span class="icon ts-icon-arrow-right"></span>Logi sisse administraatorina</a>
-          <ul class="dropdown-menu megamenu row" role="menu">
-            <li>
-              <div class="container collapsibleMainMenu-AdminLogin">
-                <form class="tsr form-horizontal" role="form">
-                  <div class="form-group row">
-                    <div class="col-sm-4 col-xs-12">
-                      <input type="text" class="form-control" placeholder="Kasutajanimi">
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                      <input type="text" class="form-control" placeholder="Parool">
-                    </div>
-                    <input class="col-sm-4 col-xs-12 btn btn-default" type="button" value="Sisene" />
-                  </div>
-                </form>
-              </div> 
-              <div class="container reset-padding">
-                <ul class="row hidden-xs list-unstyled">
-                  <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon ts-icon-arrow-up"></span></div></li>
-                </ul>
-              </div>
-
-            </li>
-          </ul>
-        </li>
-    </ul> 
-  </div>
-</nav>
-<nav class="ee-adminnav navbar " role="navigation">
-  <div class="container hidden-xs">
-      <p class="navbar-text">Elioni töötaja: <strong>Ahto Pärn</strong></p>
-      <p class="navbar-text">Osakond: <strong>Mingi Tähtis Osakond</strong></p>
-      <p class="navbar-text">Töötaja kood: <strong>780605</strong></p>
-    
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Minu pakkumised </a></li>
-      <li><a href="#">Admin </a></li>
-      <li><a href="#">Välju keskkonnast </a></li>
-    </ul> 
-  </div>
-</nav>
-
 <nav class="navbar navbar-default">
   <div class="container">
 
@@ -484,6 +437,7 @@
       <li><figure></figure></li>
       <li><figure></figure></li>
       <li><figure></figure></li>
+      <li><figure></figure></li>
     </ul>
   </div>
 </div>
@@ -526,14 +480,14 @@
 <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
   {{#phones}}
-  <div class="col-sm-12">
+
     <div class="tsr-module-product">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
       <a href="#" class="ee-product-box-favorite"></a>
       <figure class="tsr-product-image">
-      <a href="detail.html"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
+      <a href="detail.html"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
       <ul class="tsr-product-colors">
         {{#if colors}}
         {{#each colors}}
@@ -543,13 +497,29 @@
       </ul>
       </figure>
 
-      <div class="tsr-product-content">
+      <div class="hidden-sm">
         <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
-
-        <div class="row ee-linkicons">
+        <div class="ee-linkicons">
           <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
           <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a href="#" class="ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
+          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
+      </div>
+
+
+
+      <div class="tsr-product-content">
+        <h6 class="tsr-product-header hidden-xs"><a href="">{{name}}</a></h6>
+
+        <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul Kehtib koju tellides ning üksnes </a></div>
+
+        </div>
+        <div id="transport-{{id}}" data-parent="#parent-{{id}}" class="collapse">
+          <h2>{{name}}</h2>
+          <p> E-poest tellides saad kauba kätte Homme, 14.04.2014 Kehtib koju tellides ning üksnes Tallinna piires. Laoseis viimati uuendatud: 13.04.2014 18:13:10  NB! Poodide laoseis võib olla praeguseks muutunud. Telli kaup e-poest!</p>
         </div>
 
         <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
@@ -581,25 +551,22 @@
             <div class="col-sm-4 col-sm-offset-4 " ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
           </div>
 
-        <div class="row">
+        <p>
           {{#if campaign}}
             <hr>
             {{#each campaign}} 
               <a href="#">{{this}} </a>
             {{/each}}
           {{/if}}
-        </div>
+        </p>
 
 
       </div>
     </div>
-  </div>
+
 
   {{/phones}}
 </script>
-
-
-
 
 
 

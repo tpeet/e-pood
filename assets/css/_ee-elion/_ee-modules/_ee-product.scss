@@ -155,10 +155,7 @@ section.tsr-section-productAndService-listing {
   }
   &:hover {
     .multiply {
-      opacity: 1;
-      @include media-min($screen-sm) {
-        opacity: 0;
-      }
+      opacity: 0;
     }
   }
   // stripe under slow hover effect
@@ -179,7 +176,7 @@ section.tsr-section-productAndService-listing {
   .tsr-product-image {
     position: relative;
     height: auto;
-    width: 75px;
+    width: 110px;
     max-width: 25%;
     display: inline-block;
     float: none;

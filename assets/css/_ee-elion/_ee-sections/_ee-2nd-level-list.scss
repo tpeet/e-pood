@@ -1,20 +1,6 @@
 section.tsr-section-productlist  {
-  @include media-min($screen-sm) {
-  padding-left: 10px;
-  padding-right: 10px;
-  background: $lightgrey-c;
-  border-top: 1px solid $lightgrey-t;
-  border-bottom: 1px solid $lightgrey-t;
-  }
-  @include media-min($screen-md) {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: -10px;
-  margin-right: -10px;
-  background: transparent;
-  border-top: none;
-  border-bottom: none;
-  }
+  margin-top: -1px;
+
   .tsr-module-product {
     text-align: left;
     padding: em(15) em(5) em(20) em(5);
@@ -56,8 +42,11 @@ section.tsr-section-productlist  {
       padding-top: 20px;
     }
     .tsr-product-content {
+      width: 100%;
+      padding: 0 2%;
+      @include media-min($screen-sm) {
       max-width: 73%;
-      padding-left: 2%;
+      }
     }
     .tsr-product-header {
       font-size: 110%;
@@ -65,17 +54,39 @@ section.tsr-section-productlist  {
       font-size: 150%;
       } 
     }
-    .row.ee-linkicons  {
+
+    .hidden-sm {
+      vertical-align: top;
+      display: inline-block !important;
+      @include media-min($screen-sm) {
+      display: none !important;
+      }
+      & [class*="col-"] {
+      padding-left: 0;
+      }
+    }
+    .ee-linkicons  {
       font-size: 90%;
       margin: em(20) 0 em(25);
-      &[class*="col-"] {
-      padding-top: 20px;
+      @include media-min($screen-sm) {
+      margin: em(20) 0 em(15);
+
+      }
+      & [class*="col-"] {
+      padding-left: 0;
+      }
+      .hidden-xs .col-sm-5 a {
+        text-indent: -30px;
+      }
+      .hidden-xs .ee-transport:before {
+        padding-right: 0;
       }
     }
     .row.ee-actions {
       margin: 0 0 em(10);
       & > [class*="col-"] {
       padding-top: 10px;
+      padding-left: 0;
       }
     }
     .ee-pricecol {

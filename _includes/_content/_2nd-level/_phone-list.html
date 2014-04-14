@@ -10,14 +10,14 @@
 <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
   {{#phones}}
-  <div class="col-sm-12">
+
     <div class="tsr-module-product">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
       <a href="#" class="ee-product-box-favorite"></a>
       <figure class="tsr-product-image">
-      <a href="detail.html"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
+      <a href="detail.html"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
       <ul class="tsr-product-colors">
         {{#if colors}}
         {{#each colors}}
@@ -27,13 +27,29 @@
       </ul>
       </figure>
 
-      <div class="tsr-product-content">
+      <div class="hidden-sm">
         <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
-
-        <div class="row ee-linkicons">
+        <div class="ee-linkicons">
           <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
           <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a href="#" class="ee-transport"> Kaup kätte 14 päeva jooksul </a></div>
+          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
+      </div>
+
+
+
+      <div class="tsr-product-content">
+        <h6 class="tsr-product-header hidden-xs"><a href="">{{name}}</a></h6>
+
+        <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul Kehtib koju tellides ning üksnes </a></div>
+
+        </div>
+        <div id="transport-{{id}}" data-parent="#parent-{{id}}" class="collapse">
+          <h2>{{name}}</h2>
+          <p> E-poest tellides saad kauba kätte Homme, 14.04.2014 Kehtib koju tellides ning üksnes Tallinna piires. Laoseis viimati uuendatud: 13.04.2014 18:13:10  NB! Poodide laoseis võib olla praeguseks muutunud. Telli kaup e-poest!</p>
         </div>
 
         <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
@@ -65,25 +81,22 @@
             <div class="col-sm-4 col-sm-offset-4 " ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
           </div>
 
-        <div class="row">
+        <p>
           {{#if campaign}}
             <hr>
             {{#each campaign}} 
               <a href="#">{{this}} </a>
             {{/each}}
           {{/if}}
-        </div>
+        </p>
 
 
       </div>
     </div>
-  </div>
+
 
   {{/phones}}
 </script>
-
-
-
 
 
 
