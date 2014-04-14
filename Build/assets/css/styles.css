@@ -7462,6 +7462,57 @@ a.list-group-item-danger {
   padding-left: 0;
   list-style: none; }
 
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em; }
+  .label[href]:hover, .label[href]:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer; }
+  .label:empty {
+    display: none; }
+  .btn .label {
+    position: relative;
+    top: -1px; }
+
+.label-default {
+  background-color: #999999; }
+  .label-default[href]:hover, .label-default[href]:focus {
+    background-color: gray; }
+
+.label-primary {
+  background-color: #652d86; }
+  .label-primary[href]:hover, .label-primary[href]:focus {
+    background-color: #482060; }
+
+.label-success {
+  background-color: #00b48c; }
+  .label-success[href]:hover, .label-success[href]:focus {
+    background-color: #008164; }
+
+.label-info {
+  background-color: #0083be; }
+  .label-info[href]:hover, .label-info[href]:focus {
+    background-color: #00608b; }
+
+.label-warning {
+  background-color: #ff6319; }
+  .label-warning[href]:hover, .label-warning[href]:focus {
+    background-color: #e54a00; }
+
+.label-danger {
+  background-color: #ff6319; }
+  .label-danger[href]:hover, .label-danger[href]:focus {
+    background-color: #e54a00; }
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -12133,7 +12184,7 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .megamenu img {
   margin-top: 10px; }
 
-.topnav.navbar {
+.topnav.navbar, .ee-adminnav.navbar {
   margin-bottom: 0; }
 
 .topnav .dropdown-menu li a {

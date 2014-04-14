@@ -2,12 +2,14 @@
   <div class="navbar navbar-inverse" role="filtering">
     <ul class="nav navbar-nav navbar-left">
       <li class="active dropdown">
-        <a href="#" data-toggle="dropdown">Näita filtreid <span class="icon icon-arrow-down"></span></a>
-        <div class="dropdown-menu inverse-dropdown">
+        <a  data-toggle="collapse" data-target="#filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
+      </li>
+
+              <div class="dropdown-menu inverse-dropdown">
+          <!-- @include _filter-content.html -->
           <p>Ta-daa! </p>
           <p>No küll nad tulevad ükspäev ka. Ah millal? Eee... Praegu ei tea veel.</p>
         </div>
-      </li>
 
       <li class="dropdown">
         <a href="#" data-toggle="dropdown">Populaarsemad enne <span class="icon icon-arrow-down"></span></a>
@@ -21,4 +23,8 @@
     </ul>
     <p class="navbar-text navbar-right">Mobiiltelefonid, 32 toodet</p>
   </div>
+</div>
+
+<div id="filter" class="collapse in">
+<!-- @include _filter-content.html -->
 </div>
