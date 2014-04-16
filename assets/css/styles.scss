@@ -90,6 +90,10 @@
 
 // HELPER CLASSES
 //**********************************
+
+body {
+  font-size: 15px;
+}
 .ee-thinline-bottom {
   margin-bottom: -1px;
 }
@@ -122,14 +126,51 @@
   width: 40px;
   margin: 10px auto;
 }
-.smallText {
-  font-size: 8px;
+.ee-flashtext-lg{
+  font-weight: bold;
+}
+.ee-flashtext-sm {
+  font-size: 9px;
+  font-weight: 400;
 }
 
-.foo {
+.ee-flashtext-container {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.ee-flashtext-container, .ee-small {
+  text-align: center;
+  display: table-cell;
   width: 60px;
-  margin: 10px auto;
-  background: red;
+  height: auto;
+  vertical-align: middle;
+}
+
+.ee-big {
+  font-weight: bold;
+ }
+
+ .ee-small {
+font-size: 10px;
+font-weight: 400;
+ }
+
+.ee-flashtext-container, .ee-small {
+text-align: center;
+display: table-cell;
+width: 60px;
+height: auto;
+vertical-align: middle;
+}
+
+.tsr-tactical-flash .ee-flashtext-container {
+display: table-cell;
+width: 55px;
+height: auto;
+vertical-align: middle; 
 }
 
 .js-empty {

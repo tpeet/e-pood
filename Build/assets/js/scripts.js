@@ -9,18 +9,18 @@ $(document).ready(function() {
 
   // FRONTPAGE ADJUSTED SIZE FLASH TEXT
   // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
-  $( '.js-filltext' ).each(function ( i, box ) {
+  // $( '.js-filltext' ).each(function ( i, box ) {
 
-      var width = $( box ).width(),
-          html = '<span style="white-space:nowrap">',
-          line = $( box ).wrapInner( html ).children()[ 0 ],
-          n = 100;
+  //     var width = $( box ).width(),
+  //         html = '<span style="white-space:nowrap">',
+  //         line = $( box ).wrapInner( html ).children()[ 0 ],
+  //         n = 100;
       
-      $( box ).css( 'font-size', '100px' );
+  //     $( box ).css( 'font-size', '100px' );
 
-      $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
-      $( box ).text( $( line ).text() );
-  });
+  //     $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
+  //     $( box ).text( $( line ).text() );
+  // });
 
   // 2nd level 
   // Temporary sidemenu show-off for static presentation only, the rest is pure BS
@@ -74,6 +74,7 @@ $(document).ready(function() {
 });
 
   $('.flashText').bigtext();
+
 
 
 
