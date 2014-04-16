@@ -47,12 +47,12 @@
     line-height: 24px;
     bottom: -12px;
 
-    &.tsr-text-medium {
-      font-size: 0.8em;
-    }
-    &.tsr-text-small {
-      font-size:10px;
-    }
+    // &.tsr-text-medium {
+    //   font-size: 0.8em;
+    // }
+    // &.tsr-text-small {
+    //   font-size:10px;
+    // }
   }
 
     @include media-min($screen-sm-min) {
@@ -64,12 +64,12 @@
         line-height: 34px;
         bottom: -8px;
 
-        &.tsr-text-medium {
-          font-size: 0.8em;
-        }
-        &.tsr-text-small {
-          font-size:13px;
-        }
+        // &.tsr-text-medium {
+        //   font-size: 0.8em;
+        // }
+        // &.tsr-text-small {
+        //   font-size:13px;
+        // }
       }
 
       &:before,

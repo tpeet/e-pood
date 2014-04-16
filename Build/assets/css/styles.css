@@ -1314,13 +1314,8 @@ TACTICAL ELEMENTS
     position: relative;
     left: -29px;
     bottom: -8px;
-    font-size: 18px;
     line-height: 34px;
     font-weight: bold; }
-  .tsr-tactical-ribbon.tsr-text-medium span {
-    font-size: 16px; }
-  .tsr-tactical-ribbon.tsr-text-small span {
-    font-size: 14px; }
   .ie8 .tsr-tactical-ribbon > span {
     bottom: 28px;
     left: -23px;
@@ -11107,10 +11102,6 @@ body {
     height: 24px;
     line-height: 24px;
     bottom: -12px; }
-    .tsr-module-product .tsr-tactical-ribbon > span.tsr-text-medium {
-      font-size: 0.8em; }
-    .tsr-module-product .tsr-tactical-ribbon > span.tsr-text-small {
-      font-size: 10px; }
   @media screen and (min-width: 768px) {
     .tsr-module-product .tsr-tactical-ribbon {
       left: -10px;
@@ -11119,10 +11110,6 @@ body {
         height: 34px;
         line-height: 34px;
         bottom: -8px; }
-        .tsr-module-product .tsr-tactical-ribbon > span.tsr-text-medium {
-          font-size: 0.8em; }
-        .tsr-module-product .tsr-tactical-ribbon > span.tsr-text-small {
-          font-size: 13px; }
       .tsr-module-product .tsr-tactical-ribbon:before, .tsr-module-product .tsr-tactical-ribbon:after {
         content: "";
         display: block;
@@ -12308,7 +12295,7 @@ header .megamenu .search-item-image,
       background-color: #4f2369; }
 
 .flashText {
-  width: 20px;
+  width: 40px;
   margin: 10px auto; }
 
 .smallText {
