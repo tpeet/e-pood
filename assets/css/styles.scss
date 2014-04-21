@@ -132,6 +132,7 @@ body {
 text-align: center;
 display: table-cell;
 width: 60px;
+max-width: 60px;
 height: auto;
 vertical-align: middle;
 
@@ -146,7 +147,11 @@ vertical-align: middle;
   }
 }
 
-
+.flashText-ribbon {
+  width: 60px;
+  max-width: 60px;
+ }
+ 
 .container {
   max-width: 1440px;
 }

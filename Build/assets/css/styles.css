@@ -1302,7 +1302,7 @@ TACTICAL ELEMENTS
     left: 0;
     height: 16px;
     width: 9px; }
-  .tsr-tactical-ribbon > span {
+  .tsr-tactical-ribbon .flashText-ribbon-container {
     height: 34px;
     display: block;
     background: #00b48c;
@@ -12143,22 +12143,26 @@ section.ee-reviewarea {
   -ms-border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #dbdbdb;
-  height: 35px;
-  width: 35px;
+  height: 36px;
+  width: 36px;
   overflow: hidden;
   position: relative; }
+  .ee-comparebar figure img {
+    padding: 2px; }
 .ee-comparebar .close {
   position: absolute;
-  top: -7px;
-  left: 0;
+  color: #642887;
+  font-size: 30px;
+  top: -10px;
+  left: -1px;
   opacity: 0;
   padding: 10px;
-  -webkit-transition: opacity 0.6s ease-in-out;
-  -moz-transition: opacity 0.6s ease-in-out;
-  -o-transition: opacity 0.6s ease-in-out;
-  transition: opacity 0.6s ease-in-out; }
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
   .ee-comparebar .close:hover {
-    opacity: 0.5; }
+    opacity: 1; }
 
 .ee-filterbar .navbar-nav > li > a {
   line-height: 3;
@@ -12358,6 +12362,7 @@ body {
   text-align: center;
   display: table-cell;
   width: 60px;
+  max-width: 60px;
   height: auto;
   vertical-align: middle; }
   .ee-flashtext-container .ee-small {
@@ -12366,6 +12371,10 @@ body {
   .ee-flashtext-container .ee-big {
     font-weight: bold;
     font-size: 20px; }
+
+.flashText-ribbon {
+   width: 60px;
+   max-width: 60px; }
 
 .container {
   max-width: 1440px; }
