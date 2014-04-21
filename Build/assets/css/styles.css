@@ -1191,7 +1191,6 @@ TACTICAL ELEMENTS
   position: relative;
   display: table;
   color: #fff;
-  font-size: 24px;
   font-weight: bold;
   line-height: 1;
   text-align: center;
@@ -1878,21 +1877,6 @@ PRODUCT
         position: absolute;
         top: -10px;
         left: -10px; }
-      .tsr-module-product .tsr-tactical-flash {
-        display: table;
-        position: absolute;
-        right: 15%; }
-        .tsr-module-product .tsr-tactical-flash.tsr-first {
-          top: 70px; }
-          .tsr-module-product .tsr-tactical-flash.tsr-first:before {
-            background: #0083be; }
-        .tsr-module-product .tsr-tactical-flash.tsr-second {
-          top: 135px;
-          z-index: 0; }
-          .tsr-module-product .tsr-tactical-flash.tsr-second:before {
-            background: #642887; }
-        .tsr-module-product .tsr-tactical-flash.tsr-tactical-round.tsr-second {
-          top: 140px; }
       .tsr-module-product .tsr-product-image {
         height: auto;
         width: 100%;
@@ -11140,20 +11124,16 @@ body {
     font-size: 18px; }
 
 .tsr-tactical-flash:first-of-type {
-  top: 50px; }
+  top: 50px;
+  z-index: 2; }
 
 .tsr-tactical-flash:nth-of-type(2) {
-  top: 115px; }
+  top: 115px;
+  z-index: 3; }
 
-.tsr-tactical-flash.tsr-first {
-  z-index: 2; }
-  .tsr-tactical-flash.tsr-first:before {
-    background: #0083be; }
-
-.tsr-tactical-flash.tsr-second {
+.tsr-tactical-flash:nth-of-type(3) {
+  top: 165px;
   z-index: 5; }
-  .tsr-tactical-flash.tsr-second:before {
-    background: #642887; }
 
 .tsr-module-product .tsr-tactical-ribbon {
   display: block;
@@ -12374,52 +12354,18 @@ body {
       color: #fff;
       background-color: #4f2369; }
 
-.flashText {
-  width: 40px;
-  margin: 10px auto; }
-
-.ee-flashtext-lg {
-  font-weight: bold; }
-
-.ee-flashtext-sm {
-  font-size: 9px;
-  font-weight: 400; }
-
 .ee-flashtext-container {
-  width: 80px;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 20px; }
-
-.ee-flashtext-container, .ee-small {
   text-align: center;
   display: table-cell;
   width: 60px;
   height: auto;
   vertical-align: middle; }
-
-.ee-big {
-   font-weight: bold; }
-
-.ee-small {
-  font-size: 10px;
-  font-weight: 400; }
-
-.ee-flashtext-container, .ee-small {
-  text-align: center;
-  display: table-cell;
-  width: 60px;
-  height: auto;
-  vertical-align: middle; }
-
-.tsr-tactical-flash .ee-flashtext-container {
-  display: table-cell;
-  width: 55px;
-  height: auto;
-  vertical-align: middle; }
-
-.js-empty {
-  display: block; }
+  .ee-flashtext-container .ee-small {
+    font-size: 12px;
+    font-weight: 400; }
+  .ee-flashtext-container .ee-big {
+    font-weight: bold;
+    font-size: 20px; }
 
 .container {
   max-width: 1440px; }

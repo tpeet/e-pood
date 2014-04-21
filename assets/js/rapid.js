@@ -2,7 +2,6 @@
 /* @include modernizr */
 /* @include enquire.min */
 
-/* @include _jquery-1.9.0.min */
 
 /* TEMPORARY FOR TEMPLATING */
 /* @include handlebars-v1.3.0 */
@@ -12,11 +11,8 @@
 /* @include matchMedia */
 /* @include matchMedia.addListener */
 /* @include srcset.min */
-/* @include common */
-/* @include paintbrush */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
-/* @include bigtext */
 
 // SLIDER STUFF
 /* @include jquery.flexslider */

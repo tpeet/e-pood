@@ -10,24 +10,31 @@
 
   .tsr-tactical-flash:first-of-type {
     top: 50px;
+    z-index: 2;
   }
   .tsr-tactical-flash:nth-of-type(2) {
     top: 115px;
+    z-index: 3;
   }
 
-.tsr-tactical-flash.tsr-first {
-  z-index: 2;
-  &:before {
-  background: $blue-c;
-}
-}
-
-.tsr-tactical-flash.tsr-second {
-  z-index: 5;
-  &:before {
-  background: $purple-c;
+  .tsr-tactical-flash:nth-of-type(3) {
+    top: 165px;
+    z-index: 5;
   }
-}
+
+// .tsr-tactical-flash.tsr-first {
+//   z-index: 2;
+//   &:before {
+//   background: $blue-c;
+// }
+// }
+
+// .tsr-tactical-flash.tsr-second {
+//   z-index: 5;
+//   &:before {
+//   background: $purple-c;
+//   }
+// }
 
 // Ribbon figure moved under parent a for mobile view, just under class="tsr-module-product"
 

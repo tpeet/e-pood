@@ -71,7 +71,7 @@ $(document).ready(function() {
     });
   });
 
-  // SLIDER
+  // SLIDER SCRIPT
   $("#js-priceslider").slider();
 
   // TAG FONT RESIZE
@@ -79,7 +79,7 @@ $(document).ready(function() {
 
    if ($(".flashText-flash-normal").length) {
     $(".flashText-flash-normal").bigtext({
-     maxfontsize: 18,
+     maxfontsize: 22,
      childSelector: '> .ee-big'
     });
    }
