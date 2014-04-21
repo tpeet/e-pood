@@ -43,6 +43,22 @@
     border: 1px solid $lightgrey-t;
     height: 35px;
     width: 35px;
+    overflow: hidden;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: -7px;
+    left: 0;
+    opacity: 0;
+    padding: 10px;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 

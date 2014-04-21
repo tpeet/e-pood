@@ -34,6 +34,9 @@
 /* @include footer */
 /* @include main*/
 
+// 2nd LEVEL
+/* @include bootstrap-slider */
+
 // FRONTPAGE 
 /* @include tsr-communication-primary */
 /* @include tsr-promotion */

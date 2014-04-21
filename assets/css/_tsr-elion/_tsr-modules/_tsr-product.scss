@@ -43,13 +43,13 @@ $module: tsr-module-product;
 
 
 //////// Tactical 
-	.tsr-tactical-ribbon{
-		display:none;
-	}
+	// .tsr-tactical-ribbon{
+	// 	display:none;
+	// }
 
-	.tsr-tactical-flash{
-		display:none;
-	}
+	// .tsr-tactical-flash{
+	// 	display:none;
+	// }
 
 	.tsr-product-header {
 		font-size:22px;
@@ -219,32 +219,32 @@ $module: tsr-module-product;
 			left:-10px;
 		}
 
-		.tsr-tactical-flash{
-			display:table;
-			position:absolute;
-			right:15%;
+		// .tsr-tactical-flash{
+		// 	display:table;
+		// 	position:absolute;
+		// 	right:15%;
 
-			&.tsr-first{
-				top:70px;
-				&:before{
-					background:$blue-c;
-				}
-			}
+		// 	&.tsr-first{
+		// 		top:70px;
+		// 		&:before{
+		// 			background:$blue-c;
+		// 		}
+		// 	}
 
-			&.tsr-second{
-				top:135px;
-				z-index:0;
-				&:before{
-					background:$purple-c;
-				}
-			}
+		// 	&.tsr-second{
+		// 		top:135px;
+		// 		z-index:0;
+		// 		&:before{
+		// 			background:$purple-c;
+		// 		}
+		// 	}
 
-			&.tsr-tactical-round{
-				&.tsr-second{
-					top:140px;
-				}
-			}
-		}
+		// 	&.tsr-tactical-round{
+		// 		&.tsr-second{
+		// 			top:140px;
+		// 		}
+		// 	}
+		// }
 
     	.tsr-product-image{
     		height:auto;

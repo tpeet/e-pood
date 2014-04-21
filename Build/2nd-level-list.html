@@ -434,11 +434,36 @@
     </ul>
     <ul class="list-inline navbar-right">
       <li><span><a href="">Tootevõrdlus</a> (kuni 5):</span></li>
-      <li><figure></figure></li>
-      <li><figure></figure></li>
-      <li><figure></figure></li>
-      <li><figure></figure></li>
-      <li><figure></figure></li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/40/40/" style="background-position: cover;">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/40/40/" style="background-position: cover;">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/40/40/" style="background-position: cover;">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/40/40/" style="background-position: cover;">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/40/40/" style="background-position: cover;">
+          <button type="button" class="close" aria-hidden="true">&times;</button>
+        </figure>
+      </li>
     </ul>
   </div>
 </div>
@@ -449,59 +474,6 @@
       <li class="active dropdown">
         <a  data-toggle="collapse" data-target="#filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
       </li>
-
-              <div class="dropdown-menu inverse-dropdown">
-          <!-- <div class="row">
-  <span >Diagonaal <i class="icon icon-help" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm"></i></span>
-  <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm">Diagonaal <i class="icon icon-help"></i></a>
-  <ul class="nav nav-pills">
-    <li class="active"><a href="#">11,6" <span class="badge">42</span><a href="javascript:$('#your-uniq-ID-121').alert('close');void(0);" class="icon icon-delete close-btn"></a></a></li>
-    <li class="active"><a href="#">12,5"</a></li>
-    <li class="active"><a href="#">13,3"<span class="badge">7</span></a></li>
-  </ul>
-</div>
-<div class="row">
-  <span class="label label-info">New</span>
-  <span>Klaviatuuri asetus</span>
-  <ul class="nav nav-pills">
-    <li class="active" data-toggle="button"><a href="#">ENG<span class="badge">2</span></a></li>
-    <li ><a href="#" data-toggle="button">SWE<span class="badge">2</span></a></li>
-    <li class="active"><a href="#">US<span class="badge">1</span></a></li>
-  </ul>
-</div>
-<div class="row">
-  <span>Foori asetus</span>
-  <ul class="nav nav-pills">
-    <li class="active"><button type="button" class="btn btn-default" >Single toggle</button></li>
-    <li class="active"><button type="button" class="btn btn-default" >Single toggle</button></li>
-    <li><button type="button" class="btn btn-default" data-toggle="button">Single toggle   <span class="badge">1</span></button></li>
-  </ul>
-</div> -->
-
-  <div id="content-placeholder-filter" style="background: red;">Too</div> 
-  <script id="filter-template" type="text/x-handlebars-template">
-
-  {{#parameters}}
-  <ul class="nav nav-pills"> 
-  Foo
-      <li><a href="#">{{caption}}</a>
-          <ul>
-            
-            {{#each param}}
-            <li>
-                <a href="#">{{param.para}}</a>
-            </li>
-            {{/each}}
-            
-          </ul>
-      </li>
-  </ul>
-  {{/parameters}}
-
-  </script>
-          <p>Ta-daa! </p>
-          <p>No küll nad tulevad ükspäev ka. Ah millal? Eee... Praegu ei tea veel.</p>
-        </div>
 
       <li class="dropdown">
         <a href="#" data-toggle="dropdown">Populaarsemad enne <span class="icon icon-arrow-down"></span></a>
@@ -519,7 +491,7 @@
 
 <div id="filter" class="collapse in">
 <!-- <div class="row">
-  <span >Diagonaal <i class="icon icon-help" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm"></i></span>
+  <span >Diagonaal  </span>
   <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm">Diagonaal <i class="icon icon-help"></i></a>
   <ul class="nav nav-pills">
     <li class="active"><a href="#">11,6" <span class="badge">42</span><a href="javascript:$('#your-uniq-ID-121').alert('close');void(0);" class="icon icon-delete close-btn"></a></a></li>
@@ -544,28 +516,28 @@
     <li><button type="button" class="btn btn-default" data-toggle="button">Single toggle   <span class="badge">1</span></button></li>
   </ul>
 </div> -->
+  
 
-  <div id="content-placeholder-filter" style="background: red;">Too</div> 
+  <div class="row" id="content-placeholder-filter"></div> 
+
+  <div class="row">
+  Hinnavahemik: <b>€ 12</b> <input  type="text" id="js-priceslider" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+</div>
+
   <script id="filter-template" type="text/x-handlebars-template">
 
   {{#parameters}}
+  <a>{{caption}} <i class="icon icon-help" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}"></i> </a>
   <ul class="nav nav-pills"> 
-  Foo
-      <li><a href="#">{{caption}}</a>
-          <ul>
-            
-            {{#each param}}
-            <li>
-                <a href="#">{{param.para}}</a>
-            </li>
-            {{/each}}
-            
-          </ul>
+    {{#each param}}
+      <li><button type="button" class="btn btn-primary" >{{para}}</button>
       </li>
+      {{/each}}
   </ul>
   {{/parameters}}
 
   </script>
+
 </div> 
 
     <!-- Product boxes listing, eg Arvutid 2nd level page-->

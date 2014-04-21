@@ -71,9 +71,29 @@ $(document).ready(function() {
     });
   });
 
+  // SLIDER
+  $("#js-priceslider").slider();
+
+  // TAG FONT RESIZE
+  function TagsFontResize() {
+
+   if ($(".flashText-flash-normal").length) {
+    $(".flashText-flash-normal").bigtext({
+     maxfontsize: 18,
+     childSelector: '> .ee-big'
+    });
+   }
+
+   if ($(".flashText-ribbon").length) {
+    $(".flashText-ribbon").bigtext({
+     maxfontsize: 18
+    });
+   }
+  }
+
+
 });
 
-  $('.flashText').bigtext();
 
 
 

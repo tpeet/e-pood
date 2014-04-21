@@ -5450,295 +5450,287 @@ TSR - FORMS
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+﻿//PARANDATUD BUGIDEGA VERSIOON - MITTE UUENDADA 
+
 /*! BigText - v0.1.5 - 2013-08-24
 * https://github.com/zachleat/BigText
 * Copyright (c) 2013 @zachleat; Licensed MIT */
 
-;(function(window, $) {
-  var counter = 0,
-    $headCache = $('head'),
-    oldBigText = window.BigText,
-    oldjQueryMethod = $.fn.bigtext,
-    BigText = {
-      DEBUG_MODE: false,
-      DEFAULT_MIN_FONT_SIZE_PX: null,
-      DEFAULT_MAX_FONT_SIZE_PX: 528,
-      GLOBAL_STYLE_ID: 'bigtext-style',
-      STYLE_ID: 'bigtext-id',
-      LINE_CLASS_PREFIX: 'bigtext-line',
-      EXEMPT_CLASS: 'bigtext-exempt',
-      noConflict: function(restore)
-      {
-        if(restore) {
-          $.fn.bigtext = oldjQueryMethod;
-          window.BigText = oldBigText;
-        }
-        return BigText;
-      },
-      test: {
-        noFractionalFontSize: (function() {
-          if( !( 'getComputedStyle' in window ) || !( 'body' in document ) ) {
-            return true;
-          }
-          var test = $('<div/>').css({
-              position: 'absolute',
-              'font-size': '14.1px'
-            }).appendTo(document.body).get(0),
-            computedStyle = window.getComputedStyle( test, null );
+; (function (window, $) {
+	var counter = 0,
+	  $headCache = $('head'),
+	  oldBigText = window.BigText,
+	  oldjQueryMethod = $.fn.bigtext,
+	  BigText = {
+	  	DEBUG_MODE: false,
+	  	DEFAULT_MIN_FONT_SIZE_PX: null,
+	  	DEFAULT_MAX_FONT_SIZE_PX: 528,
+	  	GLOBAL_STYLE_ID: 'bigtext-style',
+	  	STYLE_ID: 'bigtext-id',
+	  	LINE_CLASS_PREFIX: 'bigtext-line',
+	  	EXEMPT_CLASS: 'bigtext-exempt',
+	  	noConflict: function (restore) {
+	  		if (restore) {
+	  			$.fn.bigtext = oldjQueryMethod;
+	  			window.BigText = oldBigText;
+	  		}
+	  		return BigText;
+	  	},
+	  	test: {
+	  		noFractionalFontSize: (function () {
+	  			if (!('getComputedStyle' in window) || !('body' in document)) {
+	  				return true;
+	  			}
+	  			var test = $('<div/>').css({
+	  				position: 'absolute',
+	  				'font-size': '14.1px'
+	  			}).appendTo(document.body).get(0),
+				  computedStyle = window.getComputedStyle(test, null);
 
-          return computedStyle ? computedStyle.getPropertyValue( 'font-size' ) === '14px' : true;
-        })()
-      },
-      init: function() {
-        if(!$('#'+BigText.GLOBAL_STYLE_ID).length) {
-          $headCache.append(BigText.generateStyleTag(BigText.GLOBAL_STYLE_ID, ['.bigtext * { white-space: nowrap; } .bigtext > * { display: block; }',
-                                          '.bigtext .' + BigText.EXEMPT_CLASS + ', .bigtext .' + BigText.EXEMPT_CLASS + ' * { white-space: normal; }']));
-        }
-      },
-      bindResize: function(eventName, resizeFunction) {
-        if($.throttle) {
-          // https://github.com/cowboy/jquery-throttle-debounce
-          $(window).unbind(eventName).bind(eventName, $.throttle(100, resizeFunction));
-        } else {
-          if($.fn.smartresize) {
-            // https://github.com/lrbabe/jquery-smartresize/
-            eventName = 'smartresize.' + eventName;
-          } 
-          $(window).unbind(eventName).bind(eventName, resizeFunction);
-        }
-      },
-      getStyleId: function(id)
-      {
-        return BigText.STYLE_ID + '-' + id;
-      },
-      generateStyleTag: function(id, css)
-      {
-        return $('<style>' + css.join('\n') + '</style>').attr('id', id);
-      },
-      clearCss: function(id)
-      {
-        var styleId = BigText.getStyleId(id);
-        $('#' + styleId).remove();
-      },
-      generateCss: function(id, linesFontSizes, lineWordSpacings, minFontSizes)
-      {
-        var css = [];
+	  			return computedStyle ? computedStyle.getPropertyValue('font-size') === '14px' : true;
+	  		})()
+	  	},
+	  	init: function () {
+	  		if (!$('#' + BigText.GLOBAL_STYLE_ID).length) {
+	  			$headCache.append(BigText.generateStyleTag(BigText.GLOBAL_STYLE_ID, ['.bigtext * { white-space: nowrap; } .bigtext > * { display: block; }',
+												'.bigtext .' + BigText.EXEMPT_CLASS + ', .bigtext .' + BigText.EXEMPT_CLASS + ' * { white-space: normal; }']));
+	  		}
+	  	},
+	  	bindResize: function (eventName, resizeFunction) {
+	  		if ($.throttle) {
+	  			// https://github.com/cowboy/jquery-throttle-debounce
+	  			$(window).unbind(eventName).bind(eventName, $.throttle(100, resizeFunction));
+	  		} else {
+	  			if ($.fn.smartresize) {
+	  				// https://github.com/lrbabe/jquery-smartresize/
+	  				eventName = 'smartresize.' + eventName;
+	  			}
+	  			$(window).unbind(eventName).bind(eventName, resizeFunction);
+	  		}
+	  	},
+	  	getStyleId: function (id) {
+	  		return BigText.STYLE_ID + '-' + id;
+	  	},
+	  	generateStyleTag: function (id, css) {
+	  		return $('<style>' + css.join('\n') + '</style>').attr('id', id);
+	  	},
+	  	clearCss: function (id) {
+	  		var styleId = BigText.getStyleId(id);
+	  		$('#' + styleId).remove();
+	  	},
+	  	generateCss: function (id, linesFontSizes, lineWordSpacings, minFontSizes) {
+	  		var css = [];
 
-        BigText.clearCss(id);
+	  		BigText.clearCss(id);
 
-        for(var j=0, k=linesFontSizes.length; j<k; j++) {
-          css.push('#' + id + ' .' + BigText.LINE_CLASS_PREFIX + j + ' {' +
-            (minFontSizes[j] ? ' white-space: normal;' : '') +
-            (linesFontSizes[j] ? ' font-size: ' + linesFontSizes[j] + 'px;' : '') +
-            (lineWordSpacings[j] ? ' word-spacing: ' + lineWordSpacings[j] + 'px;' : '') +
-            '}');
-        }
+	  		for (var j = 0, k = linesFontSizes.length; j < k; j++) {
+	  			css.push('#' + id + ' .' + BigText.LINE_CLASS_PREFIX + j + ' {' +
+				  (minFontSizes[j] ? ' white-space: normal;' : '') +
+				  (linesFontSizes[j] ? ' font-size: ' + linesFontSizes[j] + 'px;' : '') +
+				  (lineWordSpacings[j] ? ' word-spacing: ' + lineWordSpacings[j] + 'px;' : '') +
+				  '}');
+	  		}
 
-        return BigText.generateStyleTag(BigText.getStyleId(id), css);
-      },
-      jQueryMethod: function(options)
-      {
-        BigText.init();
-    
-        options = $.extend({
-              minfontsize: BigText.DEFAULT_MIN_FONT_SIZE_PX,
-              maxfontsize: BigText.DEFAULT_MAX_FONT_SIZE_PX,
-              childSelector: '', 
-              resize: true
-            }, options || {});
-      
-        this.each(function()
-        {
-          var $t = $(this).addClass('bigtext'),
-            maxWidth = $t.width(),
-            id = $t.attr('id'),
-            $children = options.childSelector ? $t.find( options.childSelector ) : $t.children();
+	  		return BigText.generateStyleTag(BigText.getStyleId(id), css);
+	  	},
+	  	jQueryMethod: function (options) {
+	  		BigText.init();
 
-          if(!id) {
-            id = 'bigtext-id' + (counter++);
-            $t.attr('id', id);
-          }
-    
-          if(options.resize) {
-            BigText.bindResize('resize.bigtext-event-' + id, function()
-            {
-              // TODO only call this if the width has changed.
-              BigText.jQueryMethod.call($('#' + id), options);
-            });
-          }
-    
-          BigText.clearCss(id);
-    
-          $children.addClass(function(lineNumber, className)
-          {
-            // remove existing line classes.
-            return [className.replace(new RegExp('\\b' + BigText.LINE_CLASS_PREFIX + '\\d+\\b'), ''),
-                BigText.LINE_CLASS_PREFIX + lineNumber].join(' ');
-          });
-    
-          var sizes = calculateSizes($t, $children, maxWidth, options.maxfontsize, options.minfontsize);
-          $headCache.append(BigText.generateCss(id, sizes.fontSizes, sizes.wordSpacings, sizes.minFontSizes));
-        });
+	  		options = $.extend({
+	  			minfontsize: BigText.DEFAULT_MIN_FONT_SIZE_PX,
+	  			maxfontsize: BigText.DEFAULT_MAX_FONT_SIZE_PX,
+	  			childSelector: '',
+	  			resize: true
+	  		}, options || {});
 
-        return this.trigger('bigtext:complete');
-      }
-    };
+	  		this.each(function () {
+	  			var $t = $(this).addClass('bigtext'),
+				  maxWidth = $t.width(),
+				  id = $t.attr('id'),
+				  $children = options.childSelector ? $t.find(options.childSelector) : $t.children();
 
-  function testLineDimensions($line, maxWidth, property, size, interval, units, previousWidth)
-  {
-    var width;
-    previousWidth = typeof previousWidth == 'number' ? previousWidth : 0;
-    $line.css(property, size + units);
+	  			if (!id) {
+	  				id = 'bigtext-id' + (counter++);
+	  				$t.attr('id', id);
+	  			}
 
-    width = $line.width();
+	  			if (options.resize) {
+	  				BigText.bindResize('resize.bigtext-event-' + id, function () {
+	  					// TODO only call this if the width has changed.
+	  					BigText.jQueryMethod.call($('#' + id), options);
+	  				});
+	  			}
 
-    if(width >= maxWidth) {
-// console.log(width, ' previous: ' + previousWidth, property + ' at ' + interval, 'prior: ' + (parseFloat(size) - interval), 'new:' + parseFloat(size));
-      $line.css(property, '');
+	  			BigText.clearCss(id);
 
-      if(width == maxWidth) {
-        return {
-          match: 'exact',
-          size: parseFloat((parseFloat(size) - 0.1).toFixed(3))
-        };
-      }
+	  			$children.addClass(function (lineNumber, className) {
+	  				// remove existing line classes.
+	  				return [className.replace(new RegExp('\\b' + BigText.LINE_CLASS_PREFIX + '\\d+\\b'), ''),
+						BigText.LINE_CLASS_PREFIX + lineNumber].join(' ');
+	  			});
 
-      // Since this is an estimate, we calculate how far over the width we went with the new value.
-      // If this is word-spacing (our last resort guess) and the over is less than the under, we keep the higher value.
-      // Otherwise, we revert to the underestimate.
-      var under = maxWidth - previousWidth,
-        over = width - maxWidth;
+	  			var sizes = calculateSizes($t, $children, maxWidth, options.maxfontsize, options.minfontsize);
+	  			$headCache.append(BigText.generateCss(id, sizes.fontSizes, sizes.wordSpacings, sizes.minFontSizes));
+	  		});
 
-      return {
-        match: 'estimate',
-        size: parseFloat((parseFloat(size) - (property === 'word-spacing' && previousWidth && ( over < under ) ? 0 : interval)).toFixed(3))
-      };
-    }
+	  		return this.trigger('bigtext:complete');
+	  	}
+	  };
 
-    return width;
-  }
+	function testLineDimensions($line, maxWidth, property, size, interval, units, previousWidth) {
+		var width;
+		previousWidth = typeof previousWidth == 'number' ? previousWidth : 0;
+		$line.css(property, size + units);
 
-  function calculateSizes($t, $children, maxWidth, maxFontSize, minFontSize)
-  {
-    var $c = $t.clone(true)
-          .addClass('bigtext-cloned')
-          .css({
-            fontFamily: $t.css('font-family'),
-            textTransform: $t.css('text-transform'),
-            wordSpacing: $t.css('word-spacing'),
-            letterSpacing: $t.css('letter-spacing'),
-            position: 'absolute',
-            left: BigText.DEBUG_MODE ? 0 : -9999,
-            top: BigText.DEBUG_MODE ? 0 : -9999
-          }).appendTo(document.body);
+		width = $line.width();
 
-    // font-size isn't the only thing we can modify, we can also mess with:
-    // word-spacing and letter-spacing. WebKit does not respect subpixel
-    // letter-spacing, word-spacing, or font-size.
-    // TODO try -webkit-transform: scale() as a workaround.
-    var fontSizes = [],
-      wordSpacings = [],
-      minFontSizes = [],
-      ratios = [];
+		if (width >= maxWidth) {
+			// console.log(width, ' previous: ' + previousWidth, property + ' at ' + interval, 'prior: ' + (parseFloat(size) - interval), 'new:' + parseFloat(size));
+			$line.css(property, '');
 
-    $children.css('float', 'left').each(function(lineNumber) {
-      var $line = $(this),
-        // TODO replace 8, 4 with a proportional size to the calculated font-size.
-        intervals = BigText.test.noFractionalFontSize ? [8, 4, 1] : [8, 4, 1, 0.1],
-        lineMax;
+			if (width == maxWidth) {
+				return {
+					match: 'exact',
+					size: parseFloat((parseFloat(size) - 0.1).toFixed(3))
+				};
+			}
 
-      if($line.hasClass(BigText.EXEMPT_CLASS)) {
-        fontSizes.push(null);
-        ratios.push(null);
-        minFontSizes.push(false);
-        return;
-      }
+			// Since this is an estimate, we calculate how far over the width we went with the new value.
+			// If this is word-spacing (our last resort guess) and the over is less than the under, we keep the higher value.
+			// Otherwise, we revert to the underestimate.
+			var under = maxWidth - previousWidth,
+			  over = width - maxWidth;
 
-      // TODO we can cache this ratio?
-      var autoGuessSubtraction = 32, // font size in px
-        currentFontSize = parseFloat($line.css('font-size')),
-        ratio = ( $line.width() / currentFontSize ).toFixed(6);
+			return {
+				match: 'estimate',
+				size: parseFloat((parseFloat(size) - (property === 'word-spacing' && previousWidth && (over < under) ? 0 : interval)).toFixed(3))
+			};
+		}
 
-      newFontSize = parseInt( maxWidth / ratio, 10 ) - autoGuessSubtraction;
+		return width;
+	}
 
-      outer: for(var m=0, n=intervals.length; m<n; m++) {
-        inner: for(var j=1, k=10; j<=k; j++) {
-          if(newFontSize + j*intervals[m] > maxFontSize) {
-            newFontSize = maxFontSize;
-            break outer;
-          }
+	function calculateSizes($t, $children, maxWidth, maxFontSize, minFontSize) {
+		var $c = $t.clone(true)
+			  .addClass('bigtext-cloned')
+			  .css({
+			  	fontFamily: $t.css('font-family'),
+			  	textTransform: $t.css('text-transform'),
+			  	wordSpacing: $t.css('word-spacing'),
+			  	letterSpacing: $t.css('letter-spacing'),
+			  	position: 'absolute',
+			  	left: BigText.DEBUG_MODE ? 0 : -9999,
+			  	top: BigText.DEBUG_MODE ? 0 : -9999
+			  }).appendTo(document.body);
 
-          lineMax = testLineDimensions($line, maxWidth, 'font-size', newFontSize + j*intervals[m], intervals[m], 'px', lineMax);
-          if(typeof lineMax !== 'number') {
-            newFontSize = lineMax.size;
+		// font-size isn't the only thing we can modify, we can also mess with:
+		// word-spacing and letter-spacing. WebKit does not respect subpixel
+		// letter-spacing, word-spacing, or font-size.
+		// TODO try -webkit-transform: scale() as a workaround.
+		var fontSizes = [],
+		  wordSpacings = [],
+		  minFontSizes = [],
+		  ratios = [];
 
-            if(lineMax.match == 'exact') {
-              break outer;
-            }
-            break inner;
-          }
-        }
-      }
+		$children.css('float', 'left').each(function (lineNumber) {
+			var $line = $(this),
+			  // TODO replace 8, 4 with a proportional size to the calculated font-size.
+			  intervals = BigText.test.noFractionalFontSize ? [8, 4, 1] : [8, 4, 1, 0.1],
+			  lineMax;
 
-      ratios.push(maxWidth / newFontSize);
+			if ($line.hasClass(BigText.EXEMPT_CLASS)) {
+				fontSizes.push(null);
+				ratios.push(null);
+				minFontSizes.push(false);
+				return;
+			}
 
-      if(newFontSize > maxFontSize) {
-        fontSizes.push(maxFontSize);
-        minFontSizes.push(false);
-      } else if(!!minFontSize && newFontSize < minFontSize) {
-        fontSizes.push(minFontSize);
-        minFontSizes.push(true);
-      } else {
-        fontSizes.push(newFontSize);
-        minFontSizes.push(false);
-      }
-    }).each(function(lineNumber) {
-      var $line = $(this),
-        wordSpacing = 0,
-        interval = 1,
-        maxWordSpacing;
+			// TODO we can cache this ratio?
+			var autoGuessSubtraction = 32, // font size in px
+			  currentFontSize = parseFloat($line.css('font-size')),
+			  ratio = ($line.width() / currentFontSize).toFixed(6);
 
-      if($line.hasClass(BigText.EXEMPT_CLASS)) {
-        wordSpacings.push(null);
-        return;
-      }
+			newFontSize = parseInt(maxWidth / ratio, 10) - autoGuessSubtraction;
 
-      // must re-use font-size, even though it was removed above.
-      $line.css('font-size', fontSizes[lineNumber] + 'px');
+			outer: for (var m = 0, n = intervals.length; m < n; m++) {
+					inner: for (var j = 1, k = 10; j <= k; j++) {
+						
 
-      for(var m=1, n=3; m<n; m+=interval) {
-        maxWordSpacing = testLineDimensions($line, maxWidth, 'word-spacing', m, interval, 'px', maxWordSpacing);
-        if(typeof maxWordSpacing !== 'number') {
-          wordSpacing = maxWordSpacing.size;
-          break;
-        }
-      }
+						lineMax = testLineDimensions($line, maxWidth, 'font-size', newFontSize + j * intervals[m], intervals[m], 'px', lineMax);
+						if (typeof lineMax !== 'number') {
+							newFontSize = Math.abs(lineMax.size);
 
-      $line.css('font-size', '');
-      wordSpacings.push(wordSpacing);
-    }).removeAttr('style');
+							if (lineMax.match == 'exact') {
+								break outer;
+							}
+							break inner;
+						}
 
-    if( !BigText.DEBUG_MODE ) {
-      $c.remove();
-    } else {
-      $c.css({
-        'background-color': 'rgba(255,255,255,.4)'
-      });
-    }
+						if (newFontSize + j * intervals[m] > maxFontSize) {
+							newFontSize = maxFontSize;
+							break outer;
+						}
+					}
+			}
 
-    return {
-      fontSizes: fontSizes,
-      wordSpacings: wordSpacings,
-      ratios: ratios,
-      minFontSizes: minFontSizes
-    };
-  }
+			ratios.push(maxWidth / newFontSize);
 
-  $.fn.bigtext = BigText.jQueryMethod;
-  window.BigText = BigText;
+			if (newFontSize > maxFontSize) {
+				fontSizes.push(maxFontSize);
+				minFontSizes.push(false);
+			} else if (!!minFontSize && newFontSize < minFontSize) {
+				fontSizes.push(minFontSize);
+				minFontSizes.push(true);
+			} else {
+				fontSizes.push(newFontSize);
+				minFontSizes.push(false);
+			}
+		}).each(function (lineNumber) {
+			var $line = $(this),
+			  wordSpacing = 0,
+			  interval = 1,
+			  maxWordSpacing;
+
+			if ($line.hasClass(BigText.EXEMPT_CLASS)) {
+				wordSpacings.push(null);
+				return;
+			}
+
+			// must re-use font-size, even though it was removed above.
+			$line.css('font-size', fontSizes[lineNumber] + 'px');
+
+			for (var m = 1, n = 3; m < n; m += interval) {
+				maxWordSpacing = testLineDimensions($line, maxWidth, 'word-spacing', m, interval, 'px', maxWordSpacing);
+				if (typeof maxWordSpacing !== 'number') {
+					wordSpacing = maxWordSpacing.size;
+					break;
+				}
+			}
+
+			$line.css('font-size', '');
+			wordSpacings.push(wordSpacing);
+		}).removeAttr('style');
+
+		if (!BigText.DEBUG_MODE) {
+			$c.remove();
+		} else {
+			$c.css({
+				'background-color': 'rgba(255,255,255,.4)'
+			});
+		}
+
+		return {
+			fontSizes: fontSizes,
+			wordSpacings: wordSpacings,
+			ratios: ratios,
+			minFontSizes: minFontSizes
+		};
+	}
+
+	$.fn.bigtext = BigText.jQueryMethod;
+	window.BigText = BigText;
 
 })(this, jQuery);
-
 
 // SLIDER STUFF
 /*
@@ -7646,6 +7638,732 @@ TSR - CAROUSEL LISTING
 }());
 /* @include main*/
 
+// 2nd LEVEL
+/* =========================================================
+ * bootstrap-slider.js v3.0.0
+ * http://www.eyecon.ro/bootstrap-slider
+ * =========================================================
+ * Copyright 2012 Stefan Petre
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ========================================================= */
+ 
+(function( $ ) {
+
+	var ErrorMsgs = {
+		formatInvalidInputErrorMsg : function(input) {
+			return "Invalid input value '" + input + "' passed in";
+		},
+		callingContextNotSliderInstance : "Calling context element does not have instance of Slider bound to it. Check your code to make sure the JQuery object returned from the call to the slider() initializer is calling the method"
+	};
+
+	var Slider = function(element, options) {
+		var el = this.element = $(element).hide();
+		var origWidth =  $(element)[0].style.width;
+
+		var updateSlider = false;
+		var parent = this.element.parent();
+
+
+		if (parent.hasClass('slider') === true) {
+			updateSlider = true;
+			this.picker = parent;
+		} else {
+			this.picker = $('<div class="slider">'+
+								'<div class="slider-track">'+
+									'<div class="slider-selection"></div>'+
+									'<div class="slider-handle"></div>'+
+									'<div class="slider-handle"></div>'+
+								'</div>'+
+								'<div id="tooltip" class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'+
+								'<div id="tooltip_min" class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'+
+								'<div id="tooltip_max" class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'+
+							'</div>')
+								.insertBefore(this.element)
+								.append(this.element);
+		}
+
+		this.id = this.element.data('slider-id')||options.id;
+		if (this.id) {
+			this.picker[0].id = this.id;
+		}
+
+		if (typeof Modernizr !== 'undefined' && Modernizr.touch) {
+			this.touchCapable = true;
+		}
+
+		var tooltip = this.element.data('slider-tooltip')||options.tooltip;
+
+		this.tooltip = this.picker.find('#tooltip');
+		this.tooltipInner = this.tooltip.find('div.tooltip-inner');
+
+		this.tooltip_min = this.picker.find('#tooltip_min');
+		this.tooltipInner_min = this.tooltip_min.find('div.tooltip-inner');
+
+		this.tooltip_max = this.picker.find('#tooltip_max');
+		this.tooltipInner_max= this.tooltip_max.find('div.tooltip-inner');
+
+		if (updateSlider === true) {
+			// Reset classes
+			this.picker.removeClass('slider-horizontal');
+			this.picker.removeClass('slider-vertical');
+			this.tooltip.removeClass('hide');
+			this.tooltip_min.removeClass('hide');
+			this.tooltip_max.removeClass('hide');
+
+		}
+
+		this.orientation = this.element.data('slider-orientation')||options.orientation;
+		switch(this.orientation) {
+			case 'vertical':
+				this.picker.addClass('slider-vertical');
+				this.stylePos = 'top';
+				this.mousePos = 'pageY';
+				this.sizePos = 'offsetHeight';
+				this.tooltip.addClass('right')[0].style.left = '100%';
+				this.tooltip_min.addClass('right')[0].style.left = '100%';
+				this.tooltip_max.addClass('right')[0].style.left = '100%';
+				break;
+			default:
+				this.picker
+					.addClass('slider-horizontal')
+					.css('width', origWidth);
+				this.orientation = 'horizontal';
+				this.stylePos = 'left';
+				this.mousePos = 'pageX';
+				this.sizePos = 'offsetWidth';
+				this.tooltip.addClass('top')[0].style.top = -this.tooltip.outerHeight() - 14 + 'px';
+				this.tooltip_min.addClass('top')[0].style.top = -this.tooltip_min.outerHeight() - 14 + 'px';
+				this.tooltip_max.addClass('top')[0].style.top = -this.tooltip_max.outerHeight() - 14 + 'px';
+				break;
+		}
+
+		var self = this;
+		$.each(['min', 'max', 'step', 'value'], function(i, attr) {
+			if (typeof el.data('slider-' + attr) !== 'undefined') {
+				self[attr] = el.data('slider-' + attr);
+			} else if (typeof options[attr] !== 'undefined') {
+				self[attr] = options[attr];
+			} else if (typeof el.prop(attr) !== 'undefined') {
+				self[attr] = el.prop(attr);
+			} else {
+				self[attr] = 0; // to prevent empty string issues in calculations in IE
+			}
+		});
+
+		if (this.value instanceof Array) {
+			if (updateSlider && !this.range) {
+				this.value = this.value[0];
+			} else {
+				this.range = true;
+			}
+		} else if (this.range) {
+			// User wants a range, but value is not an array
+			this.value = [this.value, this.max];
+		}
+
+		this.selection = this.element.data('slider-selection')||options.selection;
+		this.selectionEl = this.picker.find('.slider-selection');
+		if (this.selection === 'none') {
+			this.selectionEl.addClass('hide');
+		}
+
+		this.selectionElStyle = this.selectionEl[0].style;
+
+		this.handle1 = this.picker.find('.slider-handle:first');
+		this.handle1Stype = this.handle1[0].style;
+
+		this.handle2 = this.picker.find('.slider-handle:last');
+		this.handle2Stype = this.handle2[0].style;
+
+		if (updateSlider === true) {
+			// Reset classes
+			this.handle1.removeClass('round triangle');
+			this.handle2.removeClass('round triangle hide');
+		}
+
+		var handle = this.element.data('slider-handle')||options.handle;
+		switch(handle) {
+			case 'round':
+				this.handle1.addClass('round');
+				this.handle2.addClass('round');
+				break;
+			case 'triangle':
+				this.handle1.addClass('triangle');
+				this.handle2.addClass('triangle');
+				break;
+		}
+
+		if (this.range) {
+			this.value[0] = Math.max(this.min, Math.min(this.max, this.value[0]));
+			this.value[1] = Math.max(this.min, Math.min(this.max, this.value[1]));
+		} else {
+			this.value = [ Math.max(this.min, Math.min(this.max, this.value))];
+			this.handle2.addClass('hide');
+			if (this.selection === 'after') {
+				this.value[1] = this.max;
+			} else {
+				this.value[1] = this.min;
+			}
+		}
+		this.diff = this.max - this.min;
+		this.percentage = [
+			(this.value[0]-this.min)*100/this.diff,
+			(this.value[1]-this.min)*100/this.diff,
+			this.step*100/this.diff
+		];
+
+		this.offset = this.picker.offset();
+		this.size = this.picker[0][this.sizePos];
+
+		this.formater = options.formater;
+		this.tooltip_separator = options.tooltip_separator;
+		this.tooltip_split = options.tooltip_split;
+
+		this.reversed = this.element.data('slider-reversed')||options.reversed;
+
+		this.layout();
+        this.layout();
+
+		this.handle1.on({
+			keydown: $.proxy(this.keydown, this, 0)
+		});
+
+		this.handle2.on({
+			keydown: $.proxy(this.keydown, this, 1)
+		});
+
+		if (this.touchCapable) {
+			// Touch: Bind touch events:
+			this.picker.on({
+				touchstart: $.proxy(this.mousedown, this)
+			});
+		} else {
+			this.picker.on({
+				mousedown: $.proxy(this.mousedown, this)
+			});
+		}
+
+		if(tooltip === 'hide') {
+			this.tooltip.addClass('hide');
+			this.tooltip_min.addClass('hide');
+			this.tooltip_max.addClass('hide');
+		} else if(tooltip === 'always') {
+			this.showTooltip();
+			this.alwaysShowTooltip = true;
+		} else {
+			this.picker.on({
+				mouseenter: $.proxy(this.showTooltip, this),
+				mouseleave: $.proxy(this.hideTooltip, this)
+			});
+			this.handle1.on({
+				focus: $.proxy(this.showTooltip, this),
+				blur: $.proxy(this.hideTooltip, this)
+			});
+			this.handle2.on({
+				focus: $.proxy(this.showTooltip, this),
+				blur: $.proxy(this.hideTooltip, this)
+			});
+		}
+
+		this.enabled = options.enabled && 
+						(this.element.data('slider-enabled') === undefined || this.element.data('slider-enabled') === true);
+		if(this.enabled) {
+			this.enable();
+		} else {
+			this.disable();
+		}
+	};
+
+	Slider.prototype = {
+		constructor: Slider,
+
+		over: false,
+		inDrag: false,
+		
+		showTooltip: function(){
+            if (this.tooltip_split === false ){
+                this.tooltip.addClass('in');
+            } else {
+                this.tooltip_min.addClass('in');
+                this.tooltip_max.addClass('in');
+            }
+
+			this.over = true;
+		},
+		
+		hideTooltip: function(){
+			if (this.inDrag === false && this.alwaysShowTooltip !== true) {
+				this.tooltip.removeClass('in');
+				this.tooltip_min.removeClass('in');
+				this.tooltip_max.removeClass('in');
+			}
+			this.over = false;
+		},
+
+		layout: function(){
+			var positionPercentages;
+
+			if(this.reversed) {
+				positionPercentages = [ 100 - this.percentage[0], this.percentage[1] ];
+			} else {
+				positionPercentages = [ this.percentage[0], this.percentage[1] ];
+			}
+
+			this.handle1Stype[this.stylePos] = positionPercentages[0]+'%';
+			this.handle2Stype[this.stylePos] = positionPercentages[1]+'%';
+
+			if (this.orientation === 'vertical') {
+				this.selectionElStyle.top = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
+				this.selectionElStyle.height = Math.abs(positionPercentages[0] - positionPercentages[1]) +'%';
+			} else {
+				this.selectionElStyle.left = Math.min(positionPercentages[0], positionPercentages[1]) +'%';
+				this.selectionElStyle.width = Math.abs(positionPercentages[0] - positionPercentages[1]) +'%';
+
+                var offset_min = this.tooltip_min[0].getBoundingClientRect();
+                var offset_max = this.tooltip_max[0].getBoundingClientRect();
+
+                if (offset_min.right > offset_max.left) {
+                    this.tooltip_max.removeClass('top');
+                    this.tooltip_max.addClass('bottom')[0].style.top = 18 + 'px';
+                } else {
+                    this.tooltip_max.removeClass('bottom');
+                    this.tooltip_max.addClass('top')[0].style.top = -30 + 'px';
+                }
+			}
+
+			if (this.range) {
+				this.tooltipInner.text(
+					this.formater(this.value[0]) + this.tooltip_separator + this.formater(this.value[1])
+				);
+				this.tooltip[0].style[this.stylePos] = this.size * (positionPercentages[0] + (positionPercentages[1] - positionPercentages[0])/2)/100 - (this.orientation === 'vertical' ? this.tooltip.outerHeight()/2 : this.tooltip.outerWidth()/2) +'px';
+
+                this.tooltipInner_min.text(
+					this.formater(this.value[0])
+				);
+                this.tooltipInner_max.text(
+					this.formater(this.value[1])
+				);
+
+				this.tooltip_min[0].style[this.stylePos] = this.size * ( (positionPercentages[0])/100) - (this.orientation === 'vertical' ? this.tooltip_min.outerHeight()/2 : this.tooltip_min.outerWidth()/2) +'px';
+				this.tooltip_max[0].style[this.stylePos] = this.size * ( (positionPercentages[1])/100) - (this.orientation === 'vertical' ? this.tooltip_max.outerHeight()/2 : this.tooltip_max.outerWidth()/2) +'px';
+
+			} else {
+				this.tooltipInner.text(
+					this.formater(this.value[0])
+				);
+				this.tooltip[0].style[this.stylePos] = this.size * positionPercentages[0]/100 - (this.orientation === 'vertical' ? this.tooltip.outerHeight()/2 : this.tooltip.outerWidth()/2) +'px';
+			}
+		},
+
+		mousedown: function(ev) {
+			if(!this.isEnabled()) {
+				return false;
+			}
+			// Touch: Get the original event:
+			if (this.touchCapable && ev.type === 'touchstart') {
+				ev = ev.originalEvent;
+			}
+
+			this.triggerFocusOnHandle();
+
+			this.offset = this.picker.offset();
+			this.size = this.picker[0][this.sizePos];
+
+			var percentage = this.getPercentage(ev);
+
+			if (this.range) {
+				var diff1 = Math.abs(this.percentage[0] - percentage);
+				var diff2 = Math.abs(this.percentage[1] - percentage);
+				this.dragged = (diff1 < diff2) ? 0 : 1;
+			} else {
+				this.dragged = 0;
+			}
+
+			this.percentage[this.dragged] = this.reversed ? 100 - percentage : percentage;
+			this.layout();
+
+			if (this.touchCapable) {
+				// Touch: Bind touch events:
+				$(document).on({
+					touchmove: $.proxy(this.mousemove, this),
+					touchend: $.proxy(this.mouseup, this)
+				});
+			} else {
+				$(document).on({
+					mousemove: $.proxy(this.mousemove, this),
+					mouseup: $.proxy(this.mouseup, this)
+				});
+			}
+
+			this.inDrag = true;
+			var val = this.calculateValue();
+			this.setValue(val);
+			this.element.trigger({
+					type: 'slideStart',
+					value: val
+				}).trigger({
+					type: 'slide',
+					value: val
+				});
+			return true;
+		},
+
+		triggerFocusOnHandle: function(handleIdx) {
+			if(handleIdx === 0) {
+				this.handle1.focus();
+			} 
+			if(handleIdx === 1) {
+				this.handle2.focus();
+			}
+		},
+
+		keydown: function(handleIdx, ev) {
+			if(!this.isEnabled()) {
+				return false;
+			}
+
+			var dir;
+			switch (ev.which) {
+				case 37: // left
+				case 40: // down
+					dir = -1;
+					break;
+				case 39: // right
+				case 38: // up
+					dir = 1;
+					break;
+			}
+			if (!dir) {
+				return;
+			}
+
+			var oneStepValuePercentageChange = dir * this.percentage[2];
+			var percentage = this.percentage[handleIdx] + oneStepValuePercentageChange;
+
+			if (percentage > 100) {
+				percentage = 100;
+			} else if (percentage < 0) {
+				percentage = 0;
+			}
+
+			this.dragged = handleIdx;
+			this.adjustPercentageForRangeSliders(percentage);
+			this.percentage[this.dragged] = percentage;
+			this.layout();
+
+			var val = this.calculateValue();
+			this.setValue(val);
+			this.element
+				.trigger({
+					type: 'slide',
+					value: val
+				})
+				.trigger({
+					type: 'slideStop',
+					value: val
+				})
+				.data('value', val)
+				.prop('value', val);
+			return false;
+		},
+
+		mousemove: function(ev) {
+			if(!this.isEnabled()) {
+				return false;
+			}
+			// Touch: Get the original event:
+			if (this.touchCapable && ev.type === 'touchmove') {
+				ev = ev.originalEvent;
+			}
+			
+			var percentage = this.getPercentage(ev);
+			this.adjustPercentageForRangeSliders(percentage);
+			this.percentage[this.dragged] = this.reversed ? 100 - percentage : percentage;
+			this.layout();
+
+			var val = this.calculateValue();
+			this.setValue(val);
+			this.element
+				.trigger({
+					type: 'slide',
+					value: val
+				})
+				.data('value', val)
+				.prop('value', val);
+			return false;
+		},
+
+		adjustPercentageForRangeSliders: function(percentage) {
+			if (this.range) {
+				if (this.dragged === 0 && this.percentage[1] < percentage) {
+					this.percentage[0] = this.percentage[1];
+					this.dragged = 1;
+				} else if (this.dragged === 1 && this.percentage[0] > percentage) {
+					this.percentage[1] = this.percentage[0];
+					this.dragged = 0;
+				}
+			}
+		},
+
+		mouseup: function() {
+			if(!this.isEnabled()) {
+				return false;
+			}
+			if (this.touchCapable) {
+				// Touch: Bind touch events:
+				$(document).off({
+					touchmove: this.mousemove,
+					touchend: this.mouseup
+				});
+			} else {
+				$(document).off({
+					mousemove: this.mousemove,
+					mouseup: this.mouseup
+				});
+			}
+
+			this.inDrag = false;
+			if (this.over === false) {
+				this.hideTooltip();
+			}
+			var val = this.calculateValue();
+			this.layout();
+			this.element
+				.data('value', val)
+				.prop('value', val)
+				.trigger({
+					type: 'slideStop',
+					value: val
+				});
+			return false;
+		},
+
+		calculateValue: function() {
+			var val;
+			if (this.range) {
+				val = [this.min,this.max];
+                if (this.percentage[0] !== 0){
+                    val[0] = (Math.max(this.min, this.min + Math.round((this.diff * this.percentage[0]/100)/this.step)*this.step));
+                }
+                if (this.percentage[1] !== 100){
+                    val[1] = (Math.min(this.max, this.min + Math.round((this.diff * this.percentage[1]/100)/this.step)*this.step));
+                }
+				this.value = val;
+			} else {
+				val = (this.min + Math.round((this.diff * this.percentage[0]/100)/this.step)*this.step);
+				if (val < this.min) {
+					val = this.min;
+				}
+				else if (val > this.max) {
+					val = this.max;
+				}
+				val = parseFloat(val);
+				this.value = [val, this.value[1]];
+			}
+			return val;
+		},
+
+		getPercentage: function(ev) {
+			if (this.touchCapable) {
+				ev = ev.touches[0];
+			}
+			var percentage = (ev[this.mousePos] - this.offset[this.stylePos])*100/this.size;
+			percentage = Math.round(percentage/this.percentage[2])*this.percentage[2];
+			return Math.max(0, Math.min(100, percentage));
+		},
+
+		getValue: function() {
+			if (this.range) {
+				return this.value;
+			}
+			return this.value[0];
+		},
+
+		setValue: function(val) {
+			this.value = this.validateInputValue(val);
+
+			if (this.range) {
+				this.value[0] = Math.max(this.min, Math.min(this.max, this.value[0]));
+				this.value[1] = Math.max(this.min, Math.min(this.max, this.value[1]));
+			} else {
+				this.value = [ Math.max(this.min, Math.min(this.max, this.value))];
+				this.handle2.addClass('hide');
+				if (this.selection === 'after') {
+					this.value[1] = this.max;
+				} else {
+					this.value[1] = this.min;
+				}
+			}
+			this.diff = this.max - this.min;
+			this.percentage = [
+				(this.value[0]-this.min)*100/this.diff,
+				(this.value[1]-this.min)*100/this.diff,
+				this.step*100/this.diff
+			];
+			this.layout();
+
+			this.element
+				.trigger({
+					'type': 'slide',
+					'value': this.value
+				})
+				.data('value', this.value)
+				.prop('value', this.value);
+		},
+
+		validateInputValue : function(val) {
+			if(typeof val === 'number') {
+				return val;
+			} else if(val instanceof Array) {
+				$.each(val, function(i, input) { if (typeof input !== 'number') { throw new Error( ErrorMsgs.formatInvalidInputErrorMsg(input) ); }});
+				return val;
+			} else {
+				throw new Error( ErrorMsgs.formatInvalidInputErrorMsg(val) );
+			}
+		},
+
+		destroy: function(){
+			this.handle1.off();
+			this.handle2.off();
+			this.element.off().show().insertBefore(this.picker);
+			this.picker.off().remove();
+			$(this.element).removeData('slider');
+		},
+
+		disable: function() {
+			this.enabled = false;
+			this.handle1.removeAttr("tabindex");
+			this.handle2.removeAttr("tabindex");
+			this.picker.addClass('slider-disabled');
+			this.element.trigger('slideDisabled');
+		},
+
+		enable: function() {
+			this.enabled = true;
+			this.handle1.attr("tabindex", 0);
+			this.handle2.attr("tabindex", 0);
+			this.picker.removeClass('slider-disabled');
+			this.element.trigger('slideEnabled');
+		},
+
+		toggle: function() {
+			if(this.enabled) {
+				this.disable();
+			} else {
+				this.enable();
+			}
+		},
+
+		isEnabled: function() {
+			return this.enabled;
+		},
+
+		setAttribute: function(attribute, value) {
+			this[attribute] = value;
+		}
+	};
+
+	var publicMethods = {
+		getValue : Slider.prototype.getValue,
+		setValue : Slider.prototype.setValue,
+		setAttribute : Slider.prototype.setAttribute,
+		destroy : Slider.prototype.destroy,
+		disable : Slider.prototype.disable,
+		enable : Slider.prototype.enable,
+		toggle : Slider.prototype.toggle,
+		isEnabled: Slider.prototype.isEnabled
+	};
+
+	$.fn.slider = function (option) {
+		if (typeof option === 'string' && option !== 'refresh') {
+			var args = Array.prototype.slice.call(arguments, 1);
+			return invokePublicMethod.call(this, option, args);
+		} else {
+			return createNewSliderInstance.call(this, option);
+		}
+	};
+
+	function invokePublicMethod(methodName, args) {
+		if(publicMethods[methodName]) {
+			var sliderObject = retrieveSliderObjectFromElement(this);
+			var result = publicMethods[methodName].apply(sliderObject, args);
+
+			if (typeof result === "undefined") {
+				return $(this);
+			} else {
+				return result;
+			}
+		} else {
+			throw new Error("method '" + methodName + "()' does not exist for slider.");
+		}
+	}
+
+	function retrieveSliderObjectFromElement(element) {
+		var sliderObject = $(element).data('slider');
+		if(sliderObject && sliderObject instanceof Slider) {
+			return sliderObject;
+		} else {
+			throw new Error(ErrorMsgs.callingContextNotSliderInstance);
+		}
+	}
+
+	function createNewSliderInstance(opts) {
+		var $this = $(this);
+		$this.each(function() {
+			var $this = $(this),
+				slider = $this.data('slider'),
+				options = typeof opts === 'object' && opts;
+
+			// If slider already exists, use its attributes
+			// as options so slider refreshes properly
+			if (slider && !options) {
+				options = {};
+
+				$.each($.fn.slider.defaults, function(key) {
+					options[key] = slider[key];
+				});
+			}
+
+			$this.data('slider', (new Slider(this, $.extend({}, $.fn.slider.defaults, options))));
+		});
+		return $this;
+	}
+
+	$.fn.slider.defaults = {
+		min: 0,
+		max: 10,
+		step: 1,
+		orientation: 'horizontal',
+		value: 5,
+		range: false,
+		selection: 'before',
+		tooltip: 'show',
+        tooltip_separator: ':',
+        tooltip_split: false,
+		handle: 'round',
+		reversed : false,
+		enabled: true,
+		formater: function(value) {
+			return value;
+		}
+	};
+
+	$.fn.slider.Constructor = Slider;
+
+})( window.jQuery );
+
+
 // FRONTPAGE 
 
 
@@ -9214,9 +9932,29 @@ $(document).ready(function() {
     });
   });
 
+  // SLIDER
+  $("#js-priceslider").slider();
+
+  // TAG FONT RESIZE
+  function TagsFontResize() {
+
+   if ($(".flashText-flash-normal").length) {
+    $(".flashText-flash-normal").bigtext({
+     maxfontsize: 18,
+     childSelector: '> .ee-big'
+    });
+   }
+
+   if ($(".flashText-ribbon").length) {
+    $(".flashText-ribbon").bigtext({
+     maxfontsize: 18
+    });
+   }
+  }
+
+
 });
 
-  $('.flashText').bigtext();
 
 
 

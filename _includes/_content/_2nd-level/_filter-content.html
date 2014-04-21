@@ -1,5 +1,5 @@
 <!-- <div class="row">
-  <span >Diagonaal <i class="icon icon-help" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm"></i></span>
+  <span >Diagonaal  </span>
   <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="Diagonaal" data-content="Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm">Diagonaal <i class="icon icon-help"></i></a>
   <ul class="nav nav-pills">
     <li class="active"><a href="#">11,6" <span class="badge">42</span><a href="javascript:$('#your-uniq-ID-121').alert('close');void(0);" class="icon icon-delete close-btn"></a></a></li>
@@ -24,24 +24,23 @@
     <li><button type="button" class="btn btn-default" data-toggle="button">Single toggle   <span class="badge">1</span></button></li>
   </ul>
 </div> -->
+  
 
-  <div id="content-placeholder-filter" style="background: red;">Too</div> 
+  <div class="row" id="content-placeholder-filter"></div> 
+
+  <div class="row">
+  Hinnavahemik: <b>€ 12</b> <input  type="text" id="js-priceslider" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+</div>
+
   <script id="filter-template" type="text/x-handlebars-template">
 
   {{#parameters}}
+  <a>{{caption}} <i class="icon icon-help" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}"></i> </a>
   <ul class="nav nav-pills"> 
-  Foo
-      <li><a href="#">{{caption}}</a>
-          <ul>
-            
-            {{#each param}}
-            <li>
-                <a href="#">{{param.para}}</a>
-            </li>
-            {{/each}}
-            
-          </ul>
+    {{#each param}}
+      <li><button type="button" class="btn btn-primary" >{{para}}</button>
       </li>
+      {{/each}}
   </ul>
   {{/parameters}}
 
