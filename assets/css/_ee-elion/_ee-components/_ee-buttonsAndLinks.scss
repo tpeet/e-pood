@@ -185,6 +185,10 @@ text-align: left;
     content: "\e6ed";
     color: $purple-h;
   }
+  &.active:before {
+    content: "\e6ed";
+    color: $purple-h;
+  }
 }
 
 .ee-compare {

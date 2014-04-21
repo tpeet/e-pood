@@ -33,6 +33,7 @@
 
 // 2nd LEVEL
 /* @include bootstrap-slider */
+/* @include bootstrap-tabcollapse */
 
 // FRONTPAGE 
 /* @include tsr-communication-primary */

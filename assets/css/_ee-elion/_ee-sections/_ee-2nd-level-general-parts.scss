@@ -100,3 +100,30 @@
     }
   }
 }
+
+.ee-filter-content {
+  margin-bottom: 20px;
+  p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+  }
+  .badge {
+    margin-left: 10px;
+  }
+  .nav-pills > li {
+    margin-top: 5px;
+    margin-left: 5px;
+    a {
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+  .slider {
+    margin: 10px;
+  }
+  .text-right {
+    margin-right: 5px;
+  }
+}

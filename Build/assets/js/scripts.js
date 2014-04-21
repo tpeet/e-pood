@@ -61,6 +61,23 @@ $(document).ready(function() {
   });
 
 
+// COLLAPSE TABS
+// https://github.com/okendoken/bootstrap-tabcollapse
+  $('#TabsResponsive').tabCollapse();
+
+  // FILTER COLOR CHANGE
+  $('#content-placeholder-filter > div > ul > li > a').click(function(e){
+    if ($(this).attr('class') != 'disabled'){
+      $(this).addClass('disabled');
+      $('a').not(this).removeClass('disabled');
+    }
+    else {
+      $(this).removeClass('disabled');
+    }
+    e.preventDefault();
+  });
+
+
   // DETAIL POPOVER
   $('[data-toggle="popover"]').popover();
   $('body').on('click', function (e) {
@@ -72,9 +89,12 @@ $(document).ready(function() {
   });
 
   // SLIDER SCRIPT
-  $("#js-priceslider").slider();
-  $("#ex6").on('slide', function(slideEvt) {
-  $(".js-pricesliderVal").text(slideEvt.value);
+  $("#js-priceslider").slider({
+    tooltip: 'hide'
+  });
+  $("#js-priceslider").on('slide', function(slideEvt) {
+  $(".js-pricesliderValMin").text(slideEvt.value[0]);
+  $(".js-pricesliderValMax").text(slideEvt.value[1]);
 });
 
 

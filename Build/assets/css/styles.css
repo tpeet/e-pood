@@ -1784,6 +1784,8 @@ PRODUCT
   text-align: left;
   color: #333333;
   position: relative; }
+  .tsr-module-product .tsr-tactical-flash {
+    display: none; }
   .tsr-module-product .tsr-product-header {
     font-size: 22px;
     color: #642887;
@@ -11475,6 +11477,9 @@ section.tsr-section-communictaion-primary .tsr-tactical-flash {
 .ee-favorite:hover:before, .tsr-module-product .ee-product-box-favorite:hover:before {
   content: "\e6ed";
   color: #73369e; }
+.ee-favorite.active:before, .tsr-module-product .active.ee-product-box-favorite:before {
+  content: "\e6ed";
+  color: #73369e; }
 
 .ee-compare:before {
   content: "\e6d1"; }
@@ -12302,6 +12307,26 @@ section.ee-reviewarea {
     .ee-filterbar ul,
     .ee-filterbar .navbar-text {
       padding-left: 0; } }
+
+.ee-filter-content {
+  margin-bottom: 20px; }
+  .ee-filter-content p {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-size: 18px; }
+  .ee-filter-content .badge {
+    margin-left: 10px; }
+  .ee-filter-content .nav-pills > li {
+    margin-top: 5px;
+    margin-left: 5px; }
+    .ee-filter-content .nav-pills > li a {
+      font-weight: 500;
+      font-size: 14px; }
+  .ee-filter-content .slider {
+    margin: 10px; }
+  .ee-filter-content .text-right {
+    margin-right: 5px; }
 
 section.ee-productslider-intro {
   margin: 0.64516em auto; }
