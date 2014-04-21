@@ -24,6 +24,7 @@
 /* @include alert */
 /* @include button */
 /* @include dropdown */
+/* @include modal */
 
 // ELION HEADQUARTER
 /* @include header */

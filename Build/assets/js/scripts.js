@@ -73,6 +73,10 @@ $(document).ready(function() {
 
   // SLIDER SCRIPT
   $("#js-priceslider").slider();
+  $("#ex6").on('slide', function(slideEvt) {
+  $(".js-pricesliderVal").text(slideEvt.value);
+});
+
 
   // TAG FONT RESIZE
   function TagsFontResize() {
