@@ -3,6 +3,17 @@
 <!-- Product boxes -->
 <div class="row">
   <section class="tsr-section-productlist">
+    <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+        </ul>
+      </li>
+    </ul>
+
     <div id="content-placeholder-phones-boxes"></div>
   </section>
 </div>
@@ -25,6 +36,23 @@
         {{/each}}
         {{/if}}
       </ul>
+
+    <ul class="nav nav-pills">
+      <li class="dropdown">
+        <a id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+        </ul>
+      </li>
+    </ul>
+
+<button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
+  simple collapsible
+</button>
+
+<div id="demo" class="collapse in">...</div>
       </figure>
 
       <div class="hidden-sm">

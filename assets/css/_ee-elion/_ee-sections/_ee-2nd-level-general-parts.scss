@@ -75,6 +75,9 @@
     .icon {
       margin-left: 10px;
     }
+    .collapse.in {
+      background-color: #fff;
+    }
   }
   .navbar-text {
     line-height: 3;
@@ -126,4 +129,13 @@
   .text-right {
     margin-right: 5px;
   }
+  .nav > li > a:hover, .nav > li > a:focus {
+background-color: $purple-h;
+} 
+  .disabled.disabled:hover,
+  .btn-primary.disabled:hover, 
+  .btn-primary.disabled:focus {
+background-color: $purple-h;
+border-color: $purple-c;
+}
 }

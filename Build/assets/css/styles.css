@@ -1,59 +1,3 @@
-/*  
-
-	DEBUG TOOLS  
-	===========
-	
-	These are just some debug styles to confirm 
-	screen sizes when swooshing around with 
-	resizing the browser for quick testing.
-	
-	Delete this file (and the http call in your pages) 
-	when you're ready to deploy.
-	
-	They compliment this code http://bit.ly/xph4ns
-	
-*/
-/* Media Querie Min-Width */
-body:before {
-  background: #1c2f55;
-  width: 96%;
-  padding: .5em 2%;
-  display: inline-block;
-  clear: both;
-  font-size: 12px;
-  font-size: .75rem;
-  font-family: Arial, sans-serif;
-  font-weight: 600;
-  color: white;
-  position: fixed;
-  z-index: 10;
-  bottom: 0;
-  content: "lte xs-min"; }
-
-@media only screen and (min-width: 480px) {
-  body:before {
-    content: "screen-xs-min";
-    background: #1e5950; } }
-@media only screen and (min-width: 480px) {
-  body:before {
-    content: "xperia landscape, iphone landscape screen-xs and up";
-    background: #1e5950; } }
-@media only screen and (min-width: 768px) {
-  body:before {
-    content: "thinkpad, ipad retina vertical screen-sm and up";
-    background: #ba543e; } }
-@media only screen and (min-width: 992px) {
-  body:before {
-    content: "ipad retina horizontal, screen-md and up";
-    background: #cccccc; } }
-@media only screen and (min-width: 1200px) {
-  body:before {
-    content: "thinkpad horizontal, screen-lg and up";
-    background: #703225; } }
-/* 	
-	The following are some exact breakpoints if you want them, 
-	so you can work out screen size for tablets etc. 
-*/
 /* 
 CORE 
 */
@@ -1302,6 +1246,7 @@ TACTICAL ELEMENTS
     left: 0;
     height: 16px;
     width: 9px; }
+  .tsr-tactical-ribbon > span,
   .tsr-tactical-ribbon .flashText-ribbon-container {
     height: 34px;
     display: block;
@@ -1784,6 +1729,8 @@ PRODUCT
   text-align: left;
   color: #333333;
   position: relative; }
+  .tsr-module-product .tsr-tactical-ribbon {
+    display: none; }
   .tsr-module-product .tsr-tactical-flash {
     display: none; }
   .tsr-module-product .tsr-product-header {
@@ -12285,6 +12232,8 @@ section.ee-reviewarea {
   font-weight: normal; }
   .ee-filterbar .navbar-nav > li > a .icon {
     margin-left: 10px; }
+  .ee-filterbar .navbar-nav > li > a .collapse.in {
+    background-color: #fff; }
 .ee-filterbar .navbar-text {
   line-height: 3;
   margin-bottom: 0;
@@ -12327,6 +12276,13 @@ section.ee-reviewarea {
     margin: 10px; }
   .ee-filter-content .text-right {
     margin-right: 5px; }
+  .ee-filter-content .nav > li > a:hover, .ee-filter-content .nav > li > a:focus {
+    background-color: #73369e; }
+  .ee-filter-content .disabled.disabled:hover,
+  .ee-filter-content .btn-primary.disabled:hover,
+  .ee-filter-content .btn-primary.disabled:focus {
+    background-color: #73369e;
+    border-color: #642887; }
 
 section.ee-productslider-intro {
   margin: 0.64516em auto; }

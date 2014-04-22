@@ -470,8 +470,8 @@
 <div class="row ee-filterbar">
   <div class="navbar navbar-inverse" role="filtering">
     <ul class="nav navbar-nav navbar-left">
-      <li class="active dropdown">
-        <a  data-toggle="collapse" data-target="#filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
+      <li class="active dropdown hidden-xs">
+        <a  data-toggle="collapse" data-target="#js-filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
       </li>
 
       <li class="dropdown">
@@ -486,40 +486,35 @@
     </ul>
     <p class="navbar-text navbar-right">Mobiiltelefonid, 32 toodet</p>
   </div>
-</div>
-
-<div id="filter" class="collapse in">
-<section class="ee-filter-content">
+          <ul id="js-filter" class="collapse">
+          <section class="ee-filter-content">
   <div id="content-placeholder-filter"></div> 
-
-  <div class="row">
-    <p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
-    
-    <input  type="text" id="js-priceslider" value="" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> 
-  </div>
-  <div class="row text-right">
+  
+  <p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
+  
+  <input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
+  <div class="text-right">
     <button type="button" class="btn btn-primary">Veel valikud</button>
     <button type="button" class="btn btn-primary">Tühista valikud</button>
-    <button type="button" class="btn btn-primary">Kinnita</button>
+    <button type="button" class="btn btn-primary">Filtreeri</button>
   </div>
 </section>
 
   <script id="filter-template" type="text/x-handlebars-template">
 
   {{#parameters}}
-  <div class="row">
   <p>{{caption}} <i class="icon icon-help violet-text" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"></i> </p>
   <ul class="nav nav-pills"> 
     {{#each param}}
-      <li><a class="btn btn-primary disabled" role="button" data-toggle="button">{{para}}<span class="badge">{{amount}}</span></a>
+      <li><a class="btn btn-primary disabled" role="button">{{para}}<span class="badge">{{amount}}</span></a>
       </li>
       {{/each}}
   </ul>
-  </div>
   {{/parameters}}
 
   </script>
 
+        </ul>
 </div> 
 
         <!-- Product boxes listing, eg Arvutid 2nd level page-->
