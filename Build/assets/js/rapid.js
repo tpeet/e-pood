@@ -9145,6 +9145,7 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+
   // Color select. Messy until desicions are made how to present colors
   $(function() {
     var accEl = $('.ee-product-colors li.acc');
@@ -9229,7 +9230,11 @@ $(document).ready(function() {
 });
 
 
-
+function handleClick()
+{
+    this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+}
+document.getElementById('jsFiltersMoreText').onclick=handleClick;
 
 
 

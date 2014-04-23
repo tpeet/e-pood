@@ -613,8 +613,7 @@ $module5: 	tsr-tactical-ribbon-usp;
 				width:9px;
 			}
 			
-			> span,
-			.flashText-ribbon-container {
+			> span {
 				height:34px;
 				display:block;
 				background:$turquoise-c;
@@ -626,7 +625,7 @@ $module5: 	tsr-tactical-ribbon-usp;
 				// font-size:18px;
 				line-height:34px;
 				font-weight:bold;
-			}		
+			}
 
 //////// Text-medium
 

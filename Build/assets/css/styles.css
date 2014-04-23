@@ -1729,10 +1729,6 @@ PRODUCT
   text-align: left;
   color: #333333;
   position: relative; }
-  .tsr-module-product .tsr-tactical-ribbon {
-    display: none; }
-  .tsr-module-product .tsr-tactical-flash {
-    display: none; }
   .tsr-module-product .tsr-product-header {
     font-size: 22px;
     color: #642887;
@@ -11179,8 +11175,19 @@ body {
 .tsr-tactical-flash {
   z-index: 1;
   position: absolute; }
-  .tsr-tactical-flash span {
-    font-size: 18px; }
+  .tsr-tactical-flash .flashText-ribbon-container {
+    height: 34px;
+    display: block;
+    background: #00b48c;
+    -webkit-transform: rotate(-45);
+    -ms-transform: rotate(-45);
+    transform: rotate(-45);
+    width: 114px;
+    position: relative;
+    left: -29px;
+    bottom: -8px;
+    line-height: 34px;
+    font-weight: bold; }
 
 .tsr-tactical-flash:first-of-type {
   top: 50px;
@@ -11269,19 +11276,6 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   @media screen and (min-width: 768px) {
     section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
       top: auto; } }
-section.tsr-section-communictaion-primary .tsr-tactical-flash {
-  display: table;
-  top: 40px;
-  left: 20%; }
-  @media screen and (min-width: 768px) {
-    section.tsr-section-communictaion-primary .tsr-tactical-flash {
-      font-size: 48px;
-      width: 120px;
-      height: 120px; } }
-  @media screen and (min-width: 768px) {
-    section.tsr-section-communictaion-primary .tsr-tactical-flash:before {
-      width: 122px;
-      height: 122px; } }
 
 .tsr-btn.tsr-btn-100 {
   width: 100%; }
@@ -11894,6 +11888,8 @@ section.tsr-section-productlist {
   .ee-innerad img {
     width: 100%;
     height: auto; }
+  .ee-innerad a {
+    display: block; }
 
 .tsr-tactical-textPanel {
   text-align: center;
@@ -12278,11 +12274,12 @@ section.ee-reviewarea {
     margin-right: 5px; }
   .ee-filter-content .nav > li > a:hover, .ee-filter-content .nav > li > a:focus {
     background-color: #73369e; }
-  .ee-filter-content .disabled.disabled:hover,
-  .ee-filter-content .btn-primary.disabled:hover,
-  .ee-filter-content .btn-primary.disabled:focus {
-    background-color: #73369e;
-    border-color: #642887; }
+  .ee-filter-content .inactive {
+    background-color: #A4A5A6;
+    border-color: #979899; }
+    .ee-filter-content .inactive:hover {
+      background-color: #642887;
+      border-color: #4e256b; }
 
 section.ee-productslider-intro {
   margin: 0.64516em auto; }
@@ -12461,7 +12458,7 @@ body {
     font-weight: 400; }
   .ee-flashtext-container .ee-big {
     font-weight: bold;
-    font-size: 20px; }
+    font-size: 8px; }
 
 .flashText-ribbon {
    width: 60px;

@@ -4,8 +4,11 @@
   <p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
   
   <input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
+
+  <div id="jsFiltersMore" class="collapse">Need muud filtrid, mis juurde tulevad, siia. Deemn, Nupu nimi...</div>
+
   <div class="text-right">
-    <button type="button" class="btn btn-primary">Veel valikud</button>
+    <input type="button" id="jsFiltersMoreText" class="btn btn-primary" data-toggle="collapse" data-target="#jsFiltersMore" value="Veel valikud" />
     <button type="button" class="btn btn-primary">Tühista valikud</button>
     <button type="button" class="btn btn-primary">Filtreeri</button>
   </div>
@@ -17,7 +20,7 @@
   <p>{{caption}} <i class="icon icon-help violet-text" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"></i> </p>
   <ul class="nav nav-pills"> 
     {{#each param}}
-      <li><a class="btn btn-primary disabled" role="button">{{para}}<span class="badge">{{amount}}</span></a>
+      <li><a class="btn btn-primary inactive" role="button">{{para}}<span class="badge">{{amount}}</span></a>
       </li>
       {{/each}}
   </ul>

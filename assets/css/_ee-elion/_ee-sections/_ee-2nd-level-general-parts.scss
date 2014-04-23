@@ -130,12 +130,14 @@
     margin-right: 5px;
   }
   .nav > li > a:hover, .nav > li > a:focus {
-background-color: $purple-h;
+  background-color: $purple-h;
 } 
-  .disabled.disabled:hover,
-  .btn-primary.disabled:hover, 
-  .btn-primary.disabled:focus {
-background-color: $purple-h;
-border-color: $purple-c;
-}
+  .inactive {
+    background-color: #A4A5A6;
+    border-color: #979899;
+    &:hover {
+    background-color: $purple-c;
+    border-color: $purple-t;
+    }
+  }
 }

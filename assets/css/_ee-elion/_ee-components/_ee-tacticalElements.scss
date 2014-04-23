@@ -3,8 +3,18 @@
 .tsr-tactical-flash  {
   z-index: 1;
   position: absolute;
-  span {
-    font-size: 18px;
+  .flashText-ribbon-container {
+    height:34px;
+    display:block;
+    background:$turquoise-c;
+    @include rotate(-45);
+    width:114px;
+    position:relative;
+    left: -29px;
+    bottom: -8px;
+    // font-size:18px;
+    line-height:34px;
+    font-weight:bold;
   }
 }
 
