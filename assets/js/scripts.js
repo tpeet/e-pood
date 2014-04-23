@@ -23,19 +23,6 @@ $(document).ready(function() {
   //     $( box ).text( $( line ).text() );
   // });
 
-  // 2nd level 
-  // Temporary sidemenu show-off for static presentation only, the rest is pure BS
-  $('#sidemenu > li > ul > li > a').click(function(e){
-    if ($(this).attr('class') != 'selected'){
-      $(this).addClass('selected');
-      $('a').not(this).removeClass('selected');
-    }
-    else {
-      $(this).removeClass('selected');
-    }
-    e.preventDefault();
-  });
-
 
   // Color select. Messy until desicions are made how to present colors
   $(function() {
@@ -79,16 +66,6 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-
-  // DETAIL POPOVER
-  $('[data-toggle="popover"]').popover();
-  $('body').on('click', function (e) {
-    $('[data-toggle="popover"]').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
-        }
-    });
-  });
 
   // SLIDER SCRIPT
   $("#js-priceslider").slider({

@@ -116,6 +116,20 @@
   }
 }
 
+.loginIframeBody {
+ background-color: #652d86;
+ color: white;
+}
+
+#adminLoginIframe {
+ height: 100%; 
+ width: 87%;
+ border: 0;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+}
+
 // Autocomplete
 .headerSearchResultWrapper {
   position: absolute;

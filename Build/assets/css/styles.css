@@ -1246,8 +1246,7 @@ TACTICAL ELEMENTS
     left: 0;
     height: 16px;
     width: 9px; }
-  .tsr-tactical-ribbon > span,
-  .tsr-tactical-ribbon .flashText-ribbon-container {
+  .tsr-tactical-ribbon > span {
     height: 34px;
     display: block;
     background: #00b48c;
@@ -1733,21 +1732,6 @@ PRODUCT
     font-size: 22px;
     color: #642887;
     margin: 5px 0 16px; }
-  .tsr-module-product ul {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 auto; }
-  .tsr-module-product li {
-    list-style-type: none;
-    display: block;
-    height: 15px;
-    width: 15px;
-    float: left;
-    margin: 0 5px;
-    -webkit-border-radius: 15px;
-    -ms-border-radius: 15px;
-    border-radius: 15px; }
   .tsr-module-product .tsr-product-image {
     display: none; }
     .tsr-module-product .tsr-product-image img {
@@ -4527,7 +4511,7 @@ button.close {
     clear: both;
     font-weight: normal;
     line-height: 1.42857;
-    color: white;
+    color: #333333;
     white-space: nowrap; }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
@@ -11371,7 +11355,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     background: #4e256b;
     color: #fff; }
 
-.ee-list:before, .ee-block:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .tsr-module-product .ee-product-box-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, section.ee-more-info-tabs .nav-justified li a:after, section.ee-more-info-tabs .nav-justified li.active a:after {
+.ee-list:before, .ee-block:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, section.ee-more-info-tabs .nav-justified li a:after, section.ee-more-info-tabs .nav-justified li.active a:after {
   font-family: 'tsr-icons-all';
   font-size: 1.54839em;
   padding-right: 5px;
@@ -11409,16 +11393,16 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
 .ee-minus-round:hover:before {
   color: #73369e; }
 
-.ee-favorite:before, .tsr-module-product .ee-product-box-favorite:before {
+.ee-favorite:before {
   content: "\e6ec";
   -webkit-transition: content 0.3s ease-in-out;
   -moz-transition: content 0.3s ease-in-out;
   -o-transition: content 0.3s ease-in-out;
   transition: content 0.3s ease-in-out; }
-.ee-favorite:hover:before, .tsr-module-product .ee-product-box-favorite:hover:before {
+.ee-favorite:hover:before {
   content: "\e6ed";
   color: #73369e; }
-.ee-favorite.active:before, .tsr-module-product .active.ee-product-box-favorite:before {
+.ee-favorite.active:before {
   content: "\e6ed";
   color: #73369e; }
 
@@ -11458,7 +11442,8 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   .ee-sidenav h6 {
     font-size: 16px;
     line-height: 16px;
-    font-weight: 400; }
+    font-weight: 400;
+    word-wrap: break-word; }
   .ee-sidenav .collapse.in > li:hover h6:after {
     font-family: 'tsr-icons-all';
     content: "\e668";
@@ -11594,16 +11579,17 @@ section.tsr-section-productAndService-listing {
   @media screen and (min-width: 768px) {
     .tsr-module-product {
       padding: 2.25806em 1.93548em 2.25806em 1.93548em; } }
-  .tsr-module-product .ee-product-box-favorite {
+  .tsr-module-product .ee-favorite-dropdown {
     position: absolute;
     right: 0.64516em;
     left: auto;
     top: 0.64516em;
-    z-index: 2;
-    text-decoration: none; }
+    z-index: 2; }
     @media screen and (min-width: 480px) {
-      .tsr-module-product .ee-product-box-favorite {
+      .tsr-module-product .ee-favorite-dropdown {
         right: 0.96774em; } }
+  .tsr-module-product *:focus {
+    outline: none !important; }
   .tsr-module-product .tsr-product-header {
     font-size: 105%;
     margin: 0.64516em 0 0.32258em;
@@ -12352,6 +12338,18 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   color: #fff;
   font-weight: 500;
   margin-bottom: -1px; }
+
+.loginIframeBody {
+  background-color: #652d86;
+  color: white; }
+
+#adminLoginIframe {
+  height: 100%;
+  width: 87%;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
 
 .headerSearchResultWrapper {
   position: absolute;

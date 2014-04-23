@@ -489,22 +489,20 @@
     </ul>
     <p class="navbar-text navbar-right">Mobiiltelefonid, 32 toodet</p>
   </div>
-          <ul id="js-filter" class="collapse">
-          <section class="ee-filter-content">
-  <div id="content-placeholder-filter"></div> 
-  
-  <p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
-  
-  <input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
+  <div id="js-filter" class="collapse ee-filter-content">
+    <div id="content-placeholder-filter"></div> 
 
-  <div id="jsFiltersMore" class="collapse">Need muud filtrid, mis juurde tulevad, siia. Deemn, Nupu nimi...</div>
+<p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
 
-  <div class="text-right">
-    <input type="button" id="jsFiltersMoreText" class="btn btn-primary" data-toggle="collapse" data-target="#jsFiltersMore" value="Veel valikud" />
-    <button type="button" class="btn btn-primary">Tühista valikud</button>
-    <button type="button" class="btn btn-primary">Filtreeri</button>
-  </div>
-</section>
+<input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
+
+<div id="jsFiltersMore" class="collapse">Need muud filtrid, mis juurde tulevad, siia. Deemn, Nupu nimi...</div>
+
+<div class="text-right">
+  <input type="button" id="jsFiltersMoreText" class="btn btn-primary" data-toggle="collapse" data-target="#jsFiltersMore" value="Veel valikud" />
+  <button type="button" class="btn btn-primary">Tühista valikud</button>
+  <button type="button" class="btn btn-primary">Filtreeri</button>
+</div>
 
   <script id="filter-template" type="text/x-handlebars-template">
 
@@ -520,7 +518,7 @@
 
   </script>
 
-        </ul>
+  </div>
 </div> 
 
     <!-- Product boxes listing, eg Arvutid 2nd level page-->
@@ -759,6 +757,31 @@
 <!-- General handlebars -->
     <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
     <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
+
+    <script>
+      // 2nd level 
+      // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+      $('#sidemenu > li > ul > li > a').click(function(e){
+        if ($(this).attr('class') != 'selected'){
+          $(this).addClass('selected');
+          $('a').not(this).removeClass('selected');
+        }
+        else {
+          $(this).removeClass('selected');
+        }
+        e.preventDefault();
+      });
+
+      // DETAIL POPOVER
+      $('[data-toggle="popover"]').popover();
+      $('body').on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+      });
+    </script>
 
 </body>
 </html> 

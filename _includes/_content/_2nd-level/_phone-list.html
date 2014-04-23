@@ -26,7 +26,15 @@
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
-      <a href="#" class="ee-product-box-favorite"></a>
+    <div class="ee-favorite-dropdown open">
+      <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu">
+        <li><a href=""><span class="ee-favorite active"></span>Favs</a></li>
+        <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+        <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+      </ul>
+    </div>
+
       <figure class="tsr-product-image">
       <a href="detail.html"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
       <ul class="tsr-product-colors">

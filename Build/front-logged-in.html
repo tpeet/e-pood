@@ -888,6 +888,31 @@
     <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
     <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
 
+    <script>
+      // 2nd level 
+      // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+      $('#sidemenu > li > ul > li > a').click(function(e){
+        if ($(this).attr('class') != 'selected'){
+          $(this).addClass('selected');
+          $('a').not(this).removeClass('selected');
+        }
+        else {
+          $(this).removeClass('selected');
+        }
+        e.preventDefault();
+      });
+
+      // DETAIL POPOVER
+      $('[data-toggle="popover"]').popover();
+      $('body').on('click', function (e) {
+        $('[data-toggle="popover"]').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+      });
+    </script>
+
 </body>
 </html>
 <script src="assets/js/handlebars/hbs-frontmenu.hbs"></script>
