@@ -109,6 +109,10 @@ body {
   } 
 }
 
+*:focus {
+outline: none !important;
+}
+
 .dropdown-menu.inverse-dropdown{
   background-color: $brand-primary;
   border-color: none;

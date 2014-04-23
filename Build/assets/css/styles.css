@@ -11433,6 +11433,12 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   content: "\e66d";
   color: #fff; }
 
+.ee-colors:before {
+  content: url(../img/branding/colorMixer.png);
+  top: 13px;
+  position: relative;
+  right: 5px; }
+
 .ee-sidenav {
   padding: 0;
   list-style-type: none;
@@ -11588,8 +11594,6 @@ section.tsr-section-productAndService-listing {
     @media screen and (min-width: 480px) {
       .tsr-module-product .ee-favorite-dropdown {
         right: 0.96774em; } }
-  .tsr-module-product *:focus {
-    outline: none !important; }
   .tsr-module-product .tsr-product-header {
     font-size: 105%;
     margin: 0.64516em 0 0.32258em;
@@ -11636,6 +11640,8 @@ section.tsr-section-productAndService-listing {
         max-width: 220px;
         height: auto;
         padding: 0 1.29032em; } }
+    .tsr-module-product .tsr-product-image .dropdown-menu img {
+      width: auto; }
   .tsr-module-product .tsr-product-price {
     color: #333333;
     font-weight: normal;
@@ -12434,6 +12440,9 @@ body {
   @media screen and (min-width: 768px) {
     .ee-hidden-xs {
       display: inline-block  !important; } }
+
+*:focus {
+  outline: none !important; }
 
 .dropdown-menu.inverse-dropdown {
   background-color: #652d86;

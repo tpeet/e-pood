@@ -130,9 +130,6 @@ section.tsr-section-productAndService-listing {
   }
 
 
-*:focus {
-outline: none !important;
-}
   .tsr-product-header {
     font-size: 105%;
     margin: em(10) 0 em(5);
@@ -187,6 +184,9 @@ outline: none !important;
       height: auto;
       padding: 0 em(20);
     } 
+    .dropdown-menu img {
+    width: auto;
+    }
   }
 
 

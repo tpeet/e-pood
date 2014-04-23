@@ -254,3 +254,12 @@ text-align: left;
   color: #fff;
   }
 }
+
+.ee-colors {
+  &:before {
+    content: url('assets/img/branding/colorMixer.png');
+    top: 13px;
+    position: relative;
+    right: 5px;
+  }
+}
