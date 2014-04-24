@@ -4,52 +4,32 @@
   text-align: left;
   font-size: 16px;
   margin: 0;
-    h6 {
-      font-size: 16px;
-      line-height: 16px;
-      font-weight: 400;
-      word-wrap:break-word;
-    }
-  .collapse.in {
-    & > li:hover h6:after {
+  ul { 
+    padding-left: 0; 
+    list-style-type: none; 
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    word-wrap:break-word;
+  }
+  & > li h6:hover:after {
     font-family: 'tsr-icons-all';
     content: "\e668";
     font-size: em(18);
     float: right;
-    color: #fff;
-   }
+  }
+
+  .ee-sidenav-sub {
     a {
-      margin-left: 30px;
+      padding-left: 30px;
     }
   }
-  & > li:hover h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e668";
-    font-size: em(18);
-    float: right;
-   }
-
-  &>li:hover .collapsible h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e66b";
-    font-size: em(18);
-    float: right;
-   }
-
-  & > li:hover .collapsible.collapsed h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e669";
-    font-size: em(18);
-    float: right;
-   }
-
-  & > li:hover .ee-sidenav-sub li h6:after {
-    content: " ";
-  }
-
-    li  a {
+  li  a {
     display: block;
     text-decoration: none;
+    width: 100%;
     padding: 5px 14px;
     border-bottom: 1px solid $gray;
 
@@ -58,10 +38,6 @@
       background: $brand-primary;
       border-radius: $border-radius-base;
     }
-  }
-  ul { 
-    padding-left: 0; 
-    list-style-type: none; 
   }
 
 // change to whatever is your active state menu element name

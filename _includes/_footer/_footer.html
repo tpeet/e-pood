@@ -115,7 +115,8 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
-      $('#sidemenu > li > ul > li > a').click(function(e){
+    $(document).ready(function(){
+      $('#sidemenu li  a').click(function(e){
         if ($(this).attr('class') != 'selected'){
           $(this).addClass('selected');
           $('a').not(this).removeClass('selected');
@@ -125,6 +126,14 @@
         }
         e.preventDefault();
       });
+
+      function handleClick()
+      {
+          this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+      }
+      document.getElementById('jsFiltersMoreText').onclick=handleClick;
+
+     });
 
       // DETAIL POPOVER
       $('[data-toggle="popover"]').popover();

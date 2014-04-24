@@ -114,8 +114,7 @@ section.tsr-section-productAndService-listing {
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   @include media-min($screen-sm) {
-  // padding: em(35) em(45) em(35) em(45);
-  padding: em(35) em(30) em(35) em(30);
+  padding: em(35) em(20) em(10) em(20);
   } 
 
   .ee-favorite-dropdown {
@@ -215,7 +214,11 @@ section.tsr-section-productAndService-listing {
 }
 
 //Color switch
-
+.tsr-product-colors {
+  position: relative;
+  width: 160px;
+  text-align: left;
+}
 ul.tsr-product-colors {
   margin-top: 0px;
   margin-left: 0px;

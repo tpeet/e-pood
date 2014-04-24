@@ -1737,8 +1737,6 @@ PRODUCT
     .tsr-module-product .tsr-product-image img {
       width: 100%;
       height: auto; }
-  .tsr-module-product .tsr-product-colors {
-    margin-left: -5px; }
   .tsr-module-product .tsr-product-desc {
     margin: 12px 0 0px; }
   .tsr-module-product .tsr-product-price {
@@ -11445,48 +11443,31 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   text-align: left;
   font-size: 16px;
   margin: 0; }
+  .ee-sidenav ul {
+    padding-left: 0;
+    list-style-type: none; }
   .ee-sidenav h6 {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
     word-wrap: break-word; }
-  .ee-sidenav .collapse.in > li:hover h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e668";
-    font-size: 1.16129em;
-    float: right;
-    color: #fff; }
-  .ee-sidenav .collapse.in a {
-    margin-left: 30px; }
-  .ee-sidenav > li:hover h6:after {
+  .ee-sidenav > li h6:hover:after {
     font-family: 'tsr-icons-all';
     content: "\e668";
     font-size: 1.16129em;
     float: right; }
-  .ee-sidenav > li:hover .collapsible h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e66b";
-    font-size: 1.16129em;
-    float: right; }
-  .ee-sidenav > li:hover .collapsible.collapsed h6:after {
-    font-family: 'tsr-icons-all';
-    content: "\e669";
-    font-size: 1.16129em;
-    float: right; }
-  .ee-sidenav > li:hover .ee-sidenav-sub li h6:after {
-    content: " "; }
+  .ee-sidenav .ee-sidenav-sub a {
+    padding-left: 30px; }
   .ee-sidenav li a {
     display: block;
     text-decoration: none;
+    width: 100%;
     padding: 5px 14px;
     border-bottom: 1px solid #dbdbdb; }
     .ee-sidenav li a:hover {
       color: white;
       background: #652d86;
       border-radius: 4px; }
-  .ee-sidenav ul {
-    padding-left: 0;
-    list-style-type: none; }
   .ee-sidenav .selected {
     color: white;
     background: #4f2369;
@@ -11584,7 +11565,7 @@ section.tsr-section-productAndService-listing {
   transition: background 0.3s ease-in-out; }
   @media screen and (min-width: 768px) {
     .tsr-module-product {
-      padding: 2.25806em 1.93548em 2.25806em 1.93548em; } }
+      padding: 2.25806em 1.29032em 0.64516em 1.29032em; } }
   .tsr-module-product .ee-favorite-dropdown {
     position: absolute;
     right: 0.64516em;
@@ -11657,6 +11638,11 @@ section.tsr-section-productAndService-listing {
     color: #0083be; }
   .tsr-module-product .ee-product-price-lg {
     font-size: 150%; }
+
+.tsr-product-colors {
+  position: relative;
+  width: 160px;
+  text-align: left; }
 
 ul.tsr-product-colors {
   margin-top: 0px;

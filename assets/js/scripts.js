@@ -98,12 +98,6 @@ $(document).ready(function() {
 });
 
 
-function handleClick()
-{
-    this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
-}
-document.getElementById('jsFiltersMoreText').onclick=handleClick;
-
 
 
 $('.js-slidetoggle').click(function(e) {

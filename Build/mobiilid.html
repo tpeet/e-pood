@@ -390,6 +390,32 @@
 
       {{#if sub}} 
         <li>
+          <a><h6>{{parent}}</h6></a>
+          <ul class="ee-sidenav-sub" id="{{href}}">
+
+            {{#each sub}}
+            <li ><a href="#"><h6>{{this}}</h6></a></li>
+            {{/each}}
+          </ul>
+        </li>
+        {{else}}
+        <li>
+          <a href="#"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
+
+    {{/sidemenu}}
+  </ul>
+  </script>
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+
+<!-- was: 
+ <ul class="ee-sidenav" id="sidemenu">
+    {{#sidemenu}}
+
+      {{#if sub}} 
+        <li>
           <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
           <ul class="ee-sidenav-sub collapse" id="{{href}}">
 
@@ -405,10 +431,7 @@
         {{/if}}
 
     {{/sidemenu}}
-  </ul>
-  </script>
-
-<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+  </ul> -->
 
 
     </div>
@@ -551,17 +574,6 @@
         <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
         <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
-      
-        {{#if colors}}
-          <ul class="tsr-product-colors">
-          {{#each colors}}
-            <li class="accent {{this}}"></li>
-          {{/each}}
-          </ul>
-          {{else}}
-          <ul class="tsr-product-colors ee-hidden-xs">
-          </ul>
-        {{/if}}
 
         {{#if client_price}}
         <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
@@ -579,9 +591,27 @@
   {{/phones}}
 </script>
 
+<!--         {{#if colors}}
+          <ul class="tsr-product-colors">
+          {{#each colors}}
+            <li class="accent {{this}}"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-product-colors ee-hidden-xs">
+          </ul>
+        {{/if}} -->
 
-
-
+<!--       <div class="tsr-product-colors dropup">
+      {{#if colors}}
+        <button class="ee-colors btn btn-link dropdown-toggle " data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
+        {{/if}}
+      </div> -->
 
 
 
@@ -729,7 +759,8 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
-      $('#sidemenu > li > ul > li > a').click(function(e){
+    $(document).ready(function(){
+      $('#sidemenu li  a').click(function(e){
         if ($(this).attr('class') != 'selected'){
           $(this).addClass('selected');
           $('a').not(this).removeClass('selected');
@@ -739,6 +770,14 @@
         }
         e.preventDefault();
       });
+
+      function handleClick()
+      {
+          this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+      }
+      document.getElementById('jsFiltersMoreText').onclick=handleClick;
+
+     });
 
       // DETAIL POPOVER
       $('[data-toggle="popover"]').popover();

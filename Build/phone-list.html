@@ -390,6 +390,32 @@
 
       {{#if sub}} 
         <li>
+          <a><h6>{{parent}}</h6></a>
+          <ul class="ee-sidenav-sub" id="{{href}}">
+
+            {{#each sub}}
+            <li ><a href="#"><h6>{{this}}</h6></a></li>
+            {{/each}}
+          </ul>
+        </li>
+        {{else}}
+        <li>
+          <a href="#"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
+
+    {{/sidemenu}}
+  </ul>
+  </script>
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+
+<!-- was: 
+ <ul class="ee-sidenav" id="sidemenu">
+    {{#sidemenu}}
+
+      {{#if sub}} 
+        <li>
           <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
           <ul class="ee-sidenav-sub collapse" id="{{href}}">
 
@@ -405,10 +431,7 @@
         {{/if}}
 
     {{/sidemenu}}
-  </ul>
-  </script>
-
-<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+  </ul> -->
 
 
     </div>
@@ -525,16 +548,6 @@
 <!-- Product boxes -->
 <div class="row">
   <section class="tsr-section-productlist">
-    <ul class="nav nav-pills">
-      <li class="dropdown">
-        <a id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
-        <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
-        </ul>
-      </li>
-    </ul>
 
     <div id="content-placeholder-phones-boxes"></div>
   </section>
@@ -551,7 +564,7 @@
       <div class="ee-favorite-dropdown">
         <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span class="ee-favorite active"></span>Favs</a></li>
+          <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
         </ul>
@@ -800,7 +813,8 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
-      $('#sidemenu > li > ul > li > a').click(function(e){
+    $(document).ready(function(){
+      $('#sidemenu li  a').click(function(e){
         if ($(this).attr('class') != 'selected'){
           $(this).addClass('selected');
           $('a').not(this).removeClass('selected');
@@ -810,6 +824,14 @@
         }
         e.preventDefault();
       });
+
+      function handleClick()
+      {
+          this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+      }
+      document.getElementById('jsFiltersMoreText').onclick=handleClick;
+
+     });
 
       // DETAIL POPOVER
       $('[data-toggle="popover"]').popover();

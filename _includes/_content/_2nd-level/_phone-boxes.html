@@ -29,17 +29,6 @@
         <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
         <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
-      
-        {{#if colors}}
-          <ul class="tsr-product-colors">
-          {{#each colors}}
-            <li class="accent {{this}}"></li>
-          {{/each}}
-          </ul>
-          {{else}}
-          <ul class="tsr-product-colors ee-hidden-xs">
-          </ul>
-        {{/if}}
 
         {{#if client_price}}
         <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
@@ -57,9 +46,27 @@
   {{/phones}}
 </script>
 
+<!--         {{#if colors}}
+          <ul class="tsr-product-colors">
+          {{#each colors}}
+            <li class="accent {{this}}"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-product-colors ee-hidden-xs">
+          </ul>
+        {{/if}} -->
 
-
-
+<!--       <div class="tsr-product-colors dropup">
+      {{#if colors}}
+        <button class="ee-colors btn btn-link dropdown-toggle " data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
+        {{/if}}
+      </div> -->
 
 
 
