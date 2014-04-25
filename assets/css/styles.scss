@@ -108,7 +108,13 @@ body {
     display: inline-block  !important;
   } 
 }
-
+.padding-reset {
+  padding: 0;
+    @include media-min($screen-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  } 
+}
 *:focus {
 outline: none !important;
 }

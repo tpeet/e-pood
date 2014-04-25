@@ -555,68 +555,67 @@
   </header>
 </section>
 
-<div class="tabcordion">
-  <section class="ee-more-info-tabs ">
-    <div class="container">
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs nav-justified responsive" id="TabsResponsive">
-        <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
-        <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
-        <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
-        <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted (5)</a></li>
-      </ul>
+<section class="ee-more-info-tabs ">
+  <div class="container padding-reset">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" id="TabsResponsive">
+      <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
+      <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
+      <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
+      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted (5)</a></li>
+    </ul>
+  </div>
+</section>
+<section class="ee-more-info-tabscontent ">
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="general-info">
+      <div class="container ee-upper-distance">
+        <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
+        <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
+        <p><strong>Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.</strong></p>
+        <ul class="ee-justified-list">
+          <li>Elegantne disain</li>
+          <li>Täiustatud omadused nagu näiteks häälkäskluste tuvastamine ja liigutustega juhtimine</li>
+          <li>Smart Hubi sotsiallehekülg tagab alati suhtlusringi keskmes olemise</li>
+          <li>Vaata Facebookis ja Twitteris enda sõprade lemmikvideosid</li>
+          <li>Micro Dimming Ultimate ja Clear Motion Rate tagavad kvaliteetse pildi</li>
+        </ul>
+        <h1><small>Kasulikud lingid</small></h1>
+        <p><a href="#">Loe lähemalt tootja kodulehelt siit</a></p>
+        <p><a href="#">Abiinfo nutiTV Samsungi telerites</a></p>
+      </div>
     </div>
-  </section>
-  <section class="ee-more-info-tabscontent ">
-    <div class="tab-content responsive">
-      <div class="tab-pane fade in active" id="general-info">
-        <div class="container ee-text">
-          <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
-          <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
-          <p><strong>Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.</strong></p>
-          <ul class="ee-justified-list">
-            <li>Elegantne disain</li>
-            <li>Täiustatud omadused nagu näiteks häälkäskluste tuvastamine ja liigutustega juhtimine</li>
-            <li>Smart Hubi sotsiallehekülg tagab alati suhtlusringi keskmes olemise</li>
-            <li>Vaata Facebookis ja Twitteris enda sõprade lemmikvideosid</li>
-            <li>Micro Dimming Ultimate ja Clear Motion Rate tagavad kvaliteetse pildi</li>
-          </ul>
-          <h1><small>Kasulikud lingid</small></h1>
-          <p><a href="#">Loe lähemalt tootja kodulehelt siit</a></p>
-          <p><a href="#">Abiinfo nutiTV Samsungi telerites</a></p>
-        </div>
+    <div class="tab-pane" id="technical-info">
+      <div class="container padding-reset">
+        <div id="content-placeholder-technical-data"></div>
+        <script id="technical-data-template" type="text/x-handlebars-template">
+        {{#technical}}
+          <div class="col-sm-6 padding-reset">
+            <table class="table table-bordered table-hover">
+              <tbody>
+                <thead>
+                  <tr>
+                    <th colspan="2">{{heading}}</th>
+                  </tr>
+                </thead>
+                {{#each data}}
+                  <tr>
+                    <td > <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
+                    </td>
+                    <td>
+                      {{value}}
+                    </td>
+                  </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+        {{/technical}}
+        </script>
       </div>
-      <div class="tab-pane" id="technical-info">
-        <div class="container">
-          <div id="content-placeholder-technical-data"></div>
-          <script id="technical-data-template" type="text/x-handlebars-template">
-          {{#technical}}
-            <div class="col-sm-6">
-              <table class="table table-bordered table-hover">
-                <tbody>
-                  <thead>
-                    <tr>
-                      <th colspan="2">{{heading}}</th>
-                    </tr>
-                  </thead>
-                  {{#each data}}
-                    <tr>
-                      <td > <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-                      </td>
-                      <td>
-                        {{value}}
-                      </td>
-                    </tr>
-                  {{/each}}
-                </tbody>
-              </table>
-            </div>
-          {{/technical}}
-          </script>
-        </div>
-      </div>
-      <div class="tab-pane fade" id="reviews">
-        <section class="ee-review-add">
+    </div>
+    <div class="tab-pane fade" id="reviews">
+      <section class="ee-review-add">
   <div class="container tsr-forms">
     <div class="row">
       <div class="col-xs-7">
@@ -677,7 +676,7 @@
   </div>
 </section>
 
-        <section class="ee-reviewarea">
+      <section class="ee-reviewarea">
   <div id="content-placeholder-reviews-detail"></div>
   <script id="reviews-detail-template" type="text/x-handlebars-template">
   {{#reviews}}
@@ -855,18 +854,14 @@
   {{/reviews}}
   </script>
   </section>
-      </div>
-      <div class="tab-pane fade ee-similar-products" id="similar-products">
-        <div class="container">
-          <!-- Product boxes listing, eg Arvutid 2nd level page-->
-
-<!-- Product boxes -->
+    </div>
+    <div class="tab-pane fade ee-similar-products" id="similar-products">
+      <div class="container">
+        <!-- Product boxes -->
 <div class="row">
-  <div class="col-xs-12">
-    <section class="tsr-section-productAndService-listing ">
-      <div class="product" id="content-placeholder-fittingproducts-detail"></div>
-    </section>
-  </div>
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-fittingproducts-detail"></div>
+  </section>
 </div>
 
 <script id="fittingproducts-detail-template" type="text/x-handlebars-template">
@@ -925,11 +920,10 @@
 
 
 
-        </div>
       </div>
     </div>
-  </section>
-</div> 
+  </div>
+</section> 
 
 <section class="tsr-section-divider">
   <header class="container">

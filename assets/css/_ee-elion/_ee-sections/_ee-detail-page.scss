@@ -109,44 +109,80 @@ section.ee-section-leasing {
 
 section.ee-more-info-tabs {
   background: $lightgrey-c;
-  .nav-justified li {
-    border-bottom: 1px solid $lightgrey-t;
-    @include media-min($screen-sm) {
-      border-bottom: none;
+  // .nav-justified li {
+  //   border-bottom: 1px solid $lightgrey-t;
+  //   @include media-min($screen-sm) {
+  //     border-bottom: none;
+  //   }
+  //   a {
+  //     text-align: left;
+  //     margin-bottom: -1px;
+  //     padding: 15px;
+  //     @include media-min($screen-sm) {
+  //       text-align: center;
+  //       padding: 10px 15px;
+  //       border-bottom: none;
+  //       &:hover {
+  //         border-bottom: 1px solid $lightgrey-t;
+  //       }
+  //     }
+  //     &:after {
+  //       @extend %format-icon;
+  //       content: "\e6de";
+  //       float: right;
+  //       line-height: 0.85;
+  //       @include media-min($screen-sm) {
+  //         content: " ";
+  //       }
+  //     }
+  //     &:hover:after {
+  //       color: $purple-h;
+  //     }
+  //   }
+  //   &.active a:after {
+  //     @extend %format-icon;
+  //     content: "\e6e3";
+  //     float: right;
+  //     line-height: 0.85;
+  //       @include media-min($screen-sm) {
+  //         content: " ";
+  //       }
+  //   }
+  // }
+  .panel-body {
+    padding: 0;
+    table {
+      margin-bottom: 0;
+      margin-top: -1px;
     }
-    a {
-      text-align: left;
-      margin-bottom: -1px;
-      padding: 15px;
-      @include media-min($screen-sm) {
-        text-align: center;
-        padding: 10px 15px;
-        border-bottom: none;
-        &:hover {
-          border-bottom: 1px solid $lightgrey-t;
-        }
+  }
+  .panel-group {
+    margin: 0;
+    .panel-heading {
+      padding: 0;
+    }
+    .panel-title a {
+      padding: 12px 15px;
+      width: 100%;
+      display: block;
+      color: $purple-c;
+      font-size: 16px;
+      &.collapsed:after {
+      @extend %format-icon;
+      content: "\e6de";
+      float: right;
+      line-height: 0.85;
       }
       &:after {
         @extend %format-icon;
-        content: "\e02b";
+        content: "\e6e3";
         float: right;
         line-height: 0.85;
-        @include media-min($screen-sm) {
-          content: " ";
-        }
-      }
-      &:hover:after {
-        color: $purple-h;
       }
     }
-    &.active a:after {
-      @extend %format-icon;
-      content: "\e02a";
-      float: right;
-      line-height: 0.85;
-        @include media-min($screen-sm) {
-          content: " ";
-        }
+    .panel {
+      margin-top: -1px;
+      border-radius: 0;
     }
   }
 }
