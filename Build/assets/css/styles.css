@@ -1728,6 +1728,8 @@ PRODUCT
   text-align: left;
   color: #333333;
   position: relative; }
+  .tsr-module-product .tsr-tactical-flash {
+    display: none; }
   .tsr-module-product .tsr-product-header {
     font-size: 22px;
     color: #642887;
@@ -1804,6 +1806,9 @@ PRODUCT
         position: absolute;
         top: -10px;
         left: -10px; }
+      .tsr-module-product .tsr-tactical-flash {
+        display: table;
+        position: absolute; }
       .tsr-module-product .tsr-product-image {
         height: auto;
         width: 100%;
@@ -11450,7 +11455,11 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-    word-wrap: break-word; }
+    word-wrap: break-word;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .ee-sidenav > li h6:hover:after {
     font-family: 'tsr-icons-all';
     content: "\e668";
@@ -11468,15 +11477,38 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
       color: white;
       background: #652d86;
       border-radius: 4px; }
-  .ee-sidenav .selected {
+  .ee-sidenav .selected a {
     color: white;
     background: #4f2369;
     border-radius: 4px; }
-    .ee-sidenav .selected h6:after {
+    .ee-sidenav .selected a h6:after {
       font-family: 'tsr-icons-all';
       content: "\e668";
       font-size: 1.16129em;
       float: right;
+      padding: 5px;
+      color: #fff; }
+  .ee-sidenav .selected-arrow-down a {
+    color: #fff;
+    background: #4f2369;
+    border-radius: 4px; }
+    .ee-sidenav .selected-arrow-down a h6:after {
+      font-family: 'tsr-icons-all';
+      content: "\e669";
+      font-size: 1.16129em;
+      float: right;
+      padding: 5px;
+      color: #fff; }
+  .ee-sidenav .selected-arrow-up a {
+    color: #fff;
+    background: #4f2369;
+    border-radius: 4px; }
+    .ee-sidenav .selected-arrow-up a h6:after {
+      font-family: 'tsr-icons-all';
+      content: "\e66b";
+      font-size: 1.16129em;
+      float: right;
+      padding: 5px;
       color: #fff; }
 
 section.tsr-section-productAndService-listing {

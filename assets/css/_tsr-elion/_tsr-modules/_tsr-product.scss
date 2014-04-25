@@ -47,9 +47,9 @@ $module: tsr-module-product;
 	// 	display:none;
 	// }
 
-	// .tsr-tactical-flash{
-	// 	display:none;
-	// }
+	.tsr-tactical-flash{
+		display:none;
+	}
 
 	.tsr-product-header {
 		font-size:22px;
@@ -219,10 +219,10 @@ $module: tsr-module-product;
 			left:-10px;
 		}
 
-		// .tsr-tactical-flash{
-		// 	display:table;
-		// 	position:absolute;
-		// 	right:15%;
+		.tsr-tactical-flash{
+			display:table;
+			position:absolute;
+			// right:15%;
 
 		// 	&.tsr-first{
 		// 		top:70px;
@@ -244,7 +244,7 @@ $module: tsr-module-product;
 		// 			top:140px;
 		// 		}
 		// 	}
-		// }
+		}
 
     	.tsr-product-image{
     		height:auto;

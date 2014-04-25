@@ -13,6 +13,10 @@
     line-height: 16px;
     font-weight: 400;
     word-wrap:break-word;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   & > li h6:hover:after {
     font-family: 'tsr-icons-all';
@@ -41,7 +45,7 @@
   }
 
 // change to whatever is your active state menu element name
-  .selected {
+  .selected a{
     color: white;
     background: $link-hover-color;
     border-radius: $border-radius-base;
@@ -50,6 +54,33 @@
     content: "\e668";
     font-size: em(18);
     float: right;
+    padding: 5px;
+    color: #fff;
+   }
+  }
+  .selected-arrow-down a {
+    color: #fff;
+    background: $link-hover-color;
+    border-radius: $border-radius-base;
+    h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e669";
+    font-size: em(18);
+    float: right;
+    padding: 5px;
+    color: #fff;
+   }
+  }
+  .selected-arrow-up a{
+    color: #fff;
+    background: $link-hover-color;
+    border-radius: $border-radius-base;
+    h6:after {
+    font-family: 'tsr-icons-all';
+    content: "\e66b";
+    font-size: em(18);
+    float: right;
+    padding: 5px;
     color: #fff;
    }
   }
