@@ -23,7 +23,7 @@ COMPONENTS
   @import "_tsr-components/_tsr-icons.scss";
   
   // @import "_tsr-components/_tsr-typography.scss";
-  @import "_tsr-components/_tsr-pagination.scss";
+  // @import "_tsr-components/_tsr-pagination.scss";
   @import "_tsr-components/_tsr-buttonsAndLinks.scss"; 
   @import "_tsr-components/_tsr-tacticalElements.scss";
 
@@ -36,11 +36,11 @@ MODULES
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	
-  @import "_tsr-modules/_tsr-filter.scss";
-  @import "_tsr-modules/_tsr-placeholder.scss";
-  @import "_tsr-modules/_tsr-mediaTable.scss";
+  // @import "_tsr-modules/_tsr-filter.scss";
+  // @import "_tsr-modules/_tsr-placeholder.scss";
+  // @import "_tsr-modules/_tsr-mediaTable.scss";
   @import "_tsr-modules/_tsr-product.scss";
-  @import "_tsr-modules/_tsr-service.scss";
+  // @import "_tsr-modules/_tsr-service.scss";
  
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ SECTIONS
 */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  @import "_tsr-sections/_tsr-attention.scss";
+  // @import "_tsr-sections/_tsr-attention.scss";
   @import "_tsr-sections/_tsr-carousel-listing.scss";
   @import "_tsr-sections/_tsr-communication-primary.scss";
-  @import "_tsr-sections/_tsr-communication-secondary.scss";
+  // @import "_tsr-sections/_tsr-communication-secondary.scss";
   @import "_tsr-sections/_tsr-divider.scss";
   // @import "_tsr-sections/_tsr-footer.scss";
   // @import "_tsr-sections/_tsr-header.scss";

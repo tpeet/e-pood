@@ -1,6 +1,3 @@
-.container.ee-text {
-  padding: 0 15px;
-  }
 section.ee-product-detail {
   margin-bottom: 30px;
 
@@ -14,6 +11,10 @@ section.ee-product-detail {
 
   .ee-special-price {
     margin-top: 10px;
+  }
+
+  .tsr-product-price {
+    margin-top: 20px;
   }
 
   .ee-actions {
@@ -49,7 +50,7 @@ section.ee-product-detail {
       }
     }
 
-    .tsr-tactical-flash {
+    .tsr-tactical-flash { 
       right: 4%;
       top: 5%;
       left: auto;
