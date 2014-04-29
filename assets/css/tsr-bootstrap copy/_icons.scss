@@ -9,19 +9,21 @@
 
 // Import the fonts
 @font-face {
-  font-family: 'ts-icons-all';
-  src:url('fonts/bootstrap/ts-icons-all.eot');
-  src:url('fonts/bootstrap/ts-icons-all.eot?#iefix') format('embedded-opentype'),
-    url('fonts/bootstrap/ts-icons-all.woff?') format('woff'),
-    url('fonts/bootstrap/ts-icons-all.ttf?') format('truetype'),
-    url('fonts/bootstrap/ts-icons-all.svg?#ts-icons-all') format('svg');
+  font-family: 'tsr-icons-all';
+  src:url('#{$icon-font-path}#{$icon-font-name}.eot');
+  src:url('#{$icon-font-path}#{$icon-font-name}.eot?#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}#{$icon-font-name}.woff') format('woff'),
+    url('#{$icon-font-path}#{$icon-font-name}.ttf') format('truetype'),
+    url('#{$icon-font-path}#{$icon-font-name}.svg#tsr-icons-all') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .icon {
+  font-family: 'tsr-icons-all';
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'ts-icons-all';
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -33,6 +35,75 @@
   }
 }
 
+.icon-compare:before {
+  content: "\e6d1";
+}
+.icon-volume:before {
+  content: "\e6d2";
+}
+.icon-transport:before {
+  content: "\e6d4";
+}
+.icon-phone_2:before {
+  content: "\e6d5";
+}
+.icon-close:before {
+  content: "\e6d8";
+}
+.icon-router_device:before {
+  content: "\e6dc";
+}
+.icon-private_services:before {
+  content: "\e6dd";
+}
+.icon-plus:before {
+  content: "\e6de";
+}
+.icon-buy_2:before {
+  content: "\e6e1";
+}
+.icon-minus:before {
+  content: "\e6e3";
+}
+.icon-list_view:before {
+  content: "\e6e5";
+}
+.icon-virtualserver:before {
+  content: "\e6e6";
+}
+.icon-block_view:before {
+  content: "\e6e7";
+}
+.icon-hammer:before {
+  content: "\e6ea";
+}
+.icon-full_screen:before {
+  content: "\e6eb";
+}
+.icon-favourites_normal:before {
+  content: "\e6ec";
+}
+.icon-favourites_active:before {
+  content: "\e6ed";
+}
+.icon-domain:before {
+  content: "\e6ef";
+}
+.icon-delete_big:before {
+  content: "\e6f0";
+}
+.icon-checkmark:before {
+  content: "\e6f1";
+}
+.icon-business_services:before {
+  content: "\e6f2";
+}
+.icon-opinions:before {
+  content: "\e6f3";
+}
+.icon-add_my_list:before {
+  content: "\e6f4";
+}
 .icon-twitter:before {
   content: "\e001";
 }
@@ -261,7 +332,7 @@
 .icon-favourits:before {
   content: "\e646";
 }
-.icon-uniE647:before {
+.icon-entertainment:before {
   content: "\e647";
 }
 .icon-enduserdevice:before {

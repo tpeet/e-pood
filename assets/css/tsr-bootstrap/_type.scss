@@ -5,11 +5,10 @@
 
 // Body text
 // -------------------------
-
 p {
   margin: 0 0 ($line-height-computed / 2);
-  letter-spacing: $letter-spacing-base;
-  line-height: $line-height-base;
+  /*letter-spacing: $letter-spacing-base;
+  line-height: $line-height-base;*/
 }
 .lead {
   margin-bottom: $line-height-computed;
@@ -31,7 +30,7 @@ small,
 .small  { 
   font-size: $font-size-small; 
   letter-spacing: $letter-spacing-base;
-  line-height: 0.5;
+  line-height: ceil($font-size-base * 1);//(($line-height-base * 120) / 100);
 }
 
 // Undo browser default styling
@@ -94,6 +93,15 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1;
     color: $headings-small-color;
   }
+
+  var,
+  abbr[title="EUR"] {
+    color: $price-text-color;
+    letter-spacing: inherit;
+    line-height: inherit;
+    border: 0;
+    cursor: auto;
+  }
 }
 
 h1,
@@ -101,7 +109,8 @@ h2,
 h3 {
   margin-top: $line-height-computed;
   margin-bottom: ($line-height-computed / 2);
-
+  font-weight: 600;
+  letter-spacing: ($letter-spacing-base - 1.5);
   small,
   .small {
     font-size: 65%;
@@ -119,12 +128,42 @@ h6 {
   }
 }
 
-h1, .h1 { font-size: $font-size-h1; line-height: ($headings-line-height + 30); letter-spacing: ($letter-spacing-base - 0.21); }
-h2, .h2 { font-size: $font-size-h2; line-height: ($headings-line-height + 12); letter-spacing: ($letter-spacing-base - 0.38); }
-h3, .h3 { font-size: $font-size-h3; line-height: ($headings-line-height + 8); letter-spacing: ($letter-spacing-base - 0.21); }
-h4, .h4 { font-size: $font-size-h4; line-height: ($headings-line-height + 4); letter-spacing: $letter-spacing-base; }
-h5, .h5 { font-size: $font-size-h5; line-height: ($headings-line-height + 6); letter-spacing: ($letter-spacing-base - 0.1); }
-h6, .h6 { font-size: $font-size-h6; line-height: ($headings-line-height + 2); letter-spacing: $letter-spacing-base; }
+h1, 
+.h1 { 
+  font-size: $font-size-h1; 
+  line-height: (($font-size-h1+50) / 2); 
+  //letter-spacing: ($letter-spacing-base - 1.5);
+}
+h2, 
+.h2 { 
+  font-size: $font-size-h2; 
+  line-height: (($font-size-h2+33) / 2);
+  letter-spacing: ($letter-spacing-base - 1);
+}
+h3, 
+.h3 { 
+  font-size: $font-size-h3; 
+  line-height: (($font-size-h3+28) / 2);
+  letter-spacing: ($letter-spacing-base - 0.30);
+}
+h4, 
+.h4 { 
+  font-size: $font-size-h4; 
+  line-height: (($font-size-h4+24) / 2);
+  letter-spacing: $letter-spacing-base - 0.20;
+}
+h5, 
+.h5 { 
+  font-size: $font-size-h5; 
+  line-height: (($font-size-h5+26) / 2);
+  letter-spacing: ($letter-spacing-base - 0.20);
+}
+h6, 
+.h6 { 
+  font-size: $font-size-h6; 
+  line-height: (($font-size-h6+22) / 2);
+  letter-spacing: $letter-spacing-base - 0.20;
+}
 
 
 // Page header
@@ -154,6 +193,47 @@ ol {
 
 // List options
 
+// elion list
+.ts-list {
+  @extend .list-unstyled;
+
+  > li:before {
+    font-family: 'tsr-icons-all';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: $font-size-base - 3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content:"\e6f1";
+    padding-right: 15px;
+    &:empty {
+      width: 1em;
+    }
+  }
+
+  &.list-default {
+    @include ts-list-variant($text-color);
+  }
+
+  &.list-info {
+    @include ts-list-variant($brand-info);
+  }
+
+  &.list-success {
+    @include ts-list-variant($brand-success);
+  }
+  &.list-large {
+    &:before {
+      content:"";
+    }
+    > li {
+      font-size: ($font-size-base + 3); 
+      line-height: floor(((($font-size-base + 3)+27) / 2));
+      letter-spacing: $letter-spacing-base;
+    }
+  }
+}
 // Unstyled keeps list items block level, just removes default browser padding and list-style
 .list-unstyled {
   padding-left: 0;
@@ -282,4 +362,20 @@ address {
   margin-bottom: $line-height-computed;
   font-style: normal;
   line-height: $line-height-base;
+}
+
+
+// Prices
+var, .price {
+  color: $price-text-color;
+  letter-spacing: $letter-spacing-base;
+  line-height: $line-height-base;
+  font-style:normal;
+  abbr[title="EUR"] {
+    color: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    border: 0;
+    cursor: auto;
+  }
 }

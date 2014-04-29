@@ -124,7 +124,7 @@ section.tsr-section-productAndService-listing {
     top: em(10);
     z-index: 2;
     @include media-min($screen-xs) {
-    right: em(15);
+    right: em(5);
     } 
   }
 

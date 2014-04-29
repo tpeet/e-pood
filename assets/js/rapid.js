@@ -31,6 +31,7 @@
 /* @include header */
 /* @include footer */
 /* @include main*/
+/* @include alert*/
 
 // 2nd LEVEL
 /* @include bootstrap-slider */

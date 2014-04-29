@@ -10,9 +10,10 @@
 @import "type";
 //@import "code";
 @import "grid";
-@import "tables";
+//@import "tables";
 @import "forms";
 @import "buttons";
+@import "progress-steps";
 
 // BS3 Components
 //@import "component-animations";
@@ -40,7 +41,7 @@
 
 // Components w/ JavaScript
 //@import "modals";
-//@import "tooltip"; 
+//@import "tooltip";
 //@import "popovers";
 @import "carousel";
 
@@ -54,13 +55,9 @@
 @import "badges";
 @import "header";
 @import "footer";
-@import "progress-steps";
-@import "content";
-@import "accordion";
-@import "upgrade-steps";
 
 // from elion-e-pood
-@import "ee-sidemenu";
+// @import "ee-sidemenu";
 
 // for manual. comment out this file
 @import "docs";

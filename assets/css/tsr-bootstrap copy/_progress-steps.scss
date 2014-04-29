@@ -12,7 +12,6 @@ $clr-gray: #c7c2ba;
 
 
 @mixin stp-padge{
-	box-sizing: border-box;
 	vertical-align: middle;
 	text-align: center;
 	counter-increment:step;

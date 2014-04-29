@@ -5,12 +5,33 @@
 
 // Base styles
 // -------------------------
-
 .alert {
   padding: $alert-padding;
   margin-bottom: 0;//$line-height-computed;
   border: 0px;
   border-radius: 0;
+  @include transition(.3s ease-in-out);
+  // toggleable alert styles
+  &[data-toggle="collapse-alert"] {
+    > .container {
+      > div {
+        > span {
+          display: none;
+        }
+      }
+    }
+    &.in {
+      > .container {
+        > div {
+          padding-right: 40px;
+          > span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  // /end toggleable alert styles
 
   // Headings for larger alerts
   h4 {
@@ -31,22 +52,34 @@
   > p + p {
     margin-top: 5px;
   }
-  div.container {
+
+  &:not(.full-size){
+    > .container {
+      width:100%;
+    }
+  }
+
+  .container {
     position: relative;
     > span[class*="icon-"]{
       position: absolute;
-      top: 50%;
+      top: 0px;
       left: 15px;
-      margin-top: -13px;
+      margin-top: 0px;
     }
-    > a {
-        padding: 4px 180px 0 55px;
+    > div {
+        padding: 0px 180px 0 55px;
         display: block;
         position: relative;
-        span{
-          @media (max-width: $screen-xs-max) {
-            display:none;
-          }
+        
+        @media (max-width: $screen-xs-max) {
+          padding-right:30px;
+        }
+        
+        h4 {
+          font-size: $font-size-base;
+          font-weight: bold;
+          margin: 0;
         }
         .read-more{
           border-right: 1px solid #FFFFFF;
@@ -54,10 +87,10 @@
           font-weight: bold;
           line-height: 1;
           margin-top: -7px;
-          padding: 0 12px 3px 40px;
+          padding: 0 14px 3px 40px;
           position: absolute;
           right: 30px;
-          top: 50%;
+          top: 10px;
           display: inline-block;
           > span[class*="icon-"] {
             font-size: 15px;
@@ -66,7 +99,13 @@
             text-decoration:underline;
           }
           @media (max-width: $screen-xs-max) {
-            display:none;
+            border-right:0;
+            display:block;
+            position:relative;
+            padding:0;
+            top:0px;
+            left:0;
+            margin:15px 0 0 0;
           }
         }
         &:hover{
@@ -77,10 +116,10 @@
       position: absolute;
       display: block;
       right: 0;
-      top: 50%;
-      font-size: 28px;
+      top: 0px;
+      font-size: 24px;
       padding:0;
-      margin-top: -12px;
+      margin-top: 0px;
       margin-right: 10px;
       &:hover{
         text-decoration:none;
@@ -91,6 +130,7 @@
 
   span[class*="icon-"]{
     font-size: 24px;
+    padding-right: 25px;
   }
 
   a { 
@@ -124,7 +164,7 @@
 // Generate contextual modifier classes for colorizing the alert.
 
 // primary
-// @extend .alert-primary;
+// @extend .alert-primary; !!! Extend directives may only be used within rules.
 //
 .alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);

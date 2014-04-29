@@ -116,6 +116,12 @@
   border-bottom-left-radius: $radius;
      border-top-left-radius: $radius;
 }
+@mixin border-right-top-radius($radius) {
+  border-top-right-radius: $radius;
+}
+@mixin border-left-top-radius($radius) {
+  border-top-left-radius: $radius;
+}
 
 // Drop shadows
 @mixin box-shadow($shadow...) {
@@ -372,6 +378,7 @@
   display: $display;
   max-width: 100%; // Part 1: Set a maximum relative to the parent
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  margin:0 auto;
 }
 
 
@@ -436,14 +443,14 @@
       color:darken($border, 7%);
     }
   }
-  @media (max-width: $screen-xs-max) {
+  /*@media (max-width: $screen-xs-max) {
     .close-btn {
       border-radius: 30px;
       background-color: #fff;
       color: $background;
       font-size: 22px;
     }
-  }
+  }*/
 }
 
 // Tables
@@ -459,6 +466,19 @@
     &.#{$state} > td,
     &.#{$state} > th {
       background-color: $background;
+      border-top: none;
+      border-bottom: none;
+    }
+    
+    //extra
+    &.#{$state}{
+       @include expand-row-background ($background);
+    }
+   
+
+    &.#{$state} + tr > td,
+    &.#{$state} + tr > th{
+      border-top:none;
     }
   }
 
@@ -471,8 +491,39 @@
     &.#{$state}:hover > th {
       background-color: darken($background, 5%);
     }
+
+    //extra hover
+    &.#{$state}:hover{
+      @include expand-row-background (darken($background, 5%));
+    }
   }
 }
+
+// Expand background color "out of table" 
+@mixin expand-row-background ($background) {
+  > td{
+    &:first-child,
+    &:last-child{
+      position:relative;
+      &:before{
+        content: '';
+        background-color:$background;
+        position: absolute;
+        width: $table-cell-padding;
+        margin-top:-$table-cell-padding;
+        height: 100%; 
+      }
+    }
+    &:first-child:before{
+      left:-$table-cell-padding;
+    }
+    &:last-child:before{
+      right:-$table-cell-padding;
+    }
+  }
+}
+
+
 
 // Button variants
 // -------------------------
@@ -919,3 +970,26 @@
     height: auto;
   }
 }
+
+// list variants
+@mixin ts-list-variant($check-text-color:$text-color) {
+  > li:before {
+    color: $check-text-color;
+  }
+  /*@media (max-width: $screen-xs-max) {
+    .close-btn {
+      border-radius: 30px;
+      background-color: #fff;
+      color: $background;
+      font-size: 22px;
+    }
+  }*/
+}
+
+// Helper mixins
+
+// Convert px to em
+/*@function em($px, $base: $font-size-base) {
+    @return ($px / $base) * 1em;
+}*/
+

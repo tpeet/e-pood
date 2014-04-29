@@ -110,19 +110,61 @@
             <li><a href="#">RUS</a></li>
             <li><a href="#">ENG</a></li>
             <li><a href="#" class="icon-with-badge basket"><span class="icon icon-buy_2"></span><span class="badge">8</span></a></li>
-            <li class="dropdown">
+            <li class="dropdown menu-large with-icon">
               <a href="index.html" class="icon-with-badge dropdown-toggle myaccount" data-toggle="dropdown">
                 <span class="icon icon-myaccount"></span>
                 <!-- <span class="badge">4</span> --> 
                 <span class="icon-label-text">Ahto Rosenberg</span>
                 <span class="icon icon-arrow-down"></span>
               </a>
-              <ul class="dropdown-menu">
+              <!-- <ul class="dropdown-menu">
                 <li><a href="#">OÜ NETGROUP</a></li>
                 <li><a href="#">OÜ Potgroup</a></li>
                 <li><a href="#">Siimu Saamu esindaja</a></li>
+                <li class="divider"></li>
                 <li><a href="index.html">Välju</a></li>
-              </ul>
+              </ul> -->
+              <div class="dropdown-menu" style="width:100%;">
+                <div class="container">
+                    <div class="row megamenu">
+                        <div class="col-md-3">
+                            <h3>Kellena soovid siseneda?</h3>
+                            Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.
+                            <p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Eraklient</h3>
+                            <p>
+                                Ahto<br />
+                                Pärn von Krusesten
+                            </p>
+                            <p>
+                                <a href="#">Eesnimi Perenimi</a>
+                            </p>
+                            <p>
+                                <a href="#">Martinson Sandrovinkilkohv</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Äriklient</h3>
+                            <p><a href="#">Minuesimenefirma OÜ</a></p>
+                            <p><a href="#">Minuteinefirma OÜ</a></p>
+                            <p><a href="#">Minukolmasfirma OÜ</a></p>
+                            <p><a href="#">Minuneljas OÜ</a></p>
+                            <hr />
+                            <p><span class="icon icon-plus"></span> <a href="#">Registreeri uus äriklient</a></p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="container reset-padding">
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
+                </div>
+            </div>
             </li>
             
         </ul> 
@@ -130,43 +172,40 @@
     </div>
 </nav>
 
-<div class="alert alert-success" id="your-uniq-ID-121">
+<div class="alert full-size alert-success" id="your-uniq-ID-121">
     <div class="container">
-        <span class="icon icon-buy_2"></span>
-        <a href="#">
-            <strong>Toode lisati ostukorvi</strong>
-            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
-            <span class="read-more" href="#">Suundu ostukorvi</span>
-        </a>
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Kontrollige, et SMS-ga saabunud kontrollkood yhtiks antud numbriga <span class="h3">2561</span> ja sisestage Mobiil-ID PIN1-kood.</span>
+        </div>
         <a href="javascript:$('#your-uniq-ID-121').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
 </div>
 
-<div class="alert alert-info" id="your-uniq-ID-122">
-        <div class="container">
-            <span class="icon icon-info"></span>
-            <a href="#">
-                <strong>Kood:</strong>
-                <span>23423hjklh345kj34h34kj534h3kj</span>
-                <span class="read-more" href="#">
-                    Kopeeri
-                </span>
+<div class="alert full-size alert-info" id="your-uniq-ID-123">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Oleme uuendanud mingisugust asja, kui tahad rohkem infot, siis tee omad valikud</span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Loe l&auml;hemalt
             </a>
-            <a href="javascript:$('#your-uniq-ID-122').alert('close');void(0);" class="icon icon-delete close-btn"></a>
         </div>
+        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
+</div>
 
-<div class="alert alert-warning" id="your-uniq-ID-120">
-        <div class="container">
-            <span class="icon icon-alert"></span>
-            <a href="#">
-                <strong>Sisselogimine ebaonnestus</strong>
-                <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
-                <span class="read-more" href="#">Proovi uuesti</span>
-            </a>
-            <a href="javascript:$('#your-uniq-ID-120').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+<div class="alert full-size alert-warning" id="your-uniq-ID-120">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <strong>Sisselogimine ebaonnestus</strong>
+            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+            <a class="read-more" href="#">Proovi uuesti</a>
         </div>
+        <a href="javascript:$('#your-uniq-ID-120').alert('close');void(0);" class="icon icon-delete close-btn"></a>
     </div>
+</div>
 
 <nav class="ee-adminnav navbar hidden-xs" role="navigation">
   <div class="container">
@@ -248,7 +287,7 @@
                 <div class="container">
                   <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
-                      <ul class="list-group">
+                      <ul >
                         <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon icon-arrow"></span></a></li>
                         <li><a href="detail.html" class="hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
                         <li>
@@ -344,7 +383,7 @@
                 <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
                     <ul>
-                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow"></span></a></li>
                       <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" /></a></li>
                       <li>
                         <a href="#" class="hidden-xs">
@@ -356,26 +395,26 @@
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow"></span></a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow"></span></a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kinkekaardi tingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#"><h6>Kinkekaardi tingimused</h6> <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow"></span></a></li>
 
                     </ul>
                   </li>

@@ -1,0 +1,123 @@
+$prefix: "upgrade-steps";
+
+//colors
+$renewalBorderColor: #e3e3e3;
+$renewalBgColor: #f6f6f6;
+
+.#{$prefix} {
+
+   position: relative;
+   margin: 40px auto;
+   background-color: #fff;
+
+   &:before, &:after {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      content: '\00ad';
+      border-top: 1px solid $renewalBorderColor;
+      border-bottom: 1px solid $renewalBorderColor;
+   }
+
+   &:before, &:after {
+      border-right: 1px solid $renewalBorderColor;
+   }
+
+   &:before {
+      left: 0;
+      right: 50%;
+      border-left: 1px solid $renewalBorderColor;
+      background-color: $renewalBgColor;
+   }
+
+   &:after {
+      right: 0;
+      left: 50%;
+      background-color: #fff;
+   }
+
+   .#{$prefix}-current, .#{$prefix}-next {
+      position: relative;
+      padding: 25px 40px 25px 10%;
+      z-index: 1;
+   }
+
+   .#{$prefix}-current:after, .#{$prefix}-current:before {
+      position: absolute;
+      top: 50%;
+      width: 0;
+      height: 0;
+      margin-top: -16px;
+      content: '\00ad';
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+      border-left: 16px solid $renewalBgColor;
+   }
+
+   .#{$prefix}-current:after {
+      right: -15px;
+      border-left-color: $renewalBgColor;
+   }
+
+   .#{$prefix}-current:before {
+      right: -16px;
+      border-left-color: $renewalBorderColor;
+   }
+
+   .#{$prefix}-title {
+      margin: 0;
+      margin-bottom: 1em;
+      font-size: 22px;
+      color: #444;
+   }
+
+   .#{$prefix}-list {
+      li {
+         margin: 5px 0;
+      }
+   }
+
+}
+
+@media (max-width: $screen-md-min) {
+
+   .#{$prefix} {
+
+      border-top: 1px solid $renewalBorderColor;
+      border-bottom: 1px solid $renewalBorderColor;
+
+      &:before, &:after {
+         display: none;
+      }
+
+      .#{$prefix}-current {
+         position: relative;
+         border-bottom: 1px solid $renewalBorderColor;
+         background-color: $renewalBgColor;
+
+         &:after, &:before {
+            position: absolute;
+            top: auto;
+            right: auto;
+            bottom: -32px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            margin-left: -8px;
+            content: '\00ad';
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+            border-top: 16px solid #f00;
+         }
+
+         &:after {
+            border-top-color: $renewalBgColor;
+         }
+
+         &:before {
+            bottom: -33px;
+            border-top-color: $renewalBorderColor;
+         }
+      }
+   }
+}

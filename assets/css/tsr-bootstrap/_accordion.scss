@@ -1,0 +1,17 @@
+
+.accordion-heading{
+	cursor: pointer;
+
+	// icon 
+	.acordion-action-icon{
+		font-size: $font-size-base;
+		&:before{
+			content: "\e66b";
+		}
+	}
+	&.collapsed{
+		.acordion-action-icon:before{
+			content: "\e669";
+		}
+	}
+}

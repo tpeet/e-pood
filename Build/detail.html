@@ -103,13 +103,50 @@
 
         <ul class="nav navbar-nav">
             <li><a href="#">Eraklient</a></li>
-            <li><a href="#">Ariklient</a></li>
+            <li><a href="#">Äriklient</a></li>
             <li class="active"><a href="#">E-pood</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">RUS</a></li>
-            <li><a href="#">ENG</a></li>
-            <li><a href="front-logged-in.html"><span class="icon icon-myaccount"></span>Sisene</a></li>
+            <li class="dropdown menu-large">
+                <a href="#" class="dropdown-toggle " data-toggle="dropdown">SSO</a>
+                <div class="dropdown-menu" style="width:100%;">
+                            <div class="container">
+                                <div class="row megamenu">
+                                    <div class="col-md-12">
+                                        <div class="center-block">
+                                            <!-- <form class="form-inline" action="index-signed-in.html" role="form">
+                                              <div class="form-group">
+                                                <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                                              </div>
+                                              <div class="form-group">
+                                                <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                              </div>
+                                              <div class="checkbox">
+                                                <label>
+                                                  <input type="checkbox" data-stopPropagation="true"> Remember me
+                                                </label>
+                                              </div>
+                                              <button type="submit" class="btn btn-default">Sign in</button>
+                                            </form> -->
+                                            <iframe src="https://sso-arendus.elion.ee/sso2/login.jsp" style="height:300px; width:100%; border:0;">
+                                                loading...
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container reset-padding">
+                                <ul class="row hidden-xs list-unstyled">
+                                    <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                                </ul>
+                            </div>
+                        </div>
+            </li>
+            <li><a href="#" class="icon-with-badge basket"><span class="icon icon-buy_2"></span><span class="badge">8</span></a></li>
+            <li class="with-icon"><a href="front-logged-in.html"><span class="icon icon-myaccount"></span>Sisene</a></li>
         </ul> 
         
     </div>
@@ -150,7 +187,7 @@
                 <div class="container">
                   <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
-                      <ul class="list-group">
+                      <ul >
                         <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon icon-arrow"></span></a></li>
                         <li class='current'><a href="detail.html" class="current hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
                         <li>
@@ -246,7 +283,7 @@
                 <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
                     <ul>
-                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow"></span></a></li>
                       <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" /></a></li>
                       <li>
                         <a href="#" class="hidden-xs">
@@ -258,26 +295,26 @@
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow"></span></a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow"></span></a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kinkekaardi tingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow-right"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow-right"></span></a></li>
+                      <li class="dropdown-header"><a href="#"><h6>Kinkekaardi tingimused</h6> <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow"></span></a></li>
 
                     </ul>
                   </li>
@@ -488,9 +525,9 @@
     <div class="col-md-4   col-xs-5"><a href="#" class="ee-favorite">Lemmik</a></div>
     <div class="col-md-12 col-xs-7 text-left">
     <ul class="socialcount socialcount-small" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-      <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Soovita Facebookis"><span class="icon icon-facebook-inverse"></span><span class="count">Soovita</span></a></li>
-      <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Jaga Twitteris"><span class="icon icon-twitter-inverse"></span><span class="count">Tweet</span></a></li>
-      <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Jaga Google Plussis"><span class="icon icon-googleplus-inverse"></span><span class="count">+1</span></a></li>
+      <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Soovita Facebookis" target="_blank"><span class="icon icon-facebook-inverse"></span><span class="count">Soovita</span></a></li>
+      <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Jaga Twitteris" target="_blank"><span class="icon icon-twitter-inverse"></span><span class="count">Tweet</span></a></li>
+      <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Jaga Google Plussis" target="_blank"><span class="icon icon-googleplus-inverse"></span><span class="count">+1</span></a></li>
     </ul>
     </div>
   </div> 
@@ -868,7 +905,14 @@
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
       {{/if}}
-      <a href="#" class="ee-product-box-favorite"></a>
+      <div class="ee-favorite-dropdown">
+        <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
+          <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+          <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+        </ul>
+      </div>
       <figure class="tsr-product-image">
       <a class='current' href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
       </figure>

@@ -5,138 +5,109 @@ footer {
   min-width: 320px;
   width: 100%;
 
-  .footer-links{
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  // panel into footer
-  div {
-
-    > .panel {
-      background-color:transparent;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      padding-right: 30px;
-      @media (max-width: $screen-xs-max) {
-        padding-right:0;
-      }
-
-    }
-
-    &:last-child{
-      > .panel{
-        padding-right: 0;
-      }
-    }
-  }
-
-  // Panel contents
-  .panel-body {
-    padding: 0;
-
-    > ul > li {
-      padding:10px 0;
-      cursor: pointer;
-      > a {
-        color: #fff;
-        &:hover{
-          text-decoration:underline;
-        }
-      }
-      &:first-child {
-        padding-top: 10px;
-      }
-    }
-
-    @include clearfix();
+  > div > div {
     
-  }
+    > div  {
 
-  // Optional heading
-  .panel-default .panel-heading {
-    cursor: pointer;
-    background-color: transparent;
-    padding: 10px 0px 20px 0px;
-    margin-bottom: 14px;
-    border-radius: 0;
-  }
+      > .list-group {
 
-  // Within heading, strip any `h*` tag of it's default margins for spacing.
-  .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: ceil(($font-size-base * 1.125));
-    font-weight: 500;
-    > a {
-      color: inherit;
-    }
-    [class*="icon-arrow"]{
-      padding-top: 5px;
-    }
-  }
+        padding-right: 30px;
+        list-style: none;
 
-  // Contextual variations
-  .panel-default {
-    @include panel-variant(darken($brand-primary,7.5%), #fff, transparent, darken($brand-primary, 15%));
+        > .dropdown-header {
 
-    // Optional dropdown
-    @media (max-width: $screen-xs-max) {
-      .panel-heading{
-        &:hover{
-          background-color: lighten($brand-primary, 7.6%);
-        }
-        a:hover{
-          text-decoration: none;
-        }
-      }
-      .panel-heading{ 
-        margin-bottom: 0;
-        padding-left: 15px; 
-        padding-right: 15px;
-        padding-bottom: 10px;
-      }
-      .panel-body {
-        > ul > li {
-          padding-left:15px;
-          padding-right:15px;
+          padding-top: 40px;
+          padding-right: 0;
+          padding-bottom: 20px;
+          padding-left: 0;
+          margin-bottom: 20px;
           border-bottom: 1px solid darken($brand-primary,15%);
+
           > a {
-            &:hover{
-              text-decoration:none;
+
+            color:#FFF;
+            
+            &:hover, &:active, &:focus  {
+              text-decoration: none;
+            }
+
+            > h6 {
+              margin: 0;
             }
           }
-          &:hover{
-            background-color: lighten($brand-primary, 5%);
+
+        }
+
+        > li {
+          
+          padding-top: 8px;
+          padding-bottom: 8px;
+
+          > a {
+            color: #fff;
+            &:hover, &:active, &:focus {
+              text-decoration:underline;
+            }
           }
         }
       }
     }
-  }
 
 
+    @media (max-width: $screen-xs-max) { 
+      
+      > div > .list-group {
+        
+        margin:0;
+        padding-right: 0;
+        list-style: none;
 
-  @media (max-width: $screen-xs-max) {
-    .panel-default > [data-target*="#col"] {
-      background-color: $brand-primary;
+        > li:not(.dropdown-header) {
+          display:none;
+        }
+
+        > li {
+          border-bottom: 1px solid darken($brand-primary,15%);
+          padding-top: 8px;
+          padding-right: 10px;
+          padding-left: 10px;
+
+          [class*="icon-arrow"]{
+            float: right;
+            &:before { content: "\e668"; }
+          }
+
+          &:hover, &:active, &:focus  {
+            background-color: lighten($brand-primary, 7.6%);
+          }
+
+          > a:hover{
+            text-decoration:none;
+          }
+        }
+
+        > .dropdown-header {
+
+          padding-top: 8px;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 8px;
+          margin-bottom: 0;
+          border-bottom: 1px solid darken($brand-primary,15%);
+          background-color: $brand-primary;
+
+          [class*="icon-arrow"]{
+            &:before { content: "\e669"; } // arrow down
+          }
+        }
+      }
     }
-    .footer-links{
-      padding-top: 0px;
-      padding-bottom: 0px;
-    }
-  }
-  
-
-
-
-
-
+  } 
 
   // media object
   .social-block {
     padding:20px 0 10px 0;
-    background-color: lighten($brand-primary, 7.6%);
+    background-color: $brand-primary;
     .media {
 
       margin:0 0 10px 0;
@@ -144,42 +115,46 @@ footer {
       [class*="facebook"]{
         background-color: $facebook-blue;
         color: $brand-white;
-        display: block;
+        display: table-cell;
         height: 30px;
         line-height: 2px;
-        padding: 13px;
         width: 30px;
         border-radius: $border-radius-base;
+        text-align: center;
+        vertical-align: middle; 
       }
       [class*="youtube"]{
         background-color: $youtube-red;
         color: $brand-white;
-        display: block;
+        display: table-cell;
         height: 30px;
         line-height: 2px;
-        padding: 13px 0 0 0;
         width: 30px;
         border-radius: $border-radius-base;
+        text-align: center;
+        vertical-align: middle; 
       }
       [class*="twitter"]{
         background-color: $twitter-blue;
         color: $brand-white;
-        display: block;
+        display: table-cell;
         height: 30px;
         line-height: 2px;
-        padding: 13px 0 0 0;
         width: 30px;
         border-radius: $border-radius-base;
+        text-align: center;
+        vertical-align: middle; 
       }
       [class*="google-plus"]{
         background-color: $google-plus-red;
         color: $brand-white;
-        display: block;
+        display: table-cell;
         height: 30px;
         line-height: 2px;
-        padding: 13px 0 0 0;
         width: 30px;
         border-radius: $border-radius-base;
+        text-align: center;
+        vertical-align: middle; 
       }
     }
 
