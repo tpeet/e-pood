@@ -31,7 +31,9 @@ $section: 'tsr-section-carousel-listing';
 /* SECTION FOR LISTING */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.#{$section}{
+.#{$section}, 
+.tsr-carousel-listing-div
+{
 
 	border-top:1px solid $lightgrey-t;
 	border-bottom:1px solid $lightgrey-t;

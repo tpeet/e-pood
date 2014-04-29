@@ -11,6 +11,8 @@ section.ee-product-detail {
 
   .ee-special-price {
     margin-top: 10px;
+    font-size: 120%;
+    font-weight: bold;
   }
 
   .tsr-product-price {
@@ -48,7 +50,7 @@ section.ee-product-detail {
       max-width: 500px;
       height: auto;
       }
-    }
+    } 
 
     .tsr-tactical-flash { 
       right: 4%;
@@ -108,48 +110,57 @@ section.ee-section-leasing {
   }
 }
 
-section.ee-more-info-tabs {
+ .troll {
+    border-top: 1px solid $lightgrey-t;
+    border-bottom: 1px solid $lightgrey-t;
+    @extend %arrowbox;
+      &:after,
+  &:before {
+    left: 40px;
+  }
+  &:after {
+    border-top-color: $lightgrey-c;
+    }
+  &:before {
+    border-top-color: $lightgrey-t;
+    }
+  }
+
+.ee-accordion,
+.ee-more-info-tabs {
   background: $lightgrey-c;
-  // .nav-justified li {
-  //   border-bottom: 1px solid $lightgrey-t;
-  //   @include media-min($screen-sm) {
-  //     border-bottom: none;
-  //   }
-  //   a {
-  //     text-align: left;
-  //     margin-bottom: -1px;
-  //     padding: 15px;
-  //     @include media-min($screen-sm) {
-  //       text-align: center;
-  //       padding: 10px 15px;
-  //       border-bottom: none;
-  //       &:hover {
-  //         border-bottom: 1px solid $lightgrey-t;
-  //       }
-  //     }
-  //     &:after {
-  //       @extend %format-icon;
-  //       content: "\e6de";
-  //       float: right;
-  //       line-height: 0.85;
-  //       @include media-min($screen-sm) {
-  //         content: " ";
-  //       }
-  //     }
-  //     &:hover:after {
-  //       color: $purple-h;
-  //     }
-  //   }
-  //   &.active a:after {
-  //     @extend %format-icon;
-  //     content: "\e6e3";
-  //     float: right;
-  //     line-height: 0.85;
-  //       @include media-min($screen-sm) {
-  //         content: " ";
-  //       }
-  //   }
-  // }
+
+  &.panel-group .panel + .panel {
+    margin-top: 0px;
+  }
+
+
+
+
+.panel-default {
+  border-radius: 0;
+  margin-top: -1px;
+}
+  .panel-title a {
+    padding: 16px 15px;
+    width: 100%;
+    display: block;
+    color: $purple-c;
+    font-size: 16px;
+    &.collapsed:after {
+    @extend %format-icon;
+    content: "\e6de";
+    float: right;
+    line-height: 0.85;
+    }
+    &:after {
+      @extend %format-icon;
+      content: "\e6e3";
+      float: right;
+      line-height: 0.85;
+    }
+  }
+
   .panel-body {
     padding: 0;
     table {
@@ -162,29 +173,7 @@ section.ee-more-info-tabs {
     .panel-heading {
       padding: 0;
     }
-    .panel-title a {
-      padding: 12px 15px;
-      width: 100%;
-      display: block;
-      color: $purple-c;
-      font-size: 16px;
-      &.collapsed:after {
-      @extend %format-icon;
-      content: "\e6de";
-      float: right;
-      line-height: 0.85;
-      }
-      &:after {
-        @extend %format-icon;
-        content: "\e6e3";
-        float: right;
-        line-height: 0.85;
-      }
-    }
-    .panel {
-      margin-top: -1px;
-      border-radius: 0;
-    }
+
   }
 }
 

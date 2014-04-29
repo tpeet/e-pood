@@ -510,11 +510,11 @@
  
 
 <section class="tsr-section-divider">
-  <header class="container">
-    <span>
+  <div class="container">
+    <h6>
       Soovid osta järelmaksuga?
-    </span>    
-  </header>
+    </h6>    
+  </div>
 </section>
 
 <section class="ee-section-leasing">
@@ -544,14 +544,14 @@
 </section> 
 
 <section class="tsr-section-divider">
-  <header class="container">
-    <span>
+  <div class="container">
+    <h6>
       Rohkem infot?
-    </span>    
-  </header>
+    </h6>    
+  </div>
 </section>
 
-<section class="ee-more-info-tabs ">
+     <section class="ee-more-info-tabs ">
   <div class="container padding-reset">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" id="TabsResponsive">
@@ -588,12 +588,12 @@
         {{#technical}}
           <div class="col-sm-6 padding-reset">
             <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">{{heading}}</th>
+                </tr>
+              </thead>
               <tbody>
-                <thead>
-                  <tr>
-                    <th colspan="2">{{heading}}</th>
-                  </tr>
-                </thead>
                 {{#each data}}
                   <tr>
                     <td > <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
@@ -922,11 +922,11 @@
 </section> 
 
 <section class="tsr-section-divider">
-  <header class="container">
-    <span>
+  <div class="container">
+    <h6>
       Pildid ja videod
-    </span>    
-  </header>
+    </h6>    
+  </div>
 </section>
 
 <section class="ee-full-slider">
@@ -942,24 +942,30 @@
 </section> 
 
 <section class="tsr-section-divider tsr-color-purple">
-  <header class="container">
-    <span>
+  <div class="container">
+    <h6>
       Sarnased tooted
-    </span>    
-  </header>
+    </h6>    
+  </div>
 </section>
-
-<section class="tsr-section-carousel-listing"> 
+<section class="tsr-carousel-listing-div"> 
     <div class="container product">
       <div class="tsr-slides" id="content-placeholder-slider-detail"></div>
 
       <script id="slider-detail-template" type="text/x-handlebars-template">
       {{#products}}
-      <a href="javascript:void(0);" class="tsr-module-product">
+      <div class="tsr-module-product">
         {{#if ribbon}}
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
-         <button class="btn btn-link"><i class="ee-product-box-favorite"></i></button>
+        <div class="ee-favorite-dropdown">
+          <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
+            <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+            <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+          </ul>
+        </div>
         <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" class="original"><img src="assets/img/products/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></figure>
         <div class="tsr-product-content">
           {{#if firstflash}}
@@ -969,26 +975,22 @@
           <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
           <h6 class="tsr-product-header">{{name}}</h6>
-            <ul class="tsr-product-colors">
-            {{#if colors}}
-            {{#each colors}}
-              <li class="accent {{this}}"></li>
-            {{/each}}
-            {{/if}}
-            </ul>
-            <p class="tsr-product-price">
-            {{#if normal_price}}
-            Tavahind {{normal_price}} €<br> Sinu võit 10 €
-            {{/if}}
-            </p>
-            <p class="tsr-product-price ee-special-price">
-            {{#if special_price}}
-            Soodushind <span>{{special_price}} €</span>
-            {{/if}}
-            </p>
-            <button class="ee-compare btn btn-link"> Võrdle </button>
+
+          <p class="tsr-product-price">
+          {{#if special_price}}
+          Tavahind {{normal_price}} €<br> Sinu võit 10 €
+          </p>
+          <p class="ee-special-price tsr-product-price">
+          Soodushind <span>{{special_price}} €</span>
+          </p>
+          {{else}}
+          <p class="tsr-product-price ">
+          Tavahind <span>{{normal_price}} €</span>
+          {{/if}}
+          </p>
+          <button class="ee-compare btn btn-link"> Võrdle </button>
         </div>
-      </a>
+      </div>
       {{/products}}
       </script>
 
@@ -996,7 +998,21 @@
 </section>
 
 <!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
- 
+
+
+<!-- <div class="ee-accordion hidden-md hidden-large">
+  <div class="panel">
+    <div class="panel-heading">
+      <h6 class="panel-title">
+        <a href="javascript:void(0)" class="collapsed" data-toggle="collapse" data-target="#similarProducts">Sarnased tooted</a>
+      </h6>
+    </div>
+  </div>
+</div>
+<div id="similarProducts" class="collapse">
+  <div class="hidden-md hidden-large">
+  </div>
+</div> -->
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">

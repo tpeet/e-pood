@@ -1,4 +1,4 @@
-<section class="ee-more-info-tabs ">
+     <section class="ee-more-info-tabs ">
   <div class="container padding-reset">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" id="TabsResponsive">
@@ -35,12 +35,12 @@
         {{#technical}}
           <div class="col-sm-6 padding-reset">
             <table class="table table-bordered table-hover">
+              <thead>
+                <tr>
+                  <th colspan="2">{{heading}}</th>
+                </tr>
+              </thead>
               <tbody>
-                <thead>
-                  <tr>
-                    <th colspan="2">{{heading}}</th>
-                  </tr>
-                </thead>
                 {{#each data}}
                   <tr>
                     <td > <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>

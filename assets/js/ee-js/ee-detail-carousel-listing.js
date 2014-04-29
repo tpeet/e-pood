@@ -40,7 +40,7 @@ TSR - CAROUSEL LISTING
     tsrCarouselListing.tsrEqualHeights = function () {
 
 
-	    $('.ee-detail-carousel').each(function () {
+	    $('.tsr-carousel-listing-div').each(function () {
 
 	    	var bw = $('body').width();
 	        var el = $(this);
@@ -48,10 +48,7 @@ TSR - CAROUSEL LISTING
 
 		    if(bw >= 600){
 			
-				// Service 
-		      	$('.tsr-service-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-service-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-service-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.ee-special-price', this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 				// Product 
 		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
@@ -59,14 +56,10 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.ee-compare' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 		    } else {
 
-		    	// Service 
-	      		$('.tsr-service-desc' , this).css('height', 'auto');
-		      	$('.tsr-service-price' , this).css('height', 'auto');
-		      	$('.tsr-service-header', this).css('height', 'auto');
+		      	$('.ee-special-price', this).css('height', 'auto');
  
 				// Product 
 		      	$('.tsr-product-header', this).css('height', 'auto');
@@ -74,7 +67,6 @@ TSR - CAROUSEL LISTING
 		      	$('.tsr-product-desc' , this).css('height', 'auto');
 		      	$('.tsr-product-price' , this).css('height', 'auto');
 		      	$('.tsr-product-small-print' , this).css('height', 'auto');
-		      	$('.ee-compare' , this).css('height', 'auto');
 		      	
 		    }
 
@@ -95,7 +87,7 @@ TSR - CAROUSEL LISTING
     tsrCarouselListing.tsrCarouselInit = function () {
 
 
-	    $('.tsr-section-carousel-listing').each(function () {
+	    $('.tsr-carousel-listing-div').each(function () {
 
 			var item 		= $('.tsr-slides > div' , this);
 			var totalWidth = 0;

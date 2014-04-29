@@ -17,6 +17,7 @@
 // SLIDER STUFF
 /* @include jquery.flexslider */
 /* @include ee-carousel-listing */
+/* @include ee-detail-carousel-listing */
 
 
 // BOOTSTRAP GENERAL PIECE BY PIECE
