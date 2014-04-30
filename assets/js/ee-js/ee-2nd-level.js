@@ -1,40 +1,26 @@
 // Color select. Messy until desicions are made how to present colors
-$(function() {
-  var accEl = $('.ee-product-colors li.acc');
+// $(function() {
+//   var accEl = $('.ee-product-colors li.acc');
 
-  accEl.on('click', function(){
+//   accEl.on('click', function(){
 
-      var el = $(this);
-      var color = el.attr('data-color-theme');
-      var section = $(this).closest(".tsr-product-image");
+//       var el = $(this);
+//       var color = el.attr('data-color-theme');
+//       var section = $(this).closest(".tsr-product-image");
 
-      if (section.hasClass(color)) {
-         section.removeClass(color);
-          $('.ee-product-colors li.acc').removeClass('active');
-      }
-      else {
-          section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
-          $('.ee-product-colors li.acc').removeClass('active');
-          section.addClass(color);
-          el.addClass('active'); 
-      }
-      return false;
+//       if (section.hasClass(color)) {
+//          section.removeClass(color);
+//           $('.ee-product-colors li.acc').removeClass('active');
+//       }
+//       else {
+//           section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
+//           $('.ee-product-colors li.acc').removeClass('active');
+//           section.addClass(color);
+//           el.addClass('active'); 
+//       }
+//       return false;
       
-  });
-});
-
-//Remove
-// $('.parent').click(function() {
-//     var subMenu = $(this).siblings('ul');
-//     var allMenu = $('.parent').siblings('ul');
-//     if ($(subMenu).hasClass('open')) {
-//         $(allMenu).fadeOut();
-//         $(allMenu).removeClass('open').addClass('closed');
-//     }
-//     else {
-//         $(subMenu).fadeIn();
-//         $(subMenu).removeClass('closed').addClass('open');
-//     }
+//   });
 // });
 
 // Menu handling

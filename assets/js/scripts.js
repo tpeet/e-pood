@@ -8,48 +8,6 @@ $(document).ready(function() {
 
   $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-  // FRONTPAGE ADJUSTED SIZE FLASH TEXT
-  // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
-  // $( '.js-filltext' ).each(function ( i, box ) {
-
-  //     var width = $( box ).width(),
-  //         html = '<span style="white-space:nowrap">',
-  //         line = $( box ).wrapInner( html ).children()[ 0 ],
-  //         n = 100;
-      
-  //     $( box ).css( 'font-size', '100px' );
-
-  //     $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
-  //     $( box ).text( $( line ).text() );
-  // });
-
-
-  // Color select. Messy until desicions are made how to present colors
-  $(function() {
-    var accEl = $('.ee-product-colors li.acc');
-
-    accEl.on('click', function(){
-
-        var el = $(this);
-        var color = el.attr('data-color-theme');
-        var section = $(this).closest(".tsr-product-image");
-
-        if (section.hasClass(color)) {
-           section.removeClass(color);
-            $('.ee-product-colors li.acc').removeClass('active');
-        }
-        else {
-            section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
-            $('.ee-product-colors li.acc').removeClass('active');
-            section.addClass(color);
-            el.addClass('active');
-        }
-        return false;
-        
-    });
-  });
-
-
 // COLLAPSE TABS
 // https://github.com/okendoken/bootstrap-tabcollapse
   $('#TabsResponsive').tabCollapse();
@@ -95,7 +53,35 @@ $(document).ready(function() {
   }
 
 
-});
+// Alerts logic
+   $('#alertbtn').click(function() {
+      if ( !$('#alert1').is( '.in' ) ) {
+         $('#alert1').addClass('in');
+      }
+   });
+
+   $('#successbtn').click(function() {
+      if ( !$('#success1').is( '.in' ) ) {
+         $('#success1').addClass('in');
+
+         setTimeout(function() {
+            $('#success1').removeClass('in');
+         }, 3200);
+      }
+   });
+
+   $('#infobtn').click(function() {
+      if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+         $('#your-uniq-ID-123').addClass('in');
+
+         setTimeout(function() {
+            $('#your-uniq-ID-123').removeClass('in');
+         }, 4800);
+      }
+   });
+
+
+}); // end document ready
 
 
 

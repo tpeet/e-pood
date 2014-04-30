@@ -6291,27 +6291,95 @@ TSR - CAROUSEL LISTING
 
 }(jQuery);
 
-;(function($, window, document, undefined) {
-  
-    'use strict';
+/* ========================================================================
+ * Bootstrap: alert.js v3.0.3
+ * http://getbootstrap.com/javascript/#alerts
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
 
-    function init() {
-        console.log('alert js file', $('.alert').data('toggle'));
-        $('.alert').each(function(i, el){
-            if( $(el).data('toggle') ) {
-                $(el).find('.read-more').click(function(e){
-                    $(this).hide();
-                    $(el).closest('.alert').toggleClass('in');
-                    e.preventDefault();
-                });
 
-            }
-        });
++function ($) {
+  'use strict';
+
+  // ALERT CLASS DEFINITION
+  // ======================
+
+  var dismiss = '[data-dismiss="alert"]'
+  var Alert   = function (el) {
+    $(el).on('click', dismiss, this.close)
+  }
+
+  Alert.prototype.close = function (e) {
+    var $this    = $(this)
+    var selector = $this.attr('data-target')
+
+    if (!selector) {
+      selector = $this.attr('href')
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    init();
+    var $parent = $(selector)
 
-})(jQuery, window, document);
+    if (e) e.preventDefault()
+
+    if (!$parent.length) {
+      $parent = $this.hasClass('alert') ? $this : $this.parent()
+    }
+
+    $parent.trigger(e = $.Event('close.bs.alert'))
+
+    if (e.isDefaultPrevented()) return
+
+    $parent.removeClass('in')
+
+    function removeElement() {
+      $parent.trigger('closed.bs.alert').remove()
+    }
+
+    $.support.transition && $parent.hasClass('fade') ?
+      $parent
+        .one($.support.transition.end, removeElement)
+        .emulateTransitionEnd(150) :
+      removeElement()
+  }
+
+
+  // ALERT PLUGIN DEFINITION
+  // =======================
+
+  var old = $.fn.alert
+
+  $.fn.alert = function (option) {
+    return this.each(function () {
+      var $this = $(this)
+      var data  = $this.data('bs.alert')
+
+      if (!data) $this.data('bs.alert', (data = new Alert(this)))
+      if (typeof option == 'string') data[option].call($this)
+    })
+  }
+
+  $.fn.alert.Constructor = Alert
+
+
+  // ALERT NO CONFLICT
+  // =================
+
+  $.fn.alert.noConflict = function () {
+    $.fn.alert = old
+    return this
+  }
+
+
+  // ALERT DATA-API
+  // ==============
+
+  $(document).on('click.bs.alert.data-api', dismiss, Alert.prototype.close)
+
+}(jQuery);
+
 /* ========================================================================
  * Bootstrap: button.js v3.0.3
  * http://getbootstrap.com/javascript/#buttons
@@ -6921,7 +6989,27 @@ TSR - CAROUSEL LISTING
     
 }());
 /* @include main*/
-/* @include alert*/
+;(function($, window, document, undefined) {
+  
+    'use strict';
+
+    function init() {
+        console.log('alert js file', $('.alert').data('toggle'));
+        $('.alert').each(function(i, el){
+            if( $(el).data('toggle') ) {
+                $(el).find('.read-more').click(function(e){
+                    $(this).hide();
+                    $(el).closest('.alert').toggleClass('in');
+                    e.preventDefault();
+                });
+
+            }
+        });
+    }
+
+    init();
+
+})(jQuery, window, document);
 
 // 2nd LEVEL
 /* =========================================================
@@ -9065,7 +9153,97 @@ hideMaxAItems: function(options)
 
 }(jQuery);
 
-$( document ).ready(function() {
+// $( document ).ready(function() {
+//   $('.js-imagerotator').flexslider({
+//     animation: "slide",
+//     controlNav: "thumbnails",
+//     itemMargin: 40,
+//     slideshow: false,
+//     maxItems: 4
+//   });
+
+//     $("#js-largeimage")
+//     .flexslider({
+//       animation: "slide",
+//       useCSS: false,
+//       animationLoop: true,
+//       slideshow: false,
+
+//       itemWidth: 500,
+//       itemMargin: 0,
+//   });
+// });
+$(document).ready(function () {
+
+  var slider, // Global slider value to force playing and pausing by direct access of the slider control
+    canSlide = false; // Global switch to monitor video state
+
+  // Load the YouTube API. For some reason it's required to load it like this
+  var tag = document.createElement('script');
+  tag.src = "//www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Setup a callback for the YouTube api to attach video event handlers
+  window.onYouTubeIframeAPIReady = function () {
+    // Iterate through all videos
+    $('.flexslider iframe').each(function () {
+      // Create a new player pointer; "this" is a DOMElement of the player's iframe
+      var player = new YT.Player(this, {
+        playerVars: {
+          autoplay: 0
+        }
+      });
+
+      // Watch for changes on the player
+      player.addEventListener("onStateChange", function (state) {
+        switch (state.data) {
+          // If the user is playing a video, stop the slider
+          case YT.PlayerState.PLAYING:
+            slider.flexslider("stop");
+            canSlide = false;
+            break;
+            // The video is no longer player, give the go-ahead to start the slider back up
+          case YT.PlayerState.ENDED:
+          case YT.PlayerState.PAUSED:
+            slider.flexslider("play");
+            canSlide = true;
+            break;
+        }
+      });
+
+      $(this).data('player', player);
+    });
+  };
+
+  slider = $("#js-largeimage")
+    .flexslider({
+      animation: "slide",
+      pauseOnHover: true,
+      pauseOnAction: true,
+      touch: true,
+      video: true,
+      useCSS: false,
+      animationLoop: true,
+      slideshow: false,
+      before: function () {
+        if (!canSlide) {
+          slider.flexslider("stop");
+        }
+      },
+
+      itemWidth: 500,
+      itemMargin: 0,
+    });
+
+  slider.find('.flex-control-nav > li > a').on("click", function () {
+    canSlide = true;
+    $('.flexslider iframe').each(function () {
+      $(this).data('player').pauseVideo();
+    });
+  });
+
+
   $('.js-imagerotator').flexslider({
     animation: "slide",
     controlNav: "thumbnails",
@@ -9073,19 +9251,7 @@ $( document ).ready(function() {
     slideshow: false,
     maxItems: 4
   });
-
-    $("#js-largeimage")
-    .flexslider({
-      animation: "slide",
-      useCSS: false,
-      animationLoop: true,
-      slideshow: false,
-
-      itemWidth: 500,
-      itemMargin: 0,
-  });
 });
-
 (function ($) {
 
   $.fn.rating = function () {
@@ -9239,48 +9405,6 @@ $(document).ready(function() {
 
   $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-  // FRONTPAGE ADJUSTED SIZE FLASH TEXT
-  // http://stackoverflow.com/questions/4165836/javascript-scale-text-to-fit-in-fixed-div
-  // $( '.js-filltext' ).each(function ( i, box ) {
-
-  //     var width = $( box ).width(),
-  //         html = '<span style="white-space:nowrap">',
-  //         line = $( box ).wrapInner( html ).children()[ 0 ],
-  //         n = 100;
-      
-  //     $( box ).css( 'font-size', '100px' );
-
-  //     $(box).css('font-size', Math.floor( width/$(line).width()*100 ));
-  //     $( box ).text( $( line ).text() );
-  // });
-
-
-  // Color select. Messy until desicions are made how to present colors
-  $(function() {
-    var accEl = $('.ee-product-colors li.acc');
-
-    accEl.on('click', function(){
-
-        var el = $(this);
-        var color = el.attr('data-color-theme');
-        var section = $(this).closest(".tsr-product-image");
-
-        if (section.hasClass(color)) {
-           section.removeClass(color);
-            $('.ee-product-colors li.acc').removeClass('active');
-        }
-        else {
-            section.removeClass('acc-1').removeClass('acc-2').removeClass('acc-3').removeClass('acc-4').removeClass('acc-5').removeClass('acc-6').removeClass('acc-7').removeClass('acc-8');
-            $('.ee-product-colors li.acc').removeClass('active');
-            section.addClass(color);
-            el.addClass('active');
-        }
-        return false;
-        
-    });
-  });
-
-
 // COLLAPSE TABS
 // https://github.com/okendoken/bootstrap-tabcollapse
   $('#TabsResponsive').tabCollapse();
@@ -9326,7 +9450,35 @@ $(document).ready(function() {
   }
 
 
-});
+// Alerts logic
+   $('#alertbtn').click(function() {
+      if ( !$('#alert1').is( '.in' ) ) {
+         $('#alert1').addClass('in');
+      }
+   });
+
+   $('#successbtn').click(function() {
+      if ( !$('#success1').is( '.in' ) ) {
+         $('#success1').addClass('in');
+
+         setTimeout(function() {
+            $('#success1').removeClass('in');
+         }, 3200);
+      }
+   });
+
+   $('#infobtn').click(function() {
+      if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+         $('#your-uniq-ID-123').addClass('in');
+
+         setTimeout(function() {
+            $('#your-uniq-ID-123').removeClass('in');
+         }, 4800);
+      }
+   });
+
+
+}); // end document ready
 
 
 

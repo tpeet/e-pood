@@ -22,7 +22,7 @@
 
 // BOOTSTRAP GENERAL PIECE BY PIECE
 /* @include transition */
-/* @include alert */
+/* @include bootstrap-js/alert */
 /* @include button */
 /* @include dropdown */
 /* @include modal */
@@ -31,7 +31,7 @@
 /* @include header */
 /* @include footer */
 /* @include main*/
-/* @include alert*/
+/* @include visa/alert */
 
 // 2nd LEVEL
 /* @include bootstrap-slider */

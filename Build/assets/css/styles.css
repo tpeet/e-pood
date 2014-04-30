@@ -11907,6 +11907,16 @@ body {
       color: #fff;
       background-color: #4f2369; }
 
+.flyover {
+  top: -70px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  transition: top 0.3s ease-out 0s; }
+
+.flyover.in {
+  top: 40px; }
+
 .ee-flashtext-container {
   text-align: center;
   display: table-cell;

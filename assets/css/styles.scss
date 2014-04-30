@@ -131,6 +131,20 @@ outline: none !important;
   }
 }
 
+// Alert
+
+.flyover {
+   top: -70px;
+   position: fixed;
+   width: 100%;
+   z-index: 5;
+   transition: top 0.3s ease-out 0s;
+}
+
+.flyover.in {
+   top: 40px;
+}
+
 // WORK IN PROGRESS PARTS
 //**********************************
 
