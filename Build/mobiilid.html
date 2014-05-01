@@ -407,12 +407,12 @@
 </nav>
 
 </header>
-<section class="ee-breadcrumbs hidden-xs">
+<section class="ee-breadcrumbs hidden-xs hidden-sm">
   <div class="container">
-    <ol class="breadcrumb">
+    <ul class="breadcrumb">
       <li><a href="#">Arvutid ja lisad</a></li>
       <li class="active">Sülearvutid</li>
-    </ol>
+    </ul>
   </div>
 </section>
 
@@ -426,18 +426,18 @@
     {{#sidemenu}}
 
       {{#if sub}} 
-        <li class="selected-arrow-down">
-          <a><h6>{{parent}}</h6></a>
+        <li>
+          <a class="parent"><h6>{{parent}}</h6></a>
           <ul class="ee-sidenav-sub" id="{{href}}">
 
             {{#each sub}}
-            <li class="selected-arrow-up"><a href="#"><h6>{{this}}</h6></a></li>
+            <li><a href="#"><h6>{{this}}</h6></a></li>
             {{/each}}
           </ul>
         </li>
         {{else}}
-        <li class="selected">
-          <a href="#"><h6>{{parent}} </h6></a>
+        <li>
+          <a class="parent" href="#"><h6>{{parent}} </h6></a>
         </li>
         {{/if}}
 
@@ -475,7 +475,15 @@
 
     <div class="col-xs-12 col-md-9 ee-product-boxes">
 
-      <!-- Ad area -->
+      <div class="row minimal-header hidden-md hidden-lg">
+  <ul class="breadcrumb">
+    <li><a href="#">Telefonid</a></li>
+    <li class="active">Mobiiltelefonid</li>
+  </ul>
+  <h1>Mobiilitelefonid</h1>
+</div>
+
+<!-- Ad area -->
 <div class="row ee-innerad">
   <a href="">
     <img src="assets/img/other/lion_novkamp_Elion_700x95_EST.png" alt="">
@@ -600,7 +608,7 @@
       <div class="ee-favorite-dropdown">
         <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
+          <li><a href="my-favorites.html"><span class="ee-favorite active"></span>Favs0 </a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
         </ul>

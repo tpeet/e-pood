@@ -426,17 +426,17 @@
     {{#sidemenu}}
 
       {{#if sub}} 
-        <li class="selected-arrow-down">
+        <li class="arrow-down">
           <a><h6>{{parent}}</h6></a>
           <ul class="ee-sidenav-sub" id="{{href}}">
 
             {{#each sub}}
-            <li class="selected-arrow-up"><a href="#"><h6>{{this}}</h6></a></li>
+            <li><a href="#"><h6>{{this}}</h6></a></li>
             {{/each}}
           </ul>
         </li>
         {{else}}
-        <li class="selected">
+        <li class="arrow-up">
           <a href="#"><h6>{{parent}} </h6></a>
         </li>
         {{/if}}

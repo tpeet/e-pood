@@ -3,85 +3,111 @@
   list-style-type: none;
   text-align: left;
   font-size: 16px;
-  margin: 0;
-  ul { 
-    padding-left: 0; 
-    list-style-type: none; 
+  margin-top: 10px;
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  > li > ul > li {
+    background-color: transparent;
+      a {
+      padding-left: 30px;
+      border-bottom: none;
+    }
+    &:hover {
+      background: $link-hover-color;
+    }
+    .selected {
+      background: $brand-primary;
+    }
+    &:hover,
+    .selected {
+    border-radius: $border-radius-base;
+    h6 {
+    color: #fff;
+    }
+      &:after {
+      content: "\e668";
+      color: #fff;
+      font-family: 'tsr-icons-all';
+      font-size: em(18);
+      position: absolute;
+      right: 10px;
+      bottom: 35%;
+      color: #fff;
+      }
+    }
+  } 
+
+  > li {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    & .parent:hover {
+      color: #fff;
+      background: $link-hover-color;
+      border-radius: $border-radius-base;
+      a {
+        color: #fff;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      width: 100%;
+      padding: 5px 14px;
+      border-bottom: 1px solid $gray;
+    }
   }
   h6 {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
     word-wrap:break-word;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  & > li h6:hover:after {
-    font-family: 'tsr-icons-all';
-    content: "\e668";
-    font-size: em(18);
-    float: right;
+    padding-right: 15px;
   }
 
-  .ee-sidenav-sub {
-    a {
-      padding-left: 30px;
-    }
-  }
-  li  a {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    padding: 5px 14px;
-    border-bottom: 1px solid $gray;
-
-    &:hover {
-      color: white;
-      background: $brand-primary;
-      border-radius: $border-radius-base;
-    }
-  }
 
 // change to whatever is your active state menu element name
-  .selected a{
-    color: white;
-    background: $link-hover-color;
+  .selected {
+    background: $brand-primary;
     border-radius: $border-radius-base;
-    h6:after {
+    h6 {
+    color: #fff;
+      &:after {
+        content: "\e668";
+      }
+    }
+  }
+  .selected h6:after,
+  h6:after {
     font-family: 'tsr-icons-all';
+    font-size: em(18);
+    position: absolute;
+    right: 10px;
+    bottom: 35%;
+    color: #fff;
+   }
+
+  .arrow-right:hover,
+  .arrow-right .selected {
+    h6:after {
     content: "\e668";
-    font-size: em(18);
-    float: right;
-    padding: 5px;
-    color: #fff;
+    }
    }
-  }
-  .selected-arrow-down a {
-    color: #fff;
-    background: $link-hover-color;
-    border-radius: $border-radius-base;
+  .arrow-down:hover,
+  .arrow-down .selected  {
     h6:after {
-    font-family: 'tsr-icons-all';
     content: "\e669";
-    font-size: em(18);
-    float: right;
-    padding: 5px;
-    color: #fff;
+
    }
   }
-  .selected-arrow-up a{
-    color: #fff;
-    background: $link-hover-color;
-    border-radius: $border-radius-base;
+  .arrow-up:hover,
+  .arrow-up .selected {
     h6:after {
-    font-family: 'tsr-icons-all';
     content: "\e66b";
-    font-size: em(18);
-    float: right;
-    padding: 5px;
-    color: #fff;
    }
   }
 }

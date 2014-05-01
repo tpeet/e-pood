@@ -1,27 +1,25 @@
-<div id="content-placeholder-menu" id="sidemenu"></div> 
-  <script id="menu-template" type="text/x-handlebars-template">
-  <ul class="ee-sidenav" id="sidemenu">
-    {{#sidemenu}}
+<ul class="ee-sidenav">
+   <li class="">
+     <a class="parent selected" href="#">
+       <h6>Minu lemmikud</h6>
+     </a>
+   </li>
+   <li>
+     <a class="parent" href="#"><h6>Soovinimekiri</h6></a>
+   </li>
+   <li>
+    <label for="">Lisa nimekiri</label>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Lisa</button>
+        </span>
+      </div>
+   </li>
+ </ul> 
 
-      {{#if sub}} 
-        <li>
-          <a class="parent"><h6>{{parent}}</h6></a>
-          <ul class="ee-sidenav-sub" id="{{href}}">
 
-            {{#each sub}}
-            <li><a href="#"><h6>{{this}}</h6></a></li>
-            {{/each}}
-          </ul>
-        </li>
-        {{else}}
-        <li>
-          <a class="parent" href="#"><h6>{{parent}} </h6></a>
-        </li>
-        {{/if}}
 
-    {{/sidemenu}}
-  </ul>
-  </script>
 
 <!-- http://jsfiddle.net/D2RLR/251/ add active-->
 

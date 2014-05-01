@@ -420,30 +420,28 @@
   <div class="row">
     <div class="col-md-3 hidden-sm hidden-xs">
 
-      <div id="content-placeholder-menu" id="sidemenu"></div> 
-  <script id="menu-template" type="text/x-handlebars-template">
-  <ul class="ee-sidenav" id="sidemenu">
-    {{#sidemenu}}
+        <ul class="ee-sidenav">
+   <li class="">
+     <a class="parent selected" href="#">
+       <h6>Minu lemmikud</h6>
+     </a>
+   </li>
+   <li>
+     <a class="parent" href="#"><h6>Soovinimekiri</h6></a>
+   </li>
+   <li>
+    <label for="">Lisa nimekiri</label>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Lisa</button>
+        </span>
+      </div>
+   </li>
+ </ul> 
 
-      {{#if sub}} 
-        <li>
-          <a class="parent"><h6>{{parent}}</h6></a>
-          <ul class="ee-sidenav-sub" id="{{href}}">
 
-            {{#each sub}}
-            <li><a href="#"><h6>{{this}}</h6></a></li>
-            {{/each}}
-          </ul>
-        </li>
-        {{else}}
-        <li>
-          <a class="parent" href="#"><h6>{{parent}} </h6></a>
-        </li>
-        {{/if}}
 
-    {{/sidemenu}}
-  </ul>
-  </script>
 
 <!-- http://jsfiddle.net/D2RLR/251/ add active-->
 
@@ -473,32 +471,20 @@
 
     </div>
 
-    <div class="col-sm-12 col-md-9 ee-product-boxes">
+    <div class="col-xs-12 col-sm-12 col-md-9 ee-product-boxes">
 
-      <div class="row minimal-header hidden-md hidden-lg">
+        <div class="row minimal-header hidden-md hidden-lg">
   <ul class="breadcrumb">
-    <li><a href="#">Telefonid</a></li>
-    <li class="active">Mobiiltelefonid</li>
+    <li><a href="#">Minu e-pood</a></li>
+    <li class="active">Minu lemmikud</li>
   </ul>
-  <h1>Mobiilitelefonid</h1>
+  <h1>Minu lemmikud</h1>
 </div>
-
-<!-- Ad area -->
-<div class="row ee-innerad">
-  <a href="">
-    <img src="assets/img/other/lion_novkamp_Elion_700x95_EST.png" alt="">
-    <div class="tsr-tactical-textPanel">
-    <!--       <header>Hakkab juba looma</header> -->
-      <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
-    </div>
-  </a>
-</div>
-
 
 <div class="row ee-comparebar">
   <div class="navbar navbar-default" role="compare">
     <ul class="list-inline navbar-left">
-      <li class='current'><a href="phone-list.html" class="current ee-iconbutton ee-list"></a></li>
+      <li><a href="phone-list.html" class="ee-iconbutton ee-list"></a></li>
       <li><a href="mobiilid.html" class="ee-iconbutton ee-block"></a></li>
     </ul>
     <ul class="list-inline navbar-right">
@@ -540,238 +526,132 @@
 <div class="row ee-filterbar">
   <div class="navbar navbar-inverse" role="filtering">
     <ul class="nav navbar-nav navbar-left">
-      <li class="active dropdown hidden-xs">
-        <a  data-toggle="collapse" data-target="#js-filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
+      <li class="active dropdown">
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#js-filter-fav">Näita kuuluvust kaubagruppi <span class="icon icon-arrow-down"></span></a>
       </li>
-
-      <li class="dropdown">
-        <a href="#" data-toggle="dropdown">Populaarsemad enne <span class="icon icon-arrow-down"></span></a>
-        <ul class="dropdown-menu inverse-dropdown">
-          <li><a href="">Populaarsemad enne</a></li>
-          <li><a href="">Odavamad enne</a></li>
-          <li><a href="">Kallimad enne</a></li>
-          <li><a href="">Uuemad enne</a></li>
+      <li class="visible-xs visible-sm">
+        <a href="#" data-toggle="dropdown">Vali nimekiri <span class="icon icon-arrow-down"></span></a>
+        <ul class="dropdown-menu ">
+          <li><a href="">Lemmikud</a></li>
+          <li><a href="">Soovinimekiri</a></li>
+          <li><a href="">Fav0</a></li>
+<!--           <li class="divider"></li>
+          <li>
+            <div class="navbar-text">Lisa uus</div>
+            <div class="col-12">
+              <input type="text">
+            </div>
+          </li> -->
         </ul>
       </li>
     </ul>
-    <p class="navbar-text navbar-right">Mobiiltelefonid, 32 toodet</p>
+    <p class="navbar-text navbar-right">Kokku 12 lemmikut</p> 
   </div>
-  <div id="js-filter" class="collapse ee-filter-content">
-    <div id="content-placeholder-filter"></div> 
-
-<p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
-
-<input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
-
-<div id="jsFiltersMore" class="collapse">Need muud filtrid, mis juurde tulevad, siia. Deemn, Nupu nimi...</div>
-
-<div class="text-right">
-  <input type="button" id="jsFiltersMoreText" class="btn btn-primary" data-toggle="collapse" data-target="#jsFiltersMore" value="Veel valikud" />
-  <button type="button" class="btn btn-primary">Tühista valikud</button>
-  <button type="button" class="btn btn-primary">Filtreeri</button>
 </div>
+  <div id="js-filter-fav" class="row collapse ee-filter-content">
 
-  <script id="filter-template" type="text/x-handlebars-template">
+    <ul class="nav nav-pills"> 
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+    </ul>
 
-  {{#parameters}}
-  <p>{{caption}} <i class="icon icon-help violet-text" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"></i> </p>
-  <ul class="nav nav-pills"> 
-    {{#each param}}
-      <li><a class="btn btn-primary inactive" role="button">{{para}}<span class="badge">{{amount}}</span></a>
-      </li>
-      {{/each}}
-  </ul>
-  {{/parameters}}
-
-  </script>
-
+    <div class="text-right">
+      <button type="button" class="btn btn-primary">Tühista valikud</button>
+      <button type="button" class="btn btn-primary">Vali</button>
+    </div>
   </div>
-</div> 
 
-      <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+
+ 
+
+        <!-- Product boxes listing, eg Arvutid 2nd level page-->
 
 <!-- Product boxes -->
 <div class="row">
-  <section class="tsr-section-productlist">
-
-    <div id="content-placeholder-phones-boxes"></div>
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-phones-boxes"></div>
   </section>
 </div>
 
 <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
   {{#phones}}
-
-    <div class="tsr-module-product">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+    <div class="tsr-module-product ">
       {{#if ribbon}}
-        <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">{{ribbon.text}}</span></span></span></figure>
       {{/if}}
       <div class="ee-favorite-dropdown">
         <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href="my-favorites.html"><span class="ee-favorite active"></span>Favs0 </a></li>
+          <li class='current'><a class='current' href="my-favorites.html"><span class="ee-favorite active"></span>Favs0 </a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
         </ul>
       </div>
 
       <figure class="tsr-product-image">
-      <a href="detail.html"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
-
-
-      <div class="tsr-product-colors hidden-xs">
-        <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
-        </ul>
-      </div>
-
-
+        <a href="detail.html">
+          <img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+        </a>
       </figure>
-
-      <div class="hidden-sm">
-        <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
-        <div class="ee-linkicons">
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
-        </div>
-      </div>
-
-
-
       <div class="tsr-product-content">
-        <h6 class="tsr-product-header hidden-xs"><a href="">{{name}}</a></h6>
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
 
-        <div class="row ee-linkicons hidden-xs">
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
-
-        </div>
-
-
-<div class="panel panel-pointed troll collapse" id="transport-{{id}}" data-parent="#{{id}}">
-  <div class="panel-body">
-    <p> Siit tellides saad kauba kätte juba <strong>homme, 14.04.2014</strong> (kehtib kojutellimusele Tallinna piires). <br> 
-      <small>Laoseis on viimati uuendatud: 13.04.2014 kell 18:13:10  <strong>NB!</strong> Poodide laoseis võib olla praeguseks muutunud. Telli kaup e-poest!</small>
-    </p>
-  </div>
-
-  <div class="panel-group ee-accordion" id="{{id}}">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseOne">
-            Endla 45, Harjumaa - Tallinn (Kristiine)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseTwo">
-            Paldiski mnt 102, Harjumaa - Tallinn (Rocca al Mare)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseThree">
-            Suur-Sõjamäe 4, Harjumaa - Tallinn (Ülemiste)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
+        {{#if client_price}}
+        <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-price"></p>
+          {{/if}}
+        {{/if}}
+        <a href="#" class="ee-compare"> Võrdle </a>
       </div>
     </div>
   </div>
-
-</div>
-
-
-        <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
-
-        <div class="row ee-actions">
-          {{#if flashes}}
-            <div class="col-sm-4"> &nbsp;
-              {{#if flash}}
-              <figure class="tsr-tactical-flash ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
-              {{/if}}
-              {{#if firstflash}}
-              <figure class="tsr-tactical-flash ee-flash-sm tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
-              {{/if}}
-              {{#if secondflash}}
-              <figure class="tsr-tactical-flash ee-flash-sm tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-              {{/if}}
-            </div>
-            {{else}}
-              <div class="col-sm-4 hidden-xs"> </div>
-          {{/if}}
-      <div class="tsr-product-colors hidden-sm">
-        <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
-        </ul>
-      </div>
-            <div class="col-sm-4 ee-pricecol">
-              {{#if client_price}}
-              <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
-              {{else}} 
-              <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
-              {{/if}}
-              <p class="tsr-product-price">Kuumakse: 47,15 €</p>
-            </div>
-            <div class="col-sm-4 col-sm-offset-4 " ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
-          </div>
-
-        <p>
-          {{#if campaign}}
-            <hr>
-            {{#each campaign}} 
-              <a href="#">{{this}} </a>
-            {{/each}}
-          {{/if}}
-        </p>
-
-
-      </div>
-    </div>
-
 
   {{/phones}}
 </script>
 
+<!--         {{#if colors}}
+          <ul class="tsr-product-colors">
+          {{#each colors}}
+            <li class="accent {{this}}"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-product-colors ee-hidden-xs">
+          </ul>
+        {{/if}} -->
 
-<!-- KEEP FOR LATER 
-      // <ul class="tsr-product-colors">
-      //   {{#if colors}}
-      //   {{#each colors}}
-      //     <li class="accent {{this}}"></li>
-      //   {{/each}}
-      //   {{/if}}
-      // </ul>
---> 
+<!--       <div class="tsr-product-colors dropup">
+      {{#if colors}}
+        <button class="ee-colors btn btn-link dropdown-toggle " data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
+        {{/if}}
+      </div> -->
+
+
+
+ 
 
     </div>
   </div>
@@ -950,13 +830,7 @@
     </script>
 
 </body>
-</html> 
+</html>  
 <script src="assets/js/handlebars/hbs-filter.hbs"></script>
 <script src="assets/js/handlebars/hbs-menu.hbs"></script>
 <script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
-
-<script type="text/javascript">
-// require(['./assets/js/setup'], function (setup) {
-//   require(['2nd-level']);
-// });
-</script>
