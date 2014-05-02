@@ -429,7 +429,7 @@
       {{#if sub}} 
         <li>
           <a class="firstlevel"><h6>{{parent}}</h6></a>
-          <ul class="ee-sidenav-sub" id="{{href}}">
+          <ul id="{{href}}">
 
             {{#each sub}}
             <li><a href="#"><h6>{{this}}</h6></a></li>
@@ -438,7 +438,7 @@
         </li>
         {{else}}
         <li>
-          <a class="firstlevel arrow-down" href="#"><h6>{{parent}} </h6></a>
+          <a class="firstlevel" href="#"><h6>{{parent}} </h6></a>
         </li>
         {{/if}}
 
