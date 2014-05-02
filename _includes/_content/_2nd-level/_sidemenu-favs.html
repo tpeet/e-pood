@@ -1,13 +1,14 @@
 <ul class="ee-sidenav">
-   <li class="">
-     <a class="parent selected" href="#">
+   <li >
+     <a class="firstlevel selected" href="#">
        <h6>Minu lemmikud</h6>
      </a>
    </li>
    <li>
-     <a class="parent" href="#"><h6>Soovinimekiri</h6></a>
+     <a class="firstlevel" href="#"><h6>Soovinimekiri</h6></a>
    </li>
    <li>
+    <br>
     <label for="">Lisa nimekiri</label>
       <div class="input-group">
         <input type="text" class="form-control">
@@ -23,25 +24,4 @@
 
 <!-- http://jsfiddle.net/D2RLR/251/ add active-->
 
-<!-- was: 
- <ul class="ee-sidenav" id="sidemenu">
-    {{#sidemenu}}
 
-      {{#if sub}} 
-        <li>
-          <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
-          <ul class="ee-sidenav-sub collapse" id="{{href}}">
-
-            {{#each sub}}
-            <li ><a href="#"><h6>{{this}}</h6></a></li>
-            {{/each}}
-          </ul>
-        </li>
-        {{else}}
-        <li>
-          <a href="javascript:void(0);"><h6>{{parent}} </h6></a>
-        </li>
-        {{/if}}
-
-    {{/sidemenu}}
-  </ul> -->

@@ -5217,41 +5217,16 @@ content - a> .content
   .ee-sidenav ul {
     padding: 0;
     list-style-type: none; }
-  .ee-sidenav > li > ul > li {
-    background-color: transparent; }
-    .ee-sidenav > li > ul > li a {
-      padding-left: 30px;
-      border-bottom: none; }
-    .ee-sidenav > li > ul > li:hover {
-      background: #4f2369; }
-    .ee-sidenav > li > ul > li .selected {
-      background: #652d86; }
-    .ee-sidenav > li > ul > li:hover,
-    .ee-sidenav > li > ul > li .selected {
-      border-radius: 4px; }
-      .ee-sidenav > li > ul > li:hover h6,
-      .ee-sidenav > li > ul > li .selected h6 {
-        color: #fff; }
-      .ee-sidenav > li > ul > li:hover:after,
-      .ee-sidenav > li > ul > li .selected:after {
-        content: "\e668";
-        color: #fff;
-        font-family: 'tsr-icons-all';
-        font-size: 1.125em;
-        position: absolute;
-        right: 10px;
-        bottom: 35%;
-        color: #fff; }
   .ee-sidenav > li {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-    .ee-sidenav > li .parent:hover {
+    .ee-sidenav > li .firstlevel:hover {
       color: #fff;
       background: #4f2369;
       border-radius: 4px; }
-      .ee-sidenav > li .parent:hover a {
+      .ee-sidenav > li .firstlevel:hover a {
         color: #fff; }
     .ee-sidenav > li a {
       display: block;
@@ -5259,35 +5234,51 @@ content - a> .content
       width: 100%;
       padding: 5px 14px;
       border-bottom: 1px solid #6c6c6c; }
-  .ee-sidenav h6 {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    word-wrap: break-word;
-    padding-right: 15px; }
+    .ee-sidenav > li:hover h6,
+    .ee-sidenav > li h6 {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 400;
+      word-wrap: break-word;
+      padding-right: 15px; }
+      .ee-sidenav > li:hover h6:after,
+      .ee-sidenav > li h6:after {
+        content: "\e668";
+        font-family: 'tsr-icons-all';
+        font-size: 1.125em;
+        position: absolute;
+        right: 10px;
+        bottom: 35%;
+        color: #fff; }
+  .ee-sidenav > li > ul > li a {
+    padding-left: 30px;
+    border-bottom: none; }
+  .ee-sidenav > li > ul > li:hover {
+    background: #4f2369;
+    border-radius: 4px; }
+    .ee-sidenav > li > ul > li:hover h6 {
+      color: #fff; }
   .ee-sidenav .selected {
     background: #652d86;
     border-radius: 4px; }
     .ee-sidenav .selected h6 {
       color: #fff; }
       .ee-sidenav .selected h6:after {
-        content: "\e668"; }
-  .ee-sidenav .selected h6:after,
-  .ee-sidenav h6:after {
-    font-family: 'tsr-icons-all';
-    font-size: 1.125em;
-    position: absolute;
-    right: 10px;
-    bottom: 35%;
-    color: #fff; }
+        content: "\e668";
+        font-family: 'tsr-icons-all';
+        font-size: 1.125em;
+        position: absolute;
+        right: 10px;
+        bottom: 35%;
+        color: #fff; }
   .ee-sidenav .arrow-right:hover h6:after,
-  .ee-sidenav .arrow-right .selected h6:after {
+  .ee-sidenav .arrow-right.selected h6:after {
     content: "\e668"; }
   .ee-sidenav .arrow-down:hover h6:after,
-  .ee-sidenav .arrow-down .selected h6:after {
+  .ee-sidenav .arrow-down.selected h6:after {
     content: "\e669"; }
   .ee-sidenav .arrow-up:hover h6:after,
-  .ee-sidenav .arrow-up .selected h6:after {
+  .ee-sidenav .arrow-up.selected h6:after {
     content: "\e66b"; }
 
 .bs-example, .example-code {

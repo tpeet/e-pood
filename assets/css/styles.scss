@@ -131,10 +131,14 @@ outline: none !important;
   }
 }
 
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  color: #fff;
+}
+
 // Alert
 
 .flyover {
-   top: -70px;
+   top: -160px;
    position: fixed;
    width: 100%;
    z-index: 5;
@@ -142,7 +146,10 @@ outline: none !important;
 }
 
 .flyover.in {
-   top: 40px;
+   top: 4px;
+    @include media-min($screen-sm) {
+    top: 40px;
+  } 
 }
 
 // WORK IN PROGRESS PARTS

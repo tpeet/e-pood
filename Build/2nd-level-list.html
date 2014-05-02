@@ -421,14 +421,14 @@
   <div class="row">
     <div class="col-md-3 hidden-sm hidden-xs">
 
-    <div id="content-placeholder-menu" id="sidemenu"></div> 
+    <div id="content-placeholder-menu"></div> 
   <script id="menu-template" type="text/x-handlebars-template">
-  <ul class="ee-sidenav" id="sidemenu">
+  <ul class="ee-sidenav">
     {{#sidemenu}}
 
       {{#if sub}} 
         <li>
-          <a class="parent"><h6>{{parent}}</h6></a>
+          <a class="firstlevel"><h6>{{parent}}</h6></a>
           <ul class="ee-sidenav-sub" id="{{href}}">
 
             {{#each sub}}
@@ -438,7 +438,7 @@
         </li>
         {{else}}
         <li>
-          <a class="parent" href="#"><h6>{{parent}} </h6></a>
+          <a class="firstlevel arrow-down" href="#"><h6>{{parent}} </h6></a>
         </li>
         {{/if}}
 
@@ -830,7 +830,7 @@
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
     $(document).ready(function(){
-      $('#sidemenu li  a').click(function(e){
+      $('.ee-sidenav li  a').click(function(e){
         if ($(this).attr('class') != 'selected'){
           $(this).addClass('selected');
           $('a').not(this).removeClass('selected');

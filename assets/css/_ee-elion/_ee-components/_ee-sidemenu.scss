@@ -8,44 +8,13 @@
     padding: 0;
     list-style-type: none;
   }
-  
-  > li > ul > li {
-    background-color: transparent;
-      a {
-      padding-left: 30px;
-      border-bottom: none;
-    }
-    &:hover {
-      background: $link-hover-color;
-    }
-    .selected {
-      background: $brand-primary;
-    }
-    &:hover,
-    .selected {
-    border-radius: $border-radius-base;
-    h6 {
-    color: #fff;
-    }
-      &:after {
-      content: "\e668";
-      color: #fff;
-      font-family: 'tsr-icons-all';
-      font-size: em(18);
-      position: absolute;
-      right: 10px;
-      bottom: 35%;
-      color: #fff;
-      }
-    }
-  } 
 
   > li {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    & .parent:hover {
+    & .firstlevel:hover {
       color: #fff;
       background: $link-hover-color;
       border-radius: $border-radius-base;
@@ -60,15 +29,39 @@
       padding: 5px 14px;
       border-bottom: 1px solid $gray;
     }
-  }
-  h6 {
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    word-wrap:break-word;
-    padding-right: 15px;
+
+    &:hover h6,
+    h6 {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 400;
+      word-wrap:break-word;
+      padding-right: 15px;
+      &:after {
+        content: "\e668";
+        font-family: 'tsr-icons-all';
+        font-size: em(18);
+        position: absolute;
+        right: 10px;
+        bottom: 35%;
+        color: #fff;
+      }
+    }
   }
 
+  > li > ul > li {
+      a {
+      padding-left: 30px;
+      border-bottom: none;
+    }
+    &:hover {
+      background: $link-hover-color;
+      border-radius: $border-radius-base;
+    h6 {
+      color: #fff;
+      }
+    }
+  } 
 
 // change to whatever is your active state menu element name
   .selected {
@@ -78,34 +71,32 @@
     color: #fff;
       &:after {
         content: "\e668";
+        font-family: 'tsr-icons-all';
+        font-size: em(18);
+        position: absolute;
+        right: 10px;
+        bottom: 35%;
+        color: #fff;
       }
     }
   }
-  .selected h6:after,
-  h6:after {
-    font-family: 'tsr-icons-all';
-    font-size: em(18);
-    position: absolute;
-    right: 10px;
-    bottom: 35%;
-    color: #fff;
-   }
 
+// additional forced classes. add to a element to take effect
   .arrow-right:hover,
-  .arrow-right .selected {
+  .arrow-right.selected {
     h6:after {
     content: "\e668";
     }
    }
   .arrow-down:hover,
-  .arrow-down .selected  {
+  .arrow-down.selected  {
     h6:after {
     content: "\e669";
 
    }
   }
   .arrow-up:hover,
-  .arrow-up .selected {
+  .arrow-up.selected {
     h6:after {
     content: "\e66b";
    }
