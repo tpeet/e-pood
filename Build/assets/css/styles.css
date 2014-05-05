@@ -8019,7 +8019,7 @@ var, .price {
       height: 28px;
       margin-top: -15px;
       position: absolute;
-      right: -1px;
+      right: 0;
       top: 50%;
       width: 1px;
       z-index: 1; }
@@ -11687,6 +11687,14 @@ section.ee-reviewarea {
     margin-right: 20px; }
 
 .ee-comparebar ul,
+.ee-filterbar ul {
+  width: 100%; }
+  @media screen and (min-width: 992px) {
+    .ee-comparebar ul,
+    .ee-filterbar ul {
+      width: auto;
+      display: inline; } }
+.ee-comparebar ul,
 .ee-comparebar .navbar-text,
 .ee-filterbar ul,
 .ee-filterbar .navbar-text {
@@ -11697,9 +11705,14 @@ section.ee-reviewarea {
     .ee-filterbar ul,
     .ee-filterbar .navbar-text {
       padding-left: 0; } }
+.ee-comparebar .input-group,
+.ee-filterbar .input-group {
+  padding: 15px; }
 
 .ee-filter-content {
-  margin-bottom: 20px; }
+  padding-bottom: 20px;
+  padding-right: 10px;
+  background: #fff; }
   .ee-filter-content p {
     margin-top: 15px;
     margin-bottom: 5px;

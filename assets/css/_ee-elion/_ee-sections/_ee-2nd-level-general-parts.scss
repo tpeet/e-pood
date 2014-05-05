@@ -110,17 +110,29 @@
 
 .ee-comparebar,
 .ee-filterbar {
-  ul, 
+  ul {
+    width: 100%;
+    @include media-min($screen-md) {
+     width: auto;
+     display: inline;
+    }
+  } 
+  ul,
   .navbar-text {
     padding-left: 10px;
     @include media-min($screen-sm) {
      padding-left: 0;
     }
   }
+  .input-group {
+    padding: 15px;
+  }
 }
 
 .ee-filter-content {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  background: #fff;
   p {
     margin-top: 15px;
     margin-bottom: 5px;

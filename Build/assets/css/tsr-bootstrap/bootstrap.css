@@ -2294,7 +2294,7 @@ input[type="button"].btn-block {
       height: 28px;
       margin-top: -15px;
       position: absolute;
-      right: -1px;
+      right: 0;
       top: 50%;
       width: 1px;
       z-index: 1; }
