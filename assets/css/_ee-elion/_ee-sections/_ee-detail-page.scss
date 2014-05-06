@@ -110,57 +110,15 @@ section.ee-section-leasing {
   }
 }
 
- .troll {
+ .panel.ee-transportaccordion {
     border-top: 1px solid $lightgrey-t;
-    border-bottom: 1px solid $lightgrey-t;
-    @extend %arrowbox;
-      &:after,
-  &:before {
-    left: 40px;
-  }
-  &:after {
-    border-top-color: $lightgrey-c;
-    }
-  &:before {
-    border-top-color: $lightgrey-t;
-    }
-  }
-
-.ee-accordion,
-.ee-more-info-tabs {
-  background: $lightgrey-c;
-
-  &.panel-group .panel + .panel {
-    margin-top: 0px;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 
 
 
-
-.panel-default {
-  border-radius: 0;
-  margin-top: -1px;
-}
-  .panel-title a {
-    padding: 16px 15px;
-    width: 100%;
-    display: block;
-    color: $purple-c;
-    font-size: 16px;
-    &.collapsed:after {
-    @extend %format-icon;
-    content: "\e6de";
-    float: right;
-    line-height: 0.85;
-    }
-    &:after {
-      @extend %format-icon;
-      content: "\e6e3";
-      float: right;
-      line-height: 0.85;
-    }
-  }
-
+.ee-tab-to-accordion {
   .panel-body {
     padding: 0;
     table {
@@ -168,22 +126,18 @@ section.ee-section-leasing {
       margin-top: -1px;
     }
   }
-  .panel-group {
-    margin: 0;
-    .panel-heading {
-      padding: 0;
-    }
-
-  }
 }
 
-section.ee-more-info-tabscontent {
+section.ee-tab-to-accordioncontent {
   border-top: none;
   background: white;
   margin-top: -1px;
   margin-bottom: 20px;
+  display: none;
   @include media-min($screen-sm) {
     border-top: 1px solid $lightgrey-t;
+    margin-bottom: 20px;
+    display: block;
   }
   .tsr-section-productAndService-listing {
     border-top: none;

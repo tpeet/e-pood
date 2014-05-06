@@ -10759,8 +10759,8 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     color: #fff; }
 
 .ee-list:before, .ee-block:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-accordion .panel-title a.collapsed:after,
-.ee-more-info-tabs .panel-title a.collapsed:after, .ee-accordion .panel-title a:after,
-.ee-more-info-tabs .panel-title a:after {
+.ee-tab-to-accordion .panel-title a.collapsed:after, .ee-accordion .panel-title a:after,
+.ee-tab-to-accordion .panel-title a:after {
   font-family: 'tsr-icons-all';
   font-size: 1.54839em;
   padding-right: 5px;
@@ -11336,6 +11336,42 @@ section.tsr-section-productlist {
     z-index: 1; }
     .tsr-tactical-textPanel span {
       margin: 10px 30px 12px 20px; } }
+.ee-accordion,
+.ee-tab-to-accordion {
+  background: #f6f6f6; }
+  .ee-accordion .panel-group .panel + .panel, .ee-accordion.panel-group .panel + .panel,
+  .ee-tab-to-accordion .panel-group .panel + .panel,
+  .ee-tab-to-accordion.panel-group .panel + .panel {
+    margin-top: -1px; }
+  .ee-accordion .panel-default,
+  .ee-tab-to-accordion .panel-default {
+    border-radius: 0;
+    margin-top: -1px;
+    padding: 0; }
+  .ee-accordion .panel-title a,
+  .ee-tab-to-accordion .panel-title a {
+    padding: 16px 15px;
+    width: 100%;
+    display: block;
+    color: #642887;
+    font-size: 16px; }
+    .ee-accordion .panel-title a.collapsed:after,
+    .ee-tab-to-accordion .panel-title a.collapsed:after {
+      content: "\e6de";
+      float: right;
+      line-height: 0.85; }
+    .ee-accordion .panel-title a:after,
+    .ee-tab-to-accordion .panel-title a:after {
+      content: "\e6e3";
+      float: right;
+      line-height: 0.85; }
+  .ee-accordion .panel-group,
+  .ee-tab-to-accordion .panel-group {
+    margin: 0; }
+  .ee-accordion .panel-heading,
+  .ee-tab-to-accordion .panel-heading {
+    padding: 0; }
+
 section.ee-product-detail {
   margin-bottom: 30px; }
   section.ee-product-detail h1:first-of-type {
@@ -11413,76 +11449,39 @@ section.ee-section-leasing {
   section.ee-section-leasing .ee-product-price-lg {
     line-height: 2; }
 
-.troll {
+.panel.ee-transportaccordion {
   border-top: 1px solid #dbdbdb;
-  border-bottom: 1px solid #dbdbdb; }
-  .troll:after, .troll:before {
-    left: 40px; }
-  .troll:after {
-    border-top-color: #f6f6f6; }
-  .troll:before {
-    border-top-color: #dbdbdb; }
+  margin-bottom: 0;
+  border-bottom: none; }
 
-.ee-accordion,
-.ee-more-info-tabs {
-  background: #f6f6f6; }
-  .ee-accordion.panel-group .panel + .panel,
-  .ee-more-info-tabs.panel-group .panel + .panel {
-    margin-top: 0px; }
-  .ee-accordion .panel-default,
-  .ee-more-info-tabs .panel-default {
-    border-radius: 0;
+.ee-tab-to-accordion .panel-body {
+  padding: 0; }
+  .ee-tab-to-accordion .panel-body table {
+    margin-bottom: 0;
     margin-top: -1px; }
-  .ee-accordion .panel-title a,
-  .ee-more-info-tabs .panel-title a {
-    padding: 16px 15px;
-    width: 100%;
-    display: block;
-    color: #642887;
-    font-size: 16px; }
-    .ee-accordion .panel-title a.collapsed:after,
-    .ee-more-info-tabs .panel-title a.collapsed:after {
-      content: "\e6de";
-      float: right;
-      line-height: 0.85; }
-    .ee-accordion .panel-title a:after,
-    .ee-more-info-tabs .panel-title a:after {
-      content: "\e6e3";
-      float: right;
-      line-height: 0.85; }
-  .ee-accordion .panel-body,
-  .ee-more-info-tabs .panel-body {
-    padding: 0; }
-    .ee-accordion .panel-body table,
-    .ee-more-info-tabs .panel-body table {
-      margin-bottom: 0;
-      margin-top: -1px; }
-  .ee-accordion .panel-group,
-  .ee-more-info-tabs .panel-group {
-    margin: 0; }
-    .ee-accordion .panel-group .panel-heading,
-    .ee-more-info-tabs .panel-group .panel-heading {
-      padding: 0; }
 
-section.ee-more-info-tabscontent {
+section.ee-tab-to-accordioncontent {
   border-top: none;
   background: white;
   margin-top: -1px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: none; }
   @media screen and (min-width: 768px) {
-    section.ee-more-info-tabscontent {
-      border-top: 1px solid #dbdbdb; } }
-  section.ee-more-info-tabscontent .tsr-section-productAndService-listing {
+    section.ee-tab-to-accordioncontent {
+      border-top: 1px solid #dbdbdb;
+      margin-bottom: 20px;
+      display: block; } }
+  section.ee-tab-to-accordioncontent .tsr-section-productAndService-listing {
     border-top: none; }
-  section.ee-more-info-tabscontent .tab-content {
+  section.ee-tab-to-accordioncontent .tab-content {
     margin: 30 px auto; }
-  section.ee-more-info-tabscontent .tab-pane {
+  section.ee-tab-to-accordioncontent .tab-pane {
     margin: 30px 0 10px; }
-    section.ee-more-info-tabscontent .tab-pane.ee-similar-products {
+    section.ee-tab-to-accordioncontent .tab-pane.ee-similar-products {
       margin: 0;
       border-top: none; }
       @media screen and (min-width: 768px) {
-        section.ee-more-info-tabscontent .tab-pane.ee-similar-products {
+        section.ee-tab-to-accordioncontent .tab-pane.ee-similar-products {
           margin: 30px 0 10px; } }
 
 .ee-justified-list {
@@ -11510,10 +11509,10 @@ section.ee-more-info-tabscontent {
   border-bottom: 1px solid #dbdbdb;
   background: #f6f6f6; }
 
-.troll, .ee-reviewed-initial .container, .ee-reviewed-answer .container {
+.ee-reviewed-initial .container, .ee-reviewed-answer .container {
   position: relative;
   border-bottom: 1px solid transparent; }
-  .troll:after, .ee-reviewed-initial .container:after, .ee-reviewed-answer .container:after, .troll:before, .ee-reviewed-initial .container:before, .ee-reviewed-answer .container:before {
+  .ee-reviewed-initial .container:after, .ee-reviewed-answer .container:after, .ee-reviewed-initial .container:before, .ee-reviewed-answer .container:before {
     top: 100%;
     border: solid transparent;
     content: " ";
@@ -11522,11 +11521,11 @@ section.ee-more-info-tabscontent {
     position: absolute;
     pointer-events: none;
     z-index: 2; }
-  .troll:after, .ee-reviewed-initial .container:after, .ee-reviewed-answer .container:after {
+  .ee-reviewed-initial .container:after, .ee-reviewed-answer .container:after {
     border-color: rgba(255, 255, 255, 0);
     border-width: 15px;
     margin-left: -15px; }
-  .troll:before, .ee-reviewed-initial .container:before, .ee-reviewed-answer .container:before {
+  .ee-reviewed-initial .container:before, .ee-reviewed-answer .container:before {
     border-color: rgba(71, 82, 89, 0);
     border-width: 16px;
     margin-left: -16px; }
@@ -11692,8 +11691,7 @@ section.ee-reviewarea {
   @media screen and (min-width: 992px) {
     .ee-comparebar ul,
     .ee-filterbar ul {
-      width: auto;
-      display: inline; } }
+      width: auto; } }
 .ee-comparebar ul,
 .ee-comparebar .navbar-text,
 .ee-filterbar ul,
@@ -11940,18 +11938,22 @@ body {
   color: #fff; }
 
 .flyover {
-  top: -160px;
+  top: -250px;
   position: fixed;
   width: 100%;
   z-index: 5;
   transition: top 0.3s ease-out 0s; }
 
 .flyover.in {
-  top: 4px; }
-  @media screen and (min-width: 768px) {
-    .flyover.in {
-      top: 40px; } }
+  top: 0px; }
 
+@media screen and (min-width: 768px) {
+  .flyover.in.top {
+     top: 0px; }
+
+   
+  .flyover.in.middle {
+    top: 40px; } }
 .ee-flashtext-container {
   text-align: center;
   display: table-cell;

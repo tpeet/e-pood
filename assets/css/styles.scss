@@ -80,11 +80,13 @@
 /* @include _ee-frontpage.scss */
 /* @include _ee-2nd-level-list.scss */
 /* @include _ee-banner-ad.scss */
+/* @include _ee-accordion.scss */
 /* @include _ee-detail-page.scss */
 /* @include _ee-reviews.scss */
 /* @include _ee-2nd-level-general-parts.scss */
 /* @include _ee-productslider.scss */
 /* @include _ee-mainnav.scss */
+
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
@@ -138,7 +140,7 @@ outline: none !important;
 // Alert
 
 .flyover {
-   top: -160px;
+   top: -250px;
    position: fixed;
    width: 100%;
    z-index: 5;
@@ -146,12 +148,18 @@ outline: none !important;
 }
 
 .flyover.in {
-   top: 4px;
-    @include media-min($screen-sm) {
-    top: 40px;
-  } 
+   top: 0px;
 }
 
+@media screen and (min-width: 768px) {
+   .flyover.in.top {
+    top: 0px;
+   }
+ 
+  .flyover.in.middle {
+   top: 40px;
+  }
+}
 // WORK IN PROGRESS PARTS
 //**********************************
 

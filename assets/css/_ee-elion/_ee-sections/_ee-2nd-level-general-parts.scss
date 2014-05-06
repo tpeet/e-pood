@@ -114,7 +114,7 @@
     width: 100%;
     @include media-min($screen-md) {
      width: auto;
-     display: inline;
+     // display: inline;
     }
   } 
   ul,
