@@ -154,6 +154,50 @@
 
 
 
+<div class="alert full-size flyover alert-success" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Taasta nimekiri
+            </a>
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Asi on edukalt ostukorvi pandud</span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Mine ostukorvi
+            </a>
+        </div>
+        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-warning flyover" id="alert1">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <strong>Sisselogimine ebaonnestus</strong>
+            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+            <a class="read-more" href="#">Proovi uuesti</a>
+        </div>
+        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<!-- <div class="temporary" style="margin-top: 100px;">
+    <button id="infobtn" class="btn btn-info">Info</button>
+    <button id="successbtn" class="btn btn-success">Success</button>
+    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
+</div> -->
+
 <nav class="navbar navbar-default">
   <div class="container">
 
@@ -552,8 +596,11 @@
           </form>
       </ul>
       </li>
+      <li>
+        <a href="#" id="successbtn" data-toggle="dropdown">Kustuta nimekiri <span class="icon icon-delete close-btn"></span></a> 
+      </li>
     </ul>
-    <p class="navbar-text navbar-right">Kokku 12 lemmikut</p> 
+    <p class="navbar-text navbar-right"><strong>Minu lemmikud</strong>, kokku 12 asja.</p> 
   </div>
 </div>
   <div id="js-filter-fav" class="row collapse ee-filter-content">

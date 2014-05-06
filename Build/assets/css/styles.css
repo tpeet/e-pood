@@ -11454,6 +11454,12 @@ section.ee-section-leasing {
   margin-bottom: 0;
   border-bottom: none; }
 
+.panel .collapsing {
+  -moz-transition: height 5s;
+  -webkit-transition: height 5s;
+  -o-transition: height 5s;
+  transition: height 5s; }
+
 .ee-tab-to-accordion .panel-body {
   padding: 0; }
   .ee-tab-to-accordion .panel-body table {
@@ -11684,6 +11690,8 @@ section.ee-reviewarea {
       margin-top: 10px; } }
   .ee-filterbar .navbar-text.navbar-right:last-child {
     margin-right: 20px; }
+  .ee-filterbar .navbar-text a {
+    color: #fff; }
 
 .ee-comparebar ul,
 .ee-filterbar ul {
