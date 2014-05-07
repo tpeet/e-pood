@@ -40,15 +40,19 @@
     <div class="row ee-actions">
       <div class="col-md-5 col-sm-6">
         <button class="tsr-btn tsr-btn-100  ee-btn-buy"><i class="icon icon-buy_2"></i>Lisa ostukorvi</button>
-        <a href="#">Vaata saadavust esindustes</a>
+        <a data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust esindustes</a>
       </div>
       <div class="col-md-4 col-sm-4 ">
         <p>Kaup kätte Tallinnas või mujal: Täna, 20.12.2013
         </p>
       </div>
     </div>
+    <!-- @include _transport-module.html -->
   </div>
+   
 </div>
+
+
 
 <div class="col-sm-5 col-sm-pull-7 ee-detailview">
   {{#if firstflash}}
@@ -89,16 +93,18 @@
     <div class="col-sm-5">
       <button class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i>Lisa ostukorvi</button>
       
-      <a href="#">Vaata saadavust esindustes</a>
+      <a data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Vaata saadavust esindustes</a>
     </div>
+    <!-- @include _transport-module.html --> 
     <div class="col-sm-7">
       <p>Kaup kätte Tallinnas: Täna, 20.12.2013
       </p>
     </div>
   </div>
+  
 </div>
 
-<div class="col-sm-5 col-sm-pull-7 col-lg-pull-0">
+<div class="col-sm-5 col-sm-pull-7 ">
   <div class="row ee-linkicons ">
     <div class="col-md-5  col-xs-6" ><a href="#" class="ee-comments">Arvamused (5)</a></div>
     <div class="col-md-3   col-xs-6"><a href="#" class="ee-compare">Võrdle</a></div>

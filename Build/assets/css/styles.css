@@ -11336,41 +11336,44 @@ section.tsr-section-productlist {
     z-index: 1; }
     .tsr-tactical-textPanel span {
       margin: 10px 30px 12px 20px; } }
-.ee-accordion,
+.ee-accordion {
+  background: #fff; }
+
 .ee-tab-to-accordion {
   background: #f6f6f6; }
-  .ee-accordion .panel-group .panel + .panel, .ee-accordion.panel-group .panel + .panel,
-  .ee-tab-to-accordion .panel-group .panel + .panel,
-  .ee-tab-to-accordion.panel-group .panel + .panel {
-    margin-top: -1px; }
-  .ee-accordion .panel-default,
-  .ee-tab-to-accordion .panel-default {
-    border-radius: 0;
-    margin-top: -1px;
-    padding: 0; }
-  .ee-accordion .panel-title a,
-  .ee-tab-to-accordion .panel-title a {
-    padding: 16px 15px;
-    width: 100%;
-    display: block;
-    color: #642887;
-    font-size: 16px; }
-    .ee-accordion .panel-title a.collapsed:after,
-    .ee-tab-to-accordion .panel-title a.collapsed:after {
-      content: "\e6de";
-      float: right;
-      line-height: 0.85; }
-    .ee-accordion .panel-title a:after,
-    .ee-tab-to-accordion .panel-title a:after {
-      content: "\e6e3";
-      float: right;
-      line-height: 0.85; }
-  .ee-accordion .panel-group,
-  .ee-tab-to-accordion .panel-group {
-    margin: 0; }
-  .ee-accordion .panel-heading,
-  .ee-tab-to-accordion .panel-heading {
-    padding: 0; }
+
+.ee-accordion .panel-group .panel + .panel, .ee-accordion.panel-group .panel + .panel,
+.ee-tab-to-accordion .panel-group .panel + .panel,
+.ee-tab-to-accordion.panel-group .panel + .panel {
+  margin-top: -1px; }
+.ee-accordion .panel-default,
+.ee-tab-to-accordion .panel-default {
+  border-radius: 0;
+  margin-top: -1px;
+  padding: 0; }
+.ee-accordion .panel-title a,
+.ee-tab-to-accordion .panel-title a {
+  padding: 16px 15px;
+  width: 100%;
+  display: block;
+  color: #642887;
+  font-size: 16px; }
+  .ee-accordion .panel-title a.collapsed:after,
+  .ee-tab-to-accordion .panel-title a.collapsed:after {
+    content: "\e6de";
+    float: right;
+    line-height: 0.85; }
+  .ee-accordion .panel-title a:after,
+  .ee-tab-to-accordion .panel-title a:after {
+    content: "\e6e3";
+    float: right;
+    line-height: 0.85; }
+.ee-accordion .panel-group,
+.ee-tab-to-accordion .panel-group {
+  margin: 0; }
+.ee-accordion .panel-heading,
+.ee-tab-to-accordion .panel-heading {
+  padding: 0; }
 
 section.ee-product-detail {
   margin-bottom: 30px; }

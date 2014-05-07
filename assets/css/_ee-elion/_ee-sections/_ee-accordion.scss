@@ -1,7 +1,14 @@
 // look at detail-page.scss for more
-.ee-accordion,
+.ee-accordion {
+  background: #fff;
+}
+
 .ee-tab-to-accordion {
   background: $lightgrey-c;
+}
+
+.ee-accordion,
+.ee-tab-to-accordion {
   .panel-group .panel + .panel,
   &.panel-group .panel + .panel {
     margin-top: -1px;
