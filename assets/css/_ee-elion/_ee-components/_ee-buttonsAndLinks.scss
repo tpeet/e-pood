@@ -127,7 +127,6 @@ text-align: left;
 }
 
 %format-icon-negative {
-  // font-family: 'elion-ikoonid';
   font-family: 'tsr-icons-all';
   font-size: em(16);
   padding-right: 5px;
@@ -231,28 +230,9 @@ text-align: left;
 //   }
 // }
 
-.icon-facebook-inverse {
-  &:before {
-  @extend %format-icon-negative;
-  content: "\e002";
-  color: #fff;
-  }
-}
-
-.icon-twitter-inverse {
-  &:before {
-  @extend %format-icon-negative;
-  content: "\e001";
-  color: #fff;
-  }
-}
-
-.icon-googleplus-inverse {
-  &:before {
-  @extend %format-icon-negative;
-  content: "\e66d";
-  color: #fff;
-  }
+.rating-input:hover .ee-favorite:before,
+.rating-input:hover .ee-favorite.active:before {
+  color: $star-yellow;
 }
 
 .ee-colors {

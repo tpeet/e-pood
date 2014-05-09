@@ -5,171 +5,56 @@
     <section class="ee-reviews">
       <article class="ee-reviewed-initial">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-7">
-              <h6>{{name}}</h6>
-              <p class="text-muted">{{date}}</p>
-            </div>
-            <div class="col-sm-5 text-right">
-            {{#if starred}}
-              <input type="number" name="rating" id="rating1" class="rating" data-max="5" data-min="1" value="{{starred}}" />
-            {{/if}}
-            </div>
-          </div>
           <div class="row ee-review-body">
+            {{#if starred}}
+              <input type="number" name="rating" id="rating-{{name}}" class="rating" value="{{starred}}" />
+            {{/if}}
             <div class="col-sm-11">
+              <h6>
+              {{#if elion}}
+              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" title="Elioni töötaja" data-content=" Arendusosakonna juhataja "> <i class="icon icon-support "></i></a>
+              {{/if}}
+              {{name}}
+              </h6>
+              <p class="text-muted">{{date}}</p>
+
               <p>{{{body}}}</p>
             </div>
-            <div class="col-sm-1 ee-review-respond text-right pull-right">
+            <div class="ee-review-respond text-right">
               <p class="js-slidetoggle">
                 <a href="#">Vasta</a>
               </p>
             </div>
           </div>
         </div>
-        <section class="ee-review-answer-add js-togglable" style="display: none;">
-          <div class="container tsr-forms">
-            <div class="row">
-              <div class="col-xs-5">
-                <h4>Vasta</h4>
-                <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
-              </div>
-              <div class="col-xs-7 text-right">
-                <ul class="socialcount" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-                  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Share on Facebook"><span class="social-icon icon-facebook"></span><span class="count">Soovita</span></a></li>
-                  <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Share on Twitter"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a></li>
-                  <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Share on Google Plus"><span class="social-icon icon-googleplus"></span><span class="count">+1</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <form action="">
-              <div class="row ee-input-aside">
-                <div class="col-xs-4">
-                  <label class="sr-only" for="Nimi">Nimi</label>
-                  <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
-                  <label class="sr-only" for="E-post">E-post</label>
-                  <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
-                </div>
-                <div class="col-xs-8">
-                  <label class="sr-only" for="E-post">Arvamus</label>
-                  <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4">
-                  <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-                </div>
-                <div class="col-xs-4">
-                  <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
-                </div>
-                <div class="col-xs-4  text-right">
-                  <label for="rating-1">Hinda toodet <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" /></label>
-                </div>
-              </div>
-              <div class="row ee-action-submit">
-                <div class="col-xs-4">
-                <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-
-                </div>
-                <div class="col-xs-5 ee-captcha">
-                  <img src="assets/img/other/captcha.png" alt="">
-                  <button class="btn btn-link"><i class="icon-synctsicon48px"></i></button>
-                  <label class="sr-only" for="captcha">Kontrollkood</label>
-                  <input type="text" id="captcha" name="captcha" />
-                </div>
-                <div class="col-xs-3  text-right">
-                  <button class="tsr-btn tsr-btn-purple text-right">Saada arvamus</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
+        <!-- @include _review-answer-toggle.html -->
       </article>
-
-
 
       {{#each answer}}
       <article class="ee-reviewed-answer">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-7">
-              <h6>{{name}}</h6>
-              <p class="text-muted">{{date}}</p>
-            </div>
-            <div class="col-sm-5 text-right">
-            {{#if starred}}
-              <input type="number" name="rating" id="rating1" class="rating" value="{{starred}}" />
-            {{/if}}
-            </div>
-          </div>
           <div class="row ee-review-body">
-            <div class="col-sm-11">
+              {{#if starred}}
+              <input type="number" name="rating" id="rating-{{name}}" class="rating" value="{{starred}}" />
+              {{/if}}
+            <div class="col-sm-10 col-sm-offset-1">
+              <h6>
+              {{#if elion}}
+              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" data-title="{{name}}" data-content=" Peeter Karolin töötab Elionis infoarhitektina. "> <i class="icon icon-support "></i></a>
+              {{/if}}
+              {{name}}
+              </h6>
+              <p class="text-muted">{{date}}</p>
               <p>{{{body}}}</p>
             </div>
-            <div class="col-sm-1 ee-review-respond text-right pull-right">
+            <div class="ee-review-respond  text-right">
               <p class="js-slidetoggle">
                 <a href="#">Vasta</a>
               </p>
             </div>
           </div>
         </div>
-        <section class="ee-review-answer-add js-togglable" style="display: none;">
-          <div class="container tsr-forms">
-            <div class="row">
-              <div class="col-xs-5">
-                <h4>Vasta</h4>
-                <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
-              </div>
-              <div class="col-xs-7 text-right">
-                <ul class="socialcount" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-                  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Share on Facebook"><span class="social-icon icon-facebook"></span><span class="count">Soovita</span></a></li>
-                  <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Share on Twitter"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a></li>
-                  <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Share on Google Plus"><span class="social-icon icon-googleplus"></span><span class="count">+1</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <form action="">
-              <div class="row ee-input-aside">
-                <div class="col-xs-4">
-                  <label class="sr-only" for="Nimi">Nimi</label>
-                  <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
-                  <label class="sr-only" for="E-post">E-post</label>
-                  <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
-                </div>
-                <div class="col-xs-8">
-                  <label class="sr-only" for="E-post">Arvamus</label>
-                  <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-4">
-                  <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-                </div>
-                <div class="col-xs-4">
-                  <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
-                </div>
-                <div class="col-xs-4  text-right">
-                  <label for="rating-1">Hinda toodet <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" /></label>
-                </div>
-              </div>
-              <div class="row ee-action-submit">
-                <div class="col-xs-4">
-                <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-
-                </div>
-                <div class="col-xs-5 ee-captcha">
-                  <img src="assets/img/other/captcha.png" alt="">
-                  <button class="btn btn-link"><i class="icon-synctsicon48px"></i></button>
-                  <label class="sr-only" for="captcha">Kontrollkood</label>
-                  <input type="text" id="captcha" name="captcha" />
-                </div>
-                <div class="col-xs-3  text-right">
-                  <button class="tsr-btn tsr-btn-purple text-right">Saada arvamus</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </section>
+        <!-- @include _review-answer-toggle.html -->
       </article>
       {{/each}}
     </section>

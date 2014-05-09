@@ -21,7 +21,6 @@
   &:after,
   &:before {
     top: 100%;
-
     border: solid transparent;
     content: " ";
     height: 0;
@@ -43,14 +42,13 @@
 }
 
 section.ee-reviewarea {
-  margin-top: 15px;
   margin-bottom: -21px;
     article {
     margin-top: -1px;
   }
-  .rating-input {
-    margin-top: 15px;
-  }
+  // .rating-input {
+  //   margin-top: 15px;
+  // }
 }
 
 .ee-reviewed-initial {
@@ -103,18 +101,24 @@ section.ee-reviewarea {
 }
 
 .ee-review-body {
-  display: table;
+  position: relative;
+  margin-bottom: 10px;
+  .rating-input {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
 }
 
 .ee-review-respond {
-  display: table-cell;
-  vertical-align: bottom;
-  float: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .ee-review-add,
 .ee-review-answer-add {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 
   .tsr-forms {
     .ee-input-aside {
@@ -125,8 +129,12 @@ section.ee-reviewarea {
         margin-top: 15px;
       }
     }
+    // label {
+    //   margin-top: 0;
+    // }
     .ee-action-submit {
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 20px;
     }
     .ee-captcha {
       .btn {
@@ -135,9 +143,12 @@ section.ee-reviewarea {
       }
       input {
         display: inline;
-        width: auto;
+        width: 100px;
       }
     }
+  }
+  .ee-sendreview {
+  margin-top: 20px;
   }
 }
 

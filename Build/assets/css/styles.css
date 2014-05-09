@@ -10117,14 +10117,23 @@ html[xmlns] .slides {display: block;}
 /*! SocialCount - v0.1.6 - 2013-08-08
 * https://github.com/filamentgroup/SocialCount
 * Copyright (c) 2013 zachleat; Licensed MIT */
+.icon-facebook-inverse:before, .icon-twitter-inverse:before, .icon-googleplus-inverse:before {
+  font-family: 'tsr-icons-all';
+  font-size: 1em;
+  padding-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #652d86; }
+
 .socialcount {
-  color: #fff;
+  color: #652d86;
   font-size: .875em;
   line-height: 2.2em; }
 
 .socialcount > li {
-  background-color: #642887;
-  margin-right: 6px; }
+  background-color: transparent;
+  margin-right: 6px;
+  border: 1px solid #652d86; }
 
 .socialcount > li,
 .socialcount > li > a:focus,
@@ -10134,9 +10143,31 @@ html[xmlns] .slides {display: block;}
 .socialcount > li > a:focus,
 .socialcount > li:hover,
 .socialcount > li.hover {
-  background-color: #73369e; }
+  background-color: #73369e;
+  color: #fff; }
+  .socialcount > li > a:focus .icon-facebook-inverse:before,
+  .socialcount > li:hover .icon-facebook-inverse:before,
+  .socialcount > li.hover .icon-facebook-inverse:before {
+    color: #fff; }
+  .socialcount > li > a:focus .icon-twitter-inverse:before,
+  .socialcount > li:hover .icon-twitter-inverse:before,
+  .socialcount > li.hover .icon-twitter-inverse:before {
+    color: #fff; }
+  .socialcount > li > a:focus .icon-googleplus-inverse:before,
+  .socialcount > li:hover .icon-googleplus-inverse:before,
+  .socialcount > li.hover .icon-googleplus-inverse:before {
+    color: #fff; }
 
 /* Special class added to count when it's >= the minimum */
+.icon-facebook-inverse:before {
+  content: "\e002"; }
+
+.icon-twitter-inverse:before {
+  content: "\e001"; }
+
+.icon-googleplus-inverse:before {
+  content: "\e66d"; }
+
 /* Base CSS */
 .socialcount {
   list-style: none;
@@ -10363,34 +10394,6 @@ html[xmlns] .slides {display: block;}
   display: inline-block;
   *display: inline;
   zoom: 1; }
-
-.icon-sprite, .icon-facebook, .icon-googleplus, .icon-pinterest, .icon-share, .icon-twitter {
-  background: url(../img/other/icon-sd6cd4d0ec7.png) no-repeat; }
-
-.icon-facebook {
-  background-position: 0 0;
-  height: 15px;
-  width: 17px; }
-
-.icon-googleplus {
-  background-position: -21px 0;
-  height: 17px;
-  width: 20px; }
-
-.icon-pinterest {
-  background-position: -45px 0;
-  height: 15px;
-  width: 11px; }
-
-.icon-share {
-  background-position: -60px 0;
-  height: 16px;
-  width: 20px; }
-
-.icon-twitter {
-  background-position: -84px 0;
-  height: 15px;
-  width: 17px; }
 
 /* HD icons */
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
@@ -10772,14 +10775,6 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   -o-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out; }
 
-.icon-facebook-inverse:before, .icon-twitter-inverse:before, .icon-googleplus-inverse:before {
-  font-family: 'tsr-icons-all';
-  font-size: 1.03226em;
-  padding-right: 5px;
-  display: inline-block;
-  vertical-align: middle;
-  color: #fff; }
-
 .ee-list:before {
   color: inherit;
   content: "\e6e5"; }
@@ -10826,17 +10821,9 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
 .ee-transport:hover:before {
   color: #73369e; }
 
-.icon-facebook-inverse:before {
-  content: "\e002";
-  color: #fff; }
-
-.icon-twitter-inverse:before {
-  content: "\e001";
-  color: #fff; }
-
-.icon-googleplus-inverse:before {
-  content: "\e66d";
-  color: #fff; }
+.rating-input:hover .ee-favorite:before,
+.rating-input:hover .ee-favorite.active:before {
+  color: #f9dc00; }
 
 .ee-colors:before {
   content: url(../img/branding/colorMixer.png);
@@ -10925,7 +10912,9 @@ section.tsr-section-productAndService-listing {
     display: block; }
 
 .tsr-section-divider {
-  margin-top: -1px; }
+  margin-top: -1px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .tsr-product-price {
   color: #333333;
@@ -11463,6 +11452,8 @@ section.ee-section-leasing {
   -o-transition: height 5s;
   transition: height 5s; }
 
+.ee-tab-to-accordion .nav-justified {
+  margin-top: -1px; }
 .ee-tab-to-accordion .panel-body {
   padding: 0; }
   .ee-tab-to-accordion .panel-body table {
@@ -11540,12 +11531,9 @@ section.ee-tab-to-accordioncontent {
     margin-left: -16px; }
 
 section.ee-reviewarea {
-  margin-top: 15px;
   margin-bottom: -21px; }
   section.ee-reviewarea article {
     margin-top: -1px; }
-  section.ee-reviewarea .rating-input {
-    margin-top: 15px; }
 
 .ee-reviewed-initial .container {
   padding-top: 10px; }
@@ -11571,16 +11559,21 @@ section.ee-reviewarea {
   border: none; }
 
 .ee-review-body {
-  display: table; }
+  position: relative;
+  margin-bottom: 10px; }
+  .ee-review-body .rating-input {
+    position: absolute;
+    top: 0;
+    right: 10px; }
 
 .ee-review-respond {
-  display: table-cell;
-  vertical-align: bottom;
-  float: none; }
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
 
 .ee-review-add,
 .ee-review-answer-add {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
   .ee-review-add .tsr-forms .ee-input-aside textarea,
   .ee-review-answer-add .tsr-forms .ee-input-aside textarea {
     min-height: 92px; }
@@ -11589,7 +11582,8 @@ section.ee-reviewarea {
     margin-top: 15px; }
   .ee-review-add .tsr-forms .ee-action-submit,
   .ee-review-answer-add .tsr-forms .ee-action-submit {
-    margin-top: 20px; }
+    margin-top: 10px;
+    margin-bottom: 20px; }
   .ee-review-add .tsr-forms .ee-captcha .btn,
   .ee-review-answer-add .tsr-forms .ee-captcha .btn {
     font-size: 20px;
@@ -11597,7 +11591,10 @@ section.ee-reviewarea {
   .ee-review-add .tsr-forms .ee-captcha input,
   .ee-review-answer-add .tsr-forms .ee-captcha input {
     display: inline;
-    width: auto; }
+    width: 100px; }
+  .ee-review-add .ee-sendreview,
+  .ee-review-answer-add .ee-sendreview {
+    margin-top: 20px; }
 
 .ee-review-answer-add {
   margin-bottom: -1px; }

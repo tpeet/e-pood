@@ -83,12 +83,6 @@ $('.dropdown-menu').find('form').click(function (e) {
       }
    });
 
-
-}); // end document ready
-
-
-
-
 $('.js-slidetoggle').click(function(e) {
   $(this).parents().next('.js-togglable').slideToggle('slow');
   e.preventDefault();
@@ -96,9 +90,16 @@ $('.js-slidetoggle').click(function(e) {
 
 // Sliding commenting
 //*********************
-$('.js-togglable').hide();
-$('.js-slidetoggle').click(function(e) {
-  $(this).parents().next('.js-togglable').slideDown('slow');
-  $('.js-slideclose').slideUp();
-  e.preventDefault();
-});
+// $('.js-togglable').hide();
+// $('.js-slidetoggle').click(function(e) {
+//   $(this).parents().next('.js-togglable').slideDown('slow');
+//   $('.js-slideclose').slideUp();
+//   e.preventDefault();
+// });
+
+}); // end document ready
+
+
+
+
+

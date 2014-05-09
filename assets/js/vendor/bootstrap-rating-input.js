@@ -7,15 +7,15 @@
     // A private function to highlight a star corresponding to a given value
     function _paintValue(ratingInput, value) {
       var selectedStar = $(ratingInput).find('[data-value=' + value + ']');
-      selectedStar.removeClass('icon-favourites-normal').addClass('icon-favourites-active');
-      selectedStar.prevAll('[data-value]').removeClass('icon-favourites-normal').addClass('icon-favourites-active');
-      selectedStar.nextAll('[data-value]').removeClass('icon-favourites-active').addClass('icon-favourites-normal');
+      selectedStar.removeClass('ee-favorite').addClass('ee-favorite active');
+      selectedStar.prevAll('[data-value]').removeClass('ee-favorite').addClass('ee-favorite active');
+      selectedStar.nextAll('[data-value]').removeClass('ee-favorite active').addClass('ee-favorite');
     }
 
     // A private function to remove the highlight for a selected rating
     function _clearValue(ratingInput) {
       var self = $(ratingInput);
-      self.find('[data-value]').removeClass('icon-favourites-active').addClass('icon-favourites-normal');
+      self.find('[data-value]').removeClass('ee-favorite active').addClass('ee-favorite');
     }
 
     // A private function to change the actual value to the hidden field
@@ -42,7 +42,7 @@
       // HTML element construction
       for (i = min; i <= max; i++) {
         // Create <max> empty stars
-        stars += ['<span class="icon icon-favourites-normal" data-value="', i, '"></span>'].join('');
+        stars += ['<span class="ee-favorite" data-value="', i, '"></span>'].join('');
       }
       // Add a clear link if clearable option is set
       if (clearable) {
