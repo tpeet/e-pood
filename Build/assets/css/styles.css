@@ -11547,7 +11547,6 @@ section.ee-reviewarea {
   border: none; }
 
 .ee-reviewed-answer .container {
-  padding-left: 20px;
   padding-top: 10px; }
   .ee-reviewed-answer .container:after, .ee-reviewed-answer .container:before {
     left: 40px; }
@@ -11563,7 +11562,7 @@ section.ee-reviewarea {
   margin-bottom: 10px; }
   .ee-review-body .rating-input {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 10px; }
 
 .ee-review-respond {

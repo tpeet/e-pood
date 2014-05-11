@@ -46,9 +46,6 @@ section.ee-reviewarea {
     article {
     margin-top: -1px;
   }
-  // .rating-input {
-  //   margin-top: 15px;
-  // }
 }
 
 .ee-reviewed-initial {
@@ -78,7 +75,6 @@ section.ee-reviewarea {
 .ee-reviewed-answer {
   @extend %section-bordered-gray;
   .container {
-  padding-left: 20px;
   padding-top: 10px;
   @extend %arrowbox;
   &:after,
@@ -105,7 +101,7 @@ section.ee-reviewarea {
   margin-bottom: 10px;
   .rating-input {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 10px;
   }
 }
