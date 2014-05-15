@@ -738,19 +738,19 @@
   <div class="container">
 
     <a href="#" class="tsr-module-support icon icon-costcontrol2">
-      <header>Elioni järelmaks</header>
+      <h6>Elioni järelmaks</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-transport">
-      <header>Transport e-poes</header>
+      <h6>Transport e-poes</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-help">
-      <header>Abiinfo</header>
+      <h6>Abiinfo</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-settings">
-      <header>Remont ja hooldus</header>
+      <h6>Remont ja hooldus</h6>
     </a>                  
 
   </div><!-- // tsr-container -->
@@ -891,7 +891,10 @@
       //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
       // }
       // document.getElementById('jsFiltersMoreText').onclick=handleClick;
-
+      $('.js-slidetoggle').click(function(e) {
+        $(this).parents().next('.js-togglable').slideToggle('slow');
+        e.preventDefault();
+      });
      });
 
 

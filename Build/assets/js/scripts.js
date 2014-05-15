@@ -83,11 +83,6 @@ $('.dropdown-menu').find('form').click(function (e) {
       }
    });
 
-$('.js-slidetoggle').click(function(e) {
-  $(this).parents().next('.js-togglable').slideToggle('slow');
-  e.preventDefault();
-});
-
 // Sliding commenting
 //*********************
 // $('.js-togglable').hide();

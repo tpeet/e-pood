@@ -4487,51 +4487,55 @@ TSR - FORMS
 ////// TSR - Checkbox
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    tsrForms.tsrCheckbox = function () {
+tsrForms.tsrCheckbox = function () {
 
 
-	    $('.tsr-forms input:checkbox').each(function () {
+  $('.tsr-forms input:checkbox').each(function () {
 
-	        var elem = $(this);
-	        var label = elem.parent();
+   var elem = $(this);
+   var label = elem.parent();
 
-	        if (elem.is(':checked')) {
-	            label.addClass('checked');
-	        }
+   if (elem.is(':checked')) {
+    label.addClass('checked');
+   }
 
-	       	if (elem.is(':disabled')) {
-	            label.addClass('disabled');
-	        }
+   if (elem.is(':disabled')) {
+    label.addClass('disabled');
+   }
 
-	        label.addClass('tsr-checkbox');
-	        label.prepend('<span class="tsr-checkboxStyled ts-icon-thick">&nbsp;</span>');
-
-
-	        label.not('.disabled').on('mousedown',function () {
-
-	            var el = $(this);
-	            var check = el.children('input');
-
-	            var checkName = check.attr('name');
-
-	            $('input:checkbox[name="' + checkName + '"]').prop('checked', false).parent().removeClass('checked');
-
-	             if (el.hasClass('checked')) {
-                 el.removeClass('checked');
-                 check.prop('checked', false);
-                 
-	             } else {
-	                 el.addClass('checked');
-	                 check.prop('checked' , true);
-	             } 
-
-	            return false;
-	        });
+   label.addClass('tsr-checkbox');
+   label.prepend('<span class="tsr-checkboxStyled ts-icon-thick">&nbsp;</span>');
 
 
-	    });
+   label.not('.disabled').on('mousedown', function () {
 
-    };
+    var el = $(this);
+    var check = el.children('input');
+    var checkName = check.attr('name');
+
+    $('input[name="' + checkName + '"]').prop('checked', false).removeClass('checked');
+
+    if (el.hasClass('checked')) {
+     el.removeClass('checked');
+     check.each(function() {
+      $(this).val(false);
+     });
+
+    } else {
+     el.addClass('checked');
+     check.each(function() {
+      $(this).val(true);
+     });
+     
+    }
+
+    return false;
+   });
+
+
+  });
+
+ };
 
   
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -9232,8 +9236,8 @@ $(document).ready(function () {
         }
       },
 
-      itemWidth: 500,
-      itemMargin: 0,
+      itemWidth: 450,
+      itemMargin: 55,
     });
 
   slider.find('.flex-control-nav > li > a').on("click", function () {
@@ -9479,11 +9483,6 @@ $('.dropdown-menu').find('form').click(function (e) {
          }, 4800);
       }
    });
-
-$('.js-slidetoggle').click(function(e) {
-  $(this).parents().next('.js-togglable').slideToggle('slow');
-  e.preventDefault();
-});
 
 // Sliding commenting
 //*********************

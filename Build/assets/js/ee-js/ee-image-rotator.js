@@ -77,8 +77,8 @@ $(document).ready(function () {
         }
       },
 
-      itemWidth: 500,
-      itemMargin: 0,
+      itemWidth: 450,
+      itemMargin: 55,
     });
 
   slider.find('.flex-control-nav > li > a').on("click", function () {

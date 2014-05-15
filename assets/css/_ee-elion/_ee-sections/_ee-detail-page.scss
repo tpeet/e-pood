@@ -1,6 +1,10 @@
 section.ee-product-detail {
   margin-bottom: 30px;
 
+  .fixedheight {
+    min-height: 550px;
+  }
+
   h1:first-of-type {
   margin-bottom: 0;
   }
@@ -45,9 +49,10 @@ section.ee-product-detail {
       width: 100%;
       height: auto;
       text-align: center;
+      margin-top: 20px;
       img {
       width: 100%;
-      max-width: 500px;
+      max-width: 450px;
       height: auto;
       }
     } 

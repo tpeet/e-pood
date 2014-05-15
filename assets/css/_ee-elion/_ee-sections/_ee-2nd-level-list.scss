@@ -20,12 +20,13 @@ section.tsr-section-productlist  {
     margin-top: 0;
     z-index: 1;
 
+
     &:before {
     width: em(47);
     height: em(47);
     }
-    & small {
-      font-size: 70%;
+     .ee-small {
+      font-size: 11px;
       padding: 2px 3px;
     }
   }

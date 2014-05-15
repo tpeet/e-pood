@@ -11221,8 +11221,8 @@ section.tsr-section-productlist {
       section.tsr-section-productlist .tsr-module-product .ee-flash-sm:before {
         width: 3.03226em;
         height: 3.03226em; }
-      section.tsr-section-productlist .tsr-module-product .ee-flash-sm small {
-        font-size: 70%;
+      section.tsr-section-productlist .tsr-module-product .ee-flash-sm .ee-small {
+        font-size: 11px;
         padding: 2px 3px; }
     section.tsr-section-productlist .tsr-module-product .tsr-product-image {
       margin-left: 5px; }
@@ -11366,6 +11366,8 @@ section.tsr-section-productlist {
 
 section.ee-product-detail {
   margin-bottom: 30px; }
+  section.ee-product-detail .fixedheight {
+    min-height: 550px; }
   section.ee-product-detail h1:first-of-type {
     margin-bottom: 0; }
   section.ee-product-detail .ee-detail-intro {
@@ -11396,10 +11398,11 @@ section.ee-product-detail {
     section.ee-product-detail .ee-detailview .tsr-product-image {
       width: 100%;
       height: auto;
-      text-align: center; }
+      text-align: center;
+      margin-top: 20px; }
       section.ee-product-detail .ee-detailview .tsr-product-image img {
         width: 100%;
-        max-width: 500px;
+        max-width: 450px;
         height: auto; }
     section.ee-product-detail .ee-detailview .tsr-tactical-flash {
       right: 4%;
@@ -11590,7 +11593,7 @@ section.ee-reviewarea {
   .ee-review-add .tsr-forms .ee-captcha input,
   .ee-review-answer-add .tsr-forms .ee-captcha input {
     display: inline;
-    width: 100px; }
+    width: 120px; }
   .ee-review-add .ee-sendreview,
   .ee-review-answer-add .ee-sendreview {
     margin-top: 20px; }

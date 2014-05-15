@@ -463,8 +463,8 @@
 </section>
 
 <section class="ee-product-detail">
-<!--   <div style="width: 400px; height: 400px; background: #fff; position: relative; border: 1px solid red; text-align: center; vertical-align: middle; display: table-cell;"><span class="icon icon-mobile" style="font-size: 372px;"></span></div>
-  <div style="width: 400px; height: 400px; background: #fff; position: relative; border: 1px solid red; text-align: center; vertical-align: middle; display: table-cell;"><span class="icon icon-digitaltv" style="font-size: 372px;"></span></div> -->
+<!--   <div style="width: 400px; height: 400px; background: #fff; position: relative; border: 1px solid red; text-align: center; vertical-align: middle; display: table-cell;"><span class="icon icon-defaultimage" style="font-size: 372px;"></span></div> -->
+
   <div class="container">
     <div class="row" id="content-placeholder-detail"></div>
   </div>
@@ -474,7 +474,7 @@
 
 {{#with products.[1]}}
 
-<div class="col-sm-7 col-sm-push-5">
+<div class="col-sm-7 col-sm-push-5 fixedheight">
   <h1><small>{{name}}</small></h1>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
   <h2> {{{intro}}} </h2>
@@ -925,11 +925,6 @@
       <section class="ee-review-add">
   <div class="container tsr-forms">
     <div class="row">
-      <div class="col-sm-4 js-slidetoggle">
-        <p>Mis on toote juures hea? Mis ei ole hea?</p>
-        <button class="btn btn-primary">Lisa oma arvamus</button>
-        
-      </div>
       <div class="col-sm-4"> 
         <p>Soovita sõbrale</p>
         <ul class="socialcount socialcount-small" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
@@ -941,7 +936,11 @@
       <div class="col-sm-4 ">
         <p>Mitu tärni annad?</p>
           <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
-        </div>
+      </div>
+      <div class="col-sm-4 text-right js-slidetoggle">
+        <p>Mis on toote juures hea? Mis ei ole hea?</p>
+        <button class="btn btn-primary">Lisa oma arvamus</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1326,19 +1325,19 @@
   <div class="container">
 
     <a href="#" class="tsr-module-support icon icon-costcontrol2">
-      <header>Elioni järelmaks</header>
+      <h6>Elioni järelmaks</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-transport">
-      <header>Transport e-poes</header>
+      <h6>Transport e-poes</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-help">
-      <header>Abiinfo</header>
+      <h6>Abiinfo</h6>
     </a>  
 
     <a href="#" class="tsr-module-support icon icon-settings">
-      <header>Remont ja hooldus</header>
+      <h6>Remont ja hooldus</h6>
     </a>                  
 
   </div><!-- // tsr-container -->
@@ -1478,7 +1477,10 @@
       //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
       // }
       // document.getElementById('jsFiltersMoreText').onclick=handleClick;
-
+      $('.js-slidetoggle').click(function(e) {
+        $(this).parents().next('.js-togglable').slideToggle('slow');
+        e.preventDefault();
+      });
      });
 
 
