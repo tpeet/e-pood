@@ -32,6 +32,40 @@ FORMS
     display: block;
     margin: 22px 0 10px;
     line-height: 1.4; }
+  .tsr-forms input[type='text'],
+  .tsr-forms input[type='password'] {
+    -webkit-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    color: #888888;
+    line-height: 1;
+    height: 40px;
+    text-indent: 14px;
+    border: 1px solid #dbdbdb;
+    display: block;
+    width: 100%;
+    margin-bottom: 4px; }
+    .tsr-forms input[type='text']:focus, .tsr-forms input[type='text'].focus, .tsr-forms input[type='text']:active,
+    .tsr-forms input[type='password']:focus,
+    .tsr-forms input[type='password'].focus,
+    .tsr-forms input[type='password']:active {
+      color: black;
+      border: 1px solid #642887;
+      outline: none; }
+    .tsr-forms input[type='text'][disabled],
+    .tsr-forms input[type='password'][disabled] {
+      color: #bbb;
+      background: #eee; }
+      .tsr-forms input[type='text'][disabled]:focus, .tsr-forms input[type='text'][disabled]:active,
+      .tsr-forms input[type='password'][disabled]:focus,
+      .tsr-forms input[type='password'][disabled]:active {
+        border: 1px solid #dbdbdb; }
+  .tsr-forms .invalid input[type='text'] {
+    background: #ffece3;
+    color: #333;
+    border: 1px solid #da552a; }
+    .tsr-forms .invalid input[type='text']:focus, .tsr-forms .invalid input[type='text']:active {
+      border: 1px solid #da552a; }
   .tsr-forms textarea {
     -webkit-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -11027,8 +11061,7 @@ section.tsr-section-productAndService-listing {
     position: absolute;
     right: 0.64516em;
     left: auto;
-    top: 0.64516em;
-    z-index: 2; }
+    top: 0.64516em; }
     @media screen and (min-width: 480px) {
       .tsr-module-product .ee-favorite-dropdown {
         right: 0.32258em; } }
