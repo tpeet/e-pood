@@ -67,7 +67,7 @@ $module: tsr-forms;
 		@include border-radius(3px);
 		color:#888888;
 		line-height:1;
-		padding:14px 0;
+		height: 40px;
 		text-indent:14px;
 		border:1px solid #dbdbdb;
 		display:block;
@@ -201,15 +201,15 @@ $module: tsr-forms;
 				.tsr-checkboxStyled,
 				.tsr-checkboxStyled:active{
 					&:before{
-
-						width:10px;
-						height:10px;
+						font-family: 'tsr-icons-all';
+						width:20px;
+						height:20px;
 						position:absolute;
-						top:50%;
+						top:22%;
 						left:50%;
 						margin:-5px 0 0 -6px;
 						color:$purple-c;
-						font-size:10px;
+						font-size:16px;
 						display:block;
 						
 
@@ -482,7 +482,6 @@ $module: tsr-forms;
 ////// Dropdown List Box Text
 .selectboxit-text {
   font-size:15px; 
-  font-family: $font-1;
   padding:14px 0;
   text-indent: 14px;
   line-height: 1;

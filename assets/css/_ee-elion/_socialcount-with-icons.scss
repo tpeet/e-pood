@@ -47,14 +47,14 @@
 .icon-facebook-inverse {
   &:before {
   @extend %format-icon-social;
-  content: "\e002";
+  content: "\e016";
   }
 }
 
 .icon-twitter-inverse {
   &:before {
   @extend %format-icon-social;
-  content: "\e001";
+  content: "\e015";
   }
 }
 

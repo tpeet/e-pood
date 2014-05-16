@@ -4475,9 +4475,9 @@ TSR - FORMS
     tsrForms.tsrSelect = function () {
 
 	   	if (!$("html").hasClass("touch")) {
-	         $(".tsr-forms select").selectBoxIt({ downArrowIcon: "ts-icon-arrow-down" });
+	         $(".tsr-forms select").selectBoxIt({ downArrowIcon: "icon icon-arrow-down" });
 	    } else if ($("html").hasClass("touch")) {
-	        $(".tsr-forms select").selectBoxIt({ downArrowIcon: "ts-icon-arrow-down", "native": true });
+	        $(".tsr-forms select").selectBoxIt({ downArrowIcon: "icon icon-arrow-down", "native": true });
 	    }
 
     };
@@ -4504,7 +4504,7 @@ tsrForms.tsrCheckbox = function () {
    }
 
    label.addClass('tsr-checkbox');
-   label.prepend('<span class="tsr-checkboxStyled ts-icon-thick">&nbsp;</span>');
+   label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
 
 
    label.not('.disabled').on('mousedown', function () {
@@ -9484,6 +9484,8 @@ $('.dropdown-menu').find('form').click(function (e) {
       }
    });
 
+
+
 // Sliding commenting
 //*********************
 // $('.js-togglable').hide();
@@ -9495,6 +9497,12 @@ $('.dropdown-menu').find('form').click(function (e) {
 
 }); // end document ready
 
+function BindSlideToggle() {
+ $('.js-slidetoggle').click(function (e) {
+  $(this).parents().next('.js-togglable').slideToggle('slow');
+  e.preventDefault();
+ });
+}
 
 
 

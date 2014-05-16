@@ -21,12 +21,13 @@
 
 .icon {
   font-family: 'tsr-icons-all';
-  position: relative;
-  top: 1px;
-  display: inline-block;
+  speak: none;
   font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
   line-height: 1;
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -105,13 +106,13 @@
   content: "\e6f4";
 }
 .icon-twitter:before {
-  content: "\e001";
+  content: "\e015";
 }
 .icon-facebook:before {
-  content: "\e002";
+  content: "\e016";
 }
 .icon-thick:before {
-  content: "\e005";
+  content: "\e017";
 }
 .icon-comment:before {
   content: "\e016";
@@ -451,4 +452,68 @@
 }
 .icon-breadcrumb-arrow:before {
   content: "\e66e";
+}
+
+.icon-monitor:before {
+  content: "\e714";
+}
+.icon-menu-vertical:before {
+  content: "\e713";
+}
+.icon-toinside:before {
+  content: "\e712";
+}
+.icon-switched-off:before {
+  content: "\e711";
+}
+.icon-single-stripe:before {
+  content: "\e710";
+}
+.icon-playback:before {
+  content: "\e70f";
+}
+.icon-narrow-left:before {
+  content: "\e70e";
+}
+.icon-day-mode:before {
+  content: "\e70d";
+}
+.icon-remotecontrol:before {
+  content: "\e70c";
+}
+.icon-home-ok:before {
+  content: "\e70b";
+}
+.icon-night-mode:before {
+  content: "\e70a";
+}
+.icon-close-status:before {
+  content: "\e709";
+}
+.icon-open-status:before {
+  content: "\e708";
+}
+.icon-devices-manager:before {
+  content: "\e707";
+}
+.icon-counter:before {
+  content: "\e706";
+}
+.icon-motion-detector:before {
+  content: "\e705";
+}
+.icon-door-is-open:before {
+  content: "\e704";
+}
+.icon-smoke-detector:before {
+  content: "\e703";
+}
+.icon-plug:before {
+  content: "\e702";
+}
+.icon-questionmark:before {
+  content: "\e701";
+}
+.icon-check-ok-ring:before {
+  content: "\e700";
 }

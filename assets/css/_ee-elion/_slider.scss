@@ -121,11 +121,11 @@
 }
 
 .slider-handle:before {
-  content: "\e63a";
+  content: "\e713";
   color: $gray;
-  padding-left: 2px;
-  line-height: 1.2;
-  font-size: 22px;
+  padding-left: 5px;
+  line-height: 1.5;
+  font-size: 16px;
   transition: all 0.3s ease;
 }
 

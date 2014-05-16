@@ -2,7 +2,10 @@ section.ee-product-detail {
   margin-bottom: 30px;
 
   .fixedheight {
-    min-height: 550px;
+    min-height: auto;
+    @include media-min($screen-md) {
+      min-height: 550px;
+    }
   }
 
   h1:first-of-type {
