@@ -2,6 +2,7 @@ console.log('scripts js loaded');
 
 $(document).ready(function() {
 
+BindSlideToggle();
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
