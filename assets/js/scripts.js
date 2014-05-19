@@ -64,6 +64,12 @@ $('.dropdown-menu').find('form').click(function (e) {
       }
    });
 
+    $('#alertbtn2').click(function() {
+      if ( !$('#alert2').is( '.in' ) ) {
+         $('#alert2').addClass('in');
+      }
+   });
+
    $('#successbtn').click(function() {
       if ( !$('#success1').is( '.in' ) ) {
          $('#success1').addClass('in');

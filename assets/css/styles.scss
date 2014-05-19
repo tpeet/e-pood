@@ -160,6 +160,26 @@ outline: none !important;
    top: 40px;
   }
 }
+
+.alert .container > div .read-more {
+color: #FFF;
+line-height: 1;
+margin-top: -7px;
+padding: 0 14px 3px 40px;
+position: absolute;
+top: 10px;
+display: inline-block;
+  &.first {
+    font-weight: normal;
+    border-right: 1px solid #FFF;
+    right: 80px;
+  }
+  &.second {
+    font-weight: bold;
+    right: 0;
+    border-right: none;
+  }
+}
 // WORK IN PROGRESS PARTS
 //**********************************
 

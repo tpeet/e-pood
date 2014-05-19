@@ -119,7 +119,16 @@
             </a>
             <div class="dropdown-menu" >
                 <div class="container">
-                    <div class="row megamenu user-droplayer">
+                <ul class="nav navbar-nav ">
+                  <li class="active"><a href="#">Täitmisel tellimused </a></li>
+                  <li><a href="#">Minu konto </a></li>
+                  <li><a href="#">Tellimused </a></li>
+                  <li><a href="#">Salvestatud ostukorvid </a></li>
+                  <li><a href="#">Minu lemmikud </a></li>
+                  <li><a href="#">Järelmaks </a></li>
+                  <li><a href="#">Kontaktisikud </a></li>
+                </ul> 
+                    <!-- <div class="row megamenu user-droplayer">
                         <div class="col-sm-3 col-md-3">
                             <h2 class="title">Kellena soovid siseneda?</h2>
                             <p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p>
@@ -148,34 +157,26 @@
                             <hr>
                             <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
                         </div>
-                                </div>
-                            </div>
-                            <div class="container reset-padding">
-                                <ul class="row hidden-xs list-unstyled">
-                                    <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
-                                </ul>
-                            </div>
-                        </div>
+                    </div> -->
+                </div>
+                <div class="container reset-padding">
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
+                </div>
+            </div>
 
-                    </li>
-                    <li class="dropdown menu-large with-icon">
-                      <a href="index.html" class="icon-with-badge dropdown-toggle myaccount" data-toggle="dropdown">
-                        <span class="icon icon-myaccount"></span>
-                        <!-- <span class="badge">4</span> --> 
-                        <span class="icon-label-text">Väike Profiil</span>
-                        <span class="icon icon-arrow-down"></span>
-                    </a>
-              <!-- <ul class="dropdown-menu">
-                <li><a href="#">OÜ NETGROUP</a></li>
-                <li><a href="#">OÜ Potgroup</a></li>
-                <li><a href="#">Siimu Saamu esindaja</a></li>
-                <li class="divider"></li>
-                <li><a href="index.html">Välju</a></li>
-            </ul> -->
+        </li>
+        <!-- <li class="dropdown menu-large with-icon">
+          <a href="index.html" class="icon-with-badge dropdown-toggle myaccount" data-toggle="dropdown">
+            <span class="icon icon-myaccount"></span>
+            <span class="icon-label-text">Kui sisselogitud</span>
+            <span class="icon icon-arrow-down"></span>
+        </a>
             <div class="dropdown-menu">
                 <div class="container">
                     <div class="row megamenu user-droplayer">
-                        <div class="col-md-3 col-md-offset-9">
+                        <div class="col-sm-3 col-sm-offset-9">
                             <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
                             <hr>
                             <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
@@ -189,7 +190,7 @@
                 </div>
             </div>
             
-        </li>
+        </li> -->
 
     </ul> 
 
@@ -234,6 +235,18 @@
     </div>
 </div>
 
+<div class="alert full-size alert-warning flyover" id="alert2">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
+            <a class="read-more first" href="#">Katkesta </a> 
+            <a class="read-more second" href="#">Kustuta</a>
+        </div>
+<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
+    </div>
+</div>
+
 <!-- <div class="temporary" style="margin-top: 100px;">
     <button id="infobtn" class="btn btn-info">Info</button>
     <button id="successbtn" class="btn btn-success">Success</button>
@@ -273,13 +286,13 @@
     </ul> 
   </div>
 </nav>
-<nav class="ee-adminnav navbar " role="navigation">
+<nav class="ee-adminnav sub-menu navbar " role="navigation">
   <div class="container hidden-xs">
       <p class="navbar-text">Elioni töötaja: <strong>Ahto Kurn</strong></p>
       <p class="navbar-text">Osakond: <strong>Mingi Tähtis Osakond</strong></p>
       <p class="navbar-text">Töötaja kood: <strong>321-start!</strong></p>
     
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="list-inline navbar-right">
       <li><a href="#">Minu pakkumised </a></li>
       <li><a href="#">Admin </a></li>
       <li><a href="#">Välju keskkonnast </a></li>
@@ -582,17 +595,15 @@
 
 <nav class="sub-menu hidden-xs">
   <div class="container">
-    <h3 class="sr-only">Alamlehed</h3>
+    <h3 class="sr-only">Minu konto</h3>
     <ul class="list-inline">
-      <li><a href="#">level 3 link 1</a></li>
-      <li class="active"><a href="#">Active level 3 link 2</a></li>
-      <li><a href="#">level 3 link 3</a></li>
-      <li><a href="#">level 3 link 4</a></li>
-      <li><a href="#">level 3 link 5</a></li>
-      <li><a href="#">level 3 link 6</a></li>
-      <li><a href="#">level 3 link 7</a></li>
-      <li><a href="#">level 3 link 8</a></li>
-      <li><a href="#">level 3 link 9</a></li>
+      <li><a href="#">Minu konto</a></li>
+      <li><a href="#">Täitmisel tellimused</a></li>
+      <li><a href="#">Tellimused</a></li>
+      <li><a href="#">Salvestatud ostukorvid</a></li>
+      <li class="active"><a href="#">Minu lemmikud</a></li>
+      <li><a href="#">Järelmaks</a></li>
+      <li><a href="#">Kontaktisikud</a></li>
     </ul>
   </div>
 </nav>

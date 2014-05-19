@@ -12425,6 +12425,23 @@ body {
    
   .flyover.in.middle {
     top: 40px; } }
+.alert .container > div .read-more {
+  color: #FFF;
+  line-height: 1;
+  margin-top: -7px;
+  padding: 0 14px 3px 40px;
+  position: absolute;
+  top: 10px;
+  display: inline-block; }
+  .alert .container > div .read-more.first {
+    font-weight: normal;
+    border-right: 1px solid #FFF;
+    right: 80px; }
+  .alert .container > div .read-more.second {
+    font-weight: bold;
+    right: 0;
+    border-right: none; }
+
 .ee-flashtext-container {
   text-align: center;
   display: table-cell;
