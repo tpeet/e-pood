@@ -10401,6 +10401,51 @@ textarea {
   .alert-danger .close-btn:hover {
     color: #f44f00; }
 
+.sub-menu {
+  border-bottom: 1px solid white; }
+  .sub-menu ul {
+    margin: 0; }
+    .sub-menu ul li {
+      margin: 0;
+      position: relative; }
+      .sub-menu ul li > a {
+        line-height: 20px;
+        padding: 20px;
+        display: inline-block; }
+        .sub-menu ul li > a:hover {
+          text-decoration: none; }
+          .sub-menu ul li > a:hover:before {
+            background-color: #4f2369;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%; }
+      .sub-menu ul li.active > a:before {
+        background-color: #4f2369;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 4px;
+        left: 0;
+        position: absolute;
+        top: auto;
+        width: 100%; }
+    .sub-menu ul li:not(:last-child) > a:after {
+      background-color: white;
+      content: "";
+      display: block;
+      height: 20px;
+      margin-top: -10px;
+      position: absolute;
+      right: -3px;
+      top: 50%;
+      width: 1px;
+      z-index: 1; }
+
 .breadcrumb {
   padding: 20px 15px;
   margin-bottom: 0;
