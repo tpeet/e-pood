@@ -41,6 +41,7 @@
         cloneRightSideMainMenu();
         collapseOtherContent();
         collapsableMenuForMobile();
+        initDropMenu();
         
     }
     
@@ -51,13 +52,14 @@
     }
     
     function collapsableMenuForMobile(){
-        if(Modernizr.mq('only screen and (max-width: 768px)')) {
-            $('.dropdown-header > a').each(function() {
+        if(Modernizr.mq('only screen and (max-width: 767px)')) {
+            $('.list-group .dropdown-header > h6').each(function() {
                 var _parent = $(this).parent();
                 this.addEventListener('click', function(e) {
                     e.stopPropagation();
                     e.preventDefault();
                     _parent.nextUntil('.dropdown-header').toggle();
+                    $(_parent).toggleClass('open');
                 }, false);
             });  
         }
@@ -68,6 +70,9 @@
         $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
         $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
         $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+        var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+        //_el.append('<li>asdflkdsjaflkjsalkf</li>');
+        console.log(_el);
     }
 
     
@@ -90,6 +95,29 @@
         });
     }
 
+    // footer links
+    function initDropMenu() {
+        if(Modernizr.mq('only screen and (max-width: 767px)')) {
+            var _activeEl;
+            $('header .collapsibleMainMenu h2:not(.title)').each(function(i, el) {
+                var _el = $(el);
+                console.log(i, el);
+                _el.click(function(e){
+
+                    $(this).toggleClass('active');
+                    $(this).next().toggleClass('active');
+
+                    if( ( _activeEl ) && _activeEl[0] != $(this)[0]) {
+                        _activeEl.removeClass('active');
+                        _activeEl.next().removeClass('active');    
+                    }
+                    _activeEl = $(this);
+                    e.preventDefault();
+                });
+            });  
+        }
+    }
+    
     header();
 
 }());

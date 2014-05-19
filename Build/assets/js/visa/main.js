@@ -50,6 +50,17 @@ console.log('\'Hello\' Elion webpage!');
         $(".dropdown-menu").on("click", "[data-stopPropagation]", function(e) {
             e.stopPropagation();
         });
+
+        console.log( 'data-stoppropagation:', $('.stoppropagation'));
+
+        $('.stoppropagation').click(function(e){
+            e.stopPropagation();
+        });
+
+        /*$("#collapsibleMainMenu-Pages [data-toggle='collapse']").click(function(e){
+            console.log("sdlkfjaslkjfskl");
+            e.stopPropagation();
+        });*/
     }
 
     // update visaul after screen has changed

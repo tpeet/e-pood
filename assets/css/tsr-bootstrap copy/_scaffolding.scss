@@ -48,7 +48,8 @@ textarea {
 a {
   color: $link-color;
   text-decoration: none;
-
+  letter-spacing: $letter-spacing-base;
+  line-height: (($line-height-base * 120) / 100);
   &:hover,
   &:focus {
     color: $link-hover-color;
@@ -57,6 +58,10 @@ a {
 
   &:focus {
     @include tab-focus();
+  }
+  small {
+    letter-spacing: inherit;
+    line-height: ceil($font-size-base * 1);
   }
 }
 

@@ -1,4 +1,4 @@
-.bs-example {
+.bs-example, .example-code {
     border-style: solid;
     margin: 0 -15px 15px;
     padding: 45px 15px 15px;
@@ -8,6 +8,7 @@
     border-radius: 4px 4px 0 0;
     border-width: 1px;
     box-shadow: none;
+    border-top: 0;
     margin-left: 0;
     margin-right: 0;
     &:after {
@@ -21,6 +22,22 @@
       text-transform: uppercase;
       top: 15px;
     }
+
+    .toolbar {
+      display: none;
+    }
+
+    .container:before, .container:after {
+        content: " ";
+        display: block;
+        height: 1px;
+    }
+}
+
+.example-code {
+  &:after {
+    content: "Example Code";
+  }
 }
 
 .bs-example + .highlight {

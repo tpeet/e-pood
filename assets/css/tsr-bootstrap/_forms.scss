@@ -1,22 +1,30 @@
 //
 // Forms Elion layer
 // --------------------------------------------------
-.form-control { height: 35px; }
-input[type="text"]{
-	background-color: #FFFFFF;
-    background-image: none;
-    border: 1px solid #CCCCCC;
-    border-radius: 4px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-    color: $input-color;
-    font-size: $font-size-base + 1;
-    height: 35px;
-    line-height: 1.42857;
-    padding: 6px 12px;
-    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  .form-grid .form-group {
+   // @include make-row();
+  }
 
-    &:focus {
-    	border: 1px solid $brand-primary;
+.form-control { height: 35px; }
+input{
+    &[type="text"],
+    &[type="password"],
+    &[type="search"]{
+    	background-color: #FFFFFF;
+        background-image: none;
+        border: 1px solid #CCCCCC;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        color: $input-color;
+        font-size: $font-size-base + 1; 
+        height: 35px;
+        line-height: 1.42857;
+        padding: 6px 12px;
+        transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+        &:focus {
+        	border: 1px solid $brand-primary;
+        }
     }
 }
 input[type="search"] {
@@ -51,8 +59,6 @@ select.form-control {
     }
 }
 textarea { min-height: 120px; }
-
-
 
 
 // Form control feedback states

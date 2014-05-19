@@ -6,8 +6,8 @@ body {
   letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;
 }
-header{display: block; margin-bottom: 15px;}
-content{display: block;}
+header{display: block; margin-bottom: -1px;}
+section.content { padding: 0; }
 
 //
 // close button bar styles
@@ -75,4 +75,12 @@ content{display: block;}
 // primary
 .alert-primary {
   @include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
+}
+
+
+//
+// border-top
+// --------------------------------------------------
+.border{
+  border: 1px solid $gray-lighter;
 }

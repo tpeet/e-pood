@@ -145,8 +145,23 @@
           </div>
         </div>
       </li>
-      <li><a href="#" class="icon-with-badge basket"><span class="icon icon-buy_2"></span><span class="badge">8</span></a></li>
+      <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
+        <div class="dropdown-menu">
+          <div class="container">
+            <div class="row megamenu">
+              <div class="col-sm-12"><h2 class="text-center"><span>ostukorvi sisu ja kinnitamise viide</span></h2></div>
+            </div>
+          </div>
+          <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
       <li class="with-icon"><a href="front-logged-in.html"><span class="icon icon-myaccount"></span>Sisene</a></li>
+      <li class="with-icon"><a href="front-logged-in.html"><span class="icon icon-myaccount"></span>Olen Sisenend</a></li>
     </ul> 
 
   </div>
@@ -207,13 +222,14 @@
       <a class="navbar-brand"  href="index.html"><img src="assets/img/branding/elion-logo.svg" onerror="this.onerror=null; this.src='assets/img/branding/elion-logo.png'"/></a>
 
       <div class="pull-right">
-          <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon icon-menu"></span>
-          </a>
-          <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
-          <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
-          <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon icon-menu"></span>
+        </a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge">5</span></a>
       </div>
     </div>
     <!-- / menu for small screen -->
@@ -226,13 +242,15 @@
           
           {{#nav}}
             <li class="dropdown menu-large">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{caption}} <span class="icon icon-arrow-down visible-xs"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{caption}} </a>
               <div class="dropdown-menu ">
                 <div class="container">
                   <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
-                      <ul >
-                        <li class="dropdown-header"><a href="#">Uued tooted  <span class="icon icon-arrow"></span></a></li>
+                      <ul class="list-group">
+                        <li ><h6>
+                          <a href="#">Uued tooted </a>
+                        </h6></li>
                         <li class='current'><a href="detail.html" class="current hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
                         <li>
                           <a href="#" class="hidden-xs">
@@ -246,7 +264,7 @@
                     {{#each link1}}
                     
                       <ul class="list-group">
-                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
                         {{#each this.sub}}
                         <li><a href="javascript:void(0);">{{this}}</a></li>
                         {{/each}}
@@ -258,7 +276,7 @@
                     {{#each link2}}
                     
                       <ul class="list-group">
-                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
                         {{#each this.sub}}
                         <li><a href="javascript:void(0);">{{this}}</a></li>
                         {{/each}}
@@ -270,7 +288,7 @@
                     {{#each link3}}
                     
                       <ul class="list-group">
-                        <li class="dropdown-header"><a href="{{path}}"><h6>{{this.name}}<span class="icon icon-arrow"></span></h6></a></li>
+                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
                         {{#each this.sub}}
                         <li><a href="javascript:void(0);">{{this}}</a></li>
                         {{/each}}
@@ -284,7 +302,7 @@
                 </div>
                 <div class="container reset-padding">
                   <ul class="row hidden-xs list-unstyled">
-                    <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    <li class="col-md-12"><div class="close-up-btn-bar"></div></li>
                   </ul>
                 </div>
               </div>
@@ -320,14 +338,17 @@
 
 <!-- right side additional menu -->
 <ul class="nav navbar-nav navbar-right hidden-xs">
-    <li class="dropdown menu-large">
+  <!-- Watch it! The structure shall be same as previous, in loop. Not changed as I am lazy.-->
+    <li class="dropdown menu-large active">
         <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
         <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Guide">
                 <ul class="row list-unstyled megamenu">
                     <li class="col-sm-3">
-                    <ul>
-                      <li class="dropdown-header"><a href="#">Järelmaksu tingimused  <span class="icon icon-arrow"></span></a></li>
+                    <ul class="list-group">
+                      <li class="dropdown-header"><h6>
+                        <a href="#">Järelmaksu tingimused  </a>
+                      </h6></li>
                       <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" /></a></li>
                       <li>
                         <a href="#" class="hidden-xs">
@@ -339,26 +360,26 @@
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Maksetingimused <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Elioni järelmaks <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Remont ja hooldus <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest </a></li>
+                      <li class="dropdown-header"><a href="#">Maksetingimused </a></li>
+                      <li class="dropdown-header"><a href="#">Elioni järelmaks </a></li>
+                      <li class="dropdown-header"><a href="#">Remont ja hooldus </a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Ärikliendile <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">KKK <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kontaktid <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">E-poe üldtingimused <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#">Ärikliendile </a></li>
+                      <li class="dropdown-header"><a href="#">KKK </a></li>
+                      <li class="dropdown-header"><a href="#">Kontaktid </a></li>
+                      <li class="dropdown-header"><a href="#">E-poe üldtingimused </a></li>
                     </ul>
                   </li>
                   <li class="col-sm-3">
                     <ul class="list-group">
-                      <li class="dropdown-header"><a href="#"><h6>Kinkekaardi tingimused</h6> <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Objektiivide lühendid<span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused <span class="icon icon-arrow"></span></a></li>
-                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? <span class="icon icon-arrow"></span></a></li>
+                      <li class="dropdown-header"><a href="#"><h6>Kinkekaardi tingimused</h6> </a></li>
+                      <li class="dropdown-header"><a href="#">Objektiivide lühendid</a></li>
+                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused </a></li>
+                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? </a></li>
 
                     </ul>
                   </li>
@@ -371,6 +392,7 @@
                 </div>
             </div>
         </li>
+
         <li class="current dropdown menu-large">
           <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
           <div class="dropdown-menu">
@@ -446,8 +468,59 @@
   <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
   <div id="collapsibleMainMenu-Search" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
   <div id="collapsibleMainMenu-Guide" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <div id="collapsibleMainMenu-User" class="collapse megamenu collapsibleMainMenu">
+
+    <div class="container-no-gutter">
+      <div class="row">
+        <div class="col-sm-3 col-md-3">
+          <h2 class="title">Kellena soovid siseneda?</h2>
+          <p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p>
+          <p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h2 class=""><a href="#">Eraklient</a></h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">Ahto Pärn von Krusesten</a></li>
+            <li class="list-group-item"><a href="#">Eesnimi Perenimi</a></li>
+            <li class="list-group-item"><a href="#">Martinson Sandrovinkilkohv</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h2><a href="#">Äriklient</a></h2>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">Minuesimenefirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minuteinefirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minukolmasfirma OÜ</a></li>
+            <li class="list-group-item"><a href="#">Minuneljas OÜ</a></li>
+            <li class="list-group-item"><p><span class="icon icon-plus"></span> <a href="#">Registreeri uus äriklient</a></p></li>
+          </ul>
+        </div>
+        <div class="col-sm-3 col-md-3">
+          <h2 class="link"><a href="#">Minu andmed</a></h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <!-- end / generating content by script -->
 
+</nav>
+
+<nav class="sub-menu hidden-xs">
+  <div class="container">
+    <h3 class="sr-only">Alamlehed</h3>
+    <ul class="list-inline">
+      <li><a href="#">level 3 link 1</a></li>
+      <li class="active"><a href="#">Active level 3 link 2</a></li>
+      <li><a href="#">level 3 link 3</a></li>
+      <li><a href="#">level 3 link 4</a></li>
+      <li><a href="#">level 3 link 5</a></li>
+      <li><a href="#">level 3 link 6</a></li>
+      <li><a href="#">level 3 link 7</a></li>
+      <li><a href="#">level 3 link 8</a></li>
+      <li><a href="#">level 3 link 9</a></li>
+    </ul>
+  </div>
 </nav>
 
 </header>
@@ -1350,95 +1423,95 @@
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
 <footer>
-    <div class="container">
+    <div class="container-no-gutter">
         <div class="row">
             <div class="col-sm-3 col-md-3">
-               <ul class="list-group">
-                    <li class="dropdown-header"><a href="#"><h6>Elion <span class="icon icon-arrow"></span></h6></a></li>
-                    <li><a href="#"><span>Ettevõttest</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>TeliaSonera</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Tule tööle</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Lepingud ja tingimused</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Hinnakirjad</span><span class="icon icon-arrow"></span></a></li>
+                <h2><a href="#">Elion</a></h2>
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/ettevottest">Ettevõttest</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/ettevottest#teliaSonera">TeliaSonera</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/tule-toole">Tule tööle</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/lepingud-ja-tingimused">Lepingud ja tingimused</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/kontakt/hinnakirjad">Hinnakirjad</a></li>
                 </ul>
             </div>
             <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Infoportaal</a></h2>
                 <ul class="list-group">
-                    <li class="dropdown-header"><a href="#"><h6>Infoportaal <span class="icon icon-arrow"></span></h6></a></li>
-                    <li><a href="#"><span>Uudised ja artiklid</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Pressinurk</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Foorum</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Digitark</span><span class="icon icon-arrow"></span></a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/uudised">Uudised ja artiklid</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/pressinurk">Pressinurk</a></li>
+                    <li class="list-group-item"><a href="http://foorum.elion.ee/foorum/index.php">Foorum</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/digitark">Digitark</a></li>
                 </ul>
             </div>
             <div class="col-sm-3 col-md-3">
-               <ul class="list-group">
-                    <li class="dropdown-header"><a href="#"><h6>Kontakt <span class="icon icon-arrow"></span></h6></a></li>
-                    <li><a href="#"><span>Kontaktinfo</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>E-poe info</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Projektide kooskõlastamine</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Liinirajatiste järelvalve</span><span class="icon icon-arrow"></span></a></li>
-               </ul>
+                <h2><a href="#">Kontakt</a></h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://www.elion.ee/kontakt/kontaktinfo">Kontaktinfo</a></li>
+                    <li class="list-group-item"><a href="https://pood.elion.ee/category/list/132/abi-ja-info-kontaktid">E-poe info</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/ariklient/arendajale">Projektide kooskõlastamine</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/ariklient/arendajale/liinirajatiste-j%C3%A4relevalve">Liinirajatiste järelvalve</a></li>
+                </ul>
             </div>
             <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Elion soovitab </a></h2>
                 <ul class="list-group">
-                    <li class="dropdown-header"><a href="#"><h6>Elion soovitab <span class="icon icon-arrow"></span></h6></a></li>
-                    <li><a href="#"><span>Leiunurk</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>MinuTV</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Ilmataat</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>NETI</span><span class="icon icon-arrow"></span></a></li>
-                    <li><a href="#"><span>Hot</span><span class="icon icon-arrow"></span></a></li>
+                    <li class="list-group-item"><a href="http://leiunurk.elion.ee/">Leiunurk</a></li>
+                    <li class="list-group-item"><a href="http://www.minutv.ee/">MinuTV</a></li>
+                    <li class="list-group-item"><a href="http://www.ilmataat.ee/">Ilmataat</a></li>
+                    <li class="list-group-item"><a href="http://www.neti.ee/">NETI</a></li>
+                    <li class="list-group-item"><a href="http://live.hot.ee/">Hot</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <!-- SOCIAL BLOCK -->
     <div class="social-block">
-        <div class="container">
+        <div class="container-no-gutter">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-sm-3 col-md-3">
 
                     <div class="media">
-                      <a class="pull-left" href="#">
+                      <a class="pull-left" href="#link0">
+                        <span class="icon icon-private_services"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">Erakliendi teenindus:</h5>
+                        <span class="">kirjuta meile või helista 165</span>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link1">
+                        <span class="icon icon-business_services"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">Ärikliendi teenindus:</h5>
+                        <span class="">kirjuta meile või helista 1551</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link2">
+                        <span class="icon icon-buy_2"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">E-poe klienditeenindus</h5>
+                        <span class="hidden-sm hidden-xs">kirjuta või helista 650 7030</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link3">
                         <span class="icon icon-facebook"></span>
                       </a>
                       <div class="media-body">
-                        <h4 class="media-heading">TSBrand on Facebook</h4>
-                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
-                      </div>
-                    </div>
-
-                </div>
-                <div class="col-md-3">
-                    <div class="media">
-                      <a class="pull-left" href="#">
-                        <span class="icon icon-youtube"></span>
-                      </a>
-                      <div class="media-body">
-                        <h4 class="media-heading">TSBrand on Youtube</h4>
-                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media">
-                      <a class="pull-left" href="#">
-                        <span class="icon icon-twitter"></span>
-                      </a>
-                      <div class="media-body">
-                        <h4 class="media-heading">TSbrand on Twitter</h4>
-                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="media">
-                      <a class="pull-left" href="#">
-                        <span class="icon icon-google-plus"></span>
-                      </a>
-                      <div class="media-body">
-                        <h4 class="media-heading">TSbrand on Google +</h4>
-                        <span class="hidden-sm hidden-xs">Short USP about why to visit this channel.</span>
+                        <h5 class="media-heading">Elioni uudised ja teenindus</h5>
+                        <span class="hidden-sm hidden-xs">Facebookis</span>
                       </div>
                     </div>
                 </div>

@@ -165,7 +165,7 @@
 
 // primary
 // @extend .alert-primary; !!! Extend directives may only be used within rules.
-//
+
 .alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
 }

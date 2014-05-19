@@ -1,6 +1,8 @@
 .navbar { 
+
   margin-bottom: 1px;
   min-height: 40px;
+
   &:first-child {
     .dropdown-menu {
       margin-top:1px;
@@ -9,90 +11,94 @@
         color: #fff;
       }
     }
-  } 
+  }
+
 }
+
 .navbar-nav {
+
   margin-top: 0;
   margin-bottom: 0;
 
   .menu-large {
     .dropdown-menu {
+
       width: 100%;
       color: #fff;
+
     }
   }
+
 }
 .navbar-default {
+
   background-color: $navbar-default-bg;
   border-radius: $navbar-default-border;
+
   .navbar-brand{
+
     padding: 19px 15px;
     color:$navbar-default-brand-color;
+
     &:hover{
       color:$navbar-default-brand-hover-color;
     }
+
     @media (max-width: $screen-xs-max) { 
       padding: 11px 15px 0 20px;
     }
+
   }
+
   .navbar-nav {
+
     margin-top: 0;
     margin-bottom: 0;
 
+    .active {
+      > a, > a:hover, > a:focus, > a:active {
+        
+        color:$link-color;
+        background-color: transparent;
+        
+        &:before {
+          background-color: darken($navbar-inverse-bg,7.6%);
+          bottom: 0;
+          content: "";
+          display: block;
+          height: 4px;
+          left: 0;
+          position: absolute;
+          top: auto;
+          width: 100%;
+        }
+
+        @media (max-width: $screen-xs-max) { 
+          color:$link-color-on-dark-bg;
+          &:before {
+            background-color: transparent;
+          }
+          &:after {
+            @include setIconFonts();
+            position: relative;
+            top: 15px;
+            margin-right:10px;
+            font-size: $font-size-base;
+            content: "\e668";
+            float: right;
+            right: 0px;
+          }
+        }
+      }
+    }
     .menu-large {
+
       .dropdown-menu {
 
         padding:0;
         border-radius: 0;
         border:0;
         box-shadow: none;
-
-        .megamenu {
-
-          > li {
-
-            a {
-              color:$body-bg;
-              @media (max-width: $screen-xs-max) { 
-                border-bottom: 1px solid darken($brand-primary,10%);
-              }
-            }
-
-            span[class*="icon-arrow"] {
-
-              float: none;
-              font-size: $font-size-base - 2;
-
-              &:before { content: "\e668"; } // arrow right
-
-              // change arrow on mobile screen
-              @media (max-width: $screen-xs-max) { 
-                float:right;
-              }
-
-            }
-            
-            &:not(:first-child) {
-
-              span[class*="icon-arrow"] {
-                // change arrow on mobile screen
-                @media (max-width: $screen-xs-max) { 
-                  &:before { content: "\e669"; } // arrow down
-                }
-              }
-
-              @media (max-width: $screen-xs-max) { 
-                > ul > li:not(.dropdown-header) > a {
-                  padding-left: 35px;
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                }
-              }
-
-            }
-          }
-        
-        }
 
         @media (max-width: $screen-xs-max) { 
           background-color:darken($navbar-inverse-bg,5%);
@@ -128,7 +134,7 @@
               color:$navbar-default-link-hover-color;
             }
             &:hover:before {
-              background: none repeat scroll 0 0 darken($navbar-inverse-bg,7.6%);
+              background-color: darken($navbar-inverse-bg,7.6%);
               bottom: 0;
               content: "";
               display: block;
@@ -139,7 +145,7 @@
               width: 100%;
             }
             &:after {
-                background: none repeat scroll 0 0 lighten($gray,50%);
+                background-color: lighten($gray,50%);
                 content: "";
                 display: block;
                 height: 28px;
@@ -228,14 +234,42 @@
   .navbar-collapse{
     max-height: none;
     border:0;
-    @media (max-width: $screen-xs-max) { 
+    @media (max-width: $screen-xs-max) {
+
       background-color:$navbar-inverse-bg;
+      
+      .menu-large > a {
+
+        font-size: 17px;
+        color: white;
+        border-bottom: 1px solid darken($navbar-inverse-bg,7.6%);
+
+        > span[class*="icon-arrow-"]{
+          float: right;
+          font-size: 13px;
+        }
+        &:after {
+          background-color: transparent;
+        }
+        &:hover{
+          background-color:lighten($brand-primary,7.6%);
+
+          &:after, &:before {
+            background-color: transparent;
+          }
+
+        }
+
+      }
+
       .dropdown-toggle {
+
         padding: 0;
         color: $body-bg;
         font-size: 17px;
         padding: 10px 15px;
         border-bottom: 1px solid darken($navbar-inverse-bg,7.6%);
+
         &:hover:before, &:after {
           background-color:transparent;
         }
@@ -285,7 +319,7 @@
             height: 28px;
             margin-top: -15px;
             position: absolute;
-            right: 0;
+            right: -1px;
             top: 50%;
             width: 1px;
             z-index: 1;

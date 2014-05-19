@@ -285,7 +285,7 @@
             height: 28px;
             margin-top: -15px;
             position: absolute;
-            right: -1px;
+            right: 0;
             top: 50%;
             width: 1px;
             z-index: 1;
@@ -371,7 +371,7 @@
 
         }
 
-        &:last-child {
+        &.with-icon {
           > a {
 
               padding-top:3px; 
@@ -385,10 +385,6 @@
               .icon-myaccount {
                 font-size: $font-size-base + 17;
                 vertical-align: middle;
-              }
-
-            &:after {
-              background: transparent;
             }
           }
         }

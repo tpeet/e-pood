@@ -898,7 +898,6 @@
 
 @mixin form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5) {
   // Color the label and help text
-  .help-block,
   .control-label,
   .radio,
   .checkbox,
@@ -916,6 +915,11 @@
       $shadow: inset 0 0px 0px rgba(0,0,0,0), 0 0 6px lighten($border-color, 20%);
       @include box-shadow($shadow);
     }
+  }
+  // Error tekst
+  .help-block,
+  .help-block-inline{
+    color: $border-color;
   }
   // Set validation states also for addons
   .input-group-addon {
@@ -945,7 +949,7 @@
   //   border-width: 1px;
   //   outline: 0;
   //   @include box-shadow(inset 0 0px 0px rgba(0,0,0,0), 0 0 0px $color-rgba);
-  // }
+  // } !!! Base-level rules cannot contain the parent-selector-referencing character '&'.
 }
 
 // Form control sizing
@@ -986,6 +990,20 @@
   }*/
 }
 
+// footer icons
+@mixin setFooterIcons($backgroundColor:transparent, $textSize:$font-size-base) {
+  background-color: $backgroundColor;
+  color: $brand-white;
+  display: table-cell;
+  height: 30px;
+  line-height: 2px;
+  width: 30px;
+  border-radius: $border-radius-base;
+  text-align: center;
+  vertical-align: middle; 
+  font-size: $textSize;
+}
+
 // Helper mixins
 
 // Convert px to em
@@ -993,3 +1011,12 @@
     @return ($px / $base) * 1em;
 }*/
 
+@mixin setIconFonts() {
+  font-family: 'tsr-icons-all';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

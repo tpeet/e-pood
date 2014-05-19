@@ -1,160 +1,192 @@
 footer {
-  
+  .container-no-gutter {
+    padding-left: 0;
+  }
   background-color: darken($brand-primary,7.6%);
   color: #fff;
   min-width: 320px;
   width: 100%;
 
-  > div > div {
-    
-    > div  {
-
-      > .list-group {
-
-        padding-right: 30px;
-        list-style: none;
-
-        > .dropdown-header {
-
-          padding-top: 40px;
-          padding-right: 0;
-          padding-bottom: 20px;
-          padding-left: 0;
-          margin-bottom: 20px;
-          border-bottom: 1px solid darken($brand-primary,15%);
-
-          > a {
-
-            color:#FFF;
-            
-            &:hover, &:active, &:focus  {
-              text-decoration: none;
-            }
-
-            > h6 {
-              margin: 0;
-            }
-          }
-
-        }
-
-        > li {
-          
-          padding-top: 8px;
-          padding-bottom: 8px;
-
-          > a {
-            color: #fff;
-            &:hover, &:active, &:focus {
-              text-decoration:underline;
-            }
-          }
-        }
+  /// new
+  h2 {
+    border-bottom: 1px solid darken($brand-primary,15%);
+    font-size: $font-size-base + 3;
+    font-weight: normal;
+    margin: 38px 30px 10px 0;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 15px;
+    > a, > a:hover, > a:focus, a:active {
+      color: $link-color-on-dark-bg;
+      text-decoration: none;
+      cursor: text;
+      @media (max-width: $screen-xs-max) {
+        cursor: pointer;
       }
     }
 
+    /*&:hover, &:active, &:focus  {
+        background-color: lighten($brand-primary, 7.6%);
+    }*/
 
-    @media (max-width: $screen-xs-max) { 
+    @media (max-width: $screen-xs-max) {
+
+      margin:0;
+      padding: 8px 10px;
+      background-color: $brand-primary;
       
-      > div > .list-group {
-        
-        margin:0;
-        padding-right: 0;
-        list-style: none;
-
-        > li:not(.dropdown-header) {
-          display:none;
+      &.active {
+        cursor: pointer;
+        a:after {
+          @include setIconFonts();
+          position: relative;
+          top: 6px;
+          float: right;
+          content: "\e66b";
         }
+      }
 
-        > li {
-          border-bottom: 1px solid darken($brand-primary,15%);
-          padding-top: 8px;
-          padding-right: 10px;
-          padding-left: 10px;
+      &:hover, &:active, &:focus  {
+        background-color: lighten($brand-primary, 7.6%);
+      }
+      > a {
+        display: block;
+      }
+      > a:after {
+        @include setIconFonts();
+        position: relative;
+        top: 6px;
+        float: right;
+        content: "\e669";
+      }
+    }
+  }
+  .list-group {
 
-          [class*="icon-arrow"]{
-            float: right;
-            &:before { content: "\e668"; }
-          }
+    .list-group-item {
+
+      background: none;
+      border: 0;
+      display: block;
+      margin: 0;
+      margin-right: 20px;
+      padding-right: 0;
+      padding-bottom: 6px;
+      padding-top: 6px;
+      border-radius: 0;
+      position: relative;
+      padding-left: 15px;
+
+      > a, > a:hover {
+
+        color: $link-color-on-dark-bg;
+        text-decoration: none;
+      }
+      &:hover, &:active, &:focus  {
+          background-color: lighten($brand-primary, 7.6%);
+          cursor: pointer;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        
+        border-bottom: 1px solid darken($brand-primary,15%);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        margin:0;
+
+        > a:after {
+          @include setIconFonts();
+          position: relative;
+          top: 6px;
+          float: right;
+          content: "\e668";
+        }
+      }
+
+    }
+
+    @media (max-width: $screen-xs-max) {
+
+      margin:0;
+
+      .list-group-item { 
+        display:none;
+        cursor: pointer;
+      }
+
+      &.active {
+        .list-group-item { 
+
+          display:block;
 
           &:hover, &:active, &:focus  {
             background-color: lighten($brand-primary, 7.6%);
           }
-
-          > a:hover{
-            text-decoration:none;
-          }
-        }
-
-        > .dropdown-header {
-
-          padding-top: 8px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-bottom: 8px;
-          margin-bottom: 0;
-          border-bottom: 1px solid darken($brand-primary,15%);
-          background-color: $brand-primary;
-
-          [class*="icon-arrow"]{
-            &:before { content: "\e669"; } // arrow down
-          }
         }
       }
     }
-  } 
+  }
+  /// end new
+
+
+
+   
 
   // media object
   .social-block {
-    padding:20px 0 10px 0;
+    padding:0;
     background-color: $brand-primary;
     .media {
 
-      margin:0 0 10px 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-right: 15px;
+      padding-left: 15px;
+
+      &:hover {
+        
+        background-color: darken($brand-primary, 7.6%);
+        cursor: pointer;
+
+        &:before {
+          background-color: darken($brand-primary, 7.6%);
+          content: "";
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 20px;
+          top: 0;
+          left: -15px;
+        }
+      }
 
       [class*="facebook"]{
-        background-color: $facebook-blue;
-        color: $brand-white;
-        display: table-cell;
-        height: 30px;
-        line-height: 2px;
-        width: 30px;
-        border-radius: $border-radius-base;
-        text-align: center;
-        vertical-align: middle; 
+        @include setFooterIcons($facebook-blue);
       }
       [class*="youtube"]{
-        background-color: $youtube-red;
-        color: $brand-white;
-        display: table-cell;
-        height: 30px;
-        line-height: 2px;
-        width: 30px;
-        border-radius: $border-radius-base;
-        text-align: center;
-        vertical-align: middle; 
+        @include setFooterIcons($youtube-red);
       }
       [class*="twitter"]{
         background-color: $twitter-blue;
-        color: $brand-white;
-        display: table-cell;
-        height: 30px;
-        line-height: 2px;
-        width: 30px;
-        border-radius: $border-radius-base;
-        text-align: center;
-        vertical-align: middle; 
+        @include setFooterIcons($twitter-blue);
       }
       [class*="google-plus"]{
         background-color: $google-plus-red;
-        color: $brand-white;
-        display: table-cell;
-        height: 30px;
-        line-height: 2px;
-        width: 30px;
-        border-radius: $border-radius-base;
-        text-align: center;
-        vertical-align: middle; 
+        @include setFooterIcons($google-plus-red);
+      }
+      
+      [class*="icon-private_services"] {
+        @include setFooterIcons(transparent,24px);
+      }
+      [class*="icon-business_services"] {
+        @include setFooterIcons(transparent,24px);
+      }
+      [class*="icon-buy_2"] {
+        @include setFooterIcons(transparent,24px);
+      }
+      [class*="icon-facebook"] {
+        @include setFooterIcons(transparent,24px);
       }
     }
 
@@ -162,7 +194,7 @@ footer {
       padding-top:10px;
 
       .media{
-        padding:10px 0 10px 0;
+        padding:10px 0 10px 8px;
         margin: 0px;
       }
       
@@ -194,12 +226,15 @@ footer {
 
   @include make-grid-columns();
 
-  @include make-grid-columns-float(xs);
-  @include make-grid($grid-columns, xs, width);
-  @include make-grid($grid-columns, xs, pull);
-  @include make-grid($grid-columns, xs, push);
-  @include make-grid($grid-columns, xs, offset);
-  @include reset-gutter($grid-columns, xs);
+  @media (max-width: $screen-xs-min) {
+    @include make-grid-columns-float(xs);
+    @include make-grid($grid-columns, xs, width);
+    //@include make-grid($grid-columns, xs, pull);
+    //@include make-grid($grid-columns, xs, push);
+    //@include make-grid($grid-columns, xs, offset);
+    @include reset-gutter($grid-columns, xs);
+  }
+  
 
   @media (min-width: $screen-sm-min) {
 
@@ -257,24 +292,3 @@ footer {
   }
 
 }
-
-
-
-/*.container-no-gutter{
-
-  @include container-fixed();
-  .row{
-    @include make-row();
-  }
-  .left-and-right {
-    .left {
-      @include make-xs-column(6);
-    }
-    .right {
-      @include make-xs-column(6);
-    }
-
-  }
-
-}*/
-

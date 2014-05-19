@@ -3,7 +3,6 @@
     'use strict';
 
     function init() {
-        console.log('alert js file', $('.alert').data('toggle'));
         $('.alert').each(function(i, el){
             if( $(el).data('toggle') ) {
                 $(el).find('.read-more').click(function(e){

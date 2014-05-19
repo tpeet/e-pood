@@ -1,72 +1,393 @@
-.menu-large {
-  position: static !important;
-}
-.megamenu {
-  padding: 40px 0px 50px 0px;
-  width:100%;
-  > li:first-child {
-    ul > li > a {
-        &:hover, &:focus{
-        background-color:transparent;
+.navbar-default {
+  .navbar-nav {
+    .side-menu {
+      
+      &.menu-large {
+
+        > a {
+          &:after {
+            @include setIconFonts();
+            position: relative;
+            top: 15px;
+            margin-right:10px;
+            font-size: $font-size-base;
+            content: "\e668";// arrow down
+            float: right;
+            right: 0;
+          }
+        }
+      }
+    }
+    .dropdown {
+      &.side-menu {
+      
+        &.menu-large {
+          &.open {
+            > a {
+              &:after {
+                @include setIconFonts();
+                position: relative;
+                top: 15px;
+                margin-right:10px;
+                font-size: $font-size-base;
+                content: "\e66b";// arrow down
+                float: right;
+                right: 0;
+              }
+            }
+          }
+          > a {
+            &:after {
+              @include setIconFonts();
+              position: relative;
+              top: 15px;
+              margin-right:10px;
+              font-size: $font-size-base;
+              content: "\e669";// arrow down
+              float: right;
+              right: 0;
+            }
+          }
+        }
       }
     }
   }
+}
+
+.menu-large {
+
+  position: static !important;
+
+  > .dropdown-toggle {
+
+    &:after {
+      content: "";
+    }
+
+  }
+
+}
+
+.dropdown {
+
+  &.menu-large {
+
+    @media (max-width: $screen-xs-max) {
+    
+      &.open {
+
+        > .dropdown-toggle {
+
+          padding: 10px 15px ;
+
+          &:after {
+            @include setIconFonts();
+            position: relative;
+            top: 15px;
+            margin-right:10px;
+            font-size: $font-size-base;
+            content: "\e66b";// arrow down
+            float: right;
+          }
+
+        }
+        
+      }
+
+      > .dropdown-toggle {
+
+      
+        &:after {
+          @include setIconFonts();
+          position: relative;
+          top: 15px;
+          margin-right:10px;
+          font-size: $font-size-base;
+          content: "\e669";
+          float: right;
+        }
+       
+
+      }
+
+      .dropdown-menu {
+        .megamenu {
+          > li > a {
+            color: $link-color-on-dark-bg;
+            &:after {
+              @include setIconFonts();
+              position: relative;
+              top: 0px;
+              margin-left:10px;
+              font-size: $font-size-base;
+              content: "\e668";
+              float: right;
+              right: -15px;
+            }
+          }
+        }
+      }
+
+    }
+
+// ACTIVE MENU
+    &.active {
+
+      background-color: transparent;
+
+      > a, > a:hover, > a:active, > a:focus {
+        color:$link-color;
+        background-color: transparent;
+        &:before {
+            background-color: darken($navbar-inverse-bg,7.6%);
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: auto;
+            width: 100%;
+          }
+      }
+      @media (max-width: $screen-xs-max) { 
+        > a, > a:hover, > a:active, > a:focus {
+          color: $link-color-on-dark-bg;
+          &:before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+// END ACTIVE MENU
+
+  }
+}
+.megamenu {
+
+  padding: 40px 0px 50px 0px;
+  width:100%;
+
+  @media (max-width: $screen-sm-max) {
+    margin-left: 0 ;
+    margin-right: 0 ;
+  }
+
   > li {
+
+    &:first-child{
+      .list-group {
+        > li {
+          &:hover {
+            background:none;
+          }
+        }
+      }
+    }
+
+    a {
+
+      @media (max-width: $screen-xs-max) { 
+        
+        border-bottom: 1px solid darken($brand-primary,10%);
+        display: block;
+        padding: 10px 25px;
+
+        &:hover {
+          text-decoration: none;
+          background-color:lighten($brand-primary,7.6%);
+        }
+
+      }
+
+    }
+
     > ul {
+
       padding: 0;
       margin: 0;
       
       // hover effect
       &.list-group > li {
 
-        &.dropdown-header:not(:first-child) {
-          margin-top:8px;
+        @media (max-width: $screen-xs-max) {
+
+          a {
+
+            display:block;
+            
+            &:after {
+              @include setIconFonts();
+              position: relative;
+              top: 0px;
+              margin-left:10px;
+              font-size: $font-size-base;
+              content: "\e668";
+              float: right;
+              right: -4px;
+            }
+
+          }
+
         }
 
         &:not(.dropdown-header) + .dropdown-header {
           margin-top:23px;
         }
+        &:hover {
+          background-color: darken($navbar-inverse-bg,7.6%);
+        }
+
+        > h6 {
+
+          > a {
+
+            padding:7px 10px;
+            color:$link-color-on-dark-bg;
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            &:after {
+              @include setIconFonts();
+              position: relative;
+              top: 0px;
+              margin-left:10px;
+              font-size: $font-size-base;
+              content: "\e668";
+            }
+
+            span[class*='icon-arrow'] {
+              display: none;// temp solution to hide old implementation
+            }
+
+            @media (max-width: $screen-xs-max) {
+            
+              font-size: $font-size-base;
+              padding-left: 35px;
+
+              &:after {
+                margin-right: 5px;
+              }
+
+            }
+            
+          }
+        }
+        
+        
 
         &.dropdown-header {
-          > a {
-            padding:7px 10px;
-            &:hover:before {
-              top: -5px;
+          &.open {
+
+            > h6 {
+
+              > a {
+
+                &:after {
+
+                  @include setIconFonts();
+                  position: relative;
+                  top: 0px;
+                  margin-left:10px;
+                  font-size: $font-size-base;
+                  content: "\e66b";
+                  float: right;
+                }
+              }
             }
           }
+
+          > h6 {
+
+            > a {
+
+              &:after {
+                @include setIconFonts();
+                position: relative;
+                top: 0px;
+                margin-left:10px;
+                font-size: $font-size-base;
+                content: "\e668";
+
+                @media (max-width: $screen-xs-max) {
+                  content: "\e669";
+                  float: right;
+                  top: 3px;
+                  right: -9px;
+                }
+              }
+
+            }
+
+            @media (max-width: $screen-sm-max) {
+
+              font-size: $font-size-base;
+              margin:0;
+
+              > a {
+                padding:10px 15px; 
+              }
+            }
+          }
+          
 
         }
         
         > a {
 
-          padding:4px 10px;
-          z-index: 1;
-          position: relative;
-          display: block;
-
-          &:hover:before {
-            background-color: darken($brand-primary, 7.6%);
-            content: "";
-            min-height: 40px;
-            left: 0;
-            position: absolute;
-            top: -5px;
-            width: 100%;
-            z-index: -1;
-            @media (max-width: $screen-xs-max) { 
-              top:0;
-              min-height: 42px;
-            }
-          }
+            padding:4px 10px;
+            z-index: 1;
+            position: relative;
+            display: block;
+            color:$link-color-on-dark-bg;
 
           > span, > p, > h6 {
             margin: 0;
             display: inline-block;
             position: relative;
-            z-index: 1;
+            z-index: 1; // or is there a reason for 999 ?
           }
 
         }
+
+        @media (max-width: $screen-xs-max) {
+          &:not(.dropdown-header){
+            display:none;
+          }
+
+          &:not(.dropdown-header) + .dropdown-header,
+          &.dropdown-header:not(:first-child) {
+
+            margin-top: 0;
+
+            > &:hover:before {
+              background-color: transparent;
+              min-height: auto;
+              visibility: hidden;
+            }
+
+          }
+
+          > a {
+
+            padding: 10px 10px 10px 35px;
+
+            &:after {
+              margin-right:5px;
+            }
+
+            &:hover:after {
+              top:0;
+            }
+          }
+
+          &.dropdown-header > h6 > a {
+            padding-left: 25px;
+          }
+        }
+
       }
 
       > li {
@@ -74,6 +395,7 @@
         position: relative;
 
         > a {
+
           display: block;
           clear: both;
           font-weight: normal;
@@ -81,15 +403,25 @@
           color: #333333;
           white-space: normal;
           padding: 4px 10px;
+
           &:hover,&:focus{
             text-decoration: none;
             color: #fff;
-            //background-color: darken($brand-primary, 7.6%);
           }
 
           > img {
             padding-top: 0px;
             max-height: 410px;
+          }
+
+          @media (max-width: $screen-xs-max) { 
+            border-bottom: 1px solid darken($brand-primary,10%);
+          }
+        }
+
+        @media (max-width: $screen-xs-max) {
+          &:hover {
+            background-color: lighten($navbar-inverse-bg,7.6%);
           }
         }
         
@@ -99,6 +431,17 @@
     &.dropdown-header {
       color: #428bca;
       font-size: $font-size-base + 3;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: $screen-xs-max){
+        margin-bottom: 0px;
+      }
     }
 
   }
@@ -115,28 +458,6 @@
 
   }
 
-  @media (max-width: $screen-sm-max) {
-    margin-left: 0 ;
-    margin-right: 0 ;
-
-    > li {
-      
-      margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (max-width: $screen-xs-max){
-        margin-bottom: 0px;
-      }
-
-    }
-    &.dropdown-header {
-      padding: 3px 15px;
-    
-    }
-  }
-
   @media (max-width: $screen-xs-max){
     padding: 0px;
     [class*="col-"]{
@@ -149,121 +470,36 @@
 
 .navbar-nav .open .dropdown-menu .dropdown-header {
   @media (max-width: $screen-xs-max) {
+
     padding:0;
+
     > a {
+
+      padding: 10px 25px ;
       background-color: darken($brand-primary, 7.6%);
       border-bottom: 1px solid darken($brand-primary,15%);
       padding-left: 25px;
+
       &:hover{
         background-color:lighten($brand-primary,7.6%);
       }
+
+      > h6 {
+        display: block;
+      }
+
     }
+
   }
 }
 
-
-
-
 /* FOR MOBILE SCREEN MAINMENU STYLES */
 @media (max-width: $screen-xs-max) {
-
-  .megamenu > li > ul {
-
-    > li {
-      &:hover{
-        background-color: lighten($navbar-inverse-bg,7.6%);
-      }
-    }
-
-    li > a {
-      padding:10px 15px;
-    }
-
-    li > a, 
-    li > a > h6 {
-      font-size: $font-size-base;
-      color: #fff;
-    }
-    > li > a {
-
-      border-bottom: 1px solid darken($brand-primary,10%);
-
-      span[class*="icon-arrow"] {
-        float: right;
-        font-size: $font-size-base - 2;
-
-        &:before { content: "\e668"; } // arrow right
-      }
-
-    }
-    
-
-    &.list-group {
-      > li {
-
-        &:not(.dropdown-header){
-          display:none;
-        }
-
-        &:not(.dropdown-header) + .dropdown-header,
-        &.dropdown-header:not(:first-child) {
-
-          margin-top: 0;
-
-          > &:hover:before {
-            background-color: transparent;
-            min-height: auto;
-            visibility: hidden;
-          }
-
-        }
-
-        > a {
-          padding:10px 25px;
-          &:hover:after {
-            top:0;
-          }
-        }
-
-        &.dropdown-header > a {
-          
-          padding: 10px 15px;
-
-          span[class*="icon-arrow"] {
-
-            float: right;
-            font-size: $font-size-base - 2;
-
-            &:before { content: "\e669"; } // arrow down
-          }
-
-          &:hover:before {
-            top:0;
-            background-color: transparent;
-          }
-
-        }
-
-      }
-    }
-  }
-
   .navbar-default {
     .navbar-collapse {
       .navbar-nav {
-        .dropdown-toggle{
-          padding: 10px 15px ;
-        }
-        .dropdown-menu .dropdown-header > a {
-          padding: 10px 25px ;
-        }
-        .dropdown-toggle > span[class*="icon-arrow-"] {
-          margin-top: 6px;
-        }
-
+        
       }
     }
-    
   }
-
 }

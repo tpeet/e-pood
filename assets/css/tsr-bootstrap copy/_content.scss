@@ -1,0 +1,66 @@
+//content block padding
+
+$padding-lg:	50px;
+$padding: 		40px;
+$padding-sm: 	30px;
+$padding-xs: 	20px;
+
+
+// Defines content padding, separator and spaces
+@mixin content ($padding) {
+	padding: $padding;
+  &.content-condensed{
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+  //clear first/last element margin top/bottom insaide content 
+  > *{
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+  }
+
+  &.separator{
+  	border-top: 1px solid $gray-lighter;
+  }
+  // Space
+  hr{
+	  &.space { //padding size space
+	  	border:none;
+	  	height:1px;
+	    margin-top: $padding /2;
+	    margin-bottom: $padding /2;
+	  
+		  &.space-condensed { //half padding size space
+		  	border:none;
+		  	height:1px;
+		    margin-top: 0;
+		    margin-bottom: $padding /2;
+		  }
+		}
+	}
+} 
+
+
+.content{
+	@include content($padding);
+
+	&.padding-lg{
+		@include content($padding-lg);
+	}
+	&.padding-sm{
+		@include content($padding-sm);
+	}
+	&.padding-xs{
+		@include content($padding-xs);
+	}
+}
+
+
+/* CHANGES:: 
+space-half -> space-condensed
+content - a> .content
+*/
