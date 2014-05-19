@@ -6958,6 +6958,7 @@ TSR - CAROUSEL LISTING
         $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
         $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
         $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+        
         var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
         //_el.append('<li>asdflkdsjaflkjsalkf</li>');
         console.log(_el);

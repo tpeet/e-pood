@@ -24,41 +24,28 @@ min-width: 100%;
     padding-bottom: 10px;
   }
 }
-// Admin menu
-.ee-adminnav {
-  .navbar-nav > li > a:after,
-  .navbar-text:after {
-  background: $gray;
-  content: "";
-  display: block;
-  height: 20px;
-  margin-top: -10px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 1px;
-  z-index: 1;
-  }
 
-  .navbar-nav > li:last-of-type > a:after {
-  background: none;
-  }
+.navbar-inverse .user-menu.navbar-nav > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 15px;
 
-  .navbar-text {
-    line-height: 0.42857;
-  }
-
-  .form-horizontal {
-    padding: 25px 12px 50px 12px;
-  }
-
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: $purple-c;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: -1px;
-  }
 }
+
+.navbar-inverse .user-menu.navbar-nav > li > a:hover {
+  background: $link-hover-color;
+}
+
+.navbar-nav.nav-justified {
+    display:table;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+    width:auto;
+}
+
 
 .loginIframeBody {
  background-color: #652d86;

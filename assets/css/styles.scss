@@ -180,6 +180,13 @@ display: inline-block;
     border-right: none;
   }
 }
+
+.sub-menu ul li > p {
+  line-height: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+}
 // WORK IN PROGRESS PARTS
 //**********************************
 

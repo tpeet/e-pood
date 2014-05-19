@@ -12266,29 +12266,21 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .topnav .dropdown-menu li:last-of-type a {
   padding-bottom: 10px; }
 
-.ee-adminnav .navbar-nav > li > a:after,
-.ee-adminnav .navbar-text:after {
-  background: #dbdbdb;
-  content: "";
-  display: block;
-  height: 20px;
-  margin-top: -10px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 1px;
-  z-index: 1; }
-.ee-adminnav .navbar-nav > li:last-of-type > a:after {
-  background: none; }
-.ee-adminnav .navbar-text {
-  line-height: 0.42857; }
-.ee-adminnav .form-horizontal {
-  padding: 25px 12px 50px 12px; }
-.ee-adminnav .nav .open > a, .ee-adminnav .nav .open > a:hover, .ee-adminnav .nav .open > a:focus {
-  background-color: #642887;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: -1px; }
+.navbar-inverse .user-menu.navbar-nav > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  font-size: 15px; }
+
+.navbar-inverse .user-menu.navbar-nav > li > a:hover {
+  background: #4f2369; }
+
+.nav-justified, .nav-tabs.nav-justified {
+  display: table; }
+
+.nav-justified > li, .nav-tabs.nav-justified > li {
+  float: none;
+  width: auto; }
 
 .loginIframeBody {
   background-color: #652d86;
@@ -12441,6 +12433,12 @@ body {
     font-weight: bold;
     right: 0;
     border-right: none; }
+
+.sub-menu ul li > p {
+  line-height: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block; }
 
 .ee-flashtext-container {
   text-align: center;
