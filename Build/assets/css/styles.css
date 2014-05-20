@@ -11924,6 +11924,9 @@ section.ee-section-leasing {
     margin-bottom: 0;
     margin-top: -1px; }
 
+.panel-group.bundle .tsr-forms label, .panel-group.bundle .tsr-forms .label {
+  margin: 0; }
+
 section.ee-tab-to-accordioncontent {
   border-top: none;
   background: white;
@@ -12275,10 +12278,10 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .navbar-inverse .user-menu.navbar-nav > li > a:hover {
   background: #4f2369; }
 
-.nav-justified, .nav-tabs.nav-justified {
+.navbar-nav.nav-justified {
   display: table; }
 
-.nav-justified > li, .nav-tabs.nav-justified > li {
+.navbar-nav.nav-justified > li {
   float: none;
   width: auto; }
 
