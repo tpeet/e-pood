@@ -670,7 +670,7 @@ $page-header-border-color:    $gray-lighter;
 // -------------------------
 
 // Hr border color
-$hr-border:                   $gray-lighter;
+$hr-border:                   $gray-lighter !default;
 
 // Horizontal forms & lists
 $component-offset-horizontal: 180px;

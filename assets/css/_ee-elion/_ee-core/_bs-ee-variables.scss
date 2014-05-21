@@ -854,7 +854,7 @@ $pre-scrollable-max-height:   340px !default;
 //##
 
 //** Text muted color
-$text-muted:                  $gray-light !default;
+$text-muted:                  $lightgrey-t;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** Headings small color
@@ -872,7 +872,7 @@ $page-header-border-color:    $gray-lighter !default;
 //##
 
 //** Horizontal line color.
-$hr-border:                   $lightgrey-t !default;
+$hr-border:                   $lightgrey-t;
 
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
