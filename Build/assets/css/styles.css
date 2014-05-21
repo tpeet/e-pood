@@ -11822,6 +11822,12 @@ section.tsr-section-productlist {
 .ee-tab-to-accordion .panel-heading {
   padding: 0; }
 
+.ee-comparebar.detail {
+  margin-top: 0; }
+  @media screen and (min-width: 992px) {
+    .ee-comparebar.detail {
+      margin-top: -55px; } }
+
 section.ee-product-detail {
   margin-bottom: 30px; }
   section.ee-product-detail .fixedheight {

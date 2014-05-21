@@ -1,3 +1,9 @@
+.ee-comparebar.detail {
+  margin-top: 0;
+  @include media-min($screen-md) {
+    margin-top: -57px;
+  }
+}
 section.ee-product-detail {
   margin-bottom: 30px;
 
