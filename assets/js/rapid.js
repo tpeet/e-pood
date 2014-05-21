@@ -2,6 +2,7 @@
 /* @include modernizr */
 /* @include enquire.min */
 
+/* @include trmix.min */
 
 /* TEMPORARY FOR TEMPLATING */
 /* @include handlebars-v1.3.0 */
