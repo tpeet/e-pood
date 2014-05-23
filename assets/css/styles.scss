@@ -94,9 +94,6 @@
 // HELPER CLASSES
 //**********************************
 
-body {
-  font-size: 15px;
-}
 .ee-thinline-bottom {
   margin-bottom: -1px;
 }
@@ -137,6 +134,9 @@ outline: none !important;
   color: #fff;
 }
 
+.admin.dropdown-menu {
+  top: auto;
+}
 // Alert
 
 .flyover {
@@ -206,6 +206,7 @@ vertical-align: middle;
   .ee-big {
   font-weight: bold;
   font-size: 8px;
+  padding: 2px 3px;
   }
 }
 
@@ -272,14 +273,6 @@ footer .social-block .media .icon {
   }
 }
 
-////// INTERNET EXPLORER 8
 
 
- @include old-ie {
-  
-  .ie8 &{
 
-      }
-
-
-    }// .ie8 & END

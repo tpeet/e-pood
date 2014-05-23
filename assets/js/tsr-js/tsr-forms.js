@@ -64,7 +64,6 @@ TSR - FORMS
 
 tsrForms.tsrCheckbox = function () {
 
-
   $('.tsr-forms input:checkbox').each(function () {
 
    var elem = $(this);
@@ -82,26 +81,23 @@ tsrForms.tsrCheckbox = function () {
    label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
 
 
-   label.not('.disabled').on('mousedown', function () {
+   label.not('.disabled').change(function () {
 
     var el = $(this);
     var check = el.children('input');
-    var checkName = check.attr('name');
-
-    $('input[name="' + checkName + '"]').prop('checked', false).removeClass('checked');
 
     if (el.hasClass('checked')) {
      el.removeClass('checked');
-     check.each(function() {
-      $(this).val(false);
+     check.each(function () {
+      $(this).attr("checked", false);
      });
 
     } else {
      el.addClass('checked');
-     check.each(function() {
-      $(this).val(true);
+     check.each(function () {
+      $(this).attr("checked", true);
      });
-     
+
     }
 
     return false;

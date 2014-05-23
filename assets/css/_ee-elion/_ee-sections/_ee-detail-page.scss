@@ -1,7 +1,8 @@
 .ee-comparebar.detail {
+  min-height: 40px;
   margin-top: 0;
   @include media-min($screen-md) {
-    margin-top: -57px;
+    margin-top: -47px;
   }
 }
 section.ee-product-detail {
@@ -18,8 +19,8 @@ section.ee-product-detail {
   margin-bottom: 0;
   }
 
-  .ee-detail-intro {
-    line-height: 0.7em;
+  .ee-detail-intro small{
+    line-height: 26px;
   }
 
   .ee-special-price {
@@ -210,4 +211,8 @@ section.ee-tab-to-accordioncontent {
       @include media-min($screen-md) {
       display: inline-block;
     }
+}
+
+.tsr-slides .tsr-module-product {
+  padding: 10px 5px 25px;
 }

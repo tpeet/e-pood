@@ -40,7 +40,7 @@ section.tsr-section-productlist  {
       } 
     }
     .tsr-product-colors {
-      padding-top: 20px;
+      padding-top: 0;
     }
     .tsr-product-content {
       width: 100%;
@@ -88,6 +88,9 @@ section.tsr-section-productlist  {
       & > [class*="col-"] {
       padding-top: 10px;
       padding-left: 0;
+      }
+      span {
+        line-height: 1.1;
       }
     }
     .ee-pricecol {

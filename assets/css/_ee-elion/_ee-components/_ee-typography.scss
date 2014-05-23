@@ -21,9 +21,7 @@ TYPOGRAPHY
 
 //////// Module class name
 
-
-
-$browser-context: 15.5; // Default
+$browser-context: 15; // Default
 
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
@@ -78,7 +76,7 @@ h1 small {
 }
 
 body {
-  font-size: em(15);
+
    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
