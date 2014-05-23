@@ -992,7 +992,7 @@
             {{else}}
               <div class="col-sm-4 hidden-xs"> </div>
           {{/if}}
-      <div class="tsr-product-colors hidden-sm">
+      <div class="tsr-product-colors hidden-sm col-xs-6">
         <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
           <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
@@ -1000,16 +1000,16 @@
           <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
         </ul>
       </div>
-            <div class="col-sm-4 ee-pricecol">
-              {{#if client_price}}
-              <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
-              {{else}} 
-              <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
-              {{/if}}
-              <p class="tsr-product-price">Kuumakse: 47,15 €</p>
-            </div>
-            <div class="col-sm-4 col-sm-offset-4 " ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
-          </div>
+      <div class="col-sm-4 col-xs-6 ee-pricecol">
+        {{#if client_price}}
+        <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
+        {{else}} 
+        <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
+        {{/if}}
+        <p class="tsr-product-price">Kuumakse: 47,15 €</p>
+      </div>
+      <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
+      </div>
 
         <p>
           {{#if campaign}}

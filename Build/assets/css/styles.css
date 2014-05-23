@@ -10459,7 +10459,7 @@ textarea {
       content: "/\00a0";
       padding: 0 5px;
       color: #cccccc; }
-  .breadcrumb > .active {
+  .breadcrumb > .active a {
     color: #999999; }
 
 section.ee-breadcrumbs {
@@ -11839,8 +11839,6 @@ section.ee-product-detail {
         min-height: 550px; } }
   section.ee-product-detail h1:first-of-type {
     margin-bottom: 0; }
-  section.ee-product-detail .ee-detail-intro small {
-    line-height: 26px; }
   section.ee-product-detail .ee-special-price, section.ee-product-detail .ee-product-price-lg {
     margin-top: 10px;
     font-size: 120%;
@@ -11980,7 +11978,7 @@ section.ee-tab-to-accordioncontent {
       display: inline-block; } }
 
 .tsr-slides .tsr-module-product {
-  padding: 10px 5px 25px; }
+  padding: 20px 5px 25px; }
 
 .ee-reviewed-initial {
   border-top: 1px solid #dbdbdb;
@@ -12081,12 +12079,9 @@ section.ee-reviewarea {
 .ee-review-answer-add {
   margin-bottom: -1px; }
 
-.tsr-forms input[type='text'],
-.tsr-forms input[type='password'] {
-  padding: 18px 0; }
-  .tsr-forms input[type='text']:first-of-type,
-  .tsr-forms input[type='password']:first-of-type {
-    margin-top: 1px; }
+.tsr-forms input[type='text']:first-of-type,
+.tsr-forms input[type='password']:first-of-type {
+  margin-top: 1px; }
 
 .minimal-header {
   background: #f6f6f6; }
