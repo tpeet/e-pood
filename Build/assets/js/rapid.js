@@ -6888,7 +6888,7 @@ TSR - CAROUSEL LISTING
 
 
 // ELION HEADQUARTER
-(function() {
+function CollapseBindings() {
 
     'use strict';
 
@@ -7011,7 +7011,7 @@ TSR - CAROUSEL LISTING
     
     header();
 
-}());
+};
 (function() {
 
     'use strict';
@@ -9461,6 +9461,7 @@ console.log('scripts js loaded');
 $(document).ready(function() {
 
 BindSlideToggle();
+CollapseBindings();
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });

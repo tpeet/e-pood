@@ -202,12 +202,20 @@
                 </div>
             </div>
       </li>
-      <li class="dropdown menu-large with-icon">
+      <li class="dropdown menu-large with-icon open">
         <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount"></span>Mul on väike profiil</a>
         <div class="dropdown-menu">
                 <div class="container">
-                    <div class="row megamenu user-droplayer">
-                        <div class="col-sm-3 col-sm-offset-9">
+                    <div class="row megamenu user-droplayer with-advertising">
+                        <div class="col-sm-9 ee-innerad">
+                         <a href=""> <img src="http://lorempixel.com/1000/300/">
+                               <div class="tsr-tactical-textPanel">
+                             <!--       <header>Hakkab juba looma</header> -->
+                               <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
+                             </div>
+                           </a>
+                        </div>
+                        <div class="col-sm-3">
                             <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
                             <hr>
                             <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
@@ -756,7 +764,7 @@
   <div id="js-filter" class="collapse ee-filter-content">
     <div id="content-placeholder-filter"></div> 
 
-<p>Hinnavahemik: <strong class="violet-text"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
+<p>Hinnavahemik: <strong class="ee-special-price"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
 
 <input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
 
@@ -771,7 +779,7 @@
   <script id="filter-template" type="text/x-handlebars-template">
 
   {{#parameters}}
-  <p>{{caption}} <i class="icon icon-help violet-text" data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"></i> </p>
+  <p>{{caption}} <a data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"><i class="icon icon-help" ></i></a> </p>
   <ul class="nav nav-pills"> 
     {{#each param}}
       <li><a class="btn btn-primary inactive" role="button">{{para}}<span class="badge">{{amount}}</span></a>

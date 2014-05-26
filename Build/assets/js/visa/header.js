@@ -1,4 +1,4 @@
-(function() {
+function CollapseBindings() {
 
     'use strict';
 
@@ -121,4 +121,4 @@
     
     header();
 
-}());
+};

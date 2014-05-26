@@ -11459,6 +11459,8 @@ section.tsr-section-productAndService-listing {
     @media screen and (min-width: 480px) {
       .tsr-module-product .ee-favorite-dropdown {
         right: 0.33333em; } }
+    .tsr-module-product .ee-favorite-dropdown .dropdown-menu {
+      text-align: left; }
   .tsr-module-product .tsr-product-header {
     font-size: 105%;
     margin: 0.66667em 0 0.33333em;
@@ -11698,10 +11700,14 @@ section.tsr-section-productlist {
         section.tsr-section-productlist .tsr-module-product .tsr-product-content {
           max-width: 73%; } }
     section.tsr-section-productlist .tsr-module-product .tsr-product-header {
-      font-size: 110%; }
+      font-size: 110%;
+      line-height: 1.1; }
       @media screen and (min-width: 768px) {
         section.tsr-section-productlist .tsr-module-product .tsr-product-header {
-          font-size: 150%; } }
+          font-size: 145%; } }
+      section.tsr-section-productlist .tsr-module-product .tsr-product-header a {
+        display: block;
+        width: 95%; }
     section.tsr-section-productlist .tsr-module-product .hidden-sm {
       vertical-align: top;
       display: inline-block !important; }
@@ -11747,8 +11753,7 @@ section.tsr-section-productlist {
       font-size: 13px; }
 
 .ee-innerad {
-  position: relative;
-  margin-bottom: 10px; }
+  position: relative; }
   .ee-innerad img {
     width: 100%;
     height: auto; }
@@ -11823,22 +11828,22 @@ section.tsr-section-productlist {
 .ee-tab-to-accordion .panel-heading {
   padding: 0; }
 
-.ee-comparebar.detail {
-  min-height: 40px;
-  margin-top: 0; }
-  @media screen and (min-width: 992px) {
-    .ee-comparebar.detail {
-      margin-top: -47px; } }
-
 section.ee-product-detail {
   margin-bottom: 30px; }
+  section.ee-product-detail .ee-comparebar.detail {
+    min-height: 40px;
+    margin-top: 0; }
+    @media screen and (min-width: 992px) {
+      section.ee-product-detail .ee-comparebar.detail {
+        margin-top: -47px; } }
+  section.ee-product-detail h1 {
+    line-height: 0.5;
+    margin-bottom: 10px; }
   section.ee-product-detail .fixedheight {
     min-height: auto; }
     @media screen and (min-width: 992px) {
       section.ee-product-detail .fixedheight {
         min-height: 550px; } }
-  section.ee-product-detail h1:first-of-type {
-    margin-bottom: 0; }
   section.ee-product-detail .ee-special-price, section.ee-product-detail .ee-product-price-lg {
     margin-top: 10px;
     font-size: 120%;
@@ -12196,6 +12201,9 @@ section.ee-reviewarea {
   padding-bottom: 20px;
   padding-right: 10px;
   background: #fff; }
+  .ee-filter-content a:hover {
+    text-decoration: none;
+    cursor: pointer; }
   .ee-filter-content p {
     margin-top: 15px;
     margin-bottom: 5px;
@@ -12265,6 +12273,9 @@ section.tsr-section-carousel-listing.tsr-slider-init {
 .megamenu img {
   margin-top: 10px; }
 
+header .navbar-default {
+  margin-bottom: -1px; }
+
 .topnav.navbar, .ee-adminnav.navbar {
   margin-bottom: 0; }
 
@@ -12275,10 +12286,15 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   min-width: 100%; }
 
 .topnav .dropdown-menu li a {
-  padding: 6px 20px;
   font-size: 13px; }
-.topnav .dropdown-menu li:last-of-type a {
-  padding-bottom: 10px; }
+
+.user-droplayer.megamenu.with-advertising {
+  padding: 0;
+  margin-top: -10px; }
+  .user-droplayer.megamenu.with-advertising .col-sm-9 {
+    padding-left: 0; }
+  .user-droplayer.megamenu.with-advertising .col-sm-3 {
+    margin-top: 30px; }
 
 .navbar-inverse .user-menu.navbar-nav > li > a {
   padding-top: 20px;
@@ -12376,6 +12392,10 @@ header .megamenu .search-item-image,
   border-bottom: 1px solid #dbdbdb;
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb; }
+
+.admin.dropdown-menu.form-group {
+  margin-bottom: 15px;
+  margin-top: 15px; }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }

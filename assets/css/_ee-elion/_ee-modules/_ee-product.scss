@@ -128,6 +128,9 @@ section.tsr-section-productAndService-listing {
     @include media-min($screen-xs) {
     right: em(5);
     } 
+    .dropdown-menu {
+      text-align: left;
+    }
   }
 
 

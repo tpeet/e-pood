@@ -51,9 +51,14 @@ section.tsr-section-productlist  {
     }
     .tsr-product-header {
       font-size: 110%;
+      line-height: 1.1;
       @include media-min($screen-sm) {
-      font-size: 150%;
+      font-size: 145%;
       } 
+      a {
+        display: block;
+        width: 95%;
+      }
     }
 
     .hidden-sm {

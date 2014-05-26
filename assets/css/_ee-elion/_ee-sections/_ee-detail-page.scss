@@ -1,13 +1,16 @@
-.ee-comparebar.detail {
-  min-height: 40px;
-  margin-top: 0;
-  @include media-min($screen-md) {
-    margin-top: -47px;
-  }
-}
 section.ee-product-detail {
   margin-bottom: 30px;
-
+  .ee-comparebar.detail {
+    min-height: 40px;
+    margin-top: 0;
+    @include media-min($screen-md) {
+      margin-top: -47px;
+    }
+  }
+  h1 {
+    line-height: 0.5;
+    margin-bottom: 10px;
+  }
   .fixedheight {
     min-height: auto;
     @include media-min($screen-md) {
@@ -15,9 +18,7 @@ section.ee-product-detail {
     }
   }
 
-  h1:first-of-type {
-  margin-bottom: 0;
-  }
+
 
   // .ee-detail-intro small{
   //   line-height: 26px;

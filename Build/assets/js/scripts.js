@@ -3,6 +3,7 @@ console.log('scripts js loaded');
 $(document).ready(function() {
 
 BindSlideToggle();
+CollapseBindings();
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });

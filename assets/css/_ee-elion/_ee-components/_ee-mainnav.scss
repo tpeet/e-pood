@@ -3,6 +3,10 @@
   margin-top: 10px;
 }
 
+header .navbar-default {
+  margin-bottom: -1px;
+}
+
 .topnav.navbar, .ee-adminnav.navbar {
   margin-bottom: 0;
 }
@@ -17,11 +21,18 @@ min-width: 100%;
 
 .topnav .dropdown-menu li {
   a {
-  padding: 6px 20px;
   font-size: 13px;
   }
-  &:last-of-type a {
-    padding-bottom: 10px;
+}
+
+.user-droplayer.megamenu.with-advertising { 
+  padding: 0;
+  margin-top: -10px;
+  .col-sm-9 {
+  padding-left: 0;
+  }
+  .col-sm-3 {
+    margin-top: 30px;
   }
 }
 
@@ -140,4 +151,7 @@ header .megamenu .search-item-image,
   border-left: 1px solid $lightgrey-t;
 }
 
-
+.admin.dropdown-menu.form-group {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
