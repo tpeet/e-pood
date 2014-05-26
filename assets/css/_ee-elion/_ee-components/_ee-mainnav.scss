@@ -87,7 +87,7 @@ min-width: 100%;
       overflow: hidden;
       zoom: 1;
       position: absolute;
-      top: 30px;
+      top: 20px;
       line-height: 1;
       color: $purple-c;
       font-size: $font-size-h6;
@@ -113,8 +113,8 @@ header .megamenu .search-item-image,
   position: relative;
   margin-right: 25px;
     img {
-      width: 64px;
-      height: 64px;
+      width: 48px;
+      height: 48px;
     }
   &:after{
   content: "";
@@ -131,7 +131,7 @@ header .megamenu .search-item-image,
 .search-advanced {
   display: block;
   background: #fff;
-  padding: 20px 20px;
+  padding: 15px 20px;
   border-bottom-right-radius: $border-radius-base;
   border-bottom-left-radius: $border-radius-base;
   text-align: center;
