@@ -2411,7 +2411,7 @@ input[type="button"].btn-block {
       padding: 0px 180px 0 55px;
       display: block;
       position: relative; }
-      @media (max-width: 767px) {
+      @media (max-width: 480px) {
         .alert .container > div {
           padding-right: 30px; } }
       .alert .container > div h4 {
@@ -2433,7 +2433,7 @@ input[type="button"].btn-block {
           font-size: 15px; }
         .alert .container > div .read-more:hover {
           text-decoration: underline; }
-        @media (max-width: 767px) {
+        @media (max-width: 480px) {
           .alert .container > div .read-more {
             border-right: 0;
             display: block;

@@ -10239,7 +10239,7 @@ textarea {
       padding: 0px 180px 0 55px;
       display: block;
       position: relative; }
-      @media (max-width: 767px) {
+      @media (max-width: 480px) {
         .alert .container > div {
           padding-right: 30px; } }
       .alert .container > div h4 {
@@ -10261,7 +10261,7 @@ textarea {
           font-size: 15px; }
         .alert .container > div .read-more:hover {
           text-decoration: underline; }
-        @media (max-width: 767px) {
+        @media (max-width: 480px) {
           .alert .container > div .read-more {
             border-right: 0;
             display: block;
@@ -12488,6 +12488,10 @@ header .megamenu .search-item-image,
     font-weight: bold;
     font-size: 8px;
     padding: 2px 3px; }
+
+.ee-flash-sm .ee-flashtext-container {
+  width: 40px;
+  max-width: 40px; }
 
 .flashText-ribbon {
    width: 60px;
