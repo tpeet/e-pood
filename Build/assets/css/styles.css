@@ -11458,10 +11458,13 @@ section.tsr-section-productAndService-listing {
     position: absolute;
     right: 0.66667em;
     left: auto;
-    top: 0.66667em; }
+    top: 0.66667em;
+    z-index: 1; }
     @media screen and (min-width: 480px) {
       .tsr-module-product .ee-favorite-dropdown {
         right: 0.33333em; } }
+    .tsr-module-product .ee-favorite-dropdown.open {
+      z-index: 4; }
     .tsr-module-product .ee-favorite-dropdown .dropdown-menu {
       text-align: left; }
   .tsr-module-product .tsr-product-header {
@@ -12407,7 +12410,7 @@ header .megamenu .search-item-image,
   border-right: 1px solid #dbdbdb;
   border-left: 1px solid #dbdbdb; }
 
-.admin.dropdown-menu.form-group {
+.admin.dropdown-menu .form-horizontal {
   margin-bottom: 15px;
   margin-top: 15px; }
 

@@ -124,10 +124,13 @@ section.tsr-section-productAndService-listing {
     right: em(10);
     left: auto;
     top: em(10);
-
+    z-index: 1;
     @include media-min($screen-xs) {
     right: em(5);
     } 
+    &.open {
+      z-index: 4;
+    }
     .dropdown-menu {
       text-align: left;
     }
