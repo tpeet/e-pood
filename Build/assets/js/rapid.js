@@ -6895,8 +6895,6 @@ function CollapseBindings() {
 
     function header() {
         
-        console.log('header js');
-
         // handle main nav top margin
         $('header > .navbar .dropdown').on('shown.bs.dropdown', function () {
             if(Modernizr.mq('only screen and (min-width: 768px)')) {
@@ -6928,7 +6926,6 @@ function CollapseBindings() {
             }); 
         });*/
 
-        cloneRightSideMainMenu();
         collapseOtherContent();
         collapsableMenuForMobile();
         initDropMenu();
@@ -6951,22 +6948,11 @@ function CollapseBindings() {
                     _parent.nextUntil('.dropdown-header').toggle();
                     $(_parent).toggleClass('open');
                 }, false);
-            });  
+            });
         }
 
     }
 
-    function cloneRightSideMainMenu(){
-        $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
-        $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
-        $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
-        
-        var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
-        //_el.append('<li>asdflkdsjaflkjsalkf</li>');
-        console.log(_el);
-    }
-
-    
     function collapseOtherContent(){
         var _elDrop = $('header div[id*="collapsibleMainMenu"]');
         _elDrop.on('show.bs.collapse', function (e) {
@@ -9462,6 +9448,7 @@ $(document).ready(function() {
 
 BindSlideToggle();
 CollapseBindings();
+cloneRightSideMainMenu();
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
@@ -9570,5 +9557,13 @@ function BindSlideToggle() {
 }
 
 
-
+function cloneRightSideMainMenu(){
+    $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
+    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
+    $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+    
+    var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+    //_el.append('<li>asdflkdsjaflkjsalkf</li>');
+    console.log(_el);
+}
 

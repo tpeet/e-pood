@@ -147,7 +147,7 @@ header {
   }
 
   /* user dropdown layer styles */
-  .megamenu
+  .megamenu:not(#collapsibleMainMenu-Search)
   {
     &.collapsibleMainMenu, &.user-droplayer {
       &.user-droplayer {

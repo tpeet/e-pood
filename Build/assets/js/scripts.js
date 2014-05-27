@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 BindSlideToggle();
 CollapseBindings();
+cloneRightSideMainMenu();
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
@@ -112,5 +113,13 @@ function BindSlideToggle() {
 }
 
 
-
+function cloneRightSideMainMenu(){
+    $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
+    $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
+    $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+    
+    var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+    //_el.append('<li>asdflkdsjaflkjsalkf</li>');
+    console.log(_el);
+}
 

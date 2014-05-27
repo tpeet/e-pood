@@ -4219,16 +4219,16 @@ header {
           header .options .navbar-nav .dropdown .dropdown-menu > li > a:hover {
             color: #fff;
             background-color: #51246b; }
-  header .megamenu.collapsibleMainMenu, header .megamenu.user-droplayer {
+  header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer {
     background-color: #4f2369;
     color: #fff;
     min-width: 320px;
     width: 100%; }
-    header .megamenu.collapsibleMainMenu.user-droplayer, header .megamenu.user-droplayer.user-droplayer {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu.user-droplayer, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer.user-droplayer {
       background-color: transparent; }
-    header .megamenu.collapsibleMainMenu .container-no-gutter, header .megamenu.user-droplayer .container-no-gutter {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .container-no-gutter, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .container-no-gutter {
       padding-left: 0; }
-    header .megamenu.collapsibleMainMenu h2, header .megamenu.user-droplayer h2 {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 {
       border-bottom: 1px solid #3a1a4d;
       font-size: 18px;
       font-weight: normal;
@@ -4239,21 +4239,21 @@ header {
       /*&:hover, &:active, &:focus  {
           background-color: lighten($brand-primary, 7.6%);
       }*/ }
-      header .megamenu.collapsibleMainMenu h2 > a, header .megamenu.collapsibleMainMenu h2 > a:hover, header .megamenu.collapsibleMainMenu h2 > a:focus, header .megamenu.collapsibleMainMenu h2 a:active, header .megamenu.user-droplayer h2 > a, header .megamenu.user-droplayer h2 > a:hover, header .megamenu.user-droplayer h2 > a:focus, header .megamenu.user-droplayer h2 a:active {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a:focus, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 a:active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a:focus, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 a:active {
         color: white;
         text-decoration: none;
         cursor: text; }
         @media (max-width: 767px) {
-          header .megamenu.collapsibleMainMenu h2 > a, header .megamenu.collapsibleMainMenu h2 > a:hover, header .megamenu.collapsibleMainMenu h2 > a:focus, header .megamenu.collapsibleMainMenu h2 a:active, header .megamenu.user-droplayer h2 > a, header .megamenu.user-droplayer h2 > a:hover, header .megamenu.user-droplayer h2 > a:focus, header .megamenu.user-droplayer h2 a:active {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a:focus, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 a:active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a:focus, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 a:active {
             cursor: pointer; } }
       @media (max-width: 767px) {
-        header .megamenu.collapsibleMainMenu h2, header .megamenu.user-droplayer h2 {
+        header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 {
           margin: 0;
           padding: 8px 10px;
           background-color: #652d86; }
-          header .megamenu.collapsibleMainMenu h2.active, header .megamenu.user-droplayer h2.active {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2.active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2.active {
             cursor: pointer; }
-            header .megamenu.collapsibleMainMenu h2.active a:after, header .megamenu.user-droplayer h2.active a:after {
+            header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2.active a:after, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2.active a:after {
               font-family: 'tsr-icons-all';
               display: inline-block;
               font-style: normal;
@@ -4265,11 +4265,11 @@ header {
               top: 6px;
               float: right;
               content: "\e66b"; }
-          header .megamenu.collapsibleMainMenu h2:hover, header .megamenu.collapsibleMainMenu h2:active, header .megamenu.collapsibleMainMenu h2:focus, header .megamenu.user-droplayer h2:hover, header .megamenu.user-droplayer h2:active, header .megamenu.user-droplayer h2:focus {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2:active, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2:focus, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2:active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2:focus {
             background-color: #7b37a3; }
-          header .megamenu.collapsibleMainMenu h2 > a, header .megamenu.user-droplayer h2 > a {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a {
             display: block; }
-          header .megamenu.collapsibleMainMenu h2 > a:after, header .megamenu.user-droplayer h2 > a:after {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2 > a:after, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2 > a:after {
             font-family: 'tsr-icons-all';
             display: inline-block;
             font-style: normal;
@@ -4281,19 +4281,19 @@ header {
             top: 6px;
             float: right;
             content: "\e669"; }
-          header .megamenu.collapsibleMainMenu h2.link > a:after, header .megamenu.user-droplayer h2.link > a:after {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu h2.link > a:after, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer h2.link > a:after {
             content: "\e668"; } }
-    header .megamenu.collapsibleMainMenu .title, header .megamenu.user-droplayer .title {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .title, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .title {
       font-size: 18px;
       border: 0;
       background-color: transparent; }
-      header .megamenu.collapsibleMainMenu .title:hover, header .megamenu.user-droplayer .title:hover {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .title:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .title:hover {
         background-color: transparent; }
-    header .megamenu.collapsibleMainMenu p, header .megamenu.collapsibleMainMenu .title, header .megamenu.user-droplayer p, header .megamenu.user-droplayer .title {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu p, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .title, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer p, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .title {
       padding-bottom: 6px;
       padding-top: 6px;
       padding-left: 15px; }
-    header .megamenu.collapsibleMainMenu .list-group .list-group-item, header .megamenu.user-droplayer .list-group .list-group-item {
+    header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item {
       background: none;
       border: 0;
       display: block;
@@ -4305,22 +4305,22 @@ header {
       border-radius: 0;
       position: relative;
       padding-left: 15px; }
-      header .megamenu.collapsibleMainMenu .list-group .list-group-item > a, header .megamenu.collapsibleMainMenu .list-group .list-group-item > a:hover, header .megamenu.collapsibleMainMenu .list-group .list-group-item > p, header .megamenu.collapsibleMainMenu .list-group .list-group-item > p a, header .megamenu.user-droplayer .list-group .list-group-item > a, header .megamenu.user-droplayer .list-group .list-group-item > a:hover, header .megamenu.user-droplayer .list-group .list-group-item > p, header .megamenu.user-droplayer .list-group .list-group-item > p a {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > a, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > p, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > p a, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > a, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > a:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > p, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > p a {
         color: white;
         text-decoration: none; }
-      header .megamenu.collapsibleMainMenu .list-group .list-group-item > p, header .megamenu.user-droplayer .list-group .list-group-item > p {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > p, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > p {
         padding-left: 0; }
-      header .megamenu.collapsibleMainMenu .list-group .list-group-item:hover, header .megamenu.collapsibleMainMenu .list-group .list-group-item:active, header .megamenu.collapsibleMainMenu .list-group .list-group-item:focus, header .megamenu.user-droplayer .list-group .list-group-item:hover, header .megamenu.user-droplayer .list-group .list-group-item:active, header .megamenu.user-droplayer .list-group .list-group-item:focus {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item:active, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item:focus, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item:active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item:focus {
         background-color: #7b37a3;
         cursor: pointer; }
       @media (max-width: 767px) {
-        header .megamenu.collapsibleMainMenu .list-group .list-group-item, header .megamenu.user-droplayer .list-group .list-group-item {
+        header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item {
           border-bottom: 1px solid #3a1a4d;
           padding-left: 10px;
           padding-right: 10px;
           padding-top: 8px;
           margin: 0; }
-          header .megamenu.collapsibleMainMenu .list-group .list-group-item > a:after, header .megamenu.user-droplayer .list-group .list-group-item > a:after {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item > a:after, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item > a:after {
             font-family: 'tsr-icons-all';
             display: inline-block;
             font-style: normal;
@@ -4333,14 +4333,14 @@ header {
             float: right;
             content: "\e668"; } }
     @media (max-width: 767px) {
-      header .megamenu.collapsibleMainMenu .list-group, header .megamenu.user-droplayer .list-group {
+      header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group {
         margin: 0; }
-        header .megamenu.collapsibleMainMenu .list-group .list-group-item, header .megamenu.user-droplayer .list-group .list-group-item {
+        header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group .list-group-item, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group .list-group-item {
           display: none;
           cursor: pointer; }
-        header .megamenu.collapsibleMainMenu .list-group.active .list-group-item, header .megamenu.user-droplayer .list-group.active .list-group-item {
+        header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group.active .list-group-item, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group.active .list-group-item {
           display: block; }
-          header .megamenu.collapsibleMainMenu .list-group.active .list-group-item:hover, header .megamenu.collapsibleMainMenu .list-group.active .list-group-item:active, header .megamenu.collapsibleMainMenu .list-group.active .list-group-item:focus, header .megamenu.user-droplayer .list-group.active .list-group-item:hover, header .megamenu.user-droplayer .list-group.active .list-group-item:active, header .megamenu.user-droplayer .list-group.active .list-group-item:focus {
+          header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group.active .list-group-item:hover, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group.active .list-group-item:active, header .megamenu:not(#collapsibleMainMenu-Search).collapsibleMainMenu .list-group.active .list-group-item:focus, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group.active .list-group-item:hover, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group.active .list-group-item:active, header .megamenu:not(#collapsibleMainMenu-Search).user-droplayer .list-group.active .list-group-item:focus {
             background-color: #7b37a3; } }
 
 footer {

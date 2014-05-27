@@ -15,6 +15,10 @@ section.tsr-section-communictaion-primary {
       } // min 600px
     }
     & .tsr-tactical-textPanel {
+
+      @include media-min($screen-sm) {
+      max-width: 60%;
+      }
       top: 160px;
       & header {
       font-weight: 600;
