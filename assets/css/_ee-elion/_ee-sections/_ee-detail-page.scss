@@ -2,7 +2,7 @@ section.ee-product-detail {
   margin-bottom: 30px;
   .ee-comparebar.detail {
     min-height: 40px;
-    margin-top: 0;
+    margin-top: 10px;
     @include media-min($screen-md) {
       margin-top: -47px;
     }

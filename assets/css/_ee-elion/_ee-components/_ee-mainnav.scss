@@ -82,7 +82,10 @@ min-width: 100%;
     margin-bottom: 15px;
   }
   .btn-default {
-    margin-top: 10px;
+    margin-top: 0;
+    @include media-min($screen-sm-min) {
+    padding-right: 10px;
+    } 
   }
 }
 .headerSearchResultWrapper {
@@ -113,7 +116,7 @@ min-width: 100%;
       zoom: 1;
       position: absolute;
       top: 20px;
-      line-height: 1;
+      line-height: 1.2;
       color: $purple-c;
       font-size: $font-size-h6;
       -webkit-transition: color 0.3s ease-in-out;

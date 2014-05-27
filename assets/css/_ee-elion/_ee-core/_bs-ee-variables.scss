@@ -887,11 +887,15 @@ $container-tablet:             (100%) !default;
 $container-sm:                 $container-tablet !default; 
 
 // Medium screen / desktop // was 940px;
-$container-desktop:            ((960px + $grid-gutter-width)) !default;
+$container-desktop:            ((960px + $grid-gutter-width)) ;
 //** For `$screen-md-min` and up.
-$container-md:                 $container-desktop !default;
+$container-md:                 $container-desktop ;
 
 // Large screen / wide desktop // was 1140px;
-$container-large-desktop:      ((1364px + $grid-gutter-width)) !default; 
+$container-large-desktop:      ((1140px + $grid-gutter-width)) ; 
 //** For `$screen-lg-min` and up.
-$container-lg:                 $container-large-desktop !default;
+$container-lg:                 $container-large-desktop ;
+
+// Large screen / wide desktop // was 1140px;
+$container-extra-large-desktop:      ((1364px + $grid-gutter-width)) ; 
+$container-xl:                 $container-extra-large-desktop ;

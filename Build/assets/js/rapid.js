@@ -9279,8 +9279,7 @@ $(document).ready(function () {
         }
       },
 
-      itemWidth: 450,
-      itemMargin: 55,
+      itemWidth: 500
     });
 
   slider.find('.flex-control-nav > li > a').on("click", function () {

@@ -117,6 +117,11 @@
 *:focus {
 outline: none !important;
 }
+.btn:active,
+.btn.active {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
 
 .dropdown-menu.inverse-dropdown{
   background-color: $brand-primary;
@@ -128,6 +133,10 @@ outline: none !important;
       background-color: $link-hover-color;
     }
   }
+}
+
+@media (min-width: 1420px) {
+  .container {    width: 1393px;  }
 }
 
 .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
@@ -206,7 +215,6 @@ vertical-align: middle;
   .ee-big {
   font-weight: bold;
   font-size: 8px;
-  padding: 2px 3px;
   }
 }
 

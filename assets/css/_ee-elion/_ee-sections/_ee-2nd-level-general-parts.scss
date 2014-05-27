@@ -133,45 +133,49 @@
 }
 
 .ee-filter-content {
-  padding-bottom: 20px;
-  padding-right: 10px;
-  background: #fff;
-  a:hover {
-    text-decoration: none;
-    cursor: pointer;
-  }
-  p {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    font-size: 18px;
-  }
-  .badge {
-    margin-left: 10px;
-  }
-  .nav-pills > li {
-    margin-top: 5px;
-    margin-left: 5px;
-    a {
-      font-weight: 500;
-      font-size: 14px;
+  display: none !important;
+  @include media-min($screen-sm) {
+    display: block !important;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    background: #fff;
+    a:hover {
+      text-decoration: none;
+      cursor: pointer;
     }
-  }
-  .slider {
-    margin: 10px;
-  }
-  .text-right {
-    margin-right: 5px;
-  }
-  .nav > li > a:hover, .nav > li > a:focus {
-  background-color: $purple-h;
-} 
-  .inactive {
-    background-color: #A4A5A6;
-    border-color: #979899;
-    &:hover {
-    background-color: $purple-c;
-    border-color: $purple-t;
+    p {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      margin-left: 5px;
+      font-size: 18px;
+    }
+    .badge {
+      margin-left: 10px;
+    }
+    .nav-pills > li {
+      margin-top: 5px;
+      margin-left: 5px;
+      a {
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .slider {
+      margin: 10px;
+    }
+    .text-right {
+      margin-right: 5px;
+    }
+    .nav > li > a:hover, .nav > li > a:focus {
+    background-color: $purple-h;
+    } 
+    .inactive {
+      background-color: #A4A5A6;
+      border-color: #979899;
+      &:hover {
+      background-color: $purple-c;
+      border-color: $purple-t;
+      }
     }
   }
 }
