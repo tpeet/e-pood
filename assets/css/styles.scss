@@ -86,6 +86,8 @@
 /* @include _ee-2nd-level-general-parts.scss */
 /* @include _ee-productslider.scss */
 /* @include _ee-mainnav.scss */
+/* @include _ee-print.scss */
+
 
 
 // TEMPORARY HACKS, TO BE REMOVED
@@ -219,7 +221,6 @@ vertical-align: middle;
 }
 
 .ee-flash-sm .ee-flashtext-container {
-width: 40px;
 max-width: 40px;
 }
 
