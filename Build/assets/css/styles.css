@@ -11507,15 +11507,16 @@ section.tsr-section-productAndService-listing {
     position: relative;
     height: auto;
     width: 110px;
-    max-width: 25%; }
+    max-width: 25%;
+    display: inline-block;
+    float: none;
+    margin-right: 5px; }
     @media screen and (min-width: 768px) {
       .tsr-module-product .tsr-product-image {
         width: 100%;
         max-width: 220px;
         height: auto;
-        padding: 0 1.33333em;
-        display: inline-block;
-        float: none; } }
+        padding: 0 1.33333em; } }
     .tsr-module-product .tsr-product-image .dropdown-menu img {
       width: auto; }
   .tsr-module-product .tsr-product-price {

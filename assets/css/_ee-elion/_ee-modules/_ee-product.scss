@@ -183,14 +183,14 @@ section.tsr-section-productAndService-listing {
     height: auto;
     width: 110px;
     max-width: 25%;
+    display: inline-block;
+    float: none;
     margin-right: 5px;
     @include media-min($screen-sm) {
       width: 100%;
       max-width: 220px;
       height: auto;
       padding: 0 em(20);
-      display: inline-block;
-      float: none;
     } 
     .dropdown-menu img {
     width: auto;
