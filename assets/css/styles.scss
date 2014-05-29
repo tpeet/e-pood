@@ -93,6 +93,22 @@
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
 
+
+.megamenu > li > ul.list-group > li.dropdown-header  {
+  text-indent: -15px;
+  h6 {
+    white-space: nowrap;
+  }
+}
+
+.megamenu > li > ul.list-group > li.dropdown-header > h6 > a:after {
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+header .dropdown-menu .dropdown-header {
+  padding-top: 3px;
+}
 // HELPER CLASSES
 //**********************************
 

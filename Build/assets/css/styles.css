@@ -11507,15 +11507,15 @@ section.tsr-section-productAndService-listing {
     position: relative;
     height: auto;
     width: 110px;
-    max-width: 25%;
-    display: inline-block;
-    float: none; }
+    max-width: 25%; }
     @media screen and (min-width: 768px) {
       .tsr-module-product .tsr-product-image {
         width: 100%;
         max-width: 220px;
         height: auto;
-        padding: 0 1.33333em; } }
+        padding: 0 1.33333em;
+        display: inline-block;
+        float: none; } }
     .tsr-module-product .tsr-product-image .dropdown-menu img {
       width: auto; }
   .tsr-module-product .tsr-product-price {
@@ -11650,7 +11650,8 @@ ul.tsr-product-colors {
   -moz-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  padding: 40px; }
+  padding: 40px;
+  border-bottom: 1px solid #dbdbdb; }
   .tsr-module-promotion:hover, .tsr-module-promotion:focus {
     background: #f6f6f6; }
     @media screen and (min-width: 992px) {
@@ -11890,8 +11891,13 @@ section.ee-product-detail {
       section.ee-product-detail .ee-detailview .tsr-tactical-flash:nth-of-type(2) {
         top: 34%; }
   section.ee-product-detail .ee-linkicons {
-    margin-top: 10px;
+    margin-top: 15px;
     line-height: 2.2; }
+    section.ee-product-detail .ee-linkicons li {
+      margin-right: 0; }
+      @media screen and (min-width: 992px) {
+        section.ee-product-detail .ee-linkicons li {
+          margin-right: 20px; } }
   section.ee-product-detail .flex-viewport .slides li img {
     padding: 0 2.33333em; }
   section.ee-product-detail .flex-control-thumbs {
@@ -12644,6 +12650,18 @@ header .megamenu .search-item-image,
 
   .tsr-tactical-flash {
     background: #fff; } }
+.megamenu > li > ul.list-group > li.dropdown-header {
+  text-indent: -15px; }
+  .megamenu > li > ul.list-group > li.dropdown-header h6 {
+    white-space: nowrap; }
+
+.megamenu > li > ul.list-group > li.dropdown-header > h6 > a:after {
+  margin-left: 20px;
+  font-size: 13px; }
+
+header .dropdown-menu .dropdown-header {
+  padding-top: 3px; }
+
 .ee-thinline-bottom {
   margin-bottom: -1px; }
 
