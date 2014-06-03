@@ -166,6 +166,10 @@ outline: none !important;
 }
 // Alert
 
+.alert {
+  display: none;
+}
+
 .flyover {
    top: -250px;
    position: fixed;

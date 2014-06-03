@@ -11511,7 +11511,7 @@ section.tsr-section-productAndService-listing {
     display: inline-block;
     float: none;
     margin-right: 5px; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       .tsr-module-product .tsr-product-image {
         width: 100%;
         max-width: 220px;
@@ -12707,6 +12707,9 @@ header .dropdown-menu .dropdown-header {
 
 .admin.dropdown-menu {
   top: auto; }
+
+.alert {
+  display: none; }
 
 .flyover {
   top: -250px;

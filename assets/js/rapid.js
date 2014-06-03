@@ -1,16 +1,7 @@
-
 /* @include modernizr */
-/* @include enquire.min */
-
-/* @include trmix.min */
-
-/* TEMPORARY FOR TEMPLATING */
-/* @include handlebars-v1.3.0 */
 
 // GENERAL
 /* @include jquery.debouncing */
-/* @include matchMedia */
-/* @include matchMedia.addListener */
 /* @include srcset.min */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
@@ -19,7 +10,6 @@
 /* @include jquery.flexslider */
 /* @include ee-carousel-listing */
 /* @include ee-detail-carousel-listing */
-
 
 // BOOTSTRAP GENERAL PIECE BY PIECE
 /* @include transition */
@@ -31,7 +21,7 @@
 // ELION HEADQUARTER
 /* @include header */
 /* @include footer */
-/* @include main*/
+/* @include main */
 /* @include visa/alert */
 
 // 2nd LEVEL

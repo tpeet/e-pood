@@ -186,7 +186,7 @@ section.tsr-section-productAndService-listing {
     display: inline-block;
     float: none;
     margin-right: 5px;
-    @include media-min($screen-sm) {
+    @include media-min($screen-md) {
       width: 100%;
       max-width: 220px;
       height: auto;

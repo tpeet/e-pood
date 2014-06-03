@@ -18,7 +18,7 @@
 
 
 
-<!--[if lt IE 9]>
+<!--[if lt IE 6]>
 
     <link rel="stylesheet" type="text/css" href="assets/tsr-ieSplash/tsr-ieSplash.css" />
         <script type="text/javascript">
@@ -26,6 +26,16 @@
         </script>
 
 <![endif]-->
+
+        <!-- less than ie9 -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script type="text/javascript" scr="assets/scripts/ltIE9/modernizr.js"></script>
+            <script type="text/javascript" scr="assets/scripts/ltIE9/css3-mediaqueries.js"></script>
+            <script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+        <![endif]-->
+        <!-- / end -->
 
 <meta property="og:title" content="Title" />
 <meta property="og:type" content="website" />
@@ -96,6 +106,61 @@
 </head>
 
 <body> 
+  <div class="alert full-size flyover alert-success" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Taasta nimekiri
+            </a>
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Asi on edukalt ostukorvi pandud</span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Mine ostukorvi
+            </a>
+        </div>
+        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-warning flyover" id="alert1">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <strong>Sisselogimine ebaonnestus</strong>
+            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+            <a class="read-more" href="#">Proovi uuesti</a>
+        </div>
+        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-warning flyover" id="alert2">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
+            <a class="read-more first" href="#">Katkesta </a> 
+            <a class="read-more second" href="#">Kustuta</a>
+        </div>
+<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
+    </div>
+</div>
+
+<!-- <div class="temporary" style="margin-top: 100px;">
+    <button id="infobtn" class="btn btn-info">Info</button>
+    <button id="successbtn" class="btn btn-success">Success</button>
+    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
+</div> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -236,61 +301,6 @@
 
 
 
-<div class="alert full-size flyover alert-success" id="success1">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Taasta nimekiri
-            </a>
-        </div>
-        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Asi on edukalt ostukorvi pandud</span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Mine ostukorvi
-            </a>
-        </div>
-        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert1">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <strong>Sisselogimine ebaonnestus</strong>
-            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
-            <a class="read-more" href="#">Proovi uuesti</a>
-        </div>
-        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert2">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
-            <a class="read-more first" href="#">Katkesta </a> 
-            <a class="read-more second" href="#">Kustuta</a>
-        </div>
-<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
-    </div>
-</div>
-
-<!-- <div class="temporary" style="margin-top: 100px;">
-    <button id="infobtn" class="btn btn-info">Info</button>
-    <button id="successbtn" class="btn btn-success">Success</button>
-    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
-</div> -->
 
 <nav class="navbar navbar-default">
   <div class="container">
@@ -930,6 +940,12 @@
     <script src="assets/js/vendor/common.js"></script> 
     <script src="assets/js/vendor/paintbrush.js"></script> 
     <script src="assets/js/vendor/bigtext.js"></script> 
+    <script src="assets/js/vendor/enquire.min.js"></script> 
+    <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
+<!--     // <script src="assets/js/vendor/matchMedia.js"></script> 
+    // <script src="assets/js/vendor/matchMedia.addListener .js"></script>  -->
+
+    
 
 <script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->

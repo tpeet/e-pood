@@ -123,3 +123,6 @@ function cloneRightSideMainMenu(){
     console.log(_el);
 }
 
+if (!Modernizr.svg) {
+  $(".navbar-brand img").attr("src", "images/elion-logo.png");
+}
