@@ -1,0 +1,54 @@
+$col-sm:                  60px;
+$col-md:                  78px;
+$col-lg:                  95px;
+
+// Create grid for specific class
+@mixin make-fixed-grid($columns, $class, $type, $col-width) {
+  @for $i from 0 through $columns {
+    @include calc-fixed-grid-column($i, $class, $type, $col-width);
+  }
+}
+
+@mixin calc-fixed-grid-column($index, $class, $type, $col-width) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: $col-width*$index;
+    }
+  }
+  @if ($type == push) {
+    .col-#{$class}-push-#{$index} {
+      left: $col-width*$index;
+    }
+  }
+  @if ($type == pull) {
+    .col-#{$class}-pull-#{$index} {
+      right: $col-width*$index;
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: $col-width*$index;
+    }
+  }
+}
+
+.fixed-size{
+  @media (min-width: $screen-sm-min) {
+    @include make-fixed-grid($grid-columns, sm, width, $col-sm);
+    @include make-fixed-grid($grid-columns, sm, pull, $col-sm);
+    @include make-fixed-grid($grid-columns, sm, push, $col-sm);
+    @include make-fixed-grid($grid-columns, sm, offset, $col-sm);
+  }
+  @media (min-width: $screen-md-min) {
+    @include make-fixed-grid($grid-columns, md, width, $col-md);
+    @include make-fixed-grid($grid-columns, md, pull, $col-md);
+    @include make-fixed-grid($grid-columns, md, push, $col-md);
+    @include make-fixed-grid($grid-columns, md, offset, $col-md);
+  }
+  @media (min-width: $screen-lg-min) {
+    @include make-fixed-grid($grid-columns, lg, width, $col-lg);
+    @include make-fixed-grid($grid-columns, lg, pull, $col-lg);
+    @include make-fixed-grid($grid-columns, lg, push, $col-lg);
+    @include make-fixed-grid($grid-columns, lg, offset, $col-lg);
+  }
+}

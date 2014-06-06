@@ -1,10 +1,10 @@
-(function() {
+function CollapseBindings() {
 
     'use strict';
 
+
     function header() {
         
-        console.log('header js');
         // handle main nav top margin
         $('header > .navbar .dropdown').on('shown.bs.dropdown', function () {
             if(Modernizr.mq('only screen and (min-width: 768px)')) {
@@ -36,80 +36,33 @@
             }); 
         });*/
 
-        cloneRightSideMainMenu();
         collapseOtherContent();
         collapsableMenuForMobile();
         initDropMenu();
-        cloneThirdLevelMenu();
-
-        // close all mainmenu opened layers and content top margin when screen size changed
-        var closeAllOpenLayersResetContentMargin = function(){
-            $('#collapsibleMainMenu-Pages .dropdown').removeClass('open');
-            
-            console.log( $('.navbar:nth-child(2) a.navbar-toggle.active'), $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href'));
-            var _selector = $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href');
-            if( _selector != '#collapsibleMainMenu-Pages') {
-                $(_selector).collapse('hide');
-            }
-            //$('.navbar:nth-child(2) .navbar-toggle').attr('href');
-            $('.navbar:nth-child(2)').css({marginTop:0+'px'});
-            $('section.content, section.hero').css({marginTop:0+'px'});
-            $('section.content, section.hero, .navbar:nth-child(2)').css({marginTop:0+'px'});
-
-        };
-        reCallFuncs.push(closeAllOpenLayersResetContentMargin,collapsableMenuForMobile);
+        
+    }
+    
+    // get element height
+    function getElementH(el){
+        var height = $(el).find('.dropdown-menu').height();
+        return height;
     }
     
     function collapsableMenuForMobile(){
         if(Modernizr.mq('only screen and (max-width: 767px)')) {
-            $('.list-group .has-child > h6').each(function() {
+            $('.list-group .dropdown-header > h6').each(function() {
                 var _parent = $(this).parent();
                 this.addEventListener('click', function(e) {
-                    $(this).parent().toggleClass('open');
-                    var _el = $(this).parent().parent().find('li.has-child');
-
-                    for (var i = _el.length - 1; i >= 0; i--) {
-                        if( $(this).parent()[0] != _el[i] ) {
-                            $(_el[i]).removeClass('open');
-                        }
-                    }
-
                     e.stopPropagation();
                     e.preventDefault();
+                    _parent.nextUntil('.dropdown-header').toggle();
+                    $(_parent).toggleClass('open');
                 }, false);
-            });  
+            });
         }
 
     }
 
-    function cloneRightSideMainMenu(){
-        $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
-        $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
-        $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
-        /*var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
-        _el.append('<li>asdflkdsjaflkjsalkf</li>');*/
-    }
-
-    /**
-        Generating third menu from main menu
-    */
-    function cloneThirdLevelMenu(){
-        var _thrd = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(0).find('li.active .dropdown-header');
-        var _level3 = $('<nav class="sub-menu hidden-xs" />');
-        
-        _level3.append($('<div class="container"><h3 class="sr-only">Alamlehed</h3><ul class="list-inline"/></div>'));
-
-        var _list= _level3.find('ul');           
-        $.each(_thrd,function(){
-            var _a = $(this).find('a').clone();
-            _list.append($('<li />').append(_a));
-
-        });
-
-        $('nav.navbar.navbar-default').after(_level3); 
-    }
-
-    
     function collapseOtherContent(){
         var _elDrop = $('header div[id*="collapsibleMainMenu"]');
         _elDrop.on('show.bs.collapse', function (e) {
@@ -118,7 +71,6 @@
                 $('[id^="collapsibleMainMenu-"]').removeClass('in').addClass('collapse');
                 $('[href*="collapsibleMainMenu-"]').removeClass('active');
             }
-          
             $('header .navbar-header').find('[href*="'+this.id+'"]').addClass('active');
 
         });
@@ -130,12 +82,13 @@
         });
     }
 
-    // 
+    // footer links
     function initDropMenu() {
         if(Modernizr.mq('only screen and (max-width: 767px)')) {
             var _activeEl;
             $('header .collapsibleMainMenu h2:not(.title)').each(function(i, el) {
                 var _el = $(el);
+                // console.log(i, el);
                 _el.click(function(e){
 
                     $(this).toggleClass('active');
@@ -154,4 +107,4 @@
     
     header();
 
-}());
+};

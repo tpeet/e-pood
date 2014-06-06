@@ -1,3 +1,16 @@
+/* level 2 menu position fix, you can remove it safely */
+#collapsibleMainMenu-Pages {
+  .navbar-nav:first-child {
+    @media (min-width: $screen-sm-min) {
+      clear:left; 
+    }
+    @media ( min-width: 1200px) {
+      clear:none;
+    }
+  }
+}
+/* /end */
+
 .navbar { 
 
   margin-bottom: 1px;
@@ -28,8 +41,8 @@
 
     }
   }
-
 }
+
 .navbar-default {
 
   background-color: $navbar-default-bg;
@@ -78,7 +91,7 @@
           &:before {
             background-color: transparent;
           }
-          &:after {
+          /*&:after {
             @include setIconFonts();
             position: relative;
             top: 15px;
@@ -87,8 +100,9 @@
             content: "\e668";
             float: right;
             right: 0px;
-          }
+          }*/
         }
+
       }
     }
     .menu-large {
@@ -125,7 +139,7 @@
 
         > a {
             color: $navbar-default-link-color;
-            font-size: 22px;
+            font-size: $font-size-base + 7;
             font-weight: normal;
             letter-spacing: -1px;
             line-height: 27px;
@@ -157,17 +171,17 @@
                 z-index: 1; 
             }
             @media (min-width: $screen-sm-min) { padding: 33px 8px 28px 7px; }
-            @media (min-width: $screen-md-min) { padding: 33px 20px 28px 19px; }
+            /*@media (min-width: $screen-md-min) { padding: 33px 20px 28px 19px; }*/
             @media (min-width: $screen-lg-min) { padding: 33px 20px 28px 19px; }
             @media (max-width: $screen-xs-max) { 
               &:hover, &:focus, &:active {
-                color:#fff;
+                color:$link-color;
               }
             }
         }
 
         &.open > a {
-          color: white;
+          color: $link-color;
           &,
           &:hover,
           &:focus,
@@ -239,9 +253,7 @@
       background-color:$navbar-inverse-bg;
       
       .menu-large > a {
-
-        font-size: 17px;
-        color: white;
+        color: $brand-white;
         border-bottom: 1px solid darken($navbar-inverse-bg,7.6%);
 
         > span[class*="icon-arrow-"]{
@@ -253,7 +265,7 @@
         }
         &:hover{
           background-color:lighten($brand-primary,7.6%);
-
+          color: $brand-white;
           &:after, &:before {
             background-color: transparent;
           }
@@ -266,7 +278,7 @@
 
         padding: 0;
         color: $body-bg;
-        font-size: 17px;
+        font-size:$font-size-base;
         padding: 10px 15px;
         border-bottom: 1px solid darken($navbar-inverse-bg,7.6%);
 

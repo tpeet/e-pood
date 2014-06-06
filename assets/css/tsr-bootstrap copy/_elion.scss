@@ -7,7 +7,11 @@ body {
   line-height: $line-height-base;
 }
 header{display: block; margin-bottom: -1px;}
-section.content { padding: 0; }
+section.content { padding: 0;
+  .container {
+    margin-top: $containerTopMargin;
+  }
+}
 
 //
 // close button bar styles

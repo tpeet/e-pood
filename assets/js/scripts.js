@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
 BindSlideToggle();
-CollapseBindings();
 cloneRightSideMainMenu();
 
 if (!Modernizr.svg) {

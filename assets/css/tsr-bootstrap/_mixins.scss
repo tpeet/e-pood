@@ -134,7 +134,11 @@
   -webkit-transition: $transition;
           transition: $transition;
 }
-@mixin transition-property($transition-property) {
+@mixin transition-property($transition-property...) {
+  -webkit-transition-property: $transition-property;
+          transition-property: $transition-property;
+}
+@mixin transition-properties($transition-property...) {
   -webkit-transition-property: $transition-property;
           transition-property: $transition-property;
 }
@@ -1019,4 +1023,11 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin setAsH4() {
+  font-size: $font-size-base + 7;
+}
+@mixin setAsBodyText() {
+  font-size: $font-size-base;
 }

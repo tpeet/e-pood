@@ -19,9 +19,10 @@
 /* @include modal */
 
 // ELION HEADQUARTER
-/* @include header */
-/* @include footer */
-/* @include main */
+/* @include visa/funcs */
+/* @include visa/main */
+/* @include visa/header */
+/* @include visa/footer */
 /* @include visa/alert */
 
 // 2nd LEVEL

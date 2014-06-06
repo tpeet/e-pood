@@ -84,6 +84,16 @@
         top: 18px;
       }
     }
+
+    a[href*="#collapsibleMainMenu-User"] {
+      
+      width: 68px;
+
+      span[class*="badge"] {
+        right: 10px;
+        top: 18px;
+      }
+    }
   
 }
 

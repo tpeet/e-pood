@@ -72,7 +72,7 @@
         display: block;
         position: relative;
         
-        @media (max-width: $screen-xs-max) {
+        @media (max-width: $screen-xs) {
           padding-right:30px;
         }
         
@@ -98,7 +98,7 @@
           &:hover{
             text-decoration:underline;
           }
-          @media (max-width: $screen-xs-max) {
+          @media (max-width: $screen-xs) {
             border-right:0;
             display:block;
             position:relative;
@@ -165,7 +165,7 @@
 
 // primary
 // @extend .alert-primary; !!! Extend directives may only be used within rules.
-//
+
 .alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
 }

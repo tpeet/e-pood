@@ -61,3 +61,10 @@
 @import "upgrade-steps";
 @import "ddl";
 
+// from elion-e-pood
+//@import "ee-sidemenu";// old side menu
+@import "ee-autocomplete";
+@import "sidenavigation";// new side menu
+
+// for manual. comment out this file
+@import "docs";

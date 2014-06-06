@@ -1,253 +1,196 @@
-.navbar-default {
-  .navbar-nav {
-    .side-menu {
-      
-      &.menu-large {
+#collapsibleMainMenu-Pages {
 
-        > a {
-          &:after {
-            @include setIconFonts();
-            position: relative;
-            top: 15px;
-            margin-right:10px;
-            font-size: $font-size-base;
-            content: "\e668";// arrow down
-            float: right;
-            right: 0;
-          }
-        }
-      }
-    }
+  > a {
+    @include setAsH4();
+  }
+
+
+  @media (max-width: $screen-xs-max) {
+
     .dropdown {
-      &.side-menu {
-      
-        &.menu-large {
-          &.open {
-            > a {
-              &:after {
-                @include setIconFonts();
-                position: relative;
-                top: 15px;
-                margin-right:10px;
-                font-size: $font-size-base;
-                content: "\e66b";// arrow down
-                float: right;
-                right: 0;
-              }
-            }
-          }
-          > a {
-            &:after {
-              @include setIconFonts();
-              position: relative;
-              top: 15px;
-              margin-right:10px;
-              font-size: $font-size-base;
-              content: "\e669";// arrow down
-              float: right;
-              right: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.menu-large {
-
-  position: static !important;
-
-  > .dropdown-toggle {
-
-    &:after {
-      content: "";
-    }
-
-  }
-
-}
-
-.dropdown {
-
-  &.menu-large {
-
-    @media (max-width: $screen-xs-max) {
-    
-      &.open {
-
-        > .dropdown-toggle {
-
-          padding: 10px 15px ;
-
-          &:after {
-            @include setIconFonts();
-            position: relative;
-            top: 15px;
-            margin-right:10px;
-            font-size: $font-size-base;
-            content: "\e66b";// arrow down
-            float: right;
-          }
-
-        }
-        
-      }
-
-      > .dropdown-toggle {
-
-      
+      .dropdown-toggle {
         &:after {
+          @include setAsBodyText();
           @include setIconFonts();
           position: relative;
           top: 15px;
           margin-right:10px;
-          font-size: $font-size-base;
           content: "\e669";
           float: right;
+          right: 0px;
         }
-       
-
+        
       }
 
-      .dropdown-menu {
-        .megamenu {
-          > li > a {
-            color: $link-color-on-dark-bg;
-            &:after {
-              @include setIconFonts();
-              position: relative;
-              top: 0px;
-              margin-left:10px;
-              font-size: $font-size-base;
-              content: "\e668";
-              float: right;
-              right: -15px;
-            }
+      &.open {
+        .dropdown-toggle {
+          &:after {
+            @include setAsBodyText();
+            @include setIconFonts();
+            position: relative;
+            top: 15px;
+            margin-right:10px;
+            content: "\e66b";
+            float: right;
+            right: 0px;
           }
+          
         }
       }
-
+      
     }
 
-// ACTIVE MENU
-    &.active {
-
-      background-color: transparent;
-
-      > a, > a:hover, > a:active, > a:focus {
-        color:$link-color;
-        background-color: transparent;
-        &:before {
-            background-color: darken($navbar-inverse-bg,7.6%);
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 4px;
-            left: 0;
-            position: absolute;
-            top: auto;
-            width: 100%;
-          }
+    .menu-large {
+      > a {
+        @include setAsH4();
       }
-      @media (max-width: $screen-xs-max) { 
-        > a, > a:hover, > a:active, > a:focus {
-          color: $link-color-on-dark-bg;
-          &:before {
-            background-color: transparent;
-          }
+
+      > a {
+        &:after {
+          @include setAsBodyText();
+          @include setIconFonts();
+          position: relative;
+          top: 15px;
+          margin-right:10px;
+          content: "\e668";
+          float: right;
+          right: 0px;
         }
       }
     }
-// END ACTIVE MENU
-
+    
   }
-}
-.megamenu {
 
-  padding: 40px 0px 50px 0px;
+}
+
+.menu-large {
+  position: static !important;
+}
+
+// light background megamenu
+.dropdown-light {
+  .container {
+    background-color: darken($brand-white,6.8%)!important;
+  }
+
+  &.full-width {
+    width: 100%;
+
+    .container {
+      width: 100%;
+
+      .megamenu {
+        margin:0;
+        padding: 0;
+
+        [class*="col-"] {
+          padding: 0;
+        }
+      }
+
+      .close-up-btn-bar {
+        background-color: darken($brand-white,6.8%);
+        border-top: 2px solid darken($brand-white,15%);
+        border-bottom: 1px solid darken($brand-primary,10%);
+
+        &:hover {
+          background-color: $brand-white;
+
+          > [class*="icon"] {
+            color:darken($brand-white,15%);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.megamenu {
+  list-style: none;
+  padding: 10px 0px 10px 0px;
   width:100%;
 
   @media (max-width: $screen-sm-max) {
     margin-left: 0 ;
     margin-right: 0 ;
-  }
+    padding: 0;
 
-  > li {
-
-    &:first-child{
-      .list-group {
-        > li {
-          &:hover {
-            background:none;
-          }
-        }
-      }
-    }
-
-    a {
-
-      @media (max-width: $screen-xs-max) { 
-        
-        border-bottom: 1px solid darken($brand-primary,10%);
-        display: block;
-        padding: 10px 25px;
-
-        &:hover {
-          text-decoration: none;
-          background-color:lighten($brand-primary,7.6%);
-        }
-
-      }
-
-    }
-
-    > ul {
-
+    > [class*="col-"] {
       padding: 0;
       margin: 0;
-      
-      // hover effect
-      &.list-group > li {
+    }
+  }
+  
+  .list-group {
+    
+    @media (max-width: $screen-sm-max) {
+      margin-bottom:0;
+    }
 
-        @media (max-width: $screen-xs-max) {
+    .dropdown-header {
+      float:left;
+      font-size: $font-size-base + 2;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-left: 10px;
+      position: relative;
+      width: 24%;
 
-          a {
+      @media (max-width: $screen-xs-max) {
+        width:100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0;
+        padding-left:15px;
+        border-bottom: 1px solid darken($brand-primary,10%);
 
-            display:block;
-            
-            &:after {
-              @include setIconFonts();
-              position: relative;
-              top: 0px;
-              margin-left:10px;
-              font-size: $font-size-base;
-              content: "\e668";
-              float: right;
-              right: -4px;
-            }
-
-          }
-
-        }
-
-        &:not(.dropdown-header) + .dropdown-header {
-          margin-top:23px;
-        }
         &:hover {
           background-color: darken($navbar-inverse-bg,7.6%);
         }
+      }
+
+      &:hover {
+        background-color: darken($navbar-inverse-bg,7.6%);
+      }
+
+      > h6 {
+        margin-top:0px;
+        margin-bottom:0px;
+        
+        > a {
+          color:$link-color-on-dark-bg;
+          text-decoration: none;
+
+          @media (max-width: $screen-xs-max) {
+            &:after {
+              @include setIconFonts();
+              position: relative;
+              top: 7px;
+              margin-right:0px;
+              font-size: $font-size-base;
+              content: "\e668";
+              float: right;
+              right: -5px;
+            }
+          }
+        }
+      }
+
+      // HAS CHILD COLUMNS STYLES
+      &.has-child {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
 
         > h6 {
+          margin-bottom: 5px;
 
           > a {
-
-            padding:7px 10px;
-            color:$link-color-on-dark-bg;
-
-            &:hover {
-              text-decoration: none;
-            }
+            padding-left: 10px;
+            padding-right: 10px;
 
             &:after {
               @include setIconFonts();
@@ -256,249 +199,227 @@
               margin-left:10px;
               font-size: $font-size-base;
               content: "\e668";
-            }
 
-            span[class*='icon-arrow'] {
-              display: none;// temp solution to hide old implementation
+              @media (max-width: $screen-xs-max) {
+                content: "\e669";
+                float: right;
+                top: 3px;
+                right: 10px;
+              }
+              
             }
 
             @media (max-width: $screen-xs-max) {
-            
-              font-size: $font-size-base;
-              padding-left: 35px;
-
-              &:after {
-                margin-right: 5px;
-              }
-
+              padding-left:0;
+              padding-right:0;
             }
-            
+
           }
+
+          @media (max-width: $screen-xs-max) {
+            padding-left:25px;
+          }
+
         }
-        
-        
 
-        &.dropdown-header {
-          &.open {
+        > ul {
+          list-style: none;
+          padding-left: 0px;
+          background-color: $navbar-inverse-bg;
 
-            > h6 {
-
-              > a {
-
-                &:after {
-
-                  @include setIconFonts();
-                  position: relative;
-                  top: 0px;
-                  margin-left:10px;
-                  font-size: $font-size-base;
-                  content: "\e66b";
-                  float: right;
-                }
-              }
-            }
+          @media (max-width: $screen-xs-max) {
+            display: none;
           }
 
-          > h6 {
+          > li {
+            &:first-child {
+              @media (max-width: $screen-xs-max) {
+                border-top: 1px solid darken($brand-primary,10%);
+              } 
+            }
+            &:last-child {
+              @media (max-width: $screen-xs-max) {
+                border-bottom: 0px;
+              } 
+            }
+            @media (max-width: $screen-xs-max) {
+              border-bottom: 1px solid darken($brand-primary,10%);
+            }
+            &:hover {
+              background-color: darken($navbar-inverse-bg,12.6%);
+            }
 
             > a {
+              font-size: $font-size-base;
+              color: $brand-white;
+              font-weight: normal;
+              text-decoration: none;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              display: block;
 
               &:after {
-                @include setIconFonts();
-                position: relative;
-                top: 0px;
-                margin-left:10px;
-                font-size: $font-size-base;
-                content: "\e668";
+                content:"";
 
-                @media (max-width: $screen-xs-max) {
-                  content: "\e669";
+                @media (max-width: $screen-xs-max) { 
+                  @include setIconFonts();
+                  position: relative;
                   float: right;
                   top: 3px;
-                  right: -9px;
+                  right: 10px;
+                  margin-left:10px;
+                  font-size: $font-size-base;
+                  content: "\e668";
                 }
               }
 
-            }
-
-            @media (max-width: $screen-sm-max) {
-
-              font-size: $font-size-base;
-              margin:0;
-
-              > a {
-                padding:10px 15px; 
+              @media (max-width: $screen-xs-max) {
+                padding-left:35px;
+                padding-right:0;
               }
             }
-          }
-          
 
-        }
-        
-        > a {
+            > p {
+              padding-left: 10px;
+              padding-right: 10px;
+              color: $brand-white;
+              font-size: $font-size-base;
 
-            padding:4px 10px;
-            z-index: 1;
-            position: relative;
-            display: block;
-            color:$link-color-on-dark-bg;
-
-          > span, > p, > h6 {
-            margin: 0;
-            display: inline-block;
-            position: relative;
-            z-index: 1; // or is there a reason for 999 ?
+              > a {
+                text-decoration: none;
+              }
+            }
           }
 
         }
 
         @media (max-width: $screen-xs-max) {
-          &:not(.dropdown-header){
-            display:none;
-          }
-
-          &:not(.dropdown-header) + .dropdown-header,
-          &.dropdown-header:not(:first-child) {
-
-            margin-top: 0;
-
-            > &:hover:before {
-              background-color: transparent;
-              min-height: auto;
-              visibility: hidden;
+          &.open {
+            > ul {
+              display: block;
             }
+          }
+        }
 
+      }
+      // end HAS CHILD COLUMNS STYLES
+
+    }
+
+    // promotion column
+    &.promotion {
+      min-height: 200px;
+      border-right: 1px solid darken($brand-primary,7%);
+      width: 100%;
+
+      > .dropdown-header {
+        margin: 0;
+        padding-left: 0px;
+        width: 100%;
+
+        &:hover {
+          background-color:transparent;
+        }
+        > h6 {
+          margin-bottom: 5px;
+          
+          @media (max-width: $screen-xs-max) {
+            padding:10px 15px;
           }
 
           > a {
+            @media (max-width: $screen-xs-max) {
+              display: block;
 
-            padding: 10px 10px 10px 35px;
+              &:after {
+                content:"";
+              }
+            }
+          }
+        }
+        > ul {
+          list-style: none;
+          padding: 0;
 
+          li {
+            color: $brand-white;
+            > p {
+              padding-top: 5px;
+              padding-bottom: 5px;
+
+              @media (max-width: $screen-xs-max) {
+                padding:10px 15px 10px 35px;
+                margin-bottom: 0;
+              }
+
+            }
+          }
+        }
+      }
+
+    }
+    // end promotion column
+  }
+
+  &.user-droplayer {
+    .list-group {
+      .has-child {
+        &:hover {
+          background-color:transparent;
+          @media (max-width: $screen-xs-max) {
+            background-color: darken($navbar-inverse-bg,7.6%);
+          }
+        }
+
+        h6 {
+          a {
             &:after {
-              margin-right:5px;
+              content:"";
+              @media (max-width: $screen-xs-max) {
+                content: "\e669";
+              }
             }
+          }
+        }
 
-            &:hover:after {
-              top:0;
+        > ul {
+          > li {
+            &:hover {
+              background-color:transparent;
+              @media (max-width: $screen-xs-max) {
+                background-color: darken($navbar-inverse-bg,12.6%);
+              }
+            }
+            > p {
+              color:$brand-white;
+
+              @media (max-width: $screen-xs-max) {
+                padding-bottom: 5px;
+                padding-left: 35px;
+                padding-top: 5px;
+              }
+
+              > a {
+                color: $brand-white;
+              }
             }
           }
-
-          &.dropdown-header > h6 > a {
-            padding-left: 25px;
-          }
         }
 
-      }
-
-      > li {
-        list-style: none;
-        position: relative;
-
-        > a {
-
-          display: block;
-          clear: both;
-          font-weight: normal;
-          line-height: 1.428571429;
-          color: #333333;
-          white-space: normal;
-          padding: 4px 10px;
-
-          &:hover,&:focus{
-            text-decoration: none;
-            color: #fff;
-          }
-
-          > img {
-            padding-top: 0px;
-            max-height: 410px;
-          }
-
-          @media (max-width: $screen-xs-max) { 
-            border-bottom: 1px solid darken($brand-primary,10%);
+        &.open {
+          h6 {
+            a {
+              &:after {
+                content:"";
+                @media (max-width: $screen-xs-max) {
+                  content: "\e66b";
+                }
+              }
+            }
           }
         }
-
-        @media (max-width: $screen-xs-max) {
-          &:hover {
-            background-color: lighten($navbar-inverse-bg,7.6%);
-          }
-        }
-        
-      }
-    }
-
-    &.dropdown-header {
-      color: #428bca;
-      font-size: $font-size-base + 3;
-    }
-
-    @media (max-width: $screen-sm-max) {
-      margin-bottom: 30px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      @media (max-width: $screen-xs-max){
-        margin-bottom: 0px;
-      }
-    }
-
-  }
-  &.disabled > a {
-    color: #999999;
-
-    &:hover,&:focus{
-      text-decoration: none;
-      background-color: transparent;
-      background-image: none;
-      filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-      cursor: not-allowed;
-    }
-
-  }
-
-  @media (max-width: $screen-xs-max){
-    padding: 0px;
-    [class*="col-"]{
-      margin:0;
-      padding:0;
-    }
-  }
-
-} 
-
-.navbar-nav .open .dropdown-menu .dropdown-header {
-  @media (max-width: $screen-xs-max) {
-
-    padding:0;
-
-    > a {
-
-      padding: 10px 25px ;
-      background-color: darken($brand-primary, 7.6%);
-      border-bottom: 1px solid darken($brand-primary,15%);
-      padding-left: 25px;
-
-      &:hover{
-        background-color:lighten($brand-primary,7.6%);
-      }
-
-      > h6 {
-        display: block;
-      }
-
-    }
-
-  }
-}
-
-/* FOR MOBILE SCREEN MAINMENU STYLES */
-@media (max-width: $screen-xs-max) {
-  .navbar-default {
-    .navbar-collapse {
-      .navbar-nav {
-        
       }
     }
   }

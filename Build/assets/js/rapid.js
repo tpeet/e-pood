@@ -4002,13 +4002,110 @@ TSR - CAROUSEL LISTING
 
 
 // ELION HEADQUARTER
-function CollapseBindings() {
+console.log('i am a live, func.js');
+// applay function screen onchanged
+function OnResize() {
+	this.init = function(c,t){
+        window.onresize = function() {
+			clearTimeout(t);
+			t = setTimeout(function(){
+				//c
+				for (var i = reCallFuncs.length - 1; i >= 0; i--) {
+					reCallFuncs[i].call();
+				}
+			},500);
+		};
+		return c;
+    };
+}
+
+
+
+
+//scroll page to top
+function scrollPageTop(){
+    $('[data-toggle="scroll-up"]').click(function(){
+        $('html,body').animate({
+             scrollTop: 0
+        }, 1000);
+    });
+}
+
+// create custom element
+function createCustomElement(array){
+    for(var _i=0; _i < array.length; _i++){
+        document.createElement(array[_i]);
+    }
+}
+
+// return client screen width
+function getScreenWidth(){
+	var w=Math.max(document.documentElement.clientWidth,window.innerWidth||0);
+	return w;
+}
+
+// return client screen height
+/*function getScreenHeight(){
+    var h=Math.max(document.documentElement.clientHeight,window.innerHeight||0);
+    return h;
+}*/
+ // get element height
+function getElementH(el){
+    var height = $(el).find('.dropdown-menu').height();
+    return height;
+}
+
+// make a element full screen width
+function fullSizeElement(){
+    var _el = $('.full-size');
+    if(_el.length < 1) return;
+    _el.attr('style','');// reset left value
+    var _pos = _el.offset(), _leftpx = _pos.left*(-1);
+    _el.css({ width : document.body.clientWidth+'px', left:_leftpx, position:'relative' });    
+}
+
+// stop propagation utility for dropdown menu
+function stopPropagation(){
+    $(".dropdown-menu").on("click", "[data-stopPropagation]", function(e) {
+        e.stopPropagation();
+    });
+
+    $('.stoppropagation').click(function(e){
+        e.stopPropagation();
+    });
+}
+var reCallFuncs = [];
+(function() {
+
+    'use strict';
+    function main() {
+        console.log('main js');
+
+        scrollPageTop();
+        createCustomElement(['header','footer']);
+        stopPropagation();
+        fullSizeElement();
+
+        reDrawVisual();//if screen changed redraw visual
+
+    }
+
+    main();
+
+}());
+
+function reDrawVisual() {
+    var oR = new OnResize();
+    oR.init();
+}
+
+(function() {
 
     'use strict';
 
-
     function header() {
         
+        console.log('header js');
         // handle main nav top margin
         $('header > .navbar .dropdown').on('shown.bs.dropdown', function () {
             if(Modernizr.mq('only screen and (min-width: 768px)')) {
@@ -4040,33 +4137,80 @@ function CollapseBindings() {
             }); 
         });*/
 
+        cloneRightSideMainMenu();
         collapseOtherContent();
         collapsableMenuForMobile();
         initDropMenu();
-        
-    }
-    
-    // get element height
-    function getElementH(el){
-        var height = $(el).find('.dropdown-menu').height();
-        return height;
+        cloneThirdLevelMenu();
+
+        // close all mainmenu opened layers and content top margin when screen size changed
+        var closeAllOpenLayersResetContentMargin = function(){
+            $('#collapsibleMainMenu-Pages .dropdown').removeClass('open');
+            
+            console.log( $('.navbar:nth-child(2) a.navbar-toggle.active'), $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href'));
+            var _selector = $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href');
+            if( _selector != '#collapsibleMainMenu-Pages') {
+                $(_selector).collapse('hide');
+            }
+            //$('.navbar:nth-child(2) .navbar-toggle').attr('href');
+            $('.navbar:nth-child(2)').css({marginTop:0+'px'});
+            $('section.content, section.hero').css({marginTop:0+'px'});
+            $('section.content, section.hero, .navbar:nth-child(2)').css({marginTop:0+'px'});
+
+        };
+        reCallFuncs.push(closeAllOpenLayersResetContentMargin,collapsableMenuForMobile);
     }
     
     function collapsableMenuForMobile(){
         if(Modernizr.mq('only screen and (max-width: 767px)')) {
-            $('.list-group .dropdown-header > h6').each(function() {
+            $('.list-group .has-child > h6').each(function() {
                 var _parent = $(this).parent();
                 this.addEventListener('click', function(e) {
+                    $(this).parent().toggleClass('open');
+                    var _el = $(this).parent().parent().find('li.has-child');
+
+                    for (var i = _el.length - 1; i >= 0; i--) {
+                        if( $(this).parent()[0] != _el[i] ) {
+                            $(_el[i]).removeClass('open');
+                        }
+                    }
+
                     e.stopPropagation();
                     e.preventDefault();
-                    _parent.nextUntil('.dropdown-header').toggle();
-                    $(_parent).toggleClass('open');
                 }, false);
-            });
+            });  
         }
 
     }
 
+    function cloneRightSideMainMenu(){
+        $('#collapsibleMainMenu-Search').html( $('.collapsibleMainMenu-Search').clone() );
+        $('#collapsibleMainMenu-Basket').html( $('.collapsibleMainMenu-Basket').clone() );
+        $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
+        /*var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
+        _el.append('<li>asdflkdsjaflkjsalkf</li>');*/
+    }
+
+    /**
+        Generating third menu from main menu
+    */
+    function cloneThirdLevelMenu(){
+        var _thrd = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(0).find('li.active .dropdown-header');
+        var _level3 = $('<nav class="sub-menu hidden-xs" />');
+        
+        _level3.append($('<div class="container"><h3 class="sr-only">Alamlehed</h3><ul class="list-inline"/></div>'));
+
+        var _list= _level3.find('ul');           
+        $.each(_thrd,function(){
+            var _a = $(this).find('a').clone();
+            _list.append($('<li />').append(_a));
+
+        });
+
+        $('nav.navbar.navbar-default').after(_level3); 
+    }
+
+    
     function collapseOtherContent(){
         var _elDrop = $('header div[id*="collapsibleMainMenu"]');
         _elDrop.on('show.bs.collapse', function (e) {
@@ -4075,6 +4219,7 @@ function CollapseBindings() {
                 $('[id^="collapsibleMainMenu-"]').removeClass('in').addClass('collapse');
                 $('[href*="collapsibleMainMenu-"]').removeClass('active');
             }
+          
             $('header .navbar-header').find('[href*="'+this.id+'"]').addClass('active');
 
         });
@@ -4086,13 +4231,12 @@ function CollapseBindings() {
         });
     }
 
-    // footer links
+    // 
     function initDropMenu() {
         if(Modernizr.mq('only screen and (max-width: 767px)')) {
             var _activeEl;
             $('header .collapsibleMainMenu h2:not(.title)').each(function(i, el) {
                 var _el = $(el);
-                // console.log(i, el);
                 _el.click(function(e){
 
                     $(this).toggleClass('active');
@@ -4111,7 +4255,7 @@ function CollapseBindings() {
     
     header();
 
-};
+}());
 (function() {
 
     'use strict';
@@ -4148,90 +4292,6 @@ function CollapseBindings() {
 
     footer();
     
-}());
-console.log('\'Hello\' Elion webpage!');
-
-(function() {
-
-    'use strict';
-
-    function main() {
-        // console.log('main js');
-
-        scrollPageTop();
-        createCustomElement(['header','footer']);
-        stopPropagation();
-        fullSizeElement();
-
-    }
-    //scroll page to top
-    function scrollPageTop(){
-        $('[data-toggle="scroll-up"]').click(function(){
-            $('html,body').animate({
-                 scrollTop: 0
-            }, 1000);
-        });
-    }
-    // create custom element
-    function createCustomElement(array){
-        for(var _i=0; _i < array.length; _i++){
-            document.createElement(array[_i]);
-        }
-    }
-    // return client screen width
-    function getScreenWidth(){
-		var w=Math.max(document.documentElement.clientWidth,window.innerWidth||0);
-		return w;
-    }
-    // return client screen height
-    function getScreenHeight(){
-        var h=Math.max(document.documentElement.clientHeight,window.innerHeight||0);
-        return h;
-    }
-    // make a element full screen width
-    function fullSizeElement(){
-        var _el = $('.full-size');
-        if(_el.length < 1) return;
-        _el.attr('style','');// reset left value
-        var _pos = _el.offset(), _leftpx = _pos.left*(-1);
-        _el.css({ width : document.body.clientWidth+'px', left:_leftpx, position:'relative' });    
-    }
-    // stop propagation utility for dropdown menu
-    function stopPropagation(){
-        $(".dropdown-menu").on("click", "[data-stopPropagation]", function(e) {
-            e.stopPropagation();
-        });
-
-        // console.log( 'data-stoppropagation:', $('.stoppropagation'));
-
-        $('.stoppropagation').click(function(e){
-            e.stopPropagation();
-        });
-
-        /*$("#collapsibleMainMenu-Pages [data-toggle='collapse']").click(function(e){
-            console.log("sdlkfjaslkjfskl");
-            e.stopPropagation();
-        });*/
-    }
-
-    // update visaul after screen has changed
-    function updateVisual() {
-      $('section.content, section.hero').css({marginTop:0+'px'});
-      if(Modernizr.mq('only screen and (min-width: 768px)')) {
-        $("[id*='collapsibleMainMenu']").removeClass('in').addClass('collapse').attr('style','');
-        $("[href*='collapsibleMainMenu']").removeClass('active');
-      }
-    }
-
-    // call your function after screen has changed
-    function on_resize(c,t){window.onresize = function() {clearTimeout(t);t = setTimeout(c,500);};return c;}
-    on_resize(function() {
-      fullSizeElement();
-      updateVisual();
-    });
-
-    main();
-
 }());
 ;(function($, window, document, undefined) {
   
@@ -6640,7 +6700,6 @@ $(document).ready(function () {
 $(document).ready(function() {
 
 BindSlideToggle();
-CollapseBindings();
 cloneRightSideMainMenu();
 
 if (!Modernizr.svg) {
