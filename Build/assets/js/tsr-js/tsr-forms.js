@@ -78,7 +78,9 @@ tsrForms.tsrCheckbox = function () {
    }
 
    label.addClass('tsr-checkbox');
-   label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
+    if (!label.has("span.tsr-checkboxStyled").length) {
+        label.prepend('<span class="tsr-checkboxStyled icon icon-thick">&nbsp;</span>');
+       }
 
 
    label.not('.disabled').change(function () {
