@@ -1,10 +1,12 @@
-console.log('scripts js loaded');
-
 $(document).ready(function() {
 
 BindSlideToggle();
 CollapseBindings();
 cloneRightSideMainMenu();
+
+if (!Modernizr.svg) {
+  $(".navbar-brand img").attr("src", "images/elion-logo.png");
+}
 
   // CALL FRONTPAGE MORE
   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
@@ -119,10 +121,4 @@ function cloneRightSideMainMenu(){
     $('#collapsibleMainMenu-Guide').html( $('.collapsibleMainMenu-Guide').clone() );
     
     var _el = $('#collapsibleMainMenu-Pages').find('.navbar-nav').eq(1).find('li').eq(3);
-    //_el.append('<li>asdflkdsjaflkjsalkf</li>');
-    console.log(_el);
-}
-
-if (!Modernizr.svg) {
-  $(".navbar-brand img").attr("src", "images/elion-logo.png");
 }

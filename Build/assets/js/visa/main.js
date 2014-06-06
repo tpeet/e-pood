@@ -5,7 +5,7 @@ console.log('\'Hello\' Elion webpage!');
     'use strict';
 
     function main() {
-        console.log('main js');
+        // console.log('main js');
 
         scrollPageTop();
         createCustomElement(['header','footer']);
@@ -51,7 +51,7 @@ console.log('\'Hello\' Elion webpage!');
             e.stopPropagation();
         });
 
-        console.log( 'data-stoppropagation:', $('.stoppropagation'));
+        // console.log( 'data-stoppropagation:', $('.stoppropagation'));
 
         $('.stoppropagation').click(function(e){
             e.stopPropagation();

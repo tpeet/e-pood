@@ -45,7 +45,7 @@ section.tsr-section-productlist  {
       width: 100%;
       padding: 0 2%;
       @include media-min($screen-sm) {
-      max-width: 73%;
+      width: 66%;
       }
     }
     .tsr-product-header {
@@ -63,6 +63,7 @@ section.tsr-section-productlist  {
     .hidden-sm {
       vertical-align: top;
       display: inline-block !important;
+      width: 67%;
       @include media-min($screen-sm) {
       display: none !important;
       }

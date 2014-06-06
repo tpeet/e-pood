@@ -3,7 +3,6 @@
     'use strict';
 
     function footer() {
-        console.log('footer js');
 
         // footer links
         if(Modernizr.mq('only screen and (max-width: 767px)')) {

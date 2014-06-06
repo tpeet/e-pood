@@ -64,22 +64,22 @@
       padding: 2px;
     }
   }
-  // .close {
-  //   position: absolute;
-  //   color: $purple-c;
-  //   font-size: 30px;
-  //   top: -10px;
-  //   left: -1px;
-  //   opacity: 0;
-  //   padding: 10px;
-  //   -webkit-transition: opacity 0.3s ease-in-out;
-  //   -moz-transition: opacity 0.3s ease-in-out;
-  //   -o-transition: opacity 0.3s ease-in-out;
-  //   transition: opacity 0.3s ease-in-out;
-  //   &:hover {
-  //     opacity: 1;
-  //   }
-  // }
+  .close {
+    position: absolute;
+    color: $purple-c;
+    font-size: 30px;
+    top: -10px;
+    left: -1px;
+    opacity: 0.8;
+    padding: 10px;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .ee-filterbar {

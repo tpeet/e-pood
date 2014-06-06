@@ -11704,7 +11704,7 @@ section.tsr-section-productlist .tsr-module-product {
     padding: 0 2%; }
     @media screen and (min-width: 768px) {
       section.tsr-section-productlist .tsr-module-product .tsr-product-content {
-        max-width: 73%; } }
+        width: 66%; } }
   section.tsr-section-productlist .tsr-module-product .tsr-product-header {
     font-size: 110%;
     line-height: 1.1; }
@@ -11716,7 +11716,8 @@ section.tsr-section-productlist .tsr-module-product {
       width: 95%; }
   section.tsr-section-productlist .tsr-module-product .hidden-sm {
     vertical-align: top;
-    display: inline-block !important; }
+    display: inline-block !important;
+    width: 67%; }
     @media screen and (min-width: 768px) {
       section.tsr-section-productlist .tsr-module-product .hidden-sm {
         display: none !important; } }
@@ -12150,6 +12151,20 @@ section.ee-reviewarea {
   position: relative; }
   .ee-comparebar figure img {
     padding: 2px; }
+.ee-comparebar .close {
+  position: absolute;
+  color: #642887;
+  font-size: 30px;
+  top: -10px;
+  left: -1px;
+  opacity: 0.8;
+  padding: 10px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
+  .ee-comparebar .close:hover {
+    opacity: 1; }
 
 .ee-filterbar .navbar-nav > li > a {
   line-height: 3;
@@ -12359,13 +12374,14 @@ header .navbar-default {
       zoom: 1;
       position: absolute;
       top: 20px;
-      line-height: 1.2;
+      line-height: 1.3;
       color: #642887;
       font-size: 18px;
       -webkit-transition: color 0.3s ease-in-out;
       -moz-transition: color 0.3s ease-in-out;
       -o-transition: color 0.3s ease-in-out;
-      transition: color 0.3s ease-in-out; }
+      transition: color 0.3s ease-in-out;
+      padding-right: 10px; }
     .headerSearchResultWrapper .list-group-item.active, .headerSearchResultWrapper .list-group-item:hover {
       border-color: #dbdbdb; }
     .headerSearchResultWrapper .list-group-item.active .search-item-title, .headerSearchResultWrapper .list-group-item:hover .search-item-title {
@@ -12707,9 +12723,6 @@ header .dropdown-menu .dropdown-header {
 
 .admin.dropdown-menu {
   top: auto; }
-
-.alert {
-  display: none; }
 
 .flyover {
   top: -250px;

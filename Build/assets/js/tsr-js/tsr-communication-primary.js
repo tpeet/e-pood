@@ -106,7 +106,7 @@ TSR - CAROUSEL LISTING
 
 					var el 			= $(this);
 					var textHeight 	= el.find('.tsr-tactical-textPanel').height();
-					console.log(textHeight);
+					// console.log(textHeight);
 
 					el.css('margin-bottom', textHeight + 10);
 

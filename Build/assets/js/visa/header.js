@@ -88,7 +88,7 @@ function CollapseBindings() {
             var _activeEl;
             $('header .collapsibleMainMenu h2:not(.title)').each(function(i, el) {
                 var _el = $(el);
-                console.log(i, el);
+                // console.log(i, el);
                 _el.click(function(e){
 
                     $(this).toggleClass('active');
