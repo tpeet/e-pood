@@ -11391,7 +11391,7 @@ section.tsr-section-productAndService-listing {
     display: inline-block;
     float: none;
     margin-right: 5px; }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
       .tsr-module-product .tsr-product-image {
         width: 100%;
         max-width: 220px;
@@ -12162,40 +12162,12 @@ section.tsr-section-carousel-listing.tsr-slider-init {
   font-size: 120%;
   font-weight: bold; }
 
-.megamenu img {
-  margin-top: 10px; }
-
-header .navbar-default {
-  margin-bottom: -1px; }
-
-.topnav.navbar, .ee-adminnav.navbar {
-  margin-bottom: 0; }
-
-.dropdown .icon-arrow-down {
-  padding-right: 10px; }
-
-.navbar-inverse .navbar-nav .dropdown-menu {
-  min-width: 100%; }
-
-.topnav .dropdown-menu li a {
-  font-size: 13px; }
-
 .user-droplayer.megamenu.with-advertising {
-  padding: 0;
-  margin-top: -10px; }
+  padding: 0; }
   .user-droplayer.megamenu.with-advertising .col-sm-9 {
     padding-left: 0; }
   .user-droplayer.megamenu.with-advertising .col-sm-3 {
     margin-top: 30px; }
-
-.navbar-inverse .user-menu.navbar-nav > li > a {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: normal;
-  font-size: 15px; }
-
-.navbar-inverse .user-menu.navbar-nav > li > a:hover {
-  background: #4f2369; }
 
 .navbar-nav.nav-justified {
   display: table; }
@@ -12547,17 +12519,15 @@ header .megamenu .search-item-image,
 
   .tsr-tactical-flash {
     background: #fff; } }
-.megamenu > li > ul.list-group > li.dropdown-header {
-  text-indent: -15px; }
-  .megamenu > li > ul.list-group > li.dropdown-header h6 {
-    white-space: nowrap; }
+.navbar-default .user-menu.navbar-nav > li > a:after {
+  background-color: #51246B; }
 
-.megamenu > li > ul.list-group > li.dropdown-header > h6 > a:after {
-  margin-left: 20px;
-  font-size: 13px; }
+.navbar-default .user-menu.navbar-nav > li > a,
+.navbar-default .user-menu.navbar-nav > li > a:active {
+  color: #fff; }
 
-header .dropdown-menu .dropdown-header {
-  padding-top: 3px; }
+.ie8 div {
+  background: red; }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }

@@ -367,55 +367,44 @@
               <div class="dropdown-menu ">
                 <div class="container">
                   <ul class="row megamenu">
-                    <li class="col-sm-3">
+                    
+                    <li class="col-sm-12">
                       <ul class="list-group">
-                        <li ><h6>
-                          <a href="#">Uued tooted </a>
-                        </h6></li>
-                        <li class='current'><a href="detail.html" class="current hidden-xs"><img src="assets/img/header/{{id}}.png" class="original"></a></li>
-                        <li>
-                          <a href="#" class="hidden-xs">
+                        <li class="dropdown-header has-child promotion">
+                          <h6> <a href="#">Uued tooted </a></h6>
+                          <ul>
+                            <li class='current'><a class='current' href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
+                            <li>
+                              <a href="#" class="hidden-xs">
                             <h3>{{name}}</h3>
                             <p>Lorem lorem lorem lorem ipsum</p>
                           </a>
+                            </li>
+                          </ul>
+                          
+                          
                         </li>
-                      </ul>
-                    </li>
-                    <li class="col-sm-3">
-                    {{#each link1}}
+                       
+
+                        {{#each link}}
                     
-                      <ul class="list-group">
-                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
-                        {{#each this.sub}}
-                        <li><a href="javascript:void(0);">{{this}}</a></li>
+                      
+                        {{#if sub}}
+                          <li class="dropdown-header has-child">
+                            <h6><a href="{{path}}">{{this.name}}</a></h6>
+                            <ul>
+                            {{#each this.sub}}
+                              <li><a href="javascript:void(0);">{{this}}</a></li>
+                            {{/each}}
+                            </ul>
+                          </li>
+                          {{else}}
+                          <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
+                        {{/if}}
+                      
+                    
                         {{/each}}
                       </ul>
-                    
-                    {{/each}}
-                    </li>
-                    <li class="col-sm-3">
-                    {{#each link2}}
-                    
-                      <ul class="list-group">
-                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
-                        {{#each this.sub}}
-                        <li><a href="javascript:void(0);">{{this}}</a></li>
-                        {{/each}}
-                      </ul>
-                    
-                    {{/each}}
-                    </li>
-                    <li class="col-sm-3">
-                    {{#each link3}}
-                    
-                      <ul class="list-group">
-                        <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
-                        {{#each this.sub}}
-                        <li><a href="javascript:void(0);">{{this}}</a></li>
-                        {{/each}}
-                      </ul>
-                    
-                    {{/each}}
                     </li>
 
                     
@@ -446,7 +435,7 @@
           <li class="options visible-xs">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient <span class="icon icon-arrow-down pull-right"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Ariklient</a></li>
                             <li><a href="#">E-pood</a></li>
@@ -457,7 +446,7 @@
             <li class="options visible-xs">
               <ul class="nav navbar-nav">
                   <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eesti keeles <span class="icon icon-arrow-down pull-right"></span></a>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eesti keeles </a>
                       <ul class="dropdown-menu">
                           <li><a href="#">По-русски</a></li>
                           <li><a href="#">In English</a></li>
@@ -470,51 +459,88 @@
 
 <!-- right side additional menu -->
 <ul class="nav navbar-nav navbar-right hidden-xs">
-  <!-- Watch it! The structure shall be same as previous, in loop. Not changed as I am lazy.-->
-    <li class="dropdown menu-large active">
-        <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
+    <li class="dropdown menu-large "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Minu konto</a>
+      <div class="dropdown-menu ">
+        <div class="container">
+        <div class="row ">
+            <ul class="nav navbar-nav user-menu nav-justified">
+              <li class="active"><a href="#">Täitmisel tellimused </a></li>
+              <li><a href="#">Minu konto </a></li>
+              <li><a href="#">Tellimused </a></li>
+              <li><a href="#">Salvestatud ostukorvid </a></li>
+              <li><a href="#">Minu lemmikud </a></li>
+              <li><a href="#">Järelmaks </a></li>
+              <li><a href="#">Kontaktisikud </a></li>
+            </ul> 
+        </div>
+        </div>
+        <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
         <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Guide">
-                <ul class="row list-unstyled megamenu">
-                    <li class="col-sm-3">
+                <ul class="row megamenu">
+                    <li class="col-sm-12">
                     <ul class="list-group">
-                      <li class="dropdown-header"><h6>
+                      <li class="dropdown-header promotion has-child"><h6>
                         <a href="#">Järelmaksu tingimused  </a>
-                      </h6></li>
-                      <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" /></a></li>
+                      </h6>
+                      <ul>
+                        <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" style="width: 100%;"/></a></li>
                       <li>
-                        <a href="#" class="hidden-xs">
+                        <a href="#">
                           <h3>The All New Things - Now Available</h3>
                           <p>Lorem lorem lorem lorem ipsum</p>
                         </a>
                       </li>
-                    </ul>
-                  </li>
-                  <li class="col-sm-3">
-                    <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Kuidas osta e-poest </a></li>
-                      <li class="dropdown-header"><a href="#">Maksetingimused </a></li>
-                      <li class="dropdown-header"><a href="#">Elioni järelmaks </a></li>
-                      <li class="dropdown-header"><a href="#">Remont ja hooldus </a></li>
-                    </ul>
-                  </li>
-                  <li class="col-sm-3">
-                    <ul class="list-group">
-                      <li class="dropdown-header"><a href="#">Ärikliendile </a></li>
-                      <li class="dropdown-header"><a href="#">KKK </a></li>
-                      <li class="dropdown-header"><a href="#">Kontaktid </a></li>
-                      <li class="dropdown-header"><a href="#">E-poe üldtingimused </a></li>
-                    </ul>
-                  </li>
-                  <li class="col-sm-3">
-                    <ul class="list-group">
-                      <li class="dropdown-header"><a href="#"><h6>Kinkekaardi tingimused</h6> </a></li>
-                      <li class="dropdown-header"><a href="#">Objektiivide lühendid</a></li>
-                      <li class="dropdown-header"><a href="#">Kinkepaki tingimused </a></li>
-                      <li class="dropdown-header"><a href="#">Mida teha kasutatud seadmetega? </a></li>
+                      </ul>
+                    </li>
 
-                    </ul>
+                    
                   </li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kuidas osta e-poest </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Maksetingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Elioni järelmaks </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Remont ja hooldus </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Ärikliendile </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">KKK </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kontaktid </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">E-poe üldtingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#"><h6>Kinkekaardi tingimused</h6> </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Objektiivide lühendid</a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kinkepaki tingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Mida teha kasutatud seadmetega? </a>
+                  </h6></li>
+                  </ul>
                 </ul>
               </div> 
                 <div class="container reset-padding">
