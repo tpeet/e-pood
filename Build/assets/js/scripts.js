@@ -68,7 +68,7 @@ $('.dropdown-menu').find('form').click(function (e) {
    });
 
     $('#alertbtn2').click(function() {
-      if ( !$('#alert2').is( '.in' ) ) {
+      if ( !$('#alert2').is( '.in' ) ) { 
          $('#alert2').addClass('in');
       }
    });

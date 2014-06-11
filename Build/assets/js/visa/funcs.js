@@ -1,4 +1,3 @@
-console.log('i am a live, func.js');
 // applay function screen onchanged
 function OnResize() {
 	this.init = function(c,t){

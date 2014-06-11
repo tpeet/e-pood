@@ -10,32 +10,25 @@
 <title>Title</title>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10, IE=11">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
   <meta http-equiv="Content-Language" content="en">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--   , minimum-scale=1, maximum-scale=1 -->
 
 
 
-<!--[if lt IE 6]>
 
-    <link rel="stylesheet" type="text/css" href="assets/tsr-ieSplash/tsr-ieSplash.css" />
-        <script type="text/javascript">
-          document.write("<div class='msie-7-splash'><div class='content'><h6>Your browser is to old!</h6><p> We recommend you to upgrade or use the tablet/phablet or mobile phone next to you.</p><a href='https://www.google.com/intl/en/chrome/browser/' class='ch browser' target='_blank'>Chrome</a><a href='http://www.mozilla.org/sv-SE/firefox/fx/' class='ff  browser' target='_blank'>Firefox</a><a href='http://www.apple.com/safari/' class='sa browser' target='_blank'>Safari</a><a href='http://windows.microsoft.com/sv-SE/internet-explorer/download-ie' class='ex browser' target='_blank'>Explorer</a></div></div>");    
-        </script>
-
-<![endif]-->
-<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+<script src='assets/js/vendor/modernizr.js'></script>
         <!-- less than ie9 -->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
 
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <script type="text/javascript" scr="assets/js/vendor/css3-mediaqueries.min.js"></script>
+      <script src='assets/js/vendor/html5.js'></script>
+      <script src="assets/js/vendor/respond.min.js"></script>
+      <script type="text/javascript" scr="assets/js/vendor/css3-mediaqueries.min.js"></script>
         <![endif]-->
         <!-- / end -->
+
 
 <meta property="og:title" content="Title" />
 <meta property="og:type" content="website" />
@@ -106,61 +99,6 @@
 </head>
 
 <body> 
-  <div class="alert full-size flyover alert-success" id="success1">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Taasta nimekiri
-            </a>
-        </div>
-        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Asi on edukalt ostukorvi pandud</span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Mine ostukorvi
-            </a>
-        </div>
-        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert1">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <strong>Sisselogimine ebaonnestus</strong>
-            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
-            <a class="read-more" href="#">Proovi uuesti</a>
-        </div>
-        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert2">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
-            <a class="read-more first" href="#">Katkesta </a> 
-            <a class="read-more second" href="#">Kustuta</a>
-        </div>
-<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
-    </div>
-</div>
-
-<!-- <div class="temporary" style="margin-top: 100px;">
-    <button id="infobtn" class="btn btn-info">Info</button>
-    <button id="successbtn" class="btn btn-success">Success</button>
-    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
-</div> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -414,9 +352,9 @@
                   </ul>
                 </div>
                 <div class="container reset-padding">
-                  <ul class="row hidden-xs list-unstyled">
-                    <li class="col-md-12"><div class="close-up-btn-bar"></div></li>
-                  </ul>
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
                 </div>
               </div>
             </li>
@@ -1103,18 +1041,14 @@
     </aside>
 </footer>
 
-<!-- HTML5 IE Enabling Script -->
-<!--[if lt IE 9]><script src='assets/js/vendor/html5.js'></script><![endif]-->
-    <script src="assets/js/vendor/jquery-1.9.0.min.js"></script> 
-    <script src="assets/js/vendor/common.js"></script> 
-    <script src="assets/js/vendor/paintbrush.js"></script> 
-    <script src="assets/js/vendor/bigtext.js"></script> 
-    <script src="assets/js/vendor/enquire.min.js"></script> 
+    <script src="assets/js/vendor/jquery.js"></script> 
+<!--     // <script src="assets/js/vendor/common.js"></script>  -->
+<!--     // <script src="assets/js/vendor/paintbrush.js"></script>  -->
+<!--     // <script src="assets/js/vendor/enquire.min.js"></script>  -->
     <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
 <!--     // <script src="assets/js/vendor/matchMedia.js"></script> 
     // <script src="assets/js/vendor/matchMedia.addListener .js"></script>  -->
 
-    
 
 <script src='assets/js/rapid.js'></script>
 <!-- General handlebars -->

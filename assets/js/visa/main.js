@@ -3,7 +3,6 @@ var reCallFuncs = [];
 
     'use strict';
     function main() {
-        console.log('main js');
 
         scrollPageTop();
         createCustomElement(['header','footer']);

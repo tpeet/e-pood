@@ -12527,7 +12527,7 @@ header .megamenu .search-item-image,
   color: #fff; }
 
 .ie8 div {
-  background: red; }
+  border: 2px solid yellow; }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }

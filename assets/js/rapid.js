@@ -1,8 +1,5 @@
-/* @include modernizr */
-
 // GENERAL
 /* @include jquery.debouncing */
-/* @include srcset.min */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
 
