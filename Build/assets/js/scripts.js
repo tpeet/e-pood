@@ -8,10 +8,7 @@ if (!Modernizr.svg) {
 }
 
   // CALL FRONTPAGE MORE
-  $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
-
-  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
-
+ 
 // COLLAPSE TABS
 // https://github.com/okendoken/bootstrap-tabcollapse
   $('#TabsResponsive').tabCollapse();

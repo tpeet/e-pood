@@ -31,6 +31,7 @@ section.tsr-section-productlist  {
     // }
   }
     .tsr-product-image {
+      float: left;
       margin-left: 5px;
       @include media-min($screen-sm) {
       margin-left: auto;
@@ -45,7 +46,9 @@ section.tsr-section-productlist  {
     .tsr-product-content {
       width: 100%;
       padding: 0 2%;
-
+      @include media-min($screen-sm) {
+      width: 66%;
+      }
     }
     .tsr-product-header {
       font-size: 110%;

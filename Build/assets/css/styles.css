@@ -11225,6 +11225,9 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
 section.tsr-section-productAndService-listing {
   padding: 0;
   margin-top: -1px; }
+  section.tsr-section-productAndService-listing .product {
+    margin-right: -15px;
+    margin-left: -15px; }
   section.tsr-section-productAndService-listing .ee-compare {
     margin: 15px auto;
     display: block; }
@@ -11545,6 +11548,7 @@ section.tsr-section-productlist .tsr-module-product {
       width: 3.13333em;
       height: 3.13333em; }
   section.tsr-section-productlist .tsr-module-product .tsr-product-image {
+    float: left;
     margin-left: 5px; }
     @media (min-width: 768px) {
       section.tsr-section-productlist .tsr-module-product .tsr-product-image {
@@ -11557,6 +11561,9 @@ section.tsr-section-productlist .tsr-module-product {
   section.tsr-section-productlist .tsr-module-product .tsr-product-content {
     width: 100%;
     padding: 0 2%; }
+    @media (min-width: 768px) {
+      section.tsr-section-productlist .tsr-module-product .tsr-product-content {
+        width: 66%; } }
   section.tsr-section-productlist .tsr-module-product .tsr-product-header {
     font-size: 110%;
     line-height: 1.1; }

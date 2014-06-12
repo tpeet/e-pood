@@ -978,6 +978,11 @@
         $(this).parents().next('.js-togglable').slideToggle('slow');
         e.preventDefault();
       });
+
+       $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
      });
 
 
