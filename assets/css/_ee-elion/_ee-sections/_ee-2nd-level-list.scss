@@ -3,6 +3,7 @@ section.tsr-section-productlist  {
   .tsr-module-product {
     text-align: left;
     padding: em(15) em(5) em(20) em(5);
+    width: 100%;
   .ee-flash-sm {
     position: relative;
     float: left;
@@ -44,9 +45,7 @@ section.tsr-section-productlist  {
     .tsr-product-content {
       width: 100%;
       padding: 0 2%;
-      @include media-min($screen-sm) {
-      width: 66%;
-      }
+
     }
     .tsr-product-header {
       font-size: 110%;

@@ -3118,7 +3118,7 @@ input[type="button"].btn-block {
   width: 200px;
   background-color: #652d86; }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .carousel-control .glyphicons-chevron-left,
   .carousel-control .glyphicons-chevron-right,
   .carousel-control .icon-prev,
@@ -3530,7 +3530,7 @@ section.content {
     display: table-cell;
     width: 1%;
     float: none; }
-    @media (max-width: 480) {
+    @media (max-width: 768px) {
       .justified > li {
         width: 100%;
         display: table-row; } }

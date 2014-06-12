@@ -36,7 +36,7 @@ html[xmlns] .slides {display: block;}
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
-.no-js .slides > li:first-child {display: block;}
+/*.no-js .slides > li:first-child {display: block;}*/
 
 /* FlexSlider Default Theme
 *********************************/
@@ -77,7 +77,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
-@media screen and (max-width: 860px) {
+@media (max-width: 768px) {
   .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
   .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
 }

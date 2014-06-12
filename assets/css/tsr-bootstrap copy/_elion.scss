@@ -55,7 +55,7 @@ section.content { padding: 0;
     display: table-cell;
     width: 1%;
     float: none;
-    @media (max-width: $screen-xxs-max) {
+    @media (max-width: $screen-sm) {
       width:100%;
       display: table-row;
     }

@@ -180,6 +180,7 @@ $module: tsr-module-promotion;
 
 		.tsr-count-4 &{
 			width:50%;
+
 		}
 
 		.tsr-count-3 &{
@@ -200,7 +201,7 @@ $module: tsr-module-promotion;
     @include media-min(940px) {
     	
 		.tsr-count-6 &{
-			width:33;
+			width:33%;
 		}
 
 		.tsr-count-5 &{
@@ -214,15 +215,6 @@ $module: tsr-module-promotion;
 
 	} // media 940 END
 
-
-    @include media-min(1441px) {
-    	
-		.tsr-count-6 &{
-			width:16.6%;
-		}
-
-
-	} // media 1441 END
 
 
 

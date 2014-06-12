@@ -12,35 +12,20 @@ module.exports = function (grunt) {
                 files: ['build/assets/css/styles.css'],
                 tasks: ['autoprefixer']
             }
+        },
+        cmq: {
+          options: {
+            log: true
+          },
+          your_target: {
+            files: {
+              'output': ['build/assets/css/styles.css']
+            }
+          }
         }
     });
-    grunt.initConfig({
-      responsive_images: {
-        options: {
-          sizes: [{
-            name: "small",
-              width: 58
-            },{
-            name: "medium",
-              width: 150
-            },{
-              name: "large",
-              width: 400
-            }]
-        },
-    dev: {
-      files: [{
-        expand: true,
-        src: ['assets/img/products/*.{jpg,gif,png}']
-
-      }]
-    }
-      },
-    });
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-handlebars');
-    grunt.loadNpmTasks('grunt-responsive-images');
-    grunt.registerTask('default', ['responsive_images']);
-
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-combine-media-queries');
+    grunt.registerTask('default', 'cmq');
 };

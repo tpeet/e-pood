@@ -25,7 +25,7 @@ header {
         }
       }
 
-      @media (max-width: $screen-md-min) {
+      @media (max-width: $screen-md) {
         &.collapsibleMainMenu-Search {
           > .form-horizontal {
             padding: 20px 12px 20px 12px;

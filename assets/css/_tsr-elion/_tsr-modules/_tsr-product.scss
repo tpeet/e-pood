@@ -19,14 +19,13 @@ PRODUCT
 
 //////// Module class name
 
-$module: tsr-module-product;
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* PRODUCT */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.#{$module}{
+.tsr-module-product{
 
 //////// Base styles 
 	background:$lightgrey-c;
@@ -57,22 +56,7 @@ $module: tsr-module-product;
 		margin:5px 0 16px;
 	}
 
-	// ul{
-	// 	margin:0;
-	// 	padding:0; 
-	// 	display:inline-block; 
-	// 	margin:0 auto;
-	// }
 
-	// li{
-	// 	list-style-type:none;
-	// 	display:block;
-	// 	height:15px;
-	// 	width:15px;
-	// 	float:left;
-	// 	margin:0 5px;
-	// 	@include border-radius(15px);
-	// }
 
 	.tsr-product-image{
 		display:none;
@@ -84,9 +68,7 @@ $module: tsr-module-product;
 
 	}
 
-	// .tsr-product-colors{
-	// 	margin-left:-5px;
-	// }
+
 
 	.tsr-product-desc{
 		margin:12px 0 0px;
@@ -158,7 +140,7 @@ $module: tsr-module-product;
 
 
 
-    @include media-min(320px) {
+    @include media-min($screen-sm) {
 
 		padding:16px 30px 24px;
 
@@ -195,21 +177,15 @@ $module: tsr-module-product;
 
 
 
-    @include media-min(600px) {
-
-    	width:50%;
-    	float:left;
-
-	} // min 600px
 
 
 
-    @include media-min(768px) {
+
+    @include media-min($screen-md) {
 
     	padding:35px 20px 35px 20px;
     	text-align:center;
-    	width:33%;
-    	float:left;
+
     	
 		// Tactical 
 		.tsr-tactical-ribbon{
@@ -331,33 +307,7 @@ $module: tsr-module-product;
 
 
 
-    @include media-min(940px) {
 
-    	width:25%;
-
-    	.tsr-tactical-flash{
-			right:20px;
-		}
-
-		//////// Other then phone
-
-		&.tsr-product-other{
-
-			.tsr-tactical-flash{
-				right:24px;
-			}
-
-		} // tsr-tactical-other END
-
-
-	} // min 940px
-
-
-    @include media-min(1441px) {
-
-    	width:241px;
-
-	} // min 1441px
 
 
 

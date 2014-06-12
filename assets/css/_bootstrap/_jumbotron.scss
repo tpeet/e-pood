@@ -27,7 +27,7 @@
     max-width: 100%;
   }
 
-  @media screen and (min-width: $screen-sm-min) {
+  @media(min-width: $screen-sm-min) {
     padding-top:    ($jumbotron-padding * 1.6);
     padding-bottom: ($jumbotron-padding * 1.6);
 
