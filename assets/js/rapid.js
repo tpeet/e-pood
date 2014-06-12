@@ -1,4 +1,5 @@
 // GENERAL
+/* @include modernizr */
 /* @include jquery.debouncing */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */

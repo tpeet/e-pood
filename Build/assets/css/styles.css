@@ -11548,7 +11548,6 @@ section.tsr-section-productlist .tsr-module-product {
       width: 3.13333em;
       height: 3.13333em; }
   section.tsr-section-productlist .tsr-module-product .tsr-product-image {
-    float: left;
     margin-left: 5px; }
     @media (min-width: 768px) {
       section.tsr-section-productlist .tsr-module-product .tsr-product-image {

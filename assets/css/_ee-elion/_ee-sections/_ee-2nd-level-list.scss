@@ -31,7 +31,6 @@ section.tsr-section-productlist  {
     // }
   }
     .tsr-product-image {
-      float: left;
       margin-left: 5px;
       @include media-min($screen-sm) {
       margin-left: auto;
