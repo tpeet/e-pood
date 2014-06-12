@@ -40,12 +40,6 @@ PRODUCT
 	color:#333333;
 	position:relative;
 
-
-////// Tactical 
-	// .tsr-tactical-ribbon{
-	// 	display:none;
-	// }
-
 	.tsr-tactical-flash{
 		display:none;
 	}
@@ -57,17 +51,25 @@ PRODUCT
 	}
 
 
+    	.tsr-product-image{
+    		display:block;
+    		width:90px;
+    		height: auto;
+    		float:left;
 
-	.tsr-product-image{
-		display:none;
-
-		img{
+    img{
 			width:100%;
 			height:auto;
 		}
 
-	}
+		}
 
+		.tsr-product-content{
+			padding-left: 88px;
+
+
+
+	}
 
 
 	.tsr-product-desc{
@@ -132,54 +134,6 @@ PRODUCT
 		} 
 
 	} // .touch END	
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-// RWD 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-    @include media-min($screen-sm) {
-
-		padding:16px 30px 24px;
-
-    	.tsr-product-image{
-    		display:block;
-    		width:58px;
-    		height:96px;
-    		float:left;
-		}
-
-		.tsr-product-content{
-			padding-left:88px;
-		}
-
-
-		//////// Other then phone
-
-		&.tsr-product-other{
-			padding:16px 20px 20px 10px;
-		
-	    	.tsr-product-image{
-	    		width:88px;
-	    		height:65px;
-			}
-
-			.tsr-product-content{
-				padding-left:98px;
-			}
-
-		}
-
-	} // min 320px
-
-
-
-
-
-
-
 
     @include media-min($screen-md) {
 

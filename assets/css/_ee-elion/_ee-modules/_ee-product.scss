@@ -10,6 +10,27 @@ section.tsr-section-productAndService-listing {
     margin: 15px auto;
     display: block;
   }
+
+    .tsr-product-image {
+    position: relative;
+    height: auto;
+    width: 110px;
+    max-width: 25%;
+    display: inline-block;
+    float: none;
+    margin-right: 5px;
+    @include media-min($screen-sm) {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      padding: 0 em(20);
+    } 
+    .dropdown-menu img {
+    width: auto;
+    }
+  }
+
+
 }
 
 .tsr-section-divider {
@@ -182,24 +203,6 @@ section.tsr-section-productAndService-listing {
     -moz-transition: background 0.3s ease-in-out;
     -o-transition: background 0.3s ease-in-out;
     transition: background 0.3s ease-in-out;
-  }
-  .tsr-product-image {
-    position: relative;
-    height: auto;
-    width: 110px;
-    max-width: 25%;
-    display: inline-block;
-    float: none;
-    margin-right: 5px;
-    @include media-min($screen-sm) {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      padding: 0 em(20);
-    } 
-    .dropdown-menu img {
-    width: auto;
-    }
   }
 
 
