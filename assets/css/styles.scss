@@ -1,4 +1,4 @@
-
+ 
 // VARIABLES AND MIXINS 
 //**********************************
 /* @include tsr-bootstrap/_variables.scss */
@@ -103,8 +103,9 @@
 }
 
 .ie8 {
-  div {
-    border: 2px solid yellow;
+  .tsr-module-product .tsr-tactical-ribbon:before, 
+  .tsr-module-product .tsr-tactical-ribbon:after {
+    background: transparent;
   }
 }
 

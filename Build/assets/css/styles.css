@@ -12496,8 +12496,9 @@ header .megamenu .search-item-image,
 .navbar-default .user-menu.navbar-nav > li > a:active {
   color: #fff; }
 
-.ie8 div {
-  border: 2px solid yellow; }
+.ie8 .tsr-module-product .tsr-tactical-ribbon:before,
+.ie8 .tsr-module-product .tsr-tactical-ribbon:after {
+  background: transparent; }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }

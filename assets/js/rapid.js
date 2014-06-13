@@ -1,5 +1,6 @@
 // GENERAL
 /* @include modernizr */
+/* @include trmix.min.js */
 /* @include jquery.debouncing */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
