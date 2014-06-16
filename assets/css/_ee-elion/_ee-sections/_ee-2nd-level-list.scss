@@ -46,10 +46,10 @@ section.tsr-section-productlist  {
       width: 100%;
       padding: 0 2%;
       @include media-min($screen-sm) {
-      width: 66%;
+      width: 65%;
       }
       @include media-min($screen-md) {
-      width: 79%;
+      width: 75%;
       }
     }
     .tsr-product-header {
