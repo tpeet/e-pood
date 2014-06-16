@@ -107,7 +107,17 @@
   .tsr-module-product .tsr-tactical-ribbon:after {
     background: transparent;
   }
+  .tsr-module-product .tsr-tactical-ribbon {
+  left: 0;
+  right: 0;
+  top: 10px;
+  }
+  .flashText-ribbon-container {
+    @include rotate(0);
+  }
 }
+
+
 
 .ie9 {
   .tsr-tactical-flash {
@@ -129,21 +139,10 @@
     right: 15px;
   }
 
-// suggested hack - does it do anything?
-    .container
-  {
-      display:table;
-      width: 100%;
+  body {
+    font-family: Arial, sans-serif;
   }
-  .row
-  {
-      height: 100%;
-      display: table-row;
-  }
-  .col-sm-4
-  {
-      display: table-cell;
-  }
+
 }
  
 // http://pauginer.tumblr.com/post/36614680636/invisible-gradient-technique
