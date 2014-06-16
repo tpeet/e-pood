@@ -147,7 +147,7 @@ FORMS
     cursor: pointer;
     position: relative; }
     .tsr-forms .tsr-radio:before {
-      font-family: 'ts-icons-all';
+      font-family: 'tsr-icons-all';
       content: "\e666";
       width: 20px;
       height: 20px;
@@ -159,7 +159,7 @@ FORMS
       display: block;
       color: #dbdbdb; }
     .tsr-forms .tsr-radio:after {
-      font-family: 'ts-icons-all';
+      font-family: 'tsr-icons-all';
       content: "\e666";
       width: 18px;
       height: 18px;
@@ -184,7 +184,7 @@ FORMS
       outline: none; }
     .tsr-forms .tsr-radio.checked .tsr-radioStyled:before,
     .tsr-forms .tsr-radio.checked .tsr-radioStyled:active:before {
-      font-family: 'ts-icons-all';
+      font-family: 'tsr-icons-all';
       content: "\e666";
       width: 10px;
       height: 10px;
@@ -756,7 +756,7 @@ TACTICAL ELEMENTS
     width: 87px;
     height: 87px; }
     .ie8 .tsr-tactical-flash:before {
-      font-family: 'ts-icons-all';
+      font-family: 'tsr-icons-all';
       color: #00b48c;
       content: "\e667";
       font-size: 87px;
@@ -1131,7 +1131,7 @@ CAROUSEL LISTING
     transition: all .3s ease; }
   .tsr-section-carousel-listing .tsr-direction-nav a:after,
   .tsr-carousel-listing-div .tsr-direction-nav a:after {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     font-size: 113px;
     line-height: 1;
     position: absolute;
@@ -1164,7 +1164,7 @@ CAROUSEL LISTING
     cursor: default; }
   .tsr-section-carousel-listing .tsr-direction-nav a:before,
   .tsr-carousel-listing-div .tsr-direction-nav a:before {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     font-size: 25px;
     display: inline-block;
     content: '\e66a';
@@ -1186,7 +1186,7 @@ CAROUSEL LISTING
     display: inline-block; }
   .tsr-section-carousel-listing .tsr-control-paging li a,
   .tsr-carousel-listing-div .tsr-control-paging li a {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     position: relative;
     width: 11px;
     height: 11px;
@@ -1434,7 +1434,7 @@ Communication Primary
     -moz-transition: all .3s ease;
     transition: all .3s ease; }
   .tsr-section-communictaion-primary .tsr-direction-nav a:after {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     font-size: 71px;
     line-height: 1;
     position: absolute;
@@ -1461,7 +1461,7 @@ Communication Primary
     filter: alpha(opacity=0);
     cursor: default; }
   .tsr-section-communictaion-primary .tsr-direction-nav a:before {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     font-size: 25px;
     display: inline-block;
     content: '\e66a';
@@ -1479,7 +1479,7 @@ Communication Primary
     margin: 0 6px;
     display: inline-block; }
   .tsr-section-communictaion-primary .tsr-control-paging li a {
-    font-family: "TS-Icons-all";
+    font-family: "tsr-icons-all";
     position: relative;
     width: 11px;
     height: 11px;
@@ -7417,6 +7417,9 @@ var, .price {
 
 .icon-check-ok-ring:before {
   content: "\e700"; }
+
+.icon-leasing:before {
+  content: "\e66f"; }
 
 .badge {
   display: inline-block;

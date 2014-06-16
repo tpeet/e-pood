@@ -289,7 +289,7 @@ $module: tsr-forms;
 			position:relative;
 
 			&:before{
-				font-family: 'ts-icons-all';
+				font-family: 'tsr-icons-all';
 				content: "\e666";
 				width:20px;
 				height:20px;
@@ -303,7 +303,7 @@ $module: tsr-forms;
 			}
 
 			&:after{
-				font-family: 'ts-icons-all';
+				font-family: 'tsr-icons-all';
 				content: "\e666";
 				width:18px;
 				height:18px;
@@ -349,7 +349,7 @@ $module: tsr-forms;
 				.tsr-radioStyled,
 				.tsr-radioStyled:active{
 					&:before{
-						font-family: 'ts-icons-all';
+						font-family: 'tsr-icons-all';
 						content: "\e666";
 						width: 10px;
 						height: 10px;

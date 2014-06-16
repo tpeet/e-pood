@@ -161,7 +161,7 @@ a:hover{
 	}
 
 	.tsr-direction-nav a:after {
- 		font-family: "TS-Icons-all";
+ 		font-family: "tsr-icons-all";
  		font-size: 71px; 
  		line-height:1; 
  		position:absolute; 
@@ -186,7 +186,7 @@ a:hover{
 	.tsr-direction-nav .tsr-next { right: -60px; text-align: left; }
 
 	.tsr-direction-nav .tsr-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-	.tsr-direction-nav a:before  { font-family: "TS-Icons-all"; font-size: 25px; display: inline-block; content: '\e66a'; padding:0 6px; position:relative; z-index:20; }
+	.tsr-direction-nav a:before  { font-family: "tsr-icons-all"; font-size: 25px; display: inline-block; content: '\e66a'; padding:0 6px; position:relative; z-index:20; }
 	.tsr-direction-nav a.tsr-next:before  { content: '\e668'; }
 
 
@@ -194,7 +194,7 @@ a:hover{
 
 	.tsr-control-nav {width: 100%; position: absolute; bottom: 19px; text-align: center;}
 	.tsr-control-nav li {margin: 0 6px; display: inline-block;}
-	.tsr-control-paging li a {font-family: "TS-Icons-all"; position:relative; width: 11px; height: 11px; display: block; color: $lightgrey-t;text-indent: -9999px;  cursor: pointer; }
+	.tsr-control-paging li a {font-family: "tsr-icons-all"; position:relative; width: 11px; height: 11px; display: block; color: $lightgrey-t;text-indent: -9999px;  cursor: pointer; }
 	.tsr-control-paging li a:before{font-size: 11px; line-height:1; position:absolute; top:0; left:0;text-indent:0; display: inline-block; content: '\e666';} 
 	.tsr-control-paging li a:hover { color: $darkgrey-h;}
 	.tsr-control-paging li a.tsr-active { color: $purple-c; cursor: default; }
