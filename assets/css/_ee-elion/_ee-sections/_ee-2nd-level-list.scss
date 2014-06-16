@@ -32,9 +32,8 @@ section.tsr-section-productlist  {
   }
     .tsr-product-image {
       margin-left: 5px;
-      float: left;
+      display: inline-block;
       @include media-min($screen-sm) {
-      margin: auto auto 10px auto;
       font-size: 150%;
       width: 25%;
       padding: 0 em(20) 0 em(10);

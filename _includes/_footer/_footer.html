@@ -146,7 +146,38 @@
 
      });
 
+// Alerts logic
+   $('#alertbtn').click(function() {
+      if ( !$('#alert1').is( '.in' ) ) {
+         $('#alert1').addClass('in');
+      }
+   });
 
+    $('#alertbtn2').click(function() {
+      if ( !$('#alert2').is( '.in' ) ) { 
+         $('#alert2').addClass('in');
+      }
+   });
+
+   $('#successbtn').click(function() {
+      if ( !$('#success1').is( '.in' ) ) {
+         $('#success1').addClass('in');
+
+         setTimeout(function() {
+            $('#success1').removeClass('in');
+         }, 3200);
+      }
+   });
+
+   $('#infobtn').click(function() {
+      if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+         $('#your-uniq-ID-123').addClass('in');
+
+         setTimeout(function() {
+            $('#your-uniq-ID-123').removeClass('in');
+         }, 4800);
+      }
+   });
 
       // DETAIL POPOVER
       $('[data-toggle="popover"]').popover();

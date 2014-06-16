@@ -10,7 +10,7 @@
 <title>Title</title>
 
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
   <meta http-equiv="Content-Language" content="en">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -275,7 +275,7 @@
     <!-- menu for small screen -->
     <div class="navbar-header">
 
-      <a class="current navbar-brand"  href="index.html"><img src="assets/img/branding/elion-logo.svg" onerror="this.onerror=null; this.src='assets/img/branding/elion-logo.png'"/></a>
+      <a class="current navbar-brand"  href="index.html"></a> 
 
       <div class="pull-right">
         <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
@@ -985,7 +985,38 @@
 
      });
 
+// Alerts logic
+   $('#alertbtn').click(function() {
+      if ( !$('#alert1').is( '.in' ) ) {
+         $('#alert1').addClass('in');
+      }
+   });
 
+    $('#alertbtn2').click(function() {
+      if ( !$('#alert2').is( '.in' ) ) { 
+         $('#alert2').addClass('in');
+      }
+   });
+
+   $('#successbtn').click(function() {
+      if ( !$('#success1').is( '.in' ) ) {
+         $('#success1').addClass('in');
+
+         setTimeout(function() {
+            $('#success1').removeClass('in');
+         }, 3200);
+      }
+   });
+
+   $('#infobtn').click(function() {
+      if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+         $('#your-uniq-ID-123').addClass('in');
+
+         setTimeout(function() {
+            $('#your-uniq-ID-123').removeClass('in');
+         }, 4800);
+      }
+   });
 
       // DETAIL POPOVER
       $('[data-toggle="popover"]').popover();

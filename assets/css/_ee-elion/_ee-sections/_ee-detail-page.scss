@@ -16,6 +16,9 @@ section.ee-product-detail {
     @include media-min($screen-md) {
       min-height: 550px;
     }
+    @include media-min($screen-lg) {
+      min-height: 600px;
+    }
   }
 
 
