@@ -18,16 +18,20 @@
   }
 }
 
-  .tsr-tactical-flash:first-of-type {
+  .tsr-tactical-flash:first-of-type,
+  .tsr-tactical-flash:first-child,
+   {
     top: 50px;
     z-index: 2;
   }
-  .tsr-tactical-flash:nth-of-type(2) {
+  .tsr-tactical-flash:nth-of-type(2),
+  .tsr-tactical-flash:first-child + .tsr-tactical-flash {
     top: 115px;
     z-index: 3;
   }
 
-  .tsr-tactical-flash:nth-of-type(3) {
+  .tsr-tactical-flash:nth-of-type(3),
+  .tsr-tactical-flash:first-child + .tsr-tactical-flash + .tsr-tactical-flash {
     top: 165px;
     z-index: 5;
   }

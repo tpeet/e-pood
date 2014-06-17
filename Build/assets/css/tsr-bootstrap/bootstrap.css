@@ -3498,7 +3498,7 @@ section.content {
 #browserAlert {
   display: none; }
 
-.lt-ie8 #browserAlert {
+.ie8 #browserAlert {
   display: block; }
 
 .btn-close {
