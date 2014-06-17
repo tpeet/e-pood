@@ -11287,7 +11287,8 @@ section.tsr-section-productlist .tsr-module-product {
   .ee-tab-to-accordion .panel-title a.collapsed:after {
     content: "\e6de";
     float: right;
-    line-height: 0.85; }
+    line-height: 0.85;
+    font-size: 26px; }
   .ee-accordion .panel-title a:after,
   .ee-tab-to-accordion .panel-title a:after {
     content: "\e6e3";
