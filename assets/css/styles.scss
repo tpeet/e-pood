@@ -168,11 +168,9 @@
   display: block;
   width: 180px;
   height: 80px;
-  background: transparent url('../img/elion-logo.png') center center no-repeat;
-
-  background-image: -webkit-linear-gradient(transparent, transparent), url('../img/elion-logo.svg');
-
-  background-image: linear-gradient(transparent, transparent), url('../img/elion-logo.svg');
+  background: transparent url(../images/elion-logo.png) center center no-repeat;
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../fonts/elion-logo.svg);
+  background-image: linear-gradient(transparent, transparent), url(../fonts/elion-logo.svg); 
 }
 
 

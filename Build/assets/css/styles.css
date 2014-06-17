@@ -12127,6 +12127,20 @@ header .megamenu .search-item-image,
   -ms-transform: rotate(0);
   transform: rotate(0); }
 
+.flashText-ribbon-inner {
+  display: block;
+  width: 60px; }
+
+.flashText-ribbon-inner .ee-big {
+  display: block;
+  width: 60px;
+  margin-left: 18%; }
+
+.ie8 .ee-flashtext-container {
+  position: absolute;
+  top: 25px;
+  left: 15px; }
+
 .ie8 #browserAlert {
   display: block; }
 
@@ -12150,8 +12164,8 @@ header .megamenu .search-item-image,
   width: 180px;
   height: 80px;
   background: transparent url(../img/branding/elion-logo.png) center center no-repeat;
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
-  background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg); }
+   background-image: -webkit-linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg);
+   background-image: linear-gradient(transparent, transparent), url(../img/branding/elion-logo.svg); }
 
 .ee-thinline-bottom {
   margin-bottom: -1px; }
