@@ -204,7 +204,7 @@ FORMS
 }
 
 .tsr-forms .tsr-radio:before {
-	font-family: 'ts-icons-all';
+	font-family: 'tsr-icons-all';
 	content: "\e666";
 	width: 20px;
 	height: 20px;
@@ -218,7 +218,7 @@ FORMS
 }
 
 .tsr-forms .tsr-radio:after {
-	font-family: 'ts-icons-all';
+	font-family: 'tsr-icons-all';
 	content: "\e666";
 	width: 18px;
 	height: 18px;
@@ -252,7 +252,7 @@ FORMS
 
 .tsr-forms .tsr-radio.checked .tsr-radioStyled:before,
 .tsr-forms .tsr-radio.checked .tsr-radioStyled:active:before {
-	font-family: 'ts-icons-all';
+	font-family: 'tsr-icons-all';
 	content: "\e666";
 	width: 10px;
 	height: 10px;
@@ -1067,7 +1067,7 @@ TACTICAL ELEMENTS
 }
 
 .ie8 .tsr-tactical-flash:before {
-	font-family: 'ts-icons-all';
+	font-family: 'tsr-icons-all';
 	color: #00b48c;
 	content: "\e667";
 	font-size: 87px;
@@ -1506,7 +1506,7 @@ CAROUSEL LISTING
 
 .tsr-section-carousel-listing .tsr-direction-nav a:after,
 .tsr-carousel-listing-div .tsr-direction-nav a:after {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	font-size: 113px;
 	line-height: 1;
 	position: absolute;
@@ -1549,7 +1549,7 @@ CAROUSEL LISTING
 
 .tsr-section-carousel-listing .tsr-direction-nav a:before,
 .tsr-carousel-listing-div .tsr-direction-nav a:before {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	font-size: 25px;
 	display: inline-block;
 	content: '\e66a';
@@ -1579,7 +1579,7 @@ CAROUSEL LISTING
 
 .tsr-section-carousel-listing .tsr-control-paging li a,
 .tsr-carousel-listing-div .tsr-control-paging li a {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	position: relative;
 	width: 11px;
 	height: 11px;
@@ -1858,7 +1858,7 @@ Communication Primary
 }
 
 .tsr-section-communictaion-primary .tsr-direction-nav a:after {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	font-size: 71px;
 	line-height: 1;
 	position: absolute;
@@ -1895,7 +1895,7 @@ Communication Primary
 }
 
 .tsr-section-communictaion-primary .tsr-direction-nav a:before {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	font-size: 25px;
 	display: inline-block;
 	content: '\e66a';
@@ -1921,7 +1921,7 @@ Communication Primary
 }
 
 .tsr-section-communictaion-primary .tsr-control-paging li a {
-	font-family: "TS-Icons-all";
+	font-family: "tsr-icons-all";
 	position: relative;
 	width: 11px;
 	height: 11px;
@@ -9011,6 +9011,10 @@ var abbr[title="EUR"],
 	content: "\e700";
 }
 
+.icon-leasing:before {
+	content: "\e66f";
+}
+
 .badge {
 	display: inline-block;
 	min-width: 10px;
@@ -11566,6 +11570,8 @@ body {
 	height: 24px;
 	line-height: 24px;
 	bottom: -12px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .ee-badge,
@@ -11960,6 +11966,10 @@ section.tsr-section-productAndService-listing .ee-compare {
 	display: block;
 }
 
+section.tsr-section-productAndService-listing .tsr-tactical-flash {
+	right: 20px;
+}
+
 section.tsr-section-productAndService-listing .tsr-product-image {
 	position: relative;
 	height: auto;
@@ -12341,7 +12351,7 @@ section.tsr-section-productlist .tsr-module-product .ee-flash-sm:before {
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-image {
 	margin-left: 5px;
-	float: left;
+	display: inline-block;
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-colors {
@@ -13279,6 +13289,18 @@ header .megamenu .search-item-image:after,
 	background: transparent;
 }
 
+.ie8 .tsr-module-product .tsr-tactical-ribbon {
+	left: 0;
+	right: 0;
+	top: 10px;
+}
+
+.ie8 .flashText-ribbon-container {
+	-webkit-transform: rotate(0);
+	-ms-transform: rotate(0);
+	transform: rotate(0);
+}
+
 .ie9 .tsr-tactical-flash {
 	position: absolute;
 }
@@ -13297,6 +13319,10 @@ header .megamenu .search-item-image:after,
 	top: 165px;
 	z-index: 5;
 	right: 15px;
+}
+
+.ie9 body {
+	font-family: Arial, sans-serif;
 }
 
 .navbar-default .navbar-brand {
@@ -13417,7 +13443,12 @@ header .megamenu .search-item-image:after,
 }
 
 .ee-flash-sm .ee-flashtext-container {
-	max-width: 40px;
+	max-width: 47px;
+	width: 47px;
+}
+
+.ee-flash-sm .ee-flashtext-container .ee-small {
+	font-size: 11px;
 }
 
 .flashText-ribbon {
@@ -14730,14 +14761,13 @@ section.tsr-section-productAndService-listing .tsr-product-image {
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-image {
-	margin: auto auto 10px auto;
 	font-size: 150%;
 	width: 25%;
 	padding: 0 1.33333em 0 0.66667em;
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-content {
-	width: 66%;
+	width: 65%;
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-header {
@@ -15625,7 +15655,7 @@ td.hidden-lg.hidden-sm {
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-content {
-	width: 79%;
+	width: 75%;
 }
 
 section.ee-product-detail .ee-comparebar.detail {
@@ -16401,6 +16431,10 @@ td.hidden-lg {
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
+}
+
+section.ee-product-detail .fixedheight {
+	min-height: 600px;
 }
 
 }

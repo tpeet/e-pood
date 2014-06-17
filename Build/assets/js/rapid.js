@@ -4147,7 +4147,7 @@ function reDrawVisual() {
         var closeAllOpenLayersResetContentMargin = function(){
             $('#collapsibleMainMenu-Pages .dropdown').removeClass('open');
             
-            console.log( $('.navbar:nth-child(2) a.navbar-toggle.active'), $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href'));
+            // console.log( $('.navbar:nth-child(2) a.navbar-toggle.active'), $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href'));
             var _selector = $('.navbar:nth-child(2) a.navbar-toggle.active').attr('href');
             if( _selector != '#collapsibleMainMenu-Pages') {
                 $(_selector).collapse('hide');
