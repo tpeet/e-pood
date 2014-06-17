@@ -112,12 +112,30 @@
   right: 0;
   top: 10px;
   }
-  .flashText-ribbon-container {
+  .tsr-tactical-ribbon > span{
     @include rotate(0);
   }
 }
 
+.flashText-ribbon-inner {
+  display: block;
+  width: 60px;
+}
 
+  .flashText-ribbon-inner .ee-big {
+    display: block;
+    width: 60px;
+    margin-left: 18%;
+  }
+.ie8 .ee-flashtext-container {
+ position: absolute;
+ top: 25px;
+ left: 15px;
+}
+
+.ie8 #browserAlert {
+  display: block;
+}
 
 .ie9 {
   .tsr-tactical-flash {

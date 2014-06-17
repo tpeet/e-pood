@@ -13298,10 +13298,14 @@ header .megamenu .search-item-image:after,
 	top: 10px;
 }
 
-.ie8 .flashText-ribbon-container {
+.ie8 .tsr-tactical-ribbon > span {
 	-webkit-transform: rotate(0);
 	-ms-transform: rotate(0);
 	transform: rotate(0);
+}
+
+.ie8 #browserAlert {
+	display: block;
 }
 
 .ie9 .tsr-tactical-flash {
