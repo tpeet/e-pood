@@ -96,6 +96,61 @@
 </head>
 
 <body> 
+<div class="alert full-size flyover alert-success" id="success1">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Taasta nimekiri
+            </a>
+        </div>
+        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
+    <div class="container">
+        <span class="icon icon-info"></span>
+        <div>
+            <span>Asi on edukalt ostukorvi pandud</span>
+            <a class="read-more" href="#">
+                <span class="icon icon-arrow-right"></span>Mine ostukorvi
+            </a>
+        </div>
+        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-warning flyover" id="alert1">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <strong>Sisselogimine ebaonnestus</strong>
+            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
+            <a class="read-more" href="#">Proovi uuesti</a>
+        </div>
+        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
+    </div>
+</div>
+
+<div class="alert full-size alert-warning flyover" id="alert2">
+    <div class="container">
+        <span class="icon icon-alert"></span>
+        <div>
+            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
+            <a class="read-more first" href="#">Katkesta </a> 
+            <a class="read-more second" href="#">Kustuta</a>
+        </div>
+<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
+    </div>
+</div>
+
+<!-- <div class="temporary" style="margin-top: 100px;">
+    <button id="infobtn" class="btn btn-info">Info</button>
+    <button id="successbtn" class="btn btn-success">Success</button>
+    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
+</div> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -853,7 +908,14 @@
 
       </figure>
 
-
+      <div class="visible-xs">
+        <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
+        <div class="ee-linkicons">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
+      </div>
 
 
 

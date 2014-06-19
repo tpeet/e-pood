@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.42857;
   color: #333333;
   background-color: white; }
@@ -46,7 +46,7 @@ a {
     outline-offset: -2px; }
   a small {
     letter-spacing: inherit;
-    line-height: 15px; }
+    line-height: 13px; }
 
 img {
   vertical-align: middle; }
@@ -77,8 +77,8 @@ img {
   border-radius: 50%; }
 
 hr {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 18px;
+  margin-bottom: 18px;
   border: 0;
   border-top: 1px solid #eeeeee; }
 
@@ -93,25 +93,25 @@ hr {
   border: 0; }
 
 p {
-  margin: 0 0 10.5px;
+  margin: 0 0 9px;
   /*letter-spacing: $letter-spacing-base;
   line-height: $line-height-base;*/ }
 
 .lead {
-  margin-bottom: 21px;
-  font-size: 17px;
+  margin-bottom: 18px;
+  font-size: 14px;
   font-weight: 200;
   line-height: 1.42857;
   letter-spacing: 0px; }
   @media (min-width: 768px) {
     .lead {
-      font-size: 22.5px; } }
+      font-size: 19.5px; } }
 
 small,
 .small {
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0px;
-  line-height: 15px; }
+  line-height: 13px; }
 
 cite {
   font-style: normal; }
@@ -199,8 +199,8 @@ h1, h2, h3, h4, h5, h6,
 h1,
 h2,
 h3 {
-  margin-top: 21px;
-  margin-bottom: 10.5px;
+  margin-top: 18px;
+  margin-bottom: 9px;
   font-weight: 600;
   letter-spacing: -1.5px; }
   h1 small,
@@ -214,8 +214,8 @@ h3 {
 h4,
 h5,
 h6 {
-  margin-top: 10.5px;
-  margin-bottom: 10.5px; }
+  margin-top: 9px;
+  margin-bottom: 9px; }
   h4 small,
   h4 .small,
   h5 small,
@@ -226,48 +226,48 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 42px;
-  line-height: 46px; }
+  font-size: 36px;
+  line-height: 43px; }
 
 h2,
 .h2 {
-  font-size: 32px;
-  line-height: 32.5px;
+  font-size: 27px;
+  line-height: 30px;
   letter-spacing: -1px; }
 
 h3,
 .h3 {
-  font-size: 22px;
-  line-height: 25px;
+  font-size: 19px;
+  line-height: 23.5px;
   letter-spacing: -0.3px; }
 
 h4,
 .h4 {
-  font-size: 22px;
-  line-height: 23px;
+  font-size: 19px;
+  line-height: 21.5px;
   letter-spacing: -0.2px; }
 
 h5,
 .h5 {
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 17px;
+  line-height: 21.5px;
   letter-spacing: -0.2px; }
 
 h6,
 .h6 {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 19px;
   letter-spacing: -0.2px; }
 
 .page-header {
-  padding-bottom: 9.5px;
-  margin: 42px 0 21px;
+  padding-bottom: 8px;
+  margin: 36px 0 18px;
   border-bottom: 1px solid #eeeeee; }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10.5px; }
+  margin-bottom: 9px; }
   ul ul,
   ul ol,
   ol ul,
@@ -279,7 +279,7 @@ ol {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  font-size: 12px;
+  font-size: 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\e6f1";
@@ -322,8 +322,8 @@ ol {
 .ts-list.list-large:before {
   content: ""; }
 .ts-list.list-large > li {
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 21px;
   letter-spacing: 0px; }
 
 .list-unstyled, .ts-list, .list-inline {
@@ -338,7 +338,7 @@ ol {
     padding-left: 0; }
 
 dl {
-  margin-bottom: 21px; }
+  margin-bottom: 18px; }
 
 dt,
 dd {
@@ -378,11 +378,11 @@ abbr.initialism {
   text-transform: uppercase; }
 
 blockquote {
-  padding: 10.5px 21px;
-  margin: 0 0 21px;
+  padding: 9px 18px;
+  margin: 0 0 18px;
   border-left: 5px solid #eeeeee; }
   blockquote p {
-    font-size: 18.75px;
+    font-size: 16.25px;
     font-weight: 300;
     line-height: 1.25; }
   blockquote p:last-child {
@@ -414,7 +414,7 @@ blockquote:after {
   content: ""; }
 
 address {
-  margin-bottom: 21px;
+  margin-bottom: 18px;
   font-style: normal;
   line-height: 1.42857; }
 
@@ -1261,7 +1261,7 @@ th {
 
 .table {
   width: 100%;
-  margin-bottom: 21px; }
+  margin-bottom: 18px; }
   .table > thead > tr > th,
   .table > thead > tr > td,
   .table > tbody > tr > th,
@@ -1711,7 +1711,7 @@ table th[class*="col-"] {
 @media (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 15.75px;
+    margin-bottom: 13.5px;
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1757,7 +1757,7 @@ input[type="text"], input[type="password"], input[type="search"] {
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
   color: #6c6c6c;
-  font-size: 16px;
+  font-size: 14px;
   height: 35px;
   line-height: 1.42857;
   padding: 6px 12px;
@@ -1869,7 +1869,7 @@ textarea {
   border-bottom: 4px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.42857;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -2078,14 +2078,14 @@ textarea {
 
 .btn-lg {
   padding: 10px 16px;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 1.33;
   border-radius: 6px; }
 
 .btn-sm,
 .btn-xs {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2195,7 +2195,7 @@ input[type="button"].btn-block {
       }*/ }
       .navbar-default .navbar-nav > li > a {
         color: #652d86;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: normal;
         letter-spacing: -1px;
         line-height: 27px;
@@ -2290,7 +2290,7 @@ input[type="button"].btn-block {
         .navbar-default .navbar-collapse .dropdown-toggle {
           padding: 0;
           color: white;
-          font-size: 15px;
+          font-size: 13px;
           padding: 10px 15px;
           border-bottom: 1px solid #4f2369; }
           .navbar-default .navbar-collapse .dropdown-toggle:hover:before, .navbar-default .navbar-collapse .dropdown-toggle:after {
@@ -2300,7 +2300,7 @@ input[type="button"].btn-block {
             background-color: #7b37a3; }
           .navbar-default .navbar-collapse .dropdown-toggle > span[class*="icon-arrow-"] {
             float: right;
-            font-size: 13px; }
+            font-size: 11px; }
         .navbar-default .navbar-collapse.in {
           overflow-y: visible;
           display: block;
@@ -2313,7 +2313,7 @@ input[type="button"].btn-block {
   .navbar-inverse .navbar-nav > li > a {
     color: white;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 11px;
     padding-top: 10px;
     padding-bottom: 10px; }
     .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:active {
@@ -2363,7 +2363,7 @@ input[type="button"].btn-block {
   .navbar-inverse .navbar-nav.navbar-right > li > a {
     font-weight: normal; }
     .navbar-inverse .navbar-nav.navbar-right > li > a .icon-buy_2 {
-      font-size: 17px;
+      font-size: 15px;
       vertical-align: middle; }
   .navbar-inverse .navbar-nav.navbar-right > li.with-icon > a {
     padding-top: 3px;
@@ -2371,7 +2371,7 @@ input[type="button"].btn-block {
     .navbar-inverse .navbar-nav.navbar-right > li.with-icon > a > span:last-child {
       vertical-align: middle; }
     .navbar-inverse .navbar-nav.navbar-right > li.with-icon > a .icon-myaccount {
-      font-size: 32px;
+      font-size: 30px;
       vertical-align: middle; }
 
 @media (max-width: 992px) {
@@ -2417,7 +2417,7 @@ input[type="button"].btn-block {
         .alert .container > div {
           padding-right: 30px; } }
       .alert .container > div h4 {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         margin: 0; }
       .alert .container > div .read-more {
@@ -2576,10 +2576,10 @@ input[type="button"].btn-block {
     color: #f44f00; }
 
 #collapsibleMainMenu-Pages > a {
-  font-size: 22px; }
+  font-size: 20px; }
 @media (max-width: 767px) {
   #collapsibleMainMenu-Pages .dropdown .dropdown-toggle:after {
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'tsr-icons-all';
     display: inline-block;
     font-style: normal;
@@ -2594,7 +2594,7 @@ input[type="button"].btn-block {
     float: right;
     right: 0px; }
   #collapsibleMainMenu-Pages .dropdown.open .dropdown-toggle:after {
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'tsr-icons-all';
     display: inline-block;
     font-style: normal;
@@ -2609,9 +2609,9 @@ input[type="button"].btn-block {
     float: right;
     right: 0px; }
   #collapsibleMainMenu-Pages .menu-large > a {
-    font-size: 22px; }
+    font-size: 20px; }
   #collapsibleMainMenu-Pages .menu-large > a:after {
-    font-size: 15px;
+    font-size: 13px;
     font-family: 'tsr-icons-all';
     display: inline-block;
     font-style: normal;
@@ -2666,7 +2666,7 @@ input[type="button"].btn-block {
       margin-bottom: 0; } }
   .megamenu .list-group .dropdown-header {
     float: left;
-    font-size: 17px;
+    font-size: 15px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
@@ -2704,7 +2704,7 @@ input[type="button"].btn-block {
             position: relative;
             top: 7px;
             margin-right: 0px;
-            font-size: 15px;
+            font-size: 13px;
             content: "\e668";
             float: right;
             right: -5px; } }
@@ -2728,7 +2728,7 @@ input[type="button"].btn-block {
             position: relative;
             top: 0px;
             margin-left: 10px;
-            font-size: 15px;
+            font-size: 13px;
             content: "\e668"; }
             @media (max-width: 767px) {
               .megamenu .list-group .dropdown-header.has-child > h6 > a:after {
@@ -2762,7 +2762,7 @@ input[type="button"].btn-block {
         .megamenu .list-group .dropdown-header.has-child > ul > li:hover {
           background-color: #411d56; }
         .megamenu .list-group .dropdown-header.has-child > ul > li > a {
-          font-size: 15px;
+          font-size: 13px;
           color: white;
           font-weight: normal;
           text-decoration: none;
@@ -2787,7 +2787,7 @@ input[type="button"].btn-block {
                 top: 3px;
                 right: 10px;
                 margin-left: 10px;
-                font-size: 15px;
+                font-size: 13px;
                 content: "\e668"; } }
           @media (max-width: 767px) {
             .megamenu .list-group .dropdown-header.has-child > ul > li > a {
@@ -2797,7 +2797,7 @@ input[type="button"].btn-block {
           padding-left: 10px;
           padding-right: 10px;
           color: white;
-          font-size: 15px; }
+          font-size: 13px; }
           .megamenu .list-group .dropdown-header.has-child > ul > li > p > a {
             text-decoration: none; }
       @media (max-width: 767px) {
@@ -2979,7 +2979,7 @@ input[type="button"].btn-block {
   height: 100px;
   opacity: 0.7;
   filter: alpha(opacity=70);
-  font-size: 32px;
+  font-size: 27px;
   background-color: white;
   background-image: none;
   color: #652d86;
@@ -3512,7 +3512,7 @@ section.content {
   background-color: #652d86;
   text-align: center;
   color: #fff;
-  font-size: 21px;
+  font-size: 18px;
   padding: 13px;
   border-top: 1px solid #51246b;
   margin: 0; }
@@ -4080,7 +4080,7 @@ section.content {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   color: white;
   line-height: 1;
@@ -4192,7 +4192,7 @@ header {
   header .options .navbar-nav {
     margin: 10px 70px 10px 10px; }
     header .options .navbar-nav .dropdown .dropdown-toggle {
-      font-size: 22px;
+      font-size: 20px;
       color: #fff;
       background-color: #7936a1; }
       header .options .navbar-nav .dropdown .dropdown-toggle, header .options .navbar-nav .dropdown .dropdown-toggle:hover, header .options .navbar-nav .dropdown .dropdown-toggle:active, header .options .navbar-nav .dropdown .dropdown-toggle:focus {
@@ -4221,7 +4221,7 @@ header {
           border-bottom: 0; }
         header .options .navbar-nav .dropdown .dropdown-menu > li > a {
           color: #fff;
-          font-size: 18px; }
+          font-size: 16px; }
           header .options .navbar-nav .dropdown .dropdown-menu > li > a:hover {
             color: #fff;
             background-color: #51246b; }
@@ -4236,7 +4236,7 @@ footer {
     padding-left: 0; }
   footer h2 {
     border-bottom: 1px solid #3a1a4d;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     margin: 38px 30px 10px 0;
     padding-bottom: 6px;
@@ -4364,7 +4364,7 @@ footer {
         border-radius: 4px;
         text-align: center;
         vertical-align: middle;
-        font-size: 15px; }
+        font-size: 13px; }
       footer .social-block .media [class*="youtube"] {
         background-color: #e31b2c;
         color: white;
@@ -4375,7 +4375,7 @@ footer {
         border-radius: 4px;
         text-align: center;
         vertical-align: middle;
-        font-size: 15px; }
+        font-size: 13px; }
       footer .social-block .media [class*="twitter"] {
         background-color: #2caae1;
         background-color: #2caae1;
@@ -4387,7 +4387,7 @@ footer {
         border-radius: 4px;
         text-align: center;
         vertical-align: middle;
-        font-size: 15px; }
+        font-size: 13px; }
       footer .social-block .media [class*="google-plus"] {
         background-color: #e74b32;
         background-color: #e74b32;
@@ -4399,7 +4399,7 @@ footer {
         border-radius: 4px;
         text-align: center;
         vertical-align: middle;
-        font-size: 15px; }
+        font-size: 13px; }
       footer .social-block .media [class*="icon-private_services"] {
         background-color: transparent;
         color: white;
@@ -5466,7 +5466,7 @@ content - a> .content
 .accordion-heading {
   cursor: pointer; }
   .accordion-heading .acordion-action-icon {
-    font-size: 15px; }
+    font-size: 13px; }
     .accordion-heading .acordion-action-icon:before {
       content: "\e66b"; }
   .accordion-heading.collapsed .acordion-action-icon:before {
@@ -5590,7 +5590,7 @@ content - a> .content
       line-height: 1;*/
       display: table-cell;
       color: #652d86;
-      font-size: 18px;
+      font-size: 16px;
       padding: 20px;
       -webkit-transition: color 0.3s ease-in-out;
       -moz-transition: color 0.3s ease-in-out;
