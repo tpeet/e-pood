@@ -46,7 +46,7 @@ $module: tsr-forms;
 
 
 //////// Base
-	font-size:15px;
+	font-size: $font-size-base;
 
 
 //////// Label
@@ -481,7 +481,7 @@ $module: tsr-forms;
 
 ////// Dropdown List Box Text
 .selectboxit-text {
-  font-size:15px; 
+  font-size:$font-size-base; 
   padding:14px 0;
   text-indent: 14px;
   line-height: 1;
@@ -542,7 +542,7 @@ $module: tsr-forms;
   color:#333;
   display:block;
   padding: 14px;
-  font-size:15px;
+  font-size:$font-size-base;
   font-weight:normal;
 
   &.selectboxit-focus{

@@ -11,7 +11,7 @@ FORMS
 */
 
 .tsr-forms {
-	font-size: 15px; /* The first drop down option */ /* The last drop down option */ /* Dropdown List Optgroup Headers */ /* Dropdown List Optgroup Options */ /* Dropdown List Optgroup Header hover psuedo class */ /* Dropdown List Down Arrow Container (if an image is not used) */ /* Dropdown List Down Arrow */ /* Dropdown List Down Arrow */ /* Dropdown List Individual Option Icon Positioning */ /* ICON - RW / ORANGE - MW / GRAY - Default */ /* - MW - hover - */ /* - MW - dropdown expanded hover - */ /* - MW - dropdown expanded - */ /* - MW - dropdown expanded ul - */ /* INVALID - Dropdown List Box */ /* - BOX - */ /* DISABLED - Dropdown List Box */
+	font-size: 14px; /* The first drop down option */ /* The last drop down option */ /* Dropdown List Optgroup Headers */ /* Dropdown List Optgroup Options */ /* Dropdown List Optgroup Header hover psuedo class */ /* Dropdown List Down Arrow Container (if an image is not used) */ /* Dropdown List Down Arrow */ /* Dropdown List Down Arrow */ /* Dropdown List Individual Option Icon Positioning */ /* ICON - RW / ORANGE - MW / GRAY - Default */ /* - MW - hover - */ /* - MW - dropdown expanded hover - */ /* - MW - dropdown expanded - */ /* - MW - dropdown expanded ul - */ /* INVALID - Dropdown List Box */ /* - BOX - */ /* DISABLED - Dropdown List Box */
 }
 
 .tsr-forms label,
@@ -337,7 +337,7 @@ FORMS
 }
 
 .tsr-forms .selectboxit-text {
-	font-size: 15px;
+	font-size: 14px;
 	padding: 14px 0;
 	text-indent: 14px;
 	line-height: 1;
@@ -386,7 +386,7 @@ FORMS
 	color: #333;
 	display: block;
 	padding: 14px;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: normal;
 }
 
@@ -660,7 +660,6 @@ a:focus {
 .tsr-btn-view-all span {
 	padding: 11px 14px;
 	margin: 10px 10px;
-	font-size: 13px;
 	line-height: 1;
 }
 
@@ -686,7 +685,7 @@ a:focus {
 	background: none;
 	border: none;
 	color: #642887;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: bold;
 }
 
@@ -1237,7 +1236,7 @@ PRODUCT
 	width: auto;
 	margin: 0px -1px -1px 0;
 	padding: 16px 20px 20px;
-	font-size: 15px;
+	font-size: 14px;
 	line-height: 1.256;
 	text-align: left;
 	color: #333333;
@@ -2136,7 +2135,6 @@ section.tsr-section-support {
 	color: white;
 	border-bottom: 1px solid #4e256b;
 	padding: 15px 15px 19px 50px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .tsr-module-support:before {
@@ -11459,6 +11457,66 @@ html[xmlns] .slides {
 	border-radius: 30px;
 }
 
+/*
+TYPOGRAPHY
+*/
+
+h4 {
+	font-weight: normal;
+}
+
+h1 {
+	letter-spacing: 0.00021em;
+}
+
+h2 {
+	letter-spacing: 0.00038em;
+}
+
+h3 {
+	letter-spacing: 0.00011em;
+}
+
+h5,
+h6 {
+	font-weight: normal;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+	color: #642887;
+}
+
+h1 small {
+	font-size: 22px;
+}
+
+.gray-text {
+	color: #858889;
+}
+
+.green-text {
+	color: #00b48c;
+}
+
+.pink-text {
+	color: #c41b79;
+}
+
+.violet-text {
+	color: #642887;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .tsr-tactical-flash {
 	z-index: 1;
 	position: absolute;
@@ -11519,10 +11577,10 @@ html[xmlns] .slides {
 
 .ee-badge,
 .ee-product-badge {
-	font-size: 1.0625em;
+	font-size: 1.13333em;
 	display: inline-block;
 	min-width: 10px;
-	padding: 0.5625em 0.625em;
+	padding: 0.6em 0.66667em;
 	font-weight: 600;
 	color: white;
 	line-height: 0.7;
@@ -11531,13 +11589,13 @@ html[xmlns] .slides {
 	text-align: center;
 	background: #00b48c;
 	border-radius: 100%;
-	border: 0.25em solid white;
+	border: 0.26667em solid white;
 }
 
 .ee-badge[class*="icon-"],
 [class*="icon-"].ee-product-badge {
-	font-size: 1.0625em;
-	padding: 0.5em 0.5em 0.5em 0.4375em;
+	font-size: 1.13333em;
+	padding: 0.53333em 0.53333em 0.53333em 0.46667em;
 }
 
 .ee-badge.ee-primary,
@@ -11600,7 +11658,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 	display: block;
 	border: none;
 	color: #642887;
-	font-size: 15px;
+	font-size: 14px;
 	margin: 0;
 	padding: 20px 0;
 	font-weight: normal;
@@ -11620,7 +11678,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 }
 
 .ee-btn-buy {
-	font-size: 1em;
+	font-size: 1.06667em;
 	width: 100%;
 	font-weight: 500;
 	padding: 12px;
@@ -11697,7 +11755,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 .ee-accordion .panel-title a:after,
 .ee-tab-to-accordion .panel-title a:after {
 	font-family: 'tsr-icons-all';
-	font-size: 1.5em;
+	font-size: 1.6em;
 	padding-right: 5px;
 	display: inline-block;
 	vertical-align: middle;
@@ -11839,7 +11897,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 .ee-sidenav > li h6:after {
 	content: "\e668";
 	font-family: 'tsr-icons-all';
-	font-size: 1.125em;
+	font-size: 1.2em;
 	position: absolute;
 	right: 10px;
 	bottom: 35%;
@@ -11872,7 +11930,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 .ee-sidenav .selected h6:after {
 	content: "\e668";
 	font-family: 'tsr-icons-all';
-	font-size: 1.125em;
+	font-size: 1.2em;
 	position: absolute;
 	right: 10px;
 	bottom: 35%;
@@ -11961,7 +12019,7 @@ section.tsr-section-productAndService-listing .tsr-product-image .dropdown-menu 
 }
 
 .ee-pagination-holder .col-sm-4 {
-	padding: 0.375em;
+	padding: 0.4em;
 }
 
 .ee-pagination-holder .tsr-pagination {
@@ -12024,7 +12082,7 @@ section.tsr-section-productAndService-listing .tsr-product-image .dropdown-menu 
 .tsr-module-product {
 	color: #333333;
 	width: 100%;
-	padding: 0.9375em 0.3125em 1.25em 0.9375em;
+	padding: 1em 0.33333em 1.33333em 1em;
 	float: none;
 	-webkit-transition: background 0.3s ease-in-out;
 	-moz-transition: background 0.3s ease-in-out;
@@ -12034,9 +12092,9 @@ section.tsr-section-productAndService-listing .tsr-product-image .dropdown-menu 
 
 .tsr-module-product .ee-favorite-dropdown {
 	position: absolute;
-	right: 0.625em;
+	right: 0.66667em;
 	left: auto;
-	top: 0.625em;
+	top: 0.66667em;
 	z-index: 1;
 }
 
@@ -12050,7 +12108,7 @@ section.tsr-section-productAndService-listing .tsr-product-image .dropdown-menu 
 
 .tsr-module-product .tsr-product-header {
 	font-size: 105%;
-	margin: 0.625em 0 0.3125em;
+	margin: 0.66667em 0 0.33333em;
 	padding-right: 15%;
 }
 
@@ -12216,8 +12274,35 @@ ul.tsr-product-colors .kollane {
 	margin-left: 10px;
 }
 
+.ee-frontlinks {
+	border-top: 1px solid #DBDBDB;
+	border-bottom: 1px solid #DBDBDB;
+	background: #F6F6F6;
+	text-align: center;
+	height: auto;
+	padding: 0;
+	margin-bottom: -1px;
+}
+
+.ee-frontlinks p.tsr-btn-view-all {
+	margin: 0;
+}
+
+.ee-product-list-front.visible-sm {
+	margin: 0 auto;
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.ee-product-list-front.visible-sm .col-xs-12,
+.ee-product-list-front.visible-sm .col-sm-6 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .ee-product-list-front .nav {
-	padding: 0.625em 0;
+	padding: 0.66667em 0;
 }
 
 .ee-product-list-front .nav-stacked.nav > li > a {
@@ -12232,7 +12317,7 @@ ul.tsr-product-colors .kollane {
 
 .ee-product-badge {
 	position: absolute;
-	left: 3.125em;
+	left: 3.33333em;
 	top: 10%;
 	z-index: 3;
 }
@@ -12242,7 +12327,7 @@ ul.tsr-product-colors .kollane {
 	-moz-transition: background 0.3s ease-in-out;
 	-o-transition: background 0.3s ease-in-out;
 	transition: background 0.3s ease-in-out;
-	padding: 40px;
+	padding: 20px;
 	border-bottom: 1px solid #dbdbdb;
 }
 
@@ -12266,7 +12351,7 @@ ul.tsr-product-colors .kollane {
 
 section.tsr-section-productlist .tsr-module-product {
 	text-align: left;
-	padding: 0.9375em 0.3125em 1.25em 0.3125em;
+	padding: 1em 0.33333em 1.33333em 0.33333em;
 	width: 100%;
 }
 
@@ -12279,17 +12364,17 @@ section.tsr-section-productlist .tsr-module-product .ee-flash-sm {
 	top: 0;
 	left: 0;
 	right: auto;
-	font-size: 1em;
-	width: 2.9375em;
-	height: 2.9375em;
+	font-size: 1.06667em;
+	width: 3.13333em;
+	height: 3.13333em;
 	margin-left: -5px;
 	margin-top: 0;
 	z-index: 1;
 }
 
 section.tsr-section-productlist .tsr-module-product .ee-flash-sm:before {
-	width: 2.9375em;
-	height: 2.9375em;
+	width: 3.13333em;
+	height: 3.13333em;
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-image {
@@ -12328,7 +12413,7 @@ section.tsr-section-productlist .tsr-module-product .hidden-sm [class*="col-"] {
 
 section.tsr-section-productlist .tsr-module-product .ee-linkicons {
 	font-size: 90%;
-	margin: 1.25em 0 1.5625em;
+	margin: 1.33333em 0 1.66667em;
 }
 
 section.tsr-section-productlist .tsr-module-product .ee-linkicons [class*="col-"] {
@@ -12344,7 +12429,7 @@ section.tsr-section-productlist .tsr-module-product .ee-linkicons .hidden-xs .ee
 }
 
 section.tsr-section-productlist .tsr-module-product .row.ee-actions {
-	margin: 0 0 0.625em;
+	margin: 0 0 0.66667em;
 }
 
 section.tsr-section-productlist .tsr-module-product .row.ee-actions > [class*="col-"] {
@@ -12357,7 +12442,7 @@ section.tsr-section-productlist .tsr-module-product .row.ee-actions span {
 }
 
 section.tsr-section-productlist .tsr-module-product .ee-pricecol {
-	margin-top: 0.9375em;
+	margin-top: 1em;
 	text-align: left;
 }
 
@@ -12550,7 +12635,7 @@ section.ee-product-detail .ee-linkicons li {
 }
 
 section.ee-product-detail .flex-viewport .slides li img {
-	padding: 0 2.1875em;
+	padding: 0 2.33333em;
 }
 
 section.ee-product-detail .flex-control-thumbs {
@@ -12925,7 +13010,7 @@ section.ee-reviewarea article {
 
 .ee-filterbar .navbar-nav > li > a {
 	line-height: 3;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: normal;
 }
 
@@ -13024,7 +13109,7 @@ section.ee-reviewarea article {
 }
 
 section.ee-productslider-intro {
-	margin: 0.625em auto;
+	margin: 0.66667em auto;
 }
 
 section.tsr-section-carousel-listing.tsr-slider-init {
@@ -13073,6 +13158,14 @@ section.tsr-section-carousel-listing.tsr-slider-init .tsr-slides {
 .tsr-module-product .ee-product-price-lg span {
 	font-size: 120%;
 	font-weight: bold;
+}
+
+header .navbar-default {
+	border-left: none;
+	border-right: none;
+	border-color: #dbdbdb;
+	margin-bottom: -1px;
+	margin-top: -1px;
 }
 
 .user-droplayer.megamenu.with-advertising {
@@ -13286,11 +13379,6 @@ header .megamenu .search-item-image:after,
 	right: 15px;
 }
 
-body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 .navbar-default .navbar-brand {
 	display: block;
 	width: 180px;
@@ -13454,7 +13542,7 @@ footer .social-block .media .icon {
 }
 
 .table > thead > tr > th {
-	padding: 0.625em 0.75em;
+	padding: 0.66667em 0.8em;
 	background-color: #f6f6f6;
 	font-weight: normal;
 	font-size: 140%;
@@ -13462,7 +13550,7 @@ footer .social-block .media .icon {
 }
 
 .table > tbody > tr > td {
-	padding: 0.875em;
+	padding: 0.93333em;
 	font-size: 95%;
 }
 
@@ -13540,7 +13628,7 @@ footer .social-block .media .icon {
 }
 
 .tsr-module-product .ee-favorite-dropdown {
-	right: 0.3125em;
+	right: 0.33333em;
 }
 
 section.tsr-section-productlist .tsr-module-product .ee-pricecol {
@@ -13575,8 +13663,8 @@ section.tsr-section-productlist .tsr-module-product .ee-pricecol {
 	background: none;
 	border: none;
 	color: #642887;
-	font-size: 15px;
-	font-weight: bold;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .tsr-btn-view-all span i {
@@ -14677,7 +14765,7 @@ section.tsr-section-productAndService-listing .tsr-product-image {
 	width: 100%;
 	max-width: 220px;
 	height: auto;
-	padding: 0 1.25em;
+	padding: 0 1.33333em;
 }
 
 .tsr-product-price {
@@ -14685,7 +14773,7 @@ section.tsr-section-productAndService-listing .tsr-product-image {
 }
 
 .tsr-module-product {
-	padding: 2.1875em 1.25em 0.625em 1.25em;
+	padding: 2.33333em 1.33333em 0.66667em 1.33333em;
 }
 
 .tsr-module-product .tsr-product-header {
@@ -14708,7 +14796,7 @@ section.tsr-section-productAndService-listing .tsr-product-image {
 }
 
 .ee-product-list-front .nav {
-	padding: 0.9375em 0;
+	padding: 1em 0;
 }
 
 .ee-product-list-front .nav-stacked.nav > li > a {
@@ -14728,7 +14816,7 @@ section.tsr-section-productAndService-listing .tsr-product-image {
 section.tsr-section-productlist .tsr-module-product .tsr-product-image {
 	font-size: 150%;
 	width: 25%;
-	padding: 0 1.25em 0 0.625em;
+	padding: 0 1.33333em 0 0.66667em;
 }
 
 section.tsr-section-productlist .tsr-module-product .tsr-product-content {
@@ -14744,7 +14832,7 @@ section.tsr-section-productlist .tsr-module-product .hidden-sm {
 }
 
 section.tsr-section-productlist .tsr-module-product .ee-linkicons {
-	margin: 1.25em 0 0.9375em;
+	margin: 1.33333em 0 1em;
 }
 
 section.ee-product-detail .ee-actions a {
@@ -15606,7 +15694,7 @@ td.hidden-lg.hidden-sm {
 }
 
 .ee-category-header {
-	margin: 0.9375em auto;
+	margin: 1em auto;
 }
 
 .tsr-module-promotion:hover,

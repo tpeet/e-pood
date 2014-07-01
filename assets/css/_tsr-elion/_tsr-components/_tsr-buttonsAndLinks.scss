@@ -272,7 +272,6 @@ BUTTONS & LINKS
 			// border-bottom:4px solid $purple-t;
 			padding:11px 14px;
 			margin:10px 10px;
-			font-size:13px;
 			line-height:1;
 
 			i{
@@ -325,8 +324,8 @@ BUTTONS & LINKS
 	    		background:none;	
 	    		border:none;
 	    		color:$purple-c;
-	    		font-size:15px;
-	    		font-weight:bold;
+	    		font-size: $font-size-base;
+	    		font-weight:normal;
 
 	    		i{
 	    			color:$black;
@@ -347,7 +346,7 @@ BUTTONS & LINKS
 	    		background:none;	
 	    		border:none;
 	    		color:$purple-c;
-	    		font-size:15px;
+	    		font-size: $font-size-base;
 	    		font-weight:bold;
 
 	    		i{

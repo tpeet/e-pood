@@ -70,7 +70,7 @@
 
 // CUSTOM OVERWRIDES AND ADDITIONS TO TSR
 //**********************************
-
+/* @include _ee-typography.scss */
 /* @include _ee-tacticalElements.scss */
 /* @include _ee-communication-primary.scss */
 /* @include _ee-buttonsAndLinks.scss */
@@ -157,21 +157,15 @@
   }
 
 }
-
-body {
-
-   -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
  
 // http://pauginer.tumblr.com/post/36614680636/invisible-gradient-technique
 .navbar-default .navbar-brand {
   display: block;
   width: 180px;
   height: 80px;
-  background: transparent url(../images/elion-logo.png) center center no-repeat;
-  background-image: -webkit-linear-gradient(transparent, transparent), url(../fonts/elion-logo.svg);
-  background-image: linear-gradient(transparent, transparent), url(../fonts/elion-logo.svg); 
+  background: transparent url(elion-logo.png) center center no-repeat;
+  background-image: -webkit-linear-gradient(transparent, transparent), url(elion-logo.svg);
+  background-image: linear-gradient(transparent, transparent), url(elion-logo.svg); 
 }
 
 

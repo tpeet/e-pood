@@ -1,26 +1,50 @@
 // product-list-front
 
 .ee-category-header  {
-    display: block;
-    margin: 0;
-    padding: 10px;
-    text-align: left;
-    font-size: 32px;
-    background: #fff;
-    border-bottom: 1px solid $lightgrey-t;
-    @include media-min($screen-sm) {
-      text-align: center;
-    } 
-    @include media-min($screen-md) {
-      margin: em(15) auto;
+  display: block;
+  margin: 0;
+  padding: 10px;
+  text-align: left;
+  font-size: 32px;
+  background: #fff;
+  border-bottom: 1px solid $lightgrey-t;
+  @include media-min($screen-sm) {
+    text-align: center;
+  } 
+  @include media-min($screen-md) {
+    margin: em(15) auto;
 
-    } 
-    small {
-      margin-left: 10px;
+  } 
+  small {
+    margin-left: 10px;
+  }
+}
+
+.ee-frontlinks {
+  border-top: 1px solid #DBDBDB;
+  border-bottom: 1px solid #DBDBDB;
+  background: #F6F6F6;
+  text-align: center;
+  height: auto;
+  padding: 0;
+  margin-bottom: -1px;
+  p.tsr-btn-view-all {
+    margin: 0;
+  }
+}
+
+.ee-product-list-front {
+  &.visible-sm {
+    margin: 0 auto;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    .col-xs-12, .col-sm-6 {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
-.ee-product-list-front {
   .nav {
     padding: em(10) 0;
       @include media-min($screen-sm) {
@@ -62,7 +86,7 @@
   -moz-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
-  padding: 40px;
+  padding: 20px;
   border-bottom: 1px solid $lightgrey-t;
     &:hover,
     &:focus {

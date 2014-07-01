@@ -3,9 +3,13 @@
 //   margin-top: 10px;
 // }
 
-// header .navbar-default {
-//   margin-bottom: -1px;
-// }
+header .navbar-default {
+  border-left: none;
+  border-right: none;
+  border-color: $lightgrey-t;
+  margin-bottom: -1px;
+  margin-top: -1px;
+}
 
 // .topnav.navbar, .ee-adminnav.navbar {
 //   margin-bottom: 0;
