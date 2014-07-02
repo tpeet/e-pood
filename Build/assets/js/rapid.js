@@ -4372,7 +4372,9 @@ function reDrawVisual() {
 		//}
 
 		try {
-			this.touchCapable = ('ontouchstart' in window || 'onmsgesturechange' in window) && (typeof window.orientation !== 'undefined' || typeof navigator.msMaxTouchPoints !== 'undefined');
+			this.touchCapable = ('ontouchstart' in window || 'onmsgesturechange' in window)
+				&& (typeof window.orientation !== 'undefined' || (typeof navigator.msMaxTouchPoints !== 'undefined' && navigator.msMaxTouchPoints > 2));
+			
 		} catch (e) {
 			this.touchCapable = false;
 		}
