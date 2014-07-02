@@ -902,8 +902,7 @@ PRODUCT
   .tsr-module-product .tsr-product-image {
     display: block;
     width: 90px;
-    height: auto;
-    float: left; }
+    height: auto; }
     .tsr-module-product .tsr-product-image img {
       width: 100%;
       height: auto; }

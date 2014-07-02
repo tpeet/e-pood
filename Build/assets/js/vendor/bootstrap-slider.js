@@ -57,8 +57,15 @@
 			this.picker[0].id = this.id;
 		}
 
-		if (typeof Modernizr !== 'undefined' && Modernizr.touch) {
-			this.touchCapable = true;
+		// Modernizer.touch false positive with Chrome and Firefox
+		//if (typeof Modernizr !== 'undefined' && Modernizr.touch) {
+		//	this.touchCapable = true;
+		//}
+
+		try {
+			this.touchCapable = ('ontouchstart' in window || 'onmsgesturechange' in window) && (typeof window.orientation !== 'undefined' || typeof navigator.msMaxTouchPoints !== 'undefined');
+		} catch (e) {
+			this.touchCapable = false;
 		}
 
 		var tooltip = this.element.data('slider-tooltip')||options.tooltip;
