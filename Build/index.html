@@ -67,7 +67,7 @@
 <meta name="msapplication-TileColor" content="#ff0000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-<link rel='stylesheet' href='output/styles.css'>
+<link rel='stylesheet' href='assets/css/styles.css'>
 
 
         <!-- Hammer reload -->
@@ -96,61 +96,6 @@
 </head>
 
 <body> 
-<div class="alert full-size flyover alert-success" id="success1">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Nimekiri <span class="h3">Minu lemmikud</span> on edukalt kustutatud </span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Taasta nimekiri
-            </a>
-        </div>
-        <a href="javascript:$('#success1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-info flyover" id="your-uniq-ID-123">
-    <div class="container">
-        <span class="icon icon-info"></span>
-        <div>
-            <span>Asi on edukalt ostukorvi pandud</span>
-            <a class="read-more" href="#">
-                <span class="icon icon-arrow-right"></span>Mine ostukorvi
-            </a>
-        </div>
-        <a href="javascript:$('#your-uniq-ID-123').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert1">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <strong>Sisselogimine ebaonnestus</strong>
-            <span>Veendu, et sisestasid Mobiili-ID PIN1-koodi, mitte ID-kaardi PIN1-koodi</span>
-            <a class="read-more" href="#">Proovi uuesti</a>
-        </div>
-        <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a>
-    </div>
-</div>
-
-<div class="alert full-size alert-warning flyover" id="alert2">
-    <div class="container">
-        <span class="icon icon-alert"></span>
-        <div>
-            <span>Kustutad praegu nimekirja <span class="h3">Musile sünnipäevaks</span>. Oled kindel? </span>
-            <a class="read-more first" href="#">Katkesta </a> 
-            <a class="read-more second" href="#">Kustuta</a>
-        </div>
-<!--         <a href="javascript:$('#alert1').alert('close');void(0);" class="icon icon-delete close-btn"></a> -->
-    </div>
-</div>
-
-<!-- <div class="temporary" style="margin-top: 100px;">
-    <button id="infobtn" class="btn btn-info">Info</button>
-    <button id="successbtn" class="btn btn-success">Success</button>
-    <button id="alertbtn" class="btn btn-danger js-jumbo">Alert</button>
-</div> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -683,6 +628,20 @@
 
 </header>
 
+<!-- <section class="tsr-section-communictaion-primary" id="ad">
+  <div class="swiffy-wrap">
+    <iframe src="https://pood.elion.ee//picturesInternal/809/html5/index-et.html#pood.elion.ee" 
+          border="0"
+          scrolling="no"
+          allowtransparency="true"
+          width="100%"
+          height="100%"
+          style="border:0;"
+    >
+    </iframe>
+  </div>
+</section> -->
+
 <section class="tsr-section-communictaion-primary">
   <div class="tsr-slides">
   
@@ -1011,78 +970,89 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
-    $(document).ready(function(){
-      $('.ee-sidenav li  a').click(function(e){
-        if ($(this).attr('class') != 'selected'){
-          $(this).addClass('selected');
-          $('a').not(this).removeClass('selected');
-        }
-        else {
-          $(this).removeClass('selected');
-        }
-        e.preventDefault();
-      });
+$(document).ready(function(){
+  $('.ee-sidenav li  a').click(function(e){
+    if ($(this).attr('class') != 'selected'){
+      $(this).addClass('selected');
+      $('a').not(this).removeClass('selected');
+    }
+    else {
+      $(this).removeClass('selected');
+    }
+    e.preventDefault();
+  });
 
-      // 2nd level folDer
-      // function handleClick()
-      // {
-      //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
-      // }
-      // document.getElementById('jsFiltersMoreText').onclick=handleClick;
-      $('.js-slidetoggle').click(function(e) {
-        $(this).parents().next('.js-togglable').slideToggle('slow');
-        e.preventDefault();
-      });
+  // 2nd level folDer
+  // function handleClick()
+  // {
+  //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+  // }
+  // document.getElementById('jsFiltersMoreText').onclick=handleClick;
+  $('.js-slidetoggle').click(function(e) {
+    $(this).parents().next('.js-togglable').slideToggle('slow');
+    e.preventDefault();
+  });
 
-       $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-      $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-     });
+    // SLIDER SCRIPT
+  $("#js-priceslider").slider({
+      tooltip: 'hide'
+    });
+    $("#js-priceslider").on('slide', function(slideEvt) {
+    $(".js-pricesliderValMin").text(slideEvt.value[0]);
+    $(".js-pricesliderValMax").text(slideEvt.value[1]);
+  });
+
+
+});
+
 
 // Alerts logic
-   $('#alertbtn').click(function() {
-      if ( !$('#alert1').is( '.in' ) ) {
-         $('#alert1').addClass('in');
-      }
-   });
+  $('#alertbtn').click(function() {
+    if ( !$('#alert1').is( '.in' ) ) {
+       $('#alert1').addClass('in');
+    }
+  });
 
-    $('#alertbtn2').click(function() {
-      if ( !$('#alert2').is( '.in' ) ) { 
-         $('#alert2').addClass('in');
-      }
-   });
+  $('#alertbtn2').click(function() {
+    if ( !$('#alert2').is( '.in' ) ) { 
+       $('#alert2').addClass('in');
+    }
+  });
 
-   $('#successbtn').click(function() {
-      if ( !$('#success1').is( '.in' ) ) {
-         $('#success1').addClass('in');
+  $('#successbtn').click(function() {
+    if ( !$('#success1').is( '.in' ) ) {
+       $('#success1').addClass('in');
 
-         setTimeout(function() {
-            $('#success1').removeClass('in');
-         }, 3200);
-      }
-   });
+       setTimeout(function() {
+          $('#success1').removeClass('in');
+       }, 3200);
+    }
+  });
 
-   $('#infobtn').click(function() {
-      if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
-         $('#your-uniq-ID-123').addClass('in');
+  $('#infobtn').click(function() {
+    if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+       $('#your-uniq-ID-123').addClass('in');
 
-         setTimeout(function() {
-            $('#your-uniq-ID-123').removeClass('in');
-         }, 4800);
-      }
-   });
+       setTimeout(function() {
+          $('#your-uniq-ID-123').removeClass('in');
+       }, 4800);
+    }
+  });
 
-      // DETAIL POPOVER
-      $('[data-toggle="popover"]').popover();
-      $('body').on('click', function (e) {
-        $('[data-toggle="popover"]').each(function () {
-            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-                $(this).popover('hide');
-            }
-        });
+    // DETAIL POPOVER
+    $('[data-toggle="popover"]').popover();
+    $('body').on('click', function (e) {
+      $('[data-toggle="popover"]').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+          }
       });
-    </script>
+    });
+  </script>
 
 </body>
 </html>

@@ -6725,17 +6725,6 @@ cloneRightSideMainMenu();
     e.preventDefault();
   });
 
-
-  // SLIDER SCRIPT
-  $("#js-priceslider").slider({
-    tooltip: 'hide'
-  });
-  $("#js-priceslider").on('slide', function(slideEvt) {
-  $(".js-pricesliderValMin").text(slideEvt.value[0]);
-  $(".js-pricesliderValMax").text(slideEvt.value[1]);
-});
-
-
 $('.dropdown-menu').find('form').click(function (e) {
         e.stopPropagation();
       });

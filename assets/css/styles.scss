@@ -87,7 +87,52 @@
 /* @include _ee-mainnav.scss */
 /* @include _ee-print.scss */
 
+/* default height */
+// #ad {
+//    height:30px;
+// }
+// @media only screen and (width:480px) {
+//    /* 90 pixels high */
+//    #ad {
+//       height:90px;
+//    }
+// }
+// @media only screen and (width:960px) {
+//    /* 125 pixels high */
+//    #ad {
+//       height:200px;
+//    }
+// }
 
+// .iframewrapper {
+//   position: relative;
+//   height: 0;
+//   overflow: hidden;
+//   padding-bottom: 30%;
+
+//   iframe {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+
+.swiffy-wrap { 
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  float: left;
+  height: 0;
+}
+
+#swiffycontainer {
+  width : 100% !important;
+  height: 100% !important;
+  position: absolute;
+  left: 0;
+}
 
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
@@ -231,7 +276,7 @@ outline: none !important;
 // }
 
 .flyover {
-   // top: -250px;
+   top: -250px;
    position: fixed;
    width: 100%;
    z-index: 5;

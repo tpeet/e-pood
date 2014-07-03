@@ -9997,16 +9997,91 @@ html[xmlns] .slides {display: block;}
 .carousel li { margin-right: 5px; }
 
 /* Direction Nav */
-.flex-direction-nav {*height: 0; display: none;}
-.flex-direction-nav a  { text-decoration:none; display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8); text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
-.flex-direction-nav .flex-prev { left: -50px; }
-.flex-direction-nav .flex-next { right: -50px; text-align: right; }
-.flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
-.flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
-.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
-.flex-direction-nav a.flex-next:before  { content: '\f002'; }
+
+.flex-direction-nav {
+                *height: 0;
+                display: none;
+}
+
+#js-largeimage .flex-direction-nav {
+                display: block;
+}
+
+.flex-direction-nav a {
+                -webkit-border-radius: 200px;
+                -ms-border-radius: 200px;
+                border-radius: 200px;
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin: -80px 0 0;
+                line-height: 100px;
+                top: 50%;
+                overflow: visible;
+                position: absolute;
+                z-index: 10;
+                opacity: 0;
+                cursor: pointer;
+                -webkit-transition: all .3s ease;
+                -moz-transition: all .3s ease;
+                transition: all .3s ease;
+}
+
+.flex-direction-nav a:before {
+                font-family: "tsr-icons-all";
+                font-size: 25px;
+                display: inline-block;
+                content: '\e66a';
+                padding: 0 6px;
+                position: relative;
+                z-index: 20;
+}
+
+.flex-direction-nav .flex-prev {
+                left: -50px;
+}
+
+.flex-direction-nav .flex-next {
+                right: -50px;
+                text-align: right;
+}
+
+.flex-direction-nav a.flex-next:before {
+                content: '\e668';
+}
+
+.flexslider:hover .flex-prev {
+                opacity: 0.7;
+                left: 10px;
+}
+
+.flexslider:hover .flex-next {
+                opacity: 0.7;
+                right: 10px;
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+                opacity: 1;
+}
+
+.flex-direction-nav .flex-disabled {
+                opacity: 0!important;
+                filter: alpha(opacity=0);
+                cursor: default;
+}
+
+.flex-direction-nav a:before {
+                font-family: "tsr-icons-all";
+                font-size: 25px;
+                display: inline-block;
+                content: '\e66a';
+                padding: 0 6px;
+                position: relative;
+                z-index: 20;
+}
+
+
 
 /* Pause/Play */
 .flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
@@ -12132,6 +12207,20 @@ header .megamenu .search-item-image,
 
   .tsr-tactical-flash {
     background: #fff; } }
+/* default height */
+.swiffy-wrap {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  float: left;
+  height: 0; }
+
+#swiffycontainer {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  left: 0; }
+
 .navbar-default .user-menu.navbar-nav > li > a:after {
   background-color: #51246B; }
 
@@ -12235,6 +12324,7 @@ header .megamenu .search-item-image,
   top: auto; }
 
 .flyover {
+  top: -250px;
   position: fixed;
   width: 100%;
   z-index: 5;
