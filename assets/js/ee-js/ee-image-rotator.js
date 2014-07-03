@@ -71,6 +71,9 @@ $(document).ready(function () {
       useCSS: false,
       animationLoop: true,
       slideshow: false,
+      prevText: "",
+      nextText: "",
+      directionNav: true,
       before: function () {
         if (!canSlide) {
           slider.flexslider("stop");
