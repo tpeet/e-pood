@@ -918,7 +918,7 @@ PRODUCT
     margin: 0; }
   .tsr-module-product:hover {
     background: white;
-    cursor: pointer;
+    cursor: default;
     text-decoration: none;
     color: #333333; }
     .tsr-module-product:hover:after {
@@ -10014,7 +10014,7 @@ html[xmlns] .slides {display: block;}
                 display: block;
                 width: 100px;
                 height: 100px;
-                margin: -80px 0 0;
+                margin: -80px -50px 0;
                 line-height: 100px;
                 top: 50%;
                 overflow: visible;
@@ -11353,7 +11353,11 @@ section.tsr-section-productlist .tsr-module-product {
       width: auto;
       z-index: 1; }
       .ee-innerad .tsr-tactical-textPanel span {
-        margin: 10px 30px 12px 20px; } }
+        margin: 10px 30px 12px 20px; }
+    .ee-innerad .ee-innerad .tsr-tactical-textPanel.blue {
+      background: #0083be; }
+    .ee-innerad .ee-innerad .tsr-tactical-textPanel.purple {
+      background: #642887; } }
 
 .ee-accordion {
   background: #fff; }
