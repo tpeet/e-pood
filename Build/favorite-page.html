@@ -1,0 +1,1119 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js    ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+<title>Title</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src='assets/js/vendor/modernizr.js'></script>
+        <!-- less than ie9 -->
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+
+      <script src='assets/js/vendor/html5.js'></script>
+      <script src="assets/js/vendor/respond.min.js"></script>
+      <script type="text/javascript" scr="assets/js/vendor/css3-mediaqueries.min.js"></script>
+        <![endif]-->
+        <!-- / end -->
+
+
+<meta property="og:title" content="Title" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="#" />
+<meta property="og:image" content="#" />
+<meta property="og:description" content="Description" />
+<meta property="og:latitude" content="47.00000" />
+<meta property="og:longitude" content="7.00000" />
+<meta property="og:street-address" content="Address" />
+<meta property="og:phone_number" content="Phone Number" />
+<meta property="og:locality" content="Locality" />
+<meta property="og:region" content="Region" />
+<meta property="og:postal-code" content="Postal Code" />
+<meta property="og:country-name" content="Country" />
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@username">
+<meta name="twitter:creator" content="@username">
+<meta name="twitter:url" content="#">
+<meta name="twitter:title" content="Title">
+<meta name="twitter:description" content="Description">
+<meta name="twitter:image" content="#">
+
+<meta name="robots" content="index,follow"/>
+
+<link rel="apple-touch-icon" sizes="57x57" href="assets/img/branding/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="!-- @path apple-touch-icon-114x114.png -->">
+<link rel="apple-touch-icon" sizes="72x72" href="!-- @path apple-touch-icon-72x72.png -->">
+<link rel="apple-touch-icon" sizes="144x144" href="!-- @path apple-touch-icon-144x144.png -->">
+<link rel="apple-touch-icon" sizes="60x60" href="!-- @path apple-touch-icon-60x60.png -->">
+<link rel="apple-touch-icon" sizes="120x120" href="!-- @path apple-touch-icon-120x120.png -->">
+<link rel="apple-touch-icon" sizes="76x76" href="!-- @path apple-touch-icon-76x76.png -->">
+<link rel="apple-touch-icon" sizes="152x152" href="!-- @path apple-touch-icon-152x152.png -->">
+<link rel="icon" type="image/png" href="!-- @path favicon-196x196.png -->" sizes="196x196">
+<link rel="icon" type="image/png" href="!-- @path favicon-160x160.png -->" sizes="160x160">
+<link rel="icon" type="image/png" href="!-- @path favicon-96x96.png -->" sizes="96x96">
+<link rel="icon" type="image/png" href="!-- @path favicon-32x32.png -->" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/img/branding/favicons/favicon-16x16.png" sizes="16x16">
+<meta name="msapplication-TileColor" content="#ff0000">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+<link rel='stylesheet' href='assets/css/styles.css'>
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+</head>
+
+<body> 
+<header>
+
+<nav class="topnav navbar navbar-inverse" role="navigation">
+  <div class="container hidden-xs">
+
+    <ul class="nav navbar-nav">
+      <li><a href="#">Eraklient</a></li>
+      <li><a href="#">Äriklient</a></li>
+      <li class="active"><a href="#">E-pood</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="front-logged-in.html">RUS</a></li>
+      <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle " data-toggle="dropdown">SSO</a>
+        <div class="dropdown-menu" style="width:100%;">
+          <div class="container">
+            <div class="row megamenu">
+              <div class="col-md-12">
+                <div class="center-block">
+                  <!-- <form class="form-inline" action="index-signed-in.html" role="form">
+                    <div class="form-group">
+                      <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="exampleInputPassword2">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" data-stopPropagation="true"> Remember me
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                  </form> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle icon-with-badge basket" data-toggle="dropdown"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
+        <div class="dropdown-menu">
+          <div class="container">
+            <div class="row megamenu">
+              <div class="col-sm-12"><h2 class="text-center"><span>ostukorvi sisu ja kinnitamise viide</span></h2></div>
+            </div>
+          </div>
+          <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+              <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="with-icon menu-large dropdown">
+        <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount" ></span>Sisene</a>
+        <div class="dropdown-menu" >
+          <div class="container">
+            <div class="row megamenu user-droplayer">
+              <div class="col-sm-3">
+                <ul class="list-group promotion">
+                  <li class="dropdown-header"><h6><a href="#">Kellena soovid siseneda?</a></h6>
+                    <ul>
+                      <li><p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p></li>
+                      <li><p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-9">
+
+                <ul class="list-group">
+                  <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
+                    <ul>
+                      <li><a href="#">Ahto Pärn von Krusesten</a></li>
+                      <li><a href="#">Eesnimi Perenimi</a></li>
+                      <li><a href="#">Martinson Sandrovinkilkohv</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-header has-child"><h6><a href="#">Äriklient</a></h6>
+                    <ul>
+                      <li><a href="#">Minuesimenefirma OÜ</a></li>
+                      <li><a href="#">Minuteinefirma OÜ</a></li>
+                      <li><a href="#">Minukolmasfirma OÜ</a></li>
+                      <li><a href="#">Minuneljas OÜ</a></li>
+                      <li class="separator"><p><a href="#"><span class="icon icon-plus"></span> Registreeri uus äriklient</a></p></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-header has-child"><h6><a href="#">Minu andmed</a></h6>
+                    <ul>
+                      <hr>
+                      <li><p><span class="icon icon-minus"></span> <a href="#">Välju </a></p></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+                        <!-- <div class="col-sm-3 col-md-3">
+
+                          <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
+                            <ul>
+                              <li><a href="#">Ahto Pärn von Krusesten</a></li>
+                              <li><a href="#">Eesnimi Perenimi</a></li>
+                              <li><a href="#">Martinson Sandrovinkilkohv</a></li>
+                            </ul>
+                          </li>
+                        </div> -->
+                        <!-- <div class="col-sm-3">
+                            <h2><a href="#">Äriklient</a></h2>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">Minuesimenefirma OÜ</a></li>
+                                <li class="list-group-item"><a href="#">Minuteinefirma OÜ</a></li>
+                                <li class="list-group-item"><a href="#">Minukolmasfirma OÜ</a></li>
+                                <li class="list-group-item"><a href="#">Minuneljas OÜ</a></li>
+                                <li class="list-group-item"><p><span class="icon icon-plus"></span> <a href="#">Registreeri uus äriklient</a></p></li>
+                            </ul>
+                          </div> -->
+                        <!-- <div class="col-sm-3">
+                            <h2 class="link"><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h2>
+                            <hr>
+                            <p><span class="icon icon-minus"></span> <a href="#">Välju </a></p>
+                          </div> -->
+                        </div>
+                      </div>
+                      <div class="container reset-padding">
+                        <ul class="row hidden-xs list-unstyled">
+                          <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="dropdown menu-large with-icon">
+                    <a href="" class="dropdown-toggle myaccount" data-toggle="dropdown"><span class="icon icon-myaccount"></span>Mul on väike profiil</a>
+                    <div class="dropdown-menu">
+                      <div class="container">
+                        <div class="row megamenu user-droplayer with-advertising">
+                          <div class="col-sm-9 ee-innerad">
+                           <a href=""> <img src="http://lorempixel.com/1000/300/">
+                             <div class="tsr-tactical-textPanel">
+                               <!--       <header>Hakkab juba looma</header> -->
+                               <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
+                             </div>
+                           </a>
+                         </div>
+                         <div class="col-sm-3">
+                          <h3><a href="#">Minu andmed <span class="icon icon-arrow-right"></span></a></h3>
+                          <hr>
+                          <p><span class="icon icon-plus"></span> <a href="#">Välju </a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container reset-padding">
+                      <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul> 
+
+            </div>
+          </nav>
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container">
+
+    <!-- menu for small screen -->
+    <div class="navbar-header">
+
+      <a class="navbar-brand"  href="index.html"></a> 
+
+      <div class="pull-right">
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon icon-menu"></span>
+        </a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge">5</span></a>
+      </div>
+    </div>
+    <!-- / menu for small screen -->
+
+    <!-- main menu -->
+    <div class="navbar-collapse collapse" id="collapsibleMainMenu-Pages">
+      <ul class="nav navbar-nav" id="content-placeholder-mainnav"> </ul>
+          
+          <script id="mainnav-template" type="text/x-handlebars-template">
+          
+          {{#nav}}
+            <li class="dropdown menu-large">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">{{caption}} </a>
+              <div class="dropdown-menu ">
+                <div class="container">
+                  <ul class="row megamenu">
+                    
+                    <li class="col-sm-12">
+                      <ul class="list-group">
+                        <li class="dropdown-header has-child promotion">
+                          <h6> <a href="#">Uued tooted </a></h6>
+                          <ul>
+                            <li><a href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
+                            <li>
+                              <a href="#" class="hidden-xs">
+                            <h3>{{name}}</h3>
+                            <p>Lorem lorem lorem lorem ipsum</p>
+                          </a>
+                            </li>
+                          </ul>
+                          
+                          
+                        </li>
+                       
+
+                        {{#each link}}
+                    
+                      
+                        {{#if sub}}
+                          <li class="dropdown-header has-child">
+                            <h6><a href="{{path}}">{{this.name}}</a></h6>
+                            <ul>
+                            {{#each this.sub}}
+                              <li><a href="javascript:void(0);">{{this}}</a></li>
+                            {{/each}}
+                            </ul>
+                          </li>
+                          {{else}}
+                          <li class="dropdown-header"><h6><a href="{{path}}">{{this.name}}</a></h6></li>
+                        {{/if}}
+                      
+                    
+                        {{/each}}
+                      </ul>
+                    </li>
+
+                    
+                  </ul>
+                </div>
+                <div class="container reset-padding">
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
+                </div>
+              </div>
+            </li>
+          {{/nav}}
+          
+          <li class="dropdown side-menu  menu-large visible-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Minu konto</a>
+              <div class="dropdown-menu ">
+                  <ul class="row list-unstyled megamenu">
+                      <li><a href="#asdfsaf">Täitmisel tellimused</a></li>
+                      <li><a href="#dfsa">Tellimused</a></li>
+                      <li><a href="#asdfsaf">Salvestatud ostukorvid</a></li>
+                      <li><a href="#asdfsaf">Minu lemmikud</a></li>
+                      <li><a href="#asdfsaf">Järelmaks</a></li>
+                      <li><a href="#asdfsaf">Kontaktisikud</a></li>
+                  </ul>
+              </div>
+          </li>
+          <li class="options visible-xs">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eraklient </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Ariklient</a></li>
+                            <li><a href="#">E-pood</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </li>
+            <li class="options visible-xs">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eesti keeles </a>
+                      <ul class="dropdown-menu">
+                          <li><a href="#">По-русски</a></li>
+                          <li><a href="#">In English</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+</script>
+
+
+<!-- right side additional menu -->
+<ul class="nav navbar-nav navbar-right hidden-xs">
+    <li class="dropdown menu-large "><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Minu konto</a>
+      <div class="dropdown-menu ">
+        <div class="container">
+        <div class="row ">
+            <ul class="nav navbar-nav user-menu nav-justified">
+              <li class="active"><a href="#">Täitmisel tellimused </a></li>
+              <li><a href="#">Minu konto </a></li>
+              <li><a href="#">Tellimused </a></li>
+              <li><a href="#">Salvestatud ostukorvid </a></li>
+              <li><a href="#">Minu lemmikud </a></li>
+              <li><a href="#">Järelmaks </a></li>
+              <li><a href="#">Kontaktisikud </a></li>
+            </ul> 
+        </div>
+        </div>
+        <div class="container reset-padding">
+            <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+            </ul>
+        </div>
+      </div>
+    </li>
+    <li class="dropdown menu-large">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="icon icon-help"></span></a>
+        <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Guide">
+                <ul class="row megamenu">
+                    <li class="col-sm-12">
+                    <ul class="list-group">
+                      <li class="dropdown-header promotion has-child"><h6>
+                        <a href="#">Järelmaksu tingimused  </a>
+                      </h6>
+                      <ul>
+                        <li><a href="#" class="hidden-xs"><img src="http://lorempixel.com/265/133/sports/1/" style="width: 100%;"/></a></li>
+                      <li>
+                        <a href="#">
+                          <h3>The All New Things - Now Available</h3>
+                          <p>Lorem lorem lorem lorem ipsum</p>
+                        </a>
+                      </li>
+                      </ul>
+                    </li>
+
+                    
+                  </li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kuidas osta e-poest </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Maksetingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Elioni järelmaks </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Remont ja hooldus </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Ärikliendile </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">KKK </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kontaktid </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">E-poe üldtingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#"><h6>Kinkekaardi tingimused</h6> </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Objektiivide lühendid</a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Kinkepaki tingimused </a>
+                  </h6></li>
+                  <li class="dropdown-header"><h6>
+                    <a href="#">Mida teha kasutatud seadmetega? </a>
+                  </h6></li>
+                  </ul>
+                </ul>
+              </div> 
+                <div class="container reset-padding">
+                    <ul class="row hidden-xs list-unstyled">
+                        <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+
+        <li class="dropdown menu-large">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
+          <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Search">
+              
+              <form class="tsr form-horizontal" role="form">
+                <div class="form-group row">
+                  <div class="col-md-11 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="headerSearchResultWrapper list-group">
+  <div id="content-placeholder-product-list"></div>
+
+  <a class="search-advanced" href="/search?what=noki">
+    Vaata kõiki
+  </a>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <a class="list-group-item {{selected}}" href="detail.html">
+    <figure class="search-item-image">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </figure>
+    <span class="search-item-title">{{name}}</span>
+  </a>
+
+  {{/products}}
+</script>
+
+
+
+                  </div>
+                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default " type="button" value="Otsi" />
+                </div>
+              </form> 
+
+            </div>
+            <div class="container reset-padding">
+              <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown menu-large hide">
+          <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
+          <div class="dropdown-menu">
+            <div class="container collapsibleMainMenu-Basket">
+
+              <div class="row megamenu">
+                <div class="col-md-12">
+                  basket is empty
+                </div>
+              </div>
+
+            </div>
+            <div class="container reset-padding">
+              <ul class="row hidden-xs list-unstyled">
+                <li class="col-md-12"><div class="close-up-btn-bar"><span class="icon icon-arrow-up"></span></div></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- end / right side additional menu -->
+
+    </div><!-- end /  main menu -->
+
+  </div>
+
+  <!-- generating content by script -->
+  <div id="collapsibleMainMenu-Basket" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <div id="collapsibleMainMenu-Search" class="collapse megamenu ">&nbsp;</div>
+  <div id="collapsibleMainMenu-Guide" class="collapse megamenu collapsibleMainMenu">&nbsp;</div>
+  <div id="collapsibleMainMenu-User" class="collapse megamenu collapsibleMainMenu">
+
+    <div class="container">
+      <div class="row megamenu user-droplayer">
+        <div class="col-sm-3">
+          <ul class="list-group promotion">
+            <li class="dropdown-header"><h6><a href="#">Kellena soovid siseneda?</a></h6>
+              <ul>
+                <li><p>Siin saate määrata kellena soovite edaspidi siseneda. Seda valikut saate muuta ja tühistada.</p></li>
+                <li><p><input type="checkbox" data-stopPropagation="true" /> <em>Jäta minu valik meelde</em></p></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-9">
+
+          <ul class="list-group">
+            <li class="dropdown-header has-child"><h6><a href="#">Eraklient</a></h6>
+              <ul>
+                <li><a href="#">Ahto Pärn von Krusesten</a></li>
+                <li><a href="#">Eesnimi Perenimi</a></li>
+                <li><a href="#">Martinson Sandrovinkilkohv</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-header has-child"><h6><a href="#">Äriklient</a></h6>
+              <ul>
+                <li><a href="#">Minuesimenefirma OÜ</a></li>
+                <li><a href="#">Minuteinefirma OÜ</a></li>
+                <li><a href="#">Minukolmasfirma OÜ</a></li>
+                <li><a href="#">Minuneljas OÜ</a></li>
+                <li class="separator"><p><a href="#"><span class="icon icon-plus"></span> Registreeri uus äriklient</a></p></li>
+              </ul>
+            </li>
+            <li class="dropdown-header has-child"><h6><a href="#">Minu andmed</a></h6>
+              <ul>
+                <li><a>bloop</a></li>
+              </ul>
+            </li>
+            <hr>
+            <li class="dropdown-header"><h6><a href="#">Välju </a></h6></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- end / generating content by script -->
+
+</nav>
+
+<nav class="sub-menu hidden-xs ">
+  <div class="container">
+    <h3 class="sr-only">Minu konto</h3>
+    <ul class="list-inline">
+      <li><a href="#">Minu konto</a></li>
+      <li><a href="#">Täitmisel tellimused</a></li>
+      <li><a href="#">Tellimused</a></li>
+      <li><a href="#">Salvestatud ostukorvid</a></li>
+      <li class="active"><a href="#">Minu lemmikud</a></li>
+      <li><a href="#">Järelmaks</a></li>
+      <li><a href="#">Kontaktisikud</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+<section class="ee-breadcrumbs hidden-xs hidden-sm">
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Arvutid ja lisad</a></li>
+      <li class="active">Sülearvutid</li>
+    </ul>
+  </div>
+</section>
+
+<div class="container" > 
+  <div class="row">
+    <div class="col-md-3 hidden-sm hidden-xs">
+
+        <ul class="ee-sidenav">
+   <li >
+     <a class="firstlevel selected" href="#">
+       <h6>Minu lemmikud</h6>
+     </a>
+   </li>
+   <li>
+     <a class="firstlevel" href="#"><h6>Soovinimekiri</h6></a>
+   </li>
+   <li>
+    <br>
+    <label for="">Lisa nimekiri</label>
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">Lisa</button>
+        </span>
+      </div>
+   </li>
+ </ul> 
+
+
+
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+
+
+
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-9 ee-product-boxes">
+
+        <div class="row minimal-header hidden-md hidden-lg">
+  <ul class="breadcrumb">
+    <li><a href="#">Minu e-pood</a></li>
+    <li class="active">Minu lemmikud</li>
+  </ul>
+  <h1>Minu lemmikud</h1>
+</div>
+
+<div class="row ee-compare">
+  <div class="navbar navbar-default" role="compare">
+    <ul class="list-inline navbar-left">
+      <li><a href="list-view-phones.html" class="ee-iconbutton ee-list"></a></li>
+      <li><a href="block-view-phones.html" class="ee-iconbutton ee-block"></a></li>
+    </ul>
+    <ul class="list-inline navbar-right">
+      <li><span><a href="">Tootevõrdlus:</a></span></li>
+      <li>
+        <figure>
+          
+          <a type="button" class="add icon icon-add" aria-hidden="true"></a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row ee-filterbar">
+  <div class="navbar navbar-inverse" role="filtering">
+    <ul class="nav navbar-nav navbar-left">
+      <li >
+        <a href="javascript:void(0);" data-toggle="collapse" data-target="#js-filter-fav">Näita kuuluvust kaubagruppi <span class="icon icon-arrow-down"></span></a>
+      </li>
+      <!-- <li>
+        <ul class="ee-filter-content visible-sm visible-xs">
+          <div id="js-filter-fav" class="row collapse">
+            <ul class="nav nav-pills container-fluid"> 
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+                <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+            </ul>
+
+            <div class="text-right col-xs-12">
+              <button type="button" class="btn btn-primary">Tühista valikud</button>
+              <button type="button" class="btn btn-primary">Vali</button>
+            </div>
+          </div>
+        </ul>
+      </li> -->
+      <li class="visible-xs visible-sm">
+        <a href="#" data-toggle="dropdown">Näita kuuluvust nimekirja <span class="icon icon-arrow-down"></span></a>
+        <ul class="dropdown-menu ">
+          <li><a href="">Lemmikud</a></li>
+          <li><a href="">Soovinimekiri</a></li>
+          <li><a href="">Fav0</a></li>
+        </ul>
+      </li>
+      <li class="visible-xs visible-sm">
+        <a href="#" data-toggle="dropdown">Lisa nimekiri <span class="icon icon-arrow-down"></span></a> 
+        <ul class="dropdown-menu ">
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-
+              btn">
+                <button class="btn btn-default" type="button">Lisa</button>
+              </span>
+            </div>
+          </form>
+      </ul>
+      </li>
+      <li>
+        <a href="#" id="alertbtn2" >Kustuta nimekiri <span class="icon icon-delete close-btn"></span></a> 
+      </li>
+    </ul>
+    <p class="navbar-text navbar-right"><strong>Minu lemmikud</strong>, kokku 12 asja.</p> 
+  </div>
+</div>
+  <div id="js-filter-fav" class="row collapse ee-filter-content">
+
+    <ul class="nav nav-pills"> 
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+        <li><a class="btn btn-primary inactive" role="button">Lauaarvutid<span class="badge">4</span></a></li>
+    </ul>
+
+    <div class="text-right">
+      <button type="button" class="btn btn-primary">Tühista valikud</button>
+      <button type="button" class="btn btn-primary">Vali</button>
+    </div>
+  </div>
+
+
+
+ 
+
+        <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
+<div class="row">
+  <section class="tsr-section-productAndService-listing ">
+    <div class="product" id="content-placeholder-phones-boxes"></div>
+  </section>
+</div>
+
+<script id="product-phones-boxes-template" type="text/x-handlebars-template">
+
+  {{#phones}}
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+    <div class="tsr-module-product ">
+      {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">{{ribbon.text}}</span></span></span></figure>
+      {{/if}}
+      <div class="ee-favorite-dropdown">
+        <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li class='current'><a class='current' href="favorite-page.html"><span class="ee-favorite active"></span>Favs0 </a></li>
+          <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
+          <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
+        </ul>
+      </div>
+
+      <figure class="tsr-product-image">
+        <a href="detail.html">
+          <img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+        </a>
+      </figure>
+      <div class="tsr-product-content">
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
+
+        {{#if client_price}}
+        <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
+        {{else}} {{#if normal_price}}
+        <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
+        {{else}}
+        <p class="tsr-product-price"></p>
+          {{/if}}
+        {{/if}}
+        <a href="#" class="ee-compare"> Võrdle </a>
+      </div>
+    </div>
+  </div>
+
+  {{/phones}}
+</script>
+
+<!--         {{#if colors}}
+          <ul class="tsr-product-colors">
+          {{#each colors}}
+            <li class="accent {{this}}"></li>
+          {{/each}}
+          </ul>
+          {{else}}
+          <ul class="tsr-product-colors ee-hidden-xs">
+          </ul>
+        {{/if}} -->
+
+<!--       <div class="tsr-product-colors dropup">
+      {{#if colors}}
+        <button class="ee-colors btn btn-link dropdown-toggle " data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
+        {{/if}}
+      </div> -->
+
+
+
+ 
+
+    </div>
+  </div>
+</div>
+
+<section class="tsr-section-support tsr-secondary">
+  <div class="container">
+
+    <a href="#" class="tsr-module-support icon icon-leasing">
+      <h6>Elioni järelmaks</h6>
+    </a>  
+
+    <a href="#" class="tsr-module-support icon icon-transport">
+      <h6>Transport e-poes</h6>
+    </a>  
+
+    <a href="#" class="tsr-module-support icon icon-help">
+      <h6>Abiinfo</h6>
+    </a>  
+
+    <a href="#" class="tsr-module-support icon icon-settings">
+      <h6>Remont ja hooldus</h6>
+    </a>                  
+
+  </div><!-- // tsr-container -->
+</section><!-- tsr-section-support" END -->
+<footer>
+    <div class="container-no-gutter">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Elion</a></h2>
+                <ul class="list-group">
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/ettevottest">Ettevõttest</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/ettevottest#teliaSonera">TeliaSonera</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/tule-toole">Tule tööle</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/elion/lepingud-ja-tingimused">Lepingud ja tingimused</a></li>
+                  <li class="list-group-item"><a href="https://www.elion.ee/kontakt/hinnakirjad">Hinnakirjad</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Infoportaal</a></h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/uudised">Uudised ja artiklid</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/pressinurk">Pressinurk</a></li>
+                    <li class="list-group-item"><a href="http://foorum.elion.ee/foorum/index.php">Foorum</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/infoportaal/digitark">Digitark</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Kontakt</a></h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://www.elion.ee/kontakt/kontaktinfo">Kontaktinfo</a></li>
+                    <li class="list-group-item"><a href="https://pood.elion.ee/category/list/132/abi-ja-info-kontaktid">E-poe info</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/ariklient/arendajale">Projektide kooskõlastamine</a></li>
+                    <li class="list-group-item"><a href="https://www.elion.ee/ariklient/arendajale/liinirajatiste-j%C3%A4relevalve">Liinirajatiste järelvalve</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <h2><a href="#">Elion soovitab </a></h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="http://leiunurk.elion.ee/">Leiunurk</a></li>
+                    <li class="list-group-item"><a href="http://www.minutv.ee/">MinuTV</a></li>
+                    <li class="list-group-item"><a href="http://www.ilmataat.ee/">Ilmataat</a></li>
+                    <li class="list-group-item"><a href="http://www.neti.ee/">NETI</a></li>
+                    <li class="list-group-item"><a href="http://live.hot.ee/">Hot</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- SOCIAL BLOCK -->
+    <div class="social-block">
+        <div class="container-no-gutter">
+            <div class="row">
+                <div class="col-sm-3 col-md-3">
+
+                    <div class="media">
+                      <a class="pull-left" href="#link0">
+                        <span class="icon icon-private_services"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">Erakliendi teenindus:</h5>
+                        <span class="">kirjuta meile või helista 165</span>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link1">
+                        <span class="icon icon-business_services"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">Ärikliendi teenindus:</h5>
+                        <span class="">kirjuta meile või helista 1551</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link2">
+                        <span class="icon icon-buy_2"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">E-poe klienditeenindus</h5>
+                        <span class="hidden-sm hidden-xs">kirjuta või helista 650 7030</span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="media">
+                      <a class="pull-left" href="#link3">
+                        <span class="icon icon-facebook"></span>
+                      </a>
+                      <div class="media-body">
+                        <h5 class="media-heading">Elioni uudised ja teenindus</h5>
+                        <span class="hidden-sm hidden-xs">Facebookis</span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside class="back-to-top visible-xs">
+        <div class="close-up-btn-bar" data-toggle="scroll-up"><span class="icon icon-arrow-up"></span><p>back to top</p></div>
+    </aside>
+</footer>
+
+    <script src="assets/js/vendor/jquery.js"></script> 
+<!--     // <script src="assets/js/vendor/common.js"></script>  -->
+<!--     // <script src="assets/js/vendor/paintbrush.js"></script>  -->
+<!--     // <script src="assets/js/vendor/enquire.min.js"></script>  -->
+    <script src="assets/js/vendor/handlebars-v1.3.0.js"></script> 
+<!--     // <script src="assets/js/vendor/matchMedia.js"></script> 
+    // <script src="assets/js/vendor/matchMedia.addListener .js"></script>  -->
+
+
+<script src='assets/js/rapid.js'></script>
+<!-- General handlebars -->
+    <script src="assets/js/handlebars/hbs-mainnav.hbs"></script> <!-- FOR MAIN MENU -->
+    <script src="assets/js/handlebars/hbs-product-list.hbs"></script> <!-- FOR AUTOCOMPLETE -->
+
+    <script>
+      // 2nd level 
+      // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+$(document).ready(function(){
+  $('.ee-sidenav li  a').click(function(e){
+    if ($(this).attr('class') != 'selected'){
+      $(this).addClass('selected');
+      $('a').not(this).removeClass('selected');
+    }
+    else {
+      $(this).removeClass('selected');
+    }
+    e.preventDefault();
+  });
+
+  // 2nd level folDer
+  // function handleClick()
+  // {
+  //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
+  // }
+  // document.getElementById('jsFiltersMoreText').onclick=handleClick;
+  $('.js-slidetoggle').click(function(e) {
+    $(this).parents().next('.js-togglable').slideToggle('slow');
+    e.preventDefault();
+  });
+
+   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+    // SLIDER SCRIPT
+  $("#js-priceslider").slider({
+      tooltip: 'hide'
+    });
+    $("#js-priceslider").on('slide', function(slideEvt) {
+    $(".js-pricesliderValMin").text(slideEvt.value[0]);
+    $(".js-pricesliderValMax").text(slideEvt.value[1]);
+  });
+
+
+});
+
+
+// Alerts logic
+  $('#alertbtn').click(function() {
+    if ( !$('#alert1').is( '.in' ) ) {
+       $('#alert1').addClass('in');
+    }
+  });
+
+  $('#alertbtn2').click(function() {
+    if ( !$('#alert2').is( '.in' ) ) { 
+       $('#alert2').addClass('in');
+    }
+  });
+
+  $('#successbtn').click(function() {
+    if ( !$('#success1').is( '.in' ) ) {
+       $('#success1').addClass('in');
+
+       setTimeout(function() {
+          $('#success1').removeClass('in');
+       }, 3200);
+    }
+  });
+
+  $('#infobtn').click(function() {
+    if ( !$('#your-uniq-ID-123').is( '.in' ) ) {
+       $('#your-uniq-ID-123').addClass('in');
+
+       setTimeout(function() {
+          $('#your-uniq-ID-123').removeClass('in');
+       }, 4800);
+    }
+  });
+
+    // DETAIL POPOVER
+    $('[data-toggle="popover"]').popover();
+    $('body').on('click', function (e) {
+      $('[data-toggle="popover"]').each(function () {
+          if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+              $(this).popover('hide');
+          }
+      });
+    });
+  </script>
+
+</body>
+</html>  
+<script src="assets/js/handlebars/hbs-filter.hbs"></script>
+<script src="assets/js/handlebars/hbs-menu.hbs"></script>
+<script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>

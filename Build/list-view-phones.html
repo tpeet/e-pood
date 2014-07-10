@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
 
-<title>Elion E-pood</title>
+<title>Title</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"> 
@@ -27,11 +27,11 @@
         <!-- / end -->
 
 
-<meta property="og:title" content="Elion E-pood" />
+<meta property="og:title" content="Title" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="#" />
 <meta property="og:image" content="#" />
-<meta property="og:description" content="Responsive e-shop based on TS brandzone grid" />
+<meta property="og:description" content="Description" />
 <meta property="og:latitude" content="47.00000" />
 <meta property="og:longitude" content="7.00000" />
 <meta property="og:street-address" content="Address" />
@@ -45,8 +45,8 @@
 <meta name="twitter:site" content="@username">
 <meta name="twitter:creator" content="@username">
 <meta name="twitter:url" content="#">
-<meta name="twitter:title" content="Elion E-pood">
-<meta name="twitter:description" content="Responsive e-shop based on TS brandzone grid">
+<meta name="twitter:title" content="Title">
+<meta name="twitter:description" content="Description">
 <meta name="twitter:image" content="#">
 
 <meta name="robots" content="index,follow"/>
@@ -308,7 +308,7 @@
                         <li class="dropdown-header has-child promotion">
                           <h6> <a href="#">Uued tooted </a></h6>
                           <ul>
-                            <li class='current'><a class='current' href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
+                            <li><a href="detail.html"><img src="assets/img/header/{{id}}.png" style="width: 100%;"></a></li>
                             <li>
                               <a href="#" class="hidden-xs">
                             <h3>{{name}}</h3>
@@ -486,7 +486,7 @@
             </div>
         </li>
 
-        <li class="current dropdown menu-large">
+        <li class="dropdown menu-large">
           <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown" role="button"><span class="icon icon-search"></span></a>
           <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Search">
@@ -506,7 +506,7 @@
 <script id="product-list-template" type="text/x-handlebars-template">
 
   {{#products}}
-  <a class="current list-group-item {{selected}}" href="detail.html">
+  <a class="list-group-item {{selected}}" href="detail.html">
     <figure class="search-item-image">
       <img src="assets/img/{{id}}.jpg" id="img{{id}}">
     </figure>
@@ -627,8 +627,6 @@
 </nav>
 
 </header>
-
-
 <section class="ee-breadcrumbs hidden-xs hidden-sm">
   <div class="container">
     <ul class="breadcrumb">
@@ -638,870 +636,194 @@
   </div>
 </section>
 
-<section class="ee-product-detail">
+<div class="container" > 
+  <div class="row">
+    <div class="col-md-3 hidden-sm hidden-xs">
 
-  <div class="container">
-    <div class="ee-compare detail">
-  <ul class="list-inline navbar-right">
-    <li><span><a href="">Tootevõrdlus</a></span></li>
-    <li>
-      <figure>
-        <img src="http://lorempixel.com/30/30/">
-        <a type="button" class="close" aria-hidden="true">&times;</a>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="http://lorempixel.com/30/30/">
-        <a type="button" class="close" aria-hidden="true">&times;</a>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="http://lorempixel.com/30/30/">
-        <a class="close" aria-hidden="true">&times;</a>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="http://lorempixel.com/30/30/">
-        <a type="button" class="close" aria-hidden="true">&times;</a>
-      </figure>
-    </li>
-    <li>
-      <figure>
-        <img src="http://lorempixel.com/30/30/">
-        <a type="button" class="close" aria-hidden="true">&times;</a>
-      </figure>
-    </li>
+      <div id="content-placeholder-menu"></div> 
+  <script id="menu-template" type="text/x-handlebars-template">
+  <ul class="ee-sidenav">
+    {{#sidemenu}}
+
+      {{#if sub}} 
+        <li>
+          <a class="firstlevel"><h6>{{parent}}</h6></a>
+          <ul id="{{href}}">
+
+            {{#each sub}}
+            <li><a href="#"><h6>{{this}}</h6></a></li>
+            {{/each}}
+          </ul>
+        </li>
+        {{else}}
+        <li>
+          <a class="firstlevel" href="#"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
+
+    {{/sidemenu}}
   </ul>
-</div> 
-    <div class="row" id="content-placeholder-detail"></div>
-  </div>
-</section>
-
-<script id="product-detail-template" type="text/x-handlebars-template">
-
-{{#with products.[1]}}
-
-<div class="col-sm-7 col-sm-push-5 fixedheight">
-  <h1><small>{{name}}</small></h1>
-  <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
-  <h2> {{{intro}}} </h2>
-  <h2 class="ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h2>
-  
-
-    <div class="panel-group bundle" id="bundles">
-  <a data-toggle="collapse" data-parent="#bundles" href="#bundleOne">
-    Tasuta kaasa Elion uue nutiTV pult S3 Samsungi telerile
-  </a>
-  <div id="bundleOne" class="panel-collapse collapse tsr-forms">
-    <div class="panel-body">
-     <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/92974_33/200x200/pult_esikylg_01_1--1_300dpi%20copy.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-1"><input type="checkbox"  id="radio-3" name="defaultRadio1"></label>
-          <h4 class="media-heading"> Elion uue nutiTV pult S3 Samsungi telerile</h4>
-          Pult on eelseadistatud juhtima Samsungi teleris olevat Elioni nutiTV rakendust. <br> Hind eraldi ostes <span class="ee-special-price"> 11€</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <a data-toggle="collapse" data-parent="#bundles" href="#bundleTwo">
-    Tasuta kaasa fotokaamerakott Fujifilm SC-XF1
-  </a>
-  <div id="bundleTwo" class="panel-collapse collapse tsr-forms">
-    <div class="panel-body">
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/75451_8/400x400/fujifilm-vutlar-sc-xf1-pruun-44337%20copy.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-1"><input type="checkbox"  id="radio-1" name="defaultRadio"></label>
-          <h4 class="media-heading"> fotokaamerakott Fujifilm SC-XF1 pruun</h4>
-          Spetsiaalselt Fujifilm SC-XF1 digikaamerale mõeldud kott. Spetsiaalselt Fujifilm SC-XF1 digikaamerale mõeldud kott. <br> Hind eraldi ostes <span class="ee-special-price">49€</span>
-        </div>
-      </div>
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/75439_7/200x200/fujifilm-vutlar-sc-xf1-must-44334%20copy.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-2"><input type="checkbox"  id="radio-2" name="defaultRadio"> </label>
-          <h4 class="media-heading"> fotokaamerakott Fujifilm SC-XF1 must</h4>
-          Spetsiaalselt Fujifilm SC-XF1 digikaamerale mõeldud kott. Spetsiaalselt Fujifilm SC-XF1 digikaamerale mõeldud kott.
-          <br>
-          Hind eraldi ostes <span class="ee-special-price">49€</span>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <a data-toggle="collapse" data-parent="#bundles" href="#bundleThree">
-    Tasuta kaasa arvutikaitse 2 kuuks.
-  </a>
-  <div id="bundleThree" class="panel-collapse collapse tsr-forms">
-    <div class="panel-body">
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/90103_14/200x200/Arvutikaitse%20copy.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-5"><input type="checkbox"  id="radio-5" name="defaultRadio"> </label>
-          <h4 class="media-heading"> Elion Arvutikaitse</h4>
-      Arvutikaitse tarkvara kaitseb sinu arvutit viiruste, rämpsposti ja nuhkavara eest ning võimaldab piirata laste ligipääsu sobimatutele veebilehtedele. <br>
-        
-        Pakume 2-kuulist tasuta prooviperioodi kõigile klientidele, kes varem pole meie arvutikaitse tarkvara kasutanud.
-        <br>
-        Arvutikaitse tarkvara töötab operatsioonisüsteemidega Microsoft Windows XP, Vista, Windows 7 ja Windows 8.
-        <br> Edaspidi rakendub litsentsitasu <span class="ee-special-price">1.85 €</span> / kuus arvuti kohta
-        </div>
-      </div>
-      
-      
-
-    </div>
-  </div>
-  <hr>
-  <a data-toggle="collapse" data-parent="#bundles" href="#bundleFour">
-    Pakime tellitud kauba kingituseks ja anname kaasa head soovid.
-  </a>
-  <div id="bundleFour" class="panel-collapse collapse tsr-forms">
-    <div class="panel-body">
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97731_10/200x200/Elion%20kinkepakk.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-6"><input type="checkbox"  id="radio-6" name="defaultRadio"> </label>
-          <h4 class="media-heading"> Elion Soovidega kinkepakk</h4>
-          Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!
-          <br>
-          Sooduskomplekti hind <span class="ee-special-price">52 €</span>
-          <br>
-          Sinu võit 0,6 €
-        </div>
-      </div>
-      <div class="media">
-        <a class="pull-left" href="#">
-          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="https://pood.elion.ee/pictures/97728_9/200x200/Elion%20kinkepakk%20Soovidega.jpg" style="width: 64px; height: 64px;">
-        </a>
-        <div class="media-body">
-          <label for="radio-6"><input type="checkbox"  id="radio-6" name="defaultRadio"> </label>
-          <h4 class="media-heading"> Elion Soovidega kinkepakk</h4>
-          Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!
-          <br>
-          Sooduskomplekti hind <span class="ee-special-price">52 €</span>
-          <br>
-          Sinu võit 0,6 €
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-</div>
-  <div class="hidden-xs"> 
-    <div class="tsr-product-colors">
-      <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
-      </ul>
-    </div>
-
-    {{#if normal_price}}
-    <p class="tsr-product-price">Tavahind: {{normal_price}}
-    {{/if}}
-    {{#if special_price}}
-    <br>Sinu võit: 300 €</p>
-    <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-    <p>Kuumakse: 12 €</p>
-    {{/if}}
-
-    <div class="row ee-actions">
-      <div class="col-md-5 col-sm-6">
-        <button class="tsr-btn tsr-btn-100  ee-btn-buy"><i class="icon icon-buy_2"></i>Lisa ostukorvi</button>
-      </div>
-    </div>
-    
-    <ul class="list-inline ee-linkicons">
-    <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
-     <li><a href="#" class="ee-comments">Arvamused (5)</a></li>
-     <li><a href="#" class="ee-compare">Võrdle</a></li>
-     <li><a href="#" class="ee-favorite">Lemmik</a></li>
-   </ul>
-   <div class="panel collapse ee-transportaccordion" id="transport-{{id}}" data-parent="#{{id}}">
-  <div class="panel-body">
-    <h3>E-poest tellides </h3>
-    <p> saad kauba kätte juba <strong>homme, 14.04.2014</strong> (kehtib kojutellimusele Tallinna piires).  </p>
-      <p> Kojutellimuse hind kulleriga 3.50
-        <br> Smartposti pakiautomaadiga hind 1.90 <br> Eesti posti pakiautomaadiga hind 2.90 <br>
-          
-      </p>
-
-      <p>Võid ka ostule ise poodi järele minna. <br>
-        Ostes e-poest saad kindel olla, et sinu soovitud toodet pole vahepeal ära ostetud. <br>Saadavust esindustes on viimati värskendatud 13.04.2014 kell 18:13:10 <br>
-    </p>
-    <h3>Tallinn</h3>
-  </div>
-
-  <div class="panel-group ee-accordion" id="{{id}}">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseOne">
-            Endla 45, Harjumaa - Tallinn (Kristiine)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div class="col-sm-5">
-            <strong>Aadress:</strong>
-            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
-            <strong>Lahtiolekuajad </strong>
-            <p>E-P: 10.00-21.00 </p>
-            <p>
-              <a href="">pood.kristiine@elion.ee</a>
-            </p>
-
-            <p>
-              <a href="">Näita kaarti</a>
-            </p>
-          </div>
-          <div class="col-sm-7">
-            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseTwo">
-            Paldiski mnt 102, Harjumaa - Tallinn (Rocca al Mare)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseThree">
-            Suur-Sõjamäe 4, Harjumaa - Tallinn (Ülemiste)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <h3>Uus linn</h3>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseUus">
-            Endla 45, Harjumaa - Tallinn (Kristiine)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseUus" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div class="col-xs-5">
-            <strong>Aadress:</strong>
-            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
-            <strong>Lahtiolekuajad </strong>
-            <p>E-P: 10.00-21.00 </p>
-            <p>
-              <a href="">pood.kristiine@elion.ee</a>
-            </p>
-
-            <p>
-              <a href="">Näita kaarti</a>
-            </p>
-          </div>
-          <div class="col-xs-7">
-            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h3>Tarnija</h3>
-  <table class="table">
-    <tbody>
-      <tr>
-        <td>Alfonso Suur</td>
-        <td>Laoseis: 0</td>
-        <td>Saabub lattu: 22.04.2015</td>
-        <td>Kogus: 12</td>
-      </tr>
-      <tr>
-        <td>Fafaa</td>
-        <td>Laoseis: 8</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-</div> 
-  </div>
-   
-</div>
-
-
-
-<div class="col-sm-5 col-sm-pull-7 ee-detailview">
-  {{#if firstflash}}
-  <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
-  {{/if}}
-  {{#if secondflash}}
-  <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-  {{/if}}
-
-  <div id="js-imagerotator" class="js-imagerotator tsr-product-image">
-    <ul class="slides">
-      {{#each minipics_id}}
-        <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg"></li>
-      {{/each}}
-    </ul>
-  </div>
-</div>
-
-<div class="col-sm-7 col-sm-push-5 visible-xs">
-    <div class="tsr-product-colors">
-      <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
-        <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
-      </ul>
-    </div>
-
-  {{#if normal_price}}
-  <p class="tsr-product-price">Tavahind: {{normal_price}}
-  {{/if}}
-  {{#if special_price}}
-  <br>Sinu võit: 300 €</p>
-  <p class="tsr-product-price ee-special-price"><span>Soodushind: {{special_price}}</span></p>
-  <p>Kuumakse: 12 €</p>
-  {{/if}}
-
-  <div class="row ee-actions">
-    <div class="col-sm-5">
-      <button class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i>Lisa ostukorvi</button>
-      <ul class="list-inline ee-linkicons">
-      <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
-     <li><a href="#" class="ee-comments">Arvamused (5)</a></li>
-     <li><a href="#" class="ee-compare">Võrdle</a></li>
-     <li><a href="#" class="ee-favorite">Lemmik</a></li>
-   </ul>
-      
-    </div>
-    <div class="panel collapse ee-transportaccordion" id="transport-{{id}}" data-parent="#{{id}}">
-  <div class="panel-body">
-    <h3>E-poest tellides </h3>
-    <p> saad kauba kätte juba <strong>homme, 14.04.2014</strong> (kehtib kojutellimusele Tallinna piires).  </p>
-      <p> Kojutellimuse hind kulleriga 3.50
-        <br> Smartposti pakiautomaadiga hind 1.90 <br> Eesti posti pakiautomaadiga hind 2.90 <br>
-          
-      </p>
-
-      <p>Võid ka ostule ise poodi järele minna. <br>
-        Ostes e-poest saad kindel olla, et sinu soovitud toodet pole vahepeal ära ostetud. <br>Saadavust esindustes on viimati värskendatud 13.04.2014 kell 18:13:10 <br>
-    </p>
-    <h3>Tallinn</h3>
-  </div>
-
-  <div class="panel-group ee-accordion" id="{{id}}">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseOne">
-            Endla 45, Harjumaa - Tallinn (Kristiine)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseOne" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div class="col-sm-5">
-            <strong>Aadress:</strong>
-            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
-            <strong>Lahtiolekuajad </strong>
-            <p>E-P: 10.00-21.00 </p>
-            <p>
-              <a href="">pood.kristiine@elion.ee</a>
-            </p>
-
-            <p>
-              <a href="">Näita kaarti</a>
-            </p>
-          </div>
-          <div class="col-sm-7">
-            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseTwo">
-            Paldiski mnt 102, Harjumaa - Tallinn (Rocca al Mare)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseThree">
-            Suur-Sõjamäe 4, Harjumaa - Tallinn (Ülemiste)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse">
-        <div class="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        </div>
-      </div>
-    </div>
-    <h3>Uus linn</h3>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseUus">
-            Endla 45, Harjumaa - Tallinn (Kristiine)
-          </a>
-        </h4>
-      </div>
-      <div id="collapseUus" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div class="col-xs-5">
-            <strong>Aadress:</strong>
-            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
-            <strong>Lahtiolekuajad </strong>
-            <p>E-P: 10.00-21.00 </p>
-            <p>
-              <a href="">pood.kristiine@elion.ee</a>
-            </p>
-
-            <p>
-              <a href="">Näita kaarti</a>
-            </p>
-          </div>
-          <div class="col-xs-7">
-            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h3>Tarnija</h3>
-  <table class="table">
-    <tbody>
-      <tr>
-        <td>Alfonso Suur</td>
-        <td>Laoseis: 0</td>
-        <td>Saabub lattu: 22.04.2015</td>
-        <td>Kogus: 12</td>
-      </tr>
-      <tr>
-        <td>Fafaa</td>
-        <td>Laoseis: 8</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
-</div> 
-    
-  </div>
-  
-</div>
-
-<div class="col-sm-5 col-sm-pull-7 ">
-
-    
-     <ul class="socialcount socialcount-small" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Soovita Facebookis" target="_blank"><span class="icon icon-facebook-inverse"></span><span class="count">Soovita</span></a></li>
-  <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Jaga Twitteris" target="_blank"><span class="icon icon-twitter-inverse"></span><span class="count">Tweet</span></a></li>
-  <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Jaga Google Plussis" target="_blank"><span class="icon icon-googleplus-inverse"></span><span class="count">+1</span></a></li>
-</ul> 
-</div>
-
-{{/with}}
-</script>
-
-<!--     <div class="col-md-5  col-xs-6" ><a href="#" class="ee-comments">Arvamused (5)</a></div>
-    <div class="col-md-3   col-xs-6"><a href="#" class="ee-compare">Võrdle</a></div>
-   <div class="col-md-4   col-xs-5"><a href="#" class="ee-favorite">Lemmik</a></div> --> 
-
-<section class="tsr-section-divider">
-  <div class="container">
-    <h6>
-      Soovid osta järelmaksuga?
-    </h6>    
-  </div>
-</section>
-
-<section class="ee-section-leasing">
-  <div class="container">
-    <div class="row tsr-forms">
-      <div class="col-md-3">
-        <p>Periood:</p>
-          <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-        
-      </div>
-      <div class="col-md-3">
-        <p>Sissemakse:</p>
-        <div class="select-container"><select><option selected>Populaarsemad enne</option><option>iPhone</option><option>Samsung</option></select></div>
-      </div>
-      <div class="col-md-3">
-        <p>Kuumakse:</p>
-        <p class="ee-product-price ee-product-price-lg"><span>84,89 €</span></p>
-      </div>
-      <div class="col-md-3">
-        <a href="#">Logi sisse, et näha personaalseid tingimusi</a>
-      </div>
-    </div>
-    <p class="ee-upper-distance">
-      <small>Krediidi kulukuse määr on 26,6% aastas järgmistel näidistingimustel: kauba summa 500€, tagasimaksmise tähtaeg 48-kuud, intress 21,9%. Tegemist on finantsteenuse reklaamiga. Järelmaksu pakkujaks on Elion Ettevõtted AS. Enne tehingu sõlmimist tutvu täpsemate järelmaksu tingimustega ning vajaduse korral konsulteeri asjatundjaga.</small>
-    </p>
-  </div>
-</section> 
-
-<section class="tsr-section-divider">
-  <div class="container">
-    <h6>
-      Rohkem infot?
-    </h6>    
-  </div>
-</section>
-
-     <section class="ee-tab-to-accordion ">
-  <div class="container padding-reset">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified" id="TabsResponsive">
-      <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
-      <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
-      <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
-      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted (5)</a></li>
-    </ul>
-  </div>
-</section>
-<section class="ee-tab-to-accordioncontent ">
-  <div class="tab-content">
-    <div class="tab-pane fade in visible-print" id="general-info">
-      <div class="container ee-upper-distance">
-        <p><strong>Samsungi uudse disainlahendusega F8500 teler on varustatud kõikide võimalike lisadega, mis teeb teleri vaatamise tõeliseks elamuseks.</strong></p>
-        <p>Samsung F8500 Slim LED-teler on pakub kvaliteetset vaatamiskogemust ning näitab Sulle koduseid meelelahutuse võimalusi. 55’’ 3D LED ekraan, Full HD 1920 x 1080 pikslit, Dolby Digital Plus, Dolby Pulse helisüsteem, 3D HyperReal Engine pildiparandussüsteem.</p>
-        <p><strong>Elioni nutiTV kasutamiseks vajab see teler ka Elioni internetiühendust. NB! Teenuse kasutamiseks on vajalik ka Thomson TG784, TG789 või Inteno DG301 ruuter.</strong></p>
-        <ul class="ee-justified-list">
-          <li>Elegantne disain</li>
-          <li>Täiustatud omadused nagu näiteks häälkäskluste tuvastamine ja liigutustega juhtimine</li>
-          <li>Smart Hubi sotsiallehekülg tagab alati suhtlusringi keskmes olemise</li>
-          <li>Vaata Facebookis ja Twitteris enda sõprade lemmikvideosid</li>
-          <li>Micro Dimming Ultimate ja Clear Motion Rate tagavad kvaliteetse pildi</li>
-        </ul>
-        <h1><small>Kasulikud lingid</small></h1>
-        <p><a href="#">Loe lähemalt tootja kodulehelt siit</a></p>
-        <p><a href="#">Abiinfo nutiTV Samsungi telerites</a></p>
-      </div>
-    </div>
-    <div class="tab-pane fade visible-print" id="technical-info">
-      <div class="container padding-reset">
-        <div id="content-placeholder-technical-data"></div>
-        <script id="technical-data-template" type="text/x-handlebars-template">
-        {{#technical}}
-          <div class="col-sm-6 padding-reset">
-            <table class="table table-bordered table-hover">
-              <thead>
-                <tr>
-                  <th colspan="2">{{heading}}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {{#each data}}
-                  <tr>
-                    <td > <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-                    </td>
-                    <td>
-                      {{value}}
-                    </td>
-                  </tr>
-                {{/each}}
-              </tbody>
-            </table>
-          </div>
-        {{/technical}}
-        </script>
-      </div>
-    </div>
-    <div class="tab-pane fade hidden-print" id="reviews">
-      <section class="ee-review-add">
-  <div class="container tsr-forms">
-    <div class="row">
-      <div class="col-sm-4"> 
-        <p>Soovita sõbrale</p>
-        <ul class="socialcount socialcount-small" data-url="https://pood.elion.ee/" data-facebook-action="recommend" data-counts="true" data-share-text="Elioni e-pood">
-  <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://pood.elion.ee/" title="Soovita Facebookis" target="_blank"><span class="icon icon-facebook-inverse"></span><span class="count">Soovita</span></a></li>
-  <li class="twitter"><a href="https://twitter.com/intent/tweet?text=https://pood.elion.ee/" title="Jaga Twitteris" target="_blank"><span class="icon icon-twitter-inverse"></span><span class="count">Tweet</span></a></li>
-  <li class="googleplus"><a href="https://plus.google.com/share?url=https://pood.elion.ee/" title="Jaga Google Plussis" target="_blank"><span class="icon icon-googleplus-inverse"></span><span class="count">+1</span></a></li>
-</ul>
-      </div>
-      <div class="col-sm-4 ">
-        <p>Mitu tärni annad?</p>
-          <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
-      </div>
-      <div class="col-sm-4 text-right js-slidetoggle">
-        <p>Mis on toote juures hea? Mis ei ole hea?</p>
-        <button class="btn btn-primary">Lisa oma arvamus</button>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="ee-review-answer-add js-togglable" style="display: none;">
-  <div class="container tsr-forms">
-    <div class="row">
-      <div class="col-xs-12">
-        <h4>Vasta</h4>
-        <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
-      </div>
-    </div>
-    <form action="">
-      <div class="row ee-input-aside">
-        <div class="col-sm-4">
-          <label class="sr-only" for="Nimi">Nimi</label>
-          <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
-          <label class="sr-only" for="E-post">E-post</label>
-          <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
-        </div>
-        <div class="col-sm-8">
-          <label class="sr-only" for="E-post">Arvamus</label>
-          <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
-        </div>
-      </div>
-      <div class="row ee-action-submit">
-        <div class="col-sm-4">
-          <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-          <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
-        </div>
-        <div class="col-sm-4 ee-captcha">
-          <img src="assets/img/other/captcha.png" alt="">
-          <button class="btn btn-link"><i class="icon icon-sync"></i></button>
-          <label class="sr-only" for="captcha">Kontrollkood</label>
-          <input type="text" id="captcha" name="captcha" />
-          <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-        </div>
-        <div class="col-sm-4  text-right">
-          <span>Mitu tärni annad?</span>
-          <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
-
-         <div class="ee-sendreview">
-            <button class="btn btn-link">Loobu</button>
-           <button class="btn btn-primary">Saada arvamus</button>
-         </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-      <section class="tsr-section-divider tsr-color-purple">
-        <div class="container">
-          <h6>
-            Teised arvavad
-          </h6>    
-        </div>
-      </section>
-      <section class="ee-reviewarea">
-  <div id="content-placeholder-reviews-detail"></div>
-  <script id="reviews-detail-template" type="text/x-handlebars-template">
-  {{#reviews}}
-    <section class="ee-reviews">
-      <article class="ee-reviewed-initial">
-        <div class="container">
-          <div class="row ee-review-body">
-            {{#if starred}}
-              <input type="number" name="rating" id="rating-{{name}}" class="rating" value="{{starred}}" />
-            {{/if}}
-            <div class="col-xs-11">
-              <h6>
-              {{#if elion}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" title="Elioni töötaja" data-content=" Arendusosakonna juhataja "> <i class="icon icon-support "></i></a>
-              {{/if}}
-              {{name}}
-              </h6>
-              <p class="text-muted">{{date}}</p>
-
-              <p>{{{body}}}</p>
-            </div>
-            <div class="ee-review-respond text-right">
-              <p class="js-slidetoggle">
-                <a href="#">Vasta</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <section class="ee-review-answer-add js-togglable" style="display: none;">
-  <div class="container tsr-forms">
-    <div class="row">
-      <div class="col-xs-12">
-        <h4>Vasta</h4>
-        <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
-      </div>
-    </div>
-    <form action="">
-      <div class="row ee-input-aside">
-        <div class="col-sm-4">
-          <label class="sr-only" for="Nimi">Nimi</label>
-          <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
-          <label class="sr-only" for="E-post">E-post</label>
-          <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
-        </div>
-        <div class="col-sm-8">
-          <label class="sr-only" for="E-post">Arvamus</label>
-          <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
-        </div>
-      </div>
-      <div class="row ee-action-submit">
-        <div class="col-sm-4">
-          <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-          <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
-        </div>
-        <div class="col-sm-4 ee-captcha">
-          <img src="assets/img/other/captcha.png" alt="">
-          <button class="btn btn-link"><i class="icon icon-sync"></i></button>
-          <label class="sr-only" for="captcha">Kontrollkood</label>
-          <input type="text" id="captcha" name="captcha" />
-          <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-        </div>
-        <div class="col-sm-4  text-right">
-          <span>Mitu tärni annad?</span>
-          <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
-
-         <div class="ee-sendreview">
-            <button class="btn btn-link">Loobu</button>
-           <button class="btn btn-primary">Saada arvamus</button>
-         </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-      </article>
-
-      {{#each answer}}
-      <article class="ee-reviewed-answer">
-        <div class="container">
-          <div class="row ee-review-body">
-              {{#if starred}}
-              <input type="number" name="rating" id="rating-{{name}}" class="rating" value="{{starred}}" />
-              {{/if}}
-            <div class="col-xs-10 col-xs-offset-1">
-              <h6>
-              {{#if elion}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="right" data-title="{{name}}" data-content=" Peeter Karolin töötab Elionis infoarhitektina. "> <i class="icon icon-support "></i></a>
-              {{/if}}
-              {{name}}
-              </h6>
-              <p class="text-muted">{{date}}</p>
-              <p>{{{body}}}</p>
-            </div>
-            <div class="ee-review-respond  text-right">
-              <p class="js-slidetoggle">
-                <a href="#">Vasta</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <section class="ee-review-answer-add js-togglable" style="display: none;">
-  <div class="container tsr-forms">
-    <div class="row">
-      <div class="col-xs-12">
-        <h4>Vasta</h4>
-        <p>Vastuse sisestamise tingimuseks on, et vastus ei tohi sisaldada vulgaarseid väljendeid ega mõttetusi</p>
-      </div>
-    </div>
-    <form action="">
-      <div class="row ee-input-aside">
-        <div class="col-sm-4">
-          <label class="sr-only" for="Nimi">Nimi</label>
-          <input type="text" value="" id="Nimi" placeholder="Nimi"  autocapitalize="off" autocorrect="off">
-          <label class="sr-only" for="E-post">E-post</label>
-          <input type="text" value="" placeholder="E-post" id="E-post"  autocapitalize="off" autocorrect="off" autocomplete="off">
-        </div>
-        <div class="col-sm-8">
-          <label class="sr-only" for="E-post">Arvamus</label>
-          <textarea spellcheck="false" placeholder="Mis on toote juures hea? Mis ei ole hea?"></textarea>
-        </div>
-      </div>
-      <div class="row ee-action-submit">
-        <div class="col-sm-4">
-          <label for="check-1"><input type="checkbox" checked id="check-1" /> Peida e-posti aadress</label>
-          <label for="check-2"><input type="checkbox" id="check-2" /> <span class="ee-labeltext">Teavita mind postitustest sellel tootel</span></label>
-        </div>
-        <div class="col-sm-4 ee-captcha">
-          <img src="assets/img/other/captcha.png" alt="">
-          <button class="btn btn-link"><i class="icon icon-sync"></i></button>
-          <label class="sr-only" for="captcha">Kontrollkood</label>
-          <input type="text" id="captcha" name="captcha" />
-          <p>Arvamuse salvestamiseks palun sisestada pildil kujutatud kontrollkood lahtrisse</p>
-        </div>
-        <div class="col-sm-4  text-right">
-          <span>Mitu tärni annad?</span>
-          <input type="number" data-clearable="Loobu" data-max="5" data-min="1" name="rating" id="rating-1" class="rating" />
-
-         <div class="ee-sendreview">
-            <button class="btn btn-link">Loobu</button>
-           <button class="btn btn-primary">Saada arvamus</button>
-         </div>
-        </div>
-      </div>
-    </form>
-  </div>
-</section>
-      </article>
-      {{/each}}
-    </section>
-  {{/reviews}}
   </script>
-  </section>
+
+<!-- http://jsfiddle.net/D2RLR/251/ add active-->
+
+<!-- was: 
+ <ul class="ee-sidenav" id="sidemenu">
+    {{#sidemenu}}
+
+      {{#if sub}} 
+        <li>
+          <a class="collapsible collapsed" data-toggle="collapse" data-target="#{{href}}" data-parent="#sidemenu"><h6>{{parent}}</h6></a>
+          <ul class="ee-sidenav-sub collapse" id="{{href}}">
+
+            {{#each sub}}
+            <li ><a href="#"><h6>{{this}}</h6></a></li>
+            {{/each}}
+          </ul>
+        </li>
+        {{else}}
+        <li>
+          <a href="javascript:void(0);"><h6>{{parent}} </h6></a>
+        </li>
+        {{/if}}
+
+    {{/sidemenu}}
+  </ul> -->
+
+
     </div>
-    <div class="tab-pane fade ee-similar-products" id="similar-products">
-      <div class="container">
-        <!-- Product boxes -->
+
+    <div class="col-sm-12 col-md-9 ee-product-boxes">
+
+      <div class="row minimal-header hidden-md hidden-lg">
+  <ul class="breadcrumb">
+    <li><a href="#">Telefonid</a></li>
+    <li class="active">Mobiiltelefonid</li>
+  </ul>
+  <h1>Mobiilitelefonid</h1>
+</div>
+
+<!-- Ad area -->
+<div class="row ee-innerad">
+  <a href="">
+    <img src="assets/img/other/lion_novkamp_Elion_700x95_EST.png" alt="">
+    <div class="tsr-tactical-textPanel">
+    <!--       <header>Hakkab juba looma</header> -->
+      <span>Samsungi teleritega näed <br> uut nutiTV-d  ilma digiboksita</span>
+    </div>
+  </a>
+</div>
+
+
+<div class="row ee-compare">
+  <div class="navbar navbar-default" role="compare">
+    <ul class="list-inline navbar-left">
+      <li class='current'><a href="list-view-phones.html" class="current ee-iconbutton ee-list"></a></li>
+      <li><a href="block-view-phones.html" class="ee-iconbutton ee-block"></a></li>
+    </ul>
+    <ul class="list-inline navbar-right">
+      <li><span><a href="">Tootevõrdlus:</a></span></li>
+      <li>
+        <figure>
+          
+          <a type="button" class="add icon icon-add" aria-hidden="true"></a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="row ee-filterbar">
+  <div class="navbar navbar-inverse" role="filtering">
+    <ul class="nav navbar-nav navbar-left">
+      <li class="dropdown hidden-xs">
+        <a href="#" data-toggle="collapse" data-target="#js-filter">Näita filtreid <span class="icon icon-arrow-down"></span></a>
+      </li>
+
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown">Populaarsemad enne <span class="icon icon-arrow-down"></span></a>
+        <ul class="dropdown-menu inverse-dropdown">
+          <li><a href="">Populaarsemad enne</a></li>
+          <li><a href="">Odavamad enne</a></li>
+          <li><a href="">Kallimad enne</a></li>
+          <li><a href="">Uuemad enne</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="navbar-text navbar-right">Mobiiltelefonid, 32 toodet</p>
+  </div>
+  <div id="js-filter" class="collapse ee-filter-content">
+    <div class="hidden-xs">
+    <div id="content-placeholder-filter"></div> 
+
+<p>Hinnavahemik: <strong class="ee-special-price"><span class="js-pricesliderValMin"></span> - <span class="js-pricesliderValMax "></span> €</strong></p>
+
+<input  type="text" id="js-priceslider" value="" data-slider-min="250" data-slider-max="450" data-slider-step="5" data-slider-value="[250,450]"/>
+
+<div id="jsFiltersMore" class="collapse">Need muud filtrid, mis juurde tulevad, siia. Deemn, Nupu nimi...</div>
+
+<div class="text-right">
+  <input type="button" id="jsFiltersMoreText" class="btn btn-primary" data-toggle="collapse" data-target="#jsFiltersMore" value="Veel valikud" />
+  <button type="button" class="btn btn-primary">Tühista valikud</button>
+  <button type="button" class="btn btn-primary">Filtreeri</button>
+</div>
+
+  <script id="filter-template" type="text/x-handlebars-template">
+
+  {{#parameters}}
+  <p>{{caption}} <a data-container="body" data-toggle="popover" data-placement="right" title="{{caption}}" data-content="{{tooltip}}" role="button"><i class="icon icon-help" ></i></a> </p>
+  <ul class="nav nav-pills"> 
+    {{#each param}}
+      <li><a class="btn btn-primary inactive" role="button">{{para}}<span class="badge">{{amount}}</span></a>
+      </li>
+      {{/each}}
+  </ul>
+  {{/parameters}}
+
+  </script>
+
+    </div>
+  </div>
+</div> 
+
+      <!-- Product boxes listing, eg Arvutid 2nd level page-->
+
+<!-- Product boxes -->
 <div class="row">
-  <section class="tsr-section-productAndService-listing ">
-    <div class="product" id="content-placeholder-fittingproducts-detail"></div>
+  <section class="tsr-section-productlist">
+
+    <div id="content-placeholder-phones-boxes"></div>
   </section>
 </div>
 
-<script id="fittingproducts-detail-template" type="text/x-handlebars-template">
+<script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
-  {{#products}}
-  <div class="col-xs-12 col-sm-3 col-md-3">
+  {{#phones}}
+
     <div class="tsr-module-product">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
@@ -1509,202 +831,244 @@
       <div class="ee-favorite-dropdown">
         <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
+          <li><a href="favorite-page.html"><span class="ee-favorite active"></span>Favs0 </a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
           <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
         </ul>
       </div>
+
       <figure class="tsr-product-image">
-      <a class='current' href="detail.html"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/detail-addons/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
-      </figure>
-    
-      <div class="tsr-product-content">
+      <a href="detail.html"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></a>
 
-        {{#if firstflash}}
-        <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
-        {{/if}}
-        {{#if secondflash}}
-        <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-        {{/if}}
-        <h6 class="tsr-product-header"><a class='current' href="detail.html">{{name}}</a></h6>
-      
-        {{#if colors}}
-          <ul class="tsr-product-colors">
-          {{#each colors}}
-            <li class="accent {{this}}"></li>
-          {{/each}}
-          </ul>
-          {{else}}
-          <ul class="tsr-product-colors hidden-xs"></ul>
-        {{/if}}
 
-        {{#if special_price}}
-        <p class="tsr-product-price ee-special-price">Soodushind <span>{{special_price}}</span></p>
-        {{else}} {{#if normal_price}}
-        <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
-        {{else}}
-        <p class="tsr-product-price"></p>
-          {{/if}}
-        {{/if}}
-        <a href="#" class="ee-compare"> Võrdle </a>
+      <div class="tsr-product-colors hidden-xs">
+        <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
       </div>
-    </div>
+
+
+      </figure>
+
+      <div class="visible-xs">
+        <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
+        <div class="ee-linkicons">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
+        </div>
+      </div>
+
+
+
+      <div class="tsr-product-content">
+        <h6 class="tsr-product-header "><a href="">{{name}}</a></h6>
+
+        <div class="row ee-linkicons ">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
+
+        </div>
+
+
+<div class="panel collapse ee-transportaccordion" id="transport-{{id}}" data-parent="#{{id}}">
+  <div class="panel-body">
+    <h3>E-poest tellides </h3>
+    <p> saad kauba kätte juba <strong>homme, 14.04.2014</strong> (kehtib kojutellimusele Tallinna piires).  </p>
+      <p> Kojutellimuse hind kulleriga 3.50
+        <br> Smartposti pakiautomaadiga hind 1.90 <br> Eesti posti pakiautomaadiga hind 2.90 <br>
+          
+      </p>
+
+      <p>Võid ka ostule ise poodi järele minna. <br>
+        Ostes e-poest saad kindel olla, et sinu soovitud toodet pole vahepeal ära ostetud. <br>Saadavust esindustes on viimati värskendatud 13.04.2014 kell 18:13:10 <br>
+    </p>
+    <h3>Tallinn</h3>
   </div>
 
-  {{/products}}
-</script>
+  <div class="panel-group ee-accordion" id="{{id}}">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseOne">
+            Endla 45, Harjumaa - Tallinn (Kristiine)
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="col-sm-5">
+            <strong>Aadress:</strong>
+            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
+            <strong>Lahtiolekuajad </strong>
+            <p>E-P: 10.00-21.00 </p>
+            <p>
+              <a href="">pood.kristiine@elion.ee</a>
+            </p>
 
-
-
-
-
-
-
-
+            <p>
+              <a href="">Näita kaarti</a>
+            </p>
+          </div>
+          <div class="col-sm-7">
+            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="tab-pane cheap" id="non-free-campaigns">
-  <div class="container">
-    <h3>
-      See toode saadaval ka järgmistes sooduskomplektides
-    </h3>
-    <div class="list-group">
-      <div class="list-group-item">
-        <h4 class="list-group-item-heading">
-          <span><a href="/store-adaptiivne/productRedirect/A00011122">
-            <img src="https://pood-arendus.elion.ee/store-adaptiivne/pictures/84056_23/50x50/Lumia520_must%20eest.jpg" title="mobiiltelefon Nokia Lumia 520 (must)" alt="mobiiltelefon Nokia Lumia 520 (must)">
-          </a></span>
-          <span >+</span>
-          <span><a href="/store-adaptiivne/productRedirect/KR-95389">
-            <img src="https://pood-arendus.elion.ee/store-adaptiivne/pictures/62880_22/50x50/Front%20copy.jpg" title="mobiilikott Krusell Avenyn L Long (must)" alt="mobiilikott Krusell Avenyn L Long (must)">
-          </a></span>
-          mobiilikott Krusell Avenyn L Long (must)
-        </h4>
-        <p class="list-group-item-text">Sooduskomplekti hind:
-          <span class="tsr-product-price ee-special-price">168,98 €</span></p>
-          <p>Sinu võit: 7,97 €</p>
-          <a class="productAddToShoppingCartSingle btn btn-default" href="/store-adaptiivne/ShoppingCart/AddSalesCampaignBundleProductToOrderManual?productID=A00011122&amp;salesCampaignID=722&amp;bundleProductID=KR-95389">
-            <i class="icon icon-buy_2"></i>
-            Lisa ostukorvi
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseTwo">
+            Paldiski mnt 102, Harjumaa - Tallinn (Rocca al Mare)
           </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
         </div>
-        <div class="list-group-item">
-          <h4 class="list-group-item-heading">
-            <span><a href="/store-adaptiivne/productRedirect/A00011122">
-              <img src="https://pood-arendus.elion.ee/store-adaptiivne/pictures/84056_23/50x50/Lumia520_must%20eest.jpg" title="mobiiltelefon Nokia Lumia 520 (must)" alt="mobiiltelefon Nokia Lumia 520 (must)">
-            </a></span>
-            <span >+</span>
-            <span><a href="/store-adaptiivne/productRedirect/KR-95389">
-              <img src="https://pood-arendus.elion.ee/store-adaptiivne/pictures/62880_22/50x50/Front%20copy.jpg" title="mobiilikott Krusell Avenyn L Long (must)" alt="mobiilikott Krusell Avenyn L Long (must)">
-            </a></span>
-            mobiilikott Krusell Avenyn L Long (must)
-          </h4>
-          <p class="list-group-item-text">Sooduskomplekti hind:
-            <span class="tsr-product-price ee-special-price">168,98 €</span></p>
-            <p>Sinu võit: 7,97 €</p>
-            <a class="productAddToShoppingCartSingle btn btn-default" href="/store-adaptiivne/ShoppingCart/AddSalesCampaignBundleProductToOrderManual?productID=A00011122&amp;salesCampaignID=722&amp;bundleProductID=KR-95389">
-              <i class="icon icon-buy_2"></i>
-              Lisa ostukorvi
-            </a>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseThree">
+            Suur-Sõjamäe 4, Harjumaa - Tallinn (Ülemiste)
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <h3>Uus linn</h3>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" data-parent="#{{id}}" href="#collapseUus">
+            Endla 45, Harjumaa - Tallinn (Kristiine)
+          </a>
+        </h4>
+      </div>
+      <div id="collapseUus" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="col-xs-5">
+            <strong>Aadress:</strong>
+            <p>Endla 45, Harjumaa, 10615, Tallinn - Tallinn (Kristiine) </p>
+            <strong>Lahtiolekuajad </strong>
+            <p>E-P: 10.00-21.00 </p>
+            <p>
+              <a href="">pood.kristiine@elion.ee</a>
+            </p>
+
+            <p>
+              <a href="">Näita kaarti</a>
+            </p>
+          </div>
+          <div class="col-xs-7">
+            Valides kauba kätte saamise kohaks Kristiine keskuse Elioni poe, tuleb Teil arvesse võtta, et poes võib olla järjekord ning kohapeal võib minna oodatust rohkem aega. Mugavamalt saate tooted kätte tellides need kulleriga koju või kontorisse või valides kättesaamise kohaks pakiautomaadi.
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> 
 
-<section class="tsr-section-divider hidden-print">
-  <div class="container">
-    <h6>
-      Pildid ja videod
-    </h6>    
-  </div>
-</section>
+  <h3>Tarnija</h3>
+  <table class="table">
+    <tbody>
+      <tr>
+        <td>Alfonso Suur</td>
+        <td>Laoseis: 0</td>
+        <td>Saabub lattu: 22.04.2015</td>
+        <td>Kogus: 12</td>
+      </tr>
+      <tr>
+        <td>Fafaa</td>
+        <td>Laoseis: 8</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
-<section class="ee-full-slider hidden-print">
-  <div class="container">
-    <div class="flexslider ee-additional-image-lg" id="js-largeimage">
-      <ul class="slides">
-          <li><img src="assets/img/products/samsung_f8500_front_silver.jpg"/></li>
-          <li><img src="assets/img/products/samsung_f8500_Right-Angle_silver.jpg"/></li>
-<!--           <li><iframe id="player_1" src="http://player.vimeo.com/video/39683393?api=1&player_id=player_1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></li> -->
-      </ul>
-    </div>
-  </div>
-</section> 
+</div> 
 
-<section class="tsr-section-divider tsr-color-purple">
-  <div class="container">
-    <h6>
-      Sarnased tooted
-    </h6>    
-  </div>
-</section>
-<section class="tsr-carousel-listing-div"> 
-    <div class="container product">
-      <div class="tsr-slides" id="content-placeholder-slider-detail"></div>
 
-      <script id="slider-detail-template" type="text/x-handlebars-template">
-      {{#products}}
-      <div class="tsr-module-product">
-        {{#if ribbon}}
-          <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
-        {{/if}}
-        <div class="ee-favorite-dropdown">
-          <button class="ee-favorite btn btn-link dropdown-toggle" data-toggle="dropdown"></button>
-          <ul class="dropdown-menu dropdown-menu-right" role="menu">
-            <li><a href=""><span class="ee-favorite active"></span>Favs0 </a></li>
-            <li><a href=""><span class="ee-favorite"></span>Favs1</a></li>
-            <li><a href=""><span class="ee-favorite"></span>Favs2</a></li>
-          </ul>
-        </div>
-        <figure class="tsr-product-image"><img src="assets/img/products/{{id}}.jpg" class="original"><img src="assets/img/products/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/></figure>
-        <div class="tsr-product-content">
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
+        <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
+
+        <div class="row ee-actions">
+          {{#if flashes}}
+            <div class="col-sm-4"> &nbsp;
+              {{#if flash}}
+              <figure class="tsr-tactical-flash ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
+              {{/if}}
+              {{#if firstflash}}
+              <figure class="tsr-tactical-flash ee-flash-sm tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+              {{/if}}
+              {{#if secondflash}}
+              <figure class="tsr-tactical-flash ee-flash-sm tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+              {{/if}}
+            </div>
+            {{else}}
+              <div class="col-sm-4 hidden-xs"> </div>
           {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <h6 class="tsr-product-header">{{name}}</h6>
-
-          <p class="tsr-product-price">
-          {{#if special_price}}
-          Tavahind {{normal_price}} €<br> Sinu võit 10 €
-          </p>
-          <p class="ee-special-price tsr-product-price">
-          Soodushind <span>{{special_price}} €</span>
-          </p>
-          {{else}}
-          <p class="tsr-product-price ">
-          Tavahind <span>{{normal_price}} €</span>
-          {{/if}}
-          </p>
-          <button class="ee-compare btn btn-link"> Võrdle </button>
-        </div>
+      <div class="tsr-product-colors hidden-sm col-xs-6">
+        <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
+        <ul class="dropdown-menu dropdown-menu-right" role="menu">
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+        </ul>
       </div>
-      {{/products}}
-      </script>
+      <div class="col-sm-4 col-xs-6 ee-pricecol">
+        {{#if client_price}}
+        <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
+        {{else}} 
+        <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
+        {{/if}}
+        <p class="tsr-product-price">Kuumakse: 47,15 €</p>
+      </div>
+      <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></div>
+      </div>
 
+        <p>
+          {{#if campaign}}
+            <hr>
+            {{#each campaign}} 
+              <a href="#">{{this}} </a>
+            {{/each}}
+          {{/if}}
+        </p>
+
+
+      </div>
     </div>
-</section>
-
-<!-- <canvas id="canvas_img{{id}}" rel="img{{id}}" class="pildil6uend"></canvas> -->
 
 
-<!-- <div class="ee-accordion hidden-md hidden-large">
-  <div class="panel">
-    <div class="panel-heading">
-      <h6 class="panel-title">
-        <a href="javascript:void(0)" class="collapsed" data-toggle="collapse" data-target="#similarProducts">Sarnased tooted</a>
-      </h6>
+  {{/phones}}
+</script>
+
+
+<!-- KEEP FOR LATER 
+      // <ul class="tsr-product-colors">
+      //   {{#if colors}}
+      //   {{#each colors}}
+      //     <li class="accent {{this}}"></li>
+      //   {{/each}}
+      //   {{/if}}
+      // </ul>
+--> 
+
     </div>
   </div>
 </div>
-<div id="similarProducts" class="collapse">
-  <div class="hidden-md hidden-large">
-  </div>
-</div> -->
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -1931,15 +1295,13 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html>
-    <script src="assets/js/handlebars/hbs-product-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-technical-table.hbs"></script>
-    <script src="assets/js/handlebars/hbs-reviews.hbs"></script>
-    <script src="assets/js/handlebars/hbs-slider-detail.hbs"></script>
-    <script src="assets/js/handlebars/hbs-products.hbs"></script>
+</html> 
+<script src="assets/js/handlebars/hbs-filter.hbs"></script>
+<script src="assets/js/handlebars/hbs-menu.hbs"></script>
+<script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
 
-    <script type="text/javascript">
-    // require(['/assets/js/setup.js'], function (setup) {
-    //   require(['detail']);
-    // });
-    </script>
+<script type="text/javascript">
+// require(['./assets/js/setup'], function (setup) {
+//   require(['2nd-level']);
+// });
+</script>

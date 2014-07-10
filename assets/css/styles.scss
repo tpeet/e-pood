@@ -134,6 +134,30 @@
   left: 0;
 }
 
+
+// FOUND
+.ee-found-tabs {
+  .nav-tabs li a {
+    font-size: $font-size-h4;
+    &.active {
+      color: $text-color
+    }
+  }
+  table {
+    img {
+      height: 64px;
+      width: 64px;
+    }
+    td.blue-text {
+      font-size: $font-size-h4;
+      font-weight: 600;
+    }
+    td {
+      vertical-align: middle;
+    }
+  }
+}
+
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
 .navbar-default .user-menu.navbar-nav > li > a:after {

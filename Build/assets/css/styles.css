@@ -10543,6 +10543,9 @@ h1 small {
 .violet-text {
   color: #642887; }
 
+.blue-text {
+  color: #0083be; }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -11394,11 +11397,11 @@ section.tsr-section-productlist .tsr-module-product {
 
 section.ee-product-detail {
   margin-bottom: 30px; }
-  section.ee-product-detail .ee-comparebar.detail {
+  section.ee-product-detail .ee-compare.detail {
     min-height: 40px;
     margin-top: 10px; }
     @media (min-width: 992px) {
-      section.ee-product-detail .ee-comparebar.detail {
+      section.ee-product-detail .ee-compare.detail {
         margin-top: -47px; } }
   section.ee-product-detail h1 {
     line-height: 0.5;
@@ -11671,36 +11674,36 @@ section.ee-reviewarea {
     margin-bottom: 10px;
     margin-left: 10px; }
 
-.ee-comparebar .navbar {
+.ee-compare .navbar {
   border: none;
   margin-bottom: 5px;
   margin-top: 10px; }
-.ee-comparebar .navbar-right {
+.ee-compare .navbar-right {
   float: right;
   text-align: right;
   margin-right: 10px;
   width: 65%;
   min-width: 375px; }
   @media (min-width: 768px) {
-    .ee-comparebar .navbar-right {
+    .ee-compare .navbar-right {
       margin-right: 0;
       width: auto; } }
-.ee-comparebar .navbar-left {
+.ee-compare .navbar-left {
   width: 30%; }
   @media (min-width: 768px) {
-    .ee-comparebar .navbar-left {
+    .ee-compare .navbar-left {
       width: auto; } }
-.ee-comparebar ul {
+.ee-compare ul {
   margin-bottom: 0;
   display: inline-block; }
-.ee-comparebar .list-inline > li {
+.ee-compare .list-inline > li {
   padding-right: 0;
   vertical-align: middle;
   white-space: nowrap; }
-.ee-comparebar span {
+.ee-compare span {
   display: inline-block;
   line-height: 0.5; }
-.ee-comparebar figure {
+.ee-compare figure {
   -webkit-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
@@ -11708,23 +11711,37 @@ section.ee-reviewarea {
   height: 36px;
   width: 36px;
   overflow: hidden;
-  position: relative; }
-  .ee-comparebar figure img {
-    padding: 2px; }
-.ee-comparebar .close {
+  position: relative;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; }
+  .ee-compare figure:hover img {
+    opacity: 0.5; }
+  .ee-compare figure:hover .close {
+    opacity: 1; }
+  .ee-compare figure:hover .add {
+    opacity: 1;
+    text-decoration: none; }
+  .ee-compare figure img {
+    padding: 2px;
+    opacity: 1; }
+.ee-compare .close {
   position: absolute;
   color: #642887;
   font-size: 30px;
   top: -10px;
   left: -1px;
-  opacity: 0.8;
-  padding: 10px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -moz-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out; }
-  .ee-comparebar .close:hover {
-    opacity: 1; }
+  opacity: 0.6;
+  padding: 10px; }
+.ee-compare .add {
+  position: absolute;
+  color: #642887;
+  font-size: 25px;
+  top: -5px;
+  left: -5px;
+  opacity: 0;
+  padding: 10px; }
 
 .ee-filterbar .navbar-nav > li > a {
   line-height: 3;
@@ -11747,25 +11764,25 @@ section.ee-reviewarea {
   .ee-filterbar .navbar-text a {
     color: #fff; }
 
-.ee-comparebar ul,
+.ee-compare ul,
 .ee-filterbar ul {
   width: 100%; }
   @media (min-width: 992px) {
-    .ee-comparebar ul,
+    .ee-compare ul,
     .ee-filterbar ul {
       width: auto; } }
-.ee-comparebar ul,
-.ee-comparebar .navbar-text,
+.ee-compare ul,
+.ee-compare .navbar-text,
 .ee-filterbar ul,
 .ee-filterbar .navbar-text {
   padding-left: 10px; }
   @media (min-width: 768px) {
-    .ee-comparebar ul,
-    .ee-comparebar .navbar-text,
+    .ee-compare ul,
+    .ee-compare .navbar-text,
     .ee-filterbar ul,
     .ee-filterbar .navbar-text {
       padding-left: 0; } }
-.ee-comparebar .input-group,
+.ee-compare .input-group,
 .ee-filterbar .input-group {
   padding: 15px; }
 
@@ -12219,6 +12236,19 @@ header .megamenu .search-item-image,
   height: 100% !important;
   position: absolute;
   left: 0; }
+
+.ee-found-tabs .nav-tabs li a {
+  font-size: 21px; }
+  .ee-found-tabs .nav-tabs li a.active {
+    color: #333333; }
+.ee-found-tabs table img {
+  height: 64px;
+  width: 64px; }
+.ee-found-tabs table td.blue-text {
+  font-size: 21px;
+  font-weight: 600; }
+.ee-found-tabs table td {
+  vertical-align: middle; }
 
 .navbar-default .user-menu.navbar-nav > li > a:after {
   background-color: #51246B; }
