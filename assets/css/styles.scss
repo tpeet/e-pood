@@ -119,6 +119,15 @@
 //   }
 // }
 
+// http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
+@function set-notification-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return $purple-c; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}
+
 .swiffy-wrap { 
   position: relative;
   width: 100%;

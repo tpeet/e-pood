@@ -152,6 +152,18 @@ text-align: left;
   }
 }
 
+.ee-up {
+  position: fixed; 
+  bottom: 40px; 
+  right: 20px;
+  z-index: 5;
+  &:before {
+  @extend %format-icon;
+  color: inherit;
+  content: "\e66b";
+  }
+}
+
 .ee-plus-round {
   &:before {
   @extend %format-icon;

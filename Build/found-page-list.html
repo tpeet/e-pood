@@ -96,6 +96,7 @@
 </head>
 
 <body> 
+  <a href="#" id="top" class="ee-iconbutton ee-up"></a>
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -956,6 +957,11 @@ $(document).ready(function(){
               $(this).popover('hide');
           }
       });
+    });
+
+    $("a[href='#top']").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
     });
   </script>
 
