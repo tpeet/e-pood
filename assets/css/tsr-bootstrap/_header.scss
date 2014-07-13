@@ -21,14 +21,14 @@ header {
 
       &.collapsibleMainMenu-Search {
         > .form-horizontal {
-          padding: 25px 12px 50px 12px;
+          padding: 25px 12px 0px 12px;
         }
       }
 
       @media (max-width: $screen-md) {
         &.collapsibleMainMenu-Search {
           > .form-horizontal {
-            padding: 20px 12px 20px 12px;
+            padding: 20px 12px 0 12px;
           }
         }
       }

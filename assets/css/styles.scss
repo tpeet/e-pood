@@ -152,10 +152,42 @@
       font-size: $font-size-h4;
       font-weight: 600;
     }
-    td {
+    tbody > tr >  td {
       vertical-align: middle;
     }
+    tbody > tr:first-of-type > td {
+      border-top: none;
+    }
   }
+  .ee-btn-buy {
+    font-size: 1.06667em;
+    width: auto; 
+    font-weight: 500;
+    padding: 6px 12px;
+    margin: 12px 12px 0 0;
+  }
+  .ee-compare {
+    display: inline-block;
+    margin: 10px 10px 0 10px;
+     @include media-min($screen-sm) {
+    margin: 10px;
+    } 
+  }
+}
+
+
+.found-listed {
+  margin: 20px 0;
+  li {
+    margin-top: 10px;
+  }
+  strong {
+    color: $purple-c;
+  }
+}
+
+.text-link {
+  color: inherit;
 }
 
 // TEMPORARY HACKS, TO BE REMOVED

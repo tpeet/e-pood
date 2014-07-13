@@ -491,35 +491,15 @@
           <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Search">
               
-              <form class="tsr form-horizontal" role="form">
+              <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
                   <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
-                    <div class="headerSearchResultWrapper list-group">
-  <div id="content-placeholder-product-list"></div>
-
-  <a class="search-advanced" href="/search?what=noki">
-    Vaata kõiki
-  </a>
-</div>
-
-<script id="product-list-template" type="text/x-handlebars-template">
-
-  {{#products}}
-  <a class="list-group-item {{selected}}" href="detail.html">
-    <figure class="search-item-image">
-      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
-    </figure>
-    <span class="search-item-title">{{name}}</span>
-  </a>
-
-  {{/products}}
-</script>
-
-
-
                   </div>
-                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default " type="button" value="Otsi" />
+                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
+                  <div class="col-xs-12 tsr-forms">
+                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
+                </div>
                 </div>
               </form> 
 
@@ -681,7 +661,7 @@
   <h1>Minu lemmikud</h1>
 </div>
 
-<div class="row ee-compare">
+<div class="row ee-comparebar">
   <div class="navbar navbar-default" role="compare">
     <ul class="list-inline navbar-left">
       <li><a href="list-view-phones.html" class="ee-iconbutton ee-list"></a></li>
@@ -1046,10 +1026,6 @@ $(document).ready(function(){
   //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
   // }
   // document.getElementById('jsFiltersMoreText').onclick=handleClick;
-  $('.js-slidetoggle').click(function(e) {
-    $(this).parents().next('.js-togglable').slideToggle('slow');
-    e.preventDefault();
-  });
 
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 

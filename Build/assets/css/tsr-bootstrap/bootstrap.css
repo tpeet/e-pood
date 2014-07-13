@@ -4175,10 +4175,10 @@ header {
     header .dropdown-menu .container, header .collapsibleMainMenu .container {
       background-color: #652d86; }
       header .dropdown-menu .container.collapsibleMainMenu-Search > .form-horizontal, header .collapsibleMainMenu .container.collapsibleMainMenu-Search > .form-horizontal {
-        padding: 25px 12px 50px 12px; }
+        padding: 25px 12px 0px 12px; }
       @media (max-width: 992px) {
         header .dropdown-menu .container.collapsibleMainMenu-Search > .form-horizontal, header .collapsibleMainMenu .container.collapsibleMainMenu-Search > .form-horizontal {
-          padding: 20px 12px 20px 12px; } }
+          padding: 20px 12px 0 12px; } }
       @media (max-width: 767px) {
         header .dropdown-menu .container, header .collapsibleMainMenu .container {
           padding-left: 0;

@@ -1,0 +1,45 @@
+<section class="row ee-found-tabs ee-tab-to-accordion">
+  <ul class="nav nav-tabs nav-justified" role="tablist" id="TabsResponsive">
+    <li class="active"><a href="#productfound" role="tab" data-toggle="tab">Otsingutulemused toodetest fraasile: <strong>no</strong></a></li>
+    <li class=""><a href="#otherfound" role="tab" data-toggle="tab">Otsingutulemused abitekstidest fraasile: no</a></li>
+  </ul>
+  <div id="foundTab" class="tab-content">
+    <div class="tab-pane fade in active" id="productfound">
+
+      <div id="content-placeholder-phones-boxes"></div> 
+      <script id="product-phones-boxes-template" type="text/x-handlebars-template">
+      
+      
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              {{#phones}}
+              <tr>
+                <td><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}"></td>
+                <td><h6>
+                  <a href="">{{name}}</a>
+                </h6></td>
+                <td class="blue-text">{{normal_price}}</td>
+                <td><a href="#" class="ee-compare"> Võrdle </a></td>
+                <td>
+                <a href="#" class="btn btn-default ee-btn-buy"> Lisa ostukorvi </a>
+                </td>
+              </tr>
+              {{/phones}}
+            </tbody>
+          </table>
+        </div>
+
+      </script>
+    </div>
+    <div class="tab-pane fade" id="otherfound">
+      <ul class="found-listed">
+        <li><a href="" class="text-link">Food truck fixie locavore, accusamus mcsweeney's marfa nulla <strong>singl</strong>e-origin coffee squid.</a></li>
+        <li><a href="" class="text-link">Exercitation +1 labore velit, blog sartorial PBR <strong>leg</strong>gings next level wes anderson artisan four loko farm-to-table craft beer twee.</a></li>
+        <li><a href="" class="text-link">Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. </a></li>
+        <li><a href="" class="text-link">Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</section>

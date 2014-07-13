@@ -135,10 +135,6 @@ $(document).ready(function(){
   //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
   // }
   // document.getElementById('jsFiltersMoreText').onclick=handleClick;
-  $('.js-slidetoggle').click(function(e) {
-    $(this).parents().next('.js-togglable').slideToggle('slow');
-    e.preventDefault();
-  });
 
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 

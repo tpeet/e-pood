@@ -9,6 +9,9 @@ header .navbar-default {
   border-color: $lightgrey-t;
   margin-bottom: -1px;
   margin-top: -1px;
+  .ee-labeltext {
+    color: #fff;
+  }
 }
 
 // .topnav.navbar, .ee-adminnav.navbar {

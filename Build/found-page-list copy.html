@@ -275,7 +275,7 @@
     <!-- menu for small screen -->
     <div class="navbar-header">
 
-      <a class="current navbar-brand"  href="index.html"></a> 
+      <a class="navbar-brand"  href="index.html"></a> 
 
       <div class="pull-right">
         <a class="navbar-toggle" href="#collapsibleMainMenu-Pages" data-toggle="collapse">
@@ -491,15 +491,35 @@
           <div class="dropdown-menu">
             <div class="container collapsibleMainMenu-Search">
               
-              <form class="tsr form-horizontal" role="form" action="found-page-block.html">
+              <form class="tsr form-horizontal" role="form">
                 <div class="form-group row">
                   <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
+                    <div class="headerSearchResultWrapper list-group">
+  <div id="content-placeholder-product-list"></div>
+
+  <a class="search-advanced" href="/search?what=noki">
+    Vaata kõiki
+  </a>
+</div>
+
+<script id="product-list-template" type="text/x-handlebars-template">
+
+  {{#products}}
+  <a class="list-group-item {{selected}}" href="detail.html">
+    <figure class="search-item-image">
+      <img src="assets/img/{{id}}.jpg" id="img{{id}}">
+    </figure>
+    <span class="search-item-title">{{name}}</span>
+  </a>
+
+  {{/products}}
+</script>
+
+
+
                   </div>
-                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
-                  <div class="col-xs-12 tsr-forms">
-                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
-                </div>
+                  <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default " type="button" value="Otsi" />
                 </div>
               </form> 
 
@@ -607,207 +627,130 @@
 </nav>
 
 </header>
-
-<!-- <section class="tsr-section-communictaion-primary" id="ad">
-  <div class="swiffy-wrap">
-    <iframe src="https://pood.elion.ee//picturesInternal/809/html5/index-et.html#pood.elion.ee" 
-          border="0"
-          scrolling="no"
-          allowtransparency="true"
-          width="100%"
-          height="100%"
-          style="border:0;"
-    >
-    </iframe>
+<section class="ee-breadcrumbs hidden-xs hidden-sm">
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="#">Arvutid ja lisad</a></li>
+      <li class="active">Sülearvutid</li>
+    </ul>
   </div>
-</section> -->
-
-<section class="tsr-section-communictaion-primary">
-  <div class="tsr-slides">
-  
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-1.jpg); ">  <!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" -->
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Vaata, uus e-pood!
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Hakkab juba looma <br> Aga Kui mul on pikem tekst?<br> Aga Kui mul on pikem tekst?</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-2.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-3.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-flash"><span>Hoi!</span></figure>
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-    <a href="#" style="background-image: url(assets/img/primary-banner/bg-slide-4.jpg);">
-      <div class="tsr-tactical-container">
-        <figure class="tsr-tactical-speach-bubble tsr-color-pink">
-          <header class="tsr-header">
-            Channel package?
-          </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
-        </figure>
-      </div>
-      <div class="container">
-        <div class="tsr-tactical-textPanel">
-          <header>Tegemist veel on. Palju.</header>
-          <span>The quick brown fox jumps over the lazy dog</span>
-        </div>
-      </div>
-    </a>
-  </div>
-
 </section>
 
+<div class="container" > 
+  
+  <div class="row">
 
+    <div class="col-xs-12 ee-product-boxes">
 
-<section class="tsr-section-promotion tsr-count-4"> 
-    <div class="container product">
+        <div class="row minimal-header hidden-md hidden-lg">
+  <ul class="breadcrumb">
+    <li><a href="#">Minu e-pood</a></li>
+    <li class="active">Minu lemmikud</li>
+  </ul>
+  <h1>Minu lemmikud</h1>
+</div>
 
-      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
-      <script id="offer-slider-template" type="text/x-handlebars-template">
-      {{#offers}}
-
-      <a href="detail.html" class="tsr-module-promotion">
+<div class="row ee-compare">
+  <div class="navbar navbar-default" role="compare">
+    <ul class="list-inline navbar-left">
+      <li><a href="list-view-phones.html" class="ee-iconbutton ee-list"></a></li>
+      <li><a href="block-view-phones.html" class="ee-iconbutton ee-block"></a></li>
+    </ul>
+    <ul class="list-inline navbar-right">
+      <li><span><a href="">Tootevõrdlus:</a></span></li>
+      <li>
         <figure>
-      <figure class="tsr-tactical-flash">
-        <div class="flashText-flash-normal ee-flashtext-container">
-          <div class="ee-big">72 $</div>
-          <div class="ee-small">Nii kiire</div>
-        </div>
-      </figure>
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
+          
+          <a type="button" class="add icon icon-add" aria-hidden="true"></a>
         </figure>
-        <div class="tsr-product-content">
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="http://lorempixel.com/30/30/">
+          <a type="button" class="close" aria-hidden="true">&times;</a>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</div>
 
-          <h6 class="tsr-product-header violet-text">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+<div class="row ee-filterbar">
+  <div class="navbar navbar-inverse" role="filtering">
+    <ul class="nav navbar-nav navbar-left">
+  
+
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown">Populaarsemad enne <span class="icon icon-arrow-down"></span></a>
+        <ul class="dropdown-menu inverse-dropdown">
+          <li><a href="">Populaarsemad enne</a></li>
+          <li><a href="">Odavamad enne</a></li>
+          <li><a href="">Kallimad enne</a></li>
+          <li><a href="">Uuemad enne</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="navbar-text navbar-right">Otsiti fraasi <strong>noki</strong>, leiti 32 vastet</p>
+  </div>
+</div> 
+        <section class="ee-found-tabs">
+  <ul id="foundTab" class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="#productfound" role="tab" data-toggle="tab">Otsingutulemused toodetest fraasile: <strong>no</strong></a></li>
+    <li class=""><a href="#otherfound" role="tab" data-toggle="tab">Otsingutulemused abitekstidest fraasile: no</a></li>
+  </ul>
+  <div id="foundTab" class="tab-content">
+    <div class="tab-pane fade in active" id="productfound">
+
+      <div class="product" id="content-placeholder-phones-boxes"></div> 
+      <script id="product-phones-boxes-template" type="text/x-handlebars-template">
+      
+      
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              {{#phones}}
+              <tr>
+                <td><img src="assets/img/phones/{{id}}.jpg" id="img{{id}}"></td>
+                <td><h6>
+                  <a href="">{{name}}</a>
+                </h6></td>
+                <td>Mobiiltelefonid</td>
+                <td class="blue-text">{{normal_price}}</td>
+                <td><a href="#" class="ee-compare"> Võrdle </a></td>
+                <td><a href="#" class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i> Lisa ostukorvi </a></td>
+              </tr>
+              {{/phones}}
+            </tbody>
+          </table>
         </div>
-      </a>
-      {{/offers}}
+
       </script>
     </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
-</section> 
-
- <!-- for large screen, hidden on small -->
-<section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
-  <div class="container">
-    <div class="row ">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Arvutid ja lisad</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>TV ja audio</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Foto, video, GPS</h6>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <h6>Telefonid</h6>
-      </div>
+    <div class="tab-pane fade" id="otherfound">
+      <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
     </div>
   </div>
 </section>
-<section class="ee-frontlinks">
-  <div class="ee-product-list-front container  hidden-xs hidden-sm">
-    <div class="row">
-      <div  id="content-placeholder-frontmenu1"></div>
-
-        <script id="front-menu-template1" type="text/x-handlebars-template">
-
-        {{#menu}}
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <ul class="nav nav-pills nav-stacked js-listedmenu-lg">
-            {{#each link }}
-
-            <li><a href="{{this.path}}">{{this.name}}</a></li>  
-            {{/each}}
-          </ul>
-          </div>
-
-        {{/menu}}
-
-        </script>
     </div>
   </div>
- <!-- for small screen, hidden on large -->
-  <div class="ee-product-list-front container visible-xs visible-sm" >
-    <div  id="content-placeholder-frontmenu"></div>
-    
-    <script id="front-menu-template" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked js-listedmenu">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
-  </div>
-</section>
-<a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button -->
-
-
-
-
- 
+</div>
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
@@ -830,7 +773,6 @@
 
   </div><!-- // tsr-container -->
 </section><!-- tsr-section-support" END -->
-
 <footer>
     <div class="container-no-gutter">
         <div class="row">
@@ -968,6 +910,10 @@ $(document).ready(function(){
   //     this.value = (this.value == 'Veel valikud' ? 'Vähem valikuid' : 'Veel valikud!');
   // }
   // document.getElementById('jsFiltersMoreText').onclick=handleClick;
+  $('.js-slidetoggle').click(function(e) {
+    $(this).parents().next('.js-togglable').slideToggle('slow');
+    e.preventDefault();
+  });
 
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
@@ -1031,13 +977,7 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html>
-
-<script src="assets/js/handlebars/hbs-frontmenu.hbs"></script>
-<script src="assets/js/handlebars/hbs-offers-mixed.hbs"></script>
-
-<script type="text/javascript">
-// require(['/assets/js/setup.js'], function (setup) {
-//   require(['front']);
-// });
-</script>
+</html>  
+<script src="assets/js/handlebars/hbs-filter.hbs"></script>
+<script src="assets/js/handlebars/hbs-menu.hbs"></script>
+<script src="assets/js/handlebars/hbs-phones-boxes.hbs"></script>
