@@ -1,0 +1,70 @@
+<div id="content-placeholder-compare-data" class="table-responsive"></div>
+<script id="compare-data-template" type="text/x-handlebars-template">
+  {{#comparision}}
+  
+    <div class="panel-group ee-accordion">
+    <div class="panel panel-default">
+      <div class="col-xs-12 col-sm-2">
+    <h4>Tooted võrdluses:</h4>
+    <a href="" class="btn btn-primary">Näita erinevusi</a>
+    <a href="" class="btn btn-primary">Peida detailid</a>
+    <a href="" class="btn btn-link ee-close">Tühjenda võrdlus</a>
+        </div>
+        {{#each prod}}
+        <div class="col-xs-2">
+    <figure><img src="{{img}}" alt=""></figure>
+    <h6><a href="">{{product}}</a></h6>
+    <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
+    <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
+        </div>
+        {{/each}}
+        </div>
+
+   {{#each param}}
+     <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" data-parent="#{{code}}" href="#{{headingid}}">
+            {{heading}}
+          </a>
+        </h4>
+      </div>
+    <div id="{{headingid}}" class="panel-collapse collapse in">
+      <div class="row">
+        <div class="col-sm-12">
+          
+          {{#each data}}
+            <div class="row">
+              <div class="col-xs-12 col-sm-2 text-center">
+                <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
+              </div>
+              <div class=" col-xs-2">
+                <p>{{value}}</p>
+              </div>
+              <div class=" col-xs-2">
+                <p>{{value1}}</p>
+              </div>
+              <div class=" col-xs-2">
+                <p>{{value2}}</p>
+              </div>
+              <div class=" col-xs-2">
+                <p>{{value3}}</p>
+              </div>
+              <div class=" col-xs-2">
+                <p>{{value4}}</p>
+              </div>
+            </div>
+          {{/each}}
+   
+        </div>
+      </div>
+    </div>
+     </div>
+     {{/each}}
+     
+   </div>
+  {{/comparision}}
+</script>
+
+
+

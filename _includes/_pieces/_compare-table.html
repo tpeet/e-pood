@@ -1,0 +1,59 @@
+<div id="content-placeholder-compare-data" class="table-responsive"></div>
+<script id="compare-data-template" type="text/x-handlebars-template">
+  {{#comparision}}
+  
+    <table class="table">
+    <tbody>
+      <tr>
+        <td class="col-xs-2  col-md-2"></td>
+        {{#each prod}}
+        <td class="col-xs-2  col-md-2">
+          <figure><img src="{{img}}" alt=""></figure>
+          <h6><a href="">{{product}}</a></h6>
+          <a href="" class="btn btn-default ee-btn-buy">Lisa ostukorvi</a>
+        </td>
+        {{/each}}
+      </tr>
+    </tbody>
+      </table>
+  
+   <div class="panel-group ee-accordion" id="{{code}}">
+   {{#each param}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="collapsed" data-parent="#{{code}}" href="#{{headingid}}">
+          {{heading}}
+        </a>
+      </h4>
+    </div>
+    <div id="{{headingid}}" class="panel-collapse collapse in">
+      <table class="table">
+        <tbody>
+          
+          {{#each data}}
+          <tr>
+            <td class="col-xs-2 col-md-2"><a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a></td>
+            <td class="col-xs-2 col-md-2">{{value}}<span class="icon icon-delete" style="color: #C41B79;"></span></td>
+            <td class="col-xs-2 col-md-2">
+            {{value1}} 
+              {{#if value1.Ei}}
+              <span class="icon icon-checkmark" style="color: #00B48C;"></span>
+              {{/if}}
+            </td>
+            <td class="col-xs-2 col-md-2">{{value2}}</td>
+          </tr>
+          {{/each}}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  {{/each}}
+  
+</div>
+  {{/comparision}}
+</script>
+
+
+

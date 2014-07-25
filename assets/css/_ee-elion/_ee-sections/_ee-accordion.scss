@@ -20,7 +20,7 @@
     padding: 0;
   }
   .panel-title a {
-    padding: 16px 15px;
+    padding: 16px 30px 15px;
     width: 100%;
     display: block;
     color: $purple-c;
@@ -37,6 +37,9 @@
       content: "\e6e3";
       float: right;
       line-height: 0.85;
+      position: absolute;
+      right: 5px;
+      bottom: 30%;
     }
   }
   .panel-group {

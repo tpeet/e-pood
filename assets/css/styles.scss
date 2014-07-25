@@ -184,7 +184,6 @@
   }
 }
 
-
 .found-listed {
   margin: 20px 0;
   li {
@@ -197,6 +196,18 @@
 
 .text-link {
   color: inherit;
+}
+
+/// COMPARE
+// **************
+.ee-product-compare {
+  .ee-btn-buy {
+    padding: 12px 16px;
+  }
+  .ee-btn-buy span {
+    display: none;
+  }
+
 }
 
 // TEMPORARY HACKS, TO BE REMOVED

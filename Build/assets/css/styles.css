@@ -10757,7 +10757,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     background: #4e256b;
     color: #fff; }
 
-.ee-list:before, .ee-block:before, .ee-up:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-accordion .panel-title a.collapsed:after,
+.ee-list:before, .ee-block:before, .ee-up:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-close:before, .ee-accordion .panel-title a.collapsed:after,
 .ee-tab-to-accordion .panel-title a.collapsed:after, .ee-accordion .panel-title a:after,
 .ee-tab-to-accordion .panel-title a:after {
   font-family: 'tsr-icons-all';
@@ -10824,6 +10824,11 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
 .ee-transport:before {
   content: "\e6d4"; }
 .ee-transport:hover:before {
+  color: #73369e; }
+
+.ee-close:before {
+  content: "\e651"; }
+.ee-close:hover:before {
   color: #73369e; }
 
 .rating-input:hover .ee-favorite:before,
@@ -11367,9 +11372,9 @@ section.tsr-section-productlist .tsr-module-product {
       z-index: 1; }
       .ee-innerad .tsr-tactical-textPanel span {
         margin: 10px 30px 12px 20px; }
-    .ee-innerad .ee-innerad .tsr-tactical-textPanel.blue {
+    .ee-innerad .tsr-tactical-textPanel.blue {
       background: #0083be; }
-    .ee-innerad .ee-innerad .tsr-tactical-textPanel.purple {
+    .ee-innerad .tsr-tactical-textPanel.purple {
       background: #642887; } }
 
 .ee-accordion {
@@ -11389,7 +11394,7 @@ section.tsr-section-productlist .tsr-module-product {
   padding: 0; }
 .ee-accordion .panel-title a,
 .ee-tab-to-accordion .panel-title a {
-  padding: 16px 15px;
+  padding: 16px 30px 15px;
   width: 100%;
   display: block;
   color: #642887;
@@ -11404,7 +11409,10 @@ section.tsr-section-productlist .tsr-module-product {
   .ee-tab-to-accordion .panel-title a:after {
     content: "\e6e3";
     float: right;
-    line-height: 0.85; }
+    line-height: 0.85;
+    position: absolute;
+    right: 5px;
+    bottom: 30%; }
 .ee-accordion .panel-group,
 .ee-tab-to-accordion .panel-group {
   margin: 0; }
@@ -12292,6 +12300,11 @@ header .megamenu .search-item-image,
 
 .text-link {
   color: inherit; }
+
+.ee-product-compare .ee-btn-buy {
+  padding: 12px 16px; }
+.ee-product-compare .ee-btn-buy span {
+  display: none; }
 
 .navbar-default .user-menu.navbar-nav > li > a:after {
   background-color: #51246B; }
