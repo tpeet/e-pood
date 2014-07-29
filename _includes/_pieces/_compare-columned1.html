@@ -7,23 +7,24 @@
 <div id="content-placeholder-compare-data" class=""></div>
 <script id="compare-data-template" type="text/x-handlebars-template">
   {{#comparision}}
-  
+  {{0}}
   <div class="panel-group ee-accordion" >
     <div class="panel panel-default table-responsive comparision-header" id="foo">
-      <div class="col-md-2 hidden-sm"></div>
-      {{#each prod}}
-      <div class="col-xs-2">
-        <img class="img-responsive" src="{{img}}" alt="">
-        <h6><a href="">{{product}}</a></h6>
-        <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
-        <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
+      <div class="panel-collapse" >
+        
+        {{#each prod}}
+        <div class="col-xs-2 five-items col-md-2 col-md-offset-1">
+          <figure><img class="img-responsive" src="{{img}}" alt=""></figure>
+          <h6><a href="">{{product}}</a></h6>
+          <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
+          <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
+        </div>
+        {{/each}}
       </div>
-      {{/each}}
     </div>
 
     {{#each param}}
-     <div class="panel panel-default">
-     {{#if heading}}
+     <div class="panel panel-default comparision-content" >
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" class="collapsed" data-parent="#foo" href="#{{headingid}}">
@@ -31,34 +32,32 @@
           </a>
         </h4>
       </div>
-      {{/if}}
     <div id="{{headingid}}" class="panel-collapse  in">
       <div class="col-xs-12">
         {{#each data}}
           <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
+            <div class="col-xs-12 col-md-2 compare-title ">
             {{#if description}}
               <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
               {{else}}
-              {{index}}
+              <p>{{index}}</p>
               {{/if}}
             </div>
-            <div class=" col-xs-2 ">
-              <p class="{{class}} compare-value">{{{value}}}</p>
+            <div class=" col-xs-2 five-items">
+              <p class="compare-value">{{{value}}}</p>
             </div>
-            <div class=" col-xs-2 ">
-              <p class="{{class}} compare-value">{{{value1}}}</p>
+            <div class=" col-xs-2 five-items">
+              <p class="compare-value">{{{value1}}}</p>
             </div>
-            <div class=" col-xs-2 ">
-              <p class="{{class}} compare-value">{{{value2}}}</p>
+            <div class=" col-xs-2 five-items">
+              <p class="compare-value">{{{value2}}}</p>
             </div>
-            <div class=" col-xs-2">
-              <p class="{{class}} compare-value">{{{value3}}}</p>
+            <div class=" col-xs-2 five-items">
+              <p class="compare-value">{{{value3}}}</p>
             </div>
-            <div class=" col-xs-2">
-              <p class="{{class}} compare-value">{{{value4}}}</p>
+            <div class=" col-xs-2 five-items">
+              <p class="compare-value">{{{value4}}}</p>
             </div>
-
           </div>
         {{/each}}
          

@@ -1,7 +1,7 @@
 var source   = $("#compare-data-template").html();
 var template = Handlebars.compile(source);
 
-var data = { comparision: [ 
+var data = { comparision: [  
 {
 prod: [{  
   product: "40'' 3D LED-teler Samsung H6670", 
@@ -23,15 +23,15 @@ prod: [{
   },
   {
   product: "40'' 3D LED-teler Samsung H6670", 
-  img: "https://pood.elion.ee/pictures/107728_5/130x130/Samsung%20H6670%20televiisor%20eestvaatest.jpg",
+  img: "https://pood.elion.ee/pictures/80699_26/130x130/0%20copy.jpg",
   code: "UE40H6670SLXXH",
   pay: "0 €",
-  leasing: "48 x 24,85 €",
+  leasing: "48 x 20,41 €",
   specialprice: "790 €",
   normalprice: "849 €"
   },
   {
-  product: "47'' LED-teler LG LB580V", 
+  product: "23,8'' LED-monitor/teler LG 23MA53D-PZ", 
   img: "https://pood.elion.ee/pictures/111196_3/130x130/LG%20LB580V%20teler%20eestvaatest.jpg",
   code: "47LB580V.AEE",
   pay: "0 €",
@@ -40,7 +40,7 @@ prod: [{
   normalprice: "849 €"
   },
   {
-  product: "47'' LED-teler LG LB580V", 
+  product: "42'' LED-teler LG LN5400", 
   img: "https://pood.elion.ee/pictures/111196_3/130x130/LG%20LB580V%20teler%20eestvaatest.jpg",
   code: "47LB580V.AEE",
   pay: "0 €",
@@ -51,364 +51,163 @@ prod: [{
   ],
 
   param: [
-  {
-  heading:  "Toote põhiomadused" ,
-  headingid: "tooteomadused", 
+  { 
     data: [
       {
-      index: "Diagonaal", 
-      value: '4,5 " (toll)', 
-      value1: "foo", 
-      value2: "hoo", 
-      value3: "joo",
-      value4: "final",
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "Tootekood", 
+      value: "UE40H6670SLXXH", 
+      value1: "UE40H6670SLXXH", 
+      value2: "UE40H6670SLXXH", 
+      value3: "UE40H6670SLXXH",
+      value4: "UE40H6670SLXXH"
       },
+    ]
+  },
+  {
+    data: [
       {
-      index: "Kaadrisagedus", 
-      value: '1000 Hz', 
-      value1: "foo", 
-      value2: "hoo", 
-      value3: "joo",
-      value4: "final",
-      description: "Näitab, kui kiiresti vahetab ekraan kaadreid ekraanil. Tavaline kaardisagedus on 50 Hz ehk siis 50 korda sekundis. Parema pildiparendus tarkvaraga telerid omavad kaardisagedust 100, 200 ja 400 Hz. 3D telepildi vaatamiseks peab kaardisagedus olema vähemalt 200 Hz." 
+      index: "Tarneaeg", 
+      value: "25.07.2014", 
+      value1: "25.07.2014", 
+      value2: "25.07.2014", 
+      value3: "25.07.2014",
+      value4: "25.07.2014"
       },
+    ]
+  },
+  {
+    data: [
       {
-      index: "LAN tugi", 
-      value: 'Jah',
-      value1: "foo", 
-      value2: "hoo", 
-      value3: "joo",
-      value4: "final", 
-      description: "Võimaldab telerit ühendada koduse arvutivõrguga, et suurel ekraanil mahamängida MP3 muusikat, DivX filme, JPG fotosid kodusest arvutist või koduselt võrgukettalt." 
+      index: "Sissemaks", 
+      value: "0 €", 
+      value1: "0 €",  
+      value2: "0 €",  
+      value3: "0 €", 
+      value4: "0 €", 
       },
+    ]
+  },
+  {
+    data: [
       {
-      index: "Sisseehitatud Wifi", 
-      value: 'Jah', 
-      value1: "foo", 
-      value2: "hoo", 
-      value3: "joo",
-      value4: "final",
-      description: "Saab vaadata üle interneti ühenduse teleris tootja poolt paigaldatud veebilehti – Youtube, Flickr või Picasa pildialbum, ilmateated, uudisteportaalid. Sisu uuenduste eest hoolitseb tootja, vaataja ise uusi veebilehti lisada ei saa." 
+      index: "Järelmaks", 
+      value: "48 x 24,85 €", 
+      value1: "48 x 24,85 €",  
+      value2: "48 x 24,85 €",  
+      value3: "48 x 24,85 €", 
+      value4: "48 x 24,85 €", 
       },
+    ]
+  },
+  { 
+    data: [
       {
-      index: "DLNA", 
-      value: 'Jah',
-      value1: "foo", 
-      value2: "hoo", 
-      value3: "joo",
-      value4: "final", 
-      description: "DLNA (Digital Living Network Alliance) on digitaalse meedia standard, mille abil on suutelised ühilduma erinevate tootjate kodused multimeedia seadmed – arvutid, telerid, võrgukettad, mobiiltelefonid, DVD/blu-ray mängijad jne. Niimoodi on võimalik, et arvuti kõvakettal või mobiiltelefoni flash mälus olevat meediat on võimalik maha mängida elutoa teleri ekraanil. Ühenduseks on kasutusel kodune arvutivõrk. Kasutakse sõltuvalt seadmest LAN või WiFi ühendust. Alliansiga on ühinenud üle 240 tootja." 
+      class: "ee-special-price",
+      index: "Soodushind", 
+      value: "790 €", 
+      value1: "-", 
+      value2: "195 €", 
+      value3: "399 €",
+      value4: "200 €"
       },
+    ]
+  },
+    { 
+    data: [
       {
-      index: "Skype", 
-      value: 'Jah', 
-      description: "Nutitelerite omadus teha Skype internetikõnesid teleri vahendusel. Videokõnede tegemiseks on vajalik kaamera, mis osadel mudelitel on juba telerisse sisseehitatud ning teistel mudelitel eraldi juurde ostetav. Selline Skype kaamera ühendatakse teleriga USB kaabli abil. Hetkel on selline võimalus olemas Panasonic, Samsung ning Sony valitud mudelitel." 
-      },
-      {
-      index: "Smart TV", 
-      value: 'Jah', 
-      description: "2011 aasta telerid sisaldavad „targa teleri“ funktsiooni, kus kasutades teleris olevat internetiühendust, on võimalik vaadata erinevaid videorakendusi, mängida mänge, kuulata muusikat ning osta tootja poest uusi rakendusi." 
+      index: "Hind", 
+      value: "790 €", 
+      value1: "649 €", 
+      value2: "195 €", 
+      value3: "399 €",
+      value4: "200 €"
       },
     ]
   },
     {
-  heading:  "Mõõdud ja kaal" , 
-  headingid: "moodudjakaal",
-    data: [
-      {
-      index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
-      value1: "Ei",
-      value2: "Jah",
-      },
-      {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani pind", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani suhe", 
-      value: '16:9', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani tüüp", 
-      value: 'LED', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Full HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-  {
   heading:  "Ekraani omadused" , 
   headingid: "ekraaniomadused",
     data: [
       {
+      index: "Diagonaal", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: "40''", 
+      value1: "47''",
+      value2: "28''",
+      value3: "42''",
+      value4: "28''",
+      },
+      {
+      index: "Diagonaal", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "101,6 cm", 
+      value1: "101,6 cm",
+      value2: "101,6 cm",
+      value3: "101,6 cm",
+      value4: "101,6 cm",
+      },
+      {
+      index: "Puutetundlik", 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "-", 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: "-",
+      },
+      {
       index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani pind", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani suhe", 
-      value: '16:9', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani tüüp", 
-      value: 'LED', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Full HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "HD Ready", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: '<span class="icon icon-checkmark green-text"></span>', 
       },
       {
       index: "Resolutsioon", 
-      value: '1920 x 1080 pikslit', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Pildiparandusprogramm", 
-      value: '3D HyperReal Engine', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Kaadrisagedus", 
-      value: '1000 Hz', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "2D->3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "3D prillid komplektis", 
-      value: '2 paari', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Aktiiv 3D tehnoloogia", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Passiiv 3D tehnoloogia", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ultra HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-
-  {
-  heading:  "Mugavus" ,
-  headingid: "mugavus", 
-    data: [
-      {
-      index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani pind", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: "1920 x 1080 pikslit", 
+      value1: "1920 x 1080 pikslit",
+      value2: "1920 x 1080 pikslit",
+      value3: "1920 x 1080 pikslit",
+      value4: "1920 x 1080 pikslit", 
       },
       {
       index: "Ekraani suhe", 
-      value: '16:9', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm",
+      value: "16:9", 
+      value1: "16:9",
+      value2: "16:9",
+      value3: "16:9",
+      value4: "16:9", 
       },
       {
       index: "Ekraani tüüp", 
-      value: 'LED', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "LED", 
+      value1: "LED",
+      value2: "LED",
+      value3: "LED",
+      value4: "LED",
       },
       {
-      index: "Full HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
       },
       {
-      index: "HD Ready", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Resolutsioon", 
-      value: '1920 x 1080 pikslit', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Pildiparandusprogramm", 
-      value: '3D HyperReal Engine', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Kaadrisagedus", 
-      value: '1000 Hz', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "2D->3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "3D prillid komplektis", 
-      value: '2 paari', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Aktiiv 3D tehnoloogia", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Passiiv 3D tehnoloogia", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ultra HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-  {
-  heading:  "Müügipakendi sisu" , 
-  headingid: "muugipakendisisu",
-    data: [
-      {
-      index: "Komplektis sisaldub", 
-      value: "   55'' 3D LED-teler F8500, 2 paari 3D-prille, IR pikenduskaabel, toitekaabel, kasutusjuhend, kaugjuhtimispult, patareid puldile", 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-  {
-  heading:  "Audio liidesed" , 
-  headingid: "audioliidesed",
-    data: [
-      {
-      index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-  {
-  heading:  "Video liidesed" ,
-  headingid: "videoliidesed", 
-    data: [
-      {
-      index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Diagonaal", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Ekraani pind", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-    ]
-  },
-  {
-  heading:  "Voolutarve" ,
-  headingid: "voolutarve", 
-    data: [
-      {
-      index: "Aastane energiatarbimine", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Energiasäästurežiim", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Voolutarve töörežiimis (keskmiselt)", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Voolutarve ooterežiimis (keskmiselt)", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
-      },
-      {
-      index: "Energiaklass", 
-      value: '16:9', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "HD Ready",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: "-", 
+      value1: "-",
+      value2: "-",
+      value3: "-",
+      value4: "-",
       },
     ]
   },
@@ -417,40 +216,101 @@ prod: [{
   headingid: "tooteomadused", 
     data: [
       {
-      index: "3D", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "LAN tugi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
       },
       {
-      index: "Diagonaal", 
-      value: '11,43 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "USB",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '2 tk', 
+      value1: '3 tk',
+      value2: '1tk',
+      value3: '2tk',
+      value4: '2tk',
       },
       {
-      index: "Diagonaal", 
-      value: '139,7 cm', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "MHL",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '-', 
+      value1: '-',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
       },
       {
-      index: "Ekraani pind", 
-      value: 'Läikiv', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "Sisseehitatud Wifi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
       },
       {
-      index: "Ekraani suhe", 
-      value: '16:9', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
+      }
+    ]
+  },
+  {
+  heading:  "Võrgu liidesed" ,
+  headingid: "tooteomadused", 
+    data: [
+      {
+      index: "LAN tugi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
       },
       {
-      index: "Ekraani tüüp", 
-      value: 'LED', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "USB",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '2 tk', 
+      value1: '3 tk',
+      value2: '1tk',
+      value3: '2tk',
+      value4: '2tk',
       },
       {
-      index: "Full HD", 
-      value: 'Jah', 
-      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm" 
+      index: "MHL",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '-', 
+      value1: '-',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
       },
+      {
+      index: "Sisseehitatud Wifi",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '-',
+      value4: '-',
+      },
+      {
+      index: "Full HD",  
+      description: "Ekraani suurust mõõdetakse tavaliselt tollides - 1 toll= 2,54 cm", 
+      value: '<span class="icon icon-checkmark green-text"></span>', 
+      value1: '<span class="icon icon-checkmark green-text"></span>',
+      value2: '<span class="icon icon-checkmark green-text"></span>',
+      value3: '<span class="icon icon-checkmark green-text"></span>',
+      value4: '<span class="icon icon-checkmark green-text"></span>',
+      }
     ]
   }
   ]}

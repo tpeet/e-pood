@@ -26,14 +26,10 @@ $('.dropdown-menu').find('form').click(function (e) {
         e.stopPropagation();
       });
 
-// Sliding commenting
-//*********************
-// $('.js-togglable').hide();
-// $('.js-slidetoggle').click(function(e) {
-//   $(this).parents().next('.js-togglable').slideDown('slow');
-//   $('.js-slideclose').slideUp();
-//   e.preventDefault();
-// });
+$('#toggleParam').click(function() {
+  $('#foo').collapse('toggle');
+});
+
 
 }); // end document ready
 
@@ -127,6 +123,9 @@ $(".input-number").keydown(function (e) {
             e.preventDefault();
         }
     });
+
+
+
 
 // counting rules for IE 8-9 as the limit is 4095
 // function countCSSRules() {
