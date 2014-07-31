@@ -243,6 +243,19 @@ text-align: left;
   }
 }
 
+.ee-updowntoggle {
+  &:before {
+  @extend %format-icon-negative;
+    content: "\e66b";
+  }
+  &:hover:before {
+    color: $purple-h;
+  }
+  &.collapsed:before {
+    content: "\e669";
+  }
+}
+
 // .icon-search {
 //   &:before {
 //   @extend %format-icon;

@@ -54,10 +54,10 @@ TSR - SUPPORT
 
     tsrCompare.tsrItemCount = function () {
 
-        $('.ee-product-compare .panel-collapse .row').each(function () {
+        $('.ee-product-compare .panel-collapse .row .row').each(function () {
 
             var el = $(this);
-            var elCount =  el.children().length-1;
+            var elCount =  el.children().length;
 
             el.children().addClass('ee-count-' + elCount);
 
@@ -104,7 +104,7 @@ if ($(this).scrollTop() > 300){
 });
 
     var new_width = $('.panel-default').width();
-    var hidden_width = $('.ee-count-4').width()*4;
+    var hidden_width = $('.ee-count-5').width()*5;
     if(Modernizr.mq('only screen and (min-width: 768px)')) {
       $('.sticky').width(new_width);
     }
@@ -114,7 +114,7 @@ if ($(this).scrollTop() > 300){
 
 // http://jsfiddle.net/UaGjs/10/
 var next;
-$('.next').click(function() {
+$('.nexti').click(function() {
     if (next === undefined) {
         next = $('.post').next();
     } else {
@@ -132,7 +132,7 @@ $('.next').click(function() {
 
 
 var prev;
-$('.prev').click(function() {
+$('.previ').click(function() {
     if (prev === undefined) {
         if (next === undefined) {
             prev = $('.post').prev();
