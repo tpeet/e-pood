@@ -6833,7 +6833,7 @@ if ($(this).scrollTop() > 300){
 var next;
 $('.nexti').click(function() {
     if (next === undefined) {
-        next = $('.post').next();
+        next = $('.ee-count-5').next();
     } else {
         if (prev === undefined) {
             next = next.next();
@@ -6842,7 +6842,7 @@ $('.nexti').click(function() {
                 prev = undefined;
         }
     }
-    $(".wrap").scrollTo(next, 800, {
+    $(".js-datawrapper").scrollTo(next, 800, {
         margin: true
     });
 });
@@ -6852,7 +6852,7 @@ var prev;
 $('.previ').click(function() {
     if (prev === undefined) {
         if (next === undefined) {
-            prev = $('.post').prev();
+            prev = $('.ee-count-5').prev();
         } else {
             prev = next.prev();
         }
@@ -6860,7 +6860,7 @@ $('.previ').click(function() {
     } else {
         prev = prev.prev();
     }
-    $(".wrap").scrollTo(prev, 800, {
+    $(".js-datawrapper").scrollTo(prev, 800, {
         margin: true
     });
 });

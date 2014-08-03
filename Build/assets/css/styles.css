@@ -12549,8 +12549,7 @@ h2.ee-detail-intro small a {
   width: 20%;
   min-width: 140px;
   position: relative;
-  border-top: 1px solid #dbdbdb;
-  margin-top: -1px; }
+  border-top: 1px solid #dbdbdb; }
   @media (min-width: 992px) {
     .ee-product-compare .ee-count-5 {
       width: 16.66667%; } }
@@ -12558,8 +12557,7 @@ h2.ee-detail-intro small a {
   width: 180px;
   min-width: 150px;
   position: relative;
-  border-top: 1px solid #dbdbdb;
-  margin-top: -1px; }
+  border-top: 1px solid #dbdbdb; }
   @media (min-width: 992px) {
     .ee-product-compare .ee-count-4 {
       width: 20%; } }

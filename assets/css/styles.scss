@@ -503,14 +503,14 @@ h2.ee-detail-intro small a {
         width: 16.66667%;
       }
     }
-  }
+  } 
 
   .ee-count-5 {
     width: 20%;
     min-width: 140px;
     position: relative;
     border-top: 1px solid $lightgrey-t;
-    margin-top: -1px;
+
     @include media-min($screen-md) {
       width: 16.66667%;
     } 
@@ -521,7 +521,7 @@ h2.ee-detail-intro small a {
     min-width: 150px;
     position: relative;
     border-top: 1px solid $lightgrey-t;
-    margin-top: -1px;
+
     @include media-min($screen-md) {
       width: 20%;
     } 

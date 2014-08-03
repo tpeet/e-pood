@@ -618,180 +618,43 @@
     </ul>
   </div>
 </section>
-<div class="row ee-filterbar">
-  <div class="navbar navbar-inverse" role="filtering">
-    <div class="container"><ul class="nav navbar-nav navbar-left">
-        <li >
-          <a href="#" id="toggleParam">Näita erinevusi <span class="icon icon-arrow-right"></span></a>
-        </li>
-        <li><a href="" class="ee-updowntoggle">Foo</a></li>
-        <li >
-          <a href="#">Peida detailid <span class="icon icon-arrow-right"></span></a> 
-        </li>
-        <li>
-          <a href="#" id="alertbtn2" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
-        </li>
-      </ul>
-      <p class="navbar-text navbar-right"><strong>Võrdlen</strong> 5 asja.</p> </div>
+
+<div class="container"> 
+  <div class="row">
+    <div class="col-md-3 hidden-sm hidden-xs">
+
+       <ul class="ee-sidenav">
+
+
+  <li class="firstlevel"><a href="#"><h6>Kuidas osta e-poest</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Maksetingimused </h6></a></li>
+  <li class="firstlevel"><a href="#"><h6>Elioni järelmaks</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Remont ja hooldus</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Ärikliendile </h6></a></li>
+  <li class="firstlevel"><a href="#"><h6>KKK</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Kontaktid</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>E-poe üldtingimused</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Kinkekaardi tingimused</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Objektiivide lühendid</h6></a></li>
+  <li class="firstlevel"><a href="#"><h6>Kinkepaki tingimused</h6> </a></li>
+  <li class="firstlevel"><a href="#"><h6>Mida teha kasutatud seadmetega?</h6> </a></li>
+
+</ul>
+
+
+
+    </div>
+
+    <div class="col-xs-12 col-md-9">
+
+      <h1>Hooldusinfo päring</h1>
+      
+<div class="panel panel-default">
+  <div class="panel-body">
+    Basic panel example
   </div>
 </div>
-
-
-
-
-<div class="container" > 
-  
-  <div class="ee-product-compare">
-    
-      <!-- <div class="col-xs-12 ">
-  <h4>Tooted võrdluses:</h4>
-  <a href="" class="btn btn-primary">Näita erinevusi</a>
-  <a href="" class="btn btn-primary">Peida detailid</a>
-  <a href="" class="btn btn-link ee-close">Tühjenda võrdlus</a>
-</div> -->
-<style>
-  .wrap {
-    
-    width:100%;
-    height :70px;
-    overflow:hidden;
-    background:#000;
-    
-    
-}
-
-.layer {
-    width: 990px;
-    height :60px;
-  }
-
-.post {
-    margin : 10px;
-    float: left;
-    width: 50px;
-    height :50px;
-    background : #f00;
-}
-</style>
-<div class="wrap">
-    <div class="layer">
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
     </div>
-</div>
-<div class="wrap">
-    <div class="layer">
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-    </div>
-</div>
-
-<span class="previ ee-updowntoggle collapsed" style="cursor:pointer;"> Tagasi</span>
-    .....
-    <span class="nexti ee-updowntoggle" style="cursor:pointer;"> Edasi </span>
-
-<div id="content-placeholder-compare-data" class=""></div>
-<script id="compare-data-template" type="text/x-handlebars-template">
-  {{#comparision}}
-  
-  <div class="panel-group ee-accordion" >
-    <div class="panel panel-default table-responsive comparision-header" id="foo">
-      <div class="col-md-2 hidden-sm hidden-xs"></div>
-      {{#each prod}}
-      <div class="col-xs-2">
-        <img class="img-responsive" src="{{img}}" alt="">
-        <h6><a href="">{{product}}</a></h6>
-        <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
-        <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
-      </div>
-      {{/each}}
-    </div>
-
-    {{#each param}}
-     <div class="panel panel-default">
-     {{#if heading}}
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" class="collapsed" data-parent="#foo" href="#{{headingid}}">
-            {{heading}}
-          </a>
-        </h4>
-      </div>
-      {{/if}}
-    <div id="{{headingid}}" class="panel-collapse  in">
-      <div class="col-xs-12">
-        {{#each data}}
-          <div class="row">
-            <div class="col-xs-12 col-sm-2 compare-title">
-            {{#if description}}
-              <a href="javascript:void(0);" data-container="body" data-toggle="popover" data-placement="top" title="{{data.index}}" data-content=" {{description}} ">{{index}} <i class="icon icon-help"></i></a>
-              {{else}}
-              {{index}}
-              {{/if}}
-            </div>
-<div class="col-sm-10 js-datawrapper" style="overflow: hidden; height: 30px;">
-  <div class="row" style="width: 960px;">
-    <div class=" col-xs-2 ">
-      <p class="{{class}} compare-value">{{{value}}}</p>
-    </div>
-    <div class=" col-xs-2 ">
-      <p class="{{class}} compare-value">{{{value1}}}</p>
-    </div>
-    <div class=" col-xs-2 ">
-      <p class="{{class}} compare-value">{{{value2}}}</p>
-    </div>
-    <div class=" col-xs-2">
-      <p class="{{class}} compare-value">{{{value3}}}</p>
-    </div>
-    <div class=" col-xs-2">
-      <p class="{{class}} compare-value">{{{value4}}}</p>
-    </div>
-  </div>
-</div>
-
-          </div>
-        {{/each}}
-         
-      </div>
-    </div>
-     </div>
-     {{/each}}
-     
-   </div>
-  {{/comparision}}
-</script>
-
-
-
-
   </div>
 </div>
 
@@ -1021,6 +884,4 @@ $(document).ready(function(){
   </script>
 
 </body>
-</html>  
-
-<script src="assets/js/handlebars/hbs-compare.hbs"></script>
+</html> 
