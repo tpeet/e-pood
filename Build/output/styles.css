@@ -11774,9 +11774,13 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
 .ee-transport:before,
 .ee-close:before,
 .ee-accordion .panel-title a.collapsed:after,
+.ee-accordion .panel-heading a.collapsed:after,
 .ee-tab-to-accordion .panel-title a.collapsed:after,
+.ee-tab-to-accordion .panel-heading a.collapsed:after,
 .ee-accordion .panel-title a:after,
-.ee-tab-to-accordion .panel-title a:after {
+.ee-accordion .panel-heading a:after,
+.ee-tab-to-accordion .panel-title a:after,
+.ee-tab-to-accordion .panel-heading a:after {
 	font-family: 'tsr-icons-all';
 	font-size: 1.6em;
 	padding-right: 5px;
@@ -12577,7 +12581,9 @@ section.tsr-section-productlist .tsr-module-product .ee-btn-buy {
 }
 
 .ee-accordion .panel-title a,
-.ee-tab-to-accordion .panel-title a {
+.ee-accordion .panel-heading a,
+.ee-tab-to-accordion .panel-title a,
+.ee-tab-to-accordion .panel-heading a {
 	padding: 16px 30px 15px 15px;
 	width: 100%;
 	display: block;
@@ -12586,7 +12592,9 @@ section.tsr-section-productlist .tsr-module-product .ee-btn-buy {
 }
 
 .ee-accordion .panel-title a.collapsed:after,
-.ee-tab-to-accordion .panel-title a.collapsed:after {
+.ee-accordion .panel-heading a.collapsed:after,
+.ee-tab-to-accordion .panel-title a.collapsed:after,
+.ee-tab-to-accordion .panel-heading a.collapsed:after {
 	content: "\e6de";
 	float: right;
 	line-height: 0.85;
@@ -12594,13 +12602,25 @@ section.tsr-section-productlist .tsr-module-product .ee-btn-buy {
 }
 
 .ee-accordion .panel-title a:after,
-.ee-tab-to-accordion .panel-title a:after {
+.ee-accordion .panel-heading a:after,
+.ee-tab-to-accordion .panel-title a:after,
+.ee-tab-to-accordion .panel-heading a:after {
 	content: "\e6e3";
 	float: right;
 	line-height: 0.85;
 	position: absolute;
 	right: 5px;
 	bottom: 30%;
+}
+
+.ee-accordion .panel-heading.imaged a:after,
+.ee-tab-to-accordion .panel-heading.imaged a:after {
+	bottom: 40%;
+}
+
+.ee-accordion .panel-heading.imaged a img,
+.ee-tab-to-accordion .panel-heading.imaged a img {
+	width: 50px;
 }
 
 .ee-accordion .panel-group,
@@ -13727,7 +13747,6 @@ h2.ee-detail-intro small a {
 	min-width: 140px;
 	position: relative;
 	border-top: 1px solid #dbdbdb;
-	margin-top: -1px;
 }
 
 .ee-product-compare .ee-count-4 {
@@ -13735,13 +13754,20 @@ h2.ee-detail-intro small a {
 	min-width: 150px;
 	position: relative;
 	border-top: 1px solid #dbdbdb;
-	margin-top: -1px;
 }
 
 .ee-product-compare .comparision-header .panel-collapse {
 	width: auto;
 	overflow-y: hidden;
 	height: 200px;
+}
+
+.dl-horizontal.dl-wide-300 dt {
+	width: auto;
+}
+
+.dl-horizontal.dl-wide-300 dd {
+	margin-left: 0;
 }
 
 .megamenu .list-group .dropdown-header > h6 > a {
@@ -15441,6 +15467,14 @@ section.ee-productslider-intro {
 
 .ee-found-tabs .ee-compare {
 	margin: 10px;
+}
+
+.dl-horizontal.dl-wide-300 dt {
+	width: 300px;
+}
+
+.dl-horizontal.dl-wide-300 dd {
+	margin-left: 320px;
 }
 
 .ee-hidden-xs {
