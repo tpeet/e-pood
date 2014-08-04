@@ -543,6 +543,25 @@ h2.ee-detail-intro small a {
 
 }
 
+// Care-page css
+// *****************
+
+
+  .dl-horizontal.dl-wide-300 {
+    dt {
+      width: auto;
+      @include media-min($screen-sm) {
+        width: 300px;
+      }
+    }
+   dd {
+      margin-left: 0;
+      @include media-min($screen-sm) {
+        margin-left: 320px;
+      }
+    }
+  }
+
 // TEMPORARY HACKS, TO BE REMOVED
 //**********************************
 

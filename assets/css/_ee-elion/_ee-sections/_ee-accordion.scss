@@ -19,7 +19,8 @@
     margin-top: -1px;
     padding: 0;
   }
-  .panel-title a {
+  .panel-title a,
+  .panel-heading a {
     padding: 16px 30px 15px 15px;
     width: 100%;
     display: block;
@@ -31,7 +32,7 @@
     float: right;
     line-height: 0.85;
     font-size: 26px;
-    }
+    } 
     &:after {
       @extend %format-icon;
       content: "\e6e3";
@@ -40,6 +41,14 @@
       position: absolute;
       right: 5px;
       bottom: 30%;
+    }
+  }
+  .panel-heading.imaged a {
+    &:after {
+      bottom: 40%;
+    }
+    img {
+      width: 50px;
     }
   }
   .panel-group {

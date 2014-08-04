@@ -10758,8 +10758,12 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     color: #fff; }
 
 .ee-list:before, .ee-block:before, .ee-up:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-close:before, .ee-accordion .panel-title a.collapsed:after,
-.ee-tab-to-accordion .panel-title a.collapsed:after, .ee-accordion .panel-title a:after,
-.ee-tab-to-accordion .panel-title a:after {
+.ee-accordion .panel-heading a.collapsed:after,
+.ee-tab-to-accordion .panel-title a.collapsed:after,
+.ee-tab-to-accordion .panel-heading a.collapsed:after, .ee-accordion .panel-title a:after,
+.ee-accordion .panel-heading a:after,
+.ee-tab-to-accordion .panel-title a:after,
+.ee-tab-to-accordion .panel-heading a:after {
   font-family: 'tsr-icons-all';
   font-size: 1.6em;
   padding-right: 5px;
@@ -11408,26 +11412,38 @@ section.tsr-section-productlist .tsr-module-product {
   margin-top: -1px;
   padding: 0; }
 .ee-accordion .panel-title a,
-.ee-tab-to-accordion .panel-title a {
+.ee-accordion .panel-heading a,
+.ee-tab-to-accordion .panel-title a,
+.ee-tab-to-accordion .panel-heading a {
   padding: 16px 30px 15px 15px;
   width: 100%;
   display: block;
   color: #642887;
   font-size: 16px; }
   .ee-accordion .panel-title a.collapsed:after,
-  .ee-tab-to-accordion .panel-title a.collapsed:after {
+  .ee-accordion .panel-heading a.collapsed:after,
+  .ee-tab-to-accordion .panel-title a.collapsed:after,
+  .ee-tab-to-accordion .panel-heading a.collapsed:after {
     content: "\e6de";
     float: right;
     line-height: 0.85;
     font-size: 26px; }
   .ee-accordion .panel-title a:after,
-  .ee-tab-to-accordion .panel-title a:after {
+  .ee-accordion .panel-heading a:after,
+  .ee-tab-to-accordion .panel-title a:after,
+  .ee-tab-to-accordion .panel-heading a:after {
     content: "\e6e3";
     float: right;
     line-height: 0.85;
     position: absolute;
     right: 5px;
     bottom: 30%; }
+.ee-accordion .panel-heading.imaged a:after,
+.ee-tab-to-accordion .panel-heading.imaged a:after {
+  bottom: 40%; }
+.ee-accordion .panel-heading.imaged a img,
+.ee-tab-to-accordion .panel-heading.imaged a img {
+  width: 50px; }
 .ee-accordion .panel-group,
 .ee-tab-to-accordion .panel-group {
   margin: 0; }
@@ -12565,6 +12581,17 @@ h2.ee-detail-intro small a {
   width: auto;
   overflow-y: hidden;
   height: 200px; }
+
+.dl-horizontal.dl-wide-300 dt {
+  width: auto; }
+  @media (min-width: 768px) {
+    .dl-horizontal.dl-wide-300 dt {
+      width: 300px; } }
+.dl-horizontal.dl-wide-300 dd {
+  margin-left: 0; }
+  @media (min-width: 768px) {
+    .dl-horizontal.dl-wide-300 dd {
+      margin-left: 320px; } }
 
 .megamenu .list-group .dropdown-header > h6 > a {
   width: 100%;
