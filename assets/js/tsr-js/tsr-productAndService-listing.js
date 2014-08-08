@@ -48,7 +48,7 @@ TSR - PRODUCT AND SERVICE LISTING
 			
 
 				// Product 
-		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿*2;
 		      	$('.tsr-product-colors' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;

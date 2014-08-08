@@ -22,7 +22,6 @@
 
       <script src='assets/js/vendor/html5.js'></script>
       <script src="assets/js/vendor/respond.min.js"></script>
-      <script type="text/javascript" scr="assets/js/vendor/css3-mediaqueries.min.js"></script>
         <![endif]-->
         <!-- / end -->
 
@@ -67,7 +66,14 @@
 <meta name="msapplication-TileColor" content="#ff0000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-<link rel='stylesheet' href='assets/css/styles.css'>
+
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="output/stylesIE.css">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+    <link rel="stylesheet" href="output/styles.css">
+<!--<![endif]-->
+
 
 
         <!-- Hammer reload -->
@@ -496,13 +502,14 @@
               
               <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
+                                    <div class="col-xs-12 tsr-forms">
+                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
+                  </div>
                   <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                   <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
-                  <div class="col-xs-12 tsr-forms">
-                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
-                </div>
+
                 </div>
               </form> 
 
@@ -700,12 +707,12 @@
   </ul>
   <div id="foundTab" class="tab-content tsr-section-productAndService-listing">
     <div class="tab-pane fade in active" id="productfound">
-
       <div class="product" id="content-placeholder-phones-boxes"></div> 
+
       <script id="product-phones-boxes-template" type="text/x-handlebars-template">
 
   {{#phones}}
-  <div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="col-five-on-small ">
     <div class="tsr-module-product ">
       {{#if ribbon}}
         <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">{{ribbon.text}}</span></span></span></figure>
@@ -751,12 +758,26 @@
 </script>
     </div>
     <div class="tab-pane fade" id="otherfound">
-      <ul class="found-listed">
+      <ul class="found-listed list-unstyled">
+        <li><h6>
+          <a href="">Food truck fixie locavore, accusamus mcsweeney's marfa nulla <strong>singl</strong>e-origin coffee squid.</a>
+        </h6></li>
+        <li><h6>
+          <a href="">Exercitation +1 labore velit, blog sartorial PBR <strong>leg</strong>gings next level wes anderson artisan four loko farm-to-table craft beer twee.</a>
+        </h6></li>
+        <li><h6>
+          <a href="">Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. </a>
+        </h6></li>
+        <li><h6>
+          <a href="">Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</a>
+        </h6></li>
+      </ul>
+<!--       <ul class="found-listed">
         <li><a href="" class="text-link">Food truck fixie locavore, accusamus mcsweeney's marfa nulla <strong>singl</strong>e-origin coffee squid.</a></li>
         <li><a href="" class="text-link">Exercitation +1 labore velit, blog sartorial PBR <strong>leg</strong>gings next level wes anderson artisan four loko farm-to-table craft beer twee.</a></li>
         <li><a href="" class="text-link">Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. </a></li>
         <li><a href="" class="text-link">Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</a></li>
-      </ul>
+      </ul> -->
       
     </div>
   </div>

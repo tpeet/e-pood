@@ -147,12 +147,6 @@ section.tsr-section-productAndService-listing {
   transition: background 0.3s ease-in-out;
   @include media-min($screen-sm) {
   padding: em(35) em(20) em(10) em(20);
-
-  .ee-btn-buy {
-    display: block;
-    margin: 10px 20px;
-    width: auto;
-  } 
 }
 
   .ee-favorite-dropdown {

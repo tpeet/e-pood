@@ -136,6 +136,21 @@ text-align: left;
   color: #fff;
 }
 
+.ee-iconbutton {
+  cursor: pointer;
+  &.ee-right,
+  &.ee-left {
+    display: block;
+    opacity: 0.5;
+    @include media-min($screen-sm) {
+    display: none;
+    } 
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .ee-list {
   &:before {
   @extend %format-icon;
@@ -154,7 +169,7 @@ text-align: left;
 
 .ee-up {
   position: fixed; 
-  bottom: 40px; 
+  bottom: 30%; 
   right: 20px;
   z-index: 5;
   &:before {
@@ -163,6 +178,31 @@ text-align: left;
   content: "\e66b";
   }
 }
+
+.ee-right {
+  position: fixed; 
+  top: 30%; 
+  right: 20px;
+  z-index: 5;
+  &:before {
+  @extend %format-icon;
+  color: inherit;
+  content: "\e668";
+  }
+}
+
+.ee-left {
+  position: fixed; 
+  top: 30%; 
+  left: 20px;
+  z-index: 5;
+  &:before {
+  @extend %format-icon;
+  color: inherit;
+  content: "\e66a";
+  }
+}
+
 
 .ee-plus-round {
   &:before {
@@ -243,18 +283,18 @@ text-align: left;
   }
 }
 
-.ee-updowntoggle {
-  &:before {
-  @extend %format-icon-negative;
-    content: "\e66b";
-  }
-  &:hover:before {
-    color: $purple-h;
-  }
-  &.collapsed:before {
-    content: "\e669";
-  }
-}
+// .ee-updowntoggle {
+//   &:before {
+//   @extend %format-icon-negative;
+//     content: "\e66b";
+//   }
+//   &:hover:before {
+//     color: $purple-h;
+//   }
+//   &.collapsed:before {
+//     content: "\e669";
+//   }
+// }
 
 // .icon-search {
 //   &:before {

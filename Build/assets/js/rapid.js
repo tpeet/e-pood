@@ -1477,7 +1477,7 @@ TSR - PRODUCT AND SERVICE LISTING
 			
 
 				// Product 
-		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿;
+		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿*2;
 		      	$('.tsr-product-colors' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
@@ -6753,12 +6753,13 @@ TSR - SUPPORT
 
     tsrCompare.tsrEqualHeights = function () {
 
-	    $('.comparision-header').each(function () {
+	    $('#content-placeholder-compare-data .fixwidth').each(function () {
 
 	        var el = $(this).not('.sticky');
 
 
 	      	$('h6' , this).css('height', 'auto').setAllToMaxHeight()﻿;
+            $('.compare-value' , this).css('height', 'auto').setAllToMaxHeight()﻿;
 
 	    });
 
@@ -6812,7 +6813,7 @@ TSR - SUPPORT
 
 // compare-page-sticky header
 $(window).scroll(function() {
-if ($(this).scrollTop() > 300){
+    if ($(this).scrollTop() > 300){
     $('.comparision-header').addClass("sticky");
   }
   else{
@@ -6820,6 +6821,7 @@ if ($(this).scrollTop() > 300){
   }
 });
 
+// sticky header with and centered position
     var new_width = $('.panel-default').width();
     var hidden_width = $('.ee-count-5').width()*5;
     if(Modernizr.mq('only screen and (min-width: 768px)')) {

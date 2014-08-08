@@ -22,7 +22,6 @@
 
       <script src='assets/js/vendor/html5.js'></script>
       <script src="assets/js/vendor/respond.min.js"></script>
-      <script type="text/javascript" scr="assets/js/vendor/css3-mediaqueries.min.js"></script>
         <![endif]-->
         <!-- / end -->
 
@@ -67,7 +66,14 @@
 <meta name="msapplication-TileColor" content="#ff0000">
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
-<link rel='stylesheet' href='assets/css/styles.css'>
+
+<!--[if lte IE 9]>
+    <link rel="stylesheet" href="output/stylesIE.css">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+    <link rel="stylesheet" href="output/styles.css">
+<!--<![endif]-->
+
 
 
         <!-- Hammer reload -->
@@ -499,13 +505,14 @@
               
               <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
+                                    <div class="col-xs-12 tsr-forms">
+                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
+                  </div>
                   <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                   <input class="col-md-1 col-sm-3 col-xs-12 btn btn-default hidden-xs" type="submit" value="Otsi" />
-                  <div class="col-xs-12 tsr-forms">
-                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
-                </div>
+
                 </div>
               </form> 
 

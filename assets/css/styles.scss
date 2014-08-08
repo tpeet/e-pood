@@ -199,11 +199,11 @@ figure .compareImage img {
         }
 
 
-@media screen and (max-width: 992px) {
+
     #loginIframe {
         height: 670px;
     }
-}
+
 
 @media screen and (min-width: 993px) {
     #loginIframe {
@@ -370,6 +370,7 @@ h2.ee-detail-intro small a {
     display: none;
 }
 
+
 // end temp custom adaptive
 .swiffy-wrap { 
   position: relative;
@@ -425,6 +426,29 @@ h2.ee-detail-intro small a {
     margin: 10px;
     } 
   }
+  .tab-content {
+    padding-top: 20px;
+  }
+  &.ee-tab-to-accordion {
+    background: #fff;
+
+
+  }
+  .col-five-on-small {
+    width: 100%;
+    position: relative;
+    float: left;
+      @include media-min($screen-sm) {
+    width: 33.33333%;
+    }
+  @include media-min($screen-md) {
+    width: 20%;
+    }
+  }
+}
+
+.panel-group .table-responsive {
+  margin-bottom: -1;
 }
 
 .found-listed {
@@ -457,6 +481,15 @@ h2.ee-detail-intro small a {
     }
   }
 
+  .panel {
+    border: none;
+  }
+
+  .ee-special-price {
+    font-weight: bold;
+    font-size: 110%;
+  }
+
   .comparision-header {
     position: relative;
     -webkit-transition: all 0.4s ease;
@@ -469,7 +502,10 @@ h2.ee-detail-intro small a {
     &.sticky {
       position: fixed;
       top: 0; 
-
+      left: 0;
+      @include media-min($screen-md) {
+      left: auto;
+      } 
 
       img {
         width: 64px;
@@ -482,63 +518,58 @@ h2.ee-detail-intro small a {
     }
   }
 
+  .fixwidth {
+    @include media-max($screen-sm) {
+    width: 768px;
+    } 
+    text-align: center;
+    @include media-min($screen-md) {
+      text-align: left;
+    } 
+  }
+
   p.compare-value {
-      padding-top: 10px;
+      padding-top: 10px; 
   }
 
   .compare-title {
     background: $lightgrey-c;
-    width: 100%;
+    font-size: 110%;
     text-align: center;
     line-height: 3;
-    @include media-min($screen-md) {
+    @include media-min($screen-sm) {
       background: none;
       text-align: left;
       border-top: 1px solid $lightgrey-t;
-      margin-top: -1px;
+
     } 
-      &.ee-count-5 {
-        width: 100%;
-      @include media-min($screen-md) {
-        width: 16.66667%;
-      }
-    }
   } 
 
   .ee-count-5 {
     width: 20%;
-    min-width: 140px;
     position: relative;
     border-top: 1px solid $lightgrey-t;
 
-    @include media-min($screen-md) {
-      width: 16.66667%;
-    } 
   }
 
-  .ee-count-4 {
-    width: 180px;
-    min-width: 150px;
-    position: relative;
-    border-top: 1px solid $lightgrey-t;
-
-    @include media-min($screen-md) {
-      width: 20%;
-    } 
-  }
-
-  // .compare-data-first {
-  //   margin-left: 170px;
+  // .ee-count-4 {
+  //   width: 180px;
+  //   min-width: 150px;
+  //   position: relative;
+  //   border-top: 1px solid $lightgrey-t;
+  //   @include media-min($screen-md) {
+  //     width: 20%;
+  //   } 
   // }
 
-  // .ee-accordion.panel-group .panel.comparision-content {
-  //   margin-top: 120px;
+  // .comparision-header .panel-collapse {
+  //   width: auto;
+  //   overflow-y: hidden;
+  //   height: 200px;
   // }
 
-  .comparision-header .panel-collapse {
-    width: auto;
-    overflow-y: hidden;
-    height: 200px;
+  .js-datawrapper {
+    overflow: hidden;
   }
 
 }
@@ -651,9 +682,27 @@ display: block;
 
 // HELPER CLASSES
 //**********************************
-.nav > li {
-  display: inline-block;
-}
+
+// for jquery ellipsis https://github.com/jjenzz/jquery.ellipsis
+// .ellip {
+//   display: block;
+//   height: 100%;
+// }
+
+// .ellip-line {
+//   display: inline-block;
+//   text-overflow: ellipsis;
+//   white-space: nowrap;
+//   word-wrap: normal;
+//   max-width: 100%;
+// }
+
+// .ellip,
+// .ellip-line {
+//   position: relative;
+//   overflow: hidden;
+// }
+// end ellipsis
 
 .ee-thinline-bottom {
   margin-bottom: -1px;
