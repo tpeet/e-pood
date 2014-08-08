@@ -1,0 +1,221 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'css-parse' ]
+2 info using npm@1.2.15
+3 info using node@v0.10.1
+4 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/package.json
+5 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/ansi-regex/package.json
+6 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/ansi-styles/package.json
+7 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/clean-css/package.json
+8 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-mediaquery/package.json
+9 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+10 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/escape-string-regexp/package.json
+11 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt/package.json
+12 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt-autoprefixer/package.json
+13 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt-combine-media-queries/package.json
+14 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt-contrib-handlebars/package.json
+15 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt-contrib-watch/package.json
+16 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/grunt-responsive-images/package.json
+17 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/inherits/package.json
+18 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/source-map/package.json
+19 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/supports-color/package.json
+20 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/underscore/package.json
+21 verbose from cache /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/package.json
+22 verbose readDependencies using package.json deps
+23 verbose cache add [ 'css-parse', null ]
+24 verbose cache add name=undefined spec="css-parse" args=["css-parse",null]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: 'css-parse',
+25 verbose parsed url   path: 'css-parse',
+25 verbose parsed url   href: 'css-parse' }
+26 silly lockFile 29f53342-css-parse css-parse
+27 verbose lock css-parse /Users/Mare/.npm/29f53342-css-parse.lock
+28 silly lockFile 29f53342-css-parse css-parse
+29 silly lockFile 29f53342-css-parse css-parse
+30 verbose addNamed [ 'css-parse', '' ]
+31 verbose addNamed [ null, '' ]
+32 silly lockFile 0bed208b-css-parse css-parse@
+33 verbose lock css-parse@ /Users/Mare/.npm/0bed208b-css-parse.lock
+34 silly addNameRange { name: 'css-parse', range: '', hasData: false }
+35 verbose url raw css-parse
+36 verbose url resolving [ 'https://registry.npmjs.org/', './css-parse' ]
+37 verbose url resolved https://registry.npmjs.org/css-parse
+38 info trying registry request attempt 1 at 17:34:03
+39 verbose etag "8LKM72WHL2NB559F4JE0Q8M6C"
+40 http GET https://registry.npmjs.org/css-parse
+41 http 304 https://registry.npmjs.org/css-parse
+42 silly registry.get cb [ 304,
+42 silly registry.get   { date: 'Fri, 08 Aug 2014 14:34:03 GMT',
+42 silly registry.get     server: 'Apache',
+42 silly registry.get     via: '1.1 varnish',
+42 silly registry.get     'last-modified': 'Fri, 08 Aug 2014 14:34:03 GMT',
+42 silly registry.get     'cache-control': 'max-age=60',
+42 silly registry.get     etag: '"8LKM72WHL2NB559F4JE0Q8M6C"',
+42 silly registry.get     'x-served-by': 'cache-fra1233-FRA',
+42 silly registry.get     'x-cache': 'HIT',
+42 silly registry.get     'x-cache-hits': '1',
+42 silly registry.get     'x-timer': 'S1407508443.322278,VS0,VE0',
+42 silly registry.get     vary: 'Accept',
+42 silly registry.get     'content-length': '0',
+42 silly registry.get     'keep-alive': 'timeout=10, max=50',
+42 silly registry.get     connection: 'Keep-Alive' } ]
+43 verbose etag css-parse from cache
+44 silly addNameRange number 2 { name: 'css-parse', range: '', hasData: true }
+45 silly addNameRange versions [ 'css-parse',
+45 silly addNameRange   [ '1.0.0',
+45 silly addNameRange     '1.0.1',
+45 silly addNameRange     '1.0.2',
+45 silly addNameRange     '1.0.3',
+45 silly addNameRange     '1.0.4',
+45 silly addNameRange     '1.1.0',
+45 silly addNameRange     '1.2.0',
+45 silly addNameRange     '1.3.0',
+45 silly addNameRange     '1.4.0',
+45 silly addNameRange     '1.5.0',
+45 silly addNameRange     '1.5.1',
+45 silly addNameRange     '1.5.2',
+45 silly addNameRange     '1.5.3',
+45 silly addNameRange     '1.6.0',
+45 silly addNameRange     '1.7.0',
+45 silly addNameRange     '2.0.0' ] ]
+46 verbose addNamed [ 'css-parse', '2.0.0' ]
+47 verbose addNamed [ '2.0.0', '2.0.0' ]
+48 silly lockFile b5ee7a32-css-parse-2-0-0 css-parse@2.0.0
+49 verbose lock css-parse@2.0.0 /Users/Mare/.npm/b5ee7a32-css-parse-2-0-0.lock
+50 verbose read json /Users/Mare/.npm/css-parse/2.0.0/package/package.json
+51 silly lockFile b5ee7a32-css-parse-2-0-0 css-parse@2.0.0
+52 silly lockFile b5ee7a32-css-parse-2-0-0 css-parse@2.0.0
+53 silly lockFile 0bed208b-css-parse css-parse@
+54 silly lockFile 0bed208b-css-parse css-parse@
+55 silly resolved [ { name: 'css-parse',
+55 silly resolved     version: '2.0.0',
+55 silly resolved     description: 'CSS parser',
+55 silly resolved     main: 'index',
+55 silly resolved     files: [ 'index.js' ],
+55 silly resolved     dependencies: { css: '^2.0.0' },
+55 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+55 silly resolved     license: 'MIT',
+55 silly resolved     repository:
+55 silly resolved      { type: 'git',
+55 silly resolved        url: 'https://github.com/reworkcss/css-parse.git' },
+55 silly resolved     keywords: [ 'css', 'parser', 'stylesheet' ],
+55 silly resolved     readme: '# css-parse\n\n  JavaScript CSS parser for Node.js (exports the `parse` method of [css](https://github.com/reworkcss/css))\n\n## Installation\n\n  $ npm install css-parse\n\n## Usage\n\n  Please see the [css](https://github.com/reworkcss/css) module documentation.\n\n## License\n\n  MIT\n',
+55 silly resolved     readmeFilename: 'Readme.md',
+55 silly resolved     _id: 'css-parse@2.0.0',
+55 silly resolved     _from: 'css-parse@' } ]
+56 info install css-parse@2.0.0 into /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style
+57 info installOne css-parse@2.0.0
+58 verbose from cache /Users/Mare/.npm/css-parse/2.0.0/package/package.json
+59 info /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse unbuild
+60 verbose from cache /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+61 info preuninstall css-parse@1.5.3
+62 info uninstall css-parse@1.5.3
+63 verbose true,/Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules,/Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules unbuild css-parse@1.5.3
+64 info postuninstall css-parse@1.5.3
+65 verbose tar unpack /Users/Mare/.npm/css-parse/2.0.0/package.tgz
+66 silly lockFile de7836ab-ion-style-node-modules-css-parse /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse
+67 verbose lock /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse /Users/Mare/.npm/de7836ab-ion-style-node-modules-css-parse.lock
+68 silly lockFile b215bf70--npm-css-parse-2-0-0-package-tgz /Users/Mare/.npm/css-parse/2.0.0/package.tgz
+69 verbose lock /Users/Mare/.npm/css-parse/2.0.0/package.tgz /Users/Mare/.npm/b215bf70--npm-css-parse-2-0-0-package-tgz.lock
+70 silly gunzTarPerm modes [ '755', '644' ]
+71 silly gunzTarPerm extractEntry package.json
+72 silly gunzTarPerm extractEntry index.js
+73 silly gunzTarPerm extractEntry Readme.md
+74 verbose read json /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+75 silly lockFile de7836ab-ion-style-node-modules-css-parse /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse
+76 silly lockFile de7836ab-ion-style-node-modules-css-parse /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse
+77 silly lockFile b215bf70--npm-css-parse-2-0-0-package-tgz /Users/Mare/.npm/css-parse/2.0.0/package.tgz
+78 silly lockFile b215bf70--npm-css-parse-2-0-0-package-tgz /Users/Mare/.npm/css-parse/2.0.0/package.tgz
+79 info preinstall css-parse@2.0.0
+80 verbose from cache /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+81 verbose readDependencies using package.json deps
+82 verbose from cache /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+83 verbose readDependencies using package.json deps
+84 verbose cache add [ 'css@^2.0.0', null ]
+85 verbose cache add name=undefined spec="css@^2.0.0" args=["css@^2.0.0",null]
+86 verbose parsed url { protocol: null,
+86 verbose parsed url   slashes: null,
+86 verbose parsed url   auth: null,
+86 verbose parsed url   host: null,
+86 verbose parsed url   port: null,
+86 verbose parsed url   hostname: null,
+86 verbose parsed url   hash: null,
+86 verbose parsed url   search: null,
+86 verbose parsed url   query: null,
+86 verbose parsed url   pathname: 'css@^2.0.0',
+86 verbose parsed url   path: 'css@^2.0.0',
+86 verbose parsed url   href: 'css@^2.0.0' }
+87 verbose cache add name="css" spec="^2.0.0" args=["css","^2.0.0"]
+88 verbose parsed url { protocol: null,
+88 verbose parsed url   slashes: null,
+88 verbose parsed url   auth: null,
+88 verbose parsed url   host: null,
+88 verbose parsed url   port: null,
+88 verbose parsed url   hostname: null,
+88 verbose parsed url   hash: null,
+88 verbose parsed url   search: null,
+88 verbose parsed url   query: null,
+88 verbose parsed url   pathname: '^2.0.0',
+88 verbose parsed url   path: '^2.0.0',
+88 verbose parsed url   href: '^2.0.0' }
+89 verbose addNamed [ 'css', '^2.0.0' ]
+90 verbose addNamed [ null, null ]
+91 silly lockFile a3458ca5-css-2-0-0 css@^2.0.0
+92 verbose lock css@^2.0.0 /Users/Mare/.npm/a3458ca5-css-2-0-0.lock
+93 info addNameTag [ 'css', '^2.0.0' ]
+94 verbose url raw css
+95 verbose url resolving [ 'https://registry.npmjs.org/', './css' ]
+96 verbose url resolved https://registry.npmjs.org/css
+97 info trying registry request attempt 1 at 17:34:03
+98 verbose etag "F4WETL7TVGQ7FUOENGKSLN06X"
+99 http GET https://registry.npmjs.org/css
+100 http 304 https://registry.npmjs.org/css
+101 silly registry.get cb [ 304,
+101 silly registry.get   { date: 'Fri, 08 Aug 2014 14:34:03 GMT',
+101 silly registry.get     server: 'Apache',
+101 silly registry.get     via: '1.1 varnish',
+101 silly registry.get     'last-modified': 'Fri, 08 Aug 2014 14:34:03 GMT',
+101 silly registry.get     'cache-control': 'max-age=60',
+101 silly registry.get     etag: '"F4WETL7TVGQ7FUOENGKSLN06X"',
+101 silly registry.get     'x-served-by': 'cache-fra1232-FRA',
+101 silly registry.get     'x-cache': 'HIT',
+101 silly registry.get     'x-cache-hits': '1',
+101 silly registry.get     'x-timer': 'S1407508443.541172,VS0,VE0',
+101 silly registry.get     vary: 'Accept',
+101 silly registry.get     'content-length': '0',
+101 silly registry.get     'keep-alive': 'timeout=10, max=50',
+101 silly registry.get     connection: 'Keep-Alive' } ]
+102 verbose etag css from cache
+103 silly lockFile a3458ca5-css-2-0-0 css@^2.0.0
+104 silly lockFile a3458ca5-css-2-0-0 css@^2.0.0
+105 verbose about to build /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse
+106 info /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse unbuild
+107 verbose from cache /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules/css-parse/package.json
+108 info preuninstall css-parse@2.0.0
+109 info uninstall css-parse@2.0.0
+110 verbose true,/Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules,/Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style/node_modules unbuild css-parse@2.0.0
+111 info postuninstall css-parse@2.0.0
+112 error Error: No compatible version found: css@'^2.0.0'
+112 error Valid install targets:
+112 error ["1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.0.7","1.0.8","1.1.0","1.2.0","1.3.0","1.3.1","1.4.0","1.4.1","1.4.2","1.4.3","1.4.4","1.6.0","2.0.0","2.1.0"]
+112 error     at installTargetsError (/usr/local/lib/node_modules/npm/lib/cache.js:684:10)
+112 error     at /usr/local/lib/node_modules/npm/lib/cache.js:606:10
+112 error     at saved (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:138:7)
+112 error     at Object.oncomplete (fs.js:107:15)
+113 error If you need help, you may report this log at:
+113 error     <http://github.com/isaacs/npm/issues>
+113 error or email it to:
+113 error     <npm-@googlegroups.com>
+114 error System Darwin 12.5.0
+115 error command "node" "/usr/local/bin/npm" "install" "css-parse"
+116 error cwd /Volumes/Data/Documents/Work/NG/Elion/elion-style/Elion-style
+117 error node -v v0.10.1
+118 error npm -v 1.2.15
+119 verbose exit [ 1, true ]
