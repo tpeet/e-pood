@@ -13686,6 +13686,7 @@ h2.ee-detail-intro small a {
 .ee-found-tabs table td.blue-text {
 	font-size: 21px;
 	font-weight: 600;
+	white-space: nowrap;
 }
 
 .ee-found-tabs table tbody > tr > td {

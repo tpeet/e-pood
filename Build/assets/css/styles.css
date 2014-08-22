@@ -12232,7 +12232,7 @@ header .megamenu .search-item-image,
 
   * {
     text-shadow: none !important;
-    color: #000 !important;
+    color: red !important;
     background: transparent !important;
     box-shadow: none !important; }
 
@@ -12306,189 +12306,6 @@ header .megamenu .search-item-image,
   .tsr-tactical-flash {
     background: #fff; } }
 /* default height */
-.html-banner {
-  height: 100%;
-  width: 100%; }
-
-.heroBannerWide .html-banner {
-  position: absolute;
-  width: 1920px; }
-
-.heroBanner .html-banner {
-  position: absolute;
-  width: 1020px; }
-
-.html-banner iframe {
-  position: absolute;
-  width: 100% !important;
-  height: 100% !important;
-  border: none;
-  overflow: hidden; }
-
-#html-banner-frame {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border: none; }
-
-figure .compareImage img {
-  width: 100%;
-  height: 100%; }
-
-#ajaxLoader {
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 2000; }
-
-#ajaxLoader.loading {
-  position: fixed;
-  padding: 5px;
-  background-color: transparent;
-  background-image: url("../images/sprites/iconset-sprite.png");
-  background-repeat: no-repeat;
-  background-position: -135px -657px;
-  color: #ffffff;
-  filter: alpha(opacity=90);
-  -moz-opacity: 0.9;
-  opacity: 0.9;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  z-index: 100002222; }
-
-#ajaxLoader.loading strong {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  padding: 5px 0 0 0; }
-
-#loginIframe {
-  height: 670px; }
-
-@media screen and (min-width: 993px) {
-  #loginIframe {
-    height: 355px; } }
-#loginIframe {
-  border: 0;
-  overflow: hidden; }
-
-#login-profile-wrapper {
-  z-index: 1050; }
-
-.formError {
-  color: Red; }
-
-.word-break {
-  word-break: break-all; }
-
-.section-flash-banner {
-  height: 100%; }
-
-.btn-50 {
-  width: 75%; }
-
-#adminLoginIframe {
-  margin-top: 15px; }
-
-.flashText-ribbon-inner {
-  display: block;
-  width: 60px; }
-
-.flashText-ribbon-inner .ee-big {
-  display: block;
-  width: 60px;
-  margin-left: 18%; }
-
-.ie8 .ee-flashtext-container {
-  position: absolute;
-  top: 30px;
-  left: 15px; }
-
-.ie9 ul.ee-sidenav {
-  list-style-type: none; }
-
-@media (max-width: 767px) {
-  .jsHeaderMenu {
-    z-index: 1050; } }
-.cancel-filters:hover {
-  text-decoration: underline !important; }
-
-.alert-success span.icon-arrow-right {
-  padding: 0 !important; }
-
-h2.ee-detail-intro small a {
-  font-size: 15px; }
-
-.js-profile-selection {
-  width: 100%; }
-
-.navbar-header a[href*="#collapsibleMainMenu-User"] {
-  width: 55px; }
-
-.js-profile-selection {
-  background-color: #51246b;
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
-@media (max-width: 767px) {
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a.product-sorting {
-    color: #fff; }
-
-  #js-largeimage .flex-direction-nav {
-    display: none; } }
-@media (min-width: 767px) {
-  #collapsibleMainMenu-Search {
-    display: none; }
-
-  #collapsibleMainMenu-User {
-    display: none !important; } }
-.ie9 #collapsibleMainMenu-User {
-  display: none !important; }
-
-.megamenu .list-group .dropdown-header > h6 > a {
-  display: block;
-  width: 100%; }
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden; }
-
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.tsr-product-desc a {
-  color: #333333; }
-
-.tsr-product-desc a:hover {
-  text-decoration: none; }
-
-.row.ee-filterbar .navbar.navbar-inverse .jsShowHideFilters {
-  background-color: #4f2369; }
-
-.row.ee-filterbar .navbar.navbar-inverse .jsShowHideFilters.collapsed {
-  background-color: #652d86; }
-
-.searchSuggestions {
-  list-style: none; }
-
-.searchSuggestionsList {
-  list-style-type: disc; }
-
-.ee-iconbutton.ee-up {
-  display: none; }
-
 .swiffy-wrap {
   position: relative;
   width: 100%;
@@ -12625,7 +12442,8 @@ h2.ee-detail-intro small a {
   width: auto; }
   @media (min-width: 768px) {
     .dl-horizontal.dl-wide-300 dt {
-      width: 300px; } }
+      width: 300px;
+      text-align: left; } }
 .dl-horizontal.dl-wide-300 dd {
   margin-left: 0; }
   @media (min-width: 768px) {
