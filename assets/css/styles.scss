@@ -402,7 +402,7 @@ display: block;
  left: 15px;
 }
 
-.ie8 #browserAlert {
+.ie8 #browserAlert, .ie9 #browserAlert {
   display: block;
 }
 
