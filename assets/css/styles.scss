@@ -85,7 +85,7 @@
 /* @include _ee-2nd-level-general-parts.scss */
 /* @include _ee-productslider.scss */
 /* @include _ee-mainnav.scss */
-/* @include _ee-print.scss */
+/* @include _ee-compare.scss */
 
 /* default height */
 // #ad {
@@ -224,114 +224,6 @@
   color: inherit;
 }
 
-/// COMPARE
-// **************
-.ee-product-compare {
-  .ee-btn-buy {
-    padding: 6px 12px;
-    @include media-min($screen-md) {
-      padding: 12px 16px;
-      } 
-    span {
-    display: none;
-      @include media-min($screen-md) {
-      display: inline-block;
-      } 
-    }
-  }
-
-  .panel {
-    border: none;
-  }
-
-  .ee-special-price {
-    font-weight: bold;
-    font-size: 110%;
-  }
-
-  .comparision-header {
-    position: relative;
-    -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    background: #fff;
-    margin: 0 auto;
-    z-index: 5;
-    &.sticky {
-      position: fixed;
-      top: 0; 
-      left: 0;
-      @include media-min($screen-md) {
-      left: auto;
-      } 
-
-      img {
-        width: 64px;
-        display: none;
-      }
-      .ee-btn-buy, 
-      .ee-close {
-        display: none;
-      }
-    }
-  }
-
-  .fixwidth {
-    @include media-max($screen-sm) {
-    width: 768px;
-    } 
-    text-align: center;
-    @include media-min($screen-md) {
-      text-align: left;
-    } 
-  }
-
-  p.compare-value {
-      padding-top: 10px; 
-  }
-
-  .compare-title {
-    background: $lightgrey-c;
-    font-size: 110%;
-    text-align: center;
-    line-height: 3;
-    @include media-min($screen-sm) {
-      background: none;
-      text-align: left;
-      border-top: 1px solid $lightgrey-t;
-
-    } 
-  } 
-
-  .ee-count-5 {
-    width: 20%;
-    position: relative;
-    border-top: 1px solid $lightgrey-t;
-
-  }
-
-  // .ee-count-4 {
-  //   width: 180px;
-  //   min-width: 150px;
-  //   position: relative;
-  //   border-top: 1px solid $lightgrey-t;
-  //   @include media-min($screen-md) {
-  //     width: 20%;
-  //   } 
-  // }
-
-  // .comparision-header .panel-collapse {
-  //   width: auto;
-  //   overflow-y: hidden;
-  //   height: 200px;
-  // }
-
-  .js-datawrapper {
-    overflow: hidden;
-  }
-
-}
 
 // Care-page css
 // *****************

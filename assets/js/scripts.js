@@ -27,7 +27,7 @@ $('.dropdown-menu').find('form').click(function (e) {
       });
 
 $('#toggleParam').click(function() {
-  $('#foo').collapse('toggle');
+  $('.js-subpanel').collapse('toggle');
 });
 
 

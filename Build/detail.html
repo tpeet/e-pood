@@ -102,7 +102,7 @@
 </head>
 
 <body> 
-  <a href="#" id="top" class="ee-iconbutton ee-up"></a>
+  <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -675,10 +675,10 @@
 {{#with products.[1]}}
 
 <div class="col-sm-7 col-sm-push-5 fixedheight">
-  <h1><small>{{name}}</small></h1>
+  <h2>{{name}}</h2>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
-  <h2> {{{intro}}} </h2>
-  <h2 class="ee-detail-intro"> <small>{{{leftTrimMedium description}}} </small></h2>
+
+  <h2 class="ee-detail-intro"> <small>{{{description}}} </small></h2>
   
 
     <div class="panel-group bundle" id="bundles">
@@ -805,7 +805,7 @@
     </div>
 
     {{#if normal_price}}
-    <p class="tsr-product-price">Tavahind: {{normal_price}}
+    <p class="tsr-product-price"><i  style="text-decoration: line-through;">Tavahind: {{normal_price}}</i>
     {{/if}}
     {{#if special_price}}
     <br>Sinu võit: 300 €</p>

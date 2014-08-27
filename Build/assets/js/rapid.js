@@ -6757,9 +6757,8 @@ TSR - SUPPORT
 
 	        var el = $(this).not('.sticky');
 
-
 	      	$('h6' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-            $('.compare-value' , this).css('height', 'auto').setAllToMaxHeight()﻿;
+            $('.compare-value' , this).parent().parent().css('height', 'auto').setAllToMaxHeight()﻿;
 
 	    });
 
@@ -6910,7 +6909,7 @@ $('.dropdown-menu').find('form').click(function (e) {
       });
 
 $('#toggleParam').click(function() {
-  $('#foo').collapse('toggle');
+  $('.js-subpanel').collapse('toggle');
 });
 
 

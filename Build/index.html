@@ -102,7 +102,7 @@
 </head>
 
 <body> 
-  <a href="#" id="top" class="ee-iconbutton ee-up"></a>
+  <!-- <a href="#" id="top" class="ee-iconbutton ee-up"></a> -->
 <header>
 
 <nav class="topnav navbar navbar-inverse" role="navigation">
@@ -711,42 +711,6 @@
 
 
 
-<section class="tsr-section-promotion tsr-count-4"> 
-    <div class="container product">
-
-      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
-      <script id="offer-slider-template" type="text/x-handlebars-template">
-      {{#offers}}
-
-      <a href="detail.html" class="tsr-module-promotion">
-        <figure>
-      <figure class="tsr-tactical-flash">
-        <div class="flashText-flash-normal ee-flashtext-container">
-          <div class="ee-big">72 $</div>
-          <div class="ee-small">Nii kiire</div>
-        </div>
-      </figure>
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
-        </figure>
-        <div class="tsr-product-content">
-
-          <h6 class="tsr-product-header violet-text">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
-        </div>
-      </a>
-      {{/offers}}
-      </script>
-    </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
-</section> 
-
  <!-- for large screen, hidden on small -->
 <section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
   <div class="container">
@@ -818,6 +782,42 @@
 
 
  
+
+<section class="tsr-section-promotion tsr-count-4"> 
+    <div class="container product">
+
+      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
+      <script id="offer-slider-template" type="text/x-handlebars-template">
+      {{#offers}}
+
+      <a href="detail.html" class="tsr-module-promotion">
+        <figure>
+      <figure class="tsr-tactical-flash">
+        <div class="flashText-flash-normal ee-flashtext-container">
+          <div class="ee-big">72 $</div>
+          <div class="ee-small">Nii kiire</div>
+        </div>
+      </figure>
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
+          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
+        </figure>
+        <div class="tsr-product-content">
+
+          <h6 class="tsr-product-header violet-text">{{name}}</h6>
+          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+        </div>
+      </a>
+      {{/offers}}
+      </script>
+    </div>
+   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
+</section> 
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">

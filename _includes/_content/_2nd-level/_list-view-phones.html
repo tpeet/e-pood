@@ -55,18 +55,20 @@
       <div class="tsr-product-content">
         <h6 class="tsr-product-header hidden-xs"><a href="">{{name}}</a></h6>
 
-        <div class="row ee-linkicons hidden-xs">
-          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
-          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
-
-        </div>
+        
 
 
 <!-- @include _transport-module.html --> 
 
 
         <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
+
+        <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
+          <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
+          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
+
+        </div>
 
         <div class="row ee-actions">
           {{#if flashes}}
