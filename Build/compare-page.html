@@ -292,7 +292,7 @@
         <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
         <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
         <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
-        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge">5</span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge badge-with-icon"><span class="icon icon-checkmark"></span></span></a>
       </div>
     </div>
     <!-- / menu for small screen -->
@@ -638,7 +638,8 @@
           <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
         </li>
       </ul>
-      <p class="navbar-text navbar-right"><strong>Võrdlen</strong> 5 asja.</p> </div>
+<!-- s -->
+    </div>
   </div>
 </div>
 
@@ -678,6 +679,10 @@
 
 
 <div id="content-placeholder-compare-data" class=""></div>
+<ul class="tsr-direction-nav">
+  <li><a class="tsr-prev previ" href="#"></a></li>
+  <li><a class="tsr-next nexti" href="#"></a></li>
+</ul>
 <span class="previ ee-left ee-iconbutton"></span>
 <span class="nexti ee-right ee-iconbutton"></span>
 <script id="compare-data-template" type="text/x-handlebars-template">
@@ -695,7 +700,8 @@
               <a type="button" class="close" aria-hidden="true">×</a>
               <img class="img-responsive" src="{{img}}" alt="">
               <h6 class="compare-value"><a href="">{{product}}</a></h6>
-              <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
+              <a href="" class="btn btn-link ee-buy">Osta</a>
+              <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
             </div>
             {{/each}}
           </div>
@@ -708,11 +714,11 @@
      <div class="panel panel-default">
      {{#if heading}}
       <div class="panel-heading">
-        <h3 class="panel-title">
-          <a data-toggle="collapse"  data-parent="#foo" href="#{{headingid}}">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" href="#{{headingid}}">
             {{heading}}
           </a>
-        </h3>
+        </h4>
       </div>
       {{/if}}
     <div id="{{headingid}}" class="panel-collapse in js-subpanel">

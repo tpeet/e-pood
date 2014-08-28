@@ -273,6 +273,29 @@ text-align: left;
   }
 }
 
+.ee-buy {
+  &:before {
+  @extend %format-icon;
+  content: "\e6e1";
+  font-size: 100%;
+  }
+  &:hover:before {
+    color: $purple-h;
+
+  }
+}
+
+a.ee-buy {
+   box-sizing: border-box;
+   border: 1px solid transparent;
+
+}
+a.ee-buy:hover {
+    border: 1px solid $purple-h;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
 .ee-close {
   &:before {
   @extend %format-icon;

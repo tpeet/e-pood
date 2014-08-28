@@ -292,7 +292,7 @@
         <a class="navbar-toggle" href="#collapsibleMainMenu-Basket" data-toggle="collapse"><span class="icon icon-buy_2"></span><span class="badge">8</span></a>
         <a class="navbar-toggle" href="#collapsibleMainMenu-Guide" data-toggle="collapse"><span class="icon icon-help"></span></a>
         <a class="navbar-toggle" href="#collapsibleMainMenu-Search" data-toggle="collapse"><span class="icon icon-search"></span></a>
-        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge">5</span></a>
+        <a class="navbar-toggle" href="#collapsibleMainMenu-User" data-toggle="collapse"><span class="icon icon-contact"></span><span class="badge badge-with-icon"><span class="icon icon-checkmark"></span></span></a>
       </div>
     </div>
     <!-- / menu for small screen -->
@@ -805,7 +805,7 @@
     </div>
 
     {{#if normal_price}}
-    <p class="tsr-product-price"><i  style="text-decoration: line-through;">Tavahind: {{normal_price}}</i>
+    <p class="tsr-product-price"><span>Tavahind: {{normal_price}}</span>
     {{/if}}
     {{#if special_price}}
     <br>Sinu võit: 300 €</p>
@@ -1193,11 +1193,11 @@
      <section class="ee-tab-to-accordion ">
   <div class="container padding-reset">
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified" id="TabsResponsive">
+    <ul class="nav nav-tabs" id="TabsResponsive">
       <li class="active"><a href="#general-info" data-toggle="tab">Üldandmed</a></li>
       <li><a href="#technical-info" data-toggle="tab">Tehnilised andmed</a></li>
-      <li><a href="#reviews" data-toggle="tab">Arvamused (5)</a></li>
-      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted (5)</a></li>
+      <li><a href="#reviews" data-toggle="tab">Arvamused <span>(5)</span></a></li>
+      <li><a href="#similar-products" data-toggle="tab">Kokkusobivad tooted <span>(5)</span></a></li>
     </ul>
   </div>
 </section>
@@ -1226,7 +1226,7 @@
         <script id="technical-data-template" type="text/x-handlebars-template">
         {{#technical}}
           <div class="col-sm-6 padding-reset">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered">
               <thead>
                 <tr>
                   <th colspan="2">{{heading}}</th>

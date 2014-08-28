@@ -151,9 +151,6 @@ section.ee-section-leasing {
 }
 
 .ee-tab-to-accordion {
-  .nav-justified {
-    margin-top: -1px;
-  }
   .panel-body {
     padding: 0;
     table {
@@ -183,7 +180,7 @@ section.ee-tab-to-accordioncontent {
   margin-bottom: 20px;
   display: none;
   @include media-min($screen-sm) {
-    border-top: 1px solid $lightgrey-t;
+    // border-top: 1px solid $lightgrey-t;
     margin-bottom: 20px;
     display: block;
   }

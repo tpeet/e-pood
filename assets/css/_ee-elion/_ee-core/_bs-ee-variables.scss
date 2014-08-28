@@ -23,6 +23,7 @@ $darkgrey-h:  #858889 !default;
 $darkgrey-c:  #6c6f70 !default;
 $darkgrey-t:  #545556 !default;
 
+$clay-temp: #EDEDE9;
 $clay-h:    #e1dbd2 !default;
 $clay-c:    #c7c2ba !default;
 $clay-t:    #aea9a2 !default;
@@ -52,7 +53,7 @@ $turquoise-h: #00cc9b !default;
 $turquoise-t: #009974 !default;
 
 $pink-c:    #c41b79 !default;
-$pink-h:    #db2190 !default;
+$pink-h:    #db2190 !default; 
 $pink-t:    #a91a6f !default;
 
 // Intaraction colors
@@ -133,7 +134,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)) !default;
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit !default;
-$headings-font-weight:    600 !default;
+$headings-font-weight:    bold !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
 

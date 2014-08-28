@@ -1630,18 +1630,11 @@ Communication Primary
     .tsr-section-communictaion-primary .tsr-tactical-textPanel span {
       margin: 6px 30px 22px 0px; } }
 
-/*
-DIVIDERS
-*/
 .tsr-section-divider {
   background: #f6f6f6;
   line-height: 1;
-  font-size: 22px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 18px 20px 19px;
-  color: #333;
-  font-style: normal;
-  font-weight: normal;
+  font-size: 21px;
+  color: #333333;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
   position: relative;
@@ -1651,10 +1644,6 @@ DIVIDERS
     color: #fff; }
   .tsr-section-divider.tsr-color-white, .tsr-color-white .tsr-section-divider {
     background: white; }
-  @media (min-width: 940px) {
-    .tsr-section-divider {
-      font-size: 20px;
-      padding: 20px 0 20px; } }
 
 /*
 PROMOTION
@@ -7434,6 +7423,9 @@ var, .price {
   .badge:empty {
     display: none; }
 
+.badge-with-icon {
+  padding: 3px 4px; }
+
 .icon-with-badge {
   position: relative; }
   .icon-with-badge .badge {
@@ -9927,6 +9919,34 @@ section.ee-breadcrumbs {
   background: #f6f6f6;
   width: 100%; }
 
+.nav-tabs {
+  border-bottom: none;
+  margin-top: -1px; }
+  .nav-tabs > li {
+    float: left;
+    margin-bottom: -2px;
+    margin-left: -3px; }
+    .nav-tabs > li > a {
+      margin-right: 2px;
+      line-height: 1.42857;
+      border: 1px solid transparent;
+      border-color: #dddddd;
+      border-radius: 0;
+      padding: 20px 30px;
+      font-weight: bold; }
+      .nav-tabs > li > a span {
+        font-weight: normal; }
+      .nav-tabs > li > a:hover {
+        background: #f6f6f6;
+        border-bottom-color: #fff; }
+    .nav-tabs > li.active > a {
+      color: #642887;
+      font-weight: normal; }
+      .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+        color: #73369e;
+        background-color: #fff;
+        cursor: default; }
+
 .nav-pills > li {
   float: left; }
   .nav-pills > li > a {
@@ -10757,7 +10777,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     background: #4e256b;
     color: #fff; }
 
-.ee-list:before, .ee-block:before, .ee-up:before, .ee-right:before, .ee-left:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-close:before, .ee-accordion .panel-title a.collapsed:after,
+.ee-list:before, .ee-block:before, .ee-up:before, .ee-right:before, .ee-left:before, .ee-plus-round:before, .ee-minus-round:before, .ee-favorite:before, .ee-compare:before, .ee-comments:before, .ee-transport:before, .ee-buy:before, .ee-close:before, .ee-accordion .panel-title a.collapsed:after,
 .ee-accordion .panel-heading a.collapsed:after,
 .ee-tab-to-accordion .panel-title a.collapsed:after,
 .ee-tab-to-accordion .panel-heading a.collapsed:after, .ee-accordion .panel-title a:after,
@@ -10858,6 +10878,21 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
   content: "\e6d4"; }
 .ee-transport:hover:before {
   color: #73369e; }
+
+.ee-buy:before {
+  content: "\e6e1";
+  font-size: 100%; }
+.ee-buy:hover:before {
+  color: #73369e; }
+
+a.ee-buy {
+  box-sizing: border-box;
+  border: 1px solid transparent; }
+
+a.ee-buy:hover {
+  border: 1px solid #73369e;
+  border-radius: 3px;
+  text-decoration: none; }
 
 .ee-close:before {
   content: "\e651"; }
@@ -11410,7 +11445,8 @@ section.tsr-section-productlist .tsr-module-product {
   background: #fff; }
 
 .ee-tab-to-accordion {
-  background: #f6f6f6; }
+  background: #edede9;
+  border-bottom: 1px solid #dbdbdb; }
 
 .ee-accordion .panel-group .panel + .panel, .ee-accordion.panel-group .panel + .panel,
 .ee-tab-to-accordion .panel-group .panel + .panel,
@@ -11421,6 +11457,13 @@ section.tsr-section-productlist .tsr-module-product {
   border-radius: 0;
   margin-top: -1px;
   padding: 0; }
+  .ee-accordion .panel-default .panel-heading a,
+  .ee-tab-to-accordion .panel-default .panel-heading a {
+    text-decoration: none; }
+    .ee-accordion .panel-default .panel-heading a:hover, .ee-accordion .panel-default .panel-heading a:not(.collapsed),
+    .ee-tab-to-accordion .panel-default .panel-heading a:hover,
+    .ee-tab-to-accordion .panel-default .panel-heading a:not(.collapsed) {
+      background: #fff; }
 .ee-accordion .panel-title a,
 .ee-accordion .panel-heading a,
 .ee-tab-to-accordion .panel-title a,
@@ -11429,7 +11472,7 @@ section.tsr-section-productlist .tsr-module-product {
   width: 100%;
   display: block;
   color: #642887;
-  font-size: 16px; }
+  font-size: 14px; }
   .ee-accordion .panel-title a.collapsed:after,
   .ee-accordion .panel-heading a.collapsed:after,
   .ee-tab-to-accordion .panel-title a.collapsed:after,
@@ -11437,7 +11480,7 @@ section.tsr-section-productlist .tsr-module-product {
     content: "\e6de";
     float: right;
     line-height: 0.85;
-    font-size: 26px; }
+    bottom: 35%; }
   .ee-accordion .panel-title a:after,
   .ee-accordion .panel-heading a:after,
   .ee-tab-to-accordion .panel-title a:after,
@@ -11447,7 +11490,7 @@ section.tsr-section-productlist .tsr-module-product {
     line-height: 0.85;
     position: absolute;
     right: 5px;
-    bottom: 30%; }
+    bottom: 35%; }
 .ee-accordion .panel-heading.imaged a:after,
 .ee-tab-to-accordion .panel-heading.imaged a:after {
   bottom: 40%; }
@@ -11568,8 +11611,6 @@ section.ee-section-leasing {
   -o-transition: height 2s;
   transition: height 2s; }
 
-.ee-tab-to-accordion .nav-justified {
-  margin-top: -1px; }
 .ee-tab-to-accordion .panel-body {
   padding: 0; }
   .ee-tab-to-accordion .panel-body table {
@@ -11592,7 +11633,6 @@ section.ee-tab-to-accordioncontent {
   display: none; }
   @media (min-width: 768px) {
     section.ee-tab-to-accordioncontent {
-      border-top: 1px solid #dbdbdb;
       margin-bottom: 20px;
       display: block; } }
   section.ee-tab-to-accordioncontent .tsr-section-productAndService-listing {
@@ -12149,10 +12189,6 @@ header .megamenu .search-item-image,
   position: absolute;
   left: 0; }
 
-.ee-found-tabs .nav-tabs li a {
-  font-size: 21px; }
-  .ee-found-tabs .nav-tabs li a.active {
-    color: #333333; }
 .ee-found-tabs table img {
   height: 64px;
   width: 64px; }

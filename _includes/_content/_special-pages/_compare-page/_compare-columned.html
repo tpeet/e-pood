@@ -26,6 +26,10 @@
 
 
 <div id="content-placeholder-compare-data" class=""></div>
+<ul class="tsr-direction-nav">
+  <li><a class="tsr-prev previ" href="#"></a></li>
+  <li><a class="tsr-next nexti" href="#"></a></li>
+</ul>
 <span class="previ ee-left ee-iconbutton"></span>
 <span class="nexti ee-right ee-iconbutton"></span>
 <script id="compare-data-template" type="text/x-handlebars-template">
@@ -43,7 +47,8 @@
               <a type="button" class="close" aria-hidden="true">×</a>
               <img class="img-responsive" src="{{img}}" alt="">
               <h6 class="compare-value"><a href="">{{product}}</a></h6>
-              <a href="" class="btn btn-default ee-btn-buy"><span>Lisa ostukorvi</span></a>
+              <a href="" class="btn btn-link ee-buy">Osta</a>
+              <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
             </div>
             {{/each}}
           </div>
@@ -56,11 +61,11 @@
      <div class="panel panel-default">
      {{#if heading}}
       <div class="panel-heading">
-        <h3 class="panel-title">
-          <a data-toggle="collapse"  data-parent="#foo" href="#{{headingid}}">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" class="collapsed" href="#{{headingid}}">
             {{heading}}
           </a>
-        </h3>
+        </h4>
       </div>
       {{/if}}
     <div id="{{headingid}}" class="panel-collapse in js-subpanel">

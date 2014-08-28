@@ -1,7 +1,56 @@
 //
 // Navs
 // --------------------------------------------------
+.nav-tabs {
+  border-bottom: none;
+  margin-top: -1px;
+  > li {
+    float: left;
+    // Make the list-items overlay the bottom border
+    margin-bottom: -2px;
+    margin-left: -3px;
 
+    // Actual tabs (as links)
+    > a {
+      margin-right: 2px;
+      line-height: $line-height-base;
+      border: 1px solid transparent;
+      border-color: $nav-tabs-border-color;
+      border-radius: 0;
+      padding: 20px 30px;
+      font-weight: bold;
+      & span {
+        font-weight: normal;
+      }
+      &:hover {
+        background: $lightgrey-c;
+        border-bottom-color: #fff;
+      }
+    }
+
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      color: $link;
+      font-weight: normal;
+      // border-color: $nav-tabs-border-color $nav-tabs-border-color  $nav-tabs-border-color;
+      // border: none;
+      &,
+      &:hover,
+      &:focus {
+        color: $link-hover;
+        background-color: #fff;
+        // border: 1px solid $nav-tabs-active-link-hover-border-color;
+        
+        cursor: default;
+      }
+    }
+  }
+  // pulling this in mainly for less shorthand
+  &.nav-justified {
+    @extend .nav-justified;
+    @extend .nav-tabs-justified;
+  }
+}
 
 // Pills
 // -------------------------
@@ -43,7 +92,7 @@
 
 .nav.nav-tabs.nav-justified > li {
     > a {
-      border-radius: 0;
+      border-radius: 0; 
       &:hover {
         background-color: #fff;
       }
