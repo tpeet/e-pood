@@ -277,7 +277,7 @@ text-align: left;
   &:before {
   @extend %format-icon;
   content: "\e6e1";
-  font-size: 100%;
+  font-size: 125%;
   }
   &:hover:before {
     color: $purple-h;

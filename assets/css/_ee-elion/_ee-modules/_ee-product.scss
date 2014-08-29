@@ -3,8 +3,12 @@ section.tsr-section-productAndService-listing {
   margin-top: -1px;
 
     .ee-compare {
-    margin: 15px auto;
-    display: block;
+    margin-right: 15px;
+    display: inline-block;
+    @include media-min($screen-sm) {
+      margin: 15px auto;
+      margin-right: 15px;
+    }  
   }
 
   .tsr-tactical-flash {
@@ -29,7 +33,9 @@ section.tsr-section-productAndService-listing {
     width: auto;
     }
   }
+}
 
+.product-boxes {
 
 }
 
@@ -164,7 +170,7 @@ section.tsr-section-productAndService-listing {
 
 
   .tsr-product-header {
-    font-size: 105%;
+    font-size: $font-size-h6;
     margin: em(10) 0 em(5);
     padding-right: 15%;
     @include media-min($screen-sm-min) {

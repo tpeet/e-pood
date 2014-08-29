@@ -502,9 +502,6 @@
               
               <form class="tsr form-horizontal" role="form" action="found-page-block.html">
                 <div class="form-group row">
-                                    <div class="col-xs-12 tsr-forms">
-                    <label for="check-2"><input type="checkbox" id="check-3" /> <span class="ee-labeltext">Otsi ka arhiveeritud toodete seast</span></label>
-                  </div>
                   <div class="col-md-11 col-sm-9 col-xs-12">
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
@@ -673,7 +670,7 @@
 
 <div class="row ee-comparebar">
   <div class="navbar navbar-default" role="compare">
-    <ul class="list-inline navbar-left">
+    <ul class="list-inline navbar-left hidden-xs">
       <li><a href="list-view-phones.html" class="ee-iconbutton ee-list"></a></li>
       <li><a href="block-view-phones.html" class="ee-iconbutton ee-block"></a></li>
     </ul>
@@ -796,7 +793,7 @@
 
 <!-- Product boxes -->
 <div class="row">
-  <section class="tsr-section-productAndService-listing ">
+  <section class="tsr-section-productAndService-listing product-boxes">
     <div class="product" id="content-placeholder-phones-boxes"></div>
   </section>
 </div>
@@ -833,14 +830,15 @@
         <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
 
         {{#if client_price}}
-        <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
+        <p class="tsr-product-price ee-special-price ee-product-price-lg"><span>{{client_price}}</span></p>
         {{else}} {{#if normal_price}}
-        <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
+        <p class="tsr-product-price ee-product-price-lg"><span>{{normal_price}}</span></p>
         {{else}}
-        <p class="tsr-product-price"></p>
+        <p class="tsr-product-price ee-product-price-lg"></p>
           {{/if}}
         {{/if}}
         <a href="#" class="ee-compare"> Võrdle </a>
+        <a href="#" class="ee-buy"> Osta </a>
       </div>
     </div>
   </div>
@@ -848,9 +846,6 @@
   {{/phones}}
 </script>
 
-<!--         <a href="#" class="ee-buy"> Osta </a> -->
-
-        
 <!--         {{#if colors}}
           <ul class="tsr-product-colors">
           {{#each colors}}

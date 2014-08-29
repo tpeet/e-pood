@@ -10,7 +10,7 @@
   });
   Handlebars.registerHelper('leftTrimLong', function(text) {
     text = text.replace(/<.*?>/g," ").trim();
-    if(text.length > 260) return text.substring(0,260) +"...";
+    if(text.length > 260) return text.substring(0,360) +"...";
     else return text;
   });
 

@@ -2,7 +2,7 @@
 
 <!-- Product boxes -->
 <div class="row">
-  <section class="tsr-section-productAndService-listing ">
+  <section class="tsr-section-productAndService-listing product-boxes">
     <div class="product" id="content-placeholder-phones-boxes"></div>
   </section>
 </div>
@@ -39,14 +39,15 @@
         <h6 class="tsr-product-header"><a href="detail.html">{{name}}</a></h6>
 
         {{#if client_price}}
-        <p class="tsr-product-price ee-special-price">Kliendihind <span>{{client_price}}</span></p>
+        <p class="tsr-product-price ee-special-price ee-product-price-lg"><span>{{client_price}}</span></p>
         {{else}} {{#if normal_price}}
-        <p class="tsr-product-price">Tavahind <span>{{normal_price}}</span></p>
+        <p class="tsr-product-price ee-product-price-lg"><span>{{normal_price}}</span></p>
         {{else}}
-        <p class="tsr-product-price"></p>
+        <p class="tsr-product-price ee-product-price-lg"></p>
           {{/if}}
         {{/if}}
         <a href="#" class="ee-compare"> Võrdle </a>
+        <a href="#" class="ee-buy"> Osta </a>
       </div>
     </div>
   </div>
@@ -54,9 +55,6 @@
   {{/phones}}
 </script>
 
-<!--         <a href="#" class="ee-buy"> Osta </a> -->
-
-        
 <!--         {{#if colors}}
           <ul class="tsr-product-colors">
           {{#each colors}}
