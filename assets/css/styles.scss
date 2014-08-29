@@ -155,7 +155,7 @@
     }
     td.blue-text {
       font-size: $font-size-h4;
-      font-weight: 600;
+      font-weight: bold;
       white-space: nowrap;
     }
     tbody > tr >  td {
@@ -253,6 +253,10 @@ display: block;
 .navbar-default .user-menu.navbar-nav > li > a:active, 
 {
   color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:after {
+  background: $lightgrey-t;
 }
 
 .ie8 {

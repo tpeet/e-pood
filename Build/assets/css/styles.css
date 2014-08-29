@@ -1620,11 +1620,11 @@ Communication Primary
       left: auto;
       position: absolute; }
     .tsr-section-communictaion-primary .tsr-slides a {
-      height: 480px;
+      height: 420px;
       background-size: auto; }
     .tsr-section-communictaion-primary .tsr-container {
       position: relative;
-      height: 480px; }
+      height: 420px; }
     .tsr-section-communictaion-primary .tsr-tactical-textPanel header {
       margin: 22px 30px 0 0px; }
     .tsr-section-communictaion-primary .tsr-tactical-textPanel span {
@@ -7572,7 +7572,7 @@ var, .price {
           top: auto;
           width: 100%; }
         .navbar-default .navbar-nav > li > a:after {
-          background-color: white;
+          background-color: red;
           content: "";
           display: block;
           height: 28px;
@@ -10638,7 +10638,7 @@ body {
   display: inline-block;
   min-width: 10px;
   padding: 0.6em 0.66667em;
-  font-weight: 600;
+  font-weight: bold;
   color: white;
   line-height: 0.7;
   vertical-align: baseline;
@@ -10754,12 +10754,12 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
         background: #73369e;
         border-bottom: 4px solid #642887;
         color: white;
-        font-weight: 600; }
+        font-weight: bold; }
       .ee-btn-link:active {
         background: #4e256b;
         border-bottom: 4px solid #4e256b;
         color: white;
-        font-weight: 600; } }
+        font-weight: bold; } }
 
 .ee-iconbutton {
   -webkit-border-radius: 4px;
@@ -10888,15 +10888,6 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
 .ee-buy:hover:before {
   color: #73369e; }
 
-a.ee-buy {
-  box-sizing: border-box;
-  border: 1px solid transparent; }
-
-a.ee-buy:hover {
-  border: 1px solid #73369e;
-  border-radius: 3px;
-  text-decoration: none; }
-
 .ee-close:before {
   content: "\e651"; }
 .ee-close:hover:before {
@@ -10988,9 +10979,6 @@ a.ee-buy:hover {
 section.tsr-section-productAndService-listing {
   padding: 0;
   margin-top: -1px; }
-  section.tsr-section-productAndService-listing .product {
-    margin-right: -15px;
-    margin-left: -15px; }
   section.tsr-section-productAndService-listing .ee-compare {
     margin: 15px auto;
     display: block; }
@@ -11026,7 +11014,7 @@ section.tsr-section-productAndService-listing {
     .tsr-product-price {
       margin: 12px 0 0; } }
   .tsr-product-price span {
-    font-weight: 600;
+    font-weight: bold;
     color: #0083be;
     font-size: 120%; }
 
@@ -11035,7 +11023,7 @@ section.tsr-section-productAndService-listing {
 
 .ee-product-price-lg {
   font-size: 150%;
-  font-weight: 600; }
+  font-weight: bold; }
 
 .ee-pagination-holder {
   padding: 23px 0; }
@@ -11149,7 +11137,7 @@ section.tsr-section-productAndService-listing {
       .tsr-module-product .tsr-product-price {
         margin: 12px 0 0; } }
     .tsr-module-product .tsr-product-price span {
-      font-weight: 600;
+      font-weight: bold;
       color: #0083be;
       font-size: 120%; }
   .tsr-module-product .ee-special-price, .tsr-module-product .ee-product-price-lg {
@@ -11446,6 +11434,8 @@ section.tsr-section-productlist .tsr-module-product {
 
 .ee-accordion {
   background: #fff; }
+  .ee-accordion [class*="col-"] {
+    padding-left: 0; }
 
 .ee-tab-to-accordion {
   background: #edede9;
@@ -12197,7 +12187,7 @@ header .megamenu .search-item-image,
   width: 64px; }
 .ee-found-tabs table td.blue-text {
   font-size: 21px;
-  font-weight: 600;
+  font-weight: bold;
   white-space: nowrap; }
 .ee-found-tabs table tbody > tr > td {
   vertical-align: middle; }
@@ -12264,6 +12254,9 @@ header .megamenu .search-item-image,
 .navbar-default .user-menu.navbar-nav > li > a,
 .navbar-default .user-menu.navbar-nav > li > a:active {
   color: #fff; }
+
+.navbar-default .navbar-nav > li > a:after {
+  background: #dbdbdb; }
 
 .ie8 .tsr-module-product .tsr-tactical-ribbon:before,
 .ie8 .tsr-module-product .tsr-tactical-ribbon:after {

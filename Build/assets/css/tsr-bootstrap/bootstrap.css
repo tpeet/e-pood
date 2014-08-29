@@ -2213,7 +2213,7 @@ input[type="button"].btn-block {
           top: auto;
           width: 100%; }
         .navbar-default .navbar-nav > li > a:after {
-          background-color: #ececec;
+          background-color: red;
           content: "";
           display: block;
           height: 28px;

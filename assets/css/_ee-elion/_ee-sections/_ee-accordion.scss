@@ -1,6 +1,9 @@
 // look at detail-page.scss for more
 .ee-accordion {
   background: #fff;
+  [class*="col-"] {
+    padding-left: 0;
+  }
 }
 
 .ee-tab-to-accordion {

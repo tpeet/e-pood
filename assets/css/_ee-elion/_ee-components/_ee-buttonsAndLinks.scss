@@ -78,13 +78,13 @@ text-align: left;
     background:$purple-h;
     border-bottom:4px solid $purple-c;
     color: white;
-    font-weight: 600;
+    font-weight: bold;
    }
   &:active {
     background:$purple-t;
     border-bottom:4px solid $purple-t;
     color: white;
-    font-weight: 600;
+    font-weight: bold;
     }
   } // min 768px
 }
@@ -285,16 +285,16 @@ text-align: left;
   }
 }
 
-a.ee-buy {
-   box-sizing: border-box;
-   border: 1px solid transparent;
+// a.ee-buy {
+//    box-sizing: border-box;
+//    border: 1px solid transparent;
 
-}
-a.ee-buy:hover {
-    border: 1px solid $purple-h;
-    border-radius: 3px;
-    text-decoration: none;
-}
+// }
+// a.ee-buy:hover {
+//     border: 1px solid $purple-h;
+//     border-radius: 3px;
+//     text-decoration: none;
+// }
 
 .ee-close {
   &:before {

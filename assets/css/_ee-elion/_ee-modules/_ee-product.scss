@@ -2,10 +2,6 @@ section.tsr-section-productAndService-listing {
   padding: 0;
   margin-top: -1px;
 
-  .product {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
     .ee-compare {
     margin: 15px auto;
     display: block;
@@ -53,7 +49,7 @@ section.tsr-section-productAndService-listing {
     margin: 12px 0 0;
   } 
   span {
-    font-weight: 600;
+    font-weight: bold;
     color: $blue-c;
     font-size: 120%;
   }
@@ -65,7 +61,7 @@ section.tsr-section-productAndService-listing {
 .ee-product-price-lg {
   @extend .ee-special-price;
   font-size: 150%;
-  font-weight: 600;
+  font-weight: bold;
 }
 /// !!!! Remove when sure we will not have paging
 // PAGINATION
@@ -219,7 +215,7 @@ section.tsr-section-productAndService-listing {
       margin: 12px 0 0;
     } 
     span {
-      font-weight: 600;
+      font-weight: bold;
       color: $blue-c;
       font-size: 120%;
     }
