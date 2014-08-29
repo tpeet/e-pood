@@ -9929,16 +9929,19 @@ section.ee-breadcrumbs {
     .nav-tabs > li > a {
       margin-right: 2px;
       line-height: 1.42857;
+      border-left-color: #dddddd;
       border: 1px solid transparent;
-      border-color: #dddddd;
+      border-right-color: #dddddd;
+      border-width: 1px;
+      border-style: solid;
       border-radius: 0;
       padding: 20px 30px;
       font-weight: bold; }
       .nav-tabs > li > a span {
         font-weight: normal; }
       .nav-tabs > li > a:hover {
-        background: #f6f6f6;
-        border-bottom-color: #fff; }
+        background: white;
+        border-color: #dddddd; }
     .nav-tabs > li.active > a {
       color: #642887;
       font-weight: normal; }
@@ -11638,7 +11641,7 @@ section.ee-tab-to-accordioncontent {
   section.ee-tab-to-accordioncontent .tsr-section-productAndService-listing {
     border-top: none; }
   section.ee-tab-to-accordioncontent .tab-content {
-    margin: 30 px auto; }
+    margin: 30px auto; }
   section.ee-tab-to-accordioncontent .tab-pane {
     margin: 30px 0 10px; }
     section.ee-tab-to-accordioncontent .tab-pane.ee-similar-products {
@@ -12212,10 +12215,6 @@ header .megamenu .search-item-image,
   @media (min-width: 768px) {
     .ee-found-tabs .ee-compare {
       margin: 10px; } }
-.ee-found-tabs .tab-content {
-  padding-top: 20px; }
-.ee-found-tabs.ee-tab-to-accordion {
-  background: #fff; }
 .ee-found-tabs .col-five-on-small {
   width: 100%;
   position: relative;
@@ -12239,6 +12238,9 @@ header .megamenu .search-item-image,
 
 .text-link {
   color: inherit; }
+
+.ee-care-page .panel-body {
+  padding-left: 75px; }
 
 .dl-horizontal.dl-wide-300 dt {
   width: auto; }
@@ -12289,7 +12291,7 @@ header .megamenu .search-item-image,
   top: 25px;
   left: 15px; }
 
-.ie8 #browserAlert {
+.ie8 #browserAlert, .ie9 #browserAlert {
   display: block; }
 
 .ie9 .tsr-tactical-flash {

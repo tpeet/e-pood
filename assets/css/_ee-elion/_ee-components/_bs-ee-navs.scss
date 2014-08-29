@@ -14,8 +14,11 @@
     > a {
       margin-right: 2px;
       line-height: $line-height-base;
+      border-left-color: $nav-tabs-border-color;
       border: 1px solid transparent;
-      border-color: $nav-tabs-border-color;
+      border-right-color: $nav-tabs-border-color;
+      border-width: 1px;
+      border-style: solid;
       border-radius: 0;
       padding: 20px 30px;
       font-weight: bold;
@@ -23,8 +26,8 @@
         font-weight: normal;
       }
       &:hover {
-        background: $lightgrey-c;
-        border-bottom-color: #fff;
+        background: lighten($clay-temp, 10%);
+        border-color: $nav-tabs-border-color;
       }
     }
 

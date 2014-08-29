@@ -179,14 +179,6 @@
     margin: 10px;
     } 
   }
-  .tab-content {
-    padding-top: 20px;
-  }
-  &.ee-tab-to-accordion {
-    background: #fff;
-
-
-  }
   .col-five-on-small {
     width: 100%;
     position: relative;
@@ -221,6 +213,12 @@
 
 // Care-page css
 // *****************
+
+.ee-care-page {
+  .panel-body {
+    padding-left: 75px;
+  }
+}
 
 .dl-horizontal.dl-wide-300 {
   dt {
