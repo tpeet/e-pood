@@ -750,7 +750,69 @@
    <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
 </section> 
 
- <!-- for large screen, hidden on small -->
+
+<!-- for small screen, hidden on large -->
+<section class="ee-frontlinks">
+  <div class="ee-product-list-front container visible-xs visible-sm" >
+    <div  id="content-placeholder-frontmenu"></div>
+    
+    <script id="front-menu-template" type="text/x-handlebars-template">
+    
+    {{#menu}}
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
+      <ul class="nav nav-pills nav-stacked js-listedmenu">
+        {{#each link }}
+    
+        <li><a href="{{this.path}}">{{this.name}}</a></li>  
+        {{/each}}
+      </ul>
+      </div>
+     
+    {{/menu}}
+    
+    </script>
+  </div>
+</section>
+
+<section class="tsr-section-promotion tsr-count-4"> 
+    <div class="container product">
+
+      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
+      <script id="offer-slider-template" type="text/x-handlebars-template">
+      {{#offers}}
+
+      <a href="detail.html" class="tsr-module-promotion">
+        <figure>
+      <figure class="tsr-tactical-flash">
+        <div class="flashText-flash-normal ee-flashtext-container">
+          <div class="ee-big">72 $</div>
+          <div class="ee-small">Nii kiire</div>
+        </div>
+      </figure>
+          {{#if firstflash}}
+          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+          {{/if}}
+          {{#if secondflash}}
+          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+          {{/if}}
+          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
+          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
+        </figure>
+        <div class="tsr-product-content">
+
+          <h6 class="tsr-product-header violet-text">{{name}}</h6>
+          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+        </div>
+      </a>
+      {{/offers}}
+      </script>
+    </div>
+   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
+</section> 
+
+<!-- for large screen, hidden on small -->
 <section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
   <div class="container">
     <div class="row ">
@@ -792,35 +854,8 @@
         </script>
     </div>
   </div>
- <!-- for small screen, hidden on large -->
-  <div class="ee-product-list-front container visible-xs visible-sm" >
-    <div  id="content-placeholder-frontmenu"></div>
-    
-    <script id="front-menu-template" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked js-listedmenu">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
-  </div>
 </section>
-<a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button -->
-
-
-
-
- 
+<a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button --> 
 
 <section class="tsr-section-divider tsr-color-white" id="logged-in">
   <div class="container">
@@ -1080,7 +1115,7 @@ $(document).ready(function(){
 
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-  $('.js-placeholder-offers').hideMaxAItems({ 'max':8, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+  $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
     // SLIDER SCRIPT
   $("#js-priceslider").slider({

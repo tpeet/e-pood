@@ -31,10 +31,7 @@ PROMOTION
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//////// Module class name
-$section: tsr-section-promotion;
-
-.#{$section}{
+.tsr-section-promotion {
 
 //////// Base styles
 	background:$lightgrey-c; 
@@ -63,9 +60,8 @@ $section: tsr-section-promotion;
 
 
 //////// Module class name
-$module: tsr-module-promotion;
 
-.#{$module}{
+.tsr-module-promotion {
 
 //////// Base styles
 	 position:relative; 
@@ -192,7 +188,7 @@ $module: tsr-module-promotion;
 		}
 
 		p{
-			padding-bottom:50px;
+			padding-bottom:30px;
 		}
 
 	}// media 768 END

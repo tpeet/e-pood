@@ -142,7 +142,7 @@ section.tsr-section-productAndService-listing {
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   @include media-min($screen-sm) {
-  padding: em(35) em(20) em(10) em(20);
+  padding: em(15) em(20) em(10) em(20);
 }
 
   .ee-favorite-dropdown {

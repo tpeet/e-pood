@@ -1,4 +1,32 @@
- <!-- for large screen, hidden on small -->
+
+<!-- for small screen, hidden on large -->
+<section class="ee-frontlinks">
+  <div class="ee-product-list-front container visible-xs visible-sm" >
+    <div  id="content-placeholder-frontmenu"></div>
+    
+    <script id="front-menu-template" type="text/x-handlebars-template">
+    
+    {{#menu}}
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
+      <ul class="nav nav-pills nav-stacked js-listedmenu">
+        {{#each link }}
+    
+        <li><a href="{{this.path}}">{{this.name}}</a></li>  
+        {{/each}}
+      </ul>
+      </div>
+     
+    {{/menu}}
+    
+    </script>
+  </div>
+</section>
+
+<!-- @include _offers.html --> 
+
+<!-- for large screen, hidden on small -->
 <section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 
   <div class="container">
     <div class="row ">
@@ -39,28 +67,6 @@
 
         </script>
     </div>
-  </div>
- <!-- for small screen, hidden on large -->
-  <div class="ee-product-list-front container visible-xs visible-sm" >
-    <div  id="content-placeholder-frontmenu"></div>
-    
-    <script id="front-menu-template" type="text/x-handlebars-template">
-    
-    {{#menu}}
-    
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked js-listedmenu">
-        {{#each link }}
-    
-        <li><a href="{{this.path}}">{{this.name}}</a></li>  
-        {{/each}}
-      </ul>
-      </div>
-     
-    {{/menu}}
-    
-    </script>
   </div>
 </section>
 <a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button -->

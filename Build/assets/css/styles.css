@@ -1714,7 +1714,7 @@ PROMOTION
     .tsr-count-2 .tsr-module-promotion {
       width: 50%; }
     .tsr-module-promotion p {
-      padding-bottom: 50px; } }
+      padding-bottom: 30px; } }
   @media (min-width: 940px) {
     .tsr-count-6 .tsr-module-promotion {
       width: 33%; }
@@ -11082,7 +11082,7 @@ section.tsr-section-productAndService-listing {
   transition: background 0.3s ease-in-out; }
   @media (min-width: 768px) {
     .tsr-module-product {
-      padding: 2.33333em 1.33333em 0.66667em 1.33333em; } }
+      padding: 1em 1.33333em 0.66667em 1.33333em; } }
   .tsr-module-product .ee-favorite-dropdown {
     position: absolute;
     right: 0.66667em;
