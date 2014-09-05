@@ -639,16 +639,16 @@
       <div class="tsr-tactical-container tsr-slide-1 ">
         <figure class="tsr-tactical-speach-bubble tsr-color-pink">
           <header class="tsr-header">
-            Vaata, uus e-pood!
+            Kliendihind
           </header>
-          Jumps over the lazy dog, jump<br>
-          the lazy dog lorem ipsum
+          599 €
         </figure>
       </div>
       <div class="container">
         <div class="tsr-tactical-textPanel">
           <header>Meie kliendid võidavad hinnas</header>
-          <span><button class="btn btn-primary">Vaata siit</button> kui palju!</span>
+          <span class="small visible-xs visible-sm">Lenovo G50-70 kliendihind <strong>599 €</strong> <br> <button class="btn btn-link">Vaata kohe!</button> </span>
+          <span class="hidden-sm"></span>
         </div>
       </div>
     </a>
@@ -1091,6 +1091,7 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+
 $(document).ready(function(){
   $('.ee-sidenav li  a').click(function(e){
     if ($(this).attr('class') != 'selected'){
@@ -1113,6 +1114,8 @@ $(document).ready(function(){
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
   $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+
 
     // SLIDER SCRIPT
   $("#js-priceslider").slider({

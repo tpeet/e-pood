@@ -17,6 +17,7 @@ TSR - SUPPORT
        
          tsrCompare.tsrItemCount();
          tsrCompare.tsrEqualHeights();
+         tsrCompare.tsrItemWidth();
          
     };
 
@@ -33,19 +34,70 @@ TSR - SUPPORT
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////// TSR - Equal heights
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     tsrCompare.tsrEqualHeights = function () {
+
+//         $('#content-placeholder-compare-data .js-datawrapper .fixwidth').each(function () {
+
+//             var el = $(this).not('.sticky');
+//             var elHeight = $('.fixwidth > .js-scrollable').height();
+
+//             $('h6' , this).css('height', 'auto').setAllToMaxHeight()﻿;
+//             $('.compare-value' , this).css('height', elHeight).setAllToMaxHeight()﻿;
+            
+// console.log(this);
+//         });
+
+//     };
+
 
     tsrCompare.tsrEqualHeights = function () {
 
-	    $('#content-placeholder-compare-data .fixwidth').each(function () {
 
-	        var el = $(this).not('.sticky');
+        var bw = $('body').width();
 
-	      	$('h6' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-            $('.compare-value' , this).parent().parent().css('height', 'auto').setAllToMaxHeight()﻿;
 
-	    });
 
-    };
+        $('#content-placeholder-compare-data ').each(function () {
+
+/////// Variables
+
+            var el          = $(this).not('.sticky');
+            var elHeight  = el.find('.compare-value').height();
+
+            
+
+/////////////////////////////////////////////
+////// Check widths
+
+            if(bw <= 767 ){
+                
+                $('.js-datawrapper', this).each(function () {
+
+                    var el          = $(this);
+                    var elHeight  = el.find('.compare-value').height();
+
+                    el.css('max-height', elHeight + 20 );
+console.log(this);
+                }); // Each END
+
+            } else {
+
+                $('.js-datawrapper', this).each(function () {
+                    
+                    var el          = $(this);
+                    el.css('max-height',  'auto');
+
+                }); // Each END
+
+            }
+
+
+
+        }); // Each END
+
+
+
+    }; // Func END
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -54,7 +106,7 @@ TSR - SUPPORT
 
     tsrCompare.tsrItemCount = function () {
 
-        $('.ee-product-compare .panel-collapse .row .row').each(function () {
+        $('.ee-product-compare  .fixwidth').each(function () {
 
             var el = $(this);
             var elCount =  el.children().length;
@@ -64,12 +116,18 @@ TSR - SUPPORT
         });
 
     };
-  
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////  EE - width is half the window
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+    tsrCompare.tsrItemWidth = function () {
+        var half = $('.panel-default').width()/2;
+        if(Modernizr.mq('only screen and (max-width: 768px)')) {
+          $('.ee-count-5').width(half);
+        }
 
+
+    }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////// Ready
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,6 +135,7 @@ TSR - SUPPORT
     $(document).on('ready', function(){
 
         tsrCompare.tsrInit();
+
       
     });
 
@@ -106,6 +165,7 @@ $(window).scroll(function() {
 // sticky header with and centered position
     var new_width = $('.panel-default').width();
     var hidden_width = $('.ee-count-5').width()*5;
+    
     if(Modernizr.mq('only screen and (min-width: 768px)')) {
       $('.sticky').width(new_width);
     }
@@ -113,9 +173,10 @@ $(window).scroll(function() {
       $('.sticky').width(hidden_width);
     }
 
-// http://jsfiddle.net/UaGjs/10/
+
+//http://jsfiddle.net/UaGjs/10/
 var next;
-$('.nexti').click(function() {
+$('.js-compare-next').click(function() {
     if (next === undefined) {
         next = $('.ee-count-5').next();
     } else {
@@ -129,11 +190,12 @@ $('.nexti').click(function() {
     $(".js-datawrapper").scrollTo(next, 800, {
         margin: true
     });
+    event.preventDefault();
 });
 
 
 var prev;
-$('.previ').click(function() {
+$('.js-compare-prev').click(function() {
     if (prev === undefined) {
         if (next === undefined) {
             prev = $('.ee-count-5').prev();
@@ -145,8 +207,10 @@ $('.previ').click(function() {
         prev = prev.prev();
     }
     $(".js-datawrapper").scrollTo(prev, 800, {
-        margin: true
+        margin: true,
+        limit: false
     });
+    event.preventDefault();
 });
 
 

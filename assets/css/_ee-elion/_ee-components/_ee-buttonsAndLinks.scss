@@ -142,7 +142,7 @@ text-align: left;
   &.ee-left {
     display: block;
     opacity: 0.5;
-    @include media-min($screen-sm) {
+    @include media-min($screen-md) {
     display: none;
     } 
   }

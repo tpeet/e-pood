@@ -631,6 +631,11 @@
         <li class="active">
           <a href="#" id="toggleParam">Peida detailid <span class="icon icon-arrow-up"></span></a> 
         </li>
+        <li class="visible-xs">
+          <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#" >Tühjenda võrdlus<span class="icon icon-delete close-btn"></span></a> 
         </li>
@@ -643,12 +648,11 @@
 
 
 
+
 <div class="container" > 
   
   <div class="ee-product-compare">
-    <div class="row">
-    
-      <style>
+    <style>
 /*  .wrap {
     
     width:100%;
@@ -676,36 +680,34 @@
 
 
 <div id="content-placeholder-compare-data" class=""></div>
+<!-- <span class="previ ee-left ee-iconbutton"></span>
+<span class="nexti ee-right ee-iconbutton"></span> -->
 <ul class="tsr-direction-nav">
-  <li><a class="tsr-prev previ" href="#"></a></li>
-  <li><a class="tsr-next nexti" href="#"></a></li>
+  <li><a class="tsr-prev js-compare-prev" href="#"></a></li>
+  <li><a class="tsr-next js-compare-next" href="#"></a></li>
 </ul>
-<span class="previ ee-left ee-iconbutton"></span>
-<span class="nexti ee-right ee-iconbutton"></span>
 <script id="compare-data-template" type="text/x-handlebars-template">
   {{#comparision}}
   
   <div class="panel-group ee-accordion" >
-    <div class="panel panel-default table-responsive comparision-header js-datawrapper">
-      <div class="fixwidth row">
-      <div class="col-xs-2 col-sm-2 hidden-xs compare-title"></div>
-        
-        <div class="col-sm-10 js-datawrapper">
-          <div class="row fixwidth">
-          {{#each prod}}
-            <div class="col-xs-2 ee-count-5 ">
-              <a type="button" class="close" aria-hidden="true">×</a>
-              <img class="img-responsive" src="{{img}}" alt="">
-              <h6 class="compare-value"><a href="">{{product}}</a></h6>
-              <a href="" class="btn btn-link ee-buy">Osta</a>
-              <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a>
-            </div>
-            {{/each}}
+
+    <div class="panel panel-default comparision-header">
+      <div class="col-xs-12 col-sm-2 compare-title">
+      
+      </div>
+      <div class="col-xs-12 col-sm-10 js-datawrapper">
+        <div class="fixwidth">
+        {{#each prod}}
+          <div class="col-xs-2 compare-value">
+            <a type="button" class="close" aria-hidden="true">×</a>
+            <img class="img-responsive" src="{{img}}" alt="">
+            <h6><a href="">{{product}}</a></h6>
+            <a href="" class="btn btn-link ee-buy">Osta</a>
           </div>
+          {{/each}}
         </div>
       </div>
     </div>
-
 
     {{#each param}}
      <div class="panel panel-default">
@@ -729,21 +731,21 @@
               {{index}}
               {{/if}}
             </div>
-            <div class="col-sm-10 js-datawrapper">
-              <div class="row fixwidth">
-                <div class=" col-xs-2 ">
+            <div class="col-xs-12 col-sm-10 js-datawrapper">
+              <div class="fixwidth">
+                <div class=" col-xs-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value}}}</p>
                 </div>
-                <div class=" col-xs-2 ">
+                <div class=" col-xs-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value1}}}</p>
                 </div>
-                <div class=" col-xs-2 ">
+                <div class=" col-xs-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value2}}}</p>
                 </div>
-                <div class=" col-xs-2">
+                <div class=" col-xs-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value3}}}</p>
                 </div>
-                <div class=" col-xs-2">
+                <div class=" col-xs-2 js-scrollable">
                   <p class="{{class}} compare-value">{{{value4}}}</p>
                 </div>
               </div>
@@ -761,10 +763,9 @@
   {{/comparision}}
 </script>
 
+            <!-- <a href="" class="btn btn-link ee-close" style="" name="" >Eemalda</a> -->
 
 
-
-    </div>
   </div>
 </div>
 
@@ -908,6 +909,7 @@
     <script>
       // 2nd level 
       // Temporary sidemenu show-off for static presentation only, the rest is pure BS
+
 $(document).ready(function(){
   $('.ee-sidenav li  a').click(function(e){
     if ($(this).attr('class') != 'selected'){
@@ -930,6 +932,8 @@ $(document).ready(function(){
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
   $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+
+
 
     // SLIDER SCRIPT
   $("#js-priceslider").slider({

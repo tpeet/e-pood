@@ -2107,7 +2107,7 @@ input[type="button"].btn-block {
   width: 100%; }
 
 /* level 2 menu position fix, you can remove it safely */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #collapsibleMainMenu-Pages .navbar-nav:first-child {
     clear: left; } }
 @media (min-width: 1200px) {

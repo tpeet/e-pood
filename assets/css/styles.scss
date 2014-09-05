@@ -87,37 +87,7 @@
 /* @include _ee-mainnav.scss */
 /* @include _ee-compare.scss */
 
-/* default height */
-// #ad {
-//    height:30px;
-// }
-// @media only screen and (width:480px) {
-//    /* 90 pixels high */
-//    #ad {
-//       height:90px;
-//    }
-// }
-// @media only screen and (width:960px) {
-//    /* 125 pixels high */
-//    #ad {
-//       height:200px;
-//    }
-// }
 
-// .iframewrapper {
-//   position: relative;
-//   height: 0;
-//   overflow: hidden;
-//   padding-bottom: 30%;
-
-//   iframe {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
 
 // http://thesassway.com/intermediate/dynamically-change-text-color-based-on-its-background-with-sass
 @function set-notification-text-color($color) {
@@ -279,18 +249,20 @@ display: block;
   width: 60px;
 }
 
-  .flashText-ribbon-inner .ee-big {
-    display: block;
-    width: 60px;
-    margin-left: 18%;
-  }
+.flashText-ribbon-inner .ee-big {
+  display: block;
+  width: 60px;
+  margin-left: 18%;
+}
+  
 .ie8 .ee-flashtext-container {
  position: absolute;
  top: 25px;
  left: 15px;
 }
 
-.ie8 #browserAlert, .ie9 #browserAlert {
+.ie8 #browserAlert, 
+.ie9 #browserAlert {
   display: block;
 }
 
@@ -326,30 +298,6 @@ display: block;
   background-image: linear-gradient(transparent, transparent), url(elion-logo.svg); 
 }
 
-
-// HELPER CLASSES
-//**********************************
-
-// for jquery ellipsis https://github.com/jjenzz/jquery.ellipsis
-// .ellip {
-//   display: block;
-//   height: 100%;
-// }
-
-// .ellip-line {
-//   display: inline-block;
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-//   word-wrap: normal;
-//   max-width: 100%;
-// }
-
-// .ellip,
-// .ellip-line {
-//   position: relative;
-//   overflow: hidden;
-// }
-// end ellipsis
 
 .ee-thinline-bottom {
   margin-bottom: -1px;
