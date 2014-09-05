@@ -6943,6 +6943,8 @@ TSR - SUPPORT
 //     };
 
 
+
+
     tsrCompare.tsrEqualHeights = function () {
 
 
@@ -6970,7 +6972,7 @@ TSR - SUPPORT
                     var elHeight  = el.find('.compare-value').height();
 
                     el.css('max-height', elHeight + 20 );
-console.log(this);
+
                 }); // Each END
 
             } else {
