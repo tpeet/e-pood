@@ -79,6 +79,7 @@
 /* @include _ee-frontpage.scss */
 /* @include _ee-2nd-level-list.scss */
 /* @include _ee-banner-ad.scss */
+/* @include _ee-loaders.scss */
 /* @include _ee-accordion.scss */
 /* @include _ee-detail-page.scss */
 /* @include _ee-reviews.scss */
@@ -502,26 +503,6 @@ footer .social-block .media .icon {
   }
 }
 
-// Loaders 
-.ee-loader {
-  border-left: 1px solid $lightgrey-t;
-  border-right: 1px solid $lightgrey-t;
-}
-.ee-loader-wide {
-  margin: 10px auto;
-  background-image: url('assets/img/branding/Loading_Light_Gray_40.gif');
-  width: 40px;
-  height: 40px;
-}
-.ee-loader-large-violet {
-  width: 110px;
-  height: 110px;
-  background: $purple-c url('assets/img/branding/Loading_Rich_Purple_64.gif') no-repeat center center;
-  border-radius: 3px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 5;
-}
+
 
 
