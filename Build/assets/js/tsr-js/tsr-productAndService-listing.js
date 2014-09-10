@@ -39,35 +39,30 @@ TSR - PRODUCT AND SERVICE LISTING
     tsrProductAndServiceListing.tsrEqualHeights = function () {
 
 
-	    $('.tsr-section-productAndService-listing').each(function () {
+	   var toBeCalculated = $('.tsr-section-productAndService-listing');
 
-	    	var bw = $('body').width();
-	        var el = $(this);
+		if (toBeCalculated != null && toBeCalculated.length > 0) {
+			for (var i = 0; i < toBeCalculated.length; i++) {
+				var bw = $('body').width();
+				var el = toBeCalculated[i];
 
-		    if(bw >= 600){
-			
-
-				// Product 
-		      	$('.tsr-product-header', this).css('height', 'auto').setAllToMaxHeight()﻿*2;
-		      	$('.tsr-product-colors' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-product-desc' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-product-price' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	$('.tsr-product-small-print' , this).css('height', 'auto').setAllToMaxHeight()﻿;
-		      	
-
-		    } else {
-
- 
-				// Product 
-		      	$('.tsr-product-header', this).css('height', 'auto');
-		      	$('.tsr-product-colors', this).css('height', 'auto');
-		      	$('.tsr-product-desc' , this).css('height', 'auto');
-		      	$('.tsr-product-price' , this).css('height', 'auto');
-		      	$('.tsr-product-small-print' , this).css('height', 'auto');
-		      	
-		    }
-
-	    });
+				if (bw >= 600) {
+					// Product 
+					$('.tsr-product-header', el).css('height', 'auto').setAllToMaxHeight();
+					$('.tsr-product-colors', el).css('height', 'auto').setAllToMaxHeight();
+					$('.tsr-product-desc', el).css('height', 'auto').setAllToMaxHeight();
+					$('.tsr-product-price', el).css('height', 'auto').setAllToMaxHeight();
+					$('.tsr-product-small-print', el).css('height', 'auto').setAllToMaxHeight();
+				} else {
+					// Product 
+					$('.tsr-product-header', el).css('height', 'auto');
+					$('.tsr-product-colors', el).css('height', 'auto');
+					$('.tsr-product-desc', el).css('height', 'auto');
+					$('.tsr-product-price', el).css('height', 'auto');
+					$('.tsr-product-small-print', el).css('height', 'auto');
+				}
+			}
+		}
 
     };
 

@@ -6,31 +6,7 @@
   var source   = $("#offer-slider-template").html();
   var template = Handlebars.compile(source);
 
-
   var data = { offers: [
-    { 
-      name: "Kui panna ilusaid pilte, tuleb ka leht ilus",
-      id: "offers/1fw",
-      description: "Pea meeles, et pilt peab olema kindla laiuse-kõrguse suhtega siin ja ilupilt",
-      },
-    {
-      ribbon: " ",
-      name: "Vaata tulemust eri ekraanilaiustel!",
-      id: "offers/2fw", 
-      description: "Pilt salvestada suurusega 447 x 251 px ja save-for-web, kvaliteet 70%",
-      normal_price: "4,5 €"
-    },
-    { 
-      name: "Ka sisestatav tekst on kujunduselement",
-      id: "offers/3fw",
-      description: "Tekstibloki maht, kuju ja värv, samuti kaugu teistest objektidest - see loeb. Vaata üle, kas jäi ilus ka kui teksti oled sisestanud.",
-      normal_price: "4,5 €"
-    },
-    {
-      name: "LG G2",
-      id: "offers/4fw",
-      description: "Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!",
-    },
     {
       class: "offer",
       name: "Tõelised mänguriarvutid",
@@ -93,3 +69,34 @@
 
 
   $("#content-placeholder-offers").html(template(data));
+
+  var source   = $("#offer-slider-template-visible").html();
+  var template = Handlebars.compile(source);
+
+    var data = { offers: [
+    { 
+      name: "Kui panna ilusaid pilte, tuleb ka leht ilus",
+      id: "offers/1fw",
+      description: "Pea meeles, et pilt peab olema kindla laiuse-kõrguse suhtega siin ja ilupilt",
+      },
+    {
+      ribbon: " ",
+      name: "Vaata tulemust eri ekraanilaiustel!",
+      id: "offers/2fw", 
+      description: "Pilt salvestada suurusega 447 x 251 px ja save-for-web, kvaliteet 70%",
+      normal_price: "4,5 €"
+    },
+    { 
+      name: "Ka sisestatav tekst on kujunduselement",
+      id: "offers/3fw",
+      description: "Tekstibloki maht, kuju ja värv, samuti kaugu teistest objektidest - see loeb. Vaata üle, kas jäi ilus ka kui teksti oled sisestanud.",
+      normal_price: "4,5 €"
+    },
+    {
+      name: "LG G2",
+      id: "offers/4fw",
+      description: "Kui soovid e-poest ostetud kauba oma sõbrale või pereliikmele kingituseks saata, saame selle sinu eest eelnevalt toredasse kinkepakki panna. Üllatus on garanteeritud!",
+    }
+    ]};
+
+     $("#content-placeholder-offers-visible").html(template(data));

@@ -1,6 +1,5 @@
 // GENERAL
 /* @include modernizr */
-/* @include trmix.min.js */
 /* @include jquery.debouncing */
 /* @include tsr-productAndService-listing */
 /* @include tsr-forms */
@@ -32,7 +31,6 @@
 /* @include tsr-communication-primary */
 /* @include tsr-promotion */
 /* @include ee-hideMaxListItem */
-/* @include ee-hideMaxAItem */
 
 // DETAIL VIEW
 /* @include collapse */

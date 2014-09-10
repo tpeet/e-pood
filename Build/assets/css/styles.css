@@ -10688,7 +10688,7 @@ section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
     section.tsr-section-communictaion-primary .tsr-tactical-textPanel {
       max-width: 60%; } }
   section.tsr-section-communictaion-primary .tsr-tactical-textPanel header {
-    font-weight: 600; }
+    font-weight: bold; }
   section.tsr-section-communictaion-primary .tsr-tactical-textPanel span {
     font-size: 1em; }
   @media (min-width: 768px) {
@@ -11509,11 +11509,11 @@ section.tsr-section-productlist .tsr-module-product {
       margin-bottom: 0;
       margin-top: -1px; }
 
-.panel .collapsing {
-  -moz-transition: height 2s;
-  -webkit-transition: height 2s;
-  -o-transition: height 2s;
-  transition: height 2s; }
+.collapsing {
+  -moz-transition: height 1s;
+  -webkit-transition: height 1s;
+  -o-transition: height 1s;
+  transition: height 1s; }
 
 .ee-accordion .panel-group .panel + .panel, .ee-accordion.panel-group .panel + .panel,
 .ee-tab-to-accordion .panel-group .panel + .panel,

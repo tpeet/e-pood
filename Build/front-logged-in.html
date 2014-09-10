@@ -664,7 +664,7 @@
         </figure>
       </div>
       <div class="container">
-        <div class="tsr-tactical-textPanel">
+        <div class="row tsr-tactical-textPanel">
           <header>Tegemist veel on.</header>
           <span>The quick brown fox jumps over the lazy dog</span>
         </div>
@@ -712,36 +712,65 @@
 
 
 <section class="tsr-section-promotion tsr-count-4"> 
-    <div class="container product">
+  <div class="container product">
+    <div id="content-placeholder-offers-visible"></div>
+    <script id="offer-slider-template-visible" type="text/x-handlebars-template">
+    {{#offers}}
 
-      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
-      <script id="offer-slider-template" type="text/x-handlebars-template">
-      {{#offers}}
+    <a href="detail.html" class="tsr-module-promotion">
+      <figure>
+        {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+        {{/if}}
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+      </figure>
+      <div class="tsr-product-content">
 
-      <a href="detail.html" class="tsr-module-promotion">
-        <figure>
-          {{#if ribbon}}
-          <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
-          {{/if}}
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
-        </figure>
-        <div class="tsr-product-content">
-
-          <h6 class="tsr-product-header">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{description}}} </p>
-        </div>
-      </a>
-      {{/offers}}
-      </script>
-    </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
+        <h6 class="tsr-product-header">{{name}}</h6>
+        <p class="tsr-product-desc"> {{{description}}} </p>
+      </div>
+    </a>
+    {{/offers}}
+    </script>
+  </div>
 </section>
+
+<section class="tsr-section-promotion tsr-count-4 collapse" id="collapsePromotion"> 
+  <div class="container product">
+    <div id="content-placeholder-offers"></div>
+    <script id="offer-slider-template" type="text/x-handlebars-template">
+    {{#offers}}
+
+    <a href="detail.html" class="tsr-module-promotion">
+      <figure>
+        {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+        {{/if}}
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+      </figure>
+      <div class="tsr-product-content">
+
+        <h6 class="tsr-product-header">{{name}}</h6>
+        <p class="tsr-product-desc"> {{{description}}} </p>
+      </div>
+    </a>
+    {{/offers}}
+    </script>
+  </div>
+</section>
+<a data-toggle="collapse" href="#collapsePromotion" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
 
 <!-- <figure class="tsr-tactical-flash">
         <div class="flashText-flash-normal ee-flashtext-container">
@@ -777,36 +806,65 @@
 </section>
 
 <section class="tsr-section-promotion tsr-count-4"> 
-    <div class="container product">
+  <div class="container product">
+    <div id="content-placeholder-offers-visible"></div>
+    <script id="offer-slider-template-visible" type="text/x-handlebars-template">
+    {{#offers}}
 
-      <div id="content-placeholder-offers" class="js-placeholder-offers"></div>
-      <script id="offer-slider-template" type="text/x-handlebars-template">
-      {{#offers}}
+    <a href="detail.html" class="tsr-module-promotion">
+      <figure>
+        {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+        {{/if}}
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+      </figure>
+      <div class="tsr-product-content">
 
-      <a href="detail.html" class="tsr-module-promotion">
-        <figure>
-          {{#if ribbon}}
-          <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
-          {{/if}}
-          {{#if firstflash}}
-          <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
-          {{/if}}
-          {{#if secondflash}}
-          <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-          {{/if}}
-          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
-        </figure>
-        <div class="tsr-product-content">
-
-          <h6 class="tsr-product-header">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{description}}} </p>
-        </div>
-      </a>
-      {{/offers}}
-      </script>
-    </div>
-   <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
+        <h6 class="tsr-product-header">{{name}}</h6>
+        <p class="tsr-product-desc"> {{{description}}} </p>
+      </div>
+    </a>
+    {{/offers}}
+    </script>
+  </div>
 </section>
+
+<section class="tsr-section-promotion tsr-count-4 collapse" id="collapsePromotion"> 
+  <div class="container product">
+    <div id="content-placeholder-offers"></div>
+    <script id="offer-slider-template" type="text/x-handlebars-template">
+    {{#offers}}
+
+    <a href="detail.html" class="tsr-module-promotion">
+      <figure>
+        {{#if ribbon}}
+        <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+        {{/if}}
+        {{#if firstflash}}
+        <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
+        {{/if}}
+        {{#if secondflash}}
+        <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+        {{/if}}
+        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+      </figure>
+      <div class="tsr-product-content">
+
+        <h6 class="tsr-product-header">{{name}}</h6>
+        <p class="tsr-product-desc"> {{{description}}} </p>
+      </div>
+    </a>
+    {{/offers}}
+    </script>
+  </div>
+</section>
+<a data-toggle="collapse" href="#collapsePromotion" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
 
 <!-- <figure class="tsr-tactical-flash">
         <div class="flashText-flash-normal ee-flashtext-container">
@@ -834,7 +892,7 @@
     </div>
   </div>
 </section>
-<section class="ee-frontlinks">
+<section class="ee-frontlinks collapse" id="collapseMenu">
   <div class="ee-product-list-front container  hidden-xs hidden-sm">
     <div class="row">
       <div  id="content-placeholder-frontmenu1"></div>
@@ -858,7 +916,8 @@
     </div>
   </div>
 </section>
-<a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a> <!-- js-show-button --> 
+<a data-toggle="collapse" href="#collapseMenu" class="tsr-btn-view-all hidden-sm hidden-xs"><span>Näita rohkem</span></a>
+<!-- <a href="" class="tsr-btn-view-all hidden-sm hidden-xs js-morebutton"><span>Näita rohkem</span></a>  --> 
 
 <section class="tsr-section-divider tsr-color-white" id="logged-in">
   <div class="container">
@@ -1119,7 +1178,7 @@ $(document).ready(function(){
 
    $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
-  $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+  // $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
 
 
