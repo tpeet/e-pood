@@ -62,13 +62,19 @@ section.tsr-section-productAndService-listing {
 }
 .ee-special-price {
   color: $blue-c;
+  font-weight: bold;
 }
 
 .ee-product-price-lg {
   @extend .ee-special-price;
   font-size: 150%;
-  font-weight: bold;
 }
+
+.ee-product-price-md {
+  @extend .ee-special-price;
+  font-size: 130%;
+}
+
 /// !!!! Remove when sure we will not have paging
 // PAGINATION
 //*********
@@ -149,6 +155,7 @@ section.tsr-section-productAndService-listing {
   transition: background 0.3s ease-in-out;
   @include media-min($screen-sm) {
   padding: em(15) em(20) em(10) em(20);
+  display: table; // temp for v-aligning headers
 }
 
   .ee-favorite-dropdown {
@@ -176,6 +183,8 @@ section.tsr-section-productAndService-listing {
     @include media-min($screen-sm-min) {
     font-size: 120%;
     padding-right: 0;
+    display: table-cell; // temp for v-aligning headers
+    vertical-align: middle; // temp for v-aligning headers
     } 
   }
 

@@ -635,7 +635,7 @@
 <section class="tsr-section-communictaion-primary">
   <div class="tsr-slides">
   
-    <a href="https://pood.elion.ee/productInfo/24/sulearvuti-lenovo-ideapad-g50-70/59417974?utm_source=elion&utm_medium=banner&utm_term=est&utm_content=html&utm_campaign=epood_sygiskampaania_2014_08" style="background-image: url(assets/img/primary-banner/bg-slide-1-ee.jpg); ">  <!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" -->
+    <a href="https://pood.elion.ee/productInfo/24/sulearvuti-lenovo-ideapad-g50-70/59417974?utm_source=elion&utm_medium=banner&utm_term=est&utm_content=html&utm_campaign=epood_sygiskampaania_2014_08" style="background-image: url(assets/img/primary-banner/bg-slide-1-pro.jpg); ">  <!-- srcset="assets/img/{{id}}.jpg 320w, assets/img/{{id}}-sm.jpg 480w, assets/img/{{id}}-md.jpg 960w" -->
       <div class="tsr-tactical-container tsr-slide-1 ">
         <figure class="tsr-tactical-speach-bubble tsr-color-pink">
           <header class="tsr-header">
@@ -720,32 +720,35 @@
 
       <a href="detail.html" class="tsr-module-promotion">
         <figure>
-      <figure class="tsr-tactical-flash">
-        <div class="flashText-flash-normal ee-flashtext-container">
-          <div class="ee-big">72 $</div>
-          <div class="ee-small">Nii kiire</div>
-        </div>
-      </figure>
+          {{#if ribbon}}
+          <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+          {{/if}}
           {{#if firstflash}}
           <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
           {{/if}}
           {{#if secondflash}}
           <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
         </figure>
         <div class="tsr-product-content">
 
-          <h6 class="tsr-product-header violet-text">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+          <h6 class="tsr-product-header">{{name}}</h6>
+          <p class="tsr-product-desc"> {{{description}}} </p>
         </div>
       </a>
       {{/offers}}
       </script>
     </div>
    <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
-</section> 
+</section>
+
+<!-- <figure class="tsr-tactical-flash">
+        <div class="flashText-flash-normal ee-flashtext-container">
+          <div class="ee-big">72 $</div>
+          <div class="ee-small">Nii kiire</div>
+        </div>
+      </figure> --> 
 
 
 <!-- for small screen, hidden on large -->
@@ -782,32 +785,35 @@
 
       <a href="detail.html" class="tsr-module-promotion">
         <figure>
-      <figure class="tsr-tactical-flash">
-        <div class="flashText-flash-normal ee-flashtext-container">
-          <div class="ee-big">72 $</div>
-          <div class="ee-small">Nii kiire</div>
-        </div>
-      </figure>
+          {{#if ribbon}}
+          <figure class="tsr-tactical-ribbon"><span><span class="flashText"><span class="bigText">Uus</span></span></span></figure>
+          {{/if}}
           {{#if firstflash}}
           <figure class="tsr-tactical-flash tsr-color-blue"><div class="flashText-flash-normal ee-flashtext-container"><div class="ee-big">{{firstflash.lg}}</div><div class="ee-small">Kole koll</div></div></figure>
           {{/if}}
           {{#if secondflash}}
           <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
           {{/if}}
-          <img src="assets/img/{{id}}.jpg" alt="img{{id}}" class="original" />
-          <img src="assets/img/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888" />
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
         </figure>
         <div class="tsr-product-content">
 
-          <h6 class="tsr-product-header violet-text">{{name}}</h6>
-          <p class="tsr-product-desc"> {{{leftTrim description}}} </p>
+          <h6 class="tsr-product-header">{{name}}</h6>
+          <p class="tsr-product-desc"> {{{description}}} </p>
         </div>
       </a>
       {{/offers}}
       </script>
     </div>
    <a href="javascript:void(0);" class="tsr-btn-view-all ee-thinline-bottom"><span>Näita rohkem</span></a>
-</section> 
+</section>
+
+<!-- <figure class="tsr-tactical-flash">
+        <div class="flashText-flash-normal ee-flashtext-container">
+          <div class="ee-big">72 $</div>
+          <div class="ee-small">Nii kiire</div>
+        </div>
+      </figure> --> 
 
 <!-- for large screen, hidden on small -->
 <section class="tsr-section-divider tsr-color-white hidden-xs hidden-sm text-center"> 

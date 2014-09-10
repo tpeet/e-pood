@@ -39,13 +39,9 @@ FORMS
 //
 
 
-//////// Module class name
-$module: tsr-forms;
 
-.#{$module}{
+.tsr-forms{
 
-
-//////// Base
 	font-size: $font-size-base;
 
 
@@ -69,7 +65,7 @@ $module: tsr-forms;
 		line-height:1;
 		height: 40px;
 		text-indent:14px;
-		border:1px solid #dbdbdb;
+		border:1px solid $lightgrey-t;
 		display:block;
 		width:100%;
 		margin-bottom:4px;
@@ -288,33 +284,33 @@ $module: tsr-forms;
 			cursor:pointer;
 			position:relative;
 
-			&:before{
-				font-family: 'tsr-icons-all';
-				content: "\e666";
-				width:20px;
-				height:20px;
-				position:absolute;
-				top:-5px;
-				left:0;
-				margin:0;
-				font-size:20px;
-				display:block;
-				color: $lightgrey-t;
-			}
+			// &:before{
+			// 	font-family: 'tsr-icons-all';
+			// 	content: "\e666";
+			// 	width:20px;
+			// 	height:20px;
+			// 	position:absolute;
+			// 	top:-5px;
+			// 	left:0;
+			// 	margin:0;
+			// 	font-size:20px;
+			// 	display:block;
+			// 	color: $lightgrey-t;
+			// }
 
-			&:after{
-				font-family: 'tsr-icons-all';
-				content: "\e666";
-				width:18px;
-				height:18px;
-				position:absolute;
-				top:-3px;
-				left:1px;
-				margin:0;
-				font-size:18px;
-				display:block;
-				color:#fff;
-			}
+			// &:after{
+			// 	font-family: 'tsr-icons-all';
+			// 	content: "\e666";
+			// 	width:18px;
+			// 	height:18px;
+			// 	position:absolute;
+			// 	top:-3px;
+			// 	left:1px;
+			// 	margin:0;
+			// 	font-size:18px;
+			// 	display:block;
+			// 	color:#fff;
+			// }
 
 
 			input[type='radio']{
@@ -322,9 +318,9 @@ $module: tsr-forms;
 			}
 
 			.tsr-radioStyled{
-				//@include border-radius(20px);
-				//background:$white;
-				//border:1px solid #dbdbdb;
+				@include border-radius(20px);
+				background:$white;
+				border:1px solid $purple-c;
 				width:20px;
 				height:20px;
 				display:block;

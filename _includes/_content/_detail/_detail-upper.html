@@ -14,8 +14,9 @@
   <h2>{{name}}</h2>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
 
-  <h2 class="ee-detail-intro"> <small>{{{description}}} </small></h2>
-  
+  <h2 class="ee-detail-intro"> <small>{{{leftTrimLong description}}}... </small></h2>
+  <h2 class="ee-detail-intro"> <small class="collapse" id="readmore">{{{description}}} </small><small><a href="#readmore"  data-toggle="collapse">...Loe edasi</a></small></h2>
+  <h2 class="ee-detail-intro text-right"> </h2>
 
     <!-- @include bundle-module.html -->
   <div class="hidden-xs"> 
@@ -45,7 +46,6 @@
     
     <ul class="list-inline ee-linkicons">
     <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
-     <li><a href="#" class="ee-comments">Arvamused (5)</a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
      <li><a href="#" class="ee-favorite">Lemmik</a></li>
    </ul>
@@ -109,11 +109,7 @@
   
 </div>
 
-<div class="col-sm-5 col-sm-pull-7 ">
 
-    
-     <!-- @include _socialcount.html --> 
-</div>
 
 {{/with}}
 </script>

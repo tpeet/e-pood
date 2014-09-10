@@ -807,7 +807,7 @@
 </div>
 <div class="row">
   <section class="tsr-section-divider ee-loader">
-    <div class="ee-loader-wide-violet"></div>
+    <div class="ee-loader-wide"></div>
   </section>
 </div>
 
@@ -847,9 +847,9 @@
       <div class="visible-xs">
         <h6 class="tsr-product-header"><a href="">{{name}}</a></h6>
         <div class="ee-linkicons">
+          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
           <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
           <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></div>
         </div>
       </div>
 
@@ -876,7 +876,6 @@
     <h3>Tallinn</h3>
   </div>
 
-  <div class="panel-group ee-accordion" id="{{id}}">
   <div class="panel-group ee-accordion" id="{{id}}">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -991,45 +990,44 @@
         <p class="tsr-product-desc"> {{{leftTrimLong intro}}} </p>
 
         <div class="row ee-linkicons hidden-xs">
+          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
           <div class="col-sm-4" ><a href="#" class="ee-comments"> Arvamused (5)</a></div>
           <div class="col-sm-3"><a href="#" class="ee-compare"> Võrdle </a></div>
-          <div class="col-sm-5"><a class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}" id="parent-{{id}}">Kaup kätte 14 päeva jooksul </a></div>
-
         </div>
 
         <div class="row ee-actions">
-          {{#if flashes}}
-            <div class="col-sm-4"> &nbsp;
-              {{#if flash}}
-              <figure class="tsr-tactical-flash ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
-              {{/if}}
-              {{#if firstflash}}
-              <figure class="tsr-tactical-flash ee-flash-sm tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
-              {{/if}}
-              {{#if secondflash}}
-              <figure class="tsr-tactical-flash ee-flash-sm tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
-              {{/if}}
-            </div>
-            {{else}}
-              <div class="col-sm-4 hidden-xs"> </div>
-          {{/if}}
-      <div class="tsr-product-colors hidden-sm col-xs-6">
-        <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
-        <ul class="dropdown-menu dropdown-menu-right" role="menu">
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
-          <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
-        </ul>
-      </div>
-      <div class="col-sm-4 col-xs-6 ee-pricecol">
-        {{#if client_price}}
-        <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
-        {{else}} 
-        <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
+        {{#if flashes}}
+          <div class="col-sm-4"> &nbsp;
+            {{#if flash}}
+            <figure class="tsr-tactical-flash ee-flash-sm"><span>{{flash.lg}}<small>{{flash.sm}}</small></span></figure>
+            {{/if}}
+            {{#if firstflash}}
+            <figure class="tsr-tactical-flash ee-flash-sm tsr-first"><span>{{firstflash.lg}}<small>{{firstflash.sm}}</small></span></figure>
+            {{/if}}
+            {{#if secondflash}}
+            <figure class="tsr-tactical-flash ee-flash-sm tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
+            {{/if}}
+          </div>
+          {{else}}
+          <div class="col-sm-4 hidden-xs"> </div>
         {{/if}}
-        <p class="tsr-product-price">Kuumakse: 47,15 €</p>
-      </div>
-      <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="btn btn-default ee-btn-buy"> Lisa ostukorvi </a></div>
+        <div class="tsr-product-colors hidden-sm col-xs-6">
+          <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
+          <ul class="dropdown-menu dropdown-menu-right" role="menu">
+            <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Maasikas</a></li>
+            <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Sidrun</a></li>
+            <li><a href=""><span><img src="https://pood.elion.ee/pictures/84658_35/25x25/Lumia520%20punane%20eest.jpg" alt=""></span>Must</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4 col-xs-6 ee-pricecol">
+          {{#if client_price}}
+          <p class="tsr-product-price ee-special-price">Kliendihind: <span>{{client_price}}</span></p>
+          {{else}} 
+          <p class="tsr-product-price">Hind: <span>{{normal_price}}</span></p>
+          {{/if}}
+          <p class="tsr-product-price">Kuumakse: 47,15 €</p>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4 col-xs-12" ><a href="#" class="btn btn-default ee-btn-buy"> Lisa ostukorvi </a></div>
       </div>
 
         <p>
@@ -1044,6 +1042,7 @@
 
       </div>
     </div>
+
 
 
   {{/phones}}
@@ -1064,7 +1063,7 @@
   </div>
 </div>
 
-<div class="ee-loader-violet"></div>
+
 
 <section class="tsr-section-support tsr-secondary">
   <div class="container">
