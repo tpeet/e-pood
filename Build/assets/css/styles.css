@@ -11256,6 +11256,8 @@ ul.tsr-product-colors {
   margin-bottom: -1px; }
   .ee-frontlinks p.tsr-btn-view-all {
     margin: 0; }
+  .ee-frontlinks .row.collapse {
+    margin-top: -20px; }
 
 .ee-product-list-front.visible-sm {
   margin: 0 auto;
@@ -11697,8 +11699,7 @@ section.ee-section-leasing {
     display: inline-block; }
   .ee-accordion-bundled .tsr-forms label, .ee-accordion-bundled .tsr-forms .label {
     margin: 0;
-    display: inline-block;
-    float: right; }
+    display: inline-block; }
     .ee-accordion-bundled .tsr-forms label .tsr-checkboxStyled,
     .ee-accordion-bundled .tsr-forms label .tsr-radioStyled, .ee-accordion-bundled .tsr-forms .label .tsr-checkboxStyled,
     .ee-accordion-bundled .tsr-forms .label .tsr-radioStyled {

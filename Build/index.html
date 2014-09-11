@@ -712,15 +712,34 @@
 <!-- for small screen, hidden on large -->
 <section class="ee-frontlinks">
   <div class="ee-product-list-front container visible-xs visible-sm" >
-    <div  id="content-placeholder-frontmenu"></div>
+    <div  id="content-placeholder-frontmenu-visible"></div>
     
-    <script id="front-menu-template" type="text/x-handlebars-template">
+    <script id="front-menu-template-visible" type="text/x-handlebars-template">
     
     {{#menu}}
     
     <div class="col-xs-12 col-sm-6 col-md-3">
       <h2 class="tsr-color-white ee-category-header"><small>{{caption}}</small></h2>
-      <ul class="nav nav-pills nav-stacked js-listedmenu">
+      <ul class="nav nav-pills nav-stacked ">
+        {{#each link }}
+    
+        <li><a href="{{this.path}}">{{this.name}}</a></li>  
+        {{/each}}
+      </ul>
+      <a data-toggle="collapse" href="#collapseMenu{{id}}" class="tsr-btn-view-all visible-xs visible-sm"><span>Näita rohkem</span></a>
+      </div>
+     
+    {{/menu}}
+    
+    </script>
+    <div  id="content-placeholder-frontmenu-hidden" ></div>
+    
+    <script id="front-menu-template-hidden" type="text/x-handlebars-template">
+    
+    {{#menu}}
+    
+    <div class="col-xs-12 col-sm-6 col-md-3 collapse" id="collapseMenu{{id}}">
+      <ul class="nav nav-pills nav-stacked ">
         {{#each link }}
     
         <li><a href="{{this.path}}">{{this.name}}</a></li>  
@@ -821,17 +840,38 @@
     </div>
   </div>
 </section>
-<section class="ee-frontlinks collapse" id="collapseMenu">
+<section class="ee-frontlinks">
   <div class="ee-product-list-front container  hidden-xs hidden-sm">
     <div class="row">
-      <div  id="content-placeholder-frontmenu1"></div>
+      <div  id="content-placeholder-frontmenu-visible"></div>
 
-        <script id="front-menu-template1" type="text/x-handlebars-template">
+        <script id="front-menu-template-visible" type="text/x-handlebars-template">
 
         {{#menu}}
 
         <div class="col-xs-12 col-sm-6 col-md-3">
-          <ul class="nav nav-pills nav-stacked js-listedmenu-lg">
+          <ul class="nav nav-pills nav-stacked">
+            {{#each link }}
+
+            <li><a href="{{this.path}}">{{this.name}}</a></li>  
+            {{/each}}
+          </ul>
+          </div>
+
+        {{/menu}}
+
+        </script>
+    </div>
+
+    <div class="row collapse" id="collapseMenu">
+      <div  id="content-placeholder-frontmenu-hidden"></div>
+
+        <script id="front-menu-template-hidden" type="text/x-handlebars-template">
+
+        {{#menu}}
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <ul class="nav nav-pills nav-stacked">
             {{#each link }}
 
             <li><a href="{{this.path}}">{{this.name}}</a></li>  
@@ -1080,7 +1120,7 @@ $(document).ready(function(){
 </body>
 </html>
 
-<script src="assets/js/handlebars/hbs-frontmenu.hbs"></script>
+<script src="assets/js/handlebars/hbs-frontmenulist.hbs"></script>
 <script src="assets/js/handlebars/hbs-offers-mixed.hbs"></script>
 
 <script type="text/javascript">
