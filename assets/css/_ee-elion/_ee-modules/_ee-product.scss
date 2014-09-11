@@ -15,26 +15,28 @@ section.tsr-section-productAndService-listing {
     right: 20px;
   }
 
-    .tsr-product-image {
-    position: relative;
-    height: auto;
-    width: 110px;
-    max-width: 25%;
-    display: inline-block;
-    float: none;
-    margin-right: 5px;
-    @include media-min($screen-sm) {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      padding: 0 em(20);
-    } 
-    .dropdown-menu img {
-    width: auto;
-    }
-  }
+
 }
 
+.tsr-product-image { 
+  mix-blend-mode: multiply;
+  position: relative;
+  height: auto;
+  width: 110px;
+  max-width: 25%;
+  display: inline-block;
+  float: none;
+  margin-right: 5px;
+  @include media-min($screen-sm) {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    padding: 0 em(20);
+  } 
+  .dropdown-menu img {
+  width: auto;
+  }
+}
 // PRICES
 //*********
 .tsr-product-price {

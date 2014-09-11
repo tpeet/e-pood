@@ -50,19 +50,15 @@ section.ee-product-detail {
   }
 
   .ee-detailview { 
-    text-align: left;
+    text-align: center;
     position: relative;
-    @include media-min($screen-md) {
-      text-align: center;
-    }
-    .tsr-product-image {
-      width: 100%;
-      height: auto;
-      text-align: center;
+
+    .img-responsive {
+
       margin-top: 20px;
       img {
       width: 100%;
-      max-width: 450px;
+      max-width: 500px;
       height: auto;
       }
     } 

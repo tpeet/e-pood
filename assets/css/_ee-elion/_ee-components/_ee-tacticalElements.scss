@@ -38,7 +38,7 @@
 
 // Ribbon figure moved under parent a for mobile view, just under class="tsr-module-product"
 
-.tsr-module-product .tsr-tactical-ribbon { 
+.tsr-tactical-ribbon { 
   display:block;
   position: absolute;
   left: 0;
@@ -92,49 +92,64 @@
   } // min 768px
 }
 
+.ie8 {
+  .tsr-tactical-ribbon:before, 
+  .tsr-tactical-ribbon:after {
+    background: transparent;
+  }
+  .tsr-tactical-ribbon {
+  left: 0;
+  right: 0;
+  top: 10px;
+  }
+  .tsr-tactical-ribbon > span{
+    @include rotate(0);
+  }
+}
+
 // Round badge, adjust left-right according to context, include with @extend .ee-badge;
 // Html-syntax: <figure class="ee-{your context}-badge ee-badge-{color} ee-icon ee-{iconname}">if text add text and skip icon classes, else empty</figure>
 
 
-.ee-badge {
-  font-size: em(17);
-  display: inline-block;
-  min-width: 10px;
-  padding: em(9) em(10);
-  font-weight: bold;
-  color: white;
-  line-height: 0.7;
-  vertical-align: baseline;
-  white-space: nowrap;
-  text-align: center;
-  background: $turquoise-c;
-  border-radius: 100%;
-  border: em(4) solid white;
+// .ee-badge {
+//   font-size: em(17);
+//   display: inline-block;
+//   min-width: 10px;
+//   padding: em(9) em(10);
+//   font-weight: bold;
+//   color: white;
+//   line-height: 0.7;
+//   vertical-align: baseline;
+//   white-space: nowrap;
+//   text-align: center;
+//   background: $turquoise-c;
+//   border-radius: 100%;
+//   border: em(4) solid white;
 
-  &[class*="icon-"] {
-    font-size: em(17);
-    padding: em(8) em(8) em(8) em(7);
-  }
+//   &[class*="icon-"] {
+//     font-size: em(17);
+//     padding: em(8) em(8) em(8) em(7);
+//   }
 
-  &.ee-primary {
-    background-color: $purple-c;
-  }
-  &.ee-red {
-    background-color: $pink-c;
-  }
-  &.ee-gray {
-    background-color: $darkgrey-h;
-  }
-  &.icon-cart {
-   &:before {
-    font-family: "elion-ikoonid";
-    content: "\e009";
-   }
-  }
-  &.icon-transport { 
-   &:before {
-    font-family: "elion-ikoonid";
-    content: "\e001";
-   }
-  }
-}
+//   &.ee-primary {
+//     background-color: $purple-c;
+//   }
+//   &.ee-red {
+//     background-color: $pink-c;
+//   }
+//   &.ee-gray {
+//     background-color: $darkgrey-h;
+//   }
+//   &.icon-cart {
+//    &:before {
+//     font-family: "elion-ikoonid";
+//     content: "\e009";
+//    }
+//   }
+//   &.icon-transport { 
+//    &:before {
+//     font-family: "elion-ikoonid";
+//     content: "\e001";
+//    }
+//   }
+// }

@@ -33,9 +33,12 @@
 
 .ee-btn-buy {
   font-size: em(16);
-  width: auto;
+  
   font-weight: 500;
   padding: 12px;
+  //   @include media-min($screen-sm) {
+  // text-align: center;
+  // }
   &:before {
     font-family: "tsr-icons-all";
     content: "\e6e1";

@@ -37,7 +37,7 @@ PRODUCT
 	font-size:$font-size-base;
 	line-height:1.256;
 	text-align:left;
-	color:#333333;
+	color: $text-color;
 	position:relative;
 
 	.tsr-tactical-flash{
@@ -139,12 +139,6 @@ PRODUCT
 
     	
 		// Tactical 
-		.tsr-tactical-ribbon{
-			display:block;
-			position:absolute;
-			top:-10px;
-			left:-10px;
-		}
 
 		.tsr-tactical-flash{
 			display:table;
@@ -174,7 +168,7 @@ PRODUCT
 		}
 
     	.tsr-product-image{
-    		height:auto;
+    	height:auto;
 			width:100%;
 			margin:0 auto 10px;
 			max-width:150px;
@@ -210,89 +204,82 @@ PRODUCT
 
 		//////// Other then phone
 
-		&.tsr-product-other{
+		// &.tsr-product-other{
 
-			padding:35px 10px 35px 10px;
+		// 	padding:35px 10px 35px 10px;
 		
-	    	.tsr-product-image{
-	    		height:auto;
-				width:100%;
-				max-width:220px;
-			}
+	 //    	.tsr-product-image{
+	 //    		height:auto;
+		// 		width:100%;
+		// 		max-width:220px;
+		// 	}
 
-			.tsr-product-content{
-				padding-left:0px;
-			}
-
-
-			.tsr-tactical-flash{
-
-				right:5%;
-
-				&.tsr-first{
-					top:40px;
-				}
-
-				&.tsr-second{
-					top:105px;
-
-				}
-
-				&.tsr-tactical-round{
-					right:4%;
-					&.tsr-first{
-						top:30px;
-					}
-					&.tsr-second{
-						top:98px;
-					}
-				}
-			}
+		// 	.tsr-product-content{
+		// 		padding-left:0px;
+		// 	}
 
 
-		} // tsr-tactical-other END
+		// 	.tsr-tactical-flash{
+
+		// 		right:5%;
+
+		// 		&.tsr-first{
+		// 			top:40px;
+		// 		}
+
+		// 		&.tsr-second{
+		// 			top:105px;
+
+		// 		}
+
+		// 		&.tsr-tactical-round{
+		// 			right:4%;
+		// 			&.tsr-first{
+		// 				top:30px;
+		// 			}
+		// 			&.tsr-second{
+		// 				top:98px;
+		// 			}
+		// 		}
+		// 	}
+
+
+		// } // tsr-tactical-other END
 
 
 	} // min 768px
 
 
-
-
-
-
-
-
-
 ////// INTERNET EXPLORER 8
 
 
- @include old-ie {
+ // @include old-ie {
  	
-	.ie8 &{
+	// .ie8 &{
 
-		.tsr-tactical-flash{
+	// 	.tsr-tactical-flash{
 
 
-			&.tsr-first{
-				&:before{
-					background:none;
-					color:$blue-c;
-				}
-			}
+	// 		&.tsr-first{
+	// 			&:before{
+	// 				background:none;
+	// 				color:$blue-c;
+	// 			}
+	// 		}
 
-			&.tsr-second{
-				&:before{
+	// 		&.tsr-second{
+	// 			&:before{
 
-					background:none;
-					color:$purple-c;
-				}
-			}
+	// 				background:none;
+	// 				color:$purple-c;
+	// 			}
+	// 		}
 
-		}
+	// 	}
 
-    }// .ie8 & END
+ //    } // .ie8 & END
 	
-}
+// }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////// MODULE END

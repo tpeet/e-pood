@@ -10,7 +10,7 @@
 
 {{#with products.[1]}}
 
-<div class="col-sm-7 col-sm-push-5 fixedheight">
+<div class="col-sm-6 col-sm-push-6 fixedheight">
   <h2>{{name}}</h2>
   <small class="gray-text">Tootekood: NP915S3G-K01EE</small>
 
@@ -39,8 +39,8 @@
     {{/if}}
 
     <div class="row ee-actions">
-      <div class="col-md-5 col-sm-6">
-        <button class="tsr-btn tsr-btn-100  ee-btn-buy">Lisa ostukorvi</button>
+      <div class="col-sm-6">
+        <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       </div>
     </div>
     
@@ -56,7 +56,7 @@
 
 
 
-<div class="col-sm-5 col-sm-pull-7 ee-detailview">
+<div class="col-sm-6 col-sm-pull-6 ee-detailview">
   {{#if firstflash}}
   <figure class="tsr-tactical-flash tsr-first"><span>{{firstflash.lg}}</span></figure>
   {{/if}}
@@ -64,7 +64,7 @@
   <figure class="tsr-tactical-flash tsr-second"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
   {{/if}}
 
-  <div id="js-imagerotator" class="js-imagerotator tsr-product-image">
+  <div id="js-imagerotator" class="js-imagerotator img-responsive">
     <ul class="slides">
       {{#each minipics_id}}
         <li data-thumb="assets/img/products/{{this}}-100.jpg"><img src="assets/img/products/{{this}}.jpg"></li>
@@ -73,7 +73,7 @@
   </div>
 </div>
 
-<div class="col-sm-7 col-sm-push-5 visible-xs">
+<div class="col-sm-6 col-sm-push-6 visible-xs">
     <div class="tsr-product-colors">
       <button class="ee-colors btn btn-link dropdown-toggle" data-toggle="dropdown"> Vali värv</button>
       <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -93,11 +93,10 @@
   {{/if}}
 
   <div class="row ee-actions">
-    <div class="col-sm-5">
-      <button class="tsr-btn tsr-btn-100 ee-btn-buy"><i class="icon icon-buy_2"></i>Lisa ostukorvi</button>
+    <div class="col-sm-6">
+      <button class="btn btn-default btn-block ee-btn-buy">Lisa ostukorvi</button>
       <ul class="list-inline ee-linkicons">
       <li><a href="#transport-{{id}}" class="ee-transport" data-toggle="collapse" data-target="#transport-{{id}}"> Kaup kätte 14 päeva jooksul </a></li>
-     <li><a href="#" class="ee-comments">Arvamused (5)</a></li>
      <li><a href="#" class="ee-compare">Võrdle</a></li>
      <li><a href="#" class="ee-favorite">Lemmik</a></li>
    </ul>

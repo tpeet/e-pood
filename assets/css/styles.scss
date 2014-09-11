@@ -233,21 +233,6 @@ display: block;
   background: $lightgrey-t;
 }
 
-.ie8 {
-  .tsr-module-product .tsr-tactical-ribbon:before, 
-  .tsr-module-product .tsr-tactical-ribbon:after {
-    background: transparent;
-  }
-  .tsr-module-product .tsr-tactical-ribbon {
-  left: 0;
-  right: 0;
-  top: 10px;
-  }
-  .tsr-tactical-ribbon > span{
-    @include rotate(0);
-  }
-}
-
 .flashText-ribbon-inner {
   display: block;
   width: 60px;

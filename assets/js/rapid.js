@@ -30,7 +30,6 @@
 // FRONTPAGE 
 /* @include tsr-communication-primary */
 /* @include tsr-promotion */
-/* @include ee-hideMaxListItem */
 
 // DETAIL VIEW
 /* @include collapse */

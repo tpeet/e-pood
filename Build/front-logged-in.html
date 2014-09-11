@@ -728,7 +728,9 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        <figure class="tsr-promotion-image">
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        </figure>
       </figure>
       <div class="tsr-product-content">
 
@@ -738,12 +740,8 @@
     </a>
     {{/offers}}
     </script>
-  </div>
-</section>
 
-<section class="tsr-section-promotion tsr-count-4 collapse" id="collapsePromotion"> 
-  <div class="container">
-    <div id="content-placeholder-offers"></div>
+    <div id="content-placeholder-offers" class="collapse"></div>
     <script id="offer-slider-template" type="text/x-handlebars-template">
     {{#offers}}
 
@@ -758,7 +756,9 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        <figure class="tsr-promotion-image">
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        </figure>
       </figure>
       <div class="tsr-product-content">
 
@@ -770,7 +770,7 @@
     </script>
   </div>
 </section>
-<a data-toggle="collapse" href="#collapsePromotion" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
+<a data-toggle="collapse" href="#content-placeholder-offers" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
 
 <!-- <figure class="tsr-tactical-flash">
         <div class="flashText-flash-normal ee-flashtext-container">
@@ -841,7 +841,9 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        <figure class="tsr-promotion-image">
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        </figure>
       </figure>
       <div class="tsr-product-content">
 
@@ -851,12 +853,8 @@
     </a>
     {{/offers}}
     </script>
-  </div>
-</section>
 
-<section class="tsr-section-promotion tsr-count-4 collapse" id="collapsePromotion"> 
-  <div class="container">
-    <div id="content-placeholder-offers"></div>
+    <div id="content-placeholder-offers" class="collapse"></div>
     <script id="offer-slider-template" type="text/x-handlebars-template">
     {{#offers}}
 
@@ -871,7 +869,9 @@
         {{#if secondflash}}
         <figure class="tsr-tactical-flash tsr-color-purple"><span>{{secondflash.lg}}<small>{{secondflash.sm}}</small></span></figure>
         {{/if}}
-        <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        <figure class="tsr-promotion-image">
+          <img class="{{class}}" src="assets/img/{{id}}.jpg" alt="img{{id}}"/>
+        </figure>
       </figure>
       <div class="tsr-product-content">
 
@@ -883,7 +883,7 @@
     </script>
   </div>
 </section>
-<a data-toggle="collapse" href="#collapsePromotion" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
+<a data-toggle="collapse" href="#content-placeholder-offers" class="tsr-btn-view-all"><span>Näita rohkem</span></a>
 
 <!-- <figure class="tsr-tactical-flash">
         <div class="flashText-flash-normal ee-flashtext-container">
@@ -984,7 +984,7 @@
           {{#if badge.icon }}
           <figure class="ee-product-badge ee-{{badge.color}} {{badge.icon}}">{{badge.text}}</figure>
           {{/if}}
-          <img src="assets/img/myproducts/{{id}}.jpg" class="original"><img src="assets/img/myproducts/{{id}}.jpg" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888">
+          <img src="assets/img/myproducts/{{id}}.jpg">
         </figure>
         <div class="tsr-product-content">
         <header class="tsr-product-header">{{name}}</header>
@@ -1016,7 +1016,7 @@
           <figure class="tsr-tactical-ribbon"><span class="tsr-text-{{ribbon.size}}">{{ribbon.text}}</span></figure>
         {{/if}}
         <figure class="tsr-product-image">
-          <img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="original"><img src="assets/img/products/{{id}}.jpg" id="img{{id}}" class="multiply filter-tint" data-pb-tint-opacity="0.08" data-pb-tint-colour="#888"/>
+          <img src="assets/img/products/{{id}}.jpg" id="img{{id}}">
         </figure>
         <div class="tsr-product-content">
           {{#if firstflash}}
@@ -1216,7 +1216,7 @@ $(document).ready(function(){
   // }
   // document.getElementById('jsFiltersMoreText').onclick=handleClick;
 
-   $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
+   // $('.js-listedmenu').hideMaxListItems({ 'max': 4, 'speed':500, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
   // $('.js-placeholder-offers').hideMaxAItems({ 'max':4, 'speed':2000, 'moreText':'Näita rohkem', 'lessText': 'Näita vähem' });
 
