@@ -13,7 +13,6 @@
   } 
   @include media-min($screen-md) {
     margin: em(15) auto;
-
   } 
   small {
     margin-left: 10px;
@@ -21,13 +20,16 @@
 }
 
 .ee-frontlinks {
-  border-top: 1px solid #DBDBDB;
-  border-bottom: 1px solid #DBDBDB;
-  background: #F6F6F6;
+  border-top: 1px solid $lightgrey-t;
+  border-bottom: 1px solid $lightgrey-t;
+  background: $lightgrey-c;
   text-align: center;
   height: auto;
   padding: 0;
   margin-bottom: -1px;
+  @include media-min($screen-md) {
+    border-top: none; 
+  } 
   p.tsr-btn-view-all {
     margin: 0;
   }
@@ -79,13 +81,16 @@
   left: em(50);
   top: 10%;
   z-index: 3;
-    @include media-min($screen-sm) {
-    left: 70%;
-    } // min 768px
-  }
+  @include media-min($screen-sm) {
+  left: 70%;
+  } // min 768px
+}
 
 .tsr-section-promotion {
   border-top: none;
+  @include media-min($screen-sm) {
+  border-bottom: none;
+  }
 }
 
 .tsr-module-promotion {
@@ -113,7 +118,6 @@
     @include media-min($screen-md) {
     height: 169px;
     }
-
   }
   h6 {
     font-size: 22px;
@@ -125,11 +129,6 @@
     padding: 0 22px 30px;
     margin: 0;
     }
-
-
-  // .tsr-product-image {
-  //   position: relative;
-  // }
   .tsr-tactical-flash {
     right: 15px;
   }

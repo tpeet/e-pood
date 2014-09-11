@@ -1,4 +1,7 @@
-.tsr-section-divider{
+.tsr-section-divider {
+  margin-top: -1px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 	background:$lightgrey-c; 
 	line-height:1;
@@ -10,21 +13,16 @@
 	position:relative;
 	z-index:-1;
 
-	&.tsr-color-purple{
+	&.tsr-color-purple {
 		background:$purple-t;
 		color:#fff;
 	}
 
-	&.tsr-color-white,
-	.tsr-color-white &{
-		background:$white; 
+	&.tsr-color-white {
+		background:#fff; 
 	}
-
+ 
 }
-
-
-
-
 
 
 

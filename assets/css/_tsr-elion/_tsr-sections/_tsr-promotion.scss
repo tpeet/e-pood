@@ -153,7 +153,7 @@ PROMOTION
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-    @include media-min(480px) {
+    @include media-min($screen-xs) { 
 
     	width:50%;
 		float:left;
@@ -163,7 +163,7 @@ PROMOTION
 	} // media 480 END
 
 
-    @include media-min(768px) {
+    @include media-min($screen-sm) {
     	
 
 		.tsr-count-6 &{
@@ -194,7 +194,7 @@ PROMOTION
 	}// media 768 END
 
 
-    @include media-min(940px) {
+    @include media-min($screen-md) {
     	
 		.tsr-count-6 &{
 			width:33%;
